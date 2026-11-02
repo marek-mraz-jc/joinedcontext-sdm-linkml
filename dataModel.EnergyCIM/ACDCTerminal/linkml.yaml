@@ -1,0 +1,224 @@
+id: https://github.com/smart-data-models/dataModel.EnergyCIM/ACDCTerminal
+name: ACDCTerminal
+title: ' Smart Data Models - ACDCTerminal'
+description: Adapted from CIM data models. An electrical connection point (AC or DC)
+  to a piece of conducting equipment. Terminals are connected at physical connection
+  points called connectivity nodes.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.EnergyCIM
+  spec.source.path: ACDCTerminal/schema.json
+  spec.source.commit: a133118adea199b471b89c0908e7275312ef7a4c
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+classes:
+  ACDCTerminal:
+    class_uri: https://smartdatamodels.org/dataModel.EnergyCIM/ACDCTerminal
+    description: Adapted from CIM data models. An electrical connection point (AC
+      or DC) to a piece of conducting equipment. Terminals are connected at physical
+      connection points called connectivity nodes.
+    is_a: Entity
+    slots:
+    - BusNameMarker
+    - Measurements
+    - OperationalLimitSet
+    - address
+    - alternateName
+    - areaServed
+    - connected
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - name
+    - owner
+    - seeAlso
+    - sequenceNumber
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/areaServed
+  BusNameMarker:
+    description: 'Property. Model:''https://schema.org/Number''. The bus name marker
+      used to name the bus (topological node). Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/BusNameMarker
+  Measurements:
+    description: 'Property. Model:''https://schema.org/Number''. Measurements associated
+      with this terminal defining  where the measurement is placed in the network
+      topology.  It may be used, for instance, to capture the sensor position, such
+      as a voltage transformer (PT) at a busbar or a current transformer (CT) at the
+      bar between a breaker and an isolator. Default: ''list'''
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/Measurements
+  OperationalLimitSet:
+    description: 'Property. Model:''https://schema.org/Number''.  Default: ''list'''
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/OperationalLimitSet
+  connected:
+    description: 'Property. Model:''https://schema.org/Number''. The connected status
+      is related to a bus-branch model and the topological node to terminal relation.  True
+      implies the terminal is connected to the related topological node and false
+      implies it is not.  In a bus-branch model, the connected status is used to tell
+      if equipment is disconnected without having to change the connectivity described
+      by the topological node to terminal relation. A valid case is that conducting
+      equipment can be connected in one end and open in the other. In particular for
+      an AC line segment, where the reactive line charging can be significant, this
+      is a relevant case. Default: False'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/connected
+  sequenceNumber:
+    description: 'Property. Model:''https://schema.org/Number''. The orientation of
+      the terminal connections for a multiple terminal conducting equipment.  The
+      sequence numbering starts with 1 and additional terminals should follow in increasing
+      order.   The first terminal is the `starting point` for a two terminal branch.
+      Default: 0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/sequenceNumber

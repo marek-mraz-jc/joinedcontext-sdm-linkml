@@ -1,0 +1,725 @@
+id: https://github.com/smart-data-models/dataModel.Transportation/TransportStation
+name: TransportStation
+title: Station schema data model
+description: The data model is a general description of urban stations (Metro, Bus,
+  Tram, Heliport, ...) according to the GFTS standard https://developers.google.com/transit/gtfs/reference/#stopstxt,
+  as well the detailed description of these (means of access, platform, assistance,
+  ...).
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Transportation
+  spec.source.path: TransportStation/schema.json
+  spec.source.commit: 48e0e7ebaaee430f04a47efb27fc38825f79b725
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "FR", "addressLocality":
+    "Nice", "streetAddress": "Airport - Terminal 2 - Door A2"}}, "alternateName":
+    {"type": "Property", "value": "Nice - Tramway Station Description - L02-AP-T2"},
+    "architect": {"type": "Property", "value": "Nice Architecture"}, "areaServed":
+    {"type": "Property", "value": "Nice Airport"}, "commissioningDate": {"type": "DateTime",
+    "value": "2018-09-15"}, "constructionDate": {"type": "DateTime", "value": "2016-19-08"},
+    "contactPoint": {"type": "Property", "value": {"url": "www.lignesdazur.com"}},
+    "contractingAuthority": {"type": "Property", "value": "MNCA - Metropole Nice Cote
+    d''Azur"}, "contractingCompany": {"type": "Property", "value": "R\u00e9gie Ligne
+    d''Azur"}, "currencyAccepted": {"type": "Property", "value": ["EUR"]}, "dateLastReported":
+    {"type": "DateTime", "value": "2020-03-17T08:45:00Z"}, "description": {"type":
+    "Property", "value": "Description and services provided in the station"}, "dimension":
+    {"type": "Property", "value": {"length": 300, "thickness": 6.35, "width": 25}},
+    "featuredArtist ": {"type": "Property", "value": ["Leopold", "De Renaiss"]}, "id":
+    "urn:ngsi-ld:Station:Station:MNCA-STram-L02-AP-T2", "installationMode": {"type":
+    "Property", "value": "ground"}, "inventory": {"type": "Property", "value": {"PlatformType":
+    ["lateral"], "nbOfIOPoint": 2, "nbOfLane": 1, "nbOfPlatform": 1}}, "levelId":
+    {"type": "Property", "value": 0}, "location": {"type": "GeoProperty", "value":
+    {"coordinates": [43.66481, 7.196545], "type": "Point"}}, "locationType": {"type":
+    "Property", "value": 1}, "name": {"type": "Property", "value": "NCE-Tram-Station-L02-AP-T2"},
+    "openingHoursSpecification": {"type": "object", "value": [{"closes": "22:00:00",
+    "dayOfWeek": "Monday, Tuesday, Wednesday, Thursday, Friday", "opens": "07:00:00",
+    "validFrom": "2021-01-01T00:00:00", "validThrough": "2021-12-31T23:59:59"}, {"closes":
+    "23:00:00", "dayOfWeek": "Saturday", "opens": "08:00:00", "validFrom": "2021-01-01T00:00:00",
+    "validThrough": "2021-12-31T23:59:59"}, {"closes": "21:00:00", "dayOfWeek": "Sunday",
+    "opens": "8:00:30", "validFrom": "2021-01-01T00:00:00", "validThrough": "2021-12-31T23:59:59"},
+    {"closes": "21:00:30", "dayOfWeek": "PublicHolidays", "opens": "8:00:00", "validFrom":
+    "2021-01-01T00:00:00", "validThrough": "2021-12-31T23:59:59"}]}, "owner": {"type":
+    "Property", "value": ["Street furniture Urbain & Retail"]}, "paymentAccepted":
+    {"type": "Property", "value": ["Cash", "CreditCard"]}, "seeAlso": {"type": "Property",
+    "value": "http://tramway.nice.fr/wp-content/uploads/2019/10/BD_pocket_plan_MAJ03_2019_20082019.pdf"},
+    "services": {"type": "Property", "value": {"defibrillator": {"type": "Property",
+    "value": false}, "emergencyPhone": {"type": "Property", "value": false}, "informationBoardDevice":
+    {"type": "Property", "value": true}, "interactiveDevice": {"type": "Property",
+    "value": true}, "messageDevice": {"type": "Property", "value": false}, "purchaseDevice":
+    {"type": "Property", "value": true}, "restBench": {"type": "Property", "value":
+    false}, "shelters": {"type": "Property", "value": true}, "timetableDevice": {"type":
+    "Property", "value": true}, "videoSurveillance": {"type": "Property", "value":
+    true}, "voiceDevice": {"type": "Property", "value": true}, "wheelChairAccessible":
+    {"type": "Property", "value": true}}}, "stationConnected": {"type": "Property",
+    "value": [{"linesConnected": {"type": "Property", "value": ["Tram 2 - CADAM /
+    Nikaia", "Tram 3 - Saint Isidore / Stade Allianz Riviera"]}, "stationType": "tram"},
+    {"linesConnected": {"type": "Property", "value": ["Gare SNCF Nice Saint Augustin
+    (600m)"]}, "stationType": "train"}, {"linesConnected": {"type": "Property", "value":
+    ["L20 - Giono / Les Pugets", "L20 - Centre Commercial St Isidore", "L21 - Le Gu\u00e9
+    / Polygone Riviera", "L54 - Centre Commercial Cap 3000 - St Jeannet", "L90 - La
+    Bolline", "91 Auron", "L92 - Isola 2000"]}, "stationType": "bus"}]}, "stationType":
+    {"type": "Property", "value": ["tram"]}, "type": "TransportStation", "webSite":
+    {"type": "Property", "value": "https://tramway.nice.fr/Plan-Station-L02-AP-T2.pdf"},
+    "wheelChairAccessible": {"type": "Property", "value": 1}, "zoneId": {"type": "Property",
+    "value": "B"}}'
+classes:
+  TransportStation:
+    class_uri: https://smartdatamodels.org/dataModel.Transportation/TransportStation
+    description: The data model is a general description of urban stations (Metro,
+      Bus, Tram, Heliport, ...) according to the GFTS standard https://developers.google.com/transit/gtfs/reference/#stopstxt,
+      as well the detailed description of these (means of access, platform, assistance,
+      ...).
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - architect
+    - areaServed
+    - commissioningDate
+    - constructionDate
+    - contactPoint
+    - contractingAuthority
+    - contractingCompany
+    - currencyAccepted
+    - dataProvider
+    - dateCreated
+    - dateLastReported
+    - dateModified
+    - description
+    - dimension
+    - featuredArtist
+    - installationMode
+    - inventory
+    - levelId
+    - locationType
+    - name
+    - openingHoursSpecification
+    - owner
+    - parentStation
+    - paymentAccepted
+    - platformCode
+    - refPointOfInterest
+    - seeAlso
+    - services
+    - source
+    - stationConnected
+    - stationType
+    - webSite
+    - wheelChairAccessible
+    - zoneId
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  ContactPoint:
+    description: Property. Model:'https://schema.org/ContactPoint'. The details to
+      contact with the item
+    attributes:
+      contactType:
+        description: Property. Contact type of this item
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      email:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      telephone:
+        description: Property. Telephone of this contact
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      name:
+        description: Property. The name of this item
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      url:
+        description: Property. URL which provides a description or further information
+          about this item
+        range: uriorcurie
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      areaServed:
+        description: Property. The geographic area where a service or offered item
+          is provided. Supersedes serviceArea
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      availableLanguage:
+        description: Property. Model:'http://schema.org/availableLanguage'. A language
+          someone may use with or at the item, service or place. Please use one of
+          the language codes from the IETF BCP 47 standard. It is implemented the
+          Text option but it could be also Language
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      contactOption:
+        description: Property. Model:'http://schema.org/contactOption'. An option
+          available on this contact point (e.g. a toll-free number or support for
+          hearing-impaired callers)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      faxNumber:
+        description: Property. Model:'https://schema.org/Text'. The fax number of
+          the item
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      productSupported:
+        description: Property. Model:'https://schema.org/Text'. The product or service
+          this support contact point is related to (such as product support for a
+          particular product line). This can be a specific product or product line
+          (e.g. 'iPhone') or a general category of products or services (e.g. 'smartphones')
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      availabilityRestriction:
+        description: Relationship. Model:'https://schema.org/hoursAvailable'. This
+          property links a contact point to information about when the contact point
+          is not available. The details are provided using the Opening Hours Specification
+          class
+        annotations:
+          ngsi_ld_kind: Relationship
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  Dimension:
+    description: Property. Global dimension. The format is structured by a sub-property
+      of 3 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **MTR** represents Meters. Units:'meters'
+    attributes:
+      height:
+        description: Property. Height of the Station
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      width:
+        description: Property. Width of the Station
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      depth:
+        description: Property. Depth of the Station
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  Inventory:
+    description: Property. General data mapping only for `locationType` = 0, 1, 3,
+      4. The format is structured by a sub-property of 4 items
+    attributes:
+      nbOfIOPoint:
+        description: Property. Number of input output points
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      nbOfLane:
+        description: Property. Number of Lane in the station
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      nbOfPlatform:
+        description: Property. Number of platform
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      PlatformType:
+        description: Property. Type of platforms available
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  Services:
+    description: Property. Object containing information bout the services included
+    attributes:
+      purchaseDevice:
+        description: Property. Attribute to indicate if there are machines for ticket
+          purchase
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      interactiveDevice:
+        description: Property. Attribute to indicate if there are interactive devices
+          (i.e. kiosks) for users
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      timetableDevice:
+        description: Property. Attribute to indicate if there are boards or devices
+          showing the time table of the station
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      voiceDevice:
+        description: 'Property. Attribute to indicate if there are PA systems or other
+          voice devices '
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      informationBoardDevice:
+        description: Property. Attribute to indicate if there are information boards
+          for users
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      messageDevice:
+        description: Property. Attribute to indicate if there are devices for sharing
+          messages with the users
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      shelters:
+        description: Property. Attribute to indicate if there are shelter for users
+          (i.e. rain)
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      restBench:
+        description: Property. Attribute to indicate if the station has benches to
+          sit on for resting
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      emergencyPhone:
+        description: Property. Attribute to indicate if there are emergency phones
+          available
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      defibrillator:
+        description: Property. Attribute to indicate if there are defibrillators
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      wheelChairAccessible:
+        description: Property. Attribute to indicate if there are facilities for wheelchair
+          users
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/areaServed
+  dateLastReported:
+    description: Property. A timestamp which denotes the last time when the device
+      successfully reported data. Date and time in an ISO8601 UTC format
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/dateLastReported
+  refPointOfInterest:
+    description: Relationship. A reference to a point of interest associated to this
+      observation
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/refPointOfInterest
+  stationType:
+    description: Property. Type of transport station. Enum:'aerialLift, bus, cableTram,
+      ferry, funicular, monorail, rail, subway, trolleybus, tram'
+    range: stationType_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/stationType
+  locationType:
+    description: Property. Link to the GTFS standard repository describing the different
+      location [Location Type]. 0 Stop or platform (place where users get on or off
+      in a public transport vehicle). 1 Station (area or physical structure comprising
+      one or more platforms). 2 Entrance or Exit (place where users can enter / exit
+      a station from the street). 3 Generic intersection (location in a station that
+      doesn't correspond to any other `location_type` value). 4 Boarding area of a
+      specific location on a platform where users can get on / off in a vehicle
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/locationType
+  parentStation:
+    description: Relationship. Link to the GTFS standard repository describing the
+      different link between Station and Platform [Parent STATION]. Case '1' location_type
+      = 0 (Stop / platform ), the parent_station field contains the ID of a station.
+      Case '2' location_type = 1  (Station), this field must be empty. Case '3' location_type
+      = 2 (Input / output) or location_type = 3 (generic intersection), the parent_station
+      field contains the ID of a station location_type = 1. Case '4' location_type
+      = 4 (boarding area), the parent_station field contains the ID of a platform
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/parentStation
+  levelId:
+    description: Property. Floor on which the location is located. Numerical index
+      associated with the floor. Indicates the relative position of this stage in
+      relation to the others. The index 0 indicates the ground floor. The floors above
+      ground level are indicated by positive indices, and the underground stages by
+      negative indices
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/levelId
+  platformCode:
+    description: Property. Platform identifier for a platform type stop `location_type`
+      = 0 when the stop is in a station
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/platformCode
+  zoneId:
+    description: Property. Pricing zone of the station
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/zoneId
+  wheelChairAccessible:
+    description: Property. Access possible for Person with Reduced Mobility. For stops
+      without parents 0 no information is available regarding the accessibility of
+      the stop. 1 some vehicles at this stop can board a PMR user. 2 PRM user cannot
+      board  at this stop. For a stop that is part of a station 0 the stop inherits
+      the wheelchair_boarding behavior of the parent station, if it is filled in.
+      1 lanes provide wheelchair access to the stop / platform  from outside the station.
+      2 no lane provides wheelchair access to the stop / platform from outside the
+      station. For station inputs / outputs 0 the station entry inherits the wheelchair_boarding
+      behavior of the main station, if specified. 1 the station entrance is wheelchair
+      accessible. 2 no wheelchair accessible route connects the station entrance to
+      the stops / platforms
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/wheelChairAccessible
+  openingHoursSpecification:
+    description: Property. A structured value providing information about the opening
+      hours of a place or a certain service inside a place. Model:'https://schema.org/openingHoursSpecification'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/openingHoursSpecification
+  contractingAuthority:
+    description: Property. Name of the contracting authority
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/contractingAuthority
+  contractingCompany:
+    description: Property. Name of the contracting company responsible for the exploitation
+      of the station
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/contractingCompany
+  contactPoint:
+    description: Property. Model:'https://schema.org/ContactPoint'. The details to
+      contact with the item
+    range: ContactPoint
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/contactPoint
+  webSite:
+    description: Property. Link to the official website for more information
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/webSite
+  installationMode:
+    description: Property. Location  relative to the ground reference. Enum:'aerial,
+      ground, underGround, underSea'
+    range: installationMode_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/installationMode
+  dimension:
+    description: Property. Global dimension. The format is structured by a sub-property
+      of 3 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **MTR** represents Meters. Units:'meters'
+    range: Dimension
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/dimension
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  inventory:
+    description: Property. General data mapping only for `locationType` = 0, 1, 3,
+      4. The format is structured by a sub-property of 4 items
+    range: Inventory
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/inventory
+  stationConnected:
+    description: 'Property. Connections possible from this station. A structured value
+      from 0 to N occurrences where each items is a string in the format `stationType`
+      : [List of Lines connected, separated by a comma]. Enum:''aerialLift, bus, cableTram,
+      ferry, funicular, monorail, rail, subway, train, tram, trolleybus'''
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/stationConnected
+  services:
+    description: Property. Object containing information bout the services included
+    range: Services
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/services
+  paymentAccepted:
+    description: Property. Accepted methods of payment in the Station
+    range: paymentAccepted_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/paymentAccepted
+  currencyAccepted:
+    description: Property. Accepted currencies for making payments in the Station
+    range: currencyAccepted_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/currencyAccepted
+  constructionDate:
+    description: Property. Construction date of the station
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/constructionDate
+  commissioningDate:
+    description: Property. Commissioning date of the station
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/commissioningDate
+  architect:
+    description: Property. Architect that designed the station
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/architect
+  featuredArtist:
+    description: Property. Featured artists in the station
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/featuredArtist
+enums:
+  stationType_options:
+    name: stationType_options
+    permissible_values:
+      aerialLift:
+        text: aerialLift
+      bus:
+        text: bus
+      cableTram:
+        text: cableTram
+      ferry:
+        text: ferry
+      funicular:
+        text: funicular
+      monorail:
+        text: monorail
+      rail:
+        text: rail
+      subway:
+        text: subway
+      train:
+        text: train
+      tram:
+        text: tram
+      trolleybus:
+        text: trolleybus
+  installationMode_options:
+    name: installationMode_options
+    permissible_values:
+      aerial:
+        text: aerial
+      ground:
+        text: ground
+      underGround:
+        text: underGround
+      underSea:
+        text: underSea
+  paymentAccepted_options:
+    name: paymentAccepted_options
+    permissible_values:
+      Cash:
+        text: Cash
+      CreditCard:
+        text: CreditCard
+      CryptoCurrency:
+        text: CryptoCurrency
+      other:
+        text: other
+  currencyAccepted_options:
+    name: currencyAccepted_options
+    permissible_values:
+      EUR:
+        text: EUR
+      USD:
+        text: USD

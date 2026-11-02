@@ -1,0 +1,361 @@
+id: https://github.com/smart-data-models/dataModel.ROS2/sensor_msgs_batteryState
+name: sensor_msgs_batteryState
+title: Smart Data Models - ROS2 sensor_msgs/BatteryState
+description: Represents the state of a battery, including voltage, current, charge,
+  capacity, and health status
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ROS2
+  spec.source.path: sensor_msgs_batteryState/schema.json
+  spec.source.commit: ddf034ccac858972889c376839be0db5ffb7e343
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"],
+    "batteryLocation": {"type": "Property", "value": "robot_base"}, "capacity": {"type":
+    "Property", "unitCode": "AMH", "value": 10.0}, "cellTemperature": {"type": "Property",
+    "unitCode": "CEL", "value": [25.0, 25.5, 26.0]}, "cellVoltage": {"type": "Property",
+    "unitCode": "VLT", "value": [4.2, 4.2, 4.2]}, "charge": {"type": "Property", "unitCode":
+    "AMH", "value": 8.5}, "current": {"type": "Property", "unitCode": "AMP", "value":
+    -2.5}, "dateCreated": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2025-12-02T10:00:00Z"}}, "dateModified": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "2025-12-02T10:00:00Z"}}, "designCapacity": {"type": "Property",
+    "unitCode": "AMH", "value": 10.0}, "header": {"type": "Property", "value": {"frameId":
+    "battery_link", "stamp": {"nanosec": 500000000, "sec": 1701518400}}}, "id": "urn:ngsi-ld:SensorMsgsBatteryState:001",
+    "percentage": {"type": "Property", "value": 0.85}, "powerSupplyHealth": {"type":
+    "Property", "value": 1}, "powerSupplyStatus": {"type": "Property", "value": 2},
+    "powerSupplyTechnology": {"type": "Property", "value": 3}, "present": {"type":
+    "Property", "value": true}, "serialNumber": {"type": "Property", "value": "BAT123456789"},
+    "temperature": {"type": "Property", "unitCode": "CEL", "value": 25.5}, "type":
+    "SensorMsgsBatteryState", "voltage": {"type": "Property", "unitCode": "VLT", "value":
+    12.6}}'
+classes:
+  sensor_msgs_batteryState:
+    class_uri: https://smartdatamodels.org/dataModel.ROS2/sensor_msgs_batteryState
+    description: Represents the state of a battery, including voltage, current, charge,
+      capacity, and health status
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - batteryLocation
+    - capacity
+    - cellTemperature
+    - cellVoltage
+    - charge
+    - current
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - designCapacity
+    - header
+    - name
+    - owner
+    - percentage
+    - powerSupplyHealth
+    - powerSupplyStatus
+    - powerSupplyTechnology
+    - present
+    - seeAlso
+    - serialNumber
+    - source
+    - temperature
+    - voltage
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+  Stamp:
+    description: Property. Timestamp
+    attributes:
+      sec:
+        description: Property. Seconds component of timestamp
+        range: integer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+      nanosec:
+        description: Property. Nanoseconds component of timestamp
+        range: integer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+  Header:
+    description: Property. Model:'https://schema.org/StructuredValue'. Message header
+      with timestamp and frame information
+    attributes:
+      stamp:
+        description: Property. Timestamp
+        range: Stamp
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+      frameId:
+        description: Property. Reference frame identifier
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/areaServed
+  header:
+    description: Property. Model:'https://schema.org/StructuredValue'. Message header
+      with timestamp and frame information
+    range: Header
+    required: true
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/dataModel.ROS2/header
+  voltage:
+    description: Property. Model:'https://schema.org/Number'. Voltage in Volts (V).
+      NaN if not available
+    range: float
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/dataModel.ROS2/voltage
+  temperature:
+    description: Property. Model:'https://schema.org/Number'. Temperature in Celsius
+      (°C). NaN if not available
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/dataModel.ROS2/temperature
+  current:
+    description: Property. Model:'https://schema.org/Number'. Current in Amperes (A).
+      Negative indicates discharging. NaN if not available
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/dataModel.ROS2/current
+  charge:
+    description: Property. Model:'https://schema.org/Number'. Current charge in Ampere-hours
+      (Ah). NaN if not available
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/dataModel.ROS2/charge
+  capacity:
+    description: Property. Model:'https://schema.org/Number'. Total capacity in Ampere-hours
+      (Ah). NaN if not available
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/dataModel.ROS2/capacity
+  designCapacity:
+    description: Property. Model:'https://schema.org/Number'. Design capacity in Ampere-hours
+      (Ah). NaN if not available
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/dataModel.ROS2/designCapacity
+  percentage:
+    description: Property. Model:'https://schema.org/Number'. Charge percentage (0.0
+      to 1.0). NaN if not available
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/dataModel.ROS2/percentage
+  powerSupplyStatus:
+    description: Property. Power supply status constant. 0=UNKNOWN, 1=CHARGING, 2=DISCHARGING,
+      3=NOT_CHARGING, 4=FULL
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/dataModel.ROS2/powerSupplyStatus
+  powerSupplyHealth:
+    description: Property. Power supply health constant. 0=UNKNOWN, 1=GOOD, 2=OVERHEAT,
+      3=DEAD, 4=OVERVOLTAGE, 5=UNSPEC_FAILURE, 6=COLD, 7=WATCHDOG_TIMER_EXPIRE, 8=SAFETY_TIMER_EXPIRE
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/dataModel.ROS2/powerSupplyHealth
+  powerSupplyTechnology:
+    description: Property. Power supply technology constant. 0=UNKNOWN, 1=NIMH, 2=LION,
+      3=LIPO, 4=LIFE, 5=NICD, 6=LIMN
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/dataModel.ROS2/powerSupplyTechnology
+  present:
+    description: Property. True if the battery is present
+    range: boolean
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/dataModel.ROS2/present
+  cellVoltage:
+    description: Property. Individual cell voltages in Volts (V). Empty array if not
+      available
+    range: float
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/dataModel.ROS2/cellVoltage
+  cellTemperature:
+    description: Property. Individual cell temperatures in Celsius (°C). Empty array
+      if not available
+    range: float
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/dataModel.ROS2/cellTemperature
+  batteryLocation:
+    description: Property. Model:'https://schema.org/Text'. Battery location identifier.
+      The location into which the battery is inserted
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/dataModel.ROS2/batteryLocation
+  serialNumber:
+    description: Property. Model:'https://schema.org/Text'. Battery serial number
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ROS2@ddf034ccac858972889c376839be0db5ffb7e343
+    slot_uri: https://smartdatamodels.org/dataModel.ROS2/serialNumber

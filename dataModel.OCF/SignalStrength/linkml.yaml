@@ -1,0 +1,253 @@
+id: https://github.com/smart-data-models/dataModel.OCF/SignalStrength
+name: SignalStrength
+title: Signal Strength
+description: Smart Data Models Program adaptation of the original IoTData data Models.
+  This Resource describes the strength of a signal by means of lqi and rssi. The Property
+  'lqi' is a floating point number that represents Link Quality Indicator. The Property
+  'rssi' is a floating point number that represents the received signal strength indicator.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: SignalStrength/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Huge personal future
+    operation. Second above want test today ", "addressLocality": "Wear line young
+    say. Investment important black various risk unit Mrs inside.", "addressRegion":
+    "Director national together sure shake leave by least. Office moment same difference
+    style. Including environmental educatio", "district": "Likely history television.
+    Finally be wonder huge hard.", "postOfficeBoxNumber": "Unit get write even among
+    senior though. Character certain current that. Recent different arm win military
+    response.", "postalCode": "Arm position now however home music sing recently.
+    Prove thus at this everyone. Look much product adult determine despite today.
+    However daughter worry.", "streetAddress": "Customer form daugh", "streetNr":
+    "Any everything door home at. Together against instea"}}, "alternateName": {"type":
+    "Property", "value": "Relationship call other still follow poor. Simply create
+    bed never pl"}, "areaServed": {"type": "Property", "value": "She cause right product
+    matter bar if. Thing will environment any particular."}, "dataProvider": {"type":
+    "Property", "value": "Spend well subject song. Charge poor fight somebody camera
+    direction hot"}, "dateCreated": {"type": "Property", "value": {"@type": "DateTime",
+    "@value": "2002-11-06T04:05:58Z"}}, "dateModified": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "1991-10-24T01:36:20Z"}}, "description": {"type":
+    "Property", "value": "Reality hit energy outside w"}, "id": "urn:ngsi-ld:SignalStrength:id:GGHD:03799689",
+    "if": {"type": "Property", "value": ["oic.if.s", "oic.if.baseline"]}, "location":
+    {"type": "GeoProperty", "value": {"coordinates": [-46.7711165, -160.484273], "type":
+    "Point"}}, "lqi": {"type": "Property", "value": 649.9}, "n": {"type": "Property",
+    "value": "Health new blood hour t"}, "name": {"type": "Property", "value": "Television
+    tend yourself religious type mind trial. Story property watch box."}, "owner":
+    {"type": "Property", "value": ["urn:ngsi-ld:SignalStrength:items:FPGM:70635641",
+    "urn:ngsi-ld:SignalStrength:items:KZWZ:57348603"]}, "rssi": {"type": "Property",
+    "value": 963.2}, "rt": {"type": "Property", "value": ["oic.r.signalstrength"]},
+    "seeAlso": {"type": "Property", "value": ["urn:ngsi-ld:SignalStrength:items:TGTB:14466454"]},
+    "source": {"type": "Property", "value": "Gun arrive whatever arrive reflect base
+    matter leas"}, "type": "SignalStrength"}'
+classes:
+  SignalStrength:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/SignalStrength
+    description: Smart Data Models Program adaptation of the original IoTData data
+      Models. This Resource describes the strength of a signal by means of lqi and
+      rssi. The Property 'lqi' is a floating point number that represents Link Quality
+      Indicator. The Property 'rssi' is a floating point number that represents the
+      received signal strength indicator.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - if
+    - lqi
+    - n
+    - name
+    - owner
+    - rssi
+    - rt
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. The Resource Type.
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  lqi:
+    description: Property. The current value of Link Quality Indicator.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/lqi
+  rssi:
+    description: Property. The current value of Received Signal Strength Indicator.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rssi
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  if:
+    description: Property. The OCF Interface set supported by this Resource.
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.signalstrength:
+        text: oic.r.signalstrength
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.s:
+        text: oic.if.s
+      oic.if.baseline:
+        text: oic.if.baseline

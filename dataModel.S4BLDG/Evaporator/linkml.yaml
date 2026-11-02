@@ -1,0 +1,305 @@
+id: https://github.com/smart-data-models/dataModel.S4BLDG/Evaporator
+name: Evaporator
+title: Smart data models - Evaporator schema
+description: An evaporator is a device in which a liquid refrigerent is vaporized
+  and absorbs heat from the surrounding fluid.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.S4BLDG
+  spec.source.path: Evaporator/schema.json
+  spec.source.commit: 06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.S4BLDG/master/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"], "alternateName":
+    {"type": "Property", "value": "Evaporator type 2"}, "dataProvider": {"type": "Property",
+    "value": "IFC file"}, "dateCreated": {"type": "Property", "value": "2023-01-26T06:49:33Z"},
+    "dateModified": {"type": "Property", "value": "2023-01-26T02:39:15Z"}, "description":
+    {"type": "Property", "value": "Evaporator of limited Evaporator types"}, "evaporationCoolant":
+    {"type": "Property", "value": "Generic"}, "evaporationMediumType": {"type": "Property",
+    "value": "ROI"}, "externalSurfaceArea": {"observedAt": "2023-01-26T01:26:06Z",
+    "type": "Property", "unitCode": "m2", "value": 0.40305559655625467}, "hasManufacturer":
+    {"type": "Property", "value": "Evaporator Company Inc."}, "hasModel": {"type":
+    "Property", "value": "Evaporator 0.1.2"}, "id": "urn:ngsi-ld:Evaporator:012ce978-0915-4322-82cf-64be00f886e6",
+    "internalRefrigerantVolume": {"observedAt": "2023-01-26T04:37:57Z", "type": "Property",
+    "unitCode": "m3", "value": 0.9165377999786634}, "internalSurfaceArea": {"observedAt":
+    "2023-01-26T07:59:30Z", "type": "Property", "unitCode": "m2", "value": 0.11705017875360657},
+    "internalWaterVolume": {"observedAt": "2023-01-26T13:18:36Z", "type": "Property",
+    "unitCode": "m3", "value": 0.6445386560470906}, "isContainedInBuildingSpace":
+    {"object": "urn:ngsi-ld:BuildingSpace:09942ed6-b0b8-4968-a57d-e48b8fd062f9", "type":
+    "Relationship"}, "isContainedInPhysicalObject": {"object": "urn:ngsi-ld:PhysicalObject:9f7d6071-a0a0-4b9d-9707-b59804cef5a8",
+    "type": "Relationship"}, "isSubSystemOf": [{"object": "urn:ngsi-ld:System:cb2ff8f9-5b3a-48f2-a576-c7a632297517",
+    "type": "Relationship"}, {"object": "urn:ngsi-ld:System:c9865d23-d9da-47f2-875a-1f0beb5bbf09",
+    "type": "Relationship"}, {"object": "urn:ngsi-ld:System:18016c6a-4548-4adc-a84c-c62c94e34393",
+    "type": "Relationship"}], "name": {"type": "Property", "value": "Evaporator"},
+    "nominalHeatTransferArea": {"observedAt": "2023-01-25T18:46:49Z", "type": "Property",
+    "unitCode": "m2", "value": 0.20771410507872068}, "nominalHeatTransferCoefficient":
+    {"observedAt": "2023-01-26T11:33:53Z", "type": "Property", "unitCode": "Kelvin",
+    "value": 0.029467682176717913}, "refrigerantClass": {"type": "Property", "value":
+    "Directives"}, "source": {"type": "Property", "value": "Import"}, "type": "Evaporator"}'
+classes:
+  Evaporator:
+    class_uri: https://smartdatamodels.org/dataModel.S4BLDG/Evaporator
+    description: An evaporator is a device in which a liquid refrigerent is vaporized
+      and absorbs heat from the surrounding fluid.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - evaporationCoolant
+    - evaporationMediumType
+    - externalSurfaceArea
+    - hasManufacturer
+    - hasModel
+    - internalRefrigerantVolume
+    - internalSurfaceArea
+    - internalWaterVolume
+    - isContainedInBuildingSpace
+    - isContainedInPhysicalObject
+    - isSubSystemOf
+    - name
+    - nominalHeatTransferArea
+    - nominalHeatTransferCoefficient
+    - owner
+    - refrigerantClass
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/areaServed
+  evaporationCoolant:
+    description: Property. The fluid used for the coolant in the evaporator
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/evaporationCoolant
+  evaporationMediumType:
+    description: 'Property. ColdLiquid: Evaporator is using liquid type of fluid to
+      exchange heat with refrigerant. ColdAir: Evaporator is using air to exchange
+      heat with refrigerant'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/evaporationMediumType
+  externalSurfaceArea:
+    description: Property. External surface area (both primary and secondary area).
+      Usually measured in square metre (m2)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/externalSurfaceArea
+  internalRefrigerantVolume:
+    description: Property. Internal volume of evaporator (refrigerant side). Usually
+      measured in cubic metre (m3)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/internalRefrigerantVolume
+  internalSurfaceArea:
+    description: Property. Internal surface area. Usually measured in square metre
+      (m2)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/internalSurfaceArea
+  internalWaterVolume:
+    description: Property. Internal volume of evaporator (water side). Usually measured
+      in cubic metre (m3)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/internalWaterVolume
+  nominalHeatTransferArea:
+    description: Property. Nominal heat transfer surface area associated with nominal
+      overall heat transfer coefficient. Usually measured in square metre (m2)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/nominalHeatTransferArea
+  nominalHeatTransferCoefficient:
+    description: Property. Nominal overall heat transfer coefficient associated with
+      nominal heat transfer area. Usually measured in Watts/m2 Kelvin
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/nominalHeatTransferCoefficient
+  refrigerantClass:
+    description: 'Property. Refrigerant class used by the compressor. CFC: Chlorofluorocarbons.
+      HCFC: Hydrochlorofluorocarbons. HFC: Hydrofluorocarbons'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/refrigerantClass
+  isContainedInBuildingSpace:
+    description: Relationship. An entity used to define the physical spaces of the
+      building. A building space contains devices or building objects. (BuildingSpace)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isContainedInBuildingSpace
+  isContainedInPhysicalObject:
+    description: Relationship. Any Object that has a proper space region.  (Definition
+      extracted from DUL ontology) (PhysicalObject)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isContainedInPhysicalObject
+  isSubSystemOf:
+    description: Relationship. A reference to a system(s) that this Physical Object
+      is part of
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isSubSystemOf
+  hasManufacturer:
+    description: Property. A relationship identifying the manufacturer of an entity
+      (e.g., device). The value is expected to be a string or a string with language
+      tag
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/hasManufacturer
+  hasModel:
+    description: Property. A relationship identifying the model of an entity (e.g.,
+      device). The value is expected to be a string or a string with language tag
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/hasModel

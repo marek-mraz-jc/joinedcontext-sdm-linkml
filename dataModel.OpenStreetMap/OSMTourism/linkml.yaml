@@ -1,0 +1,342 @@
+id: https://github.com/smart-data-models/dataModel.OpenStreetMap/OSMTourism
+name: OSMTourism
+title: Smart Data Models - OpenStreetMap / OSMTourism
+description: A tourist attraction or tourism-related facility from OpenStreetMap tagged
+  with tourism=*. Includes hotels, museums, viewpoints, artworks, etc
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OpenStreetMap
+  spec.source.path: OSMTourism/schema.json
+  spec.source.commit: 5188df53c66d3c9f2441b6cffea0b604364ace68
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.OpenStreetMap/refs/heads/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCity": "Madrid", "addressCountry":
+    "ES", "postalCode": "28014", "streetAddress": "Paseo del Prado"}}, "fee": {"type":
+    "Property", "value": true}, "id": "urn:ngsi-ld:OSMTourism:way:1122334455", "location":
+    {"type": "GeoProperty", "value": {"coordinates": [[[-3.6926, 40.4137], [-3.6915,
+    40.4137], [-3.6915, 40.413], [-3.6926, 40.413], [-3.6926, 40.4137]]], "type":
+    "Polygon"}}, "name": {"type": "Property", "value": "Museo del Prado"}, "osmId":
+    {"type": "Property", "value": 1122334455}, "osmLastModified": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2023-08-10T14:20:00Z"}}, "osmType":
+    {"type": "Property", "value": "way"}, "seeAlso": {"type": "Property", "value":
+    ["https://www.openstreetmap.org/way/1122334455"]}, "source": {"type": "Property",
+    "value": "https://www.openstreetmap.org"}, "tourismType": {"type": "Property",
+    "value": "museum"}, "type": "OSMTourism", "wheelchair": {"type": "Property", "value":
+    "yes"}}'
+classes:
+  OSMTourism:
+    class_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/OSMTourism
+    description: A tourist attraction or tourism-related facility from OpenStreetMap
+      tagged with tourism=*. Includes hotels, museums, viewpoints, artworks, etc
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - artworkType
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - fee
+    - information
+    - name
+    - osmId
+    - osmLastModified
+    - osmType
+    - owner
+    - rooms
+    - seeAlso
+    - source
+    - stars
+    - tourismType
+    - wheelchair
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+  Address:
+    description: Property. Address of the amenity, structured following schema.org
+      PostalAddress
+    attributes:
+      streetAddress:
+        description: Property. Street name
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      houseNumber:
+        description: Property. House or building number
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      addressCity:
+        description: Property. City of the address
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      postalCode:
+        description: Property. Postal code
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      addressCountry:
+        description: Property. ISO 3166-1 alpha-2 country code
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. List of URIs pointing to additional resources
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. Address of the amenity, structured following schema.org
+      PostalAddress
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/areaServed
+  osmId:
+    description: Property. The original OpenStreetMap element integer identifier
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmId
+  osmType:
+    description: Property. The type of the original OSM element
+    range: osmType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmType
+  osmLastModified:
+    description: Property. Timestamp of the last modification
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmLastModified
+  tourismType:
+    description: Property. The OSM tourism tag classification. Enum:'hotel, motel,
+      hostel, guest_house, chalet, apartment, camp_site, caravan_site, alpine_hut,
+      wilderness_hut, museum, gallery, theme_park, zoo, aquarium, attraction, viewpoint,
+      artwork, information, picnic_site'. Model:'https://wiki.openstreetmap.org/wiki/Key:tourism'
+    range: tourismType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/tourismType
+  stars:
+    description: Property. Hotel star rating. Model:'https://wiki.openstreetmap.org/wiki/Key:stars'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/stars
+  rooms:
+    description: Property. Number of rooms in a hotel or guest house. Model:'https://wiki.openstreetmap.org/wiki/Key:rooms'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/rooms
+  artworkType:
+    description: Property. Specific type of artwork if tourism=artwork. Model:'https://wiki.openstreetmap.org/wiki/Key:artwork_type'
+    range: artworkType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/artworkType
+  information:
+    description: Property. Type of information provided if tourism=information. Model:'https://wiki.openstreetmap.org/wiki/Key:information'
+    range: information_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://uri.etsi.org/ngsi-ld/information
+  fee:
+    description: Property. Indicates whether an entrance fee is required
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/fee
+  wheelchair:
+    description: Property. Wheelchair accessibility
+    range: wheelchair_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/wheelchair
+enums:
+  osmType_options:
+    name: osmType_options
+    permissible_values:
+      node:
+        text: node
+      way:
+        text: way
+      relation:
+        text: relation
+  tourismType_options:
+    name: tourismType_options
+    permissible_values:
+      hotel:
+        text: hotel
+      motel:
+        text: motel
+      hostel:
+        text: hostel
+      guest_house:
+        text: guest_house
+      chalet:
+        text: chalet
+      apartment:
+        text: apartment
+      camp_site:
+        text: camp_site
+      caravan_site:
+        text: caravan_site
+      alpine_hut:
+        text: alpine_hut
+      wilderness_hut:
+        text: wilderness_hut
+      museum:
+        text: museum
+      gallery:
+        text: gallery
+      theme_park:
+        text: theme_park
+      zoo:
+        text: zoo
+      aquarium:
+        text: aquarium
+      attraction:
+        text: attraction
+      viewpoint:
+        text: viewpoint
+      artwork:
+        text: artwork
+      information:
+        text: information
+      picnic_site:
+        text: picnic_site
+  artworkType_options:
+    name: artworkType_options
+    permissible_values:
+      sculpture:
+        text: sculpture
+      statue:
+        text: statue
+      mural:
+        text: mural
+      bust:
+        text: bust
+      architecture:
+        text: architecture
+      graffiti:
+        text: graffiti
+      installation:
+        text: installation
+      painting:
+        text: painting
+  information_options:
+    name: information_options
+    permissible_values:
+      guidepost:
+        text: guidepost
+      board:
+        text: board
+      map:
+        text: map
+      office:
+        text: office
+      terminal:
+        text: terminal
+      audioguide:
+        text: audioguide
+  wheelchair_options:
+    name: wheelchair_options
+    permissible_values:
+      'yes':
+        text: 'yes'
+      'no':
+        text: 'no'
+      limited:
+        text: limited

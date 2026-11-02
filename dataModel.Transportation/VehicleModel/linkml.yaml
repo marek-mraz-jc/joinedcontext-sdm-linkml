@@ -1,0 +1,432 @@
+id: https://github.com/smart-data-models/dataModel.Transportation/VehicleModel
+name: VehicleModel
+title: ' - Vehicle / Vehicle Model'
+description: This entity models a particular vehicle model, including all properties
+  which are common to multiple vehicle instances belonging to such model.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Transportation
+  spec.source.path: VehicleModel/schema.json
+  spec.source.commit: 48e0e7ebaaee430f04a47efb27fc38825f79b725
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"],
+    "brandName": {"type": "Property", "value": "Volkswagen"}, "fuelConsumption": {"type":
+    "Property", "value": 20.7}, "fuelType": {"type": "Property", "value": "electric"},
+    "id": "urn:ngsi-ld:VehicleModel:vehiclemodel:buzz", "manufacturerName": {"type":
+    "Property", "value": "Volkswagen"}, "modelName": {"type": "Property", "value":
+    "ID. Buzz"}, "name": {"type": "Property", "value": "VW-IDBuzz"}, "tractionBatteryCapacity":
+    {"type": "Property", "value": 79}, "type": "VehicleModel", "vehicleType": {"type":
+    "Property", "value": "car"}}'
+classes:
+  VehicleModel:
+    class_uri: https://smartdatamodels.org/dataModel.Transportation/VehicleModel
+    description: This entity models a particular vehicle model, including all properties
+      which are common to multiple vehicle instances belonging to such model.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - annotations
+    - areaServed
+    - brandName
+    - cargoVolume
+    - color
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - depth
+    - description
+    - fuelConsumption
+    - fuelType
+    - height
+    - image
+    - manufacturerName
+    - modelName
+    - name
+    - owner
+    - seeAlso
+    - source
+    - tractionBatteryCapacity
+    - url
+    - vehicleEngine
+    - vehicleModelDate
+    - vehicleType
+    - weight
+    - width
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/areaServed
+  color:
+    description: Property. The color of the product. Model:'https://schema.org/color'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/color
+  image:
+    description: Property. An image of the item. Model:'https://schema.org/URL'
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/image
+  annotations:
+    description: Property. Annotations about the item. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/annotations
+  vehicleType:
+    description: Property. Type of vehicle from the point of view of its structural
+      characteristics. This is different than the vehicle category . Model:'https://schema.org/Text'.
+      Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, binTrolley,
+      bus, car, caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, cleaningTrolley,
+      constructionOrMaintenanceVehicle, fourWheelDrive, highSidedVehicle, lorry, minibus,
+      moped, motorcycle, motorcycleWithSideCar, motorscooter, sweepingMachine, tanker,
+      threeWheeledVehicle, trailer, tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter,
+      vehicleWithCaravan, vehicleWithTrailer, withEvenNumberedRegistrationPlates,
+      withOddNumberedRegistrationPlates, other'. The following values defined by _VehicleTypeEnum_
+      and _VehicleTypeEnum2_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)
+    range: vehicleType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/vehicleType
+  brandName:
+    description: Property. Vehicle's brand name. Model:'https://schema.org/brand'
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/brandName
+  modelName:
+    description: Property. Vehicle's model name. Model:'https://schema.org/model'
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/modelName
+  manufacturerName:
+    description: Property. Vehicle's manufacturer name. Model:'https://schema.org/Text'
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/manufacturerName
+  vehicleModelDate:
+    description: Property. The release date of a vehicle model (often used to differentiate
+      versions of the same make and model). Model:'https://schema.org/vehicleModelDate'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/vehicleModelDate
+  cargoVolume:
+    description: Property. The available volume for cargo or luggage. For automobiles,
+      this is usually the trunk volume. Model:'https://schema.org/cargoVolume'. Units:'Liters'.
+      If only a single value is provided (type Number) it will refer to the maximum
+      volume
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/cargoVolume
+    unit:
+      ucum_code: L
+      exact_mappings:
+      - ucefact:LTR
+      - qudt-unit:L
+      has_quantity_kind: qudt-quantkind:Volume
+  fuelType:
+    description: Property. The type of fuel suitable for the engine or engines of
+      the vehicle. Model:'https://schema.org/fuelType'. Enum:'autogas, biodiesel,
+      cng, diesel, electric, ethanol, gasoline, hybrid_electric_diesel, hybrid_electric_petrol,
+      hydrogen, lpg, petrol, petrol(unleaded), petrol(leaded), other'
+    range: fuelType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/fuelType
+  fuelConsumption:
+    description: Property. The amount of fuel or energy consumed for traveling a particular
+      distance or temporal duration with the given vehicle. For combustion engines
+      it is expressed in liters per 100 km, for electric vehicles (fuelType electric)
+      in kilowatt hours per 100 km. Model:'https://schema.org/fuelConsumption'. Units:'liters
+      per 100 kilometer or kilowatt hour per 100 kilometer'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/fuelConsumption
+  tractionBatteryCapacity:
+    description: Property. Usable energy capacity of the traction battery of vehicles
+      fully or partly powered by electricity (battery electric, plug-in hybrid or
+      hybrid vehicles). Allows, for instance, estimating the driving range together
+      with fuelConsumption. Model:'https://schema.org/Number'. Units:'kilowatt hour'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/tractionBatteryCapacity
+  height:
+    description: Property. Vehicle's height. Model:'https://schema.org/height'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/height
+  width:
+    description: Property. Vehicle's width. Model:'https://schema.org/width'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/width
+  depth:
+    description: Property. Vehicle's depth. Model:'https://schema.org/depth'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/depth
+  weight:
+    description: Property. Vehicle's weight. Model:'https://schema.org/weight'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/weight
+  vehicleEngine:
+    description: Property. Information about the engine or engines of the vehicle.
+      Model:'https://schema.org/vehicleEngine'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/vehicleEngine
+  url:
+    description: Property. URL which provides a description of this vehicle model.
+      Model:'https://schema.org/URL'
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/url
+enums:
+  vehicleType_options:
+    name: vehicleType_options
+    permissible_values:
+      agriculturalVehicle:
+        text: agriculturalVehicle
+      bicycle:
+        text: bicycle
+      binTrolley:
+        text: binTrolley
+      bus:
+        text: bus
+      car:
+        text: car
+      caravan:
+        text: caravan
+      carWithCaravan:
+        text: carWithCaravan
+      carWithTrailer:
+        text: carWithTrailer
+      cleaningTrolley:
+        text: cleaningTrolley
+      constructionOrMaintenanceVehicle:
+        text: constructionOrMaintenanceVehicle
+      lorry:
+        text: lorry
+      minibus:
+        text: minibus
+      moped:
+        text: moped
+      motorcycle:
+        text: motorcycle
+      motorcycleWithSideCar:
+        text: motorcycleWithSideCar
+      motorscooter:
+        text: motorscooter
+      sweepingMachine:
+        text: sweepingMachine
+      tanker:
+        text: tanker
+      trailer:
+        text: trailer
+      tram:
+        text: tram
+      van:
+        text: van
+      trolley:
+        text: trolley
+  fuelType_options:
+    name: fuelType_options
+    permissible_values:
+      autogas:
+        text: autogas
+      biodiesel:
+        text: biodiesel
+      cng:
+        text: cng
+      diesel:
+        text: diesel
+      electric:
+        text: electric
+      ethanol:
+        text: ethanol
+      gasoline:
+        text: gasoline
+      hybrid_electric_diesel:
+        text: hybrid_electric_diesel
+      hybrid_electric_petrol:
+        text: hybrid_electric_petrol
+      hydrogen:
+        text: hydrogen
+      lpg:
+        text: lpg
+      petrol:
+        text: petrol
+      petrol(unleaded):
+        text: petrol(unleaded)
+      petrol(leaded):
+        text: petrol(leaded)
+      other:
+        text: other

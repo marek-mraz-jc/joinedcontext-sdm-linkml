@@ -1,0 +1,276 @@
+id: https://github.com/smart-data-models/dataModel.OCF/Altimeter
+name: Altimeter
+title: Smart Data models - Altimeter schema derived from the open connectivity foundation
+  repository https://github.com/openconnectivityfoundation/IoTDataModels
+description: This Resource describes the properties associated with altimeter.The
+  Property 'alt' is the distance (metres) above or below 'local' sea-level.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: Altimeter/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Arrive east threat
+    south wear budget. Tv program job unit blue sit.", "addressLocality": "Age simply
+    score character force. Thousand seem hope. Field fill great care.", "addressRegion":
+    "Help like find size. Check explain reduce value. Across recently choice policy
+    writer avoid.", "district": "Station want national quickly father thing. Whatever
+    ago across do long clearly worker.", "postOfficeBoxNumber": "Story thousand employee
+    either second customer oil. Space American avoid police work drug water physical.
+    Resource husband Congress government follow economic dream.", "postalCode": "And
+    until cultural quickly her pick Mrs. Medical fear light.", "streetAddress": "Concern
+    today writer song operation city issue. Challenge conference service price miss.
+    National w", "streetNr": "South worker history wish bot"}}, "alt": {"type": "Property",
+    "value": 821.8}, "alternateName": {"type": "Property", "value": "Care learn whole.
+    Arrive employee meeting about still cold once view. Check leave space."}, "areaServed":
+    {"type": "Property", "value": "Order nothing mention pull war stand. Store along
+    feel without seem. Young candidate whether learn glass."}, "dataProvider": {"type":
+    "Property", "value": "Mean eight design put. Focus specific instead finally region
+    two various. Whatever them seem let head program environment. Behind impro"},
+    "dateCreated": {"type": "Property", "value": {"@type": "DateTime", "@value": "1998-06-13T14:49:06Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2023-02-09T05:06:53Z"}}, "description": {"type": "Property", "value": "Court"},
+    "id": "urn:ngsi-ld:Altimeter:id:TWDF:66254261", "if": {"type": "Property", "value":
+    ["oic.if.baseline", "oic.if.s"]}, "location": {"type": "GeoProperty", "value":
+    {"coordinates": [71.586845, 113.083418], "type": "Point"}}, "n": {"type": "Property",
+    "value": "Want among want model its whether visit"}, "name": {"type": "Property",
+    "value": "Result build remain close natural history relate method. Later nature
+    yeah party arrive. Dog something friend special."}, "owner": {"type": "Property",
+    "value": ["urn:ngsi-ld:Altimeter:items:REST:24340353", "urn:ngsi-ld:Altimeter:items:JPXH:89305576"]},
+    "precision": {"type": "Property", "value": 735.5}, "range": {"type": "Property",
+    "value": [826.2, 991.8]}, "rt": {"type": "Property", "value": ["oic.r.altimeter"]},
+    "seeAlso": {"type": "Property", "value": ["urn:ngsi-ld:Altimeter:items:YJDK:74161276"]},
+    "source": {"type": "Property", "value": "Perhaps maybe class. Authority according
+    wear develop become. Letter fall reduce woman f"}, "step": {"type": "Property",
+    "value": 295.7}, "type": "Altimeter"}'
+classes:
+  Altimeter:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/Altimeter
+    description: This Resource describes the properties associated with altimeter.The
+      Property 'alt' is the distance (metres) above or below 'local' sea-level.
+    is_a: Entity
+    slots:
+    - address
+    - alt
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - if
+    - n
+    - name
+    - owner
+    - precision
+    - range
+    - rt
+    - seeAlso
+    - source
+    - step
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. The Resource Type
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  alt:
+    description: Property. The current distance (metres) above or below 'local' sea-level
+    range: float
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/alt
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  precision:
+    description: Property. When exposed the value in 'precision' provides a +/- tolerance
+      against the Properties in the Resource. Thus if a Property is UPDATED to a value
+      and that Property then RETRIEVED, the RETRIEVED value is valid if in the range
+      of the set value +/- precision
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/precision
+  range:
+    description: Property. The valid range for the Property in the Resource as a number.
+      The first value in the array is the minimum value, the second value in the array
+      is the maximum value
+    range: float
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/range
+  step:
+    description: Property. Step value across the defined range an integer when the
+      range is a number.  This is the increment for valid values across the range;
+      so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/step
+  if:
+    description: Property. The OCF Interface set supported by this Resource
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.altimeter:
+        text: oic.r.altimeter
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.s:
+        text: oic.if.s
+      oic.if.baseline:
+        text: oic.if.baseline

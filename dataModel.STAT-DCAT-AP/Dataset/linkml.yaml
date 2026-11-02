@@ -1,0 +1,394 @@
+id: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP/Dataset
+name: Dataset
+title: Dataset STAT-DCAT-AP schema
+description: Dataset Schema meeting STAT-DCAT-AP 1.0.1 specification
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP
+  spec.source.path: Dataset/schema.json
+  spec.source.commit: afab368490bf559379e3743336e7adec0e34f739
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smart-data-models.github.io/dataModel.STAT-DCAT-AP/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"], "Type": {"type":
+    "Property", "value": "http://data.europa.eu/xyz"}, "attribute": {"type": "Property",
+    "value": ["urn:ngsi-ld:AttributeProperty:unitMeasure", "urn:ngsi-ld:AttributeProperty:att-nuts3"]},
+    "description": {"type": "Property", "value": {"en": "Population by sex, age and
+    local administrative unit", "fr": "Population par sexe, \u00e2ge et unit\u00e9
+    administrative locale"}}, "dimension": {"type": "Property", "value": ["urn:ngsi-ld:DimensionProperty:dim-age",
+    "urn:ngsi-ld:DimensionProperty:dim-sex", "urn:ngsi-ld:DimensionProperty:dim-lau"]},
+    "id": "urn:ngsi-ld:Dataset:dsd1", "language": {"type": "Property", "value": ["en",
+    "fr"]}, "statUnitMeasure": {"type": "Property", "value": ["urn:ngsi-ld:Measure:obsValue"]},
+    "title": {"type": "Property", "value": ["dsd1"]}, "type": "Dataset"}'
+classes:
+  Dataset:
+    class_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/Dataset
+    description: Dataset Schema meeting STAT-DCAT-AP 1.0.1 specification
+    is_a: Entity
+    slots:
+    - Type
+    - accessRights
+    - accrualPeriodicity
+    - attribute
+    - conformsTo
+    - contactPoint
+    - description
+    - dimension
+    - distribution
+    - hasQualityAnnotation
+    - hasVersion
+    - identifier
+    - isVersionOf
+    - issued
+    - keyword
+    - landingPage
+    - language
+    - modified
+    - numSeries
+    - otherIdentifier
+    - page
+    - provenance
+    - publisher
+    - relation
+    - sample
+    - source
+    - spatial
+    - statUnitMeasure
+    - temporal
+    - theme
+    - title
+    - versionInfo
+    - versionNotes
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+  Description:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Literal'. This
+      property contains a free-text account of the Dataset. It corresponds with the
+      'description' mandatory property of DCAT-AP 2.0.1. This property can be repeated
+      for parallel language versions of the description.
+    attributes:
+      en:
+        description: Property. Description in English
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      fr:
+        description: Property. Description in French
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      it:
+        description: Property. Description in Italian
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      es:
+        description: Property. Description in Spanish
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      de:
+        description: Property. Description in German
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      ja:
+        description: Property. Description in Japan
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      zh:
+        description: Property. Description in Chinese
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+slots:
+  description:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Literal'. This
+      property contains a free-text account of the Dataset. It corresponds with the
+      'description' mandatory property of DCAT-AP 2.0.1. This property can be repeated
+      for parallel language versions of the description.
+    range: Description
+    required: true
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: http://purl.org/dc/terms/description
+  title:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Literal'. This
+      property contains a name given to the Dataset. It corresponds with the 'Title'
+      mandatory property of DCAT-AP 2.0.1. This property can be repeated for parallel
+      language versions of the name.
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: http://purl.org/dc/terms/title
+  Type:
+    description: Property. Model:'http://www.w3.org/2004/02/skos/core#Concept'. This
+      property refers to the type of the Dataset. A controlled vocabulary for the
+      values has not been established.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/Type
+  contactPoint:
+    description: Property. Model:'http://www.w3.org/2006/vcard/ns#Kind'. It corresponds
+      with the 'contact point' mandatory property of STAT-DCAT-AP 1.0.1. This property
+      contains contact information that can be used for sending comments about the
+      Dataset. Use of vCard is recommended
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/contactPoint
+  distribution:
+    description: Property. Model:'https://www.w3.org/ns/dcat2.ttl#Distribution'. This
+      property links the Dataset to an available Distributions. It corresponds with
+      the 'dataset distribution' mandatory property of STAT-DCAT-AP 1.0.1.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/distribution
+  keyword:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Literal'. This
+      property contains a keyword or tag, describing the Dataset.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/keyword
+  publisher:
+    description: Property. Model:'http://xmlns.com/foaf/0.1/#term_Agent'. This property
+      refers to an entity (organisation) responsible for making the Dataset available
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/publisher
+  theme:
+    description: Property. Model:'https://www.w3.org/2009/08/skos-reference/skos.html#Concept'.
+      This property refers to a category of the Dataset. A Dataset may be associated
+      with multiple themes
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/theme
+  accessRights:
+    description: Property. Model:'https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/RightsStatement'.
+      This property refers to information that indicates whether the Dataset is open
+      data, has access restrictions or is not public. A controlled vocabulary with
+      three members (:public, :restricted, :non-public) will be created and maintained
+      by the Publications Office of the EU. Enum:'public, restricted, non-public'
+    range: accessRights_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/accessRights
+  conformsTo:
+    description: Property. Model:'https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/Standard'.
+      This property refers to an implementing rule or other specification.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/conformsTo
+  page:
+    description: Property. Model:'http://xmlns.com/foaf/0.1/#term_Document'. This
+      property refers to a page or document about this Dataset
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/page
+  accrualPeriodicity:
+    description: Property. Model:'https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/Frequency'.
+      This property refers to the frequency at which the Dataset is updated.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/accrualPeriodicity
+  hasVersion:
+    description: Property. Model:'http://www.w3.org/ns/dcat#Dataset'. This property
+      refers to a related Dataset that is a version, edition, or adaptation of the
+      described Dataset.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/hasVersion
+  identifier:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Literal'. This
+      property contains the main identifier for the Dataset, e.g. the URI or other
+      unique identifier in the context of the Catalogue
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/identifier
+  isVersionOf:
+    description: Property. Model:'http://www.w3.org/ns/dcat#Dataset'. This property
+      contains the main identifier for the Dataset, e.g. the URI or other unique identifier
+      in the context of the Catalogue
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/isVersionOf
+  landingPage:
+    description: Property. Model:'http://xmlns.com/foaf/0.1/#term_Document'. This
+      property refers to a web page that provides access to the Dataset, its Distributions
+      and/or additional information. It is intended to point to a landing page at
+      the original data provider, not to a page on a site of a third party, such as
+      an aggregator.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/landingPage
+  language:
+    description: Property. Model:'https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LinguisticSystem'.
+      This property refers to a language of the Dataset. This property can be repeated
+      if there are multiple languages in the Dataset.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/language
+  otherIdentifier:
+    description: Property. Model:'http://www.w3.org/ns/adms#Identifier'. This property
+      refers to a secondary identifier of the Dataset, such as MAST/ADS, DataCite,
+      DOI, EZID or W3ID.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/otherIdentifier
+  provenance:
+    description: Property. Model:'https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/ProvenanceStatement'.
+      This property contains a statement about the lineage of a Dataset.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/provenance
+  relation:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Resource'.
+      This property refers to a related resource
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/relation
+  issued:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Literal'. This
+      property contains the date of formal issuance (e.g., publication) of the Dataset.
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/issued
+  sample:
+    description: Property. Model:'http://www.w3.org/ns/dcat#Distribution'. This property
+      refers to a sample distribution of the dataset
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/sample
+  source:
+    description: Property. Model:'http://www.w3.org/ns/dcat#Dataset'. This property
+      refers to a related Dataset from which the described Dataset is derived
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/source
+  spatial:
+    description: GeoProperty. Model:'https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/Location'.
+      This property refers to a geographic region that is covered by the Dataset
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/spatial
+  temporal:
+    description: Property. Model:'https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/PeriodOfTime'.
+      This property refers to a temporal period that the Dataset covers.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/temporal
+  modified:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Literal'. This
+      property contains the most recent date on which the Dataset was changed or modified.
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/modified
+  versionInfo:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Literal'. This
+      property contains a version number or other version designation of the Dataset
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/versionInfo
+  versionNotes:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Literal'. This
+      property contains a description of the differences between this version and
+      a previous version of the Dataset. This property can be repeated for parallel
+      language versions of the version notes.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/versionNotes
+  attribute:
+    description: Property. Model:'http://purl.org/linked-data/cube#AttributeProperty'.
+      This property links to a component used to qualify and interpret observed values,
+      e.g. units of measure, any scaling factors and metadata such as the status of
+      the observation (e.g. estimated, provisional). Attribute is a conceptual entity
+      that applies to all distribution formats, e.g. in case a dataset is provided
+      both in SDMX and in Data Cube.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/attribute
+  dimension:
+    description: Property. Model:'http://purl.org/linked-data/cube#DimensionProperty'.
+      This property links to a component that identifies observations, e.g. the time
+      to which the observation applies, or a geographic region which the observation
+      covers. Dimension is a conceptual entity that applies to all distribution formats,
+      e.g. in case a dataset is provided both in SDMX and in Data Cube.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/dimension
+  numSeries:
+    description: Property, Model:'http://www.w3.org/2000/01/rdf-schema#Literal', This
+      property contains the number of data series contained in th e Dataset
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/numSeries
+  hasQualityAnnotation:
+    description: Property. Model:'http://www.w3.org/ns/oa#Annotation'. This property
+      links to a statement related to quality of the Dataset, including rating, quality
+      certificate, feedback that can be associated to the Dataset.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/hasQualityAnnotation
+  statUnitMeasure:
+    description: Property. Model:'https://www.w3.org/2009/08/skos-reference/skos.html#Concept'.
+      This property links to a unit of measurement of the observations, for example
+      Euro, square kilometre, purchasing power standard (PPS), full- time equivalent,
+      percentage. Unit of measurement is a conceptual entity that applies to all distribution
+      formats , e.g. in the case when a dataset is provided both in SDMX and in Data
+      Cube.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/statUnitMeasure
+enums:
+  accessRights_options:
+    name: accessRights_options
+    permissible_values:
+      public:
+        text: public
+      restricted:
+        text: restricted
+      non-public:
+        text: non-public

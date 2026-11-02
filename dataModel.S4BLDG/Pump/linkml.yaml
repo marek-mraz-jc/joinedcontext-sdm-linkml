@@ -1,0 +1,309 @@
+id: https://github.com/smart-data-models/dataModel.S4BLDG/Pump
+name: Pump
+title: Smart data models - Pump schema
+description: A pump is a device which imparts mechanical work on fluids or slurries
+  to move them through a channel or pipeline. A typical use of a pump is to circulate
+  chilled water or heating hot water in a building services distribution system.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.S4BLDG
+  spec.source.path: Pump/schema.json
+  spec.source.commit: 06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.S4BLDG/master/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"], "alternateName":
+    {"type": "Property", "value": "Pump type 2"}, "connectionSize": {"observedAt":
+    "2023-01-26T01:56:40Z", "type": "Property", "unitCode": "mm", "value": 0.439871049852415},
+    "dataProvider": {"type": "Property", "value": "IFC file"}, "dateCreated": {"type":
+    "Property", "value": "2023-01-26T13:30:12Z"}, "dateModified": {"type": "Property",
+    "value": "2023-01-25T15:53:32Z"}, "description": {"type": "Property", "value":
+    "Pump of limited Pump types"}, "flowResistanceMax": {"observedAt": "2023-01-26T10:30:54Z",
+    "type": "Property", "unitCode": "N/m2", "value": 0.70272326323097}, "flowResistanceMin":
+    {"observedAt": "2023-01-26T11:23:10Z", "type": "Property", "unitCode": "N/m2",
+    "value": 0.748100252355086}, "hasManufacturer": {"type": "Property", "value":
+    "Pump Company Inc."}, "hasModel": {"type": "Property", "value": "Pump 0.1.2"},
+    "id": "urn:ngsi-ld:Pump:7ed480ca-f64d-42fd-9d2e-a792829d1467", "isContainedInBuildingSpace":
+    {"object": "urn:ngsi-ld:BuildingSpace:00bec903-1682-4d39-9164-6b6635d717c7", "type":
+    "Relationship"}, "isContainedInPhysicalObject": {"object": "urn:ngsi-ld:PhysicalObject:cf20b915-721e-4f55-b736-af772bdc68c2",
+    "type": "Relationship"}, "isSubSystemOf": [{"object": "urn:ngsi-ld:System:08e18090-a9f4-4837-a6aa-3d218b14721c",
+    "type": "Relationship"}, {"object": "urn:ngsi-ld:System:646f75aa-9900-4722-98ce-b3811440d0ce",
+    "type": "Relationship"}, {"object": "urn:ngsi-ld:System:00fb7f96-ff82-4b41-8b6e-1e3d2d8b66c3",
+    "type": "Relationship"}], "name": {"type": "Property", "value": "Pump"}, "netPositiveSuctionHead":
+    {"observedAt": "2023-01-25T23:42:12Z", "type": "Property", "unitCode": "N/m2",
+    "value": 0.4372375818125598}, "nomminalRotationSpeed": {"observedAt": "2023-01-25T16:47:26Z",
+    "type": "Property", "unitCode": "cycles/s", "value": 0.9055473204179818}, "operationTemperatureMax":
+    {"observedAt": "2023-01-25T23:01:07Z", "type": "Property", "unitCode": "K", "value":
+    0.19255105886794588}, "operationTemperatureMin": {"observedAt": "2023-01-26T02:59:51Z",
+    "type": "Property", "unitCode": "K", "value": 0.014765641352581182}, "pumpFlowRateMax":
+    {"observedAt": "2023-01-26T10:06:49Z", "type": "Property", "unitCode": "kg/s",
+    "value": 0.2765428009146871}, "pumpFlowRateMin": {"observedAt": "2023-01-26T00:29:22Z",
+    "type": "Property", "unitCode": "kg/s", "value": 0.691611788348768}, "source":
+    {"type": "Property", "value": "Import"}, "type": "Pump"}'
+classes:
+  Pump:
+    class_uri: https://smartdatamodels.org/dataModel.S4BLDG/Pump
+    description: A pump is a device which imparts mechanical work on fluids or slurries
+      to move them through a channel or pipeline. A typical use of a pump is to circulate
+      chilled water or heating hot water in a building services distribution system.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - connectionSize
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - flowResistanceMax
+    - flowResistanceMin
+    - hasManufacturer
+    - hasModel
+    - isContainedInBuildingSpace
+    - isContainedInPhysicalObject
+    - isSubSystemOf
+    - name
+    - netPositiveSuctionHead
+    - nomminalRotationSpeed
+    - operationTemperatureMax
+    - operationTemperatureMin
+    - owner
+    - pumpFlowRateMax
+    - pumpFlowRateMin
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/areaServed
+  connectionSize:
+    description: Property. The connection size of the to and from the pump. Usually
+      measured in millimeters (mm)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/connectionSize
+  flowResistanceMax:
+    description: Property. Allowable range of frictional resistance against which
+      the fluid is being pumped. Usually measured in Pascals (Pa, N/m2)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/flowResistanceMax
+  flowResistanceMin:
+    description: Property. Allowable range of frictional resistance against which
+      the fluid is being pumped. Usually measured in Pascals (Pa, N/m2)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/flowResistanceMin
+  netPositiveSuctionHead:
+    description: Property. Minimum liquid pressure at the pump inlet to prevent cavitation.
+      Usually measured in Pascals (Pa, N/m2)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/netPositiveSuctionHead
+  nomminalRotationSpeed:
+    description: Property. Pump rotational speed under nominal conditions. Usually
+      measured in cycles/s
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/nomminalRotationSpeed
+  operationTemperatureMax:
+    description: Property. Allowable operation ambient (air, fluid) temperature range.
+      Usually measured in degrees Kelvin (K)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/operationTemperatureMax
+  operationTemperatureMin:
+    description: Property. Allowable operation ambient (air, fluid) temperature range.
+      Usually measured in degrees Kelvin (K)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/operationTemperatureMin
+  pumpFlowRateMax:
+    description: Property. Allowable range of volume of fluid being pumped against
+      the resistance specified. Usually measured in kg/s
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/pumpFlowRateMax
+  pumpFlowRateMin:
+    description: Property. Allowable range of volume of fluid being pumped against
+      the resistance specified. Usually measured in kg/s
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/pumpFlowRateMin
+  isContainedInBuildingSpace:
+    description: Relationship. An entity used to define the physical spaces of the
+      building. A building space contains devices or building objects. (BuildingSpace)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isContainedInBuildingSpace
+  isContainedInPhysicalObject:
+    description: Relationship. Any Object that has a proper space region.  (Definition
+      extracted from DUL ontology) (PhysicalObject)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isContainedInPhysicalObject
+  isSubSystemOf:
+    description: Relationship. A reference to a system(s) that this Physical Object
+      is part of
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isSubSystemOf
+  hasManufacturer:
+    description: Property. A relationship identifying the manufacturer of an entity
+      (e.g., device). The value is expected to be a string or a string with language
+      tag
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/hasManufacturer
+  hasModel:
+    description: Property. A relationship identifying the model of an entity (e.g.,
+      device). The value is expected to be a string or a string with language tag
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/hasModel

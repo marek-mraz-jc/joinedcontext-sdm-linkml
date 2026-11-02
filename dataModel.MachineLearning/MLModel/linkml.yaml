@@ -1,0 +1,181 @@
+id: https://github.com/smart-data-models/dataModel.MachineLearning/MLModel
+name: MLModel
+title: Smart Data Models - Machine Learning Model
+description: Data model for compilation of the elements of a machine learning model.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.MachineLearning
+  spec.source.path: MLModel/schema.json
+  spec.source.commit: 1d957f3200a1d2261438f7a121809854721d1aa5
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.MachineLearning/master/context.jsonld"],
+    "algorithm": {"type": "Property", "value": "k-means"}, "description": {"type":
+    "Property", "value": "Predicts water consumption based "}, "dockerImage": {"type":
+    "Property", "value": "Docker image containing the model"}, "id": "urn:ngsi-ld:MLModel:01",
+    "inputAttributes": {"type": "Property", "value": ["minFlow", "maxFlow", "waterConsumption"]},
+    "name": {"type": "Property", "value": "Water consumption prediction"}, "outputAttributes":
+    {"type": "Property", "value": ["consumptionNextDay", "consumptionNextWeek"]},
+    "type": "MLModel", "version": {"type": "Property", "value": "12"}}'
+classes:
+  MLModel:
+    class_uri: https://smartdatamodels.org/dataModel.MachineLearning/MLModel
+    description: Data model for compilation of the elements of a machine learning
+      model.
+    is_a: Entity
+    slots:
+    - acceptableDataSources
+    - algorithm
+    - alternateName
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - dockerImage
+    - inputAttributes
+    - mlFramework
+    - name
+    - outputAttributes
+    - outputDataTypes
+    - owner
+    - refMLProcessing
+    - seeAlso
+    - source
+    - typeOfAlgorithm
+    - version
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/seeAlso
+  typeOfAlgorithm:
+    description: Property. Model:'https://schema.org/Text'. Enumeration
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dataModel.MachineLearning/typeOfAlgorithm
+  algorithm:
+    description: Property. The algorithm used by the underlying Machine Learning model
+      (e.g. linear regression, k-means, SVM, MLP,...)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dataModel.MachineLearning/algorithm
+  mlFramework:
+    description: Property. The Machine Learning framework that has been used to prepare
+      the model (e.g., scikit-learn, H2O, Spark MLib, etc)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dataModel.MachineLearning/mlFramework
+  version:
+    description: Property. Version of the model
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dataModel.MachineLearning/version
+  acceptableDataSources:
+    description: Property. Valid type of input data sources for running the Machine
+      Learning Model
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dataModel.MachineLearning/acceptableDataSources
+  outputDataTypes:
+    description: Property. Type of output data produced by the Machine Learning Model
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dataModel.MachineLearning/outputDataTypes
+  dockerImage:
+    description: Property. Docker image containing the Machine Learning model
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dataModel.MachineLearning/dockerImage
+  refMLProcessing:
+    description: Property
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dataModel.MachineLearning/refMLProcessing
+  inputAttributes:
+    description: Property. Comma-separated list of attributes names (that should have
+      a given type by definition)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dataModel.MachineLearning/inputAttributes
+  outputAttributes:
+    description: Property. Comma-separated list of attributes names used to publish
+      the results
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dataModel.MachineLearning/outputAttributes

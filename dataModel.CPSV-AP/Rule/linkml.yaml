@@ -1,0 +1,209 @@
+id: https://github.com/smart-data-models/dataModel.CPSV-AP/Rule
+name: Rule
+title: Smart Data models - Rule schema
+description: The Rule class represents a document that sets out the specific rules,
+  guidelines or procedures that the Public Service follows. It includes the terms
+  of service, licence, and authentication requirements of the Public Service.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.CPSV-AP
+  spec.source.path: Rule/schema.json
+  spec.source.commit: a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"],
+    "description": {"type": "Property", "value": "The mayor of the municipality or
+    his/her authorised representative checks whether the signature to be legalised
+    corresponds to that of the person whose identity is being established. A signature
+    on a white sheet of paper can never be legalised."}, "id": "urn:ngsi-ld:CPSV-AP:Rule:7e331270-c97d-4ee9-ab29-693f9dc75a3c",
+    "identifier": {"type": "Property", "value": "Rule7e331270c97d4ee9ab29693f9dc75a3c"},
+    "implements": {"type": "Relationship", "value": ["urn:ngsi-ld:CPSV-AP:LegalResource:7e331270-8b9e-46d5-8371-81c8ad0cced5",
+    "urn:ngsi-ld:CPSV-AP:LegalResource:7e331271-5a3e-2d9a-8371-81c8ad0cced5"]}, "language":
+    {"type": "Property", "value": ["http://publications.europa.eu/resource/authority/language/ENG"]},
+    "name": {"type": "Property", "value": "DEFAULT NAME"}, "type": "Rule"}'
+classes:
+  Rule:
+    class_uri: https://smartdatamodels.org/dataModel.CPSV-AP/Rule
+    description: The Rule class represents a document that sets out the specific rules,
+      guidelines or procedures that the Public Service follows. It includes the terms
+      of service, licence, and authentication requirements of the Public Service.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - identifier
+    - implements
+    - language
+    - name
+    - owner
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/areaServed
+  identifier:
+    description: Property. Model:'dct:identifier'. This property represents an Identifier
+      for the Rule
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/identifier
+  language:
+    description: Property. Model:'dct:language'. This property represents the language(s)
+      in which the Rule is available. This could be one or multiple languages, for
+      instance in countries with more than one official language. The possible values
+      for this property are described in a controlled vocabulary. European Publications
+      Office's Languages Named Authority List (NAL), http://publications.europa.eu/mdr/authority/language/index.html
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/language
+  implements:
+    description: Relationship. Model:'cpsv:implements'. The Implements property links
+      a Rule to relevant legislation or policy documents i.e. the Legal Resource under
+      which the Rules are being defined
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/implements

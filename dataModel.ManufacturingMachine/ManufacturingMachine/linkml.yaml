@@ -1,0 +1,425 @@
+id: https://github.com/smart-data-models/dataModel.ManufacturingMachine/ManufacturingMachine
+name: ManufacturingMachine
+title: Smart Data models - Manufacturing Machine dataModel schema,
+description: Description of a generic machine
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ManufacturingMachine
+  spec.source.path: ManufacturingMachine/schema.json
+  spec.source.commit: bacbb53da309886b27f71db70115100caf61a1b8
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.ManufacturingMachine/master/context.jsonld"],
+    "assetIdentifier": {"type": "Property", "value": "ID12345"}, "batteryLevel": {"observedAt":
+    "2017-05-04T12:30:00Z", "type": "Property", "value": 0.7}, "building": {"object":
+    "urn:ngsi-ld:Building:8683b757-649c-49e0-ac89-ad392c9a0d0c", "type": "Relationship"},
+    "countryOfManufacture": {"type": "Property", "value": "UK"}, "current": {"observedAt":
+    "2016-08-08T10:18:16Z", "type": "Property", "unitCode": "AMP", "value": 20}, "dataProvider":
+    {"type": "Property", "value": "https://provider.example.com"}, "description":
+    {"type": "Property", "value": "Industrial machine to create plastic bottles"},
+    "factory": {"type": "Property", "value": "N9"}, "firmwareVersion": {"type": "Property",
+    "value": "A.10"}, "firstUsedAt": {"type": "Property", "value": {"@type": "DateTime",
+    "@value": "2017-05-04T10:18:16Z"}}, "hardwareVersion": {"type": "Property", "value":
+    "2.1"}, "id": "urn:ngsi-ld:Machine:9166c528-9c98-4579-a5d3-8068aea5d6c0", "installationNotes":
+    {"type": "Property", "value": {"docUri": "http://example.com/sample/machine-instructions.pdf",
+    "value": "Installed according to manufacturer instructions."}}, "installedAt":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2017-05-04T10:18:16Z"}},
+    "location": {"type": "GeoProperty", "value": {"coordinates": [-104.99404, 39.75621],
+    "type": "Point"}}, "machineModel": {"object": "urn:ngsi-ld:MachineModel:00b42701-43e1-482d-aa7a-e2956cfd69c3",
+    "type": "Relationship"}, "manufacturedAt": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "2017-05-04T10:18:16Z"}}, "online": {"observedAt": "2017-05-04T12:30:00Z",
+    "type": "Property", "value": true}, "osVersion": {"type": "Property", "value":
+    "10A"}, "owner": {"object": ["urn:ngsi-ld:Person:a498182c-47c0-11e8-be4e-2c4d549a1ab2",
+    "urn:ngsi-ld:Organization:abb20712-47c0-11e8-8742-2c4d549a1ab2"], "type": "Relationship"},
+    "power": {"observedAt": "2016-08-08T10:18:16Z", "type": "Property", "unitCode":
+    "KWT", "value": 4.4}, "rotationalSpeed": {"observedAt": "2016-08-08T10:18:16Z",
+    "type": "Property", "unitCode": "RPM", "value": 10}, "serialNumber": {"type":
+    "Property", "value": "X9923456789F"}, "softwareVersion": {"type": "Property",
+    "value": "8.5.C"}, "source": {"type": "Property", "value": "https://source.example.com"},
+    "status": {"observedAt": "2017-05-04T12:30:00Z", "type": "Property", "value":
+    "SC1001"}, "subscriptionService": {"object": ["urn:ngsi-ld:SubscriptionService:0d95b03c-47c1-11e8-99fd-2c4d549a1ab2",
+    "urn:ngsi-ld:SubscriptionService:1527d0fa-47c1-11e8-8fb1-2c4d549a1ab2"], "type":
+    "Relationship"}, "supplierName": {"type": "Property", "value": "ACME NorthEast
+    Inc."}, "supportedProtocol": {"observedAt": "2017-05-04T12:30:00Z", "type": "Property",
+    "value": ["HTTP", "HTTPS", "FTP"]}, "type": "ManufacturingMachine", "voltage":
+    {"observedAt": "2016-08-08T10:18:16Z", "type": "Property", "unitCode": "VLT",
+    "value": 220}}'
+classes:
+  ManufacturingMachine:
+    class_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/ManufacturingMachine
+    description: Description of a generic machine
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - assetIdentifier
+    - batteryLevel
+    - building
+    - countryOfManufacture
+    - current
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - factory
+    - firmwareVersion
+    - firstUsedAt
+    - hardwareVersion
+    - installationNotes
+    - installedAt
+    - machineModel
+    - machineOwner
+    - manufacturedAt
+    - name
+    - online
+    - osVersion
+    - owner
+    - power
+    - rotationalSpeed
+    - seeAlso
+    - serialNumber
+    - softwareVersion
+    - source
+    - status
+    - subscriptionService
+    - supplierName
+    - supportedProtocol
+    - voltage
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+  InstallationNotes:
+    description: Property. Model:'https://schema.org/Text'. Notes relating to this
+      machine installation
+    attributes:
+      docUri:
+        range: uriorcurie
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      value:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/areaServed
+  machineModel:
+    description: Relationship. A reference to the associated Machine Model for this
+      machine
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/machineModel
+  serialNumber:
+    description: Property. Model:'https://schema.org/Text'. The serial number assigned
+      by the manufacturer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/serialNumber
+  assetIdentifier:
+    description: Property. Model:'https://schema.org/Text'. An asset identifier (e.g.
+      asset tag number) assigned by the owner
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/assetIdentifier
+  supplierName:
+    description: Property. Model:'https://schema.org/Text'. The name of the supplier
+      of this machine
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/supplierName
+  countryOfManufacture:
+    description: Property. Model:'https://schema.org/Text'. The country where this
+      machine was manufactured
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/countryOfManufacture
+  factory:
+    description: Property. Model:'https://schema.org/Text'. The factory name/code
+      manufacturing this machine
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/factory
+  firstUsedAt:
+    description: Property. Model:'https://schema.org/Text'. Indicates the date/time
+      at which date and time the machine was first used (nominally in UTC)
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/firstUsedAt
+  installedAt:
+    description: Property. Model:'https://schema.org/Text'. Indicates the date/time
+      at which date and time the machine was installed (nominally in UTC)
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/installedAt
+  manufacturedAt:
+    description: Property. Model:'https://schema.org/Text'. Indicates the date/time
+      at which date and time the machine was manufactured (nominally in UTC)
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/manufacturedAt
+  machineOwner:
+    description: Relationship. Reference to the owner or owners of the machine as
+      either a Schema.org person or organization
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/machineOwner
+  hardwareVersion:
+    description: Property. Model:'https://schema.org/Text'. The (manufacturer specific)
+      hardware version of this machine
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/hardwareVersion
+  firmwareVersion:
+    description: Property. Model:'https://schema.org/Text'. The (manufacturer specific)
+      firmware version of this machine
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/firmwareVersion
+  softwareVersion:
+    description: Property. Model:'https://schema.org/Text'. The (manufacturer specific)
+      software version of this machine
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/softwareVersion
+  osVersion:
+    description: Property. Model:'https://schema.org/Text'. The (manufacturer specific)
+      operating system version of this machine
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/osVersion
+  supportedProtocol:
+    description: Property. Model:'https://schema.org/Text'. Supported protocol(s)
+      or networks
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/supportedProtocol
+  building:
+    description: Relationship. Reference to the building entity instance into which
+      this machine is installed
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/building
+  subscriptionService:
+    description: Relationship. Reference to service subscriptions related to this
+      machine e.g. energy supplies, Internet Service Providers etc, maintenance
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/subscriptionService
+  online:
+    description: Property. Model:'https://schema.org/Boolean'. The communication status
+      of this machine. A logical representation of Offline (false) or Online (true)
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/online
+  status:
+    description: Property. Model:'https://schema.org/Text'. Text formatted (current)
+      machine status code or description. Expected to be the manufacturer or machine
+      specific status code generated by the machine
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://uri.etsi.org/ngsi-ld/status
+  batteryLevel:
+    description: 'Property. Model:''https://schema.org/Number''. Battery level. It
+      must be equal to: 1.0 When the battery charge is full. 0.0 When the battery
+      charge empty. Null when it cannot be determined'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/batteryLevel
+  installationNotes:
+    description: Property. Model:'https://schema.org/Text'. Notes relating to this
+      machine installation
+    range: InstallationNotes
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/installationNotes
+  voltage:
+    description: Property. Model:'https://schema.org/Number'. The nominal required
+      supply voltage, in volts. Units:'Volts
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/voltage
+  current:
+    description: Property. Model:'https://schema.org/Number'. The nominal required
+      supply current (at the nominal supply voltage), in amps. Units:'Amps
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/current
+  power:
+    description: Property. Model:'https://schema.org/Number'. The nominal rated power
+      consumption of the machine in kW. Units:'Kw
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/power
+  rotationalSpeed:
+    description: "Property. Model:'https://schema.org/Number'.  \tThe maximum rotational\
+      \ speed in rpm (for machines such as drills, lathes). Units:'rpm"
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/rotationalSpeed

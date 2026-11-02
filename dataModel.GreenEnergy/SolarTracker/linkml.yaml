@@ -1,0 +1,486 @@
+id: https://github.com/smart-data-models/dataModel.GreenEnergy/SolarTracker
+name: SolarTracker
+title: Smart Data Models - SmartManufacturing / DigitalTwin / SolarTracker
+description: 'Description of the data model SolarTracker '
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.GreenEnergy
+  spec.source.path: SolarTracker/schema.json
+  spec.source.commit: c6d53698a521b415318a5b67905a91c6e70c307e
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.GreenEnergy/master/context.jsonld"],
+    "altitude": {"type": "Property", "unitCode": "MTR", "value": 436.6}, "backtracking":
+    {"type": "Property", "value": "on"}, "batteryLevel": {"type": "Property", "unitCode":
+    "C62", "value": 85.34}, "boardDirection": {"type": "Property", "value": "1"},
+    "currentAngle": {"type": "Property", "unitCode": "DD", "value": -31.3}, "currentPowerConsumption":
+    {"type": "Property", "unitCode": "WTT", "value": 0}, "dateUpdate": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2026-01-29T00:00:00.000Z"}}, "deviceCategory":
+    {"type": "Property", "value": "SCU"}, "deviceState": {"type": "Property", "value":
+    "Online"}, "id": "urn:ngsi-ld:SolarTracker:PCU1-FCU1-SCU1", "location": {"type":
+    "GeoProperty", "value": {"coordinates": [16.563436, 40.850453], "type": "Point"}},
+    "maxAngleLimit": {"type": "Property", "unitCode": "DD", "value": 55}, "maxPowerRecorded":
+    {"type": "Property", "unitCode": "WTT", "value": 0}, "maxPowerThreshold": {"type":
+    "Property", "unitCode": "WTT", "value": 10000}, "minAngleLimit": {"type": "Property",
+    "unitCode": "DD", "value": -55}, "minPowerRecorded": {"type": "Property", "unitCode":
+    "WTT", "value": 0}, "motorDirection": {"type": "Property", "value": "-1"}, "movementInterval":
+    {"type": "Property", "value": "5"}, "operatingMode": {"type": "Property", "value":
+    "automatic"}, "owner": {"object": ["urn:ngsi-ld:Device:PCU1-FCU1"], "type": "Relationship"},
+    "panelLength": {"type": "Property", "unitCode": "MTR", "value": 0}, "restingAngle":
+    {"type": "Property", "unitCode": "DD", "value": -5}, "snowSafetyAngle": {"type":
+    "Property", "unitCode": "DD", "value": 40}, "targetAngle": {"type": "Property",
+    "unitCode": "DD", "value": -29.3}, "type": "SolarTracker", "windSafetyAngle":
+    {"type": "Property", "unitCode": "DD", "value": 5}}'
+classes:
+  SolarTracker:
+    class_uri: https://smartdatamodels.org/dataModel.GreenEnergy/SolarTracker
+    description: 'Description of the data model SolarTracker '
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - altitude
+    - areaServed
+    - backtracking
+    - batteryLevel
+    - boardDirection
+    - currentAngle
+    - currentPowerConsumption
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - dateUpdate
+    - description
+    - deviceCategory
+    - deviceState
+    - ipAddress
+    - maxAngleLimit
+    - maxPowerRecorded
+    - maxPowerThreshold
+    - minAngleLimit
+    - minPowerRecorded
+    - motorDirection
+    - movementInterval
+    - name
+    - operatingMode
+    - owner
+    - panelLength
+    - restingAngle
+    - seeAlso
+    - snowSafetyAngle
+    - source
+    - targetAngle
+    - windSafetyAngle
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/areaServed
+  altitude:
+    description: Property. Model:'https://schema.org/Number'. Units:'meter (MTR)'.
+      The elevation of the installation site above mean sea level. This value is used
+      by the solar algorithm to refine the calculation of the sun's position and atmospheric
+      refraction
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/altitude
+  dateUpdate:
+    description: Property. Model:'http://schema.org/DateTime'. The date when the configuration
+      was updated
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/dateUpdate
+  currentPowerConsumption:
+    description: Property. Model:'https://schema.org/Number'. Units:'Watt (WTT)'.
+      The real-time electrical power demand measured in Watts
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/currentPowerConsumption
+  maxPowerRecorded:
+    description: Property. Model:'https://schema.org/Number'. Units:'Watt (WTT)'.
+      The highest level of active electrical power consumption recorded during the
+      last movement, measured in Watts
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/maxPowerRecorded
+  minPowerRecorded:
+    description: Property. Model:'https://schema.org/Number'. Units:'Watt (WTT)'.
+      The lowest level of active electrical power consumption recorded during the
+      last movement, measured in Watts
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/minPowerRecorded
+  backtracking:
+    description: Property. Model:'https://schema.org/Text'. Enum:'on','off'. Indicates
+      whether the solar tracker is in backtracking mode to prevent row-to-row shadowing,
+      deviating from the optimal sun-angle position
+    range: backtracking_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/backtracking
+  batteryLevel:
+    description: Property. Model:'https://schema.org/Number'. Units:'C62'. Represents
+      the current charge level of the battery, expressed as a percentage of its total
+      capacity (0 to 100)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/batteryLevel
+  currentAngle:
+    description: Property. Model:'https://schema.org/Number'. Units:'Degree Angle
+      (DD)'. The current angular position of the panel. A value of 0 indicates the
+      panel is horizontal (facing directly upward). Minimum values represent an Eastward
+      orientation, while maximum values represent a Westward orientation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/currentAngle
+  deviceCategory:
+    description: Property. Model:'https://schema.org/Text'. Enum:'PCU','FCU','SCU'.
+      Specifies the classification of the device within the system
+    range: deviceCategory_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/deviceCategory
+  deviceState:
+    description: Property. Model:'https://schema.org/Text'. Enum:'Online','Offline'.
+      Indicates the current operational connectivity status of the device
+    range: deviceState_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/deviceState
+  motorDirection:
+    description: Property. Model:'https://schema.org/Text'. Enum:'-1','1'. Defines
+      the physical mounting orientation of the motor, which determines the polarity
+      of the rotation (Eastward-facing = 1; Westward-facing = -1)
+    range: motorDirection_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/motorDirection
+  boardDirection:
+    description: Property. Model:'https://schema.org/Text'. Enum:'-1','1'. Specifies
+      the physical orientation of the control board based on the position of the emergency
+      stop button (Eastward-facing = 1; Westward-facing = -1)
+    range: boardDirection_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/boardDirection
+  targetAngle:
+    description: Property. Model:'https://schema.org/Number'. Units:'Degree Angle
+      (DD)'. The target angular setpoint for the panel's orientation. A value of 0
+      indicates the panel is horizontal (facing directly upward). Minimum values represent
+      an Eastward orientation, while maximum values represent a Westward orientation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/targetAngle
+  movementInterval:
+    description: 'Property. Model:''https://schema.org/Text''. Enum:''5'',''10'',''15''.
+      Defines the time frequency at which the panel adjusts its position. The value
+      must be one of the predefined intervals: 5, 10, or 15 minutes'
+    range: movementInterval_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/movementInterval
+  panelLength:
+    description: Property. Model:'https://schema.org/Number'. Units:'meter (MTR)'.
+      The dimension of the panel measured along the axis perpendicular to the axis
+      of rotation. This value is critical for calculating the shadow cast by the panel
+      and determining the appropriate backtracking movement
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/panelLength
+  maxPowerThreshold:
+    description: Property. Model:'https://schema.org/Number'. Units:'Watt (WTT)'.
+      The safety limit for power consumption during motor operation. If the electrical
+      power exceeds this threshold, the panel movement is immediately interrupted
+      to prevent mechanical damage or motor overload
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/maxPowerThreshold
+  maxAngleLimit:
+    description: Property. Model:'https://schema.org/Number'. Units:'Degree Angle
+      (DD)'. The maximum allowable angular position towards the West. This software
+      limit acts as a hard ceiling; the panel will not rotate beyond this value even
+      if the calculated target angle is greater
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/maxAngleLimit
+  minAngleLimit:
+    description: Property. Model:'https://schema.org/Number'. Units:'Degree Angle
+      (DD)'. The minimum allowable angular position towards the East. This parameter
+      defines a mandatory operational boundary; the panel will not rotate further
+      East than this value, regardless of the requested target position
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/minAngleLimit
+  snowSafetyAngle:
+    description: Property. Model:'https://schema.org/Number'. Units:'Degree Angle
+      (DD)'. The specific angular position the panel must adopt during a snow event.
+      This angle is designed to facilitate snow shedding and prevent excessive structural
+      loading on the tracker
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/snowSafetyAngle
+  windSafetyAngle:
+    description: Property. Model:'https://schema.org/Number'. Units:'Degree Angle
+      (DD)'. The safety setpoint angle the panel assumes when wind speeds exceed the
+      operational threshold. This position minimize the sail effect and reduce structural
+      stress caused by wind uplift or pressure
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/windSafetyAngle
+  restingAngle:
+    description: Property. Model:'https://schema.org/Number'. Units:'Degree Angle
+      (DD)'. The specific angular position the panel assumes during the night or when
+      the sun is below the horizon. This position is used to park the tracker until
+      the next sunrise
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/restingAngle
+  operatingMode:
+    description: Property. Model:'https://schema.org/Text'. Enum:'automatic','manual','safesnow','safesnowsensor','safewind','safewindsensor','maintenance'.
+      Defines the current functional state of the panel. This mode dictates whether
+      the tracker follows the solar algorithm or responds to external overrides/safety
+      events
+    range: operatingMode_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/operatingMode
+  ipAddress:
+    description: Property. Model:'https://schema.org/Text'. List of IP address of
+      the device. It can be a comma separated list of values if the device has more
+      than one IP address
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/ipAddress
+enums:
+  backtracking_options:
+    name: backtracking_options
+    permissible_values:
+      'on':
+        text: 'on'
+      'off':
+        text: 'off'
+  deviceCategory_options:
+    name: deviceCategory_options
+    permissible_values:
+      PCU:
+        text: PCU
+      FCU:
+        text: FCU
+      SCU:
+        text: SCU
+  deviceState_options:
+    name: deviceState_options
+    permissible_values:
+      Online:
+        text: Online
+      Offline:
+        text: Offline
+  motorDirection_options:
+    name: motorDirection_options
+    permissible_values:
+      '1':
+        text: '1'
+      '-1':
+        text: '-1'
+  boardDirection_options:
+    name: boardDirection_options
+    permissible_values:
+      '1':
+        text: '1'
+      '-1':
+        text: '-1'
+  movementInterval_options:
+    name: movementInterval_options
+    permissible_values:
+      '5':
+        text: '5'
+      '10':
+        text: '10'
+      '15':
+        text: '15'
+  operatingMode_options:
+    name: operatingMode_options
+    permissible_values:
+      automatic:
+        text: automatic
+      manual:
+        text: manual
+      safesnow:
+        text: safesnow
+      safesnowsensor:
+        text: safesnowsensor
+      safewind:
+        text: safewind
+      safewindsensor:
+        text: safewindsensor
+      maintenance:
+        text: maintenance

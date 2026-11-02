@@ -1,0 +1,584 @@
+id: https://github.com/smart-data-models/dataModel.MarineTransport/MasterVessel
+name: MasterVessel
+title: Smart Data models Vessel schema
+description: 'The data model is intended to provide information about vessels. It
+  allows to represent the properties of each vessel: static and dynamic information'
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.MarineTransport
+  spec.source.path: MasterVessel/schema.json
+  spec.source.commit: 4ffb0d8d8c29470e169df9d8c329135ec0806f72
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"beam": {"type": "Property", "value": 7}, "buildDate": {"type":
+    "Property", "value": {"@type": "date-time", "value": "2023-06-01"}}, "callSign":
+    {"type": "Property", "value": "5BPC3"}, "dataProvider": {"type": "Property", "value":
+    "AIS"}, "dwt": {"type": "Property", "value": 8.1}, "financialOwner": {"type":
+    "Property", "value": "Acme FINANCIAL "}, "flagCode": {"type": "Property", "value":
+    "CY"}, "gt": {"type": "Property", "value": 12467}, "id": "urn:mrn:eshuv:portcalls:mastervessel:id:1234",
+    "imo": {"type": "Property", "value": 9863637}, "loa": {"type": "Property", "value":
+    132.22}, "manager": {"type": "Property", "value": "Acme MANAGER NAME"}, "maxDraught":
+    {"type": "Property", "value": 5.61}, "maxLoadVehicle": {"type": "Property", "value":
+    120}, "maxPassenger": {"type": "Property", "value": false}, "maxVehicle": {"type":
+    "Property", "value": 16}, "minNumOfCrew": {"type": "Property", "value": 12}, "mmsi":
+    {"type": "Property", "value": 210049000}, "owner": {"type": "Property", "value":
+    ["urn:ngsi-ld:Acme-OWNER-NAME"]}, "photo": {"type": "Property", "value": "https://acme.com/photos/9863637"},
+    "sleeve": {"type": "Property", "value": 25.51}, "technicalManager": {"type": "Property",
+    "value": "Acme TECHNICAL MANAGER"}, "toBow": {"type": "Property", "value": 3},
+    "toPort": {"type": "Property", "value": 17}, "toStardboard": {"type": "Property",
+    "value": 4}, "toStern": {"type": "Property", "value": 20}, "type": "MasterVessel",
+    "vesselClass": {"type": "Property", "value": "BO"}, "vesselName": {"type": "Property",
+    "value": "ELEANOR R."}, "vesselOwner": {"type": "Property", "value": "Acme OWNER
+    NAME"}, "vesselSubType": {"type": "Property", "value": 2}, "vesselType": {"type":
+    "Property", "value": true}}'
+classes:
+  MasterVessel:
+    class_uri: https://smartdatamodels.org/dataModel.MarineTransport/MasterVessel
+    description: 'The data model is intended to provide information about vessels.
+      It allows to represent the properties of each vessel: static and dynamic information'
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - beam
+    - buildDate
+    - callSign
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - dwt
+    - financialOwner
+    - flagCode
+    - gt
+    - imo
+    - loa
+    - manager
+    - maxDraught
+    - maxLoadVehicle
+    - maxPassenger
+    - maxVehicle
+    - minNumOfCrew
+    - mmsi
+    - name
+    - owner
+    - photo
+    - seeAlso
+    - sleeve
+    - source
+    - technicalManager
+    - toBow
+    - toPort
+    - toStardboard
+    - toStern
+    - vesselClass
+    - vesselName
+    - vesselOwner
+    - vesselSubType
+    - vesselType
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/areaServed
+  vesselName:
+    description: 'Property. Model:''https://schema.org/Text''. Name of the Vessel.
+      [EMSWe: DE-003-07] [EDIFACT:TDT-8212] [IMO:IMO0142]'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/vesselName
+  imo:
+    description: 'Property. Model:''https://schema.org/Number''. International Maritime
+      Organization Number (a global forever UID) [EMSWe: DE-003-03] [EDIFACT:TDT-8213]
+      [IALA_S211:vesselId] [IMO:IMO0140] '
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/imo
+  mmsi:
+    description: 'Property. Model:''https://schema.org/Number''. Marine Mobile Service
+      Identity Number (a temporarily assigned UID, issued by that object''s current
+      flag state)[EMSWe: DE-068-09] [EDIFACT:TDT-1131] [IALA_S211:vesselId] [IMO:IMO0178]'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mmsi
+  callSign:
+    description: 'Property. Model:''https://schema.org/Text''. Identification signal
+      of a vessel when initially connecting by radio [EMSWe: DE-065-05] [EDI: BGM-RFF]
+      [S211: Call Name / Call Sign] [IMO: IMO0136] '
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/callSign
+  flagCode:
+    description: Property. Model:'https://schema.org/Text'. International Flag Code
+      (ISO 3166-1 alfa-2)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/flagCode
+  vesselType:
+    description: Property. Model:'https://schema.org/Number'. Enum:'1=Reserved,2=Wing
+      In Ground,3=Special Category,4=High-Speed Craft,5=Special Category,6=Passenger,7=Cargo,8=Tanker,9=Other'.
+      Code for vessel type
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/vesselType
+  vesselSubType:
+    description: 'Property. Model:''https://schema.org/Number''. Enum:''0=Not available
+      (default),1-19=Reserved for future use,20=Wing in ground (WIG), all ships of
+      this type,21=Wing in ground (WIG), Hazardous category A,22=Wing in ground (WIG),
+      Hazardous category B,23=Wing in ground (WIG), Hazardous category C,24=Wing in
+      ground (WIG), Hazardous category D,25-29=Wing in ground (WIG), Reserved for
+      future use,30=Fishing,31=Towing,32=Towing: length exceeds 200m or breadth exceeds
+      25m,33=Dredging or underwater ops,34=Diving ops,35=Military ops,36=Sailing,37=Pleasure
+      Craft,38-39=Reserved,40=High speed craft (HSC), all ships of this type,41=High
+      speed craft (HSC), Hazardous category A,42=High speed craft (HSC), Hazardous
+      category B,43=High speed craft (HSC), Hazardous category C,44=High speed craft
+      (HSC), Hazardous category D,45-48=High speed craft (HSC), Reserved for future
+      use,49=High speed craft (HSC), No additional information,50=Pilot Vessel,51=Search
+      and Rescue vessel,52=Tug,53=Port Tender,54=Anti-pollution equipment,55=Law Enforcement,56-57=Spare
+      - Local Vessel,58=Medical Transport,59=Noncombatant ship according to RR Resolution
+      No. 18,60=Passenger, all ships of this type,61=Passenger, Hazardous category
+      A,62=Passenger, Hazardous category B,63=Passenger, Hazardous category C,64=Passenger,
+      Hazardous category D,65-68=Passenger, Reserved for future use,69=Passenger,
+      No additional information,70=Cargo, all ships of this type,71=Cargo, Hazardous
+      category A,72=Cargo, Hazardous category B,73=Cargo, Hazardous category C,74=Cargo,
+      Hazardous category D,75-78=Cargo, Reserved for future use,79=Cargo, No additional
+      information,80=Tanker, all ships of this type,81=Tanker, Hazardous category
+      A,82=Tanker, Hazardous category B,83=Tanker, Hazardous category C,84=Tanker,
+      Hazardous category D,85-88=Tanker, Reserved for future use,89=Tanker, No additional
+      information,90=Other Type, all ships of this type,91=Other Type, Hazardous category
+      A,92=Other Type, Hazardous category B,93=Other Type, Hazardous category C,94=Other
+      Type, Hazardous category D,95-98=Other Type, Reserved for future use,99=Other
+      Type, no additional information''. Code for vessel Sub-Type'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/vesselSubType
+  vesselClass:
+    description: Property. Model:'https://schema.org/Text'. Code for vessel class.
+      Enum:'BD=Dry bulk, BO=Oil tanker / bulk carrier, BS=Bulk carrier unloading,
+      BY=Other types of bulk carriers, FC=Fishing vessel, FO=Vessel. transfer and/or
+      transp., GA=Vessel. RO-RO with passengers, GC=Mrcia general without specialization,
+      GD=Rest general cargo vessels, GE=Buq. transp. combined, GN=Container ship,
+      GO=Ro-ro vessel, GP=Passenger ship, GR=Refrigerator vessel, OO=Buq. or artefact.
+      float be, OS=Supply ships, TC=Transport product. chemicals, TD=Other liquid
+      bulk, TL=Transportation of liquefied gas, TO=Oil tanker, XD=Dredges, XR=Research
+      and exploration, XT=Tugs / pushers, XX=Other ships and boats, UR=Fast Pass,
+      G=General Cargo, T=Liquid Bulk Carriers (Tanks), S=Solid Bulk Carriers, OB=Other
+      Merchant Vessels, UC=Cruise Ticket, OC=High Sea Fishing Vessels (Freezers)'
+    range: vesselClass_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/vesselClass
+  gt:
+    description: Property. Model:'https://schema.org/Number'. Units:'moorson tons'.
+      Gross Tonnage (GT)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/gt
+  beam:
+    description: Property. Model:'https://schema.org/Number'. Units:'meters'. Beam
+      of the Vessel
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/beam
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  loa:
+    description: Property. Model:'https://schema.org/Number'. Units:'meters'. Length
+      Over All of Vessel
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/loa
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  sleeve:
+    description: Property. Model:'https://schema.org/Number'. Units:'meters'. Sleeve
+      of Vessel
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/sleeve
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  maxDraught:
+    description: Property. Model:'https://schema.org/Number'. Units:'meters'. Maximum
+      Draught of the vessel
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/maxDraught
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  dwt:
+    description: Property. Model:'https://schema.org/Number'. Units:'tons'. Dead weight
+      Tonnage (DWT)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/dwt
+  buildDate:
+    description: Property. Model:'https://schema.org/Text'. Date of building of the
+      vessel represented by an ISO 8601 UTC format
+    range: date
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/buildDate
+  toBow:
+    description: Property. Model:'http://schema.org/Number'. Units:'meters'. Dimension
+      to Bow
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/toBow
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  toStern:
+    description: Property. Model:'http://schema.org/Number'. Units:'meters'. Dimension
+      to Stern
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/toStern
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  toPort:
+    description: Property. Model:'http://schema.org/Number'. Units:'meters'. Dimension
+      to Port
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/toPort
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  toStardboard:
+    description: Property. Model:'http://schema.org/Number'. Units:'meters'. Dimension
+      to Starboard
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/toStardboard
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  photo:
+    description: Property. Model:'https://schema.org/Text'. Vessel Photo URL
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/photo
+  vesselOwner:
+    description: Property. Model:'https://schema.org/Text'. Owner of the Vessel
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/vesselOwner
+  manager:
+    description: Property. Model:'https://schema.org/Text'. Manager of the Vessel,
+      usually Ship Company
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/manager
+  financialOwner:
+    description: Property. Model:'https://schema.org/Text'. Financial Owner of the
+      vessel
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/financialOwner
+  technicalManager:
+    description: Property. Model:'https://schema.org/Text'. Technical Manager of the
+      vessel
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/technicalManager
+  maxLoadVehicle:
+    description: Property. Model:'https://schema.org/Number'. Max capacity of vessel
+      to transport vehicles
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/maxLoadVehicle
+  maxPassenger:
+    description: Property. Model:'https://schema.org/Number'. Max capacity of vessel
+      to transport passengers
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/maxPassenger
+  maxVehicle:
+    description: Property. Model:'https://schema.org/Number'. Max dimensions of vehicle
+      permitted
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/maxVehicle
+  minNumOfCrew:
+    description: Property. Model:'https://schema.org/Number'. Minimum number of crew
+      to operate the vessel
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/minNumOfCrew
+enums:
+  vesselClass_options:
+    name: vesselClass_options
+    permissible_values:
+      BD:
+        text: BD
+      BO:
+        text: BO
+      BS:
+        text: BS
+      BY:
+        text: BY
+      FC:
+        text: FC
+      FO:
+        text: FO
+      GA:
+        text: GA
+      GC:
+        text: GC
+      GD:
+        text: GD
+      GE:
+        text: GE
+      GN:
+        text: GN
+      GO:
+        text: GO
+      GP:
+        text: GP
+      GR:
+        text: GR
+      OO:
+        text: OO
+      OS:
+        text: OS
+      TC:
+        text: TC
+      TD:
+        text: TD
+      TL:
+        text: TL
+      TO:
+        text: TO
+      XD:
+        text: XD
+      XR:
+        text: XR
+      XT:
+        text: XT
+      XX:
+        text: XX
+      UR:
+        text: UR
+      G:
+        text: G
+      T:
+        text: T
+      S:
+        text: S
+      OB:
+        text: OB
+      UC:
+        text: UC
+      OC:
+        text: OC

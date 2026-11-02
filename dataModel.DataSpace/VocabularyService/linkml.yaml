@@ -1,0 +1,175 @@
+id: https://github.com/smart-data-models/dataModel.DataSpace/VocabularyService
+name: VocabularyService
+title: Smart Data Models - Vocabulary Service
+description: A data model for a Vocabulary Service tool. This service manages and
+  hosts data models like vocabularies, ontologies, and schemas. It extends the base
+  ToolInformation model.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.DataSpace
+  spec.source.path: VocabularyService/schema.json
+  spec.source.commit: 6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": "https://smart-data-models.github.io/dataModel.DataSpace/context.jsonld",
+    "dataModelDomain": {"type": "Property", "value": ["Healthcare", "Finance"]}, "dataModelSpecificationType":
+    {"type": "Property", "value": "Ontology"}, "dataModelVersioning": {"type": "Property",
+    "value": "Full History"}, "dataspaceBuildingBlock": {"type": "Property", "value":
+    "Semantic Interoperability"}, "dataspaceProductPurpose": {"type": "Property",
+    "value": "To provide a centralized, governed repository for data models, ensuring
+    semantic interoperability across the data space."}, "dataspaceService": {"type":
+    "Property", "value": "Vocabulary Services"}, "dataspaceServiceCategory": {"type":
+    "Property", "value": "Federation services"}, "description": {"type": "Property",
+    "value": "A professional service for managing and publishing enterprise ontologies
+    and data schemas."}, "documentation": {"type": "Property", "value": "https://docs.semanticsol.com/ontomanager"},
+    "exportFormats": {"type": "Property", "value": ["application/json", "application/rdf+xml",
+    "text/turtle"]}, "governanceFeatures": {"type": "Property", "value": "Role-based
+    access control, working groups workflows, change request management."}, "hasVersion":
+    {"type": "Property", "value": "2.5.0"}, "id": "urn:ngsi-ld:VocabularyService:VocabServ-001",
+    "importFormats": {"type": "Property", "value": ["application/rdf+xml", "text/turtle",
+    "application/vnd.ms-excel"]}, "license": {"type": "Property", "value": "https://example.com/licenses/commercial-eula"},
+    "licenseDeclared": {"type": "Property", "value": "UNLICENSED"}, "maintainer":
+    {"type": "Property", "value": {"name": "Semantic Solutions Inc.", "url": "https://semanticsol.com"}},
+    "mappingFunctionalities": {"type": "Property", "value": "Provides a graphical
+    interface for creating and managing mappings between different ontologies."},
+    "publicationAccessibility": {"type": "Property", "value": ["Persistent URIs",
+    "SPARQL endpoint", "Web Portal"]}, "supportedStandards": {"type": "Property",
+    "value": "ISO 15926"}, "supportedSyntaxes": {"type": "Property", "value": ["OWL",
+    "RDFS", "SKOS", "SHACL"]}, "technologyReadinessLevel": {"type": "Property", "value":
+    9}, "title": {"type": "Property", "value": "OntoManager Pro"}, "type": "VocabularyService",
+    "url": {"type": "Property", "value": "https://example.com/ontomanager"}, "validationCapabilities":
+    {"type": "Property", "value": "SHACL validator"}}'
+classes:
+  VocabularyService:
+    class_uri: https://smartdatamodels.org/dataModel.DataSpace/VocabularyService
+    description: A data model for a Vocabulary Service tool. This service manages
+      and hosts data models like vocabularies, ontologies, and schemas. It extends
+      the base ToolInformation model.
+    is_a: Entity
+    slots:
+    - dataModelDomain
+    - dataModelSpecificationType
+    - dataModelVersioning
+    - exportFormats
+    - governanceFeatures
+    - importFormats
+    - mappingFunctionalities
+    - publicationAccessibility
+    - referenceDatasetManagement
+    - supportedStandards
+    - supportedSyntaxes
+    - validationCapabilities
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+slots:
+  dataModelDomain:
+    description: Property. Describes the subject areas or business domains of the
+      data models managed by the service. Corresponds to dcterms:subject.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataModel.DataSpace/dataModelDomain
+  dataModelSpecificationType:
+    description: Property. The type of data model specification supported (e.g., Ontology,
+      Data Schema).
+    range: dataModelSpecificationType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataModel.DataSpace/dataModelSpecificationType
+  supportedSyntaxes:
+    description: Property. Data model syntaxes the service can process (e.g., OWL,
+      JSON Schema). Corresponds to dc:format.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataModel.DataSpace/supportedSyntaxes
+  importFormats:
+    description: Property. Data formats the service can import for creating a data
+      model (list of MIME types). Corresponds to dcat:mediatype.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataModel.DataSpace/importFormats
+  exportFormats:
+    description: Property. Data formats in which the service can export data models
+      (list of MIME types). Corresponds to dcat:mediaType.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataModel.DataSpace/exportFormats
+  dataModelVersioning:
+    description: Property. The approach used for data model versioning. Corresponds
+      to schema:version.
+    range: dataModelVersioning_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataModel.DataSpace/dataModelVersioning
+  referenceDatasetManagement:
+    description: Property. Describes how the service manages reference datasets (codelists).
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataModel.DataSpace/referenceDatasetManagement
+  governanceFeatures:
+    description: Property. Governance functionalities, such as role-based access control
+      and workflow management.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataModel.DataSpace/governanceFeatures
+  publicationAccessibility:
+    description: Property. Methods used to publish and make vocabularies accessible
+      (e.g., SPARQL endpoint). Corresponds to dcat:accessService.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataModel.DataSpace/publicationAccessibility
+  validationCapabilities:
+    description: Property. Specifies if the service offers validation of data instances
+      against data models.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataModel.DataSpace/validationCapabilities
+  supportedStandards:
+    description: Property. List of specific formal or industry standards that the
+      service supports. Corresponds to dcterms:conformsTo.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataModel.DataSpace/supportedStandards
+  mappingFunctionalities:
+    description: Property. Describes if the service provides functionalities for mapping
+      between different data models.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataModel.DataSpace/mappingFunctionalities
+enums:
+  dataModelSpecificationType_options:
+    name: dataModelSpecificationType_options
+    permissible_values:
+      Vocabulary:
+        text: Vocabulary
+      Ontology:
+        text: Ontology
+      Application Profile:
+        text: Application Profile
+      Data Schema:
+        text: Data Schema
+  dataModelVersioning_options:
+    name: dataModelVersioning_options
+    permissible_values:
+      Semantic Versioning:
+        text: Semantic Versioning
+      Full History:
+        text: Full History
+      None:
+        text: None

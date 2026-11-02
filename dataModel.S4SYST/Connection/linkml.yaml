@@ -1,0 +1,196 @@
+id: https://github.com/smart-data-models/dataModel.S4SYST/Connection
+name: Connection
+title: Smart data models - Connection schema
+description: The class of connections between systems. This class qualifies property
+  s4syst:connectedTo. A connection describes potential interactions between systems.
+  Any two connected systems are connected through a connection. A connection can connect
+  more than two systems at the same time.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.S4SYST
+  spec.source.path: Connection/schema.json
+  spec.source.commit: 5d00fdd5a35570bfc1edef4bd57c926cd4892174
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.S4SYST/master/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"], "alternateName":
+    {"type": "Property", "value": "Connection type 2"}, "connectsSystem": {"object":
+    "urn:ngsi-ld:System:691d20a8-e4d3-4963-a6a1-037bc00c2931", "type": "Relationship"},
+    "connectsSystemAt": {"object": "urn:ngsi-ld:ConnectionPoint:c9dd8efc-10f9-431c-9b38-54fe367ae838",
+    "type": "Relationship"}, "dataProvider": {"type": "Property", "value": "IFC file"},
+    "dateCreated": {"type": "Property", "value": "2023-01-26T07:06:51Z"}, "dateModified":
+    {"type": "Property", "value": "2023-01-25T20:51:18Z"}, "description": {"type":
+    "Property", "value": "Connection of limited Connection types"}, "id": "urn:ngsi-ld:Connection:c37d35d0-1f89-4b28-9fb9-9f4f88735458",
+    "name": {"type": "Property", "value": "Connection"}, "source": {"type": "Property",
+    "value": "Import"}, "type": "Connection"}'
+classes:
+  Connection:
+    class_uri: https://smartdatamodels.org/dataModel.S4SYST/Connection
+    description: The class of connections between systems. This class qualifies property
+      s4syst:connectedTo. A connection describes potential interactions between systems.
+      Any two connected systems are connected through a connection. A connection can
+      connect more than two systems at the same time.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - connectsSystem
+    - connectsSystemAt
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - name
+    - owner
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+    slot_uri: https://smartdatamodels.org/areaServed
+  connectsSystem:
+    description: Relationship. Links a connection to one of the systems it connects.
+      (System)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+    slot_uri: https://smartdatamodels.org/dataModel.S4SYST/connectsSystem
+  connectsSystemAt:
+    description: Relationship. Links a connection to one of the connection points
+      at which it connects a system. (ConnectionPoint)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4SYST@5d00fdd5a35570bfc1edef4bd57c926cd4892174
+    slot_uri: https://smartdatamodels.org/dataModel.S4SYST/connectsSystemAt

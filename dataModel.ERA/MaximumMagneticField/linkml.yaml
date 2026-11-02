@@ -1,0 +1,221 @@
+id: https://github.com/smart-data-models/dataModel.ERA/MaximumMagneticField
+name: MaximumMagneticField
+title: MaximumMagneticField + mapped from ERA ontology by Smart Data Models
+description: 'The maximum magnetic field limits allowed for axle counters (in dBµA/m)
+  for a defined frequency band.
+
+  It should be provided in 3 directions.'
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ERA
+  spec.source.path: MaximumMagneticField/schema.json
+  spec.source.commit: 4c4f8ebffc25dd413db62527072eac74559f0b70
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Our seem scientist.
+    Hot group true design season crime. Far safe miss doctor.", "addressLocality":
+    "Community catch mission perhaps especially option degree. Create option part
+    not return draw identify art. Success relate series according.", "addressRegion":
+    "List successful a during loss nor. Conference hit well far f", "district": "Throughout
+    way floor believe movie. Off police in begin. Whatever heart half or already window.",
+    "postOfficeBoxNumber": "Huge foot truth ball. ", "postalCode": "Interesting top
+    success try.", "streetAddress": "West trial language field. Stock high senior
+    success go whole.", "streetNr": "Land need cold question."}}, "alternateName":
+    {"type": "Property", "value": "Here people p"}, "areaServed": {"type": "Property",
+    "value": "Say already life discuss determine heart. Edge someone parent all her
+    down."}, "dataProvider": {"type": "Property", "value": "Article care radio win
+    program responsibility water. South expect yard past most team. Raise population
+    since meet between set."}, "dateCreated": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "2011-01-17T00:20:24Z"}}, "dateModified": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "1971-04-03T19:24:25Z"}}, "description":
+    {"type": "Property", "value": "Activity treat its in. Also step board might truth
+    small interesting."}, "id": "urn:ngsi-ld:MaximumMagneticField:id:XYSL:59916457",
+    "location": {"type": "Property", "value": {"coordinates": [-8.077867, 60.671442],
+    "type": "Point"}}, "maximumMagneticFieldDirectionX": {"type": "Property", "value":
+    671}, "maximumMagneticFieldDirectionY": {"type": "Property", "value": 707}, "maximumMagneticFieldDirectionZ":
+    {"type": "Property", "value": 262}, "name": {"type": "Property", "value": "Everyone
+    safe interesting eat. Again might live manager. Surf"}, "owner": {"type": "Property",
+    "value": ["urn:ngsi-ld:MaximumMagneticField:items:QGWL:53478074", "urn:ngsi-ld:MaximumMagneticField:items:IBUO:48085735"]},
+    "seeAlso": {"type": "Property", "value": ["urn:ngsi-ld:MaximumMagneticField:items:XXHU:41714471"]},
+    "source": {"type": "Property", "value": "Seek material four bed eat foot four
+    cut. Industry medical human yet collection."}, "type": "MaximumMagneticField"}'
+classes:
+  MaximumMagneticField:
+    class_uri: https://smartdatamodels.org/dataModel.ERA/MaximumMagneticField
+    description: 'The maximum magnetic field limits allowed for axle counters (in
+      dBµA/m) for a defined frequency band.
+
+      It should be provided in 3 directions.'
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - maximumMagneticFieldDirectionX
+    - maximumMagneticFieldDirectionY
+    - maximumMagneticFieldDirectionZ
+    - name
+    - owner
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/areaServed
+  maximumMagneticFieldDirectionX:
+    description: Property. Maximum magnetic field direction X
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/maximumMagneticFieldDirectionX
+  maximumMagneticFieldDirectionY:
+    description: Property. Maximum magnetic field direction Y
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/maximumMagneticFieldDirectionY
+  maximumMagneticFieldDirectionZ:
+    description: Property. Maximum magnetic field direction Z
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/maximumMagneticFieldDirectionZ

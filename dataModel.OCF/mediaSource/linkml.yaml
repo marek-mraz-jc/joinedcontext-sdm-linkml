@@ -1,0 +1,291 @@
+id: https://github.com/smart-data-models/dataModel.OCF/mediaSource
+name: mediaSource
+title: Media Source
+description: Smart Data Models Program adaptation of the original IoTData data Models.
+  This Resource defines a single media source that exists on a device. The source
+  can be an input source or output source, this resource is agnostic of that. The
+  Property 'sourceName' specifies a pre-defined media input or output (e.g.'HDMI',
+  'DVI'). The Property 'sourceNumber' is a label to specify the instance (e.g. 'PC',
+  '1'). The Property 'sourceType' is an enumeration defining whether the source is
+  audio, video or both. The Property 'status' is a boolean that determines if the
+  specific source instance is selected or not.  A status of true means that the source
+  instance is selected.  A status of false means that the source instance is not selected.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: mediaSource/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Animal them involve
+    others home sense after. Occur page minute.", "addressLocality": "Network movie
+    successful join carry result amount. Often mouth throw wear hit car technolo",
+    "addressRegion": "Crime both beat leader today issue personal area. Stock heart
+    industry allow cover price within. Seat reduce attention language push image each
+    six.", "district": "Turn its part Republican resource baby memory. Table meet
+    serve shoulder. Box film film meet drug stuff.", "postOfficeBoxNumber": "May which
+    writer need sell follow. Reason first thank represent drive. Parent consumer north
+    adult list standard head.", "postalCode": "Discuss sure avoid pretty building
+    season. Available health them throw present. Even blue young city leave anything.",
+    "streetAddress": "Summer fi", "streetNr": "Fall seat evening beautiful image.
+    Other where suggest right break. Whether check mission draw go lose."}}, "alternateName":
+    {"type": "Property", "value": "Coach have school join hour. Nothing affect d"},
+    "areaServed": {"type": "Property", "value": "Act camera human. Onto tax vote on.
+    Keep suggest mother war able college door."}, "dataProvider": {"type": "Property",
+    "value": "We morning easy although rich. Under save have southern one most. Know
+    why ball attention responsibility da"}, "dateCreated": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "2002-02-03T14:43:20Z"}}, "dateModified": {"type":
+    "Property", "value": {"@type": "DateTime", "@value": "2006-02-11T14:03:31Z"}},
+    "description": {"type": "Property", "value": "Knowledge large close new election
+    within reduce. News eye majority."}, "id": "urn:ngsi-ld:mediaSource:id:LJAC:84422647",
+    "if": {"type": "Property", "value": ["oic.if.baseline", "oic.if.a"]}, "location":
+    {"type": "GeoProperty", "value": {"coordinates": [67.4900935, -69.768952], "type":
+    "Point"}}, "n": {"type": "Property", "value": "Doctor meet though. Adult voice
+    large oil communit"}, "name": {"type": "Property", "value": "Probably yours"},
+    "owner": {"type": "Property", "value": ["urn:ngsi-ld:mediaSource:items:TLEL:58779962",
+    "urn:ngsi-ld:mediaSource:items:REDI:91656547"]}, "rt": {"type": "Property", "value":
+    ["oic.r.mediasource"]}, "seeAlso": {"type": "Property", "value": ["urn:ngsi-ld:mediaSource:items:AJGB:26743605"]},
+    "source": {"type": "Property", "value": "Institution research bad "}, "sourceName":
+    {"type": "Property", "value": "Finally during country operation task time attorney
+    those. Reality account future never manager."}, "sourceNumber": {"type": "Property",
+    "value": "Help government clearly alone."}, "sourceType": {"type": "Property",
+    "value": "audioPlusVideo"}, "status": {"type": "Property", "value": true}, "type":
+    "mediaSource"}'
+classes:
+  mediaSource:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/mediaSource
+    description: Smart Data Models Program adaptation of the original IoTData data
+      Models. This Resource defines a single media source that exists on a device.
+      The source can be an input source or output source, this resource is agnostic
+      of that. The Property 'sourceName' specifies a pre-defined media input or output
+      (e.g.'HDMI', 'DVI'). The Property 'sourceNumber' is a label to specify the instance
+      (e.g. 'PC', '1'). The Property 'sourceType' is an enumeration defining whether
+      the source is audio, video or both. The Property 'status' is a boolean that
+      determines if the specific source instance is selected or not.  A status of
+      true means that the source instance is selected.  A status of false means that
+      the source instance is not selected.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - if
+    - n
+    - name
+    - owner
+    - rt
+    - seeAlso
+    - source
+    - sourceName
+    - sourceNumber
+    - sourceType
+    - status
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. The Resource Type.
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  status:
+    description: Property. Specifies if the specific source instance is selected or
+      not.
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://uri.etsi.org/ngsi-ld/status
+  sourceType:
+    description: Property. Specifies the type of the source.
+    range: sourceType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/sourceType
+  sourceName:
+    description: Property. Specifies a pre-defined media input or output.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/sourceName
+  sourceNumber:
+    description: Property. Label to specify the instance.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/sourceNumber
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  if:
+    description: Property. The OCF Interface set supported by this Resource.
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.mediasource:
+        text: oic.r.mediasource
+  sourceType_options:
+    name: sourceType_options
+    permissible_values:
+      audioOnly:
+        text: audioOnly
+      videoOnly:
+        text: videoOnly
+      audioPlusVideo:
+        text: audioPlusVideo
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.a:
+        text: oic.if.a
+      oic.if.baseline:
+        text: oic.if.baseline

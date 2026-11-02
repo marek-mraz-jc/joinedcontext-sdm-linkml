@@ -1,0 +1,251 @@
+id: https://github.com/smart-data-models/dataModel.S4BLDG/Outlet
+name: Outlet
+title: Smart data models - Outlet schema
+description: An outlet is a device installed at a point to receive one or more inserted
+  plugs for electrical power or communications. Power outlets are commonly connected
+  within a junction box; data outlets may be directly connected to a wall. For power
+  outlets sharing the same circuit within a junction box, the ports should indicate
+  the logical wiring relationship to the enclosing junction box, even though they
+  may be physically connected to a cable going to another outlet, switch, or fixture.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.S4BLDG
+  spec.source.path: Outlet/schema.json
+  spec.source.commit: 06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.S4BLDG/master/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"], "alternateName":
+    {"type": "Property", "value": "Outlet type 2"}, "dataProvider": {"type": "Property",
+    "value": "IFC file"}, "dateCreated": {"type": "Property", "value": "2023-01-25T22:54:46Z"},
+    "dateModified": {"type": "Property", "value": "2023-01-26T03:24:39Z"}, "description":
+    {"type": "Property", "value": "Outlet of limited Outlet types"}, "hasManufacturer":
+    {"type": "Property", "value": "Outlet Company Inc."}, "hasModel": {"type": "Property",
+    "value": "Outlet 0.1.2"}, "id": "urn:ngsi-ld:Outlet:10026fea-6da7-4531-9499-c62e29174456",
+    "isContainedInBuildingSpace": {"object": "urn:ngsi-ld:BuildingSpace:aa5a4392-55e2-44c2-884f-ea630e2c91ab",
+    "type": "Relationship"}, "isContainedInPhysicalObject": {"object": "urn:ngsi-ld:PhysicalObject:dc452c3f-bc46-4b8c-8be7-5d2815ee4345",
+    "type": "Relationship"}, "isPluggableOutlet": {"type": "Property", "value": false},
+    "isSubSystemOf": [{"object": "urn:ngsi-ld:System:1d54a955-8898-4270-8acc-cf3d21aa34dd",
+    "type": "Relationship"}, {"object": "urn:ngsi-ld:System:e5d0d074-3ec3-4375-aca0-b2b49f866c2f",
+    "type": "Relationship"}, {"object": "urn:ngsi-ld:System:a8ee1813-d70e-4680-a2de-e4697a8e8aa4",
+    "type": "Relationship"}], "name": {"type": "Property", "value": "Outlet"}, "numberOsSockets":
+    {"type": "Property", "value": 0.08402675463783171}, "source": {"type": "Property",
+    "value": "Import"}, "type": "Outlet"}'
+classes:
+  Outlet:
+    class_uri: https://smartdatamodels.org/dataModel.S4BLDG/Outlet
+    description: An outlet is a device installed at a point to receive one or more
+      inserted plugs for electrical power or communications. Power outlets are commonly
+      connected within a junction box; data outlets may be directly connected to a
+      wall. For power outlets sharing the same circuit within a junction box, the
+      ports should indicate the logical wiring relationship to the enclosing junction
+      box, even though they may be physically connected to a cable going to another
+      outlet, switch, or fixture.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - hasManufacturer
+    - hasModel
+    - isContainedInBuildingSpace
+    - isContainedInPhysicalObject
+    - isPluggableOutlet
+    - isSubSystemOf
+    - name
+    - numberOsSockets
+    - owner
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/areaServed
+  isPluggableOutlet:
+    description: Property. Indication of whether the outlet accepts a loose plug connection
+      (= TRUE) or whether it is directly connected (= FALSE) or whether the form of
+      connection has not yet been determined (= UNKNOWN)
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isPluggableOutlet
+  numberOsSockets:
+    description: Property. The number of sockets that may be connected. In case of
+      inconsistency, sockets defined on ports take precedence
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/numberOsSockets
+  isContainedInBuildingSpace:
+    description: Relationship. An entity used to define the physical spaces of the
+      building. A building space contains devices or building objects. (BuildingSpace)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isContainedInBuildingSpace
+  isContainedInPhysicalObject:
+    description: Relationship. Any Object that has a proper space region.  (Definition
+      extracted from DUL ontology) (PhysicalObject)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isContainedInPhysicalObject
+  isSubSystemOf:
+    description: Relationship. A reference to a system(s) that this Physical Object
+      is part of
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isSubSystemOf
+  hasManufacturer:
+    description: Property. A relationship identifying the manufacturer of an entity
+      (e.g., device). The value is expected to be a string or a string with language
+      tag
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/hasManufacturer
+  hasModel:
+    description: Property. A relationship identifying the model of an entity (e.g.,
+      device). The value is expected to be a string or a string with language tag
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/hasModel

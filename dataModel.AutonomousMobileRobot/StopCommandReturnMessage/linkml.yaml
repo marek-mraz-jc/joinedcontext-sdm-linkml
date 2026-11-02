@@ -1,0 +1,74 @@
+id: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/StopCommandReturnMessage
+name: StopCommandReturnMessage
+title: Stop Command Return Message ported to Smart Data Models
+description: Stop Command Return Message
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot
+  spec.source.path: StopCommandReturnMessage/schema.json
+  spec.source.commit: fa7f44ecefe4c2825ce719a62b2ce2b684402950
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.AutonomousMobileRobot/master/context.jsonld"],
+    "commandTime": {"type": "Property", "value": {"@type": "Date-Time", "@value":
+    "2019-06-07T08:39:42.921+09:00"}}, "errors": {"type": "Property", "value": []},
+    "id": "urn:ngsi-ld:Robot:Mega_rover:01", "receivedStopCommand": {"type": "Property",
+    "value": "stop"}, "receivedTime": {"type": "Property", "value": {"@type": "Date-Time",
+    "@value": "2019-06-07T08:39:40.064+09:00"}}, "resultsOfStopCommand": {"type":
+    "Property", "value": "ack"}, "type": "StopCommandReturnMessage"}'
+classes:
+  StopCommandReturnMessage:
+    class_uri: https://smartdatamodels.org/dataModel.AutonomousMobileRobot/StopCommandReturnMessage
+    description: Stop Command Return Message
+    is_a: Entity
+    slots:
+    - commandTime
+    - errors
+    - receivedStopCommand
+    - receivedTime
+    - resultsOfStopCommand
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+slots:
+  commandTime:
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+    slot_uri: https://smartdatamodels.org/dataModel.AutonomousMobileRobot/commandTime
+  receivedTime:
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+    slot_uri: https://smartdatamodels.org/dataModel.AutonomousMobileRobot/receivedTime
+  receivedStopCommand:
+    description: Property. The stop command which the robot received.
+    range: receivedStopCommand_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+    slot_uri: https://smartdatamodels.org/dataModel.AutonomousMobileRobot/receivedStopCommand
+  resultsOfStopCommand:
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+    slot_uri: https://smartdatamodels.org/dataModel.AutonomousMobileRobot/resultsOfStopCommand
+  errors:
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+    slot_uri: https://uri.etsi.org/ngsi-ld/errors
+enums:
+  receivedStopCommand_options:
+    name: receivedStopCommand_options
+    permissible_values:
+      stop:
+        text: stop

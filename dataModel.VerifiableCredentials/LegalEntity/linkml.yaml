@@ -1,0 +1,115 @@
+id: https://github.com/smart-data-models/dataModel.VerifiableCredentials/LegalEntity
+name: LegalEntity
+title: EBSI Legal Entity Verifiable ID
+description: Schema of an EBSI Verifiable ID for a legal entity
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.VerifiableCredentials
+  spec.source.path: LegalEntity/schema.json
+  spec.source.commit: 6d7f230e04c68631174483adfc610bb4fab53ab0
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+classes:
+  LegalEntity:
+    class_uri: https://smartdatamodels.org/dataModel.VerifiableCredentials/LegalEntity
+    description: Schema of an EBSI Verifiable ID for a legal entity
+    is_a: Entity
+    slots:
+    - credentialSubject
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+  CredentialSubject:
+    description: Property. Defines information about the subject that is described
+      by the Verifiable ID
+    attributes:
+      id:
+        description: Property. Defines the DID of the subject that is described by
+          the Verifiable Attestation
+        range: uriorcurie
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      identifier:
+        description: Property. Description to be completed
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      legalPersonIdentifier:
+        description: Property. National/Legal Identifier of Credential Subject (constructed
+          by the sending Member State in accordance with the technical specifications
+          for the purposes of cross-border identification and which is as persistent
+          as possible in time)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      legalName:
+        description: Property. Official legal name of Credential Subject
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      legalAddress:
+        description: Property. Official legal address of Credential Subject
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      VATRegistration:
+        description: Property. VAT number  of Credential Subject
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      taxReference:
+        description: Property. Official tax reference number of Credential Subject
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      LEI:
+        description: Property. Official legal entity identifier (LEI) of Credential
+          Subject (referred to in Commission Implementing Regulation (EU) No 1247/2012)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      EORI:
+        description: Property. Economic Operator Registration and Identification (EORI)
+          of Credential Subject (referred to in Commission Implementing Regulation
+          (EU) No 1352/2013)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      SEED:
+        description: Property. System for Exchange of Excise Data (SEED) of Credential
+          Subject (i.e. excise number provided in Article 2(12) of Council Regulation
+          (EC) No 389/2012)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      SIC:
+        description: Property. Standard Industrial Classification (SIC) of Credential
+          Subject (Article 3(1) of Directive 2009/101/EC of the European Parliament
+          and of the Council.)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      domainName:
+        description: Property. Domain name  of Credential Subject
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+slots:
+  credentialSubject:
+    description: Property. Defines information about the subject that is described
+      by the Verifiable ID
+    range: CredentialSubject
+    required: true
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    slot_uri: https://smartdatamodels.org/dataModel.VerifiableCredentials/credentialSubject

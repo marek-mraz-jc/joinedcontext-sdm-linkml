@@ -1,0 +1,571 @@
+id: https://github.com/smart-data-models/dataModel.WaterDistribution/WaterDistributionNetwork
+name: WaterDistributionNetwork
+title: Smart Data models - WaterDistributionNetwork schema
+description: A Data Model for water supply network in a city.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.WaterDistribution
+  spec.source.path: WaterDistributionNetwork/schema.json
+  spec.source.commit: 95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistribution/master/context.jsonld"],
+    "clTSA": {"type": "Property", "value": {"avgOverTime": 6, "instValue": 12, "maxOverTime":
+    20, "minOverTime": 23}}, "compensatedTDS": {"type": "Property", "value": 25},
+    "deviceInfo": {"type": "Property", "value": {"deviceBatteryStatus": "Connected",
+    "deviceID": "234", "deviceModel": {"brandName": "Trumen Technologies Private Limited",
+    "manufacturerName": "Trumen Technologies Private Limited", "modelName": "Model
+    4", "modelURL": "https://trumen.in/"}, "deviceName": " Device 4", "deviceSimProperty":
+    "9883829934", "measurand": "2", "rfID": "345438"}}, "flowrate": {"type": "Property",
+    "value": 70}, "id": "uri:ngsi-ld:WaterDistributionNetwork:0001", "observationDateTime":
+    {"type": "Property", "value": {"@type": "Date-Time", "@value": "2021-03-11T15:51:02+05:30"}},
+    "pHTSA": {"type": "Property", "value": {"avgOverTime": 6, "instValue": 7, "maxOverTime":
+    8, "minOverTime": 6}}, "tankBreadth": {"type": "Property", "value": 50}, "tankCapacity":
+    {"type": "Property", "value": 500}, "tankDepth": {"type": "Property", "value":
+    200}, "tankDiameter": {"type": "Property", "value": 10}, "tankLength": {"type":
+    "Property", "value": 300}, "tankName": {"type": "Property", "value": "Tank 16"},
+    "tankShape": {"type": "Property", "value": "Cylindrical"}, "totalML": {"type":
+    "Property", "value": 250}, "turbidityTSA": {"type": "Property", "value": {"avgOverTime":
+    14, "instValue": 34, "maxOverTime": 23, "minOverTime": 12}}, "type": "WaterDistributionNetwork",
+    "uncompensatedTDS": {"type": "Property", "value": 27}, "waterFlow": {"type": "Property",
+    "value": 14}, "waterLevel": {"type": "Property", "value": 57}, "waterPressure":
+    {"type": "Property", "value": 5}, "waterTemperature": {"type": "Property", "value":
+    20}}'
+classes:
+  WaterDistributionNetwork:
+    class_uri: https://smartdatamodels.org/dataModel.WaterDistribution/WaterDistributionNetwork
+    description: A Data Model for water supply network in a city.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - clTSA
+    - compensatedTDS
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - deviceInfo
+    - flowrate
+    - name
+    - observationDateTime
+    - owner
+    - pHTSA
+    - seeAlso
+    - source
+    - tankBreadth
+    - tankCapacity
+    - tankDepth
+    - tankDiameter
+    - tankLength
+    - tankName
+    - tankShape
+    - totalML
+    - turbidityTSA
+    - uncompensatedTDS
+    - waterFlow
+    - waterLevel
+    - waterPressure
+    - waterTemperature
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+  TurbidityTSA:
+    description: Property. Measurement of the amount of light that is scattered by
+      material in the water when a light is shined through the water
+    attributes:
+      avgOverTime:
+        description: Property. Model:'https://schema.org/Number'. Describes the average
+          value of a time-series data over a specified duration in past. The duration
+          is specified using another parameter in the value descriptor object related
+          to this value
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      maxOverTime:
+        description: Property. Model:'https://schema.org/Number'. Describes the maximum
+          value of a time-series data over a specified duration in past. The duration
+          is specified using another parameter in the value descriptor object related
+          to this value
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      instValue:
+        description: Property. Model:'https://schema.org/Number'. Describes the instantaneous
+          value (associated with the current timestamp) of a time varying quantity
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      minOverTime:
+        description: Property. Model:'https://schema.org/Number'. Describes the minimum
+          value of a time-series data over a specified duration in past. The duration
+          is specified using another parameter in the value descriptor object related
+          to this value
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+  ClTSA:
+    description: Property. Concentration of chlorides in the water
+    attributes:
+      avgOverTime:
+        description: Property. Model:'https://schema.org/Number'. Describes the average
+          value of a time-series data over a specified duration in past. The duration
+          is specified using another parameter in the value descriptor object related
+          to this value
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      maxOverTime:
+        description: Property. Model:'https://schema.org/Number'. Describes the maximum
+          value of a time-series data over a specified duration in past. The duration
+          is specified using another parameter in the value descriptor object related
+          to this value
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      instValue:
+        description: Property. Model:'https://schema.org/Number'. Describes the instantaneous
+          value (associated with the current timestamp) of a time varying quantity
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      minOverTime:
+        description: Property. Model:'https://schema.org/Number'. Describes the minimum
+          value of a time-series data over a specified duration in past. The duration
+          is specified using another parameter in the value descriptor object related
+          to this value
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+  PHTSA:
+    description: Property. Acidity level or basicity level observed in the water
+    attributes:
+      avgOverTime:
+        description: Property. Model:'https://schema.org/Number'. Describes the average
+          value of a time-series data over a specified duration in past. The duration
+          is specified using another parameter in the value descriptor object related
+          to this value
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      maxOverTime:
+        description: Property. Model:'https://schema.org/Number'. Describes the maximum
+          value of a time-series data over a specified duration in past. The duration
+          is specified using another parameter in the value descriptor object related
+          to this value
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      instValue:
+        description: Property. Model:'https://schema.org/Number'. Describes the instantaneous
+          value (associated with the current timestamp) of a time varying quantity
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      minOverTime:
+        description: Property. Model:'https://schema.org/Number'. Describes the minimum
+          value of a time-series data over a specified duration in past. The duration
+          is specified using another parameter in the value descriptor object related
+          to this value
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+  DeviceModel:
+    description: Property. Describes the information of the device, sensor or system
+      in consideration
+    attributes:
+      brandName:
+        description: Property. Model:'https://schema.org/Text'. Name of the brand
+          associated with an entity, e.g., sensor, device etc
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      manufacturerName:
+        description: Property. Model:'https://schema.org/Text'. Name of the manufacturer
+          associated with an entity, e.g., sensor, device etc
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      modelName:
+        description: Property. Model:'https://schema.org/Text'. Name of a specific
+          model associated with an entity, e.g., sensor, device etc
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      modelURL:
+        description: Property. Model:'https://schema.org/Text'. URL providing further
+          information of a specific model associated with an entity, e.g., sensor,
+          device etc
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+  DeviceInfo:
+    description: Property. Information about the device associated with the observations
+    attributes:
+      rfID:
+        description: Property. Model:'https://schema.org/Text'. Gives the ID of the
+          RFID reader
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      deviceBatteryStatus:
+        description: Property. Model:'https://schema.org/Text'. Gives the Battery
+          charging status of the reporting device(Connected, Disconnected)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      deviceName:
+        description: Property. Model:'https://schema.org/Text'. Device Name or Station
+          name of the sensor device/station corresponding to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      deviceID:
+        description: Property. Model:'https://schema.org/Text'. Device ID of the physical
+          sensor/ measurement station corresponding to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      measurand:
+        description: Property. Model:'https://schema.org/Text'. Property/properties
+          sensed/observed/measured by the device
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      deviceSimNumber:
+        description: Property. Model:'https://schema.org/Text'. Gives the sim number
+          of the device in the waste management vehicle
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+      deviceModel:
+        description: Property. Describes the information of the device, sensor or
+          system in consideration
+        range: DeviceModel
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/areaServed
+  tankDiameter:
+    description: Property. Model:'https://schema.org/Number'. Diameter of Cylindrical
+      or Spherical water storage tanks
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/tankDiameter
+  totalML:
+    description: Property. Model:'https://schema.org/Number'. Total MLDs of water
+      discharged from the water storage tank corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/totalML
+  tankCapacity:
+    description: Property. Model:'https://schema.org/Number'. Maximum amount of water
+      the water storage tank corresponding to this observation can hold
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/tankCapacity
+  waterFlow:
+    description: Property. Model:'https://schema.org/Number'. Flow or current of water
+      flowing from the water storage tank corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/waterFlow
+  tankBreadth:
+    description: Property. Model:'https://schema.org/Number'. Breadth of the Cuboid
+      shaped water storage tank
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/tankBreadth
+  tankDepth:
+    description: Property. Model:'https://schema.org/Number'. Depth of the water storage
+      tank corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/tankDepth
+  flowrate:
+    description: Property. Model:'https://schema.org/Number'. Volume of water flowing
+      in/out of the water storage tank corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/flowrate
+  tankLength:
+    description: Property. Model:'https://schema.org/Number'. Length of the Cuboid
+      shaped water storage tank
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/tankLength
+  waterTemperature:
+    description: Property. Model:'https://schema.org/Number'. Water temperature in
+      the water storage tank corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/waterTemperature
+  waterPressure:
+    description: Property. Model:'https://schema.org/Number'. Pressure of water flowing
+      from the water storage tank corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/waterPressure
+  turbidityTSA:
+    description: Property. Measurement of the amount of light that is scattered by
+      material in the water when a light is shined through the water
+    range: TurbidityTSA
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/turbidityTSA
+  clTSA:
+    description: Property. Concentration of chlorides in the water
+    range: ClTSA
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/clTSA
+  waterLevel:
+    description: Property. Model:'https://schema.org/Number'. Current water level
+      in the water storage tank corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/waterLevel
+  tankName:
+    description: Property. Model:'https://schema.org/Text'. Name of the water storage
+      tank corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/tankName
+  observationDateTime:
+    description: Property. Model:'https://schema.org/Date-Time'. Last reported time
+      of observation
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/observationDateTime
+  tankShape:
+    description: 'Property. Model:''https://schema.org/Text''. Physical shape of the
+      water storage tank corresponding to this observation. ENUM: [Cylindrical, Conical,
+      Cuboid, Spherical]'
+    range: tankShape_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/tankShape
+  pHTSA:
+    description: Property. Acidity level or basicity level observed in the water
+    range: PHTSA
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/pHTSA
+  deviceInfo:
+    description: Property. Information about the device associated with the observations
+    range: DeviceInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/deviceInfo
+  compensatedTDS:
+    description: Property. Model:'https://schema.org/Number'. The value of TDS (Total
+      Dissolved Solids) level in the water with temperature compensation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/compensatedTDS
+  uncompensatedTDS:
+    description: Property. Model:'https://schema.org/Number'. The value of TDS (Total
+      Dissolved Solids) level in the water without temperature compensation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistribution@95e3320fd10afe7b4e8ad4544278b9f9ac786f38
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistribution/uncompensatedTDS
+enums:
+  tankShape_options:
+    name: tankShape_options
+    permissible_values:
+      Cylindrical:
+        text: Cylindrical
+      Conical:
+        text: Conical
+      Cuboid:
+        text: Cuboid
+      Spherical:
+        text: Spherical

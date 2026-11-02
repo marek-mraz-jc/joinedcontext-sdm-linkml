@@ -1,0 +1,353 @@
+id: https://github.com/smart-data-models/dataModel.WaterConsumption/WaterConsumptionObserved
+name: WaterConsumptionObserved
+title: Smart Data models - Water Consumption Observed schema
+description: The Smart Water Meter model captures water consumption, customer side
+  leak alarms and associated flow rate originating from the smart water meters
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.WaterConsumption
+  spec.source.path: WaterConsumptionObserved/schema.json
+  spec.source.commit: 564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.WaterConsumption/master/context.jsonld"],
+    "acquisitionStageFailure": {"observedAt": "2021-05-23T23:14:16.000Z", "observedBy":
+    {"object": "urn:ngsi-ld:Device:01", "type": "Relationship"}, "type": "Property",
+    "value": 0}, "alarmFlowPersistence": {"observedAt": "2021-05-23T23:14:16.000Z",
+    "observedBy": {"object": "urn:ngsi-ld:Device:01", "type": "Relationship"}, "type":
+    "Property", "value": "Nothing to report"}, "alarmInProgress": {"observedAt": "2021-05-23T23:14:16.000Z",
+    "observedBy": {"object": "urn:ngsi-ld:Device:01", "type": "Relationship"}, "type":
+    "Property", "value": 1}, "alarmStopsLeaks": {"observedAt": "2021-05-23T23:14:16.000Z",
+    "observedBy": {"object": "urn:ngsi-ld:Device:01", "type": "Relationship"}, "type":
+    "Property", "value": 0}, "alarmTamper": {"observedAt": "2021-05-23T23:14:16.000Z",
+    "observedBy": {"object": "urn:ngsi-ld:Device:01", "type": "Relationship"}, "type":
+    "Property", "value": 0}, "alarmWaterQuality": {"observedAt": "2021-05-23T23:14:16.000Z",
+    "observedBy": {"object": "urn:ngsi-ld:Device:01", "type": "Relationship"}, "type":
+    "Property", "value": 0}, "id": "urn:ngsi-ld:Consumer:Consumer01", "location":
+    {"type": "GeoProperty", "value": {"coordinates": [-4.128871, 50.95822], "type":
+    "Point"}}, "maxFlow": {"observedAt": "2021-05-23T23:14:16.000Z", "observedBy":
+    {"object": "urn:ngsi-ld:Device:01", "type": "Relationship"}, "type": "Property",
+    "unitCode": "E32", "value": 620}, "minFlow": {"observedAt": "2021-05-23T23:14:16.000Z",
+    "observedBy": {"object": "urn:ngsi-ld:Device:01", "type": "Relationship"}, "type":
+    "Property", "unitCode": "E32", "value": 1}, "moduleTampered": {"observedAt": "2021-05-23T23:14:16.000Z",
+    "observedBy": {"object": "urn:ngsi-ld:Device:01", "type": "Relationship"}, "type":
+    "Property", "value": 1}, "persistenceFlowDuration": {"observedAt": "2021-05-23T23:14:16.000Z",
+    "observedBy": {"object": "urn:ngsi-ld:Device:01", "type": "Relationship"}, "type":
+    "Property", "unitCode": "HUR", "value": "3h < 6h"}, "type": "WaterConsumptionObserved",
+    "waterConsumption": {"observedAt": "2021-05-23T23:14:16.000Z", "observedBy": {"object":
+    "urn:ngsi-ld:Device:01", "type": "Relationship"}, "type": "Property", "unitCode":
+    "LTR", "value": 191051}}'
+classes:
+  WaterConsumptionObserved:
+    class_uri: https://smartdatamodels.org/dataModel.WaterConsumption/WaterConsumptionObserved
+    description: The Smart Water Meter model captures water consumption, customer
+      side leak alarms and associated flow rate originating from the smart water meters
+    is_a: Entity
+    slots:
+    - acquisitionStageFailure
+    - address
+    - alarmFlowPersistence
+    - alarmInProgress
+    - alarmStopsLeaks
+    - alarmTamper
+    - alarmWaterQuality
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - maxFlow
+    - minFlow
+    - moduleTampered
+    - name
+    - owner
+    - persistenceFlowDuration
+    - seeAlso
+    - source
+    - waterConsumption
+    - waterType
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/areaServed
+  acquisitionStageFailure:
+    description: Property. No inductive response of metering device
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/dataModel.WaterConsumption/acquisitionStageFailure
+  alarmFlowPersistence:
+    description: Property. Alarm signifying continuous water use
+    range: alarmFlowPersistence_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/dataModel.WaterConsumption/alarmFlowPersistence
+  alarmInProgress:
+    description: Property. Indicates that one or more alarms are in progress
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/dataModel.WaterConsumption/alarmInProgress
+  alarmStopsLeaks:
+    description: Property. Alarm signifying the potential for an intermittent leak
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/dataModel.WaterConsumption/alarmStopsLeaks
+  alarmTamper:
+    description: Property. Alarm signifying the potential of mechanical tampering
+      with the device
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/dataModel.WaterConsumption/alarmTamper
+  alarmWaterQuality:
+    description: Property. Alarm signifying the potential of backflows occurring
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/dataModel.WaterConsumption/alarmWaterQuality
+  maxFlow:
+    description: Property. Maximum flow rate observed during the last week. Units:'litres/hour'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/dataModel.WaterConsumption/maxFlow
+  minFlow:
+    description: Property. Minimum flow rate observed during the last week. Units:'litres/hour'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/dataModel.WaterConsumption/minFlow
+  moduleTampered:
+    description: Property. Removal of module from metering device
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/dataModel.WaterConsumption/moduleTampered
+  persistenceFlowDuration:
+    description: Property. The duration that persistence flow (continuous flow) is
+      recorded by the meter. Text  field showing durations in minutes (m), hours (h)
+      or days (d)
+    range: persistenceFlowDuration_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/dataModel.WaterConsumption/persistenceFlowDuration
+  waterConsumption:
+    description: Property. The water meter reading. Note – this is total volume passed
+      through the meter and is therefore a cumulative total at the time. Units:'Cubic
+      meters'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/dataModel.WaterConsumption/waterConsumption
+    unit:
+      ucum_code: m3
+      exact_mappings:
+      - ucefact:MTQ
+      - qudt-unit:M3
+      has_quantity_kind: qudt-quantkind:SectionModulus
+  waterType:
+    description: Property. The type of water by water temperature. Utility bills distinguish
+      hot water
+    range: waterType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterConsumption@564551a6aa1c3b8643a97ec52e6cb86b2ace067c
+    slot_uri: https://smartdatamodels.org/dataModel.WaterConsumption/waterType
+enums:
+  alarmFlowPersistence_options:
+    name: alarmFlowPersistence_options
+    permissible_values:
+      Nothing to report:
+        text: Nothing to report
+      No persistence:
+        text: No persistence
+      In progress impacting persistence:
+        text: In progress impacting persistence
+      In progress persistence:
+        text: In progress persistence
+      Past Persistence during the period:
+        text: Past Persistence during the period
+  persistenceFlowDuration_options:
+    name: persistenceFlowDuration_options
+    permissible_values:
+      15m < 60m:
+        text: 15m < 60m
+      60m < 3h:
+        text: 60m < 3h
+      3h < 6h:
+        text: 3h < 6h
+      6h < 12h:
+        text: 6h < 12h
+      12h < 24h:
+        text: 12h < 24h
+      24h < 2d:
+        text: 24h < 2d
+      2d < 4d:
+        text: 2d < 4d
+      4d < 8d:
+        text: 4d < 8d
+      8d < 15d:
+        text: 8d < 15d
+      15d < 30d:
+        text: 15d < 30d
+      30d < 90d:
+        text: 30d < 90d
+      90d < 180d:
+        text: 90d < 180d
+      '> 180d':
+        text: '> 180d'
+  waterType_options:
+    name: waterType_options
+    permissible_values:
+      hotWater:
+        text: hotWater
+      serviceWater:
+        text: serviceWater

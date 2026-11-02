@@ -1,0 +1,76 @@
+id: https://github.com/smart-data-models/dataModel.ACRIS/TerminalFacility
+name: TerminalFacility
+title: Smart Data Models - Mapping of ACRIS data model TerminalFacility
+description: Property. Information about an Airport Terminal as buildings or infrastructure
+  used to provide services.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ACRIS
+  spec.source.path: TerminalFacility/schema.json
+  spec.source.commit: 82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.ACRIS/master/context.jsonld"],
+    "AirportFacility": {"type": "Property", "value": {"IataCode": "SFO", "IcaoCode":
+    "KSFO", "Name": "San Francisco International Airport"}}, "Identifier": {"type":
+    "Property", "value": "BA/C"}, "Name": {"type": "Property", "value": "Boarding
+    Area C"}, "id": "urn:ngsi-ld:TerminalFacility:id:ACFX:01548511", "type": "TerminalFacility"}'
+classes:
+  TerminalFacility:
+    class_uri: https://smartdatamodels.org/dataModel.ACRIS/TerminalFacility
+    description: Property. Information about an Airport Terminal as buildings or infrastructure
+      used to provide services.
+    is_a: Entity
+    slots:
+    - AirportFacility
+    - Identifier
+    - Name
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  AirportFacility:
+    description: Property. Information about an Airport as buildings or infrastructure
+      used to provide services.
+    attributes:
+      IataCode:
+        description: Property. Three character IATA code for the Airport.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      IcaoCode:
+        description: Property. Four character ICAO code for the Airport.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Name:
+        description: Property. Common name of the Airport.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+slots:
+  Identifier:
+    description: Property. Unique identifier for the Terminal Facility.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/Identifier
+  Name:
+    description: Property. Unique name for the Terminal Facility.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/Name
+  AirportFacility:
+    description: Property. Information about an Airport as buildings or infrastructure
+      used to provide services.
+    range: AirportFacility
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/AirportFacility

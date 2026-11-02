@@ -1,0 +1,949 @@
+id: https://github.com/smart-data-models/dataModel.GreenEnergy/PhotovoltaicDevice
+name: PhotovoltaicDevice
+title: PhotovoltaicDevice schema
+description: 'The Data Model is intended to describe the mechanical, electrical and
+  thermal characteristics of photo-voltaic panels according to *STC - Standard Test
+  Condition* and *NOCT - Normal Operating Cell Temperature*. *Remark* : This Data
+  Model can be used directly as a main entity to describe the `Photovoltaic Device`  or
+  as a sub-entity of the Data Model  `DEVICE` using a reference by the `refDevice`
+  attribute. The measures performed for STC and NOCT are `Pmax` (Maximum Nominal Power),
+  `Umpp` (Optimal operating voltage), `Impp` (Optimal Operating Current), `Uoc` (Open
+  Circuit Voltage), `Isc` (Short Circuit Current). *Additional Information about Data
+  Model:* This Data Model can be used directly as a main entity to describe the device
+  [PHOTOVOLTAIC] or as a sub-entity of the Data Model [DEVICE] using a reference by
+  the `refDevice` attribute.'
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.GreenEnergy
+  spec.source.path: PhotovoltaicDevice/schema.json
+  spec.source.commit: c6d53698a521b415318a5b67905a91c6e70c307e
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.GreenEnergy/master/context.jsonld"],
+    "MaximumSystemVoltage": {"type": "Property", "value": 1000}, "NominalPower": {"type":
+    "Property", "value": 270}, "address": {"type": "Property", "value": {"addressCountry":
+    "FR", "addressLocality": "Nice", "streetAddress": "Airport - Terminal 2 - Roof
+    2 - Local  12"}}, "alternateName": {"type": "Property", "value": "AirPort \u2013
+    global Observation"}, "application": {"type": "Property", "value": ["electric"]},
+    "applicationClass": {"type": "Property", "value": ["A"]}, "areaServed": {"type":
+    "Property", "value": "Nice Aeroport"}, "arealWeight": {"type": "Property", "value":
+    32}, "brandName": {"type": "Property", "value": "Canadian Solar"}, "cellDimension":
+    {"type": "Property", "value": {"length": 16.0, "thickness": 2.3, "width": 9.0}},
+    "cellOperatingTemperature": {"type": "Property", "value": {"max": 2, "min": 45}},
+    "cellType": {"type": "Property", "value": ["polycrystalline"]}, "dateLastReported":
+    {"type": "Property", "value": {"type": "DateTime", "value": "2020-05-17T09:47:00Z"}},
+    "description": {"type": "Property", "value": "Photo-voltaic Device description"},
+    "documentation": {"type": "Property", "value": "https://www.myDevicePV.Cn"}, "fireClass":
+    {"type": "Property", "value": ["C"]}, "id": "urn:ngsi-ld:PhotovoltaicDevice:PhotovoltaicDevice:MNCA-PV-T2-R-012",
+    "installationCondition": {"type": "Property", "value": ["extremeHeat", "extremeCold",
+    "extremeClimate", "desert"]}, "installationMode": {"type": "Property", "value":
+    ["roofing"]}, "integrationMode": {"type": "Property", "value": "IAB"}, "location":
+    {"type": "GeoProperty", "value": {"coordinates": [43.66481, 7.196545], "type":
+    "Point"}}, "manufacturerName": {"type": "Property", "value": "Canadian Solar EMEA
+    GmbH,"}, "maxPressureLoad": {"type": "Property", "value": {"hail": 2500, "snow":
+    5400, "wind": 2400}}, "modelName": {"type": "Property", "value": "CS6P-270P"},
+    "moduleDimension": {"type": "Property", "value": {"length": 1600, "thickness":
+    3.75, "width": 975}}, "moduleNOCT": {"type": "Property", "value": {"Impp": 6.97,
+    "Isc": 7.55, "Pmax": 196, "Umpp": 28.1, "Uoc": 34.8}}, "moduleNbCells": {"type":
+    "Property", "value": 60}, "moduleSTC": {"type": "Property", "value": {"Impp":
+    8.75, "Isc": 9.32, "Pmax": 270, "Umpp": 30.8, "Uoc": 37.9}}, "moduleYieldRate":
+    {"type": "Property", "value": 16.79}, "nTCClass": {"type": "Property", "value":
+    88.3}, "name": {"type": "Property", "value": "DEVICE-PV-T2-R-012"}, "owners":
+    {"type": "Property", "value": ["Airport-Division Maintenance"]}, "pTCClass": {"type":
+    "Property", "value": 92.1}, "panelDimension": {"type": "Property", "value": {"length":
+    1638, "thickness": 40, "width": 982}}, "panelLifetime": {"type": "Property", "value":
+    30}, "panelNbModules": {"type": "Property", "value": 1}, "panelOperatingTemperature":
+    {"type": "Property", "value": {"max": 85, "min": -40}}, "panelTiltReference":
+    {"type": "Property", "value": {"max": 37, "min": 28}}, "panelWeight": {"type":
+    "Property", "value": 18}, "panelYieldCurve": {"type": "Property", "value": ["95.0",
+    "92.5", "90.0", "87.5", "85.0", "80.0"]}, "panelYieldRate": {"type": "Property",
+    "value": 0.5}, "performanceLowIrradiance": {"type": "Property", "value": 96.5},
+    "possibilityOfUsed": {"type": "Property", "value": "stationary"}, "protectionIP":
+    {"type": "Property", "value": "IP67"}, "refDevice": {"type": "Relationship", "value":
+    "urn:ngsi-ld:Device:PV-T2-R-012"}, "serialNumber": {"type": "Property", "value":
+    ["CSPV270P-SN1804L6J34Z8742H", "CSPV270P-SN1804L6J34Z8743H", "CSPV270P-SN1804L6J34Z8744H",
+    "CSPV270P-SN1804L6J34Z8745H", "CSPV270P-SN1804L6J34Z8746H"]}, "temperatureCoefficient":
+    {"type": "Property", "value": {"Isc": 0.053, "Pmax": -0.41, "Uoc": -0.31}}, "type":
+    "PhotovoltaicDevice"}'
+classes:
+  PhotovoltaicDevice:
+    class_uri: https://smartdatamodels.org/dataModel.GreenEnergy/PhotovoltaicDevice
+    description: 'The Data Model is intended to describe the mechanical, electrical
+      and thermal characteristics of photo-voltaic panels according to *STC - Standard
+      Test Condition* and *NOCT - Normal Operating Cell Temperature*. *Remark* : This
+      Data Model can be used directly as a main entity to describe the `Photovoltaic
+      Device`  or as a sub-entity of the Data Model  `DEVICE` using a reference by
+      the `refDevice` attribute. The measures performed for STC and NOCT are `Pmax`
+      (Maximum Nominal Power), `Umpp` (Optimal operating voltage), `Impp` (Optimal
+      Operating Current), `Uoc` (Open Circuit Voltage), `Isc` (Short Circuit Current).
+      *Additional Information about Data Model:* This Data Model can be used directly
+      as a main entity to describe the device [PHOTOVOLTAIC] or as a sub-entity of
+      the Data Model [DEVICE] using a reference by the `refDevice` attribute.'
+    is_a: Entity
+    slots:
+    - MaxPressureLoad
+    - MaximumSystemVoltage
+    - NominalPower
+    - PanelNbModules
+    - address
+    - alternateName
+    - application
+    - applicationClass
+    - areaServed
+    - areaWeight
+    - brandName
+    - cellDimension
+    - cellOperatingTemperature
+    - cellType
+    - dataProvider
+    - dateCreated
+    - dateLastReported
+    - dateModified
+    - description
+    - documentation
+    - fireClass
+    - installationCondition
+    - installationMode
+    - manufacturerName
+    - modelName
+    - moduleDimension
+    - moduleNOCT
+    - moduleNbCells
+    - moduleSTC
+    - moduleYieldRate
+    - nTCClass
+    - name
+    - owner
+    - pTCClass
+    - panelDimension
+    - panelLifetime
+    - panelOperatingTemperature
+    - panelWeight
+    - panelYieldCurve
+    - performanceLowIrradiance
+    - possibilityOfUse
+    - protectionIP
+    - refDevice
+    - refPointOfInterest
+    - seeAlso
+    - serialNumber
+    - source
+    - temperatureCoefficient
+    - typeOfUse
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+  CellDimension:
+    description: Property. External dimension of a cell. The format is structured
+      by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **MMT** represents Millimeter
+    attributes:
+      length:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      width:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      thickness:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+  ModuleDimension:
+    description: Property.  External dimension of a module. A module can be an assembly
+      of 1 to n cells. The format is structured by a sub-property of 3 items. The
+      unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **MMT** represents Millimeter. Units:'Millimeters'
+    attributes:
+      length:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      width:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      thickness:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+  PanelDimension:
+    description: Property. External dimension of a Panel. A solar panel can be an
+      assembly of 1 to n modules, which themselves are made of several cells which
+      collect heat from the sun's rays. The format is structured by a sub-property
+      of 3 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **MMT** represents Millimeter
+    attributes:
+      length:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      width:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      thickness:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+  MaxPressureLoad:
+    description: Property. aximum mechanics Pressure (shear, elasticity, compression)
+      load on a Panel. The format is structured by a sub-property of 3 items. The
+      unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **PAL** represents Pascal. Model:'https://schema.org/Number'.
+      Units:'Pascal'
+    attributes:
+      hail:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      snow:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      wind:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+  ModuleSTC:
+    description: Property. Standard Test Condition measurements. The format is structured
+      by a sub-property of 5 items. Pmax in Watt. Umpp in Volt. Impp in Ampere. Uoc
+      in Volt. Isc in Ampere. Model:'https://schema.org/StructuredValue'
+    attributes:
+      Pmax:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      Umpp:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      Impp:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      Uoc:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      Isc:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+  ModuleNOCT:
+    description: Property. Normal Operating Cell Temperature measurements. The format
+      is structured by a sub-property of 5 items. Pmax in Watt. Umpp in Volt. Impp
+      in Ampere. Uoc in Volt. Isc in Ampere. Model:'https://schema.org/StructuredValue'
+    attributes:
+      Pmax:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      Umpp:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      Impp:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      Uoc:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      Isc:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+  PanelOperatingTemperature:
+    description: Property. Ambient operating temperature range. This is the minimum
+      and maximum resistance to cold and heat for using the panel. The format is structured
+      by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **CEL** represents Degree Celsius. Units:'Degree Celsius'. Model:'https://schema.org/StructuredValue'
+    attributes:
+      min:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      max:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+  CellOperatingTemperature:
+    description: Property. This is the nominal operating temperature range of the
+      cells in which it collects solar energy. The format is structured by a sub-property
+      of 2 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **CEL** represents Degree Celsius. Model:'https://schema.org/StructuredValue'.
+      Units:'Degree Celsius'
+    attributes:
+      min:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      max:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+  TemperatureCoefficient:
+    description: Property.  Temperature influence coefficient on the panel. The format
+      is structured by a sub-property of 3 items. Model:'https://schema.org/StructuredValue'.
+      Pmax in Watt. Uoc in Volt. Isc in Ampere
+    attributes:
+      Pmax:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      Uoc:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      Isc:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/areaServed
+  refDevice:
+    description: Property. Reference to the Main Entity [Device](https://github.com/smart-data-models/dataModel.Device/blob/master/Device/doc/spec.md)
+      if used as second link. Model:'https://schema.org/URL'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/refDevice
+  refPointOfInterest:
+    description: Relationship. Model:'https://schema.org/URL'. Reference to a [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)
+      linked with the Repository
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/refPointOfInterest
+  dateLastReported:
+    description: Property. Model:'https://schema.org/DateTime'. A timestamps which
+      denotes the last time when the device successfully reported data. Date and time
+      in an ISO8601 UTCformat
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/dateLastReported
+  brandName:
+    description: Property. Brand Name of the item. Model:'https://schema.org/brand'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/brandName
+  modelName:
+    description: Property. Model Name of the item. Model:'https://schema.org/model'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/modelName
+  manufacturerName:
+    description: Property. Manufacturer Name of the item. Model:'https://schema.org/manufacturer'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/manufacturerName
+  serialNumber:
+    description: Property. List of serial numbers of Photo-voltaic device supplied
+      by the manufacturer and assembled in operating mode on a single location. Model:'https://schema.org/serialNumber'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/serialNumber
+  application:
+    description: Property. Target application regarding the Type of Solar panel (In
+      our case `electric`). A unique value. https://schema.org/Text. Enum:'electric,
+      thermal, other'
+    range: application_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/application
+  cellType:
+    description: Property. Type of cells used to built the photo-voltaic unit. 2 kinds
+      of Technologies *`Cristalline`* or  *`Thin layers`*. A unique value. Model:'https://schema.org/Text'.
+      Enum:'amorphousSilicon, CfTe, CIS, monocrystalline, polycrystalline, other'
+    range: cellType_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/cellType
+  typeOfUse:
+    description: Property. Accepted use regarding its positioning in an indoor / outdoor
+      environment. A unique value. Model:'https://schema.org/Text'. Enum:'indoor,
+      outdoor, mixed, other'
+    range: typeOfUse_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/typeOfUse
+  installationMode:
+    description: Property. Positioning of the device in relation to a ground reference
+      system. A unique value. Model:'https://schema.org/Text'. Enum:'ground, other,
+      pole, roofing, wall'
+    range: installationMode_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/installationMode
+  installationCondition:
+    description: Property. Condition and possibility of use in the following environments.
+      A combination. Model:'https://schema.org/Text'. Enum:'desert, dust, extremeHeat,
+      extremeCold, extremeClimate, extremeHumidity, marine, none, other, saline, sand,
+      seismic'
+    range: installationCondition_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/installationCondition
+  possibilityOfUse:
+    description: Property. Possibility of use. A unique value. Model:'https://schema.org/Text'.
+      Enum:'mixed, mobile, other, stationary'
+    range: possibilityOfUse_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/possibilityOfUse
+  documentation:
+    description: Property. Technical Documentation (Installation / maintenance / used).
+      Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/documentation
+  cellDimension:
+    description: Property. External dimension of a cell. The format is structured
+      by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **MMT** represents Millimeter
+    range: CellDimension
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/cellDimension
+  moduleNbCells:
+    description: Property. Number of 'cells' per 'module'. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/moduleNbCells
+  moduleDimension:
+    description: Property.  External dimension of a module. A module can be an assembly
+      of 1 to n cells. The format is structured by a sub-property of 3 items. The
+      unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **MMT** represents Millimeter. Units:'Millimeters'
+    range: ModuleDimension
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/moduleDimension
+  PanelNbModules:
+    description: Property. Number of 'Modules' per 'Panel'. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/PanelNbModules
+  panelDimension:
+    description: Property. External dimension of a Panel. A solar panel can be an
+      assembly of 1 to n modules, which themselves are made of several cells which
+      collect heat from the sun's rays. The format is structured by a sub-property
+      of 3 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **MMT** represents Millimeter
+    range: PanelDimension
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/panelDimension
+  panelWeight:
+    description: Property. Weight of a panel (Sometime the reference used is Kg /
+      m²). The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **KGM** represents Kilogram. Model:'https://schema.org/Number'.
+      Units:'kilograms'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/panelWeight
+    unit:
+      ucum_code: kg
+      exact_mappings:
+      - ucefact:KGM
+      - qudt-unit:KiloGM
+      has_quantity_kind: qudt-quantkind:CO2Equivalent
+  areaWeight:
+    description: Property. Area Weight measured in Kg/m². The unit code (text) is
+      given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **28** represents Kilogram per square meter. Model:'https://schema.org/Number'.
+      Units:'kilograms per square meter'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/areaWeight
+  MaxPressureLoad:
+    description: Property. aximum mechanics Pressure (shear, elasticity, compression)
+      load on a Panel. The format is structured by a sub-property of 3 items. The
+      unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **PAL** represents Pascal. Model:'https://schema.org/Number'.
+      Units:'Pascal'
+    range: MaxPressureLoad
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/MaxPressureLoad
+  NominalPower:
+    description: Property. Nominal Power for the **panel**. This is the same value
+      of items [Pmax] for [moduleSTC] attribute. The unit code (text) is given using
+      the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **WTT** represents Watt. Model:'https://schema.org/Number'. Units:'watts'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/NominalPower
+    unit:
+      ucum_code: W
+      exact_mappings:
+      - ucefact:WTT
+      - qudt-unit:W
+      has_quantity_kind: qudt-quantkind:Power
+  MaximumSystemVoltage:
+    description: Property. Maximum system voltage permitted for the **module**. The
+      unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **VLT** represents Volt. Model:'https://schema.org/Number'. Units:'Volt'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/MaximumSystemVoltage
+  applicationClass:
+    description: Property. Evaluation of the potential hazards associated with the
+      module. A unique value. Model:'https://schema.org/Text'. Enum:'A, B, C'
+    range: applicationClass_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/applicationClass
+  fireClass:
+    description: Property. Evaluation to the fire (IEC 61730). A unique value. Model:'https://schema.org/Text'.
+      Enum:'A, B, C'
+    range: fireClass_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/fireClass
+  protectionIP:
+    description: 'Property. IP ''Ingress Protection'' for the Junction Box. This is
+      the level classifies and rates the degree of protection provided by mechanical
+      casings and electrical enclosures against intrusion, dust, accidental contact,
+      and water according to International Electrotechnical Commission standard (EN
+      60-529). First digit: Solid particle protection (Single numeral: 0–6 or ''X'').
+      Second digit: Liquid ingress protection (Single numeral: 0–9 or ''X'' ).Third
+      digit: Personal Protection  against access to dangerous parts (optional additional
+      letter). Fourth digit: Other protections (optional additional letter). Model:''https://schema.org/Text'''
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/protectionIP
+  pTCClass:
+    description: Property.  The Positive Temperature Coefficient of resistance - *PTC*,
+      describes the relative change of a physical property that is associated with
+      a given change in positive temperature. The unit code (text) is given using
+      the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **P1** represents Percent
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/pTCClass
+  nTCClass:
+    description: Property. The Negative Temperature Coefficient of resistance - *NTC*,
+      describes the relative change of a physical property that is associated with
+      a given change in negative temperature. The unit code (text) is given using
+      the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **P1** represents Percent. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/nTCClass
+  moduleSTC:
+    description: Property. Standard Test Condition measurements. The format is structured
+      by a sub-property of 5 items. Pmax in Watt. Umpp in Volt. Impp in Ampere. Uoc
+      in Volt. Isc in Ampere. Model:'https://schema.org/StructuredValue'
+    range: ModuleSTC
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/moduleSTC
+  moduleNOCT:
+    description: Property. Normal Operating Cell Temperature measurements. The format
+      is structured by a sub-property of 5 items. Pmax in Watt. Umpp in Volt. Impp
+      in Ampere. Uoc in Volt. Isc in Ampere. Model:'https://schema.org/StructuredValue'
+    range: ModuleNOCT
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/moduleNOCT
+  moduleYieldRate:
+    description: Property. Positioning of the device in relation to a ground reference
+      system. A unique value. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/moduleYieldRate
+  panelOperatingTemperature:
+    description: Property. Ambient operating temperature range. This is the minimum
+      and maximum resistance to cold and heat for using the panel. The format is structured
+      by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **CEL** represents Degree Celsius. Units:'Degree Celsius'. Model:'https://schema.org/StructuredValue'
+    range: PanelOperatingTemperature
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/panelOperatingTemperature
+  cellOperatingTemperature:
+    description: Property. This is the nominal operating temperature range of the
+      cells in which it collects solar energy. The format is structured by a sub-property
+      of 2 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **CEL** represents Degree Celsius. Model:'https://schema.org/StructuredValue'.
+      Units:'Degree Celsius'
+    range: CellOperatingTemperature
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/cellOperatingTemperature
+  temperatureCoefficient:
+    description: Property.  Temperature influence coefficient on the panel. The format
+      is structured by a sub-property of 3 items. Model:'https://schema.org/StructuredValue'.
+      Pmax in Watt. Uoc in Volt. Isc in Ampere
+    range: TemperatureCoefficient
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/temperatureCoefficient
+  performanceLowIrradiance:
+    description: Property. Average relative yield to Performance at Low Irradiance.
+      The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **P1** represents Percent. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/performanceLowIrradiance
+  panelLifetime:
+    description: Property. Average lifetime of a panel. The unit code (text) is given
+      using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **ANN** represents Year. Model:'https://schema.org/Number'. Units:'year'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/panelLifetime
+  panelYieldCurve:
+    description: 'Property. Option 1. Energy production yield curve of the panel from
+      its [NominalPower] at [T0] and along its [panelLifetime]. The Measurements provided
+      in the list are a sequence of Energy Production Capacity represented in Percent
+      starting at 5 years with a ''Step'' of 5 years according to the information
+      provided by the manufacturer. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **P1** represents Percent. '
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/panelYieldCurve
+enums:
+  application_options:
+    name: application_options
+    permissible_values:
+      electric:
+        text: electric
+      thermal:
+        text: thermal
+      other:
+        text: other
+  cellType_options:
+    name: cellType_options
+    permissible_values:
+      amorphousSilicon:
+        text: amorphousSilicon
+      CfTe:
+        text: CfTe
+      CIS:
+        text: CIS
+      monocrystalline:
+        text: monocrystalline
+      polycrystalline:
+        text: polycrystalline
+      other:
+        text: other
+  typeOfUse_options:
+    name: typeOfUse_options
+    permissible_values:
+      indoor:
+        text: indoor
+      outdoor:
+        text: outdoor
+      mixed:
+        text: mixed
+      other:
+        text: other
+  installationMode_options:
+    name: installationMode_options
+    permissible_values:
+      ground:
+        text: ground
+      other:
+        text: other
+      pole:
+        text: pole
+      roofing:
+        text: roofing
+      wall:
+        text: wall
+  installationCondition_options:
+    name: installationCondition_options
+    permissible_values:
+      desert:
+        text: desert
+      dust:
+        text: dust
+      extremeHeat:
+        text: extremeHeat
+      extremeCold:
+        text: extremeCold
+      extremeClimate:
+        text: extremeClimate
+      extremeHumidity:
+        text: extremeHumidity
+      marine:
+        text: marine
+      none:
+        text: none
+      other:
+        text: other
+      saline:
+        text: saline
+      sand:
+        text: sand
+      seismic:
+        text: seismic
+  possibilityOfUse_options:
+    name: possibilityOfUse_options
+    permissible_values:
+      mixed:
+        text: mixed
+      mobile:
+        text: mobile
+      other:
+        text: other
+      stationary:
+        text: stationary
+  applicationClass_options:
+    name: applicationClass_options
+    permissible_values:
+      A:
+        text: A
+      B:
+        text: B
+      C:
+        text: C
+  fireClass_options:
+    name: fireClass_options
+    permissible_values:
+      A:
+        text: A
+      B:
+        text: B
+      C:
+        text: C

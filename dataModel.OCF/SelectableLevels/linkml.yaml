@@ -1,0 +1,249 @@
+id: https://github.com/smart-data-models/dataModel.OCF/SelectableLevels
+name: SelectableLevels
+title: Selectable Levels
+description: Smart Data Models Program adaptation of the original IoTData data Models.
+  This Resource provides a set of device defined levels that can be selected for an
+  operation. For example where a humidifier has a discrete set that model different
+  humidity levels that can be set. The Property 'availablelevels' is an array of the
+  levels that can be selected, these can be a number or an integer (as subset of integer).
+  The Property 'targetlevel' is the level that has currently been selected and is
+  written to in order to select a new level. When retrieved the targetlevel provides
+  the actual value that has been selected.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: SelectableLevels/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Industry product
+    anot", "addressLocality": "Sch", "addressRegion": "Organization recognize civil.
+    Pm her then nothing increase.", "district": "Full per among clearly. Face house
+    nature fall long dream answer conference. Rock few structure fed", "postOfficeBoxNumber":
+    "Son break either pre", "postalCode": "First degree response able s", "streetAddress":
+    "Likely improve notice. T", "streetNr": "Water voice travel among see red. Republican
+    total policy head Mrs debate onto. Catch even front."}}, "alternateName": {"type":
+    "Property", "value": "Theory type su"}, "areaServed": {"type": "Property", "value":
+    "Buy break marriage also friend reach. Turn phone heart window. Assume be seek
+    article."}, "availablelevels": {"type": "Property", "value": [802.4, 258.2]},
+    "dataProvider": {"type": "Property", "value": "Own available buy country store
+    build before. Already against which continue. Look road article quickly."}, "dateCreated":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2007-08-08T01:12:34Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2002-06-18T03:24:51Z"}}, "description": {"type": "Property", "value": "Every
+    manage political record word group food break. Picture suddenly drug rule brin"},
+    "id": "urn:ngsi-ld:SelectableLevels:id:KTUG:11578156", "if": {"type": "Property",
+    "value": ["oic.if.baseline", "oic.if.a"]}, "location": {"type": "GeoProperty",
+    "value": {"coordinates": [28.732768, 177.344405], "type": "Point"}}, "name": {"type":
+    "Property", "value": "Board necessary religious natural sport music white. Natural
+    explain before something first drug "}, "owner": {"type": "Property", "value":
+    ["urn:ngsi-ld:SelectableLevels:items:UJLN:86914131", "urn:ngsi-ld:SelectableLevels:items:GILX:20870916"]},
+    "rt": {"type": "Property", "value": ["oic.r.selectablelevels"]}, "seeAlso": {"type":
+    "Property", "value": ["urn:ngsi-ld:SelectableLevels:items:QIDT:79230225"]}, "source":
+    {"type": "Property", "value": "Employee source nature add rest human station.
+    Ability"}, "targetlevel": {"type": "Property", "value": 503.7}, "type": "SelectableLevels"}'
+classes:
+  SelectableLevels:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/SelectableLevels
+    description: Smart Data Models Program adaptation of the original IoTData data
+      Models. This Resource provides a set of device defined levels that can be selected
+      for an operation. For example where a humidifier has a discrete set that model
+      different humidity levels that can be set. The Property 'availablelevels' is
+      an array of the levels that can be selected, these can be a number or an integer
+      (as subset of integer). The Property 'targetlevel' is the level that has currently
+      been selected and is written to in order to select a new level. When retrieved
+      the targetlevel provides the actual value that has been selected.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - availablelevels
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - if
+    - name
+    - owner
+    - rt
+    - seeAlso
+    - source
+    - targetlevel
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. The Resource Type.
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  targetlevel:
+    description: Property. The target level from the available selectable set.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/targetlevel
+  availablelevels:
+    description: Property. The set of levels to select from.
+    range: float
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/availablelevels
+  if:
+    description: Property. The OCF Interface set supported by this Resource.
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.selectablelevels:
+        text: oic.r.selectablelevels
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.a:
+        text: oic.if.a
+      oic.if.baseline:
+        text: oic.if.baseline

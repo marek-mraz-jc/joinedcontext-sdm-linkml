@@ -1,0 +1,395 @@
+id: https://github.com/smart-data-models/dataModel.AAS/I4SubmodelElementOperation
+name: I4SubmodelElementOperation
+title: Smart Data Models - RAMI4.0 Asset Administration Shell -AAS- Generic Submodel
+  Element Operation schema
+description: Based on IDTA-01001-3-0, describes a generic RAMI4.0 SubmodelElement
+  representing an OPERATION (Command) of a referenced Asset Administration Shell
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.AAS
+  spec.source.path: I4SubmodelElementOperation/schema.json
+  spec.source.commit: b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"category": {"type": "Property", "value": "CONSTANT"}, "descriptions":
+    {"type": "Property", "value": [{"language": "en", "text": "Request the AGV to
+    drop a load"}]}, "hasDataSpecification": {"type": "Property", "value": "None"},
+    "id": "urn:ngsi-v2:RAMI40:I4SubmodelElementOperation:OperationalCapability:drop:AGV1",
+    "idShort": {"type": "Property", "value": "drop"}, "inoutputVariable": {"type":
+    "Property", "value": []}, "inputVariable": {"type": "Property", "value": [{"idShort":
+    "loadType", "value": "EURO"}, {"idShort": "loadId", "value": "1"}, {"idShort":
+    "height", "value": "0"}, {"idShort": "depth", "value": "0"}, {"idShort": "side",
+    "value": "0"}]}, "kind": {"type": "Property", "value": "Instance"}, "modelType":
+    {"type": "Property", "value": {"name": "Operation"}}, "operationResult": {"type":
+    "Property", "value": {}}, "outputVariable": {"type": "Property", "value": [{"idShort":
+    "CommandStatus", "value": ""}]}, "refI4AASId": {"type": "Property", "value": "urn:ngsi-v2:RAMI40:I4AAS:AGV:AGV1"},
+    "refI4AssetId": {"type": "Property", "value": "urn:ngsi-v2:RAMI40:I4Asset:AGV:AGV1"},
+    "refI4SubmodelId": {"type": "Property", "value": "urn:ngsi-v2:RAMI40:I4Submodel:OperationalCapability:AGV1"},
+    "requestId": {"type": "Property", "value": "3b85ce8a-e8dd-4918-b327-c049e7b3d127"},
+    "semanticId": {"type": "Property", "value": {"keys": []}}, "timeout": {"type":
+    "Property", "value": 0}, "type": "I4SubmodelElementOperation", "valueId": {"type":
+    "Property", "value": "unused"}}'
+classes:
+  I4SubmodelElementOperation:
+    class_uri: https://smartdatamodels.org/dataModel.AAS/I4SubmodelElementOperation
+    description: Based on IDTA-01001-3-0, describes a generic RAMI4.0 SubmodelElement
+      representing an OPERATION (Command) of a referenced Asset Administration Shell
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - category
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - descriptions
+    - executionState
+    - hasDataSpecification
+    - idShort
+    - inoutputVariable
+    - inputVariable
+    - kind
+    - modelType
+    - name
+    - operationResult
+    - outputVariable
+    - owner
+    - refI4AASId
+    - refI4AssetId
+    - refI4SubmodelId
+    - requestId
+    - seeAlso
+    - semanticId
+    - source
+    - timeout
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+  ModelType:
+    description: Property. For the distinction of 'type' and 'instance', the term
+      'kind' is used
+    attributes:
+      name:
+        description: Property. Property of the item. Usually -Operation- is set for
+          this type
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+  SemanticId:
+    description: Property. It refers to an external information source, which explains
+      the formulation of the submodel element
+    attributes:
+      keys:
+        description: Property. Keys for the semantic id
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+  OperationResult:
+    description: Property. Contains The operation invocation result object with the
+      returned result of an operation invocation
+    attributes:
+      success:
+        description: Property. Success true if operation succeed. False if not
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+      isException:
+        description: Property. True if it is an exception
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+      entity:
+        description: Property. Set of properties linked to the operation results
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+      entityType:
+        description: Property. Entity type description/reference
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+      messages:
+        description: Property. Additional message containing information for the requester
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/areaServed
+  refI4AssetId:
+    description: Relationship. References the root Asset which this SubmodelElement
+      belongs to
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/dataModel.AAS/refI4AssetId
+  refI4AASId:
+    description: Relationship. References the root Asset Administration Shell which
+      this SubmodelElement belongs to
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/dataModel.AAS/refI4AASId
+  refI4SubmodelId:
+    description: Relationship. References the root Submodel which this SubmodelElement
+      belongs to
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/dataModel.AAS/refI4SubmodelId
+  hasDataSpecification:
+    description: Property. Element that can be extended by using data specification
+      templates. A data specification template defines a named set of additional attributes
+      an element may or shall have. RAMI4.0 specification
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/dataModel.AAS/hasDataSpecification
+  idShort:
+    description: Property. short id is the (short) name of the SubmodelElement within
+      RAMI40 environment
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/dataModel.AAS/idShort
+  category:
+    description: Property. The category is a value that gives further meta information
+      w.r.t. to the class of the element
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/dataModel.AAS/category
+  modelType:
+    description: Property. For the distinction of 'type' and 'instance', the term
+      'kind' is used
+    range: ModelType
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/dataModel.AAS/modelType
+  descriptions:
+    description: Property. For adding detailed knowledge about the Element in different
+      languages
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/dataModel.AAS/descriptions
+  semanticId:
+    description: Property. It refers to an external information source, which explains
+      the formulation of the submodel element
+    range: SemanticId
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/dataModel.AAS/semanticId
+  kind:
+    description: Property. For the distinction of 'type' and 'instance', the term
+      'kind' is used
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/dataModel.AAS/kind
+  requestId:
+    description: Property. Client request ID sent -for INPUT- and/or the retrieved
+      value/status -for OUTPUT-. Used to TRACK the operations
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/dataModel.AAS/requestId
+  timeout:
+    description: Property. Represents the timeout value for this command reported
+      by the OPC-UA server
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://uri.etsi.org/ngsi-ld/timeout
+  inputVariable:
+    description: Property. Array with input parameters of the operation
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/dataModel.AAS/inputVariable
+  outputVariable:
+    description: Property. Array with Output parameters of the operation
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/dataModel.AAS/outputVariable
+  inoutputVariable:
+    description: Property. Array with parameters that are input and output of the
+      operation
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/dataModel.AAS/inoutputVariable
+  operationResult:
+    description: Property. Contains The operation invocation result object with the
+      returned result of an operation invocation
+    range: OperationResult
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/dataModel.AAS/operationResult
+  executionState:
+    description: Property. The operation invocation result state
+    range: executionState_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AAS@b0b153d0ed07b0b10ec461f4ecfd52f9d684869c
+    slot_uri: https://smartdatamodels.org/dataModel.AAS/executionState
+enums:
+  executionState_options:
+    name: executionState_options
+    permissible_values:
+      canceled:
+        text: canceled
+      completed:
+        text: completed
+      failed:
+        text: failed
+      initiated:
+        text: initiated
+      running:
+        text: running
+      timeout:
+        text: timeout

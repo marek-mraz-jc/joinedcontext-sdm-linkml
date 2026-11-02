@@ -1,0 +1,235 @@
+id: https://github.com/smart-data-models/dataModel.VerifiableCredentials/Attestation
+name: Attestation
+title: EBSI Verifiable Attestation
+description: Schema of an EBSI Verifiable Attestation
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.VerifiableCredentials
+  spec.source.path: Attestation/schema.json
+  spec.source.commit: 6d7f230e04c68631174483adfc610bb4fab53ab0
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+classes:
+  Attestation:
+    class_uri: https://smartdatamodels.org/dataModel.VerifiableCredentials/Attestation
+    description: Schema of an EBSI Verifiable Attestation
+    is_a: Entity
+    slots:
+    - credentialSchema
+    - credentialStatus
+    - credentialSubject
+    - evidence
+    - expirationDate
+    - issuanceDate
+    - issued
+    - issuer
+    - proof
+    - validFrom
+    - validUntil
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+  CredentialSubject:
+    description: Property. Defines information about the subject that is described
+      by the Verifiable Attestation
+    attributes:
+      id:
+        description: Property. Defines the DID of the subject that is described by
+          the Verifiable Attestation
+        range: uriorcurie
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+  CredentialStatus:
+    description: Property. Contains information about how to verify the status of
+      the Verifiable Attestation (via the Revocation and Endorsement Registry, RER)
+    attributes:
+      id:
+        description: Property. References record in the Revocation and Endorsement
+          Registry (RER) to enable verification of a Verifiable Attestation’s validity
+        range: uriorcurie
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      type:
+        description: Property. Defines the Verifiable Credential status type
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      statusPurpose:
+        description: Property. Purpose of the status entry
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      statusListIndex:
+        description: Property. Integer expressed as a string. The zero based index
+          value identifies the bit position of the status
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      statusListCredential:
+        description: Property. URL referencing the StatusList2021Credential
+        range: uriorcurie
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+  CredentialSchema:
+    description: Property. Contains information about the credential schema (template)
+      on which the Verifiable Authorisation is based
+    attributes:
+      id:
+        description: Property. References the credential schema (template) stored
+          on the (relevant) Trusted Schemas Registry (TSR) on which the Verifiable
+          Authorisation is based
+        range: uriorcurie
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      type:
+        description: Property. Defines credential schema type
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+  Proof:
+    description: Property. Contains information about the proof
+    attributes:
+      type:
+        description: Property. Defines the proof type
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      proofPurpose:
+        description: Property. Defines the purpose of the proof
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      created:
+        description: Property. Defines the date and time, when the proof has been
+          created
+        range: datetime
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      verificationMethod:
+        description: Property. Contains information about the verification method
+          / proof mechanisms
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      jws:
+        description: Property. Defines the proof value in JWS format
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+slots:
+  issuer:
+    description: Property. Defines the issuer of the Verifiable Attestation
+    range: uriorcurie
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    slot_uri: https://smartdatamodels.org/dataModel.VerifiableCredentials/issuer
+  issuanceDate:
+    description: Property. Defines the date and time, when the Verifiable Attestation
+      becomes valid
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    slot_uri: https://smartdatamodels.org/dataModel.VerifiableCredentials/issuanceDate
+  issued:
+    description: Property. Defines when the Verifiable Attestation was issued
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    slot_uri: https://smartdatamodels.org/dataModel.VerifiableCredentials/issued
+  validFrom:
+    description: Property. Defines the date and time, when the Verifiable Attestation
+      becomes valid
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    slot_uri: https://smartdatamodels.org/validFrom
+  validUntil:
+    description: Property. Defines the date and time, when the Verifiable Attestation
+      expires
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    slot_uri: https://smartdatamodels.org/dataModel.VerifiableCredentials/validUntil
+  expirationDate:
+    description: Property. Defines the date and time, when the Verifiable Attestation
+      expires
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    slot_uri: https://smartdatamodels.org/dataModel.VerifiableCredentials/expirationDate
+  credentialSubject:
+    description: Property. Defines information about the subject that is described
+      by the Verifiable Attestation
+    range: CredentialSubject
+    required: true
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    slot_uri: https://smartdatamodels.org/dataModel.VerifiableCredentials/credentialSubject
+  credentialStatus:
+    description: Property. Contains information about how to verify the status of
+      the Verifiable Attestation (via the Revocation and Endorsement Registry, RER)
+    range: CredentialStatus
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    slot_uri: https://smartdatamodels.org/dataModel.VerifiableCredentials/credentialStatus
+  credentialSchema:
+    description: Property. Contains information about the credential schema (template)
+      on which the Verifiable Authorisation is based
+    range: CredentialSchema
+    required: true
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    slot_uri: https://smartdatamodels.org/dataModel.VerifiableCredentials/credentialSchema
+  evidence:
+    description: Property. Contains information about the process which resulted in
+      the issuance of the Verifiable Attestation
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    slot_uri: https://smartdatamodels.org/dataModel.VerifiableCredentials/evidence
+  proof:
+    description: Property. Contains information about the proof
+    range: Proof
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    slot_uri: https://smartdatamodels.org/dataModel.VerifiableCredentials/proof

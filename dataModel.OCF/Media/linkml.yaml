@@ -1,0 +1,255 @@
+id: https://github.com/smart-data-models/dataModel.OCF/Media
+name: Media
+title: Media
+description: 'Smart Data Models Program adaptation of the original IoTData data Models.
+  This Resource specifies the media types that an OCF Server supports. The resource
+  is an array of media elements.  Each element contains:     A URL at which the specified
+  media type can be accessed.     A string array containing the definition of the
+  media using SDP.     Each entry in the sdp array is an SDP line.     Each line shall
+  follow the SDP description syntax as defined in the SDP specification. The SDP specification
+  can be found at http://tools.ietf.org/html/rfc4566.'
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: Media/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Air job pull.", "addressLocality":
+    "Star key over. Floor parent here part tax everybody sometimes. Worry next concern
+    try receive almost.", "addressRegion": "Return ask prove within. Back budget manager
+    know their treat month. La", "district": "Society various view ", "postOfficeBoxNumber":
+    "Through wall include again. Yet manager of low.", "postalCode": "Red number kind
+    defense conference kitchen. Ok receive ago listen.", "streetAddress": "Music why
+    game however recently big. South half most three situation. Blood side without
+    policy case upon nearly imagine.", "streetNr": "At feeling oil purpose agent.
+    Most similar available mouth position. Approach significant plant already ten
+    receive employee yard."}}, "alternateName": {"type": "Property", "value": "Same
+    never character you bank thank capital. Tough point force blood."}, "areaServed":
+    {"type": "Property", "value": "Six political phone grow dream. Inside enjoy total
+    near appear market catch certainly."}, "dataProvider": {"type": "Property", "value":
+    "Stand good claim economy think remember. Arm water have consider Mrs."}, "dateCreated":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2021-04-11T05:34:39Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "1982-02-12T20:54:43Z"}}, "description": {"type": "Property", "value": "Point
+    woman open similar indicate available. National score thousand future discuss
+    create. Development woman authority sea tell."}, "id": "urn:ngsi-ld:Media:id:KMUP:25040035",
+    "if": {"type": "Property", "value": ["oic.if.baseline", "oic.if.s"]}, "location":
+    {"type": "GeoProperty", "value": {"coordinates": [-9.1899865, -8.895685], "type":
+    "Point"}}, "media": {"type": "Property", "value": [{"sdp": ["Half item our nor
+    past. Success soldier reveal surface. Be by few ", "Billion box set song production
+    hard those dinner. Prove end author plan unit finally."], "url": "History couple
+    Republican us right perhaps none. Last position concern. Either along me bit loss."},
+    {"sdp": ["Authorit", "Continue figure project quickly church."], "url": "Thank
+    quickly education only rate usually hot. Door century range drug bank myself.
+    Customer must interesting build pick collection."}]}, "n": {"type": "Property",
+    "value": "Value impro"}, "name": {"type": "Property", "value": "Science treat
+    support arm identify t"}, "owner": {"type": "Property", "value": ["urn:ngsi-ld:Media:items:ZEFZ:21408276",
+    "urn:ngsi-ld:Media:items:OOXY:12879420"]}, "rt": {"type": "Property", "value":
+    ["oic.r.media"]}, "seeAlso": {"type": "Property", "value": ["urn:ngsi-ld:Media:items:CBWT:71662128"]},
+    "source": {"type": "Property", "value": "Shoulder bad yet five. Character church
+    certainly activity fire."}, "type": "Media"}'
+classes:
+  Media:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/Media
+    description: 'Smart Data Models Program adaptation of the original IoTData data
+      Models. This Resource specifies the media types that an OCF Server supports.
+      The resource is an array of media elements.  Each element contains:     A URL
+      at which the specified media type can be accessed.     A string array containing
+      the definition of the media using SDP.     Each entry in the sdp array is an
+      SDP line.     Each line shall follow the SDP description syntax as defined in
+      the SDP specification. The SDP specification can be found at http://tools.ietf.org/html/rfc4566.'
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - if
+    - media
+    - n
+    - name
+    - owner
+    - rt
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. The Resource Type.
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  media:
+    description: Property. No original description was available
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/media
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  if:
+    description: Property. The OCF Interface set supported by this Resource.
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.media:
+        text: oic.r.media
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.a:
+        text: oic.if.a
+      oic.if.s:
+        text: oic.if.s
+      oic.if.baseline:
+        text: oic.if.baseline

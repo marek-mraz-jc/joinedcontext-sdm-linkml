@@ -1,0 +1,296 @@
+id: https://github.com/smart-data-models/dataModel.OCF/BodySoftLeanMass
+name: BodySoftLeanMass
+title: Smart Data models - BodySoftLeanMass schema derived from the open connectivity
+  foundation repository https://github.com/openconnectivityfoundation/IoTDataModels
+description: This Resource describes the Properties associated with a person's body
+  soft lean mass.The unit is a single value that is one of kg, lb or percent.If the
+  unit Property is missing the default is kilograms [kg].The slm and unit Properties
+  are read-only values that are provided by the Server.When range is omitted the default
+  is 0 to +MAXFLOAT.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: BodySoftLeanMass/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Door control different
+    general subject situation recently. Hear where during trip matter.", "addressLocality":
+    "Able this happen positive dark. Cut laugh cold blood seat. Expert sea spend magazine
+    necessary when travel evening.", "addressRegion": "Three join late health far
+    save government born. Woman today conf", "district": "Look travel material. High
+    floor machine race foot. Receive small wall crime.", "postOfficeBoxNumber": "Really
+    physical move how onto fine to. Could hotel reach raise color property probably
+    not. Field condition second leader.", "postalCode": "Record right reflect. Trouble
+    move meeting.", "streetAddress": "Action whether hea", "streetNr": "Positive to
+    guess news. Quality run skill subject class."}}, "alternateName": {"type": "Property",
+    "value": "Again walk civil cost for. Out still all figure want specific. Debate
+    finally tough check. Up gas cut."}, "areaServed": {"type": "Property", "value":
+    "Property of side leader quickly government. Pl"}, "dataProvider": {"type": "Property",
+    "value": "Me pretty stay protect participant fight. Art recognize finally key
+    "}, "dateCreated": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "1982-09-12T09:16:04Z"}}, "dateModified": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "1997-02-13T17:35:45Z"}}, "description": {"type": "Property",
+    "value": "Weight themselves"}, "id": "urn:ngsi-ld:BodySoftLeanMass:id:XDMZ:15679729",
+    "if": {"type": "Property", "value": ["oic.if.s"]}, "location": {"type": "GeoProperty",
+    "value": {"coordinates": [-32.9838625, -13.350756], "type": "Point"}}, "n": {"type":
+    "Property", "value": "Design family wa"}, "name": {"type": "Property", "value":
+    "Structure thousand town create spring new. Position police practice chair region
+    phone city. Officer partner cell both parent."}, "owner": {"type": "Property",
+    "value": ["urn:ngsi-ld:BodySoftLeanMass:items:GMHN:56339615", "urn:ngsi-ld:BodySoftLeanMass:items:UVXV:74830962"]},
+    "precision": {"type": "Property", "value": 597.1}, "range": {"type": "Property",
+    "value": [906.5, 314.9]}, "rt": {"type": "Property", "value": ["oic.r.body.slm"]},
+    "seeAlso": {"type": "Property", "value": ["urn:ngsi-ld:BodySoftLeanMass:items:NEJT:56397138"]},
+    "slm": {"type": "Property", "value": 342.3}, "source": {"type": "Property", "value":
+    "Strong newspaper dog institut"}, "step": {"type": "Property", "value": 109.9},
+    "type": "BodySoftLeanMass", "units": {"type": "Property", "value": "percent"}}'
+classes:
+  BodySoftLeanMass:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/BodySoftLeanMass
+    description: This Resource describes the Properties associated with a person's
+      body soft lean mass.The unit is a single value that is one of kg, lb or percent.If
+      the unit Property is missing the default is kilograms [kg].The slm and unit
+      Properties are read-only values that are provided by the Server.When range is
+      omitted the default is 0 to +MAXFLOAT.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - if
+    - n
+    - name
+    - owner
+    - precision
+    - range
+    - rt
+    - seeAlso
+    - slm
+    - source
+    - step
+    - units
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. Resource Type
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  slm:
+    description: Property. Body soft lean mass
+    range: float
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/slm
+  units:
+    description: Property. Body soft lean mass units
+    range: units_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/units
+  range:
+    description: Property. The valid range for the Property in the Resource as a number.
+      The first value in the array is the minimum value, the second value in the array
+      is the maximum value
+    range: float
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/range
+  step:
+    description: Property. Step value across the defined range an integer when the
+      range is a number.  This is the increment for valid values across the range;
+      so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/step
+  precision:
+    description: Property. When exposed the value in 'precision' provides a +/- tolerance
+      against the Properties in the Resource. Thus if a Property is UPDATED to a value
+      and that Property then RETRIEVED, the RETRIEVED value is valid if in the range
+      of the set value +/- precision
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/precision
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  if:
+    description: Property. The OCF Interface set supported by this Resource
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.body.slm:
+        text: oic.r.body.slm
+  units_options:
+    name: units_options
+    permissible_values:
+      kg:
+        text: kg
+      lb:
+        text: lb
+      percent:
+        text: percent
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.s:
+        text: oic.if.s
+      oic.if.baseline:
+        text: oic.if.baseline

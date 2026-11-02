@@ -1,0 +1,380 @@
+id: https://github.com/smart-data-models/dataModel.ZEB/DeviceForecast
+name: DeviceForecast
+title: Smart Data Models - DeviceForecast schema
+description: Information on DeviceForecast (Accuracy, controlled property, forecast
+  value, etc.).
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ZEB
+  spec.source.path: DeviceForecast/schema.json
+  spec.source.commit: 3a1526fd517f4fef0c40f280f3b618cac72e3d41
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smart-data-models.github.io/dataModel.ZEB/context.jsonld"],
+    "controlledProperty": {"type": "Property", "value": "temp"}, "dateIssued": {"type":
+    "Property", "value": {"@type": "string", "@value": "2020-07-20T17:17:00.621Z"}},
+    "dateRetrieved": {"type": "Property", "value": {"@type": "string", "@value": "2020-07-20T17:18:00.621Z"}},
+    "forecastValue": {"type": "Property", "value": 21.96636298861935}, "id": "urn:ngsi-ld:DeviceForecast:FSA0000000001",
+    "outliter": {"type": "Property", "value": "true"}, "refDevice": {"object": "urn:ngsi-ld:Device:FSA0000000001",
+    "type": "Relationship"}, "type": "DeviceForecast", "valueType": {"type": "Property",
+    "value": "normal"}}'
+classes:
+  DeviceForecast:
+    class_uri: https://smartdatamodels.org/dataModel.ZEB/DeviceForecast
+    description: Information on DeviceForecast (Accuracy, controlled property, forecast
+      value, etc.).
+    is_a: Entity
+    slots:
+    - accuracy
+    - address
+    - alternateName
+    - areaServed
+    - controlledProperty
+    - dataProvider
+    - dateCreated
+    - dateIssued
+    - dateModified
+    - dateRetrieved
+    - dateWeatherStart
+    - description
+    - forecastValue
+    - idWeather
+    - name
+    - outliter
+    - owner
+    - refDevice
+    - refSensor
+    - seeAlso
+    - simFrom
+    - simName
+    - simProcess
+    - simTo
+    - source
+    - valueType
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/areaServed
+  accuracy:
+    description: Property. Model:'https://schema.org/Number'. Accuracy of forecast
+      of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/accuracy
+  controlledProperty:
+    description: Property. Controlled Property. Enum:'powermeter, temp, humidity,
+      co2, radiation, windspeed, heatflow, solar, condensation, weight, pmv, weather,
+      beacon, zeacon, illuminance, brilliance, occupancy, mic, co, pollen, formaldehyde,
+      tvoc, radon, ozon, pm25, pm10, pressure'
+    range: controlledProperty_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/controlledProperty
+  dateIssued:
+    description: Property. Model:'http://schema.org/DateTime'. Date and time to run
+      the simulation of this item.
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/dateIssued
+  dateRetrieved:
+    description: Property. Model:'http://schema.org/DateTime'. Date and time to get
+      simulation results of this item.
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/dateRetrieved
+  dateWeatherStart:
+    description: Property. Model:'http://schema.org/DateTime'. Start date and time
+      of weather forecast data or weather log used for simulation of this item.
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/dateWeatherStart
+  forecastValue:
+    description: Property. Model:'https://schema.org/Number'. Forecast value of the
+      index.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/forecastValue
+  idWeather:
+    description: Property. ID of the weather station used for the forecast.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/idWeather
+  outliter:
+    description: Property. Flag whether the simulation was successful or not
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/outliter
+  refDevice:
+    description: Relationship. Reference to the device containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refDevice
+  refSensor:
+    description: Relationship. Reference to the device containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refSensor
+  simName:
+    description: Property. Name of the simulation process.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/simName
+  simProcess:
+    description: Property. Simulation process of this item.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/simProcess
+  simFrom:
+    description: Property. Model:'http://schema.org/DateTime'. Start date and time
+      of the simulation.
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/simFrom
+  simTo:
+    description: Property. Model:'http://schema.org/DateTime'. End date and time of
+      the simulation.
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/simTo
+  valueType:
+    description: Property. Value type. Enum:'eqInstantIn, eqInstantOut, eqCountIn,
+      eqCountOut, eqDiffIn, eqDiffOut, oaInstantIn, oaInstantOut, oaCountIn, oaCountOut,
+      oaDiffIn, oaDiffOut, normal, grobe'
+    range: valueType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/valueType
+enums:
+  controlledProperty_options:
+    name: controlledProperty_options
+    permissible_values:
+      powermeter:
+        text: powermeter
+      temp:
+        text: temp
+      humidity:
+        text: humidity
+      co2:
+        text: co2
+      radiation:
+        text: radiation
+      windspeed:
+        text: windspeed
+      heatflow:
+        text: heatflow
+      solar:
+        text: solar
+      condensation:
+        text: condensation
+      weight:
+        text: weight
+      illuminance:
+        text: illuminance
+      brilliance:
+        text: brilliance
+      occupancy:
+        text: occupancy
+      mic:
+        text: mic
+      co:
+        text: co
+      pollen:
+        text: pollen
+      formaldehyde:
+        text: formaldehyde
+      tvoc:
+        text: tvoc
+      radon:
+        text: radon
+      ozon:
+        text: ozon
+      pm25:
+        text: pm25
+      pm10:
+        text: pm10
+      pressure:
+        text: pressure
+  valueType_options:
+    name: valueType_options
+    permissible_values:
+      eqInstantIn:
+        text: eqInstantIn
+      eqInstantOut:
+        text: eqInstantOut
+      eqCountIn:
+        text: eqCountIn
+      eqCountOut:
+        text: eqCountOut
+      eqDiffIn:
+        text: eqDiffIn
+      eqDiffOut:
+        text: eqDiffOut
+      oaInstantIn:
+        text: oaInstantIn
+      oaInstantOut:
+        text: oaInstantOut
+      oaCountIn:
+        text: oaCountIn
+      oaCountOut:
+        text: oaCountOut
+      oaDiffIn:
+        text: oaDiffIn
+      oaDiffOut:
+        text: oaDiffOut
+      normal:
+        text: normal
+      grobe:
+        text: grobe

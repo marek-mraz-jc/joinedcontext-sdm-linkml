@@ -1,0 +1,2876 @@
+id: https://github.com/smart-data-models/dataModel.UrbanMobility/TransitManagement
+name: TransitManagement
+title: Smart Data Models - TransitManagement data Model
+description: A public transit system Data Model
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.UrbanMobility
+  spec.source.path: TransitManagement/schema.json
+  spec.source.commit: 81a052c84d275a71489910c4f93eb3b6c80c4830
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"],
+    "ac_available": {"type": "Property", "value": "yes"}, "actual_trip_end_time":
+    {"type": "Property", "value": {"@type": "date-time", "@value": "2021-10-28T08:24:22+05:30"}},
+    "actual_trip_start_time": {"type": "Property", "value": {"@type": "date-time",
+    "@value": "2021-10-28T07:46:51+05:30"}}, "agency_fare_url": {"type": "Property",
+    "value": "http://charteredbike.in/surat/?page_id=1021"}, "agency_id": {"type":
+    "Property", "value": "agency001"}, "agency_lang": {"type": "Property", "value":
+    "en"}, "agency_name": {"type": "Property", "value": "Chartered Bike Surat"}, "agency_timezone":
+    {"type": "Property", "value": "Asia/Kolkata"}, "agency_url": {"type": "Property",
+    "value": "http://charteredbike.in/surat/"}, "arrival_time": {"type": "Property",
+    "value": {"@type": "time", "@value": "22:00:28"}}, "bearing": {"type": "Property",
+    "value": 90}, "current_status": {"type": "Property", "value": "INCOMING_AT"},
+    "current_stop_sequence": {"type": "Property", "value": 1001}, "departure_time":
+    {"type": "Property", "value": {"@type": "time", "@value": "22:00:33"}}, "depot_id":
+    {"type": "Property", "value": "1"}, "depot_name": {"type": "Property", "value":
+    "BHESTAN DEPOT"}, "direction_id": {"type": "Property", "value": "false"}, "id":
+    "https://smart-data-models.github.io/IUDX/TransitManagement/schema.json", "last_stop_arrival_time":
+    {"type": "Property", "value": {"@type": "time", "@value": "13:30:12"}}, "last_stop_id":
+    {"type": "Property", "value": "4032"}, "last_tracked_time": {"type": "Property",
+    "value": {"@type": "time", "@value": "08:13:22"}}, "license_plate": {"type": "Property",
+    "value": "GJ05BX1583"}, "observationDateTime": {"type": "Property", "value": {"@type":
+    "date-time", "@value": "2021-10-28T08:13:22+05:30"}}, "routeStopSequence": {"type":
+    "Property", "value": ["10", "1001", "1002", "1003", "1004", "1005"]}, "route_color":
+    {"type": "Property", "value": "00FFFF"}, "route_desc": {"type": "Property", "value":
+    "Phase1-Phase2"}, "route_id": {"type": "Property", "value": "17AD"}, "route_long_name":
+    {"type": "Property", "value": "Baiyappanahalli to Mysuru Road"}, "route_short_name":
+    {"type": "Property", "value": "Purple Line"}, "route_text_color": {"type": "Property",
+    "value": "FFD700"}, "route_type": {"type": "Property", "value": "1"}, "schedule_relationship":
+    {"type": "Property", "value": "SCHEDULED"}, "seating_capacity": {"type": "Property",
+    "value": 70}, "speed": {"type": "Property", "value": 28}, "standing_capacity":
+    {"type": "Property", "value": 20}, "start_date": {"type": "Property", "value":
+    {"@type": "date", "@value": "2022-03-01"}}, "start_time": {"type": "Property",
+    "value": {"@type": "date-time", "@value": "11:15:35"}}, "stop_code": {"type":
+    "Property", "value": "F12"}, "stop_id": {"type": "Property", "value": "1016"},
+    "stop_name": {"type": "Property", "value": "DEVASHISH NAGAR MORA BHAGAL"}, "stop_sequence":
+    {"type": "Property", "value": 24}, "timestamp": {"type": "Property", "value":
+    {"@type": "date-time", "@value": "2021-10-28T08:13:22+05:30"}}, "travelDistance":
+    {"type": "Property", "value": 9.00174}, "travelTime": {"type": "Property", "value":
+    {"@type": "date-time", "@value": "22:11:14"}}, "tripDirection": {"type": "Property",
+    "value": "DN"}, "trip_delay": {"type": "Property", "value": 11968}, "trip_direction":
+    {"type": "Property", "value": "DN"}, "trip_id": {"type": "Property", "value":
+    "23952340"}, "type": "TransitManagement", "uncertainity": {"type": "Property",
+    "value": "false"}, "vehicleType": {"type": "Property", "value": "hopper"}, "vehicle_id":
+    {"type": "Property", "value": "52TC12"}, "vehicle_label": {"type": "Property",
+    "value": "A03"}}'
+classes:
+  TransitManagement:
+    class_uri: https://smartdatamodels.org/dataModel.UrbanMobility/TransitManagement
+    description: A public transit system Data Model
+    is_a: Entity
+    slots:
+    - acAvailable
+    - ac_available
+    - actual_trip_end_time
+    - actual_trip_start_time
+    - address
+    - agencyInfo
+    - agency_fare_url
+    - agency_id
+    - agency_lang
+    - agency_name
+    - agency_timezone
+    - agency_url
+    - alternateName
+    - areaServed
+    - arrival
+    - arrivalUncertainty
+    - arrival_time
+    - bearing
+    - current_status
+    - current_stop_sequence
+    - dataDescriptor
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - departure
+    - departureUncertainty
+    - departure_time
+    - depotID
+    - depotName
+    - depot_id
+    - depot_name
+    - description
+    - deviceInfo
+    - direction_id
+    - entity_id
+    - last_stop_arrival_time
+    - last_stop_id
+    - last_tracked_time
+    - license_plate
+    - name
+    - observationDateTime
+    - owner
+    - position
+    - positionInfo
+    - routeInfo
+    - routeStopSequence
+    - route_color
+    - route_desc
+    - route_id
+    - route_long_name
+    - route_short_name
+    - route_text_color
+    - route_type
+    - route_url
+    - schedule_relationship
+    - seating_capacity
+    - seeAlso
+    - shapeInfo
+    - source
+    - speed
+    - standingCapacity
+    - standing_capacity
+    - start_date
+    - start_time
+    - stopInfo
+    - stopTimeUpdateInfo
+    - stopTimesInfo
+    - stop_code
+    - stop_desc
+    - stop_headsign
+    - stop_id
+    - stop_name
+    - stop_sequence
+    - stop_sequence_detail
+    - stop_time_update
+    - stop_url
+    - timestamp
+    - travelDistance
+    - travelTime
+    - trip
+    - tripDetails
+    - tripDirection
+    - tripInfo
+    - trip_delay
+    - trip_details
+    - trip_direction
+    - trip_id
+    - trip_update
+    - uncertainty
+    - vehicleDesc
+    - vehicleInfo
+    - vehiclePositionInfo
+    - vehicleType
+    - vehicle_id
+    - vehicle_label
+    - vehicle_position
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  Trip_details:
+    description: Property. A descriptor of realtime update on the schedule of a vehicle
+      along a trip
+    attributes:
+      bearing:
+        description: Property. Bearing, in degrees, clockwise from True North, i.e.,
+          0 is North and 90 is East. This can be the compass bearing, or the direction
+          towards the next stop or intermediate location. This should not be deduced
+          from the sequence of previous positions, which clients can compute from
+          previous data
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      odometer:
+        description: Property. Odometer value, in meters. Units:'meters'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      speed:
+        description: Property. Momentary speed measured by the vehicle, in meters
+          per second. Units:'meters per second'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  Position:
+    description: 'Property. Describes the current position of the vehicle corresponding
+      to this observation. SameAs: position field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition).
+      Model:''https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition'''
+    attributes:
+      latitude:
+        description: Property. Degrees North, in the WGS-84 coordinate system
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      longitude:
+        description: Property. Degrees East, in the WGS-84 coordinate system
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      bearing:
+        description: Property. Bearing, in degrees, clockwise from True North, i.e.,
+          0 is North and 90 is East. This can be the compass bearing, or the direction
+          towards the next stop or intermediate location. This should not be deduced
+          from the sequence of previous positions, which clients can compute from
+          previous data
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      odometer:
+        description: Property. Odometer value, in meters. Units:'meters'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      speed:
+        description: Property. Momentary speed measured by the vehicle, in meters
+          per second. Units:'meters per second'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  Stop_sequence_detail:
+    description: 'Property. Describes the stop sequence for a trip in the designated
+      route made by the public transit vehicle.SameAs: ''stop_sequence'' field from
+      GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)'
+    attributes:
+      stop_sequence:
+        description: Property. Must be the same as in stop_times.txt in the corresponding
+          GTFS feed. Either stop_sequence or stop_id must be provided within a StopTimeUpdate
+          - both fields cannot be empty. stop_sequence is required for trips that
+          visit the same stop_id more than once (e.g., a loop) to disambiguate which
+          stop the prediction is for
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_id:
+        description: Property. Must be the same as in stops.txt in the corresponding
+          GTFS feed. Either stop_sequence or stop_id must be provided within a StopTimeUpdate
+          - both fields cannot be empty
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  Arrival:
+    description: Property. If schedule_relationship is empty or SCHEDULED, either
+      arrival or departure must be provided within a StopTimeUpdate - both fields
+      cannot be empty. arrival and departure may both be empty when schedule_relationship
+      is SKIPPED. If schedule_relationship is NO_DATA, arrival and departure must
+      be empty
+    attributes:
+      uncertainty:
+        description: 'Property. If uncertainty is omitted, it is interpreted as unknown.
+          To specify a completely certain prediction, set its uncertainty to 0.SameAs:
+          ''uncertainty'' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent)'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  Departure:
+    description: Property. If schedule_relationship is empty or SCHEDULED, either
+      arrival or departure must be provided within a StopTimeUpdate - both fields
+      cannot be empty. arrival and departure may both be empty when schedule_relationship
+      is SKIPPED. If schedule_relationship is NO_DATA, arrival and departure must
+      be empty
+    attributes:
+      uncertainty:
+        description: 'Property. If uncertainty is omitted, it is interpreted as unknown.
+          To specify a completely certain prediction, set its uncertainty to 0.SameAs:
+          ''uncertainty'' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent)'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  Stop_time_update:
+    description: Property. Additional information on the vehicle that is serving this
+      trip
+    attributes:
+      stop_id:
+        description: Property. Must be the same as in stops.txt in the corresponding
+          GTFS feed. Either stop_sequence or stop_id must be provided within a StopTimeUpdate
+          - both fields cannot be empty
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_sequence:
+        description: Property. Must be the same as in stop_times.txt in the corresponding
+          GTFS feed. Either stop_sequence or stop_id must be provided within a StopTimeUpdate
+          - both fields cannot be empty. stop_sequence is required for trips that
+          visit the same stop_id more than once (e.g., a loop) to disambiguate which
+          stop the prediction is for
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      schedule_relationship:
+        description: Property. Enum:'SCHEDULED, SKIPPED, NO_DATA'. SCHEDULED means
+          that the vehicle is proceeding in accordance with its static schedule of
+          stops, although not necessarily according to the times of the schedule.
+          This is the default behavior. At least one of arrival and departure must
+          be provided. SKIPPED means that The stop is skipped, i.e., the vehicle will
+          not stop at this stop. The arrival and departure fields are optional. NO_DATA
+          means that no data is given for this stop. It indicates that there is no
+          realtime information available. When set NO_DATA is propagated through subsequent
+          stops so this is the recommended way of specifying from which stop you do
+          not have realtime information. When NO_DATA is set neither arrival nor departure
+          should be supplied
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      arrival:
+        description: Property. If schedule_relationship is empty or SCHEDULED, either
+          arrival or departure must be provided within a StopTimeUpdate - both fields
+          cannot be empty. arrival and departure may both be empty when schedule_relationship
+          is SKIPPED. If schedule_relationship is NO_DATA, arrival and departure must
+          be empty
+        range: Arrival
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      departure:
+        description: Property. If schedule_relationship is empty or SCHEDULED, either
+          arrival or departure must be provided within a StopTimeUpdate - both fields
+          cannot be empty. arrival and departure may both be empty when schedule_relationship
+          is SKIPPED. If schedule_relationship is NO_DATA, arrival and departure must
+          be empty
+        range: Departure
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  Trip_updateStop_time_updateArrival:
+    description: Property. If schedule_relationship is empty or SCHEDULED, either
+      arrival or departure must be provided within a StopTimeUpdate - both fields
+      cannot be empty. arrival and departure may both be empty when schedule_relationship
+      is SKIPPED. If schedule_relationship is NO_DATA, arrival and departure must
+      be empty
+    attributes:
+      uncertainty:
+        description: 'Property. If uncertainty is omitted, it is interpreted as unknown.
+          To specify a completely certain prediction, set its uncertainty to 0.SameAs:
+          ''uncertainty'' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent)'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  Trip_updateStop_time_updateDeparture:
+    description: Property. If schedule_relationship is empty or SCHEDULED, either
+      arrival or departure must be provided within a StopTimeUpdate - both fields
+      cannot be empty. arrival and departure may both be empty when schedule_relationship
+      is SKIPPED. If schedule_relationship is NO_DATA, arrival and departure must
+      be empty
+    attributes:
+      uncertainty:
+        description: 'Property. If uncertainty is omitted, it is interpreted as unknown.
+          To specify a completely certain prediction, set its uncertainty to 0.SameAs:
+          ''uncertainty'' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent)'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  Trip_updateStop_time_update:
+    description: Property. Additional information on the vehicle that is serving this
+      trip
+    attributes:
+      stop_id:
+        description: Property. Must be the same as in stops.txt in the corresponding
+          GTFS feed. Either stop_sequence or stop_id must be provided within a StopTimeUpdate
+          - both fields cannot be empty
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_sequence:
+        description: Property. Must be the same as in stop_times.txt in the corresponding
+          GTFS feed. Either stop_sequence or stop_id must be provided within a StopTimeUpdate
+          - both fields cannot be empty. stop_sequence is required for trips that
+          visit the same stop_id more than once (e.g., a loop) to disambiguate which
+          stop the prediction is for
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      schedule_relationship:
+        description: Property. Enum:'SCHEDULED, SKIPPED, NO_DATA'. SCHEDULED means
+          that the vehicle is proceeding in accordance with its static schedule of
+          stops, although not necessarily according to the times of the schedule.
+          This is the default behavior. At least one of arrival and departure must
+          be provided. SKIPPED means that The stop is skipped, i.e., the vehicle will
+          not stop at this stop. The arrival and departure fields are optional. NO_DATA
+          means that no data is given for this stop. It indicates that there is no
+          realtime information available. When set NO_DATA is propagated through subsequent
+          stops so this is the recommended way of specifying from which stop you do
+          not have realtime information. When NO_DATA is set neither arrival nor departure
+          should be supplied
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      arrival:
+        description: Property. If schedule_relationship is empty or SCHEDULED, either
+          arrival or departure must be provided within a StopTimeUpdate - both fields
+          cannot be empty. arrival and departure may both be empty when schedule_relationship
+          is SKIPPED. If schedule_relationship is NO_DATA, arrival and departure must
+          be empty
+        range: Trip_updateStop_time_updateArrival
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      departure:
+        description: Property. If schedule_relationship is empty or SCHEDULED, either
+          arrival or departure must be provided within a StopTimeUpdate - both fields
+          cannot be empty. arrival and departure may both be empty when schedule_relationship
+          is SKIPPED. If schedule_relationship is NO_DATA, arrival and departure must
+          be empty
+        range: Trip_updateStop_time_updateDeparture
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  VehicleDesc:
+    description: Property. Describes the additional information of the vehicle corresponding
+      to this observation. SameAs:'vehicle' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)/(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)
+    attributes:
+      vehicle_id:
+        description: 'Property. Unique ID assigned to the vehicle corresponding to
+          this observation,used in internal system identification.SameAs: ''id'' field
+          from GTFS Realtime message - VehicleDescriptor(https: //developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      vehicle_label:
+        description: 'Property. User visible label,i.e.,something that must be shown
+          to the passenger to help identify the correct vehicle.SameAs: ''label''
+          field from GTFS Realtime message - VehicleDescriptor(https: //developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      license_plate:
+        description: 'Property. Gives the License Plate number of the vehice.SameAs:
+          ''license_plate'' field from GTFS Realtime message - VehicleDescriptor(https:
+          //developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  Trip:
+    description: Property. Describes the trip the vehicle corresponding to this observation
+      is making. SameAs:'trip' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)
+    attributes:
+      direction_id:
+        description: 'Property. Indicates the direction of travel of the vehicle corresponding
+          to this observation, can be referenced from the GTFS static feed trips.txt.
+          SameAs: ''direction_id'' field from GTFS Realtime message-TripDescriptor
+          (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      schedule_relationship:
+        description: 'Property. Describes if the Route/Trip has been scheduled. SameAs:
+          ''schedule_relationship'' field from enumScheduleRelationship (https://developers.google.com/transit/gtfs-realtime/reference#enum-schedulerelationship-2)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      route_id:
+        description: 'Property. Route ID assigned to the route on which the bus/vehicle
+          corresponding to the bus in this observation is currently plying on. SameAs:
+          ''route_id'' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      start_date:
+        description: 'Property. Describes the initial scheduled date of the trip corresponding
+          to the vehicle this observation. An example format for this field - YYYYMMDD.
+          SameAs: ''start_date'' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      start_time:
+        description: 'Property. Describes the initial scheduled start time of the
+          trip corresponding to the vehicle this observation. An example format for
+          this field - 11:15:35 or 25:15:35. SameAs: ''start_time'' field from GTFS
+          Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      trip_id:
+        description: 'Property. Trip ID/Trip name allotted to the bus corresponding
+          to this observation, in consideration to the time of the day and the direction
+          of the trip on the given routeId. SameAs: ''trip_id'' field from GTFS Realtime
+          message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  Trip_update:
+    description: Property. Describes the trip information like delay, departures,
+      etc., for a trip made by the vehicle corresponding to this observation.SameAs:'trip_update'
+      field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity)
+    attributes:
+      stop_time_update:
+        description: Property. Additional information on the vehicle that is serving
+          this trip
+        range: Trip_updateStop_time_update
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      timestamp:
+        description: 'Property. Last reported time of observation from the vehicle.
+          SameAs: ''timestamp'' field from GTFS Realtime message-Vehicleposition (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)'
+        range: datetime
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      vehicleDesc:
+        description: Property. Describes the additional information of the vehicle
+          corresponding to this observation. SameAs:'vehicle' field from GTFS Realtime
+          message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)/(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)
+        range: VehicleDesc
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      trip:
+        description: Property. Describes the trip the vehicle corresponding to this
+          observation is making. SameAs:'trip' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)
+        range: Trip
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  TransitManagementArrival:
+    description: 'Property. If schedule_relationship is empty or SCHEDULED, either
+      arrival or departure must be provided within a StopTimeUpdate. SameAs: ''arrival''
+      field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)'
+    attributes:
+      uncertainty:
+        description: 'Property. If uncertainty is omitted, it is interpreted as unknown.
+          To specify a completely certain prediction, set its uncertainty to 0.SameAs:
+          ''uncertainty'' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent)'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  TransitManagementVehicleDesc:
+    description: Property. Describes the additional information of the vehicle corresponding
+      to this observation. SameAs:'vehicle' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)/(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)
+    attributes:
+      vehicle_id:
+        description: 'Property. Unique ID assigned to the vehicle corresponding to
+          this observation,used in internal system identification.SameAs: ''id'' field
+          from GTFS Realtime message - VehicleDescriptor(https: //developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      vehicle_label:
+        description: 'Property. User visible label,i.e.,something that must be shown
+          to the passenger to help identify the correct vehicle.SameAs: ''label''
+          field from GTFS Realtime message - VehicleDescriptor(https: //developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      license_plate:
+        description: 'Property. Gives the License Plate number of the vehice.SameAs:
+          ''license_plate'' field from GTFS Realtime message - VehicleDescriptor(https:
+          //developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  TripDetails:
+    description: Property. A descriptor of realtime update on the schedule of a vehicle
+      along a trip
+    attributes:
+      stop_headsign:
+        description: 'Property. This field contains the text that appears on a sign
+          that identifies the trip’s destination to passengers. SameAs: ''stop_headsign''
+          field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      arrival_time:
+        description: 'Property.  Specifies the arrival time at a specific stop for
+          a specific trip on a route. Times must be eight digits in HH:MM:SS format
+          (HH:MM:SS is also accepted, if the hour begins with 0). Note: Trips that
+          span multiple dates will have stop times greater than 24:00:00. For example,
+          if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following
+          day, the stop times would be 22:30:00 and 26:15:00. Entering those stop
+          times as 22:30:00 and 02:15:00 would not produce the desired results. SameAs:
+          ''arrival_time'' field from GTFS Static Field definitions-stop_times.txt
+          (https://developers.google.com/transit/gtfs/reference#stop_timestxt)'
+        range: time
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_id:
+        description: 'Property. Stop ID/Stop name of the bus stops corresponding to
+          the bus in this observation. SameAs: ''stop_id'' field from GTFS Realtime
+          message-Vehicleposition (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_sequence:
+        description: 'Property. Indicates the stop sequence of the vehicle corresponding
+          to this observation, can be referenced from the GTFS static feed stop_times.txt.
+          SameAs: ''stop_sequence'' field from GTFS Realtime message-StopTimeUpdate
+          (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      departure_time:
+        description: 'Property. Specifies the departure time from a specific stop
+          for a specific trip on a route. Times must be eight digits in HH:MM:SS format
+          (HH:MM:SS is also accepted, if the hour begins with 0). Note: Trips that
+          span multiple dates will have stop times greater than 24:00:00. For example,
+          if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following
+          day, the stop times would be 22:30:00 and 26:15:00. Entering those stop
+          times as 22:30:00 and 02:15:00 would not produce the desired results. SameAs:
+          ''departure_time'' field from GTFS Static Field definitions-stop_times.txt
+          (https://developers.google.com/transit/gtfs/reference#stop_timestxt)'
+        range: time
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  Vehicle_positionPosition:
+    description: 'Property. Describes the current position of the vehicle corresponding
+      to this observation. SameAs: ''position'' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)'
+    attributes:
+      latitude:
+        description: Property. Degrees North, in the WGS-84 coordinate system
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      longitude:
+        description: Property. Degrees East, in the WGS-84 coordinate system
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      bearing:
+        description: Property. Bearing, in degrees, clockwise from True North, i.e.,
+          0 is North and 90 is East. This can be the compass bearing, or the direction
+          towards the next stop or intermediate location. This should not be deduced
+          from the sequence of previous positions, which clients can compute from
+          previous data
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      odometer:
+        description: Property. Odometer value, in meters. Units:'meters'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      speed:
+        description: Property. Momentary speed measured by the vehicle, in meters
+          per second. Units:'meters/second'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  Vehicle_positionVehicleDesc:
+    description: Property. Describes the additional information of the vehicle corresponding
+      to this observation. SameAs:'vehicle' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)/(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)
+    attributes:
+      vehicle_id:
+        description: 'Property. Unique ID assigned to the vehicle corresponding to
+          this observation,used in internal system identification.SameAs: ''id'' field
+          from GTFS Realtime message - VehicleDescriptor(https: //developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      vehicle_label:
+        description: 'Property. User visible label,i.e.,something that must be shown
+          to the passenger to help identify the correct vehicle.SameAs: ''label''
+          field from GTFS Realtime message - VehicleDescriptor(https: //developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      license_plate:
+        description: 'Property. Gives the License Plate number of the vehice.SameAs:
+          ''license_plate'' field from GTFS Realtime message - VehicleDescriptor(https:
+          //developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  Vehicle_positionTrip:
+    description: Property. Describes the trip the vehicle corresponding to this observation
+      is making. SameAs:'trip' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)
+    attributes:
+      direction_id:
+        description: 'Property. Indicates the direction of travel of the vehicle corresponding
+          to this observation, can be referenced from the GTFS static feed trips.txt.
+          SameAs: ''direction_id'' field from GTFS Realtime message-TripDescriptor
+          (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      schedule_relationship:
+        description: 'Property. Describes if the Route/Trip has been scheduled. SameAs:
+          ''schedule_relationship'' field from enumScheduleRelationship (https://developers.google.com/transit/gtfs-realtime/reference#enum-schedulerelationship-2)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      route_id:
+        description: 'Property. Route ID assigned to the route on which the bus/vehicle
+          corresponding to the bus in this observation is currently plying on. SameAs:
+          ''route_id'' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      start_date:
+        description: 'Property. Describes the initial scheduled date of the trip corresponding
+          to the vehicle this observation. An example format for this field - YYYYMMDD.
+          SameAs: ''start_date'' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      start_time:
+        description: 'Property. Describes the initial scheduled start time of the
+          trip corresponding to the vehicle this observation. An example format for
+          this field - 11:15:35 or 25:15:35. SameAs: ''start_time'' field from GTFS
+          Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      trip_id:
+        description: 'Property. Trip ID/Trip name allotted to the bus corresponding
+          to this observation, in consideration to the time of the day and the direction
+          of the trip on the given routeId. SameAs: ''trip_id'' field from GTFS Realtime
+          message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  Vehicle_position:
+    description: Property. Describes the realtime position of the vehicle corresponding
+      to this observation. SameAs:'vehicle' field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity)
+    attributes:
+      position:
+        description: 'Property. Describes the current position of the vehicle corresponding
+          to this observation. SameAs: ''position'' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)'
+        range: Vehicle_positionPosition
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      current_status:
+        description: 'Property. Describes the status of the vehicle w.r.t the stop
+          corresponding to this observation ENUM: [INCOMING_AT, STOPPED_AT, IN_TRANSIT_TO].
+          SameAs:''current_status'' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      timestamp:
+        description: 'Property. Last reported time of observation from the vehicle.
+          SameAs:  ''timestamp'' field from GTFS Realtime message-Vehicleposition
+          (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)'
+        range: datetime
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      vehicleDesc:
+        description: Property. Describes the additional information of the vehicle
+          corresponding to this observation. SameAs:'vehicle' field from GTFS Realtime
+          message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)/(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)
+        range: Vehicle_positionVehicleDesc
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_id:
+        description: 'Property. Stop ID/Stop name of the bus stops corresponding to
+          the bus in this observation. SameAs: ''stop_id'' field from GTFS Realtime
+          message-Vehicleposition (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      current_stop_sequence:
+        description: Property. Gives the stop sequence index of the current stop.
+          This is determined by considering current_status, if current_status is missing
+          IN_TRANSIT_TO is assumed. SameAs:'current_stop_sequence' field from GTFS
+          Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      trip:
+        description: Property. Describes the trip the vehicle corresponding to this
+          observation is making. SameAs:'trip' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)
+        range: Vehicle_positionTrip
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  TransitManagementDeparture:
+    description: 'Property. If schedule_relationship is empty or SCHEDULED, either
+      arrival or departure must be provided within a StopTimeUpdate. SameAs: ''departure''
+      field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)'
+    attributes:
+      uncertainty:
+        description: 'Property. If uncertainty is omitted, it is interpreted as unknown.
+          To specify a completely certain prediction, set its uncertainty to 0.SameAs:
+          ''uncertainty'' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent)'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  TransitManagementTrip:
+    description: Property. Describes the trip the vehicle corresponding to this observation
+      is making. SameAs:'trip' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)
+    attributes:
+      direction_id:
+        description: 'Property. Indicates the direction of travel of the vehicle corresponding
+          to this observation, can be referenced from the GTFS static feed trips.txt.
+          SameAs: ''direction_id'' field from GTFS Realtime message-TripDescriptor
+          (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      schedule_relationship:
+        description: 'Property. Describes if the Route/Trip has been scheduled. SameAs:
+          ''schedule_relationship'' field from enumScheduleRelationship (https://developers.google.com/transit/gtfs-realtime/reference#enum-schedulerelationship-2)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      route_id:
+        description: 'Property. Route ID assigned to the route on which the bus/vehicle
+          corresponding to the bus in this observation is currently plying on. SameAs:
+          ''route_id'' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      start_date:
+        description: 'Property. Describes the initial scheduled date of the trip corresponding
+          to the vehicle this observation. An example format for this field - YYYYMMDD.
+          SameAs: ''start_date'' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      start_time:
+        description: 'Property. Describes the initial scheduled start time of the
+          trip corresponding to the vehicle this observation. An example format for
+          this field - 11:15:35 or 25:15:35. SameAs: ''start_time'' field from GTFS
+          Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      trip_id:
+        description: 'Property. Trip ID/Trip name allotted to the bus corresponding
+          to this observation, in consideration to the time of the day and the direction
+          of the trip on the given routeId. SameAs: ''trip_id'' field from GTFS Realtime
+          message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  DeviceModelTrip_updateTrip:
+    description: 'Property. Following the conventions of GTFS trip. Model:''https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor''. '
+    attributes:
+      trip_id:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      route_id:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      direction_id:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      start_time:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      start_date:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      schedule_relationship:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  DeviceModelTrip_update:
+    description: Property. Describes the trip information like delay, departures,
+      etc., for a trip made by the vehicle corresponding to this observation.SameAs:'trip_update'
+      field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity)
+    attributes:
+      trip:
+        description: 'Property. Following the conventions of GTFS trip. Model:''https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor''. '
+        range: DeviceModelTrip_updateTrip
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  DeviceModel:
+    description: Property. Model:'https://schema.org/Text'. Describes the information
+      of the device, sensor or system in consideration
+    attributes:
+      brandName:
+        description: Property. Model:'https://schema.org/Text'. Name of the brand
+          associated with an entity, e.g., sensor, device etc
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      manufacturerName:
+        description: Property. Model:'https://schema.org/Text'. Name of the manufacturer
+          associated with an entity, e.g., sensor, device etc
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      modelName:
+        description: Property. Model:'https://schema.org/Text'. Name of a specific
+          model associated with an entity, e.g., sensor, device etc
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      modelURL:
+        description: Property. Model:'https://schema.org/Text'. URL providing further
+          information of a specific model associated with an entity, e.g., sensor,
+          device etc
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      trip_update:
+        description: Property. Describes the trip information like delay, departures,
+          etc., for a trip made by the vehicle corresponding to this observation.SameAs:'trip_update'
+          field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity)
+        range: DeviceModelTrip_update
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      observationDateTime:
+        description: Property. Last reported time of observation
+        range: datetime
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  DeviceInfo:
+    description: Property. Model:'https://schema.org/Text. Information about the device
+      associated with the observations
+    attributes:
+      rfID:
+        description: Property. Model:'https://schema.org/Text'. Gives the ID of the
+          RFID reader
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      deviceBatteryStatus:
+        description: Property. Model:'https://schema.org/Text'. Gives the Battery
+          charging status of the reporting device(Connected, Disconnected)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      deviceName:
+        description: Property. Model:'https://schema.org/Text'. Device Name or Station
+          name of the sensor device/station corresponding to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      deviceID:
+        description: Property. Model:'https://schema.org/Text'. Device ID of the physical
+          sensor/ measurement station corresponding to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      measurand:
+        description: Property. Model:'https://schema.org/Text'. Property/properties
+          sensed/observed/measured by the device
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      deviceSimNumber:
+        description: Property. Model:'https://schema.org/Text'. Gives the sim number
+          of the device in the waste management vehicle
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      deviceModel:
+        description: Property. Model:'https://schema.org/Text'. Describes the information
+          of the device, sensor or system in consideration
+        range: DeviceModel
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  StopTimesInfo:
+    description: Property. A descriptor of realtime update on the schedule of a vehicle
+      along a trip.
+    attributes:
+      drop_off_type:
+        description: 'Property. Indicates drop off method. SameAs: ''drop_off_type''
+          field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_headsign:
+        description: 'Property. This field contains the text that appears on a sign
+          that identifies the trip’s destination to passengers. SameAs: ''stop_headsign''
+          field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      pickup_type:
+        description: 'Property. Indicates pickup method.SameAs: ''pickup_type'' field
+          from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      arrival_time:
+        description: 'Property. Specifies the arrival time at a specific stop for
+          a specific trip on a route. Times must be eight digits in HH:MM:SS format
+          (HH:MM:SS is also accepted, if the hour begins with 0). Note: Trips that
+          span multiple dates will have stop times greater than 24:00:00. For example,
+          if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following
+          day, the stop times would be 22:30:00 and 26:15:00. Entering those stop
+          times as 22:30:00 and 02:15:00 would not produce the desired results. SameAs:
+          ''arrival_time'' field from GTFS Static Field definitions-stop_times.txt
+          (https://developers.google.com/transit/gtfs/reference#stop_timestxt).'
+        range: time
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      continuous_drop_off:
+        description: 'Property. Indicates whether a rider can alight from the transit
+          vehicle at any point along the vehicle’s travel path.SameAs: ''continuous_drop_off''
+          field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt).'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_id:
+        description: Property. Unique ID assigned to the stop corresponding to this
+          observation.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_sequence:
+        description: Property. This field identifies the order of the stops for a
+          particular trip. The values for stop_sequence must be non-negative integers,
+          and they must increase along the trip. For example, the first stop on the
+          trip could have a stop_sequence of 1, the second stop on the trip could
+          have a stop_sequence of 23, the third stop could have a stop_sequence of
+          40, and so on.
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      trip_id:
+        description: Property. Trip ID/Trip name allotted to the bus corresponding
+          to this observation, in consideration to the time of the day and the direction
+          of the trip on the given routeId.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      continuous_pickup:
+        description: 'Property. Indicates whether a rider can board the transit vehicle
+          at any point along the vehicle’s travel path.SameAs: ''continuous_pickup''
+          field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt).'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      departure_time:
+        description: 'Property. Specifies the departure time from a specific stop
+          for a specific trip on a route. Times must be eight digits in HH:MM:SS format
+          (HH:MM:SS is also accepted, if the hour begins with 0). Note: Trips that
+          span multiple dates will have stop times greater than 24:00:00. For example,
+          if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following
+          day, the stop times would be 22:30:00 and 26:15:00. Entering those stop
+          times as 22:30:00 and 02:15:00 would not produce the desired results. SameAs:
+          ''departure_time'' field from GTFS Static Field definitions-stop_times.txt
+          (https://developers.google.com/transit/gtfs/reference#stop_timestxt).'
+        range: time
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  AgencyInfo:
+    description: Property. Agency information corresponding to this observation.
+    attributes:
+      agency_lang:
+        description: 'Property. Contains a two-letter ISO 639-1 code for the primary
+          language used by this transit agency. The language code is case-insensitive
+          (both en and EN are accepted). SameAs: ''agency_lang'' field from GTFS Static
+          Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      agency_fare_url:
+        description: 'Property. URL of a web page that contains the details of the
+          fares and also could allow to purchase tickets for that agency online. SameAs:
+          ''agency_fare_url'' field from GTFS Static Field Definition - agency.txt
+          (https://developers.google.com/transit/gtfs/reference#agencytxt).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      agency_id:
+        description: 'Property. ID that uniquely identifies a transit agency. A transit
+          feed may represent data from more than one agency. The agency_id is dataset
+          unique. This field is optional for transit feeds that only contain data
+          for a single agency. SameAs: ''agency_id'' field from GTFS Static Field
+          Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      agency_email:
+        description: 'Property. Email address actively monitored by the agency’s customer
+          service department. SameAs: ''agency_email'' field from GTFS Static Field
+          Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      agency_timezone:
+        description: 'Property. Timezone field contains the timezone where the transit
+          agency is located. SameAs: ''agency_timezone'' field from GTFS Static Field
+          Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      agency_name:
+        description: 'Property. The agency_name field contains the full name of the
+          transit agency. SameAs: ''agency_name'' field from GTFS Static Field Definition
+          - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      agency_phone:
+        description: 'Property. A voice telephone number for the specified agency.SameAs:
+          ''agency_phone'' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      agency_url:
+        description: 'Property. The agency_url field contains the URL of the transit
+          agency. SameAs: ''agency_url'' field from GTFS Static Field Definition -
+          agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  VehicleInfo:
+    description: Property. Describes the additional information of the vehicle corresponding
+      to this observation. SameAs:'vehicle' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)/(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)
+    attributes:
+      vehicleID:
+        description: 'Property. Unique ID assigned to the vehicle corresponding to
+          this observation, used in internal system identification. SameAs: ''id''
+          field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      vehicle_label:
+        description: 'Property. User visible label, i.e., something that must be shown
+          to the passenger to help identify the correct vehicle. SameAs: ''label''
+          field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      license_plate:
+        description: 'Property. Gives the License Plate number of the vehice. SameAs:
+          ''license_plate'' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  TripInfo:
+    description: Property. Describes the trip the vehicle corresponding to this observation
+      is making. SameAs:'trip' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition).
+    attributes:
+      schedule_relationship:
+        description: 'Property. Describes if the Route/Trip has been scheduled. SameAs:
+          ''schedule_relationship'' field from GTFS Realtime message-TripDescriptor
+          ENUM[SCHEDULED, ADDED, UNSCHEDULED, CANCELED] (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      route_id:
+        description: Property. Route ID assigned to the route on which the bus/vehicle
+          corresponding to the bus in this observation is currently plying on.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      start_date:
+        description: 'Property. Describes the initial scheduled date of the trip corresponding
+          to the vehicle this observation. An example format for this field - YYYYMMDD.
+          SameAs: ''start_date'' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      trip_id:
+        description: Property. Trip ID/Trip name allotted to the bus corresponding
+          to this observation, in consideration to the time of the day and the direction
+          of the trip on the given routeId.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      start_time:
+        description: 'Property. Describes the initial scheduled start time of the
+          trip corresponding to the vehicle this observation. An example format for
+          this field - 11:15:35 or 25:15:35. SameAs: ''start_time'' field from GTFS
+          Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor).'
+        range: time
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      trip_direction:
+        description: 'Property. Indicates the direction of travel of the vehicle corresponding
+          to this observation, can be referenced from the GTFS static feed trips.txt.
+          SameAs: ''direction_id'' field from GTFS Realtime message-TripDescriptor
+          (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  PositionInfo:
+    description: Property. Describes the current position of the vehicle corresponding
+      to this observation. SameAs:'position' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition).
+    attributes:
+      bearing:
+        description: Property. Bearing, in degrees, clockwise from True North, i.e.,
+          0 is North and 90 is East. This can be the compass bearing, or the direction
+          towards the next stop or intermediate location. This should not be deduced
+          from the sequence of previous positions, which clients can compute from
+          previous data
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      odometer:
+        description: Property. Odometer value.
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      speed:
+        description: Property. Momentary speed measured by the vehicle.
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  StopInfo:
+    description: Property. Information about the path the vehicle corresponding to
+      this observation travels along.
+    attributes:
+      stop_desc:
+        description: 'Property. This field contains a description of a stop. SameAs:
+          ''stop_desc'' field from GTFS Static Field definitions-stops.txt (https://developers.google.com/transit/gtfs/reference#stopstxt).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_code:
+        description: 'Property. This field contains short text or a number that uniquely
+          identifies the stop for passengers. Can be same as stop_id if it is for
+          public. SameAs: ''stop_code'' field from GTFS Static Field definitions-stops.txt
+          (https://developers.google.com/transit/gtfs/reference#stopstxt).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_id:
+        description: Property. Unique ID assigned to the stop corresponding to this
+          observation.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_url:
+        description: 'Property. This field contains the URL of a web page about a
+          particular stop and is different from the agency_url and the route_url fields.
+          SameAs: ''stop_url'' field from GTFS Static Field definitions-stops.txt
+          (https://developers.google.com/transit/gtfs/reference#stopstxt).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_name:
+        description: 'Property. Describes the name of a stop or station. SameAs: ''stop_name''
+          field from GTFS Static Field definitions-stops.txt (https://developers.google.com/transit/gtfs/reference#stopstxt).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  VehiclePositionInfo:
+    description: Property. Describes the realtime position of the vehicle corresponding
+      to this observation. SameAs:'vehicle' field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity)
+    attributes:
+      current_status:
+        description: 'Property. Describes the status of the vehicle w.r.t the stop
+          corresponding to this observation ENUM: [INCOMING_AT, STOPPED_AT, IN_TRANSIT_TO].
+          SameAs:''current_status'' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      occupancy_status:
+        description: Property. The degree of passenger occupancy for the vehicle.
+          ENUM [EMPTY, MANY_SEATS_AVAILABLE, FEW_SEATS_AVAILABLE, STANDING_ROOM_ONLY,
+          CRUSHED_STANDING_ROOM_ONLY, FULL, NOT_ACCEPTING_PASSENGERS, NO_DATA_AVAILABLE,
+          NOT_BOARDABLE]
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      congestion_level:
+        description: Property. Describes the congestion level that is affecting this
+          vehicle. ENUM [UNKNOWN_CONGESTION_LEVEL, RUNNING_SMOOTHLY, STOP_AND_GO,
+          CONGESTION, SEVERE_CONGESTION]
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_id:
+        description: Property. Unique ID assigned to the stop corresponding to this
+          observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      route_id:
+        description: 'Property. Route ID assigned to the route on which the bus/vehicle
+          corresponding to the bus in this observation is currently plying on. SameAs:
+          ''route_id'' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor).'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stopTimesInfo:
+        description: Property. A descriptor of realtime update on the schedule of
+          a vehicle along a trip.
+        range: StopTimesInfo
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      arrivalUncertainty:
+        description: 'Property. If schedule_relationship is empty or SCHEDULED, either
+          arrival or departure must be provided within a StopTimeUpdate. SameAs: ''arrival''
+          field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate).'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      entity_id:
+        description: Property. Feed unique ID for the entity corresponding to this
+          observation.SameAs:'entity_id' field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      agencyInfo:
+        description: Property. Agency information corresponding to this observation.
+        range: AgencyInfo
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      departureUncertainty:
+        description: 'Property. If schedule_relationship is empty or SCHEDULED, either
+          arrival or departure must be provided within a StopTimeUpdate. SameAs: ''departure''
+          field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate).'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      vehicleInfo:
+        description: Property. Describes the additional information of the vehicle
+          corresponding to this observation. SameAs:'vehicle' field from GTFS Realtime
+          message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)/(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)
+        range: VehicleInfo
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      travelDistance:
+        description: Property. The distance between the origin location and the destination
+          location or the total distance travelled corresponding to this observation.
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      actual_trip_start_time:
+        description: 'Property. This field specifies the time at which service actually
+          began. This is SameAs: absolute ''time''(StopTimeEvent) in the ''arrival''
+          field of the stop_time_update (StopTimeUpdate) message of the GTFS Realtime
+          message-TripUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate).'
+        range: datetime
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      tripInfo:
+        description: Property. Describes the trip the vehicle corresponding to this
+          observation is making. SameAs:'trip' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition).
+        range: TripInfo
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      positionInfo:
+        description: Property. Describes the current position of the vehicle corresponding
+          to this observation. SameAs:'position' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition).
+        range: PositionInfo
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      depotName:
+        description: Property. Describes the depot name of the bus depot corresponding
+          to this observation.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      depotID:
+        description: Property. Describes the unique id of the bus depot corresponding
+          to this observation.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stopInfo:
+        description: Property. Information about the path the vehicle corresponding
+          to this observation travels along.
+        range: StopInfo
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      current_stop_sequence:
+        description: Property. Gives the stop sequence index of the current stop.
+          This is determined by considering current_status, if current_status is missing
+          IN_TRANSIT_TO is assumed. SameAs:'current_stop_sequence' field from GTFS
+          Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  ShapeInfo:
+    description: Property. Information about the path the vehicle corresponding to
+      this observation travels along
+    attributes:
+      shape_id:
+        description: Property. Identifies a shape
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      shape_dist_traveled:
+        description: 'Property. Actual distance traveled along the shape from the
+          first shape point to the point specified in this record. Used by trip planners
+          to show the correct portion of the shape on a map. Values must increase
+          along with shape_pt_sequence; they cannot be used to show reverse travel
+          along a route. Distance units must be consistent with those used in stop_times.txt.
+          Example: If a bus travels along the three points defined above for A_shp,
+          the additional shape_dist_traveled values (shown here in kilometers) would
+          look like this: shape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence,shape_dist_traveled
+          A_shp,37.61956,-122.48161,0,0 A_shp,37.64430,-122.41070,6,6.8310 A_shp,37.65863,-122.30839,11,15.8765'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      shape_pt_sequence:
+        description: 'Property. Sequence in which the shape points connect to form
+          the shape. Values must increase along the trip but do not need to be consecutive.
+          Example: If the shape ''A_shp'' has three points in its definition, the
+          shapes.txt file might contain these records to define the shape: shape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence
+          A_shp,37.61956,-122.48161,0 A_shp,37.64430,-122.41070,6 A_shp,37.65863,-122.30839,11'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  TransitManagementStopTimesInfo:
+    description: Property. A descriptor of realtime update on the schedule of a vehicle
+      along a trip
+    attributes:
+      drop_off_type:
+        description: 'Property. Indicates drop off method. SameAs: ''drop_off_type''
+          field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_headsign:
+        description: 'Property. This field contains the text that appears on a sign
+          that identifies the trip’s destination to passengers. SameAs: ''stop_headsign''
+          field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      pickup_type:
+        description: 'Property. Indicates pickup method.SameAs: ''pickup_type'' field
+          from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      arrival_time:
+        description: 'Property. Specifies the arrival time at a specific stop for
+          a specific trip on a route. Times must be eight digits in HH:MM:SS format
+          (HH:MM:SS is also accepted, if the hour begins with 0). Note: Trips that
+          span multiple dates will have stop times greater than 24:00:00. For example,
+          if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following
+          day, the stop times would be 22:30:00 and 26:15:00. Entering those stop
+          times as 22:30:00 and 02:15:00 would not produce the desired results. SameAs:
+          ''arrival_time'' field from GTFS Static Field definitions-stop_times.txt
+          (https://developers.google.com/transit/gtfs/reference#stop_timestxt)'
+        range: time
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      continuous_drop_off:
+        description: 'Property. Indicates whether a rider can alight from the transit
+          vehicle at any point along the vehicle’s travel path.SameAs: ''continuous_drop_off''
+          field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_id:
+        description: Property. Unique ID assigned to the stop corresponding to this
+          observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_sequence:
+        description: Property. This field identifies the order of the stops for a
+          particular trip. The values for stop_sequence must be non-negative integers,
+          and they must increase along the trip. For example, the first stop on the
+          trip could have a stop_sequence of 1, the second stop on the trip could
+          have a stop_sequence of 23, the third stop could have a stop_sequence of
+          40, and so on
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      trip_id:
+        description: Property. Trip ID/Trip name allotted to the bus corresponding
+          to this observation, in consideration to the time of the day and the direction
+          of the trip on the given routeId
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      continuous_pickup:
+        description: 'Property. Indicates whether a rider can board the transit vehicle
+          at any point along the vehicle’s travel path.SameAs: ''continuous_pickup''
+          field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      departure_time:
+        description: 'Property. Specifies the departure time from a specific stop
+          for a specific trip on a route. Times must be eight digits in HH:MM:SS format
+          (HH:MM:SS is also accepted, if the hour begins with 0). Note: Trips that
+          span multiple dates will have stop times greater than 24:00:00. For example,
+          if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following
+          day, the stop times would be 22:30:00 and 26:15:00. Entering those stop
+          times as 22:30:00 and 02:15:00 would not produce the desired results. SameAs:
+          ''departure_time'' field from GTFS Static Field definitions-stop_times.txt
+          (https://developers.google.com/transit/gtfs/reference#stop_timestxt)'
+        range: time
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  TransitManagementAgencyInfo:
+    description: Property. Agency information corresponding to this observation
+    attributes:
+      agency_lang:
+        description: 'Property. Contains a two-letter ISO 639-1 code for the primary
+          language used by this transit agency. The language code is case-insensitive
+          (both en and EN are accepted). SameAs: ''agency_lang'' field from GTFS Static
+          Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      agency_fare_url:
+        description: 'Property. URL of a web page that contains the details of the
+          fares and also could allow to purchase tickets for that agency online. SameAs:
+          ''agency_fare_url'' field from GTFS Static Field Definition - agency.txt
+          (https://developers.google.com/transit/gtfs/reference#agencytxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      agency_id:
+        description: 'Property. ID that uniquely identifies a transit agency. A transit
+          feed may represent data from more than one agency. The agency_id is dataset
+          unique. This field is optional for transit feeds that only contain data
+          for a single agency. SameAs: ''agency_id'' field from GTFS Static Field
+          Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      agency_email:
+        description: 'Property. Email address actively monitored by the agency’s customer
+          service department. SameAs: ''agency_email'' field from GTFS Static Field
+          Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      agency_timezone:
+        description: 'Property. Timezone field contains the timezone where the transit
+          agency is located. SameAs: ''agency_timezone'' field from GTFS Static Field
+          Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      agency_name:
+        description: 'Property. The agency_name field contains the full name of the
+          transit agency. SameAs: ''agency_name'' field from GTFS Static Field Definition
+          - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      agency_phone:
+        description: 'Property. A voice telephone number for the specified agency.SameAs:
+          ''agency_phone'' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      agency_url:
+        description: 'Property. The agency_url field contains the URL of the transit
+          agency. SameAs: ''agency_url'' field from GTFS Static Field Definition -
+          agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  TransitManagementVehicleInfo:
+    description: Property. Describes the additional information of the vehicle corresponding
+      to this observation. SameAs:'vehicle' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)/(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)
+    attributes:
+      vehicleID:
+        description: 'Property. Unique ID assigned to the vehicle corresponding to
+          this observation, used in internal system identification. SameAs: ''id''
+          field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      vehicle_label:
+        description: 'Property. User visible label, i.e., something that must be shown
+          to the passenger to help identify the correct vehicle. SameAs: ''label''
+          field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      license_plate:
+        description: 'Property. Gives the License Plate number of the vehice. SameAs:
+          ''license_plate'' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  TransitManagementTripInfo:
+    description: Property. Describes the trip the vehicle corresponding to this observation
+      is making. SameAs:'trip' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)
+    attributes:
+      schedule_relationship:
+        description: 'Property. Describes if the Route/Trip has been scheduled. SameAs:
+          ''schedule_relationship'' field from GTFS Realtime message-TripDescriptor
+          ENUM[SCHEDULED, ADDED, UNSCHEDULED, CANCELED] (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      route_id:
+        description: Property. Route ID assigned to the route on which the bus/vehicle
+          corresponding to the bus in this observation is currently plying on
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      start_date:
+        description: 'Property. Describes the initial scheduled date of the trip corresponding
+          to the vehicle this observation. An example format for this field - YYYYMMDD.
+          SameAs: ''start_date'' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      trip_id:
+        description: Property. Trip ID/Trip name allotted to the bus corresponding
+          to this observation, in consideration to the time of the day and the direction
+          of the trip on the given routeId
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      start_time:
+        description: 'Property. Describes the initial scheduled start time of the
+          trip corresponding to the vehicle this observation. An example format for
+          this field - 11:15:35 or 25:15:35. SameAs: ''start_time'' field from GTFS
+          Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+        range: time
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      trip_direction:
+        description: 'Property. Indicates the direction of travel of the vehicle corresponding
+          to this observation, can be referenced from the GTFS static feed trips.txt.
+          SameAs: ''direction_id'' field from GTFS Realtime message-TripDescriptor
+          (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  TransitManagementPositionInfo:
+    description: Property. Describes the current position of the vehicle corresponding
+      to this observation. SameAs:'position' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)
+    attributes:
+      bearing:
+        description: Property. Bearing, in degrees, clockwise from True North, i.e.,
+          0 is North and 90 is East. This can be the compass bearing, or the direction
+          towards the next stop or intermediate location. This should not be deduced
+          from the sequence of previous positions, which clients can compute from
+          previous data
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      odometer:
+        description: Property. Odometer value
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      speed:
+        description: Property. Momentary speed measured by the vehicle
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  TransitManagementStopInfo:
+    description: Property. Information about the path the vehicle corresponding to
+      this observation travels along
+    attributes:
+      stop_desc:
+        description: 'Property. This field contains a description of a stop. SameAs:
+          ''stop_desc'' field from GTFS Static Field definitions-stops.txt (https://developers.google.com/transit/gtfs/reference#stopstxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_code:
+        description: 'Property. This field contains short text or a number that uniquely
+          identifies the stop for passengers. Can be same as stop_id if it is for
+          public. SameAs: ''stop_code'' field from GTFS Static Field definitions-stops.txt
+          (https://developers.google.com/transit/gtfs/reference#stopstxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_id:
+        description: Property. Unique ID assigned to the stop corresponding to this
+          observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_url:
+        description: 'Property. This field contains the URL of a web page about a
+          particular stop and is different from the agency_url and the route_url fields.
+          SameAs: ''stop_url'' field from GTFS Static Field definitions-stops.txt
+          (https://developers.google.com/transit/gtfs/reference#stopstxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_name:
+        description: 'Property. Describes the name of a stop or station. SameAs: ''stop_name''
+          field from GTFS Static Field definitions-stops.txt (https://developers.google.com/transit/gtfs/reference#stopstxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  StopTimeUpdateInfo:
+    description: 'Property. Updated sorted stop sequence for the trip made by the
+      vehicle corresponding to this observation, not to be considered if schedule_relationship
+      is ''CANCELED''. SameAs: ''stop_time_update'' field from GTFS Realtime message-TripUpdate
+      (https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)'
+    attributes:
+      stop_id:
+        description: Property. Unique ID assigned to the stop corresponding to this
+          observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stop_sequence:
+        description: Property. This field identifies the order of the stops for a
+          particular trip. The values for stop_sequence must be non-negative integers,
+          and they must increase along the trip. For example, the first stop on the
+          trip could have a stop_sequence of 1, the second stop on the trip could
+          have a stop_sequence of 23, the third stop could have a stop_sequence of
+          40, and so on
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      stopScheduleRelationship:
+        description: 'Property. Describes the relationship between the static schedule
+          and the stop. SameAs: ''schedule_relationship'' field from GTFS Realtime
+          message-StopTimeUpdate ENUM[SCHEDULED, SKIPPED, NO_DATA] (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  RouteInfo:
+    description: 'Property. Updated sorted stop sequence for the trip made by the
+      vehicle corresponding to this observation, not to be considered if schedule_relationship
+      is ''CANCELED''. SameAs: ''stop_time_update'' field from GTFS Realtime message-TripUpdate
+      (https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)'
+    attributes:
+      route_url:
+        description: 'Property. Contains the URL of a web page about that particular
+          route and is different from the agency_url. SameAs: ''route_url'' field
+          from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      route_type:
+        description: 'Property. Number indicating the type of transport- 1 - Subway,
+          Metro. Any underground rail system within a metropolitan area. 2 - Rail.
+          Used for intercity or long-distance travel. 3 - Bus. Used for short- and
+          long-distance bus routes. SameAs: ''route_type'' field from GTFS Static
+          Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)'
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      route_id:
+        description: Property. Route ID assigned to the route on which the bus/vehicle
+          corresponding to the bus in this observation is currently plying on
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      route_long_name:
+        description: 'Property. Full name of a route. This name is more descriptive
+          than the routeShortName and often includes the route''s destination or stop.
+          This mostly includes the to and from destination names of the route. SameAs:
+          ''route_long_name'' field from GTFS Static Field definitions-routes.txt
+          (https://developers.google.com/transit/gtfs/reference#routestxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      route_desc:
+        description: 'Property. Description of the route. This can include the entire
+          route details including to and from destination and timing information in
+          a text description form. SameAs: ''route_desc'' field from GTFS Static Field
+          definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      route_color:
+        description: 'Property. If assigned, this field defines a color that corresponds
+          to a route. The color must be provided as a six-character hexadecimal number,
+          for example, 00FFFF. If no color is specified, the default route color is
+          white (FFFFFF). SameAs: ''route_color'' field from GTFS Static Field definitions-routes.txt
+          (https://developers.google.com/transit/gtfs/reference#routestxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      route_text_color:
+        description: 'Property. This field can be used to specify a legible color
+          to use for text drawn against a background of route_color. The color must
+          be provided as a six-character hexadecimal number, for example, FFD700.
+          If no color is specified, the default text color is black (000000). SameAs:
+          ''route_text_color'' field from GTFS Static Field definitions-routes.txt
+          (https://developers.google.com/transit/gtfs/reference#routestxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      route_short_name:
+        description: 'Property. Short name of a route. This will often be the transit
+          vehicle''s board name like "402D", or "Green" that riders use to identify
+          a route. SameAs: ''route_short_name'' field from GTFS Static Field definitions-routes.txt
+          (https://developers.google.com/transit/gtfs/reference#routestxt)'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+slots:
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/areaServed
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/seeAlso
+  dataDescriptor:
+    description: Relationship. URI pointing to the data-descriptor entity
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/dataDescriptor
+  vehicleType:
+    description: Property. Describes the type of vehicle corresponding to this observation,
+      could be hopper, compactor, tipper, dumper in case of solid waste management
+      vehicles, BRT mini bus, BRT bus, city bus in case of ITMS vehicles, Ambulance,
+      Fire tender, Police van etc, in case of emergency vehicles and Moped/Scooter,
+      Motor Cycle,  Autorickshaw, Private car/ Jeep car, Tempo, Bus, E-Moped/E-Scooter/E-Motor
+      Cycle, Public motor in case of vehicle registration
+    range: vehicleType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/vehicleType
+  trip_details:
+    description: Property. A descriptor of realtime update on the schedule of a vehicle
+      along a trip
+    range: Trip_details
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/trip_details
+  position:
+    description: 'Property. Describes the current position of the vehicle corresponding
+      to this observation. SameAs: position field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition).
+      Model:''https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition'''
+    range: Position
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/position
+  trip_delay:
+    description: 'Property. This can be positive and negative in seconds and shows
+      how much the vehicle deviates from the planned one. SameAs: ''delay'' field
+      from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/trip_delay
+  route_url:
+    description: 'Property. Contains the URL of a web page about that particular route
+      and is different from the agency_url. SameAs: ''route_url'' field from GTFS
+      Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/route_url
+  agency_lang:
+    description: 'Property. Contains a two-letter ISO 639-1 code for the primary language
+      used by this transit agency. The language code is case-insensitive (both en
+      and EN are accepted). SameAs: ''agency_lang'' field from GTFS Static Field Definition
+      - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/agency_lang
+  depot_name:
+    description: Property. Describes the depot name of the bus depot corresponding
+      to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/depot_name
+  travelTime:
+    description: Property. The time taken to travel between the origin location and
+      the destination location corresponding to this observation in HH:MM:SS format(HH:MM:SS
+      is also accepted, if the hour begins with 0)
+    range: time
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/travelTime
+  direction_id:
+    description: 'Property. Indicates the direction of travel of the vehicle corresponding
+      to this observation, can be referenced from the GTFS static feed trips.txt.
+      SameAs: ''direction_id'' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/direction_id
+  schedule_relationship:
+    description: 'Property. Describes if the Route/Trip has been scheduled. SameAs:
+      ''schedule_relationship'' field from enumScheduleRelationship (https://developers.google.com/transit/gtfs-realtime/reference#enum-schedulerelationship-2)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/schedule_relationship
+  stop_sequence_detail:
+    description: 'Property. Describes the stop sequence for a trip in the designated
+      route made by the public transit vehicle.SameAs: ''stop_sequence'' field from
+      GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)'
+    range: Stop_sequence_detail
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/stop_sequence_detail
+  stop_time_update:
+    description: Property. Additional information on the vehicle that is serving this
+      trip
+    range: Stop_time_update
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/stop_time_update
+  trip_update:
+    description: Property. Describes the trip information like delay, departures,
+      etc., for a trip made by the vehicle corresponding to this observation.SameAs:'trip_update'
+      field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity)
+    range: Trip_update
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/trip_update
+  vehicle_id:
+    description: 'Property. Unique ID assigned to the vehicle corresponding to this
+      observation, used in internal system identification. SameAs: ''id'' field from
+      GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/vehicle_id
+  agency_fare_url:
+    description: 'Property. URL of a web page that contains the details of the fares
+      and also could allow to purchase tickets for that agency online. SameAs: ''agency_fare_url''
+      field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/agency_fare_url
+  actual_trip_end_time:
+    description: Property. This field specifies the time at which service or trip
+      corresponding to this observation is scheduled to end
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/actual_trip_end_time
+  last_tracked_time:
+    description: Property. Gives the time at which the vehicle was last tracked
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/last_tracked_time
+  standing_capacity:
+    description: Property. Describes the passenger standing capacity of the vehicle
+      corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/standing_capacity
+  last_stop_arrival_time:
+    description: 'Property. Specifies the arrival time at the previous stop for a
+      specific trip on a route. Times must be eight digits in HH:MM:SS format (H:MM:SS
+      is also accepted, if the hour begins with 0). Note: Trips that span multiple
+      dates will have stop times greater than 24:00:00. For example, if a trip begins
+      at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following day, the stop times
+      would be 22:30:00 and 26:15:00. Entering those stop times as 22:30:00 and 02:15:00
+      would not produce the desired results. This is SameAs: absolute ''time''(StopTimeEvent)
+      in the ''arrival'' field of the stop_time_update (StopTimeUpdate) message of
+      the GTFS Realtime message-TripUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)'
+    range: time
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/last_stop_arrival_time
+  agency_id:
+    description: 'Property. ID that uniquely identifies a transit agency. A transit
+      feed may represent data from more than one agency. The agency_id is dataset
+      unique. This field is optional for transit feeds that only contain data for
+      a single agency. SameAs: ''agency_id'' field from GTFS Static Field Definition
+      - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/agency_id
+  arrival:
+    description: 'Property. If schedule_relationship is empty or SCHEDULED, either
+      arrival or departure must be provided within a StopTimeUpdate. SameAs: ''arrival''
+      field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)'
+    range: TransitManagementArrival
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/arrival
+  current_status:
+    description: 'Property. Describes the status of the vehicle w.r.t the stop corresponding
+      to this observation ENUM: [INCOMING_AT, STOPPED_AT, IN_TRANSIT_TO]. SameAs:''current_status''
+      field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/current_status
+  route_type:
+    description: 'Property. Number indicating the type of transport-1 - Subway, Metro.
+      Any underground rail system within a metropolitan area.2 - Rail. Used for intercity
+      or long-distance travel.3 - Bus. Used for short- and long-distance bus routes.
+      SameAs: ''route_type'' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/route_type
+  speed:
+    description: Property. Gives the Speed  of the vehicle. SameAs 'speed' field from
+      GTFS Realtime message-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/speed
+  route_id:
+    description: 'Property. Route ID assigned to the route on which the bus/vehicle
+      corresponding to the bus in this observation is currently plying on. SameAs:
+      ''route_id'' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/route_id
+  seating_capacity:
+    description: Property. Describes the passenger seating capacity of the vehicle
+      corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/seating_capacity
+  stop_headsign:
+    description: 'Property. This field contains the text that appears on a sign that
+      identifies the trip’s destination to passengers. SameAs: ''stop_headsign'' field
+      from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/stop_headsign
+  vehicle_label:
+    description: 'Property. User visible label, i.e., something that must be shown
+      to the passenger to help identify the correct vehicle. SameAs: ''label'' field
+      from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/vehicle_label
+  entity_id:
+    description: Property. Feed unique ID for the entity corresponding to this observation.SameAs:'entity_id'
+      field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/entity_id
+  timestamp:
+    description: 'Property. Last reported time of observation from the vehicle. SameAs:
+      ''timestamp'' field from GTFS Realtime message-Vehicleposition (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/timestamp
+  arrival_time:
+    description: 'Property. Specifies the arrival time at a specific stop for a specific
+      trip on a route. Times must be eight digits in HH:MM:SS format (HH:MM:SS is
+      also accepted, if the hour begins with 0). Note: Trips that span multiple dates
+      will have stop times greater than 24:00:00. For example, if a trip begins at
+      10:30:00 p.m. and ends at 2:15:00 a.m. on the following day, the stop times
+      would be 22:30:00 and 26:15:00. Entering those stop times as 22:30:00 and 02:15:00
+      would not produce the desired results. SameAs: ''arrival_time'' field from GTFS
+      Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)'
+    range: time
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/arrival_time
+  stop_desc:
+    description: 'Property. This field contains a description of a stop. SameAs: ''stop_desc''
+      field from GTFS Static Field definitions-stops.txt (https://developers.google.com/transit/gtfs/reference#stopstxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/stop_desc
+  vehicleDesc:
+    description: Property. Describes the additional information of the vehicle corresponding
+      to this observation. SameAs:'vehicle' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)/(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)
+    range: TransitManagementVehicleDesc
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/vehicleDesc
+  route_long_name:
+    description: 'Property. Full name of a route. This name is more descriptive than
+      the routeShortName and often includes the route''s destination or stop. This
+      mostly includes the to and from destination names of the route. SameAs: ''route_long_name''
+      field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/route_long_name
+  agency_timezone:
+    description: 'Property. Timezone field contains the timezone where the transit
+      agency is located. SameAs: ''agency_timezone'' field from GTFS Static Field
+      Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/agency_timezone
+  stop_code:
+    description: 'Property. This field contains short text or a number that uniquely
+      identifies the stop for passengers. Can be same as stop_id if it is for public.
+      SameAs: ''stop_code'' field from GTFS Static Field definitions-stops.txt (https://developers.google.com/transit/gtfs/reference#stopstxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/stop_code
+  tripDetails:
+    description: Property. A descriptor of realtime update on the schedule of a vehicle
+      along a trip
+    range: TripDetails
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/tripDetails
+  agency_name:
+    description: 'Property. The agency_name field contains the full name of the transit
+      agency. SameAs: ''agency_name'' field from GTFS Static Field Definition - agency.txt
+      (https://developers.google.com/transit/gtfs/reference#agencytxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/agency_name
+  route_desc:
+    description: 'Property. Description of the route. This can include the entire
+      route details including to and from destination and timing information in a
+      text description form. SameAs: ''route_desc'' field from GTFS Static Field definitions-routes.txt
+      (https://developers.google.com/transit/gtfs/reference#routestxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/route_desc
+  vehicle_position:
+    description: Property. Describes the realtime position of the vehicle corresponding
+      to this observation. SameAs:'vehicle' field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity)
+    range: Vehicle_position
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/vehicle_position
+  license_plate:
+    description: 'Property. Gives the License Plate number of the vehicle. SameAs:
+      ''license_plate'' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/license_plate
+  stop_id:
+    description: 'Property. Stop ID/Stop name of the bus stops corresponding to the
+      bus in this observation. SameAs: ''stop_id'' field from GTFS Realtime message-Vehicleposition
+      (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/stop_id
+  uncertainty:
+    description: 'Property. If uncertainty is omitted, it is interpreted as unknown.
+      To specify a completely certain prediction, set its uncertainty to 0.SameAs:
+      ''uncertainty'' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/uncertainty
+  route_color:
+    description: 'Property. If assigned, this field defines a color that corresponds
+      to a route. The color must be provided as a six-character hexadecimal number,
+      for example, 00FFFF. If no color is specified, the default route color is white
+      (FFFFFF). SameAs: ''route_color'' field from GTFS Static Field definitions-routes.txt
+      (https://developers.google.com/transit/gtfs/reference#routestxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/route_color
+  travelDistance:
+    description: Property. The distance between the origin bus stop and the destination
+      bus stop or the total distance travelled corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/travelDistance
+  actual_trip_start_time:
+    description: 'Property. This field specifies the time at which service actually
+      began.  This is SameAs: absolute ''time''(StopTimeEvent) in the ''arrival''
+      field of the stop_time_update (StopTimeUpdate) message of the GTFS Realtime
+      message-TripUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/actual_trip_start_time
+  bearing:
+    description: Property. Gives the vehicle GPS angle measured in a clockwise direction
+      from the True North. SameAs 'bearing' field from GTFS Realtime message-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/bearing
+  stop_sequence:
+    description: 'Property. Indicates the stop sequence of the vehicle corresponding
+      to this observation, can be referenced from the GTFS static feed stop_times.txt.
+      SameAs: ''stop_sequence'' field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/stop_sequence
+  start_date:
+    description: 'Property. Describes the initial scheduled date of the trip corresponding
+      to the vehicle this observation. An example format for this field - YYYYMMDD.
+      SameAs: ''start_date'' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/start_date
+  current_stop_sequence:
+    description: Property. Gives the stop sequence index of the current stop. This
+      is determined by considering current_status, if current_status is missing IN_TRANSIT_TO
+      is assumed. SameAs:'current_stop_sequence' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/current_stop_sequence
+  start_time:
+    description: 'Property. Describes the initial scheduled start time of the trip
+      corresponding to the vehicle this observation. An example format for this field
+      - 11:15:35 or 25:15:35. SameAs: ''start_time'' field from GTFS Realtime message-TripDescriptor
+      (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+    range: time
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/start_time
+  trip_id:
+    description: 'Property. Trip ID/Trip name allotted to the bus corresponding to
+      this observation, in consideration to the time of the day and the direction
+      of the trip on the given routeId. SameAs: ''trip_id'' field from GTFS Realtime
+      message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/trip_id
+  route_text_color:
+    description: 'Property. This field can be used to specify a legible color to use
+      for text drawn against a background of route_color. The color must be provided
+      as a six-character hexadecimal number, for example, FFD700. If no color is specified,
+      the default text color is black (000000). SameAs: ''route_text_color'' field
+      from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/route_text_color
+  stop_url:
+    description: 'Property. This field contains the URL of a web page about a particular
+      stop and is different from the agency_url and the route_url fields. SameAs:
+      ''stop_url'' field from GTFS Static Field definitions-stops.txt (https://developers.google.com/transit/gtfs/reference#stopstxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/stop_url
+  departure:
+    description: 'Property. If schedule_relationship is empty or SCHEDULED, either
+      arrival or departure must be provided within a StopTimeUpdate. SameAs: ''departure''
+      field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)'
+    range: TransitManagementDeparture
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/departure
+  ac_available:
+    description: Property. Describes the presence of air conditioning option in the
+      vehicle corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/ac_available
+  tripDirection:
+    description: Property. Gives the direction in which the vehicle is travelling
+      in ENUM[UP,DN]
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/tripDirection
+  agency_url:
+    description: 'Property. The agency_url field contains the URL of the transit agency.
+      SameAs: ''agency_url'' field from GTFS Static Field Definition - agency.txt
+      (https://developers.google.com/transit/gtfs/reference#agencytxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/agency_url
+  routeStopSequence:
+    description: Property. Gives the stop ids/stop codes or station ids/station codes
+      in the right sequence for the route or line or trip corresponding to this observation
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/routeStopSequence
+  trip_direction:
+    description: 'Property. Gives the direction in which the vehicle is travelling.
+      SameAs: ''direction_id'' field from GTFS Realtime message-TripDescriptor but
+      is represented in the form of an ENUM[UP,DN] in place of [0,1] as seen in ''direction_id''
+      (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/trip_direction
+  departure_time:
+    description: "Property. Specifies the departure time from a specific stop for\
+      \ a specific trip on a route. Times must be eight digits in HH:MM:SS format\
+      \ (HH:MM:SS is also accepted, if the hour begins with 0). \nNote: Trips that\
+      \ span multiple dates will have stop times greater than 24:00:00. For example,\
+      \ if a trip begins at 10:30:00 p.m. and ends at 2:15:00 a.m. on the following\
+      \ day, the stop times would be 22:30:00 and 26:15:00. Entering those stop times\
+      \ as 22:30:00 and 02:15:00 would not produce the desired results. SameAs: 'departure_time'\
+      \ field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)"
+    range: time
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/departure_time
+  trip:
+    description: Property. Describes the trip the vehicle corresponding to this observation
+      is making. SameAs:'trip' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)
+    range: TransitManagementTrip
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/trip
+  last_stop_id:
+    description: 'Property. Stop ID/Stop name of the previous bus stop corresponding
+      to the bus in this observation. SameAs: ''stop_id'' field from GTFS Realtime
+      message-VehiclePosition (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/last_stop_id
+  standingCapacity:
+    description: Property. Describes the passenger standing capacity of the vehicle
+      corresponding to this observation.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/standingCapacity
+  route_short_name:
+    description: 'Property. Short name of a route. This will often be the transit
+      vehicle''s board name like ''402D'',  or ''Green'' that riders use to identify
+      a route. SameAs: ''route_short_name'' field from GTFS Static Field definitions-routes.txt
+      (https://developers.google.com/transit/gtfs/reference#routestxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/route_short_name
+  stop_name:
+    description: 'Property. Describes the name of the Bus Stop. SameAs: ''stop_name''
+      field from GTFS Static Field definitions-stops.txt (https://developers.google.com/transit/gtfs/reference#stopstxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/stop_name
+  depot_id:
+    description: Property. Describes the unique id of the bus depot corresponding
+      to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/depot_id
+  deviceInfo:
+    description: Property. Model:'https://schema.org/Text. Information about the device
+      associated with the observations
+    range: DeviceInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/deviceInfo
+  observationDateTime:
+    description: Property. Last reported time of observation
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/observationDateTime
+  vehiclePositionInfo:
+    description: Property. Describes the realtime position of the vehicle corresponding
+      to this observation. SameAs:'vehicle' field from GTFS Realtime message-FeedEntity(https://developers.google.com/transit/gtfs-realtime/reference#message-feedentity)
+    range: VehiclePositionInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/vehiclePositionInfo
+  shapeInfo:
+    description: Property. Information about the path the vehicle corresponding to
+      this observation travels along
+    range: ShapeInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/shapeInfo
+  acAvailable:
+    description: Property. Describes the presence of air conditioning option in the
+      vehicle corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/acAvailable
+  stopTimesInfo:
+    description: Property. A descriptor of realtime update on the schedule of a vehicle
+      along a trip
+    range: TransitManagementStopTimesInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/stopTimesInfo
+  arrivalUncertainty:
+    description: 'Property. If schedule_relationship is empty or SCHEDULED, either
+      arrival or departure must be provided within a StopTimeUpdate. SameAs: ''arrival''
+      field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/arrivalUncertainty
+  agencyInfo:
+    description: Property. Agency information corresponding to this observation
+    range: TransitManagementAgencyInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/agencyInfo
+  departureUncertainty:
+    description: 'Property. If schedule_relationship is empty or SCHEDULED, either
+      arrival or departure must be provided within a StopTimeUpdate. SameAs: ''departure''
+      field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/departureUncertainty
+  vehicleInfo:
+    description: Property. Describes the additional information of the vehicle corresponding
+      to this observation. SameAs:'vehicle' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)/(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)
+    range: TransitManagementVehicleInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/vehicleInfo
+  tripInfo:
+    description: Property. Describes the trip the vehicle corresponding to this observation
+      is making. SameAs:'trip' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)
+    range: TransitManagementTripInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/tripInfo
+  positionInfo:
+    description: Property. Describes the current position of the vehicle corresponding
+      to this observation. SameAs:'position' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)
+    range: TransitManagementPositionInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/positionInfo
+  depotName:
+    description: Property. Describes the depot name of the bus depot corresponding
+      to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/depotName
+  depotID:
+    description: Property. Describes the unique id of the bus depot corresponding
+      to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/depotID
+  stopInfo:
+    description: Property. Information about the path the vehicle corresponding to
+      this observation travels along
+    range: TransitManagementStopInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/stopInfo
+  stopTimeUpdateInfo:
+    description: 'Property. Updated sorted stop sequence for the trip made by the
+      vehicle corresponding to this observation, not to be considered if schedule_relationship
+      is ''CANCELED''. SameAs: ''stop_time_update'' field from GTFS Realtime message-TripUpdate
+      (https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)'
+    range: StopTimeUpdateInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/stopTimeUpdateInfo
+  routeInfo:
+    description: 'Property. Updated sorted stop sequence for the trip made by the
+      vehicle corresponding to this observation, not to be considered if schedule_relationship
+      is ''CANCELED''. SameAs: ''stop_time_update'' field from GTFS Realtime message-TripUpdate
+      (https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)'
+    range: RouteInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/routeInfo
+enums:
+  vehicleType_options:
+    name: vehicleType_options
+    permissible_values:
+      agriculturalVehicle:
+        text: agriculturalVehicle
+      ambulance:
+        text: ambulance
+      anyVehicle:
+        text: anyVehicle
+      articulatedVehicle:
+        text: articulatedVehicle
+      autorickshaw:
+        text: autorickshaw
+      bicycle:
+        text: bicycle
+      binTrolley:
+        text: binTrolley
+      BRT mini bus·:
+        text: BRT mini bus·
+      BRT bus:
+        text: BRT bus
+      bus:
+        text: bus
+      car:
+        text: car
+      caravan:
+        text: caravan
+      carOrLightVehicle:
+        text: carOrLightVehicle
+      carWithCaravan:
+        text: carWithCaravan
+      carWithTrailer:
+        text: carWithTrailer
+      cleaningTrolley:
+        text: cleaningTrolley
+      compactor:
+        text: compactor
+      constructionOrMaintenanceVehicle:
+        text: constructionOrMaintenanceVehicle
+      dumper:
+        text: dumper
+      e-moped:
+        text: e-moped
+      e-scooter:
+        text: e-scooter
+      e-motorcycle:
+        text: e-motorcycle
+      fireTender:
+        text: fireTender
+      fourWheelDrive:
+        text: fourWheelDrive
+      highSidedVehicle:
+        text: highSidedVehicle
+      hopper:
+        text: hopper
+      lorry:
+        text: lorry
+      minibus:
+        text: minibus
+      moped:
+        text: moped
+      motorcycle:
+        text: motorcycle
+      motorcycleWithSideCar:
+        text: motorcycleWithSideCar
+      motorscooter:
+        text: motorscooter
+      policeVan:
+        text: policeVan
+      publicMotor:
+        text: publicMotor
+      sweepingMachine:
+        text: sweepingMachine
+      tanker:
+        text: tanker
+      tempo:
+        text: tempo
+      threeWheeledVehicle:
+        text: threeWheeledVehicle
+      tipper:
+        text: tipper
+      trailer:
+        text: trailer
+      tram:
+        text: tram
+      trolley:
+        text: trolley
+      twoWheeledVehicle:
+        text: twoWheeledVehicle
+      van:
+        text: van
+      vehicleWithoutCatalyticConverter:
+        text: vehicleWithoutCatalyticConverter
+      vehicleWithCaravan:
+        text: vehicleWithCaravan
+      vehicleWithTrailer:
+        text: vehicleWithTrailer
+      withEvenNumberedRegistrationPlates:
+        text: withEvenNumberedRegistrationPlates
+      withOddNumberedRegistrationPlates:
+        text: withOddNumberedRegistrationPlates
+      other:
+        text: other

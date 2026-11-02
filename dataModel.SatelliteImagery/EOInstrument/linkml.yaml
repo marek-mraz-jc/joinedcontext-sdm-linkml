@@ -1,0 +1,157 @@
+id: https://github.com/smart-data-models/dataModel.SatelliteImagery/EOInstrument
+name: EOInstrument
+title: Satellite Imagery - EOInstrument
+description: This entity contains a harmonised description of a generic EOInstrument
+  made for the Satellite Imagerry domain. This entity is primarily associated with
+  the satellite instruments related to Earth Observation Analysis applications.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.SatelliteImagery
+  spec.source.path: EOInstrument/schema.json
+  spec.source.commit: a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.SatelliteImagery/master/context.jsonld"],
+    "carriedOn": {"object": "urn:ngsi-ld:EOSatellitePlatform:154", "type": "Relationship"},
+    "id": "urn:ngsi-ld:EOInstrument:154", "instrumentID": {"type": "Property", "value":
+    "SAR-C"}, "instrumentName": {"type": "Property", "value": "Synthetic Aperture
+    Radar (C-band)"}, "operationalMode": {"type": "Property", "value": "IW"}, "polarizationMode":
+    {"type": "Property", "value": "VV + VH"}, "swathID": {"type": "Property", "value":
+    "S1"}, "type": "EOInstrument"}'
+classes:
+  EOInstrument:
+    class_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/EOInstrument
+    description: This entity contains a harmonised description of a generic EOInstrument
+      made for the Satellite Imagerry domain. This entity is primarily associated
+      with the satellite instruments related to Earth Observation Analysis applications.
+    is_a: Entity
+    slots:
+    - alternateName
+    - carriedOn
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - instrumentID
+    - instrumentName
+    - name
+    - operationalMode
+    - owner
+    - polarizationMode
+    - seeAlso
+    - source
+    - swathID
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/seeAlso
+  instrumentID:
+    description: Property. Model:'https://schema.org/Text'. A mandatory text string
+      used to declare the ID of the instrument payload
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/instrumentID
+  instrumentName:
+    description: Property. Model:'https://schema.org/Text'. A mandatory text string
+      used to declare the name of the instrument payload
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/instrumentName
+  operationalMode:
+    description: Property. Model:'https://schema.org/Text'. A text string used to
+      declare the supported sensor modes if available
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/operationalMode
+  polarizationMode:
+    description: Property. Model:'https://schema.org/Text'. A text string used to
+      declare the polarization modes if available
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/polarizationMode
+  swathID:
+    description: Property. Model:'https://schema.org/Text'. A text string used to
+      declare the swath ID if available
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/swathID
+  carriedOn:
+    description: Relationship. The ID of the satellite platform that the instrument
+      is carried on
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/carriedOn

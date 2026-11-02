@@ -1,0 +1,307 @@
+id: https://github.com/smart-data-models/dataModel.IssueTracking/IssueReporting
+name: IssueReporting
+title: Smart Data models - IssueReporting schema
+description: A Data Model for citizen issues, reports and feedbacks.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.IssueTracking
+  spec.source.path: IssueReporting/schema.json
+  spec.source.commit: 37cd76540e7a33a93101a8862b58929efe5548da
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/context.jsonld"],
+    "category": {"type": "Property", "value": "Maintenance"}, "categoryCode": {"type":
+    "Property", "value": "112"}, "comments": {"type": "Property", "value": "Road not
+    in proper condition"}, "departmentId": {"type": "Property", "value": "12"}, "id":
+    "urn:ngsi-ld:xYBR:0102", "landmark": {"type": "Property", "value": "Near St.Andrews
+    Church"}, "mediaURL": {"type": "Property", "value": "https://imgur.com"}, "observationDateTime":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2021-03-11T15:51:02+05:30"}},
+    "reportId": {"type": "Property", "value": "21645"}, "resolutionStatus": {"type":
+    "Property", "value": "Assigned"}, "subCategory": {"type": "Property", "value":
+    "Road Repair"}, "subCategoryCode": {"type": "Property", "value": "RM"}, "title":
+    {"type": "Property", "value": "Road maintenance"}, "titleCode": {"type": "Property",
+    "value": "RDM"}, "type": "IssueReporting", "wardId": {"type": "Property", "value":
+    "4"}}'
+classes:
+  IssueReporting:
+    class_uri: https://smartdatamodels.org/dataModel.IssueTracking/IssueReporting
+    description: A Data Model for citizen issues, reports and feedbacks.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - category
+    - categoryCode
+    - comments
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - departmentId
+    - description
+    - landmark
+    - mediaURL
+    - name
+    - observationDateTime
+    - owner
+    - reportId
+    - resolutionStatus
+    - seeAlso
+    - source
+    - subCategory
+    - subCategoryCode
+    - title
+    - titleCode
+    - wardId
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/areaServed
+  comments:
+    description: Property. Model:'https://schema.org/Text'. User comments corresponding
+      to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/comments
+  wardId:
+    description: Property. Model:'https://schema.org/Text'. Ward ID of the entity
+      corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/wardId
+  departmentId:
+    description: Property. Model:'https://schema.org/Text'. Unique ID or code associated
+      with the department which is associated with the service or the issue corresponding
+      to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/departmentId
+  title:
+    description: Property. Model:'https://schema.org/Text'. The title assigned to
+      the issue, report or feedback corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: http://purl.org/dc/terms/title
+  subCategoryCode:
+    description: Property. Model:'https://schema.org/Text'. Unique identifier for
+      the sub-category corresponding to the issue reported
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/subCategoryCode
+  titleCode:
+    description: Property. Model:'https://schema.org/Text'. The code assigned to the
+      title corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/titleCode
+  subCategory:
+    description: Property. Model:'https://schema.org/Text'. The sub-category name
+      corresponding to the issue that has been reported
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/subCategory
+  reportId:
+    description: Property. Model:'https://schema.org/Text'. Unique ID assigned for
+      the issue or report or feedback or transaction corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/reportId
+  categoryCode:
+    description: Property. Model:'https://schema.org/Text'. Unique identifier for
+      the category corresponding to the issue reported
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/categoryCode
+  category:
+    description: Property. Model:'https://schema.org/Text'. The category name corresponding
+      to the issue that has been reported
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/category
+  landmark:
+    description: Property. Model:'https://schema.org/Text'. A physical distinguishing
+      feature on land that marks a locality or a place
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/landmark
+  observationDateTime:
+    description: Property. Model:'https://schema.org/Text'. Last reported time of
+      observation
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/observationDateTime
+  mediaURL:
+    description: Property. Model:'https://schema.org/Text'. URL providing further
+      information of any image(s) or media of the complaint or place
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/mediaURL
+  resolutionStatus:
+    description: Property. Model:'https://schema.org/Text. Status of the issue that
+      was reported in terms of resolution or the actions taken on it. Could be Open,
+      Assigned, InProgress, Unassigned, Closed
+    range: resolutionStatus_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/resolutionStatus
+enums:
+  resolutionStatus_options:
+    name: resolutionStatus_options
+    permissible_values:
+      Assigned:
+        text: Assigned
+      Closed.:
+        text: Closed.
+      InProgress:
+        text: InProgress
+      Open:
+        text: Open
+      Unassigned:
+        text: Unassigned

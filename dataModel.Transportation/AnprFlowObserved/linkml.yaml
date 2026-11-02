@@ -1,0 +1,396 @@
+id: https://github.com/smart-data-models/dataModel.Transportation/AnprFlowObserved
+name: AnprFlowObserved
+title: ANPR Flow Observed schema
+description: The data model represents an observation linked to the passing of a vehicle
+  at a certain location and at a given time. This Data Model is based on the [dataModel.Transportation/ItemFlowObserved],
+  extended with ANPR specific properties and links to the observation images.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Transportation
+  spec.source.path: AnprFlowObserved/schema.json
+  spec.source.commit: 48e0e7ebaaee430f04a47efb27fc38825f79b725
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "BE", "addressLocality":
+    "Antwerp", "streetAddress": "Noorderlaan"}}, "areaServed": {"type": "Property",
+    "value": "Antwerp"}, "dateObserved": {"type": "Property", "value": {"@type": "DateTime",
+    "@value": "2022-09-01T16:30:00Z"}}, "id": "anprFlowObserved:LEZ-Noorderlaan",
+    "laneId": {"type": "Property", "value": "ABC123"}, "observedVehicle": {"type":
+    "Property", "value": {"brand": "Audi", "color": "black", "country": "BE", "direction":
+    "towards", "licensePlate": "1-ABC-123", "model": "A3", "plateColor": "white",
+    "speed": 50}}, "refImages": {"type": "Property", "value": [{"contentType": "image/jpg",
+    "imageType": "anpr", "type": "s3://bucket/object-xxx-plate"}]}, "type": "AnprFlowObserved",
+    "vehiclePlateNotRead": {"type": "Property", "value": false}, "zonesServed": {"type":
+    "Property", "value": {"coordinates": ["Antwerp"], "type": "string"}}}'
+classes:
+  AnprFlowObserved:
+    class_uri: https://smartdatamodels.org/dataModel.Transportation/AnprFlowObserved
+    description: The data model represents an observation linked to the passing of
+      a vehicle at a certain location and at a given time. This Data Model is based
+      on the [dataModel.Transportation/ItemFlowObserved], extended with ANPR specific
+      properties and links to the observation images.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - dateObserved
+    - dateReceived
+    - description
+    - laneId
+    - name
+    - observedBy
+    - observedVehicle
+    - owner
+    - refImages
+    - seeAlso
+    - source
+    - vehiclePlateNotRead
+    - zonesServed
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  Brand:
+    description: Property. Detected brand of the observed vehicle
+    attributes:
+      name:
+        description: Property. Brand name identified
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      confidence:
+        description: Property. Confidence level of the detection
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  Model:
+    description: Property. Detected brand model of the observed vehicle
+    attributes:
+      name:
+        description: Property. Model name
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      confidence:
+        description: Property. Confidence level of the detection
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  Color:
+    description: Property. Detected color of the observed vehicle
+    attributes:
+      name:
+        description: Property. Color name
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      confidence:
+        description: Property. Confidence level of the detection
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  Country:
+    description: Property. Detected country of the observed vehicle
+    attributes:
+      code:
+        description: Property. Country code according to ISO 3166-1 alpha-2
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      confidence:
+        description: Property. Confidence level of the detection
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  LicensePlate:
+    description: Property. Detected license plate of the observed vehicle
+    attributes:
+      identifier:
+        description: Property. License plate identifier
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      confidence:
+        description: Property. Confidence level of the detection
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      coordinates:
+        description: Property. Sequence of position points describing this location,
+          expressed in coordinate system
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  PlateColor:
+    description: Property. Detected plate color of the observed vehicle
+    attributes:
+      name:
+        description: Property. Color name
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      confidence:
+        description: Property. Confidence level of the detection
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  ObservedVehicle:
+    description: Property. Information about the observed vehicle
+    attributes:
+      direction:
+        description: Property. Detected direction of the observed vehicle
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      speed:
+        description: Property. Detected speed of the observed vehicle
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      brand:
+        description: Property. Detected brand of the observed vehicle
+        range: Brand
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      model:
+        description: Property. Detected brand model of the observed vehicle
+        range: Model
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      color:
+        description: Property. Detected color of the observed vehicle
+        range: Color
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      country:
+        description: Property. Detected country of the observed vehicle
+        range: Country
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      licensePlate:
+        description: Property. Detected license plate of the observed vehicle
+        range: LicensePlate
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      plateColor:
+        description: Property. Detected plate color of the observed vehicle
+        range: PlateColor
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/areaServed
+  dateObserved:
+    description: Property. Date of the observed entity defined by the user
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateObserved
+  dateReceived:
+    description: Property. Timestamp when the observation has been received by the
+      platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/dateReceived
+  observedBy:
+    description: Relationship. The entity or device which has reported this observation
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/observedBy
+  laneId:
+    description: Property. Lane identifier. Lane identification provided by the observer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/laneId
+  zonesServed:
+    description: Property. Array of zones that are able to receive or read the observations
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/zonesServed
+  vehiclePlateNotRead:
+    description: Property. Indicates if a license could not be read
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/vehiclePlateNotRead
+  observedVehicle:
+    description: Property. Information about the observed vehicle
+    range: ObservedVehicle
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/observedVehicle
+  refImages:
+    description: Relationship. Array of multiple objects that refer to images
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/refImages

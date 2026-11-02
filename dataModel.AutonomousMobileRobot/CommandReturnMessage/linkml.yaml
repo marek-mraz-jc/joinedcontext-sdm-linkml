@@ -1,0 +1,77 @@
+id: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/CommandReturnMessage
+name: CommandReturnMessage
+title: Command return message ported to Smart Data Models
+description: Command return message
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot
+  spec.source.path: CommandReturnMessage/schema.json
+  spec.source.commit: fa7f44ecefe4c2825ce719a62b2ce2b684402950
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.AutonomousMobileRobot/master/context.jsonld"],
+    "commandTime": {"type": "Property", "value": {"@type": "Date-Time", "@value":
+    "2019-06-07T08:39:42.921+09:00"}}, "errors": {"type": "Property", "value": [""]},
+    "id": "urn:ngsi-ld:Robot:Mega_rover:01", "receivedCommand": {"type": "Property",
+    "value": "navi"}, "receivedTime": {"type": "Property", "value": {"@type": "Date-Time",
+    "@value": "2019-06-07T08:39:40.064+09:00"}}, "receivedWaypoints": {"type": "Property",
+    "value": [{"point2D": {"x": 0.503, "y": 0.0}}, {"point2D": {"x": 3.411, "y": 0.0}},
+    {"orientation2D": {"theta": 0.0}, "point2D": {"x": 3.411, "y": 2.81}}]}, "result":
+    {"type": "Property", "value": "ack"}, "type": "CommandReturnMessage"}'
+classes:
+  CommandReturnMessage:
+    class_uri: https://smartdatamodels.org/dataModel.AutonomousMobileRobot/CommandReturnMessage
+    description: Command return message
+    is_a: Entity
+    slots:
+    - commandTime
+    - errors
+    - receivedCommand
+    - receivedTime
+    - receivedWaypoints
+    - result
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+slots:
+  commandTime:
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+    slot_uri: https://smartdatamodels.org/dataModel.AutonomousMobileRobot/commandTime
+  receivedTime:
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+    slot_uri: https://smartdatamodels.org/dataModel.AutonomousMobileRobot/receivedTime
+  result:
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+    slot_uri: https://smartdatamodels.org/dataModel.AutonomousMobileRobot/result
+  errors:
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+    slot_uri: https://uri.etsi.org/ngsi-ld/errors
+  receivedCommand:
+    description: Property. The command which the robot received
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+    slot_uri: https://smartdatamodels.org/dataModel.AutonomousMobileRobot/receivedCommand
+  receivedWaypoints:
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+    slot_uri: https://smartdatamodels.org/dataModel.AutonomousMobileRobot/receivedWaypoints

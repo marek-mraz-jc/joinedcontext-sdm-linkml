@@ -1,0 +1,205 @@
+id: https://github.com/smart-data-models/dataModel.Multimedia/MediaEvent
+name: MediaEvent
+title: Smart Data Models - Media / Media Event
+description: Base for all events raised by elements in the media server
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Multimedia
+  spec.source.path: MediaEvent/schema.json
+  spec.source.commit: 621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Multimedia/master/context.jsonld"],
+    "dateCreated": {"type": "Property", "value": {"@type": "date-time", "@value":
+    "2017-11-03T10:45:23Z"}}, "eventType": {"type": "Property", "value": "plate-detected"},
+    "id": "mediaEvent_1509702324600", "mediaSource": {"type": "Property", "value":
+    {"creationTime": "2017-11-03T10:45:19Z", "name": "03ea110c-0ab2-4b19-8618-57f474721c86_kurento.MediaPipeline/28e4ae84-4e96-43bb-a812-538f7950b75f_platedetector.PlateDetectorFilter",
+    "parent": {"creationTime": "2017-11-03T10:45:19Z", "name": "03ea110c-0ab2-4b19-8618-57f474721c86_kurento.MediaPipeline",
+    "sendTagsInEvents": false}, "sendTagsInEvents": false}}, "type": "MediaEvent"}'
+classes:
+  MediaEvent:
+    class_uri: https://smartdatamodels.org/dataModel.Multimedia/MediaEvent
+    description: Base for all events raised by elements in the media server
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - data
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - deviceSource
+    - eventType
+    - name
+    - observedEntities
+    - owner
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+    slot_uri: https://smartdatamodels.org/areaServed
+  eventType:
+    description: 'Property. Model:''https://schema.org/Text''. Type of event that
+      was raised. (ie: PlateDetectionEvent, ColourDetectionEvent, etc'
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+    slot_uri: https://smartdatamodels.org/dataModel.Multimedia/eventType
+  data:
+    description: Property. Model:'https://schema.org/StructuredValue'. Model:'http://schema.org/StructuredValue'.
+      Any serializable object that is attached to the event. Eg:plate-number + Attribute
+      type
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+    slot_uri: https://uri.etsi.org/ngsi-ld/data
+  deviceSource:
+    description: 'Relationship. Model:''https://schema.org/URL''. Link to the device
+      providing the data source '
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+    slot_uri: https://smartdatamodels.org/dataModel.Multimedia/deviceSource
+  observedEntities:
+    description: Property. Model:'https://schema.org/StructuredValue'. Array of model
+      Entities created updated or just observed by this event
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Multimedia@621fad5ca28b83b039e25cddb0b020f3bb4ceeae
+    slot_uri: https://smartdatamodels.org/dataModel.Multimedia/observedEntities

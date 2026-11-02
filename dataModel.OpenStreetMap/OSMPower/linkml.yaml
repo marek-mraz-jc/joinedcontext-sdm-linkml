@@ -1,0 +1,287 @@
+id: https://github.com/smart-data-models/dataModel.OpenStreetMap/OSMPower
+name: OSMPower
+title: Smart Data Models - OpenStreetMap / OSMPower
+description: Facilities for generation and distribution of electrical power from OpenStreetMap
+  tagged with power=*. This data model is a derivative work based on the OpenStreetMap
+  Wiki, licensed under CC BY-SA 2.0 by OpenStreetMap contributors.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OpenStreetMap
+  spec.source.path: OSMPower/schema.json
+  spec.source.commit: 5188df53c66d3c9f2441b6cffea0b604364ace68
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.OpenStreetMap/refs/heads/master/context.jsonld"],
+    "cables": {"type": "Property", "value": 6}, "id": "urn:ngsi-ld:OSMPower:way:4556677",
+    "location": {"type": "GeoProperty", "value": {"coordinates": [[-3.63, 40.54],
+    [-3.62, 40.535], [-3.61, 40.525]], "type": "LineString"}}, "name": {"type": "Property",
+    "value": "L\u00ednea Alta Tensi\u00f3n San Sebasti\u00e1n de los Reyes"}, "operator":
+    {"type": "Property", "value": "Red El\u00e9ctrica de Espa\u00f1a"}, "osmId": {"type":
+    "Property", "value": 4556677}, "osmLastModified": {"type": "Property", "value":
+    "2023-01-10T09:30:00Z"}, "osmType": {"type": "Property", "value": "way"}, "powerType":
+    {"type": "Property", "value": "line"}, "seeAlso": {"type": "Property", "value":
+    ["https://www.openstreetmap.org/way/4556677"]}, "source": {"type": "Property",
+    "value": "https://www.openstreetmap.org"}, "type": "OSMPower", "voltage": {"type":
+    "Property", "value": 400000.0}}'
+classes:
+  OSMPower:
+    class_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/OSMPower
+    description: Facilities for generation and distribution of electrical power from
+      OpenStreetMap tagged with power=*. This data model is a derivative work based
+      on the OpenStreetMap Wiki, licensed under CC BY-SA 2.0 by OpenStreetMap contributors.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - cables
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - line
+    - name
+    - operator
+    - osmId
+    - osmLastModified
+    - osmType
+    - owner
+    - powerType
+    - seeAlso
+    - source
+    - voltage
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. List of URIs pointing to additional resources.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/areaServed
+  osmId:
+    description: Property. The original OpenStreetMap element integer identifier.
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmId
+  osmType:
+    description: Property. The type of the original OSM element.
+    range: osmType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmType
+  osmLastModified:
+    description: Property. Timestamp of the last modification.
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmLastModified
+  powerType:
+    description: Property. The OSM power tag classifying the electrical feature. Model:'https://wiki.openstreetmap.org/wiki/Key:power'
+    range: powerType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/powerType
+  voltage:
+    description: Property. Operating voltage of the equipment in volts. Used directly
+      for numbers, parses 'voltage' OSM tag. Model:'https://wiki.openstreetmap.org/wiki/Key:voltage'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/voltage
+  cables:
+    description: Property. Number of cables on a power line. Model:'https://wiki.openstreetmap.org/wiki/Key:cables'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/cables
+  operator:
+    description: Property. The company or utility managing the power equipment.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/operator
+  line:
+    description: Property. Type of power line within a substation. Model:'https://wiki.openstreetmap.org/wiki/Key:line'
+    range: line_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/line
+enums:
+  osmType_options:
+    name: osmType_options
+    permissible_values:
+      node:
+        text: node
+      way:
+        text: way
+      relation:
+        text: relation
+  powerType_options:
+    name: powerType_options
+    permissible_values:
+      plant:
+        text: plant
+      generator:
+        text: generator
+      line:
+        text: line
+      minor_line:
+        text: minor_line
+      pole:
+        text: pole
+      tower:
+        text: tower
+      substation:
+        text: substation
+      transformer:
+        text: transformer
+      cable:
+        text: cable
+      switch:
+        text: switch
+      insulator:
+        text: insulator
+  line_options:
+    name: line_options
+    permissible_values:
+      busbar:
+        text: busbar
+      bay:
+        text: bay

@@ -1,0 +1,202 @@
+id: https://github.com/smart-data-models/dataModel.Agrifood/AgriCrop
+name: AgriCrop
+title: Smart Data Models - Agri Food
+description: This entity contains a harmonised description of a generic crop. This
+  entity is primarily associated with the agricultural vertical and related IoT applications.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Agrifood
+  spec.source.path: AgriCrop/schema.json
+  spec.source.commit: e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"],
+    "agroVocConcept": {"type": "Property", "value": "http://aims.fao.org/aos/agrovoc/c_7951"},
+    "alternateName": {"type": "Property", "value": "Triticum aestivum"}, "description":
+    {"type": "Property", "value": "Spring wheat"}, "harvestingInterval": {"type":
+    "Property", "value": [{"dateRange": "-03-21/-04-01", "description": "Best Season"},
+    {"dateRange": "-04-02/-04-15", "description": "Season OK"}]}, "hasAgriFertiliser":
+    {"object": ["urn:ngsi-ld:AgriFertiliser:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",
+    "urn:ngsi-ld:AgriFertiliser:380973c8-4d3b-4723-a899-0c0c5cc63e7e"], "type": "Relationship"},
+    "hasAgriPest": {"object": ["urn:ngsi-ld:AgriPest:1b0d6cf7-320c-4a2b-b2f1-4575ea850c73",
+    "urn:ngsi-ld:AgriPest:380973c8-4d3b-4723-a899-0c0c5cc63e7e"], "type": "Relationship"},
+    "hasAgriSoil": {"object": ["urn:ngsi-ld:AgriSoil:00411b56-bd1b-4551-96e0-a6e7fde9c840",
+    "urn:ngsi-ld:AgriSoil:e8a8389a-edf5-4345-8d2c-b98ac1ce8e2a"], "type": "Relationship"},
+    "id": "urn:ngsi-ld:AgriCrop:df72dc57-1eb9-42a3-88a9-8647ecc954b4", "name": {"type":
+    "Property", "value": "Wheat"}, "plantingFrom": {"type": "Property", "value": [{"dateRange":
+    "-09-28/-10-12", "description": "Best Season"}, {"dateRange": "-10-11/-10-18",
+    "description": "Season OK"}]}, "relatedSource": {"type": "Property", "value":
+    [{"application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a", "applicationEntityId":
+    "app:weat"}]}, "seeAlso": {"type": "Property", "value": ["https://example.org/concept/wheat",
+    "https://datamodel.org/example/wheat"]}, "type": "AgriCrop", "wateringFrequency":
+    {"type": "Property", "value": "daily"}}'
+classes:
+  AgriCrop:
+    class_uri: https://smartdatamodels.org/dataModel.Agrifood/AgriCrop
+    description: This entity contains a harmonised description of a generic crop.
+      This entity is primarily associated with the agricultural vertical and related
+      IoT applications.
+    is_a: Entity
+    slots:
+    - agroVocConcept
+    - alternateName
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - harvestingInterval
+    - hasAgriFertiliser
+    - hasAgriPest
+    - hasAgriSoil
+    - name
+    - owner
+    - plantingFrom
+    - seeAlso
+    - source
+    - wateringFrequency
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/seeAlso
+  agroVocConcept:
+    description: Property. Model:'http://schema.org/URL'. The link with the defined
+      concept into the AgroVoc vocabulary
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/agroVocConcept
+  hasAgriSoil:
+    description: Relationship. Model:'http://schema.org/URL'. Reference to the recommended
+      types of soil suitable for growing this crop
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/hasAgriSoil
+  hasAgriFertiliser:
+    description: Relationship. Model:'http://schema.org/URL'. Reference to the recommended
+      types of fertiliser suitable for growing this crop
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/hasAgriFertiliser
+  hasAgriPest:
+    description: Relationship. Reference to the pests known to attack this crop. Model:'https://schema.org/URL'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/hasAgriPest
+  harvestingInterval:
+    description: 'Property. Model:''http://schema.org/URL''. A list of the recommended
+      harvesting interval date(s) for this crop. Specified using ISO8601 repeating
+      date intervals: <br/><br/>**interval, description**<br/><br/>Where **interval**
+      is in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning
+      repeat each year from this start date to this end date'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/harvestingInterval
+  plantingFrom:
+    description: 'Property. Model:''http://schema.org/URL''. A list of the recommended
+      planting interval date(s) for this crop. Specified using ISO8601 repeating date
+      intervals: <br/><br/>**interval, description**<br/><br/>Where **interval** is
+      in the form of **start date/end date**<br/><br/>--MM-DD/--MM-DD<br/><br/>Meaning
+      repeat each year from this start date to this end date'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/plantingFrom
+  wateringFrequency:
+    description: 'Property. Model:''http://schema.org/URL''. Units:''''. A description
+      of the recommended watering schedule. A choice from an enumerated list. One
+      of: **daily, weekly, biweekly, monthly, onDemand, other**. Enum:''daily, weekly,
+      biweekly, monthly, onDemand,    other'''
+    range: wateringFrequency_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/wateringFrequency
+enums:
+  wateringFrequency_options:
+    name: wateringFrequency_options
+    permissible_values:
+      daily:
+        text: daily
+      weekly:
+        text: weekly
+      biweekly:
+        text: biweekly
+      monthly:
+        text: monthly
+      onDemand:
+        text: onDemand
+      other:
+        text: other

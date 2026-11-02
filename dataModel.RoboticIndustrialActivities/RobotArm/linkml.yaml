@@ -1,0 +1,896 @@
+id: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities/RobotArm
+name: RobotArm
+title: ' Smart Data Models- Industrial robot arm schema'
+description: A robotic arm for moving stone pieces.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities
+  spec.source.path: RobotArm/schema.json
+  spec.source.commit: f82832793e05695366516cd6016a56c144d6fcf2
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.RoboticIndustrialActivities/master/context.jsonld"],
+    "angleAxis1": {"type": "Property", "value": 10}, "angleAxis2": {"type": "Property",
+    "value": 20}, "angleAxis3": {"type": "Property", "value": 30}, "angleAxis4": {"type":
+    "Property", "value": 40}, "angleAxis5": {"type": "Property", "value": 50}, "angleAxis6":
+    {"type": "Property", "value": 60}, "baseA": {"type": "Property", "value": false},
+    "baseB": {"type": "Property", "value": false}, "baseC": {"type": "Property", "value":
+    false}, "baseX": {"type": "Property", "value": false}, "baseY": {"type": "Property",
+    "value": false}, "baseZ": {"type": "Property", "value": false}, "drivesOff": {"type":
+    "Property", "value": true}, "drivesOn": {"type": "Property", "value": false},
+    "emergencyStop": {"type": "Property", "value": false}, "estimatedCurrentAxis1":
+    {"type": "Property", "value": 0.1}, "estimatedCurrentAxis2": {"type": "Property",
+    "value": 0.2}, "estimatedCurrentAxis3": {"type": "Property", "value": 0.3}, "estimatedCurrentAxis4":
+    {"type": "Property", "value": 0.4}, "estimatedCurrentAxis5": {"type": "Property",
+    "value": 0.5}, "estimatedCurrentAxis6": {"type": "Property", "value": 0.6}, "id":
+    "urn:ngsi-ld:Robot:FlexEdgeRobot", "maxTorqueAxis1": {"type": "Property", "value":
+    4500}, "maxTorqueAxis2": {"type": "Property", "value": 4500}, "maxTorqueAxis3":
+    {"type": "Property", "value": 4500}, "maxTorqueAxis4": {"type": "Property", "value":
+    4500}, "maxTorqueAxis5": {"type": "Property", "value": 4500}, "maxTorqueAxis6":
+    {"type": "Property", "value": 4500}, "maxVelocityAxis1": {"type": "Property",
+    "value": 100}, "maxVelocityAxis2": {"type": "Property", "value": 100}, "maxVelocityAxis3":
+    {"type": "Property", "value": 100}, "maxVelocityAxis4": {"type": "Property", "value":
+    100}, "maxVelocityAxis5": {"type": "Property", "value": 100}, "maxVelocityAxis6":
+    {"type": "Property", "value": 100}, "measuredCurrentAxis1": {"type": "Property",
+    "value": 0.1}, "measuredCurrentAxis2": {"type": "Property", "value": 0.2}, "measuredCurrentAxis3":
+    {"type": "Property", "value": 0.3}, "measuredCurrentAxis4": {"type": "Property",
+    "value": 0.4}, "measuredCurrentAxis5": {"type": "Property", "value": 0.5}, "measuredCurrentAxis6":
+    {"type": "Property", "value": 0.6}, "operatingMode": {"type": "Property", "value":
+    "#AUT"}, "peripheryReady": {"type": "Property", "value": true}, "positionA": {"type":
+    "Property", "value": 20}, "positionB": {"type": "Property", "value": 10}, "positionC":
+    {"type": "Property", "value": 15}, "positionX": {"type": "Property", "value":
+    45}, "positionY": {"type": "Property", "value": 100}, "positionZ": {"type": "Property",
+    "value": 200}, "proState0": {"type": "Property", "value": "#P_FREE"}, "proState1":
+    {"type": "Property", "value": "#P_FREE"}, "serialNumber": {"type": "Property",
+    "value": 876543}, "targetPositionA": {"type": "Property", "value": 20}, "targetPositionB":
+    {"type": "Property", "value": 10}, "targetPositionC": {"type": "Property", "value":
+    15}, "targetPositionX": {"type": "Property", "value": 45}, "targetPositionY":
+    {"type": "Property", "value": 100}, "targetPositionZ": {"type": "Property", "value":
+    200}, "toolA": {"type": "Property", "value": 11}, "toolB": {"type": "Property",
+    "value": 33}, "toolC": {"type": "Property", "value": 22}, "toolX": {"type": "Property",
+    "value": 20}, "toolY": {"type": "Property", "value": 200}, "toolZ": {"type": "Property",
+    "value": 100}, "torqueAxis1": {"type": "Property", "value": 1500}, "torqueAxis2":
+    {"type": "Property", "value": 1000}, "torqueAxis3": {"type": "Property", "value":
+    300}, "torqueAxis4": {"type": "Property", "value": false}, "torqueAxis5": {"type":
+    "Property", "value": false}, "torqueAxis6": {"type": "Property", "value": false},
+    "type": "RobotArm", "velocityAxis1": {"type": "Property", "value": 6}, "velocityAxis2":
+    {"type": "Property", "value": 5}, "velocityAxis3": {"type": "Property", "value":
+    4}, "velocityAxis4": {"type": "Property", "value": 3}, "velocityAxis5": {"type":
+    "Property", "value": 2}, "velocityAxis6": {"type": "Property", "value": true}}'
+classes:
+  RobotArm:
+    class_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/RobotArm
+    description: A robotic arm for moving stone pieces.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - angleAxis1
+    - angleAxis2
+    - angleAxis3
+    - angleAxis4
+    - angleAxis5
+    - angleAxis6
+    - areaServed
+    - baseA
+    - baseB
+    - baseC
+    - baseX
+    - baseY
+    - baseZ
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - drivesOff
+    - drivesOn
+    - emergencyStop
+    - estimatedCurrentAxis1
+    - estimatedCurrentAxis2
+    - estimatedCurrentAxis3
+    - estimatedCurrentAxis4
+    - estimatedCurrentAxis5
+    - estimatedCurrentAxis6
+    - maxTorqueAxis1
+    - maxTorqueAxis2
+    - maxTorqueAxis3
+    - maxTorqueAxis4
+    - maxTorqueAxis5
+    - maxTorqueAxis6
+    - maxVelocityAxis1
+    - maxVelocityAxis2
+    - maxVelocityAxis3
+    - maxVelocityAxis4
+    - maxVelocityAxis5
+    - maxVelocityAxis6
+    - measuredCurrentAxis1
+    - measuredCurrentAxis2
+    - measuredCurrentAxis3
+    - measuredCurrentAxis4
+    - measuredCurrentAxis5
+    - measuredCurrentAxis6
+    - name
+    - operatingMode
+    - owner
+    - peripheryReady
+    - positionA
+    - positionB
+    - positionC
+    - positionX
+    - positionY
+    - positionZ
+    - proState0
+    - proState1
+    - seeAlso
+    - serialNumber
+    - source
+    - targetPositionA
+    - targetPositionB
+    - targetPositionC
+    - targetPositionX
+    - targetPositionY
+    - targetPositionZ
+    - toolA
+    - toolB
+    - toolC
+    - toolX
+    - toolY
+    - toolZ
+    - torqueAxis1
+    - torqueAxis2
+    - torqueAxis3
+    - torqueAxis4
+    - torqueAxis5
+    - torqueAxis6
+    - velocityAxis1
+    - velocityAxis2
+    - velocityAxis3
+    - velocityAxis4
+    - velocityAxis5
+    - velocityAxis6
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/areaServed
+  serialNumber:
+    description: Property. Model:'https://schema.org/Text'. The robot identifier,
+      makes it unique in the world
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/serialNumber
+  proState0:
+    description: Property. Model:'https://schema.org/Text'. Status of the Robot PLC
+    range: proState0_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/proState0
+  proState1:
+    description: Property. Model:'https://schema.org/Text'. Status of the Robot Program
+      Interpreter
+    range: proState1_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/proState1
+  drivesOn:
+    description: Property. Model:'https://schema.org/Text'. Status of the Robot Drives
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/drivesOn
+  drivesOff:
+    description: Property. Model:'https://schema.org/Text'. Status of signal to turn
+      the Robot Drives to off
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/drivesOff
+  peripheryReady:
+    description: Property. Model:'https://schema.org/Text'. Readiness of all peripheral
+      devices around the robot
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/peripheryReady
+  emergencyStop:
+    description: Property. Model:'https://schema.org/Text'. Readiness of the emergency
+      circuit of the robot
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/emergencyStop
+  operatingMode:
+    description: Property. Model:'https://schema.org/Text'. State of the turn key
+      switch on top of the robot control panel
+    range: operatingMode_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/operatingMode
+  positionX:
+    description: Property. Model:'https://schema.org/Text'. Actual x coordinate of
+      the robot position (with the actual tool and base coordinates)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/positionX
+  positionY:
+    description: Property. Model:'https://schema.org/Text'. Actual y coordinate of
+      the robot position (with the actual tool and base coordinates)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/positionY
+  positionZ:
+    description: Property. Model:'https://schema.org/Text'. Actual z coordinate of
+      the robot position (with the actual tool and base coordinates)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/positionZ
+  positionA:
+    description: Property. Model:'https://schema.org/Text'. Actual a (rotation around
+      z axis) coordinate of the robot position (with the actual tool and base coordinates)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/positionA
+  positionB:
+    description: Property. Model:'https://schema.org/Text'. Actual b (rotation around
+      y axis) coordinate of the robot position (with the actual tool and base coordinates)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/positionB
+  positionC:
+    description: Property. Model:'https://schema.org/Text'. Actual c (rotation around
+      x axis) coordinate of the robot position (with the actual tool and base coordinates)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/positionC
+  targetPositionX:
+    description: Property. Model:'https://schema.org/Text'. Target/intended x coordinate
+      of the robot final position
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+  targetPositionY:
+    description: Property. Model:'https://schema.org/Text'. Target/intended y coordinate
+      of the robot final position
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+  targetPositionZ:
+    description: Property. Model:'https://schema.org/Text'. Target/intended Z coordinate
+      of the robot final position
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+  targetPositionA:
+    description: Property. Model:'https://schema.org/Text'. Target/intended a (rotation
+      around z axis) coordinate of the robot final position
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+  targetPositionB:
+    description: Property. Model:'https://schema.org/Text'. Target/intended b (rotation
+      around y axis) coordinate of the robot final position
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+  targetPositionC:
+    description: Property. Model:'https://schema.org/Text'. Target/intended c (rotation
+      around x axis) coordinate of the robot final position
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+  toolX:
+    description: Property. Model:'https://schema.org/Text'. Actual x value for the
+      definition of the tool frame
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/toolX
+  toolY:
+    description: Property. Model:'https://schema.org/Text'. Actual y value for the
+      definition of the tool frame
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/toolY
+  toolZ:
+    description: Property. Model:'https://schema.org/Text'. Actual z value for the
+      definition of the tool frame
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/toolZ
+  toolA:
+    description: Property. Model:'https://schema.org/Text'. Actual a value for the
+      definition of the tool frame
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/toolA
+  toolB:
+    description: Property. Model:'https://schema.org/Text'. Actual b value for the
+      definition of the tool frame
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/toolB
+  toolC:
+    description: Property. Model:'https://schema.org/Text'. Actual c value for the
+      definition of the tool frame
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/toolC
+  baseX:
+    description: Property. Model:'https://schema.org/Text'. Actual x value for the
+      definition of the base frame
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/baseX
+  baseY:
+    description: Property. Model:'https://schema.org/Text'. Actual y value for the
+      definition of the base frame
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/baseY
+  baseZ:
+    description: Property. Model:'https://schema.org/Text'. Actual z value for the
+      definition of the base frame
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/baseZ
+  baseA:
+    description: Property. Model:'https://schema.org/Text'. Actual a value for the
+      definition of the base frame
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/baseA
+  baseB:
+    description: Property. Model:'https://schema.org/Text'. Actual b value for the
+      definition of the base frame
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/baseB
+  baseC:
+    description: Property. Model:'https://schema.org/Text'. Actual c value for the
+      definition of the base frame
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/baseC
+  angleAxis1:
+    description: Property. Model:'https://schema.org/Number'. Angle of the first axis
+      on the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/angleAxis1
+  angleAxis2:
+    description: Property. Model:'https://schema.org/Number'. Angle of the second
+      axis on the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/angleAxis2
+  angleAxis3:
+    description: Property. Model:'https://schema.org/Number'. Angle of the third axis
+      on the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/angleAxis3
+  angleAxis4:
+    description: Property. Model:'https://schema.org/Number'. Angle of the fourth
+      axis on the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/angleAxis4
+  angleAxis5:
+    description: Property. Model:'https://schema.org/Number'. Angle of the fifth axis
+      on the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/angleAxis5
+  angleAxis6:
+    description: Property. Model:'https://schema.org/Number'. Angle of the sixth axis
+      on the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/angleAxis6
+  torqueAxis1:
+    description: Property. Model:'https://schema.org/Number'. Actual torque of the
+      first axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/torqueAxis1
+  torqueAxis2:
+    description: Property. Model:'https://schema.org/Number'. Actual torque of the
+      second axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/torqueAxis2
+  torqueAxis3:
+    description: Property. Model:'https://schema.org/Number'. Actual torque of the
+      third axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/torqueAxis3
+  torqueAxis4:
+    description: Property. Model:'https://schema.org/Number'. Actual torque of the
+      fourth axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/torqueAxis4
+  torqueAxis5:
+    description: Property. Model:'https://schema.org/Number'. Actual torque of the
+      fifth axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/torqueAxis5
+  torqueAxis6:
+    description: Property. Model:'https://schema.org/Number'. Actual torque of the
+      sixth axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/torqueAxis6
+  maxTorqueAxis1:
+    description: Property. Model:'https://schema.org/Number'. Maximal torque of the
+      first axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/maxTorqueAxis1
+  maxTorqueAxis2:
+    description: Property. Model:'https://schema.org/Number'. Maximal torque of the
+      second axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/maxTorqueAxis2
+  maxTorqueAxis3:
+    description: Property. Model:'https://schema.org/Number'. Maximal torque of the
+      third axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/maxTorqueAxis3
+  maxTorqueAxis4:
+    description: Property. Model:'https://schema.org/Number'. Maximal torque of the
+      fourth axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/maxTorqueAxis4
+  maxTorqueAxis5:
+    description: Property. Model:'https://schema.org/Number'. Maximal torque of the
+      fifth axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/maxTorqueAxis5
+  maxTorqueAxis6:
+    description: Property. Model:'https://schema.org/Number'. Maximal torque of the
+      sixth axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/maxTorqueAxis6
+  velocityAxis1:
+    description: Property. Model:'https://schema.org/Number'. Actual Velocity of the
+      first axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/velocityAxis1
+  velocityAxis2:
+    description: Property. Model:'https://schema.org/Number'. Actual Velocity of the
+      second axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/velocityAxis2
+  velocityAxis3:
+    description: Property. Model:'https://schema.org/Number'. Actual Velocity of the
+      third axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/velocityAxis3
+  velocityAxis4:
+    description: Property. Model:'https://schema.org/Number'. Actual Velocity of the
+      fourth axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/velocityAxis4
+  velocityAxis5:
+    description: Property. Model:'https://schema.org/Number'. Actual Velocity of the
+      fifth axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/velocityAxis5
+  velocityAxis6:
+    description: Property. Model:'https://schema.org/Number'. Actual Velocity of the
+      sixth axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/velocityAxis6
+  maxVelocityAxis1:
+    description: Property. Model:'https://schema.org/Number'. Maximal Velocity of
+      the first axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/maxVelocityAxis1
+  maxVelocityAxis2:
+    description: Property. Model:'https://schema.org/Number'. Maximal Velocity of
+      the second axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/maxVelocityAxis2
+  maxVelocityAxis3:
+    description: Property. Model:'https://schema.org/Number'. Maximal Velocity of
+      the third axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/maxVelocityAxis3
+  maxVelocityAxis4:
+    description: Property. Model:'https://schema.org/Number'. Maximal Velocity of
+      the fourth axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/maxVelocityAxis4
+  maxVelocityAxis5:
+    description: Property. Model:'https://schema.org/Number'. Maximal Velocity of
+      the fith axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/maxVelocityAxis5
+  maxVelocityAxis6:
+    description: Property. Model:'https://schema.org/Number'. Maximal Velocity of
+      the sixth axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+    slot_uri: https://smartdatamodels.org/dataModel.RoboticIndustrialActivities/maxVelocityAxis6
+  measuredCurrentAxis1:
+    description: Property. Model:'https://schema.org/Text'. Actual current consumption
+      of the first axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+  measuredCurrentAxis2:
+    description: Property. Model:'https://schema.org/Text'. Actual current consumption
+      of the second axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+  measuredCurrentAxis3:
+    description: Property. Model:'https://schema.org/Text'. Actual current consumption
+      of the third axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+  measuredCurrentAxis4:
+    description: Property. Model:'https://schema.org/Text'. Actual current consumption
+      of the fourth axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+  measuredCurrentAxis5:
+    description: Property. Model:'https://schema.org/Text'. Actual current consumption
+      of the fifth axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+  measuredCurrentAxis6:
+    description: Property. Model:'https://schema.org/Text'. Actual current consumption
+      of the sixth axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+  estimatedCurrentAxis1:
+    description: Property. Model:'https://schema.org/Text'. Estimated current consumption
+      of the first axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+  estimatedCurrentAxis2:
+    description: Property. Model:'https://schema.org/Text'. Estimated current consumption
+      of the second axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+  estimatedCurrentAxis3:
+    description: Property. Model:'https://schema.org/Text'. Estimated current consumption
+      of the third axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+  estimatedCurrentAxis4:
+    description: Property. Model:'https://schema.org/Text'. Estimated current consumption
+      of the fourth axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+  estimatedCurrentAxis5:
+    description: Property. Model:'https://schema.org/Text'. Estimated current consumption
+      of the fifth axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+  estimatedCurrentAxis6:
+    description: Property. Model:'https://schema.org/Text'. Estimated current consumption
+      of the sixth axis of the robot arm
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RoboticIndustrialActivities@f82832793e05695366516cd6016a56c144d6fcf2
+enums:
+  proState0_options:
+    name: proState0_options
+    permissible_values:
+      '#P_FREE':
+        text: '#P_FREE'
+      '#P_ACTIVE':
+        text: '#P_ACTIVE'
+      '#P_END':
+        text: '#P_END'
+      '#P_RESET':
+        text: '#P_RESET'
+      '#P_STOP':
+        text: '#P_STOP'
+  proState1_options:
+    name: proState1_options
+    permissible_values:
+      '#P_FREE':
+        text: '#P_FREE'
+      '#P_ACTIVE':
+        text: '#P_ACTIVE'
+      '#P_END':
+        text: '#P_END'
+      '#P_RESET':
+        text: '#P_RESET'
+      '#P_STOP':
+        text: '#P_STOP'
+  operatingMode_options:
+    name: operatingMode_options
+    permissible_values:
+      '#T1':
+        text: '#T1'
+      '#T2':
+        text: '#T2'
+      '#AUT':
+        text: '#AUT'
+      '#EXT':
+        text: '#EXT'

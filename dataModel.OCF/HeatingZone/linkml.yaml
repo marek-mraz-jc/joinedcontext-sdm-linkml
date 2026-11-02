@@ -1,0 +1,257 @@
+id: https://github.com/smart-data-models/dataModel.OCF/HeatingZone
+name: HeatingZone
+title: Heating Zone
+description: Smart Data Models Program adaptation of the original IoTData data Models.
+  This Resource provides information about the status of a (single) heating zone of
+  a Cook-Top. It describes the case of a Cook-Top whose zones can be activated dynamically
+  (i.e. the device implements pot recognition). The Property 'maxheatinglevel' defines
+  the max level for the heating zone The Property 'heatinglevel' is the current heating
+  level of the zone   For each element, the value range is from 0 (indication that
+  the zone is not heating) to 'maxheatinglevel'.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: HeatingZone/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Fall choose act statement
+    grow ten exist. Relate relationship south say four bed. Service at Congress cell
+    card.", "addressLocality": "Tree a example bring just old. Attention dog outside
+    part. Although this animal space.", "addressRegion": "Mind traditional certainly
+    name present yourself. Oil another operation unit board bring sometimes.", "district":
+    "Throw law avoid pull why suffer century. Former certainly black.", "postOfficeBoxNumber":
+    "Case political usually down president owner contain. C", "postalCode": "Happen
+    case pattern call six camera. Smile place wind page newspaper theory board. Moment
+    less compare suggest p", "streetAddress": "Story although test pressure recently
+    daughter. Very hear audience occur senior live environmen", "streetNr": "You head
+    start. Understand mind best follow. East public return believe policy un"}}, "alternateName":
+    {"type": "Property", "value": "Education week risk spring let."}, "areaServed":
+    {"type": "Property", "value": "Idea direction development exactly contain a"},
+    "dataProvider": {"type": "Property", "value": "Too yeah through born since contain
+    pressure. Good season perform bal"}, "dateCreated": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "1994-05-25T00:16:38Z"}}, "dateModified": {"type":
+    "Property", "value": {"@type": "DateTime", "@value": "1973-08-12T04:18:53Z"}},
+    "description": {"type": "Property", "value": "Great discuss administration money
+    care. Business factor team begin."}, "heatinglevel": {"type": "Property", "value":
+    864}, "id": "urn:ngsi-ld:HeatingZone:id:WYRW:78551335", "if": {"type": "Property",
+    "value": ["oic.if.s", "oic.if.baseline"]}, "location": {"type": "GeoProperty",
+    "value": {"coordinates": [73.9101395, 56.752641], "type": "Point"}}, "maxheatinglevel":
+    {"type": "Property", "value": 864}, "n": {"type": "Property", "value": "American
+    whole magazine truth stop whose. On traditi"}, "name": {"type": "Property", "value":
+    "Receive material fear avoid culture staff cut thousand."}, "owner": {"type":
+    "Property", "value": ["urn:ngsi-ld:HeatingZone:items:BPLI:90016877", "urn:ngsi-ld:HeatingZone:items:KNJW:15261328"]},
+    "rt": {"type": "Property", "value": ["oic.r.heatingzone"]}, "seeAlso": {"type":
+    "Property", "value": ["urn:ngsi-ld:HeatingZone:items:ZCSB:30140728"]}, "source":
+    {"type": "Property", "value": "Compar"}, "type": "HeatingZone"}'
+classes:
+  HeatingZone:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/HeatingZone
+    description: Smart Data Models Program adaptation of the original IoTData data
+      Models. This Resource provides information about the status of a (single) heating
+      zone of a Cook-Top. It describes the case of a Cook-Top whose zones can be activated
+      dynamically (i.e. the device implements pot recognition). The Property 'maxheatinglevel'
+      defines the max level for the heating zone The Property 'heatinglevel' is the
+      current heating level of the zone   For each element, the value range is from
+      0 (indication that the zone is not heating) to 'maxheatinglevel'.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - heatinglevel
+    - if
+    - maxheatinglevel
+    - n
+    - name
+    - owner
+    - rt
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. The Resource Type.
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  heatinglevel:
+    description: Property. The current heating level for the zone.
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/heatinglevel
+  maxheatinglevel:
+    description: Property. The maximum heating level for the zone.
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/maxheatinglevel
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  if:
+    description: Property. The OCF Interface set supported by this Resource.
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.heatingzone:
+        text: oic.r.heatingzone
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.s:
+        text: oic.if.s
+      oic.if.baseline:
+        text: oic.if.baseline

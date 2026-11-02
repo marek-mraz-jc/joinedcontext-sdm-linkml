@@ -1,0 +1,268 @@
+id: https://github.com/smart-data-models/dataModel.Weather/SeaConditions
+name: SeaConditions
+title: Sea Conditions schema
+description: This entity contains a harmonised geographic description of sea conditions
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Weather
+  spec.source.path: SeaConditions/schema.json
+  spec.source.commit: 803fec05b20cef20abda29cd70f54c3b88e08e3a
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "ES", "addressLocality":
+    "Benidorm", "addressRegion": "Valencia", "postOfficeBoxNumber": "", "postalCode":
+    "", "streetAddress": ""}}, "alternateName": {"type": "Property", "value": "Playa
+    Levante"}, "areaServed": {"type": "Property", "value": ""}, "dataProvider": {"type":
+    "Property", "value": "Water-sensor-12345"}, "dateCreated": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2021-02-20T06:45:00Z"}}, "dateModified":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2021-02-20T06:45:00Z"}},
+    "dateObserved": {"type": "Property", "value": "2021-02-20T06:45:00Z"}, "description":
+    {"type": "Property", "value": "Informaci\u00f3n del estado del mar en la playa
+    Levante"}, "id": "urn:ngsi-ld:SeaCondition:SeaCondition-PlayaLevante-Benidorm-123456",
+    "location": {"type": "Property", "value": {"coordinates": [-8.768460000000001,
+    42.60214472222222], "type": "Point"}}, "name": {"type": "Property", "value": "Mar
+    en la Playa Levante"}, "owner": {"type": "Property", "value": ["urn:ngsi-ld:SeaConditions:items:JVPZ:12516420",
+    "urn:ngsi-ld:SeaConditions:items:XVAE:29040891"]}, "pH": {"type": "Property",
+    "value": 8.5}, "salinity": {"type": "Property", "value": 35}, "seeAlso": {"type":
+    "Property", "value": ["urn:ngsi-ld:SeaConditions:items:KFKA:73977455", "urn:ngsi-ld:SeaConditions:items:GPZI:53207694"]},
+    "source": {"type": "Property", "value": ""}, "surfaceTemperature": {"type": "Property",
+    "value": 14.7}, "type": "SeaConditions", "waveHeight": {"type": "Property", "value":
+    0.05}, "waveLevel": {"type": "Property", "value": 1}, "wavePeriod": {"type": "Property",
+    "value": 1.5}}'
+classes:
+  SeaConditions:
+    class_uri: https://smartdatamodels.org/dataModel.Weather/SeaConditions
+    description: This entity contains a harmonised geographic description of sea conditions
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - dateObserved
+    - description
+    - name
+    - owner
+    - pH
+    - salinity
+    - seeAlso
+    - source
+    - surfaceTemperature
+    - waveHeight
+    - waveLevel
+    - wavePeriod
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/areaServed
+  waveLevel:
+    description: Property. Model:'https://schema.org/Number'. Units:'Douglas sea scale'.
+      It indicates the height of the waves and also measures the swell of the sea
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dataModel.Weather/waveLevel
+  surfaceTemperature:
+    description: Property. Model:'https://schema.org/Number'. Units:'Celsius degrees'.
+      Sea surface temperature
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dataModel.Weather/surfaceTemperature
+    unit:
+      ucum_code: Cel
+      exact_mappings:
+      - ucefact:CEL
+      - qudt-unit:DEG_C
+      has_quantity_kind: qudt-quantkind:Temperature
+  waveHeight:
+    description: Property. Model:'https://schema.org/Number'. Units:'Meters'. Height
+      of the waves
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dataModel.Weather/waveHeight
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  wavePeriod:
+    description: Property. Model:'https://schema.org/Number'. Units:'Seconds'. Indicates
+      the time between the crests of a wave
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dataModel.Weather/wavePeriod
+    unit:
+      ucum_code: s
+      exact_mappings:
+      - ucefact:SEC
+      - qudt-unit:SEC
+      has_quantity_kind: qudt-quantkind:Time
+  pH:
+    description: Property. Model:'https://schema.org/Number'. Acidity or basicity
+      of an aqueous solution
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dataModel.Weather/pH
+  salinity:
+    description: Property. Model:'https://schema.org/Number'. Units:'Parts per thousand'.
+      Amount of salts dissolved in water
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dataModel.Weather/salinity
+  dateObserved:
+    description: Property. Model:'https://schema.org/DateTime'. The date and time
+      of this observation in ISO8601 UTC format
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dateObserved

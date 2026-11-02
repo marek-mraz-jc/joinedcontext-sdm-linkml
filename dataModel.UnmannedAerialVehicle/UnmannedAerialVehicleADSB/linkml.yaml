@@ -1,0 +1,214 @@
+id: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle/UnmannedAerialVehicleADSB
+name: UnmannedAerialVehicleADSB
+title: Smart Data models - UAV-ADSB schema
+description: This entity contains a harmonised description of a generic UnmannedAerialVehicle
+  (UAV) Automatic Dependent Surveillance–Broadcast. This entity is primarily associated
+  with the control and management of Unmanned Aerial Vehicles. Each UAVADSB instance
+  will be related to a specific UAV instance.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle
+  spec.source.path: UnmannedAerialVehicleADSB/schema.json
+  spec.source.commit: 192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.UnmannedAerialVehicle/master/context.jsonld"],
+    "UnmannedAerialVehicleADSBroadcast": {"type": "Property", "value": "8D4840D6202CC371C32CE0576098"},
+    "dataProvider": {"type": "Property", "value": "https://provider.example.com"},
+    "id": "urn:ngsi-ld:UAVADSB:1fa179a6-b507-4857-ad72-eb5513ef05c8", "observedAt":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2016-08-23T10:18:16Z"}},
+    "originatedByUnmannedAerialVehicle": {"type": "Property", "value": false}, "originator":
+    {"object": "urn:ngsi-ld:UAV:29935bbe-5922-11e8-9742-93bfb84686ec", "type": "Relationship"},
+    "source": {"type": "Property", "value": "https://source.example.com"}, "type":
+    "UnmannedAerialVehicleADSB", "unmannedAerialVehicle": {"object": "urn:ngsi-ld:UAV:23821045-33d4-46ec-b777-98f461bf4856",
+    "type": "Relationship"}}'
+classes:
+  UnmannedAerialVehicleADSB:
+    class_uri: https://smartdatamodels.org/dataModel.UnmannedAerialVehicle/UnmannedAerialVehicleADSB
+    description: This entity contains a harmonised description of a generic UnmannedAerialVehicle
+      (UAV) Automatic Dependent Surveillance–Broadcast. This entity is primarily associated
+      with the control and management of Unmanned Aerial Vehicles. Each UAVADSB instance
+      will be related to a specific UAV instance.
+    is_a: Entity
+    slots:
+    - UnmannedAerialVehicleADSBroadcast
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - name
+    - originatedByUnmannedAerialVehicle
+    - originator
+    - owner
+    - seeAlso
+    - source
+    - unmannedAerialVehicle
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/areaServed
+  unmannedAerialVehicle:
+    description: Relationship. Reference to the Unmanned Aerial Vehicle entity to
+      which this broadcast message relates
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/dataModel.UnmannedAerialVehicle/unmannedAerialVehicle
+  originatedByUnmannedAerialVehicle:
+    description: Property. A logical indicator of source of the message. True indicates
+      it is the UAV itself, false indicates that it is a different source, a listening
+      station software application or a different UAV
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/dataModel.UnmannedAerialVehicle/originatedByUnmannedAerialVehicle
+  originator:
+    description: Relationship. Refers to a third party UAV instance or other entity
+      (e.g. listening station) that reported the information in the case the message
+      was not directly originated by the UAV
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/dataModel.UnmannedAerialVehicle/originator
+  UnmannedAerialVehicleADSBroadcast:
+    description: Property. A flight message describing the current flight status as
+      a DBSB Message stored as a string of hexadecimal digits
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/dataModel.UnmannedAerialVehicle/UnmannedAerialVehicleADSBroadcast

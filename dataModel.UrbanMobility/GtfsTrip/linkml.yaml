@@ -1,0 +1,177 @@
+id: https://github.com/smart-data-models/dataModel.UrbanMobility/GtfsTrip
+name: GtfsTrip
+title: Smart Data models. GTFS Schema - Trip
+description: GTFS Trip
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.UrbanMobility
+  spec.source.path: GtfsTrip/schema.json
+  spec.source.commit: 81a052c84d275a71489910c4f93eb3b6c80c4830
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"],
+    "direction": {"type": "Property", "value": 0}, "hasRoute": {"object": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1",
+    "type": "Relationship"}, "hasService": {"object": "urn:ngsi-ld:GtfsService:Malaga_LAB",
+    "type": "Relationship"}, "hasShape": {"object": "urn:ngsi-ld:GtfsShape:Shape01",
+    "type": "Relationship"}, "headSign": {"type": "Property", "value": "San Andr\u00e9s"},
+    "id": "urn:ngsi-ld:GtfsTrip:Spain:Malaga:1", "type": "GtfsTrip"}'
+classes:
+  GtfsTrip:
+    class_uri: https://smartdatamodels.org/dataModel.UrbanMobility/GtfsTrip
+    description: GTFS Trip
+    is_a: Entity
+    slots:
+    - alternateName
+    - bikesAllowed
+    - block
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - direction
+    - hasRoute
+    - hasService
+    - hasShape
+    - headSign
+    - name
+    - owner
+    - seeAlso
+    - shortName
+    - source
+    - wheelChairAccessible
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/seeAlso
+  shortName:
+    description: Property. Same as GTFS `trip_short_name`. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/shortName
+  headSign:
+    description: Property. Same as GTFS `trip_headsign`. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/headSign
+  hasRoute:
+    description: Relationship. Same as `route_id`. It shall point to an Entity of
+      type GtfsRoute. Model:'http://schema.org/URL'
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/hasRoute
+  hasShape:
+    description: Relationship. Same as GTFS `shape_id`. It shall point to an Entity
+      of type GtfsShape. Model:'http://schema.org/URL'
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/hasShape
+  block:
+    description: Property. Same as GTFS `block_id`. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/block
+  hasService:
+    description: Relationship. Same as GTFS `service_id`. It shall point to an Entity
+      of type GtfsService. Model:'http://schema.org/URL'
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/hasService
+  direction:
+    description: Property. Same as GTFS `direction_id`. Model:'https://schema.org/Number'.
+      Enum:'0, 1'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/direction
+  wheelChairAccessible:
+    description: Property. Same as GTFS `wheelchair_accessible`. Model:'https://schema.org/Number'.
+      Enum:'0, 1, 2'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/wheelChairAccessible
+  bikesAllowed:
+    description: Property. Same as GTFS `bikes_allowed`. Model:'https://schema.org/Number'.
+      Enum:'0, 1, 2'. See [GTFS](https://developers.google.com/transit/gtfs/reference/#tripstxt)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/bikesAllowed

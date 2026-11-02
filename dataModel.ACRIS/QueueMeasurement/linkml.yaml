@@ -1,0 +1,587 @@
+id: https://github.com/smart-data-models/dataModel.ACRIS/QueueMeasurement
+name: QueueMeasurement
+title: Smart Data Models - Mapping of ACRIS data model QueueMeasurement
+description: Property. Information about the measurements (observations) of particular
+  Measures of a Passenger Queue.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ACRIS
+  spec.source.path: QueueMeasurement/schema.json
+  spec.source.commit: 82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.ACRIS/master/context.jsonld"],
+    "MeasurementDevice": {"type": "Property", "value": {"MeasurementDeviceLocation":
+    {"Name": ""}, "Name": ""}}, "MeasurementTimePeriod": {"type": "Property", "value":
+    {"EndTime": "2023-03-22T18:59:02Z"}}, "Occupancy": {"type": "Property", "value":
+    58}, "PassengerQueue": {"type": "Property", "value": {"CheckpointFacility": {"CheckpointAreaLocation":
+    "", "CheckpointFacilityOperatorParty": "", "CheckpointFacilityType": "", "ConcourseFacility":
+    {"Identifier": "BA/B", "Name": "Boarding Area B", "TerminalFacility": {"AirportFacility":
+    {"IataCode": "SFO", "IcaoCode": "KSFO", "Name": "San Francisco InternationalAirport"},
+    "Identifier": "T1", "Name": "Terminal 1"}}, "Description": "", "Identifier": "1bdaec90-7a42-11e7-bb31-be2e44b06b34",
+    "Name": "Checkpoint B", "OperationTimePeriod": {"ClosingTime": "", "OpeningTime":
+    ""}}, "Identifier": "1", "Name": "1", "PassengerProcess": {"Name": "", "PassengerProcessType":
+    {"Code": "", "Description": ""}}, "QueueLocation": {"Name": ""}, "QueueStatus":
+    {"Name": ""}, "QueueType": {"Code": "", "Description": ""}}}, "ProjectedWaitTime":
+    {"type": "Property", "value": 544.4}, "Throughput": {"type": "Property", "value":
+    384}, "WaitTime": {"type": "Property", "value": 645.9}, "id": "urn:ngsi-ld:QueueMeasurement:id:IEQX:79193255",
+    "type": "QueueMeasurement"}'
+classes:
+  QueueMeasurement:
+    class_uri: https://smartdatamodels.org/dataModel.ACRIS/QueueMeasurement
+    description: Property. Information about the measurements (observations) of particular
+      Measures of a Passenger Queue.
+    is_a: Entity
+    slots:
+    - MeasurementDevice
+    - MeasurementTimePeriod
+    - Occupancy
+    - PassengerQueue
+    - ProjectedWaitTime
+    - Throughput
+    - WaitTime
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  MeasurementDeviceLocation:
+    description: Property. The geospatial or geopolitical location of a Measurement
+      Device.
+    attributes:
+      Name:
+        description: Property. Unique name for the location of the Measurement Device.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  MeasurementDevice:
+    description: Property. Information about the device (equipment) used to take measurements
+      (observations).
+    attributes:
+      Name:
+        description: Property. Unique name for the Measurement Device.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      MeasurementDeviceLocation:
+        description: Property. The geospatial or geopolitical location of a Measurement
+          Device.
+        range: MeasurementDeviceLocation
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  MeasurementTimePeriod:
+    description: Property. The time period over which a Measurement is taken.
+    attributes:
+      EndTime:
+        description: Property. The date and time at the end of the time period over
+          which a Measurement is taken. Date time should be UTC, compliant with ISO
+          8601 format (e.g. 2023-04-20T11:54:59Z)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  AirportElevationUnitOfMeasurement:
+    description: Property. The unit of measure of the height of an Airport above sea
+      level (FT for foot or M for metre).
+    attributes:
+      Name:
+        description: Property. The name of the unit of measure for an Airport elevation
+          above sea level.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  AirportElevation:
+    description: Property. The height of an Airport, above sea level.
+    attributes:
+      Name:
+        description: Property. The name of an Airport elevation above sea level.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Value:
+        description: Property. The value of an Airport elevation above sea level.
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      AirportElevationUnitOfMeasurement:
+        description: Property. The unit of measure of the height of an Airport above
+          sea level (FT for foot or M for metre).
+        range: AirportElevationUnitOfMeasurement
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  AirportLocation:
+    description: Property. The geospatial or geopolitical location of an Airport.
+    attributes:
+      Latitude:
+        description: Property. Coordinate for latitude of the Airport.
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Longitude:
+        description: Property. Coordinate for longitude of the Airport.
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Name:
+        description: Property. Unique name for the Airport Location.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Srid:
+        description: Property. A Spatial Reference System Identifier (SRID), to identify
+          the spatial coordinate system definitions.
+        range: integer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  TerminalAreaLocation:
+    description: Property. The geospatial or geopolitical location of an Airport Terminal
+      building.
+    attributes:
+      Name:
+        description: Property. Unique name for the Terminal Area Location.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      AirportLocation:
+        description: Property. The geospatial or geopolitical location of an Airport.
+        range: AirportLocation
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  ZoneAreaLocation:
+    description: Property. The geospatial or geopolitical location of a Queuing Zone
+      in a Terminal.
+    attributes:
+      Name:
+        description: Property. Unique name for the Zone Area Location.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      TerminalAreaLocation:
+        description: Property. The geospatial or geopolitical location of an Airport
+          Terminal building.
+        range: TerminalAreaLocation
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  CheckpointAreaLocation:
+    description: Property. The geospatial or geopolitical location of a Checkpoint.
+    attributes:
+      Latitude:
+        description: Property. Coordinate of the latitude of the checkpoint area location.
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Longitude:
+        description: Property. Coordinate of the longitude of the checkpoint area
+          location.
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Name:
+        description: Property. Unique name for geospatial or geopolitical location
+          of a Checkpoint Area Location.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Srid:
+        description: Property. A Spatial Reference System Identifier (SRID), to identify
+          the spatial coordinate system definitions
+        range: integer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      AirportElevation:
+        description: Property. The height of an Airport, above sea level.
+        range: AirportElevation
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      ZoneAreaLocation:
+        description: Property. The geospatial or geopolitical location of a Queuing
+          Zone in a Terminal.
+        range: ZoneAreaLocation
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  CheckpointFacilityOperatorParty:
+    description: Property. Information that describes the Party responsible for the
+      operation of a Checkpoint in an Airport.
+    attributes:
+      Name:
+        description: Property. Unique name of the Operator Party for the Checkpoint
+          Facility.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  CheckpointFacilityType:
+    description: 'Property. Information that describes the classification for a Checkpoint
+      in an Airport. Values are: Security Screening, Customs.'
+    attributes:
+      Code:
+        description: Property. Unique code for the Checkpoint Facility Type.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Description:
+        description: Property. Description of the Checkpoint Facility Type.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  AirportFacility:
+    description: Property. Information about an Airport as buildings or infrastructure
+      used to provide services.
+    attributes:
+      IataCode:
+        description: Property. Three character IATA code for the Airport.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      IcaoCode:
+        description: Property. Four character ICAO code for the Airport.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Name:
+        description: Property. Common name of the Airport.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  TerminalFacility:
+    description: Property. Information about an Airport Terminal as buildings or infrastructure
+      used to provide services.
+    attributes:
+      Identifier:
+        description: Property. Unique identifier for the Terminal Facility.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Name:
+        description: Property. Unique name for the Terminal Facility.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      AirportFacility:
+        description: Property. Information about an Airport as buildings or infrastructure
+          used to provide services.
+        range: AirportFacility
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  ConcourseFacility:
+    description: Property. Information about an Airport Concourse as buildings or
+      infrastructure used to provide services.
+    attributes:
+      Identifier:
+        description: Property. Unique identifier for the Concourse Facility.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Name:
+        description: Property. Unique name for the Concourse Facility.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      TerminalFacility:
+        description: Property. Information about an Airport Terminal as buildings
+          or infrastructure used to provide services.
+        range: TerminalFacility
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  OperationTimePeriod:
+    description: Property. The time period over which the Checkpoint is operating.
+    attributes:
+      ClosingTime:
+        description: Property. The date and time from when the Checkpoint Facility
+          is closed. Date time should be UTC, compliant with ISO 8601 format (e.g.
+          2023-04-20T11:54:59Z)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      OpeningTime:
+        description: Property. The date and time from when the Checkpoint Facility
+          is open. Date time should be UTC, compliant with ISO 8601 format (e.g. 2023-04-20T11:54:59Z)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  CheckpointFacility:
+    description: 'Property. Information about a Checkpoint in an Airport used to provide
+      services. A Checkpoint facility is any facility where customers and passengers
+      turn up and need to be processed, serviced or screened before proceeding to
+      the next stage of their journey. '
+    attributes:
+      Description:
+        description: Property. Description of the Checkpoint Facility.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Identifier:
+        description: Property. Unique identifier for the Checkpoint Facility. The
+          identifier should be unique within an Airport.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Name:
+        description: Property. Unique name for the Checkpoint Facility. The name should
+          be unique within an Airport.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      CheckpointAreaLocation:
+        description: Property. The geospatial or geopolitical location of a Checkpoint.
+        range: CheckpointAreaLocation
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      CheckpointFacilityOperatorParty:
+        description: Property. Information that describes the Party responsible for
+          the operation of a Checkpoint in an Airport.
+        range: CheckpointFacilityOperatorParty
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      CheckpointFacilityType:
+        description: 'Property. Information that describes the classification for
+          a Checkpoint in an Airport. Values are: Security Screening, Customs.'
+        range: CheckpointFacilityType
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      ConcourseFacility:
+        description: Property. Information about an Airport Concourse as buildings
+          or infrastructure used to provide services.
+        range: ConcourseFacility
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      OperationTimePeriod:
+        description: Property. The time period over which the Checkpoint is operating.
+        range: OperationTimePeriod
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  PassengerProcessType:
+    description: Property. Information about the type of Passenger Party Process.
+    attributes:
+      Code:
+        description: Property. Unique code for the type of Passenger Party Process.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Description:
+        description: Property. Description of the type of Passenger Party Process.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  PassengerProcess:
+    description: Property. Information about the Passenger Party Process.
+    attributes:
+      Name:
+        description: Property. Unique name for the Passenger Process.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      PassengerProcessType:
+        description: Property. Information about the type of Passenger Party Process.
+        range: PassengerProcessType
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  QueueLocation:
+    description: Property. The geospatial or geopolitical location of a Passenger
+      Queue.
+    attributes:
+      Name:
+        description: Property. Unique name for the Queue Location.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  QueueStatus:
+    description: 'Property. Information about the status of a Passenger Queue. Values
+      can be: Open, Closed.'
+    attributes:
+      Name:
+        description: Property. Unique name for the status of the Passenger Queue.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  QueueType:
+    description: 'Property. Information about the type of a Passenger Queue. Values
+      can be: Pre-Check, Private, Economy, Priority, KnownCrewMember.'
+    attributes:
+      Code:
+        description: Property. Unique code for the type of Passenger Queue.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Description:
+        description: Property. Description of the type of Passenger Queue.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  PassengerQueue:
+    description: Property. Information about the Passenger Party Queue. A line of
+      people waiting to pass through the security checkpoint process.
+    attributes:
+      Identifier:
+        description: Property. Unique identifier for the Passenger Queue. The identifier
+          should be unique within an Airport.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Name:
+        description: Property. Name of the Passenger Queue. The name should be unique
+          within an Airport.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      CheckpointFacility:
+        description: 'Property. Information about a Checkpoint in an Airport used
+          to provide services. A Checkpoint facility is any facility where customers
+          and passengers turn up and need to be processed, serviced or screened before
+          proceeding to the next stage of their journey. '
+        range: CheckpointFacility
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      PassengerProcess:
+        description: Property. Information about the Passenger Party Process.
+        range: PassengerProcess
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      QueueLocation:
+        description: Property. The geospatial or geopolitical location of a Passenger
+          Queue.
+        range: QueueLocation
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      QueueStatus:
+        description: 'Property. Information about the status of a Passenger Queue.
+          Values can be: Open, Closed.'
+        range: QueueStatus
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      QueueType:
+        description: 'Property. Information about the type of a Passenger Queue. Values
+          can be: Pre-Check, Private, Economy, Priority, KnownCrewMember.'
+        range: QueueType
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+slots:
+  Occupancy:
+    description: Property. The count of people in the queue.  The unit of measure
+      is number of people. This metric is updated every five minutes.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/Occupancy
+  ProjectedWaitTime:
+    description: Property. The estimated time that a person entering the queue can
+      expect to wait. The unit of measure is seconds. Estimates are required to be
+      updated every five minutes.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/ProjectedWaitTime
+  Throughput:
+    description: Property. The average number of passengers processed over the past
+      hour. The unit of measure is passengers per hour. This metric is updated every
+      five minutes.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/Throughput
+  WaitTime:
+    description: Property. The duration that a person exiting the queue has experienced.
+      The unit of measure is seconds. The amount represents the average number of
+      seconds experienced by people exiting the queue in the last five minutes. The
+      amounts are required to be updated every five minutes.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/WaitTime
+  MeasurementDevice:
+    description: Property. Information about the device (equipment) used to take measurements
+      (observations).
+    range: MeasurementDevice
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/MeasurementDevice
+  MeasurementTimePeriod:
+    description: Property. The time period over which a Measurement is taken.
+    range: MeasurementTimePeriod
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/MeasurementTimePeriod
+  PassengerQueue:
+    description: Property. Information about the Passenger Party Queue. A line of
+      people waiting to pass through the security checkpoint process.
+    range: PassengerQueue
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/PassengerQueue

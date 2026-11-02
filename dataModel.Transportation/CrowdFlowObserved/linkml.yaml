@@ -1,0 +1,295 @@
+id: https://github.com/smart-data-models/dataModel.Transportation/CrowdFlowObserved
+name: CrowdFlowObserved
+title: ' - SynchroniCity - Transportation / CrowdFlowObserved'
+description: CrowdFlowObserved
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Transportation
+  spec.source.path: CrowdFlowObserved/schema.json
+  spec.source.commit: 48e0e7ebaaee430f04a47efb27fc38825f79b725
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"],
+    "averageHeadwayTime": {"type": "Property", "value": 5}, "congested": {"type":
+    "Property", "value": false}, "dateObserved": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "2018-08-07T11:10:00"}}, "dateObservedFrom": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2018-08-07T11:10:00Z"}}, "dateObservedTo":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2018-08-07T11:15:00Z"}},
+    "direction": {"type": "Property", "value": "inbound"}, "id": "urn:ngsi-ld:CrowdFlowObserved:Valladolid_1",
+    "location": {"type": "GeoProperty", "value": {"coordinates": [[-4.73735395519672,
+    41.6538181849672], [-4.73414858659993, 41.6600594193478], [-4.73447575302641,
+    41.659585195093]], "type": "LineString"}}, "peopleCount": {"type": "Property",
+    "value": 100}, "peopleCountAway": {"type": "Property", "value": 50}, "peopleCountTowards":
+    {"type": "Property", "value": 50}, "type": "CrowdFlowObserved"}'
+classes:
+  CrowdFlowObserved:
+    class_uri: https://smartdatamodels.org/dataModel.Transportation/CrowdFlowObserved
+    description: CrowdFlowObserved
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - averageCrowdSpeed
+    - averageHeadwayTime
+    - congested
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - dateObserved
+    - dateObservedFrom
+    - dateObservedTo
+    - description
+    - direction
+    - name
+    - occupancy
+    - owner
+    - peopleCount
+    - peopleCountAway
+    - peopleCountTowards
+    - refRoadSegment
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/areaServed
+  refRoadSegment:
+    description: Relationship. Concerned road segment on which the observation has
+      been made. Model:'https://schema.org/URL'
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/refRoadSegment
+  dateObserved:
+    description: 'Property. The date and time of this observation in ISO8601 UTC format.
+      It can be represented by an specific time instant or by an ISO8601 interval.
+      As a workaround for the lack of support of Orion Context Broker for datetime
+      intervals, it can be used two separate attributes: `dateObservedFrom`, `dateObservedTo`.
+      Model:''https://schema.org/URL'''
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateObserved
+  dateObservedFrom:
+    description: Property. Model:'https://schema.org/DateTime'. Observation period
+      start date and time. See `dateObserved`
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/dateObservedFrom
+  dateObservedTo:
+    description: Property. Observation period end date and time. See `dateObserved`..
+      Model:'https://schema.org/DateTime'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/dateObservedTo
+  peopleCount:
+    description: Property. Total number of people detected during this observation
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/peopleCount
+  peopleCountTowards:
+    description: Property. Total number of people detected during this observation
+      towards direction
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/peopleCountTowards
+  peopleCountAway:
+    description: Property. Total number of people detected during this observation
+      away direction
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/peopleCountAway
+  occupancy:
+    description: Property. Fraction of the observation time where a person has been
+      occupying the observed walkway. Model:'https://schema.org/Number)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/occupancy
+  averageCrowdSpeed:
+    description: Property. Average speed of the crowd transiting during the observation
+      period. Model:'https://schema.org/Number'. Units:'Kilometer per hour (Km/h).'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/averageCrowdSpeed
+  congested:
+    description: Property. Flags whether there was a crowd congestion during the observation
+      period in the referred walkway. The absence of this attribute means no crowd
+      congestion. Model:'https://schema.org/Boolean'
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/congested
+  averageHeadwayTime:
+    description: "Property. Average headway time. Headway time is the time\n    elapsed\
+      \ between two consecutive persons. Model:'https://schema.org/Number'. Units:'second\
+      \ (s)'"
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/averageHeadwayTime
+  direction:
+    description: Property. Usual direction of travel in the walkway referred by this
+      observation with respect to the city center. Model:'https://schema.org/Text'.
+      Enum:'inbound, outbound'
+    range: direction_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/direction
+enums:
+  direction_options:
+    name: direction_options
+    permissible_values:
+      inbound:
+        text: inbound
+      outbound:
+        text: outbound

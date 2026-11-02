@@ -1,0 +1,247 @@
+id: https://github.com/smart-data-models/dataModel.GBFS/system_information
+name: system_information
+title: Smart Data Models adaptation of GBFS standard data model system_information
+description: Details including system operator, system location, year implemented,
+  URL, contact info, time zone. According to the Standard GBFS 2.2
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.GBFS
+  spec.source.path: system_information/schema.json
+  spec.source.commit: ce81f1f4250d60ce8908fc371e5eea22b010074e
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.GBFS/master/context.jsonld"],
+    "data": {"type": "Property", "value": {"brand_assets": {"brand_image_url": "https://www.example.com/assets/brand_image.svg",
+    "brand_image_url_dark": "https://www.example.com/assets/brand_image_dark.svg",
+    "brand_last_modified": "2021-06-15", "color": "#C2D32C", "terms_url": "https://www.example.com/assets/brand.pdf"},
+    "email": "customerservice@example.com", "feed_contact_email": "datafeed@example.com",
+    "language": "en", "license_url": "https://www.example.com/data-license.html",
+    "name": "Example Bike Rental", "operator": "Example Sharing, Inc", "phone_number":
+    "1-800-555-1234", "purchase_url": "https://www.example.com", "short_name": "Example
+    Bike", "start_date": "2010-06-10", "system_id": "example_cityname", "timezone":
+    "US/Central", "url": "https://www.example.com"}}, "id": "urn:ngsi-ld:system_information:id:FNNO:60592292",
+    "last_updated": {"type": "Property", "value": 1611598155}, "ttl": {"type": "Property",
+    "value": 1800}, "type": "system_information", "version": {"type": "Property",
+    "value": "3.0"}}'
+classes:
+  system_information:
+    class_uri: https://smartdatamodels.org/dataModel.GBFS/system_information
+    description: Details including system operator, system location, year implemented,
+      URL, contact info, time zone. According to the Standard GBFS 2.2
+    is_a: Entity
+    slots:
+    - data
+    - last_updated
+    - ttl
+    - version
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+  Android:
+    description: Contains rental app download and app discovery information for the
+      Android platform. (added in v1.1)
+    attributes:
+      store_uri:
+        description: URI where the rental Android app can be downloaded from (added
+          in v1.1).
+        range: uriorcurie
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+      discovery_uri:
+        description: URI that can be used to discover if the rental Android app is
+          installed on the device (added in v1.1).
+        range: uriorcurie
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+  Ios:
+    description: Contains rental information for the iOS platform (added in v1.1).
+    attributes:
+      store_uri:
+        description: URI where the rental iOS app can be downloaded from (added in
+          v1.1).
+        range: uriorcurie
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+      discovery_uri:
+        description: URI that can be used to discover if the rental iOS app is installed
+          on the device (added in v1.1).
+        range: uriorcurie
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+  Rental_apps:
+    description: Contains rental app information in the android and ios JSON objects
+      (added in v1.1).
+    attributes:
+      android:
+        description: Contains rental app download and app discovery information for
+          the Android platform. (added in v1.1)
+        range: Android
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+      ios:
+        description: Contains rental information for the iOS platform (added in v1.1).
+        range: Ios
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+  Data:
+    description: Property. Response data in the form of name:value pairs.
+    attributes:
+      system_id:
+        description: Identifier for this vehicle share system. This should be globally
+          unique (even between different systems).
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+      language:
+        description: The language that will be used throughout the rest of the files.
+          It must match the value in the gbfs.json file.
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+      name:
+        description: Name of the system to be displayed to customers.
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+      short_name:
+        description: Optional abbreviation for a system.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+      operator:
+        description: Name of the operator
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+      url:
+        description: The URL of the vehicle share system.
+        range: uriorcurie
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+      purchase_url:
+        description: URL where a customer can purchase a membership.
+        range: uriorcurie
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+      start_date:
+        description: Date that the system began operations.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+      phone_number:
+        description: A single voice telephone number for the specified system that
+          presents the telephone number as typical for the system's service area.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+      email:
+        description: Email address actively monitored by the operator's customer service
+          department.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+      feed_contact_email:
+        description: A single contact email address for consumers of this feed to
+          report technical issues (added in v1.1).
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+      timezone:
+        description: The time zone where the system is located.
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+      license_url:
+        description: A fully qualified URL of a page that defines the license terms
+          for the GBFS data for this system.
+        range: uriorcurie
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+      rental_apps:
+        description: Contains rental app information in the android and ios JSON objects
+          (added in v1.1).
+        range: Rental_apps
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+slots:
+  last_updated:
+    description: Property. Last time the data in the feed was updated in POSIX time.
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+    slot_uri: https://smartdatamodels.org/dataModel.GBFS/last_updated
+  ttl:
+    description: Property. Number of seconds before the data in the feed will be updated
+      again (0 if the data should always be refreshed).
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+    slot_uri: https://smartdatamodels.org/dataModel.GBFS/ttl
+  version:
+    description: Property. GBFS version number to which the feed conforms, according
+      to the versioning framework (added in v1.1).
+    range: version_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+    slot_uri: https://smartdatamodels.org/dataModel.GBFS/version
+  data:
+    description: Property. Response data in the form of name:value pairs.
+    range: Data
+    required: true
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+    slot_uri: https://uri.etsi.org/ngsi-ld/data
+enums:
+  version_options:
+    name: version_options
+    permissible_values:
+      1.1-RC:
+        text: 1.1-RC
+      '1.1':
+        text: '1.1'
+      '2.0':
+        text: '2.0'
+      2.1-RC:
+        text: 2.1-RC
+      2.1-RC2:
+        text: 2.1-RC2
+      '2.1':
+        text: '2.1'
+      '2.2':
+        text: '2.2'
+      '3.0':
+        text: '3.0'

@@ -1,0 +1,117 @@
+id: https://github.com/smart-data-models/dataModel.DCAT-AP/Agent
+name: Agent
+title: Agent DCAT-AP 2.1.1 schema
+description: Agent Schema definition based on DCAT-AP 2.1.1 specification
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.DCAT-AP
+  spec.source.path: Agent/schema.json
+  spec.source.commit: ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.DCAT-AP/master/context.jsonld"],
+    "Type": {"type": "Property", "value": "EU Publications office"}, "address": {"type":
+    "Property", "value": {"addressCountry": "Luxembourg", "addressLocality": "Luxembourg",
+    "addressRegion": "Luxembourg", "postOfficeBoxNumber": "", "postalCode": "2985
+    ", "streetAddress": "2 Rue Mercier"}}, "id": "urn:ngsi-ld:id:ZLHO:07918336", "location":
+    {"type": "GeoProperty", "value": {"coordinates": [12.934074, -149.532943], "type":
+    "Point"}}, "name": {"type": "Property", "value": ["Agent 10", "Agente 10"]}, "type":
+    "Agent"}'
+classes:
+  Agent:
+    class_uri: https://smartdatamodels.org/dataModel.DCAT-AP/Agent
+    description: Agent Schema definition based on DCAT-AP 2.1.1 specification
+    is_a: Entity
+    slots:
+    - Type
+    - address
+    - areaServed
+    - name
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+slots:
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/areaServed
+  name:
+    description: Property. Model:'dct:description'. This property contains a name
+      of the agent.  This property can be repeated for different  versions of the
+      name (e.g. the name in  different languages)
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/name
+  Type:
+    description: Property. Model:'http://www.w3.org/2004/02/skos/core#Concept'. This
+      property refers to a type of the agent that makes the Catalogue or Dataset available
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/Type

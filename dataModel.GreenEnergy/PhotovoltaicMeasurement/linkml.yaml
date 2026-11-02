@@ -1,0 +1,343 @@
+id: https://github.com/smart-data-models/dataModel.GreenEnergy/PhotovoltaicMeasurement
+name: PhotovoltaicMeasurement
+title: PhotovoltaicMeasurement schema
+description: The Data Model is intended to measure the continuous power transferred
+  by the photo-voltaic panel to an Inverter Device.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.GreenEnergy
+  spec.source.path: PhotovoltaicMeasurement/schema.json
+  spec.source.commit: c6d53698a521b415318a5b67905a91c6e70c307e
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.GreenEnergy/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "FR", "addressLocality":
+    "Nice", "streetAddress": "61-63 Avenue Simone Veil"}}, "areaServed": {"type":
+    "Property", "value": "Nice"}, "dataProvider": {"type": "Property", "value": "https://imredd.fr/en/home/"},
+    "dateEnergyMeteringStarted": {"type": "Property", "value": "2019-09-04T15:29:17.999Z"},
+    "dateObserved": {"type": "Property", "value": "2019-09-05T16:00:00.999Z"}, "description":
+    {"type": "Property", "value": "Photovoltaic data provided by the data logger ABB"},
+    "id": "PhotovoltaicMeasurement:ENERGY-IMREDD-PV-0001", "location": {"type": "GeoProperty",
+    "value": {"coordinates": [43.66481, 7.196545], "type": "Point"}}, "name": {"type":
+    "Property", "value": "Photovoltaic station IMREDD"}, "nominalPeakPowerGeneration":
+    {"type": "Property", "value": 179}, "refPhotovoltaicDevice": {"Object": "urn:ngsi-ld:PhotovoltaicDevice:PV-T2-R-012",
+    "type": "Relationship"}, "seeAlso": {"type": "Property", "value": "https://us.sunpower.com/products/solar-panels"},
+    "temperature": {"type": "Property", "value": 23.4}, "type": "PhotovoltaicMeasurement"}'
+classes:
+  PhotovoltaicMeasurement:
+    class_uri: https://smartdatamodels.org/dataModel.GreenEnergy/PhotovoltaicMeasurement
+    description: The Data Model is intended to measure the continuous power transferred
+      by the photo-voltaic panel to an Inverter Device.
+    is_a: Entity
+    slots:
+    - activePower
+    - address
+    - alternateName
+    - areaServed
+    - current
+    - dataProvider
+    - dateCreated
+    - dateEnergyMeteringStarted
+    - dateModified
+    - dateObserved
+    - dateObservedFrom
+    - dateObservedTo
+    - description
+    - inverterStatus
+    - name
+    - nominalPeakPowerGeneration
+    - owner
+    - reactivePower
+    - refPhotovoltaicDevice
+    - refPointOfInterest
+    - seeAlso
+    - source
+    - temperature
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/areaServed
+  dateObserved:
+    description: Property. Date of the observed entity defined by the user
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dateObserved
+  refPhotovoltaicDevice:
+    description: Relationship. Reference to a [Photovoltaic Device](https://github.com/smart-data-models/dataModel.Energy/PhotovoltaicDevice/doc/spec.md)
+      which captured this observation, if the entity is used Model:'https://schema.org/URL'
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/refPhotovoltaicDevice
+  refPointOfInterest:
+    description: Relationship. Model:'https://schema.org/URL'. Reference to a [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)
+      linked with the Repository
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/refPointOfInterest
+  dateObservedFrom:
+    description: 'Property. Observation period: Start date and time in an ISO8601
+      UTC format. The attribute can be used in addition to the ''dateObserved attribute
+      when it corresponds to a time interval to be highlighted. Model:''https://schema.org/DateTime'''
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/dateObservedFrom
+  dateObservedTo:
+    description: 'Property. Observation period: End date and time in an ISO8601 UTC
+      format. The attribute can be used in addition to the ''dateObserved'' attribute
+      when it corresponds to a time interval to be highlighted. Model:''https://schema.org/DateTime'''
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/dateObservedTo
+  temperature:
+    description: Property. Temperature recorded at the time of Observation compared
+      to the  nominal reference temperature of the device. The unit code (text) is
+      given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **CEL** represents Degree Celsius. Model:'https://schema.org/Number'.
+      Units:'degrees celsius'
+    range: float
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/temperature
+    unit:
+      ucum_code: Cel
+      exact_mappings:
+      - ucefact:CEL
+      - qudt-unit:DEG_C
+      has_quantity_kind: qudt-quantkind:Temperature
+  dateEnergyMeteringStarted:
+    description: Property. The starting date for metering energy in an ISO8601 UTC
+      format. Model:'https://schema.org/DateTime'
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/dateEnergyMeteringStarted
+  nominalPeakPowerGeneration:
+    description: Property. nominalPeakPowerGeneration is a number. The unit code (text)
+      is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **KWT** represents Kilowatt. Model:'https://schema.org/Number'.
+      Units:'Kilowatt'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/nominalPeakPowerGeneration
+  activePower:
+    description: Property. Active Power,where phi is the phase shift of the current
+      compared to the voltage. The unit code (text) is given using the UN/CEFACT_Common_Codes
+      (max 3 characters). For instance, For instance, **KWT** represents Kilowatt.
+      Model:'https://schema.org/Number'. Units:'Kilowatt'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/activePower
+  reactivePower:
+    description: Property. Reactive Power used by circuits. The unit code (text) is
+      given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **K5** represents kilovolt-ampere-reactive. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/reactivePower
+  current:
+    description: Property. Electrical intensity of the current. The unit code (text)
+      is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **AMP** represents Ampere. Model:'https://schema.org/Number'.
+      Units:'Ampere'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/current
+  inverterStatus:
+    description: Property. Active Power,where phi is the phase shift of the current
+      compared to the voltage. The unit code (text) is given using the UN/CEFACT_Common_Codes
+      (max 3 characters). For instance, For instance, **KWT** represents Kilowatt.
+      Model:'https://schema.org/Number'. Enum:'00-On sector, 01-Power failure / On
+      battery, 02-Loss of communication,  03-Battery fault, 04-System shutdown, 05-Tension
+      dip, 06-Overvoltage, 07-Voltage drop, 08-Voltage increase, 09-Line noise, 10-Frequency
+      variation, 11-Transient distortion, 12-Harmonic distortion'
+    range: inverterStatus_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/inverterStatus
+enums:
+  inverterStatus_options:
+    name: inverterStatus_options
+    permissible_values:
+      00-On sector:
+        text: 00-On sector
+      01-Power failure / On battery:
+        text: 01-Power failure / On battery
+      02-Loss of communication:
+        text: 02-Loss of communication
+      03-Battery fault:
+        text: 03-Battery fault
+      04-System shutdown:
+        text: 04-System shutdown
+      05-Tension dip:
+        text: 05-Tension dip
+      06-Overvoltage:
+        text: 06-Overvoltage
+      07-Voltage drop:
+        text: 07-Voltage drop
+      08-Voltage increase:
+        text: 08-Voltage increase
+      09-Line noise:
+        text: 09-Line noise
+      10-Frequency variation:
+        text: 10-Frequency variation
+      11-Transient distortion:
+        text: 11-Transient distortion
+      12-Harmonic distortion:
+        text: 12-Harmonic distortion

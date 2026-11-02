@@ -1,0 +1,263 @@
+id: https://github.com/smart-data-models/dataModel.OCF/HeartRate
+name: HeartRate
+title: Smart Data models - HeartRate schema derived from the open connectivity foundation
+  repository https://github.com/openconnectivityfoundation/IoTDataModels
+description: This Resource describes the Properties associated with a person's heart
+  rate. The unit, which is the default unit, is bpm. The heartrate Property is a read-only
+  value that is provided by the server. When range (from 'oic.r.baseresource') is
+  omitted the default is 0 to +MAXFLOAT.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: HeartRate/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Policy call prod",
+    "addressLocality": "Person fish development industry consumer property. Eight
+    call too Mrs.", "addressRegion": "Cold consumer site. Carry minute positive.",
+    "district": "Power bed opportunity. Information can his", "postOfficeBoxNumber":
+    "College job film coach professor k", "postalCode": "Relate evening fly beat town.
+    Stay sing including treatment.", "streetAddress": "Go trial easy if happen. Ball
+    degree story bit. Short newspaper that threat.", "streetNr": "One unit per above
+    least check. Must international we. Quickly perhaps bed cold."}}, "alternateName":
+    {"type": "Property", "value": "Such Mr military only."}, "areaServed": {"type":
+    "Property", "value": "Herself yard democratic common nor. Color personal evening
+    throughout skin management itself stage. Too in employee rule."}, "dataProvider":
+    {"type": "Property", "value": "Make general animal ten. Change listen activity
+    subject prepare many."}, "dateCreated": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "1987-10-11T05:53:15Z"}}, "dateModified": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "1977-06-30T00:04:38Z"}}, "description":
+    {"type": "Property", "value": "Deal century live your four. Learn purpose against
+    always over step. Really parent plant reflect man. Director kitchen campaign plan."},
+    "heartrate": {"type": "Property", "value": 864}, "id": "urn:ngsi-ld:HeartRate:id:ZQCH:19903717",
+    "if": {"type": "Property", "value": ["oic.if.s"]}, "location": {"type": "GeoProperty",
+    "value": {"coordinates": [-59.0235675, 95.827935], "type": "Point"}}, "n": {"type":
+    "Property", "value": "Else memory if"}, "name": {"type": "Property", "value":
+    "Discover agent expect do parent social as."}, "owner": {"type": "Property", "value":
+    ["urn:ngsi-ld:HeartRate:items:HXBP:54976394", "urn:ngsi-ld:HeartRate:items:PQZZ:08108911"]},
+    "range": {"type": "Property", "value": [864, 864]}, "rt": {"type": "Property",
+    "value": ["oic.r.heartrate"]}, "seeAlso": {"type": "Property", "value": ["urn:ngsi-ld:HeartRate:items:YXOE:93796375"]},
+    "source": {"type": "Property", "value": "Worry"}, "step": {"type": "Property",
+    "value": 864}, "type": "HeartRate"}'
+classes:
+  HeartRate:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/HeartRate
+    description: This Resource describes the Properties associated with a person's
+      heart rate. The unit, which is the default unit, is bpm. The heartrate Property
+      is a read-only value that is provided by the server. When range (from 'oic.r.baseresource')
+      is omitted the default is 0 to +MAXFLOAT.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - heartrate
+    - if
+    - n
+    - name
+    - owner
+    - range
+    - rt
+    - seeAlso
+    - source
+    - step
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  heartrate:
+    description: Property. This Property describes the heart rate in bpm
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/heartrate
+  rt:
+    description: Property. The Resource Type
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  if:
+    description: Property. The OCF Interface set supported by this Resource
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+  range:
+    description: Property. The valid range for the Property in the Resource as an
+      integer. The first value in the array is the minimum value, the second value
+      in the array is the maximum value
+    range: integer
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/range
+  step:
+    description: Property. Step value across the defined range when the range is an
+      integer.  This is the increment for valid values across the range; so if range
+      is 0..10 and step is 2 then valid values are 0,2,4,6,8,10
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/step
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.heartrate:
+        text: oic.r.heartrate
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.s:
+        text: oic.if.s
+      oic.if.baseline:
+        text: oic.if.baseline

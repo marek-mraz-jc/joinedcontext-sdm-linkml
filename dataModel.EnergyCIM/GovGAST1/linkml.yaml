@@ -1,0 +1,477 @@
+id: https://github.com/smart-data-models/dataModel.EnergyCIM/GovGAST1
+name: GovGAST1
+title: ' Smart Data Models - GovGAST1'
+description: Adapted from CIM data models. Modified single shaft gas turbine.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.EnergyCIM
+  spec.source.path: GovGAST1/schema.json
+  spec.source.commit: a133118adea199b471b89c0908e7275312ef7a4c
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+classes:
+  GovGAST1:
+    class_uri: https://smartdatamodels.org/dataModel.EnergyCIM/GovGAST1
+    description: Adapted from CIM data models. Modified single shaft gas turbine.
+    is_a: Entity
+    slots:
+    - a
+    - address
+    - alternateName
+    - areaServed
+    - b
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - db1
+    - db2
+    - description
+    - eps
+    - fidle
+    - gv1
+    - gv2
+    - gv3
+    - gv4
+    - gv5
+    - gv6
+    - ka
+    - kt
+    - lmax
+    - loadinc
+    - ltrate
+    - mwbase
+    - name
+    - owner
+    - pgv1
+    - pgv2
+    - pgv3
+    - pgv4
+    - pgv5
+    - pgv6
+    - r
+    - rmax
+    - seeAlso
+    - source
+    - t1
+    - t2
+    - t3
+    - t4
+    - t5
+    - tltr
+    - vmax
+    - vmin
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/areaServed
+  a:
+    description: 'Property. Model:''https://schema.org/Number''. Turbine power time
+      constant numerator scale factor (a).  Typical Value = 0.8. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/a
+  b:
+    description: 'Property. Model:''https://schema.org/Number''. Turbine power time
+      constant denominator scale factor (b).  Typical Value = 1. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/b
+  db1:
+    description: 'Property. Model:''https://schema.org/Number''. Intentional dead-band
+      width (db1).  Unit = Hz.  Typical Value = 0. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/db1
+  db2:
+    description: 'Property. Model:''https://schema.org/Number''. Unintentional dead-band
+      (db2).  Unit = MW.  Typical Value = 0. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/db2
+  eps:
+    description: 'Property. Model:''https://schema.org/Number''. Intentional db hysteresis
+      (eps).  Unit = Hz.  Typical Value = 0. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/eps
+  fidle:
+    description: 'Property. Model:''https://schema.org/Number''. Fuel flow at zero
+      power output (Fidle).  Typical Value = 0.18. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/fidle
+  gv1:
+    description: 'Property. Model:''https://schema.org/Number''. Nonlinear gain point
+      1, PU gv (Gv1).  Typical Value = 0. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/gv1
+  gv2:
+    description: 'Property. Model:''https://schema.org/Number''. Nonlinear gain point
+      2,PU gv (Gv2).  Typical Value = 0. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/gv2
+  gv3:
+    description: 'Property. Model:''https://schema.org/Number''. Nonlinear gain point
+      3, PU gv (Gv3).  Typical Value = 0. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/gv3
+  gv4:
+    description: 'Property. Model:''https://schema.org/Number''. Nonlinear gain point
+      4, PU gv (Gv4).  Typical Value = 0. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/gv4
+  gv5:
+    description: 'Property. Model:''https://schema.org/Number''. Nonlinear gain point
+      5, PU gv (Gv5).  Typical Value = 0. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/gv5
+  gv6:
+    description: 'Property. Model:''https://schema.org/Number''. Nonlinear gain point
+      6, PU gv (Gv6).  Typical Value = 0. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/gv6
+  ka:
+    description: 'Property. Model:''https://schema.org/Number''. Governor gain (Ka).  Typical
+      Value = 0. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/ka
+  kt:
+    description: 'Property. Model:''https://schema.org/Number''. Temperature limiter
+      gain (Kt).  Typical Value = 3. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/kt
+  lmax:
+    description: 'Property. Model:''https://schema.org/Number''. Ambient temperature
+      load limit (Lmax).  Lmax is the turbine power output corresponding to the limiting
+      exhaust gas temperature.  Typical Value = 1. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/lmax
+  loadinc:
+    description: 'Property. Model:''https://schema.org/Number''. Valve position change
+      allowed at fast rate (Loadinc).  Typical Value = 0.05. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/loadinc
+  ltrate:
+    description: 'Property. Model:''https://schema.org/Number''. Maximum long term
+      fuel valve opening rate (Ltrate).  Typical Value = 0.02. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/ltrate
+  mwbase:
+    description: 'Property. Model:''https://schema.org/Number''. Base for power values
+      (MWbase) (> 0).  Unit = MW. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/mwbase
+  pgv1:
+    description: 'Property. Model:''https://schema.org/Number''. Nonlinear gain point
+      1, PU power (Pgv1).  Typical Value = 0. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/pgv1
+  pgv2:
+    description: 'Property. Model:''https://schema.org/Number''. Nonlinear gain point
+      2, PU power (Pgv2).  Typical Value = 0. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/pgv2
+  pgv3:
+    description: 'Property. Model:''https://schema.org/Number''. Nonlinear gain point
+      3, PU power (Pgv3).  Typical Value = 0. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/pgv3
+  pgv4:
+    description: 'Property. Model:''https://schema.org/Number''. Nonlinear gain point
+      4, PU power (Pgv4).  Typical Value = 0. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/pgv4
+  pgv5:
+    description: 'Property. Model:''https://schema.org/Number''. Nonlinear gain point
+      5, PU power (Pgv5).  Typical Value = 0. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/pgv5
+  pgv6:
+    description: 'Property. Model:''https://schema.org/Number''. Nonlinear gain point
+      6, PU power (Pgv6).  Typical Value = 0. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/pgv6
+  r:
+    description: 'Property. Model:''https://schema.org/Number''. Permanent droop (R).  Typical
+      Value = 0.04. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/r
+  rmax:
+    description: 'Property. Model:''https://schema.org/Number''. Maximum fuel valve
+      opening rate (Rmax).  Unit = PU/sec.  Typical Value = 1. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/rmax
+  t1:
+    description: 'Property. Model:''https://schema.org/Number''. Governor mechanism
+      time constant (T1).  T1 represents the natural valve positioning time constant
+      of the governor for small disturbances, as seen when rate limiting is not in
+      effect.  Typical Value = 0.5. Default: 0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/t1
+  t2:
+    description: 'Property. Model:''https://schema.org/Number''. Turbine power time
+      constant (T2).  T2 represents delay due to internal energy storage of the gas
+      turbine engine. T2 can be used to give a rough approximation to the delay associated
+      with acceleration of the compressor spool of a multi-shaft engine, or with the
+      compressibility of gas in the plenum of the free power turbine of an aero-derivative
+      unit, for example.  Typical Value = 0.5. Default: 0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/t2
+  t3:
+    description: 'Property. Model:''https://schema.org/Number''. Turbine exhaust temperature
+      time constant (T3).  T3 represents delay in the exhaust temperature and load
+      limiting system. Typical Value = 3. Default: 0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/t3
+  t4:
+    description: 'Property. Model:''https://schema.org/Number''. Governor lead time
+      constant (T4).  Typical Value = 0. Default: 0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/t4
+  t5:
+    description: 'Property. Model:''https://schema.org/Number''. Governor lag time
+      constant (T5).  Typical Value = 0. Default: 0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/t5
+  tltr:
+    description: 'Property. Model:''https://schema.org/Number''. Valve position averaging
+      time constant (Tltr).  Typical Value = 10. Default: 0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/tltr
+  vmax:
+    description: 'Property. Model:''https://schema.org/Number''. Maximum turbine power,
+      PU of MWbase (Vmax).  Typical Value = 1. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/vmax
+  vmin:
+    description: 'Property. Model:''https://schema.org/Number''. Minimum turbine power,
+      PU of MWbase (Vmin).  Typical Value = 0. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/vmin

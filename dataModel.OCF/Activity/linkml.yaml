@@ -1,0 +1,404 @@
+id: https://github.com/smart-data-models/dataModel.OCF/Activity
+name: Activity
+title: Smart Data models - Activity schema derived from the open connectivity foundation
+  repository https://github.com/openconnectivityfoundation/IoTDataModels
+description: This Resource describes the Properties associated with a person's physical
+  activity. All Properties are read-only values that are provided by the server. When
+  range (from 'oic.r.baseresource') is omitted the default is 0 to +MAXFLOAT.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: Activity/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "activity": {"type": "Property", "value": "sit"}, "address": {"type": "Property",
+    "value": {"addressCountry": "Production stand", "addressLocality": "Work n", "addressRegion":
+    "Senior TV news because night. Analysis provide attention then positive establish
+    present impact.", "district": "Memory Mrs dog power we fight. Office when feeling
+    water at home under impact. Nation some language should p", "postOfficeBoxNumber":
+    "Smile simple exist pull wind walk book. Record adult raise seven offer.", "postalCode":
+    "Ahead adult hard. Operation paper nice letter.", "streetAddress": "Always outside
+    fear short. Pass base how look daughter show reach.", "streetNr": "Interest far
+    deep yeah. Cultural follow reflect chair child court financial community. Chair
+    save piece relate."}}, "alternateName": {"type": "Property", "value": "From approach
+    I econ"}, "areaServed": {"type": "Property", "value": "Common success sit nearly
+    eat best plant."}, "ccal_day": {"type": "Property", "value": 371.0}, "ccal_day_precision":
+    {"type": "Property", "value": 474.6}, "ccal_day_range": {"type": "Property", "value":
+    [541.6, 629.5]}, "ccal_day_step": {"type": "Property", "value": 209.8}, "ccal_reset":
+    {"type": "Property", "value": 806.4}, "ccal_reset_precision": {"type": "Property",
+    "value": 403.7}, "ccal_reset_range": {"type": "Property", "value": [431.7, 635.1]},
+    "ccal_reset_step": {"type": "Property", "value": 137.2}, "dataProvider": {"type":
+    "Property", "value": "Resource always possible must account. Among prevent f"},
+    "dateCreated": {"type": "Property", "value": {"@type": "DateTime", "@value": "1996-07-16T03:21:42Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2001-07-06T17:20:02Z"}}, "description": {"type": "Property", "value": "Hear someone
+    office certainly edge shake could. Owner inside Mrs by."}, "id": "urn:ngsi-ld:Activity:id:QLWH:51153027",
+    "if": {"type": "Property", "value": ["oic.if.s"]}, "location": {"type": "GeoProperty",
+    "value": {"coordinates": [0.4908525, -173.441483], "type": "Point"}}, "n": {"type":
+    "Property", "value": "Hold early professional partner decade onto anyon"}, "name":
+    {"type": "Property", "value": "Center along certainly bring art. Show cas"}, "owner":
+    {"type": "Property", "value": ["urn:ngsi-ld:Activity:items:PFZA:34840773", "urn:ngsi-ld:Activity:items:XGBV:59628768"]},
+    "rt": {"type": "Property", "value": ["oic.r.activity"]}, "seeAlso": {"type": "Property",
+    "value": ["urn:ngsi-ld:Activity:items:BUDY:81766032"]}, "source": {"type": "Property",
+    "value": "Sea dog car green firm. Student green short whom. Very bring bit early
+    change threat."}, "steps_day": {"type": "Property", "value": 864}, "steps_day_range":
+    {"type": "Property", "value": [864, 864]}, "steps_day_step": {"type": "Property",
+    "value": 864}, "steps_reset": {"type": "Property", "value": 864}, "steps_reset_range":
+    {"type": "Property", "value": [864, 864]}, "steps_reset_step": {"type": "Property",
+    "value": 864}, "type": "Activity"}'
+classes:
+  Activity:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/Activity
+    description: This Resource describes the Properties associated with a person's
+      physical activity. All Properties are read-only values that are provided by
+      the server. When range (from 'oic.r.baseresource') is omitted the default is
+      0 to +MAXFLOAT.
+    is_a: Entity
+    slots:
+    - activity
+    - address
+    - alternateName
+    - areaServed
+    - ccal_day
+    - ccal_day_precision
+    - ccal_day_range
+    - ccal_day_step
+    - ccal_reset
+    - ccal_reset_precision
+    - ccal_reset_range
+    - ccal_reset_step
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - if
+    - n
+    - name
+    - owner
+    - rt
+    - seeAlso
+    - source
+    - steps_day
+    - steps_day_range
+    - steps_day_step
+    - steps_reset
+    - steps_reset_range
+    - steps_reset_step
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  activity:
+    description: Property. This Property describes the recognized current activity
+      type of user
+    range: activity_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/activity
+  steps_day:
+    description: Property. This Property describes the user's step count that measures
+      the number of steps the user has taken since the beginning of the day
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/steps_day
+  steps_reset:
+    description: Property. This Property describes the user's step count that measures
+      the number of steps the user has taken since the last reset
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/steps_reset
+  ccal_day:
+    description: Property. This Property describes the burned off calories of user
+      since the beginning of the day
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/ccal_day
+  ccal_reset:
+    description: Property. This Property describes the burned off calories of user
+      since the last reset
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/ccal_reset
+  rt:
+    description: Property. The Resource Type
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  if:
+    description: Property. The OCF Interface set supported by this Resource
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+  steps_day_range:
+    description: Property. The valid range for the Property in the Resource as an
+      integer. The first value in the array is the minimum value, the second value
+      in the array is the maximum value
+    range: integer
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/steps_day_range
+  steps_day_step:
+    description: Property.  Step value across the defined range when the range is
+      an integer.  This is the increment for valid values across the range; so if
+      range is 0..10 and step is 2 then valid values are 0,2,4,6,8,10
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/steps_day_step
+  steps_reset_range:
+    description: Property.  The valid range for the Property in the Resource as an
+      integer. The first value in the array is the minimum value, the second value
+      in the array is the maximum value
+    range: integer
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/steps_reset_range
+  steps_reset_step:
+    description: Property. Step value across the defined range when the range is an
+      integer.  This is the increment for valid values across the range; so if range
+      is 0..10 and step is 2 then valid values are 0,2,4,6,8,10
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/steps_reset_step
+  ccal_day_range:
+    description: Property.  The valid range for the Property in the Resource as a
+      number. The first value in the array is the minimum value, the second value
+      in the array is the maximum value
+    range: float
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/ccal_day_range
+  ccal_day_step:
+    description: Property.  Step value across the defined range an integer when the
+      range is a number.  This is the increment for valid values across the range;
+      so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/ccal_day_step
+  ccal_day_precision:
+    description: Property.  When exposed the value in 'precision' provides a +/- tolerance
+      against the Properties in the Resource. Thus if a Property is UPDATED to a value
+      and that Property then RETRIEVED, the RETRIEVED value is valid if in the range
+      of the set value +/- precision
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/ccal_day_precision
+  ccal_reset_range:
+    description: Property.  The valid range for the Property in the Resource as a
+      number. The first value in the array is the minimum value, the second value
+      in the array is the maximum value
+    range: float
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/ccal_reset_range
+  ccal_reset_step:
+    description: Property.  Step value across the defined range an integer when the
+      range is a number.  This is the increment for valid values across the range;
+      so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/ccal_reset_step
+  ccal_reset_precision:
+    description: Property.  When exposed the value in 'precision' provides a +/- tolerance
+      against the Properties in the Resource. Thus if a Property is UPDATED to a value
+      and that Property then RETRIEVED, the RETRIEVED value is valid if in the range
+      of the set value +/- precision
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/ccal_reset_precision
+enums:
+  activity_options:
+    name: activity_options
+    permissible_values:
+      sleep:
+        text: sleep
+      sit:
+        text: sit
+      stand:
+        text: stand
+      walk:
+        text: walk
+      run:
+        text: run
+      unknown:
+        text: unknown
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.activity:
+        text: oic.r.activity
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.s:
+        text: oic.if.s
+      oic.if.baseline:
+        text: oic.if.baseline

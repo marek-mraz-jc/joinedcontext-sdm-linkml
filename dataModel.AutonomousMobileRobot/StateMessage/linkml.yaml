@@ -1,0 +1,87 @@
+id: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot/StateMessage
+name: StateMessage
+title: State message ported to Smart Data Models
+description: State message
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot
+  spec.source.path: StateMessage/schema.json
+  spec.source.commit: fa7f44ecefe4c2825ce719a62b2ce2b684402950
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.AutonomousMobileRobot/master/context.jsonld"],
+    "accuracy": {"type": "Property", "value": {"covariance": [0.1, 0.0, 0.0, 0.0,
+    0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.7976931348623157e+308, 0.0,
+    0.0, 0.0, 0.0, 0.0, 0.0, 1.7976931348623157e+308, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+    1.7976931348623157e+308, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.05]}}, "battery": {"type":
+    "Property", "value": {"remainingPercentage": 75.4}}, "commandTime": {"type": "Property",
+    "value": {"@type": "Date-Time", "@value": "2019-06-07T08:39:40.064+09:00"}}, "destination":
+    {"type": "Property", "value": {"mapId": "2345:ae43", "orientation2D": {"theta":
+    0.0}, "point2D": {"x": 3.411, "y": 2.81}}}, "errors": {"type": "Property", "value":
+    []}, "id": "urn:ngsi-ld:Robot:Mega_rover:01", "mode": {"type": "Property", "value":
+    "navi"}, "pose": {"type": "Property", "value": {"orientation2D": {"theta": 0.0},
+    "point2D": {"x": 3.402, "y": 1.015}}}, "type": "StateMessage"}'
+classes:
+  StateMessage:
+    class_uri: https://smartdatamodels.org/dataModel.AutonomousMobileRobot/StateMessage
+    description: State message
+    is_a: Entity
+    slots:
+    - accuracy
+    - battery
+    - commandTime
+    - destination
+    - errors
+    - mode
+    - pose
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+slots:
+  commandTime:
+    description: Relationship. The time when the return message was sent.
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+    slot_uri: https://smartdatamodels.org/dataModel.AutonomousMobileRobot/commandTime
+  mode:
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+    slot_uri: https://uri.etsi.org/ngsi-ld/mode
+  errors:
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+    slot_uri: https://uri.etsi.org/ngsi-ld/errors
+  pose:
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+    slot_uri: https://smartdatamodels.org/dataModel.AutonomousMobileRobot/pose
+  destination:
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+    slot_uri: https://smartdatamodels.org/dataModel.AutonomousMobileRobot/destination
+  accuracy:
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+    slot_uri: https://smartdatamodels.org/dataModel.AutonomousMobileRobot/accuracy
+  battery:
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.AutonomousMobileRobot@fa7f44ecefe4c2825ce719a62b2ce2b684402950
+    slot_uri: https://smartdatamodels.org/dataModel.AutonomousMobileRobot/battery

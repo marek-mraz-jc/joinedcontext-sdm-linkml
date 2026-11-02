@@ -1,0 +1,262 @@
+id: https://github.com/smart-data-models/dataModel.OCF/Consumption
+name: Consumption
+title: Smart Data models - Consumption schema derived from the open connectivity foundation
+  repository https://github.com/openconnectivityfoundation/IoTDataModels
+description: This Resource describes Properties associated with the energy associated
+  with the consumption of natural gasThe gas value is in kilowatt hours [kWh].The
+  volume value is in metres cubed [m3].Provides the cumulative gas energy, the cumulative
+  gas volume and the calorific value and conversion factor used/required to convert
+  from gas volume (m3[TB1]) to gas energy (KWh).
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: Consumption/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Real leader bad school
+    name care several. Good explain grow water plant", "addressLocality": "Others
+    record hospital. Grow rule stuff truth college. Whom around put suddenly garden.",
+    "addressRegion": "Others kind company likely. Tonight themselves true power home
+    price.", "district": "Best budget power them evidence without beyond take. Physical
+    against trial son break either. Stage population boy child surface amount d",
+    "postOfficeBoxNumber": "Those traditional page a although for study. Speak themselves
+    speech. Nature white without study candidate.", "postalCode": "Stock ball organization
+    rec", "streetAddress": "View age international bi", "streetNr": "Wear individual
+    about add senior woman."}}, "alternateName": {"type": "Property", "value": "Before
+    year thems"}, "areaServed": {"type": "Property", "value": "Fire happen nothing
+    support suffer which parent. Republic"}, "dataProvider": {"type": "Property",
+    "value": "Study modern miss dog Democrat quickly. Often late produce you true
+    soldier. Food break on"}, "dateCreated": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "1979-07-06T09:36:23Z"}}, "dateModified": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2021-06-07T14:46:20Z"}}, "description":
+    {"type": "Property", "value": "Wonder employee attorney quickly candidate change
+    although bag."}, "gas": {"type": "Property", "value": 879.0}, "id": "urn:ngsi-ld:Consumption:id:GQEJ:48764759",
+    "if": {"type": "Property", "value": ["oic.if.r"]}, "location": {"type": "GeoProperty",
+    "value": {"coordinates": [-56.7421445, 77.286609], "type": "Point"}}, "n": {"type":
+    "Property", "value": "Four smile responsibi"}, "name": {"type": "Property", "value":
+    "Tend employee source nature add rest. Report size personal partner stock four.
+    Region as true develop sound cen"}, "owner": {"type": "Property", "value": ["urn:ngsi-ld:Consumption:items:KNBD:33041352",
+    "urn:ngsi-ld:Consumption:items:DUGT:23098910"]}, "precision": {"type": "Property",
+    "value": 995.8}, "rt": {"type": "Property", "value": ["oic.r.gas.consumption"]},
+    "seeAlso": {"type": "Property", "value": ["urn:ngsi-ld:Consumption:items:AGFW:91615109"]},
+    "source": {"type": "Property", "value": "Son would mouth relate own chair bett"},
+    "type": "Consumption", "volume": {"type": "Property", "value": 644.7}}'
+classes:
+  Consumption:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/Consumption
+    description: This Resource describes Properties associated with the energy associated
+      with the consumption of natural gasThe gas value is in kilowatt hours [kWh].The
+      volume value is in metres cubed [m3].Provides the cumulative gas energy, the
+      cumulative gas volume and the calorific value and conversion factor used/required
+      to convert from gas volume (m3[TB1]) to gas energy (KWh).
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - gas
+    - if
+    - n
+    - name
+    - owner
+    - precision
+    - rt
+    - seeAlso
+    - source
+    - volume
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. Resource Type
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  if:
+    description: Property. The OCF Interfaces supported by this Resource
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  gas:
+    description: Property. gas energy consumed in kWh
+    range: float
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/gas
+  precision:
+    description: Property. Accuracy granularity of the exposed value
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/precision
+  volume:
+    description: Property. gas volume consumed in m3 (metres cubed)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/volume
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.gas.consumption:
+        text: oic.r.gas.consumption
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.r:
+        text: oic.if.r
+      oic.if.baseline:
+        text: oic.if.baseline

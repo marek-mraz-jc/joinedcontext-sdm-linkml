@@ -1,0 +1,799 @@
+id: https://github.com/smart-data-models/dataModel.Energy/TechnicalCabinetDevice
+name: TechnicalCabinetDevice
+title: TechnicalCabinetDevice schema
+description: 'Technical Cabinet Device Data Model is intended to to describe the technical
+  characteristics of the Device, designed to be placed in an urban or interurban environment.
+  The main objective of these cabinets for this Data Model is to protect the electrical
+  equipment necessary for the control, surveillance, reading and management of urban
+  lighting, signaling, video and electrical distribution. The scope of use of some
+  of these cabinets can extend to an additional protection for installations of modular
+  apparatuses of telephony, data processing, meteorological stations, photo-voltaic
+  stations, wind turbines stations, telecommunications, networks, data, bre Optics
+  , etc. *Remark* : This Data Model can be used directly as a main entity to describe
+  the device `Technical Cabinet`  or as a sub-entity of the Data Model  `DEVICE` using
+  a reference by the `refDevice` attribute. It can also refer to the list of all the
+  components it contains, with the `refDeviceList` attribute, using the Data Model
+  ''DEVICE'''
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Energy
+  spec.source.path: TechnicalCabinetDevice/schema.json
+  spec.source.commit: 08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Energy/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "FR", "addressLocality":
+    "Nice", "streetAddress": "Airport Terminal 2 - Floor 1"}}, "alternateName": {"type":
+    "Property", "value": "AirPort \u2013 global Observation"}, "application": {"type":
+    "Property", "value": ["industrial", "distributionService"]}, "areaServed": {"type":
+    "Property", "value": "Nice Aeroport"}, "brandName": {"type": "Property", "value":
+    "EATON"}, "dateLastReported": {"type": "Property", "value": {"type": "DateTime",
+    "value": "2020-03-17T08:45:00Z"}}, "description": {"type": "Property", "value":
+    "Technical Cabinet description"}, "designMaterials": {"type": "Property", "value":
+    ["stainlessSteel", "polyester"]}, "dimension": {"type": "Property", "value": {"depth":
+    75, "height": 175, "width": 150}}, "documentation": {"type": "Property", "value":
+    "https://www.myTechnicalCabinet.fr"}, "doorClosingMode": {"type": "Property",
+    "value": ["fixedHandle"]}, "doorCount": {"type": "Property", "value": 2}, "doorOpeningAngle":
+    {"type": "Property", "value": 180}, "doorType": {"type": "Property", "value":
+    "solid"}, "exteriorCoating": {"type": "Property", "value": ["polyesterResin"]},
+    "exteriorFinish": {"type": "Property", "value": ["roughcast"]}, "id": "urn:ngsi-TechnicalCabinetDevice:MNCA-TCD-AP-T2-F1-022",
+    "installationCondition": {"type": "Property", "value": ["none"]}, "installationMode":
+    {"type": "Property", "value": "ground"}, "interiorCoating": {"type": "Property",
+    "value": ["heatInsulating", "polyesterResin"]}, "internalDimension": {"type":
+    "Property", "value": {"depth": 70, "height": 165, "width": 140}}, "location":
+    {"type": "GeoProperty", "value": {"coordinates": [7.196545, 43.66481], "type":
+    "Point"}}, "manufacturerName": {"type": "Property", "value": "ElDorado"}, "maximumSystemVoltage":
+    {"type": "Property", "value": 1000}, "modelName": {"type": "Property", "value":
+    "xEnergy L"}, "name": {"type": "Property", "value": "MNCA-TCD-AP-T2-F1-022"},
+    "operatingTemperature": {"type": "Property", "value": {"max": 100, "min": -40}},
+    "owner": {"type": "Property", "value": ["Airport-Division Maintenance"]}, "possibilityOfUsed":
+    {"type": "Property", "value": "stationary"}, "protectionIK": {"type": "Property",
+    "value": 10}, "protectionIP": {"type": "Property", "value": "65"}, "protectionOthers":
+    {"type": "Property", "value": ["dust", "forcedOpening", "saltSpray", "abrasion",
+    "doorTearing", "vandalism"]}, "refDeviceList": {"object": ["urn:ngsi-ld:Device:NCE-CE-025",
+    "urn:ngsi-ld:Device:NCE-FU-048", "urn:ngsi-ld:Device:NCE-CE-058"], "type": "Relationship"},
+    "serialNumber": {"type": "Property", "value": "L257589A4587J56"}, "type": "TechnicalCabinetDevice",
+    "typeOfUse": {"type": "Property", "value": "outdoor"}, "ventilationMode": {"type":
+    "Property", "value": ["selfVentilatedGills"]}, "weight": {"type": "Property",
+    "value": 60}}'
+classes:
+  TechnicalCabinetDevice:
+    class_uri: https://smartdatamodels.org/dataModel.Energy/TechnicalCabinetDevice
+    description: 'Technical Cabinet Device Data Model is intended to to describe the
+      technical characteristics of the Device, designed to be placed in an urban or
+      interurban environment. The main objective of these cabinets for this Data Model
+      is to protect the electrical equipment necessary for the control, surveillance,
+      reading and management of urban lighting, signaling, video and electrical distribution.
+      The scope of use of some of these cabinets can extend to an additional protection
+      for installations of modular apparatuses of telephony, data processing, meteorological
+      stations, photo-voltaic stations, wind turbines stations, telecommunications,
+      networks, data, bre Optics , etc. *Remark* : This Data Model can be used directly
+      as a main entity to describe the device `Technical Cabinet`  or as a sub-entity
+      of the Data Model  `DEVICE` using a reference by the `refDevice` attribute.
+      It can also refer to the list of all the components it contains, with the `refDeviceList`
+      attribute, using the Data Model ''DEVICE'''
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - application
+    - areaServed
+    - brandName
+    - dataProvider
+    - dateCreated
+    - dateLastReported
+    - dateModified
+    - description
+    - designMaterials
+    - dimension
+    - documentation
+    - doorClosingMode
+    - doorCount
+    - doorOpeningAngle
+    - doorType
+    - exteriorCoating
+    - exteriorFinish
+    - installationCondition
+    - installationMode
+    - interiorCoating
+    - internalDimension
+    - manufacturerName
+    - maximumSystemVoltage
+    - modelName
+    - name
+    - operatingTemperature
+    - owner
+    - possibilityOfUse
+    - protectionIK
+    - protectionIP
+    - protectionOthers
+    - refDevice
+    - refDeviceList
+    - refPointOfInterest
+    - seeAlso
+    - serialNumber
+    - source
+    - typeOfUse
+    - ventilationMode
+    - weight
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  Dimension:
+    description: Property. The format is structured by a sub-property of 3 items.
+      The unit code (text) of measurement  is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **CMT** represents Centimeter
+    attributes:
+      height:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      width:
+        description: 'Property. '
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      depth:
+        description: 'Property. '
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  InternalDimension:
+    description: Property. Internal dimension corresponding to the place to work inside
+      the technical cabinet. The format is structured by a sub-property of 3 items.
+      The unit code (text) of measurement  is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **CMT** represents Centimeter. Model:'https://schema.org/StructuredValue'
+    attributes:
+      height:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      width:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      depth:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  OperatingTemperature:
+    description: Property. Ambient operating temperature range. This is the minimum
+      and maximum resistance to cold and heat. The format is structured by a sub-property
+      of 2 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **CEL** represents Degree Celsius
+    attributes:
+      min:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      max:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/areaServed
+  refDevice:
+    description: Relationship. The device used to obtain the data expressed by this
+      record
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/refDevice
+  refDeviceList:
+    description: Relationship. A list of reference to the [Devices](https://github.com/smart-data-models/dataModel.Device/blob/master/Device/doc/spec.md)
+      which are inside the technical Cabinet Device
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/refDeviceList
+  refPointOfInterest:
+    description: Relationship. Reference to a [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)
+      linked with the observation
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/refPointOfInterest
+  dateLastReported:
+    description: Property. A timestamp which denotes the last time when the device
+      successfully reported data. Date and time in an ISO8601 UTCformat. Model:'https://schema.org/DateTime'
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/dateLastReported
+  brandName:
+    description: Property. Name of the brand. Model:'https://schema.org/brand'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/brandName
+  modelName:
+    description: Property. Name of the model as given by the manufacturer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/modelName
+  manufacturerName:
+    description: Property. Name of the manufacturer. Model:'https://schema.org/manufacturer'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/manufacturerName
+  serialNumber:
+    description: Property. Serial number of the container. Model:'https://schema.org/serialNumber'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/serialNumber
+  application:
+    description: Property. Target application of the Device regarding the environment.
+      A combination of these values. Enum:'commercial, distributionService, industrial,
+      other, publicWorks, road, tertiary, urbanService'
+    range: application_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/application
+  typeOfUse:
+    description: Property. Accepted use regarding its positioning in an indoor / outdoor
+      environment. A unique value of these values. Enum:'indoor, mixed, outdoor, other'
+    range: typeOfUse_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/typeOfUse
+  installationMode:
+    description: Property. Positioning of the device in relation to a ground reference
+      system. Model:'https://schema.org/Text'. Enum:'aerial, ground, other, pole,
+      roofing, underground, wall'
+    range: installationMode_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/installationMode
+  installationCondition:
+    description: Property. Condition and possibility of use in the following environments.
+      A combination of these values. Enum:'desert, dust, extremeCold, extremeClimate,
+      extremeHeat, extremeHumidity, marine, none, other, saline, seismic, sand'
+    range: installationCondition_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/installationCondition
+  possibilityOfUse:
+    description: Property. Possibility of use. A unique value. Enum:'mixed, mobile,
+      other, stationary'
+    range: possibilityOfUse_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/possibilityOfUse
+  documentation:
+    description: Property. A link to device's documentation. Model:'https://schema.org/URL'
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/documentation
+  dimension:
+    description: Property. The format is structured by a sub-property of 3 items.
+      The unit code (text) of measurement  is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **CMT** represents Centimeter
+    range: Dimension
+    required: true
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/dimension
+  weight:
+    description: Property. Weight of the item. The unit code (text) of measurement  is
+      given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **KGM** represents Kilograms. Model:'https://schema.org/weigth'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/weight
+  internalDimension:
+    description: Property. Internal dimension corresponding to the place to work inside
+      the technical cabinet. The format is structured by a sub-property of 3 items.
+      The unit code (text) of measurement  is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **CMT** represents Centimeter. Model:'https://schema.org/StructuredValue'
+    range: InternalDimension
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/internalDimension
+  protectionIP:
+    description: 'Property. IP ''Ingress Protection'' for the Junction Box. This is
+      the level classifies and rates the degree of protection provided by mechanical
+      casings and electrical enclosures against intrusion, dust, accidental contact,
+      and water according to International Electrotechnical Commission standard (EN
+      60-529). First digit: Solid particle protection (Single numeral: 06 or ''X'').
+      Second digit: Liquid ingress protection (Single numeral: 09 or ''X'' ).Third
+      digit: Personal Protection against access to dangerous parts (optional additional
+      letter). Fourth digit: Other protections (optional additional letter)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/protectionIP
+  protectionIK:
+    description: Property. IK '*Mecanic Protection*' level relating to numeric classification
+      for the degrees of protection provided by enclosures for electrical equipment
+      against external mechanical impacts, according to International Electro technical
+      Commission standard (EN 62-262). - IK varies from 0 (minimum resistance) to
+      10 (maximum resistance) which represents an Impact Energy (Unit Joule)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/protectionIK
+  maximumSystemVoltage:
+    description: Property. Maximum system voltage permitted for the **module**. The
+      unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **VLT** represents Volt
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/maximumSystemVoltage
+  operatingTemperature:
+    description: Property. Ambient operating temperature range. This is the minimum
+      and maximum resistance to cold and heat. The format is structured by a sub-property
+      of 2 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **CEL** represents Degree Celsius
+    range: OperatingTemperature
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/operatingTemperature
+  protectionOthers:
+    description: Property. Others protection of the technical cabinet. A combination
+      of these values. Enum:'abrasion, basement, dampProof, display, doorTearing,
+      dust, forcedOpening, graffiti, insect, other, roofOverload, saltSpray, shielding,
+      solar, vandalism, water'
+    range: protectionOthers_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/protectionOthers
+  doorCount:
+    description: Property. Count of doors of the technical Cabinet
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/doorCount
+  doorType:
+    description: Property. Type of door of the technical Cabinet. A unique value of
+      these values. Enum:'mixed, other, solid, transparent'
+    range: doorType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/doorType
+  doorOpeningAngle:
+    description: Property. Door opening angle expressed in decimal degrees with a
+      range from 0 to 180 degree. The unit code (text) of measurement  is given using
+      the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **DD** represents Decimal Degrees
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/doorOpeningAngle
+  doorClosingMode:
+    description: Property. Door closing mode. A unique value of these values. Enum:'fixedHandle,
+      other, revolvingHandle, triangleHandle'
+    range: doorClosingMode_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/doorClosingMode
+  designMaterials:
+    description: Property. Design materials to build the cabinet. A combination of  these
+      values. Enum:'ABS-Plastic, aluminum, fiberGlass, galvanizedSteel, other, polyester,
+      stainlessSteel'
+    range: designMaterials_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/designMaterials
+  interiorCoating:
+    description: Property. Interior Coating. A combination of these values. Enum:'fiberGlass,
+      heatInsulating, other, plastic, polyester, polyesterResin, steel'
+    range: interiorCoating_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/interiorCoating
+  exteriorCoating:
+    description: Property. Interior Coating. A combination of these values. Enum:'fiberGlass,
+      other, plastic, polyester, polyesterResin, steel
+    range: exteriorCoating_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/exteriorCoating
+  exteriorFinish:
+    description: Property. Exterior finish. A combination of these values. Enum:'graffiti,
+      other, raised, roughcast, smooth, textured'
+    range: exteriorFinish_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/exteriorFinish
+  ventilationMode:
+    description: Property. Ventilation mode. A combination of these values. Enum:'airConditioners,
+      dehumidifier, none, other, selfVentilatedGills'
+    range: ventilationMode_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/ventilationMode
+enums:
+  application_options:
+    name: application_options
+    permissible_values:
+      commercial:
+        text: commercial
+      distributionService:
+        text: distributionService
+      industrial:
+        text: industrial
+      other:
+        text: other
+      publicWorks:
+        text: publicWorks
+      road:
+        text: road
+      tertiary:
+        text: tertiary
+      urbanService:
+        text: urbanService
+  typeOfUse_options:
+    name: typeOfUse_options
+    permissible_values:
+      indoor:
+        text: indoor
+      mixed:
+        text: mixed
+      outdoor:
+        text: outdoor
+      other:
+        text: other
+  installationMode_options:
+    name: installationMode_options
+    permissible_values:
+      aerial:
+        text: aerial
+      ground:
+        text: ground
+      other:
+        text: other
+      pole:
+        text: pole
+      roofing:
+        text: roofing
+      underground:
+        text: underground
+      wall:
+        text: wall
+  installationCondition_options:
+    name: installationCondition_options
+    permissible_values:
+      desert:
+        text: desert
+      dust:
+        text: dust
+      extremeCold:
+        text: extremeCold
+      extremeClimate:
+        text: extremeClimate
+      extremeHeat:
+        text: extremeHeat
+      extremeHumidity:
+        text: extremeHumidity
+      marine:
+        text: marine
+      none:
+        text: none
+      other:
+        text: other
+      saline:
+        text: saline
+      seismic:
+        text: seismic
+      sand:
+        text: sand
+  possibilityOfUse_options:
+    name: possibilityOfUse_options
+    permissible_values:
+      mixed:
+        text: mixed
+      mobile:
+        text: mobile
+      other:
+        text: other
+      stationary:
+        text: stationary
+  protectionOthers_options:
+    name: protectionOthers_options
+    permissible_values:
+      abrasion:
+        text: abrasion
+      basement:
+        text: basement
+      dampProof:
+        text: dampProof
+      display:
+        text: display
+      doorTearing:
+        text: doorTearing
+      dust:
+        text: dust
+      forcedOpening:
+        text: forcedOpening
+      graffiti:
+        text: graffiti
+      insect:
+        text: insect
+      other:
+        text: other
+      roofOverload:
+        text: roofOverload
+      saltSpray:
+        text: saltSpray
+      shielding:
+        text: shielding
+      solar:
+        text: solar
+      vandalism:
+        text: vandalism
+      water:
+        text: water
+  doorType_options:
+    name: doorType_options
+    permissible_values:
+      mixed:
+        text: mixed
+      other:
+        text: other
+      solid:
+        text: solid
+      transparent:
+        text: transparent
+  doorClosingMode_options:
+    name: doorClosingMode_options
+    permissible_values:
+      fixedHandle:
+        text: fixedHandle
+      other:
+        text: other
+      revolvingHandle:
+        text: revolvingHandle
+      triangleHandle:
+        text: triangleHandle
+  designMaterials_options:
+    name: designMaterials_options
+    permissible_values:
+      ABS-Plastic:
+        text: ABS-Plastic
+      aluminum:
+        text: aluminum
+      fiberGlass:
+        text: fiberGlass
+      galvanizedSteel:
+        text: galvanizedSteel
+      other:
+        text: other
+      polyester:
+        text: polyester
+      stainlessSteel:
+        text: stainlessSteel
+  interiorCoating_options:
+    name: interiorCoating_options
+    permissible_values:
+      fiberGlass:
+        text: fiberGlass
+      heatInsulating:
+        text: heatInsulating
+      other:
+        text: other
+      plastic:
+        text: plastic
+      polyester:
+        text: polyester
+      polyesterResin:
+        text: polyesterResin
+      steel:
+        text: steel
+  exteriorCoating_options:
+    name: exteriorCoating_options
+    permissible_values:
+      fiberGlass:
+        text: fiberGlass
+      other:
+        text: other
+      plastic:
+        text: plastic
+      polyester:
+        text: polyester
+      polyesterResin:
+        text: polyesterResin
+      steel:
+        text: steel
+  exteriorFinish_options:
+    name: exteriorFinish_options
+    permissible_values:
+      graffiti:
+        text: graffiti
+      other:
+        text: other
+      raised:
+        text: raised
+      roughcast:
+        text: roughcast
+      smooth:
+        text: smooth
+      textured:
+        text: textured
+  ventilationMode_options:
+    name: ventilationMode_options
+    permissible_values:
+      airConditioners:
+        text: airConditioners
+      dehumidifier:
+        text: dehumidifier
+      none:
+        text: none
+      other:
+        text: other
+      selfVentilatedGills:
+        text: selfVentilatedGills

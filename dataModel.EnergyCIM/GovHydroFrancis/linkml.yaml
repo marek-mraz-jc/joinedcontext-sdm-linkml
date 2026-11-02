@@ -1,0 +1,418 @@
+id: https://github.com/smart-data-models/dataModel.EnergyCIM/GovHydroFrancis
+name: GovHydroFrancis
+title: ' Smart Data Models - GovHydroFrancis'
+description: Adapted from CIM data models. Detailed hydro unit - Francis model.  This
+  model can be used to represent three types of governors. A schematic of the hydraulic
+  system of detailed hydro unit models, like Francis and Pelton, is provided in the
+  DetailedHydroModelHydraulicSystem diagram.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.EnergyCIM
+  spec.source.path: GovHydroFrancis/schema.json
+  spec.source.commit: a133118adea199b471b89c0908e7275312ef7a4c
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+classes:
+  GovHydroFrancis:
+    class_uri: https://smartdatamodels.org/dataModel.EnergyCIM/GovHydroFrancis
+    description: Adapted from CIM data models. Detailed hydro unit - Francis model.  This
+      model can be used to represent three types of governors. A schematic of the
+      hydraulic system of detailed hydro unit models, like Francis and Pelton, is
+      provided in the DetailedHydroModelHydraulicSystem diagram.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - am
+    - areaServed
+    - av0
+    - av1
+    - bp
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - db1
+    - description
+    - etamax
+    - governorControl
+    - h1
+    - h2
+    - hn
+    - kc
+    - kg
+    - kt
+    - name
+    - owner
+    - qc0
+    - qn
+    - seeAlso
+    - source
+    - ta
+    - td
+    - ts
+    - twnc
+    - twng
+    - tx
+    - va
+    - valvmax
+    - valvmin
+    - vc
+    - waterTunnelSurgeChamberSimulation
+    - zsfc
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/areaServed
+  am:
+    description: 'Property. Model:''https://schema.org/Number''. Opening section S
+      at the maximum efficiency (Am).  Typical Value = 0.7. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/am
+  av0:
+    description: 'Property. Model:''https://schema.org/Number''. Area of the surge
+      tank (A). Unit = m. Typical Value = 30. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/av0
+  av1:
+    description: 'Property. Model:''https://schema.org/Number''. Area of the compensation
+      tank (A). Unit = m. Typical Value = 700. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/av1
+  bp:
+    description: 'Property. Model:''https://schema.org/Number''. Droop (Bp).  Typical
+      Value = 0.05. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/bp
+  db1:
+    description: 'Property. Model:''https://schema.org/Number''. Intentional dead-band
+      width (DB1).  Unit = Hz.  Typical Value = 0. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/db1
+  etamax:
+    description: 'Property. Model:''https://schema.org/Number''. Maximum efficiency
+      (EtaMax).  Typical Value = 1.05. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/etamax
+  governorControl:
+    description: 'Property. Model:''https://schema.org/Number''. Governor control
+      flag (Cflag).  Typical Value = mechanicHydrolicTachoAccelerator. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/governorControl
+  h1:
+    description: 'Property. Model:''https://schema.org/Number''. Head of compensation
+      chamber water level with respect to the level of penstock (H).  Unit = m. Typical
+      Value = 4. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/h1
+  h2:
+    description: 'Property. Model:''https://schema.org/Number''. Head of surge tank
+      water level with respect to the level of penstock (H).  Unit = m. Typical Value
+      = 40. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/h2
+  hn:
+    description: 'Property. Model:''https://schema.org/Number''. Rated hydraulic head
+      (H).  Unit = m. Typical Value = 250. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/hn
+  kc:
+    description: 'Property. Model:''https://schema.org/Number''. Penstock loss coefficient
+      (due to friction) (Kc).  Typical Value = 0.025. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/kc
+  kg:
+    description: 'Property. Model:''https://schema.org/Number''. Water tunnel and
+      surge chamber loss coefficient (due to friction) (Kg).  Typical Value = 0.025.
+      Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/kg
+  kt:
+    description: 'Property. Model:''https://schema.org/Number''. Washout gain (Kt).  Typical
+      Value = 0.25. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/kt
+  qc0:
+    description: 'Property. Model:''https://schema.org/Number''. No-load turbine flow
+      at nominal head (Qc0).  Typical Value = 0.21. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/qc0
+  qn:
+    description: 'Property. Model:''https://schema.org/Number''. Rated flow (Q). Unit
+      = m/s. Typical Value = 40. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/qn
+  ta:
+    description: 'Property. Model:''https://schema.org/Number''. Derivative gain (Ta).  Typical
+      Value = 3. Default: 0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/ta
+  td:
+    description: 'Property. Model:''https://schema.org/Number''. Washout time constant
+      (Td).  Typical Value = 3. Default: 0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/td
+  ts:
+    description: 'Property. Model:''https://schema.org/Number''. Gate servo time constant
+      (Ts).  Typical Value = 0.5. Default: 0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/ts
+  twnc:
+    description: 'Property. Model:''https://schema.org/Number''. Water inertia time
+      constant (Twnc).  Typical Value = 1. Default: 0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/twnc
+  twng:
+    description: 'Property. Model:''https://schema.org/Number''. Water tunnel and
+      surge chamber inertia time constant (Twng). Typical Value = 3. Default: 0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/twng
+  tx:
+    description: 'Property. Model:''https://schema.org/Number''. Derivative feedback
+      gain (Tx).  Typical Value = 1. Default: 0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/tx
+  va:
+    description: 'Property. Model:''https://schema.org/Number''. Maximum gate opening
+      velocity (Va).  Unit = PU/sec.  Typical Value = 0.011. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/va
+  valvmax:
+    description: 'Property. Model:''https://schema.org/Number''. Maximum gate opening
+      (ValvMax).  Typical Value = 1. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/valvmax
+  valvmin:
+    description: 'Property. Model:''https://schema.org/Number''. Minimum gate opening
+      (ValvMin).  Typical Value = 0. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/valvmin
+  vc:
+    description: 'Property. Model:''https://schema.org/Number''. Maximum gate closing
+      velocity (Vc).  Unit = PU/sec.  Typical Value = -0.011. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/vc
+  waterTunnelSurgeChamberSimulation:
+    description: 'Property. Model:''https://schema.org/Number''. Water tunnel and
+      surge chamber simulation (Tflag). true = enable of water tunnel and surge chamber
+      simulation false = inhibit of water tunnel and surge chamber simulation. Typical
+      Value = false. Default: False'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/waterTunnelSurgeChamberSimulation
+  zsfc:
+    description: 'Property. Model:''https://schema.org/Number''. Head of upper water
+      level with respect to the level of penstock (Zsfc).  Unit = m.  Typical Value
+      = 25. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/zsfc

@@ -1,0 +1,809 @@
+id: https://github.com/smart-data-models/dataModel.MarineTransport/Berth
+name: Berth
+title: Smart Data models Berth schema
+description: This data model is intended to provide information about Berths. We define
+  'berth' to each stop of a ship during a PortCall, both for a port-facility (berth)
+  and as an anchorage area. Each berth has a berthing time (estimated, planned, etc.),
+  a lifecycle (estimated, requested, approved, etc.), an main activity during the
+  stop (commercial operations, major repair, etc.) and a number of attributes described
+  below. When commercial operations take place, an Operation entity will define the
+  details of each commercial operation
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.MarineTransport
+  spec.source.path: Berth/schema.json
+  spec.source.commit: 4ffb0d8d8c29470e169df9d8c329135ec0806f72
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.MarineTransport/master/context.jsonld"],
+    "activityCode": {"type": "Property", "value": "ZOP"}, "agentLegalCode": {"type":
+    "Property", "value": "A-98345678"}, "agentName": {"type": "Property", "value":
+    "Acme Huelva S.L."}, "arrivalDraught": {"type": "Property", "value": 12.3}, "ataBerth":
+    {"type": "Property", "value": {"@type": "date-time", "@value": "2023-01-01T07:30:00"}},
+    "atdBerth": {"type": "Property", "value": {"@type": "date-time", "@value": "2023-01-01T07:30:00"}},
+    "authorizationRemarks": {"type": "Property", "value": "authorized after departure
+    of ship XX"}, "authorizedAt": {"type": "Property", "value": {"@type": "date-time",
+    "@value": "2023-01-01T07:30:00"}}, "berthCode": {"type": "Property", "value":
+    "urn:mrn:eshuv:portcalls:berth:code:10"}, "berthName": {"type": "Property", "value":
+    "Levante comercial"}, "berthingTypeCode": {"type": "Property", "value": "AB1"},
+    "departureDraught": {"type": "Property", "value": 9.5}, "etaBerth": {"type": "Property",
+    "value": {"@type": "date-time", "@value": "2023-01-01T07:30:00"}}, "etdBerth":
+    {"type": "Property", "value": {"@type": "date-time", "@value": "2023-01-01T07:30:00"}},
+    "firstBollard": {"type": "Property", "value": "N03"}, "gln": {"type": "Property",
+    "value": 84332157000139}, "id": "02ce3860-3126-42af-8ac7-c2a661134130", "lastBollard":
+    {"type": "Property", "value": "N12"}, "mooringLines": {"type": "Property", "value":
+    12}, "mrn": {"type": "Property", "value": "urn:mrn:eshuv:portcalls:berth:id:18013"},
+    "portCallNumber": {"type": "Property", "value": "ESHUV202300123"}, "portCallRef":
+    {"object": "urn:mrn:eshuv:portcalls:portcall:2023:id:941", "type": "Relationship"},
+    "portCode": {"type": "Property", "value": "ESHUV"}, "ptaBerth": {"type": "Property",
+    "value": {"@type": "date-time", "@value": "2023-01-01T07:30:00"}}, "ptdBerth":
+    {"type": "Property", "value": {"@type": "date-time", "@value": "2023-01-01T07:30:00"}},
+    "remarks": {"type": "Property", "value": "FONDEA PARA SUMINISTRO DE COMBUSTIBLE
+    POR GABARRA"}, "requestedAt": {"type": "Property", "value": {"@type": "date-time",
+    "@value": "2023-01-01T07:30:00"}}, "rtaBerth": {"type": "Property", "value": {"@type":
+    "date-time", "@value": "2023-01-01T07:30:00"}}, "rtdBerth": {"type": "Property",
+    "value": {"@type": "date-time", "@value": "2023-01-01T07:30:00"}}, "status": {"type":
+    "Property", "value": "AUTHORIZED"}, "stopRank": {"type": "Property", "value":
+    2}, "terminal": {"type": "Property", "value": "Muelle Levante"}, "type": "Berth",
+    "year": {"type": "Property", "value": 2023}}'
+classes:
+  Berth:
+    class_uri: https://smartdatamodels.org/dataModel.MarineTransport/Berth
+    description: This data model is intended to provide information about Berths.
+      We define 'berth' to each stop of a ship during a PortCall, both for a port-facility
+      (berth) and as an anchorage area. Each berth has a berthing time (estimated,
+      planned, etc.), a lifecycle (estimated, requested, approved, etc.), an main
+      activity during the stop (commercial operations, major repair, etc.) and a number
+      of attributes described below. When commercial operations take place, an Operation
+      entity will define the details of each commercial operation
+    is_a: Entity
+    slots:
+    - activityCode
+    - address
+    - agentLegalCode
+    - agentName
+    - alternateName
+    - areaServed
+    - arrivalDraught
+    - ataBerth
+    - atdBerth
+    - authorizationRemarks
+    - authorizedAt
+    - berthCode
+    - berthName
+    - berthingTypeCode
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - departureDraught
+    - description
+    - etaBerth
+    - etdBerth
+    - firstBollard
+    - gln
+    - lastBollard
+    - mooringLines
+    - mrn
+    - name
+    - owner
+    - portCallNumber
+    - portCallRef
+    - portCode
+    - ptaBerth
+    - ptdBerth
+    - remarks
+    - requestedAt
+    - rtaBerth
+    - rtdBerth
+    - seeAlso
+    - source
+    - status
+    - stopRank
+    - terminal
+    - year
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+slots:
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/areaServed
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/seeAlso
+  mrn:
+    description: Property. MRN coded identifier. It has to be related to the entity
+      in a way that is well-known by different organisms the meaning and the initiator
+      of the entity, and all next parties will maintain on its original value. This
+      identifier must be an UNIQUE identifier of the PortCall entity assigned by the
+      system who created on first the entity. This URN should Conforms MRN & IETF
+      specifically RFC 2141, RFC 5234, and RFC 8141. The proposed format is id::='urn:mrn:<OID>:<ONSS>:portcalls:berth:id:[0-9]+'
+      where OID:= Organisation UN/LOCODE, OONSS:=Organization Name of Service, 9999999
+      an increasing, unique identifier that the issuer of the Berth entity will identify
+      on his systems (i.e. a SQL row-id), i.e. urn:mrn:eshuv:portcalls:berth:id:2024012.
+      See [Unlocode](https://unece.org/trade/cefact/unlocode-code-list-country-and-territory).
+      In international standards is also known as [Ship's Visit]
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mrn
+  portCode:
+    description: Property. Model:'https://schema.org/Text'. Code of the port of the
+      call
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/portCode
+  year:
+    description: Property. Model:'https://schema.org/Number'. Year of the init of
+      the berthing
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/year
+  portCallNumber:
+    description: Property. Model:'https://schema.org/Text'. PortCall identifier
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/portCallNumber
+  portCallRef:
+    description: 'Relationship.Reference to parent PortCall entity. '
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/portCallRef
+  stopRank:
+    description: Property. Model:'https://schema.org/Number'. Rank or Number of this
+      stop in the PortCall activity ordered by arrival time in the sequence of stops
+      (berthing/anchor area)
+    range: float
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/stopRank
+  terminal:
+    description: Property. Model:'https://schema.org/Text'. Common name of the Terminal
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/terminal
+  berthCode:
+    description: 'Property. Model:''https://schema.org/Text''. Code identifying the
+      port-facility for this stop of the vessel. Format: <oid>:berth:99999'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/berthCode
+  berthName:
+    description: Property. Model:'https://schema.org/Text'. Name of the port-facility
+      for this stop of the vessel
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/berthName
+  gln:
+    description: Property. ISO/IEC 6523:'https://schema.org/Number'. Optional code
+      of the location. The Global Location Number (GLN) is a 13 digits-unique number
+      that is assigned to locations to enable them to be identified uniquely worldwide,
+      allocated to any location in the supply chain. These GLNs can be used to identify
+      any legal, physical and functional locations
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/gln
+  firstBollard:
+    description: Property. Model:'https://schema.org/Text'. First bollard identifier
+      in port facility
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/firstBollard
+  lastBollard:
+    description: Property. Model:'https://schema.org/Text'. Last bollard identifier
+      in port facility
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/lastBollard
+  status:
+    description: 'Property. Model:''https://schema.org/Text''. Current status of the
+      Berthing in its lifetime, from request to authorization and completion. Enum:''ACCEPTED,
+      AUTHORIZED, CANCELLED, COMPLETED, DENIED, INITIATED, REQUESTED, REJECTED, INVOICING,
+      INVOICED''. [EMSWe: DE-019-07] [EDI: BGM-1225] [S211: serviceState: timeSequence:VESSEL] '
+    range: status_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://uri.etsi.org/ngsi-ld/status
+  requestedAt:
+    description: 'Property. Represented by an ISO 8601 UTC format, Date and time of
+      the berthing request by the ship agent. '
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/requestedAt
+  authorizedAt:
+    description: 'Property. Represented by an ISO 8601 UTC format, Date and time of
+      authorization by port Authority and Maritime Authority. '
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/authorizedAt
+  berthingTypeCode:
+    description: 'Property. Model:''https://schema.org/Text''. Codes for identifying
+      the Type of berthing/mooring in the interface ship-port. Enum: ABV=Board port
+      to ship; ABX=Port berthed; AB1=Bouched port by bow; AB2=Bouched port by stern;
+      AEX=Starboard docked; AX1=Docked by bow; AEV=Board starboard to ship; REM=Boarded
+      starboard at the pier; REX=Starboard bow; RE1=Starboard bow by bow; RE2=Cracked
+      starboard by stern; RPM=Toe-to-spring twisting; RPV=Boarded from tip to ship;
+      RPX=Ringed point; RXM=To moor alongside a dock; RXV=Moored to another vessel;
+      RXX=Moored ; RX1=Tangled by bow; AE1=Bouched starboard by bow; AE2=Bouched starboard
+      by stern; APM=Pocketed to the pier; APV=Pocket to ship; APX=Point docking; AXM=docked
+      at the pier; AXV=Boarded to ship; AXX=docked; AX2=Docked by stern; FBM=Anchored
+      port side at the pier; FBV=Anchored port side to ship; FBX=Port anchored; FB1=Anchored
+      port by bow; FB2=Anchored port by stern; FEM=Anchored starboard to the pier;
+      FEV=Anchored starboard to ship; FEX=Anchored starboard; FE1=Anchored starboard
+      by bow; FE2=Anchored starboard by stern; FPM=Toe-to-pier mooring; FPV=Anchoring
+      tip to ship; FPX=Point anchoring; FP1=Anchoring tip by bow; FP2=Anchoring tip
+      by stern; FXM=Anchored at the pier; FXV=Anchored to ship; FX1=Anchored by bow;
+      FX2=Anchored by stern; RBM=Moored portside to the dock; RBX=Battered port side;
+      RB1=Bulked port by bow; RB2=Bulked on port side by stern; RX2=Tangled by stern;
+      YBM=Tethered to the port buoy at the pier; YBV=Tethered to the buoy on the port
+      side of the ship; YBX=Tethered to port buoy; YB1=Tied to port buoy by bow; YB2=Tied
+      to port buoy by stern; YEM=Tethered to the starboard buoy at the pier; YEV=Tethered
+      to the starboard buoy of the ship; YEX=Tethered to starboard buoy; YE1=Tied
+      to starboard buoy by bow; YE2=Tied to starboard buoy by stern; YPM=Tethered
+      to the end buoy at the pier; YPV=Tethered to the buoy end-to-ship; YPX=Tied
+      to tip buoy; YP1=Tethered to tip buoy by bow; YP2=Tied to the tip buoy by stern;
+      YXM=Tethered to the buoy at the pier; YXV=Tethered to the buoy to the ship;
+      YX1=Tethered to buoy by bow; YX2=Tethered to buoy by stern; ABM=Port berthed
+      to the pier; AEM=Moored starboard to dock; FXX=Anchoring; YXX=Tethered to buoy
+      without further indication; AP1=Boarding tip by bow; AP2=Pocketed fore and aft;
+      RBV=Bulked port to ship; REV=Wheeled starboard to ship;. '
+    range: berthingTypeCode_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/berthingTypeCode
+  mooringLines:
+    description: 'Property. Model:''https://schema.org/Number''. Number of mooring
+      lines. '
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mooringLines
+  activityCode:
+    description: 'Property. Model:''https://schema.org/Text''. Activity during the
+      stop in berth. It can be cargo operations or a number of activities related
+      to the ship-port activities. Enum: ZGR=Major repair; ZPV=Provisioning; ZCA=Shipyard
+      Construction; ZRA=Major shipyard repair; ZRF=Repair afloat with crew personnel;
+      ZRT=Repair at anchor with personnel other than the crew; ZDA=Shipyard scrapping;
+      ZTA=Shipyard Transformation; ZTF=Transformation; ZVO=Official visit; ZAF=Forced
+      arrival; ZIN=Inactive; ZIP=Fishing inactivity; ZAR=Provisioning at docking;
+      ZAO=Provisioning at anchor; ZAB=Provisioning at docking by barge; ZOP=Port operations
+      of commercial traffic; ZCT=Sightseeing cruises; ZTI=Internal traffic; ZBO=Launching;
+      ZCO=Construction; ZRE=Vessel intended for towing service; ZDE=Scrapyard; ZAP=Fishing
+      and artisanal vessels in loading and unloading operations of fresh fish; ZDR=Vessel
+      intended for dredging; ZPB=Biological stoppage; ZCL=No license; ZDJ=Judicial
+      deposit; ZMR=Vessel intended for mooring service; ZPR=Vessel intended for pilotage
+      service; ZRM=Trailer; ZVA=Access to slipway; ZDS=Vessel in dry dock; ZOT=Other;
+      EST=Stay; ZSA=Water Supply; ZSH=Ice Supply; ZSE=Electrical Energy Supply; ZSC=Fuel
+      Supply; ZSV=Victualling;'
+    range: activityCode_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/activityCode
+  etaBerth:
+    description: 'Property. Represented by an ISO 8601 UTC format, Date and time of
+      Estimated Time of Arrival to Berth expected by Port Authority (ISO 8601 UTC
+      format). [EMSWe: DE-005-09] [EDI: DTM-2005-132] [S211: locationState.timeType.ESTIMATED]
+      [IMO: IMO0064]'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/etaBerth
+  rtaBerth:
+    description: 'Property. Represented by an ISO 8601 UTC format, Date and time of
+      Requested Time of Arrival by ship-agent (ISO 8601 UTC format).. [EMSWe: DE-005-09]
+      [EDI: DTM-2005-132] [S211: locationState.timeType.ESTIMATED] [IMO: IMO0064]'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/rtaBerth
+  ptaBerth:
+    description: Property. Represented by an ISO 8601 UTC format, Planned time of
+      arrival to Berth
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/ptaBerth
+  ataBerth:
+    description: Property. Represented by an ISO 8601 UTC format, Actual time of arrival
+      to Berth
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/ataBerth
+  etdBerth:
+    description: 'Property. Represented by an ISO 8601 UTC format, Date and time of
+      Estimated Time of Departure from Berth, expected by Port Authority. [EMSWe:
+      DE-005-04] [EDI: DTM-2005-133] [S211: locationState.timeType.ESTIMATED] [IMO:
+      IMO0066]'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/etdBerth
+  rtdBerth:
+    description: 'Property. Represented by an ISO 8601 UTC format, Date and time of
+      Requested Time of Departure by ship-agent (ISO 8601 UTC format). [EMSWe: DE-005-09]
+      [EDI: DTM-2005-132] [S211: locationState.timeType.ESTIMATED] [IMO: IMO0064]'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/rtdBerth
+  ptdBerth:
+    description: Property. Represented by an ISO 8601 UTC format. Planned time of
+      departure from Berth
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/ptdBerth
+  atdBerth:
+    description: Property. Represented by an ISO 8601 UTC format. Actual time of departure
+      from Berth
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/atdBerth
+  arrivalDraught:
+    description: Property. Model:'https://schema.org/Number'. Draught at first-line
+      secured for arriving navigation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/arrivalDraught
+  departureDraught:
+    description: Property. Model:'https://schema.org/Number'. Draught at last-line
+      released for departure navigation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/departureDraught
+  remarks:
+    description: Property. Model:'https://schema.org/Text'. Remarks of the berthing,
+      by Agent at Port or others
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/remarks
+  authorizationRemarks:
+    description: Property. Model:'https://schema.org/Text'. Conditions to the berthing
+      written by Port Authority
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/authorizationRemarks
+  agentName:
+    description: Property. Model:'https://schema.org/Text'. Name of PortCall's ship
+      Agent
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/agentName
+  agentLegalCode:
+    description: Property. Model:'https://schema.org/Text'. Legal identifier code
+      of the PortCall's ship Agent
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/agentLegalCode
+enums:
+  status_options:
+    name: status_options
+    permissible_values:
+      ACCEPTED:
+        text: ACCEPTED
+      AUTHORIZED:
+        text: AUTHORIZED
+      CANCELLED:
+        text: CANCELLED
+      COMPLETED:
+        text: COMPLETED
+      DENIED:
+        text: DENIED
+      INITIATED:
+        text: INITIATED
+      REQUESTED:
+        text: REQUESTED
+      REJECTED:
+        text: REJECTED
+      INVOICING:
+        text: INVOICING
+      INVOICED:
+        text: INVOICED
+  berthingTypeCode_options:
+    name: berthingTypeCode_options
+    permissible_values:
+      ABV:
+        text: ABV
+      ABX:
+        text: ABX
+      AB1:
+        text: AB1
+      AB2:
+        text: AB2
+      AEX:
+        text: AEX
+      AX1:
+        text: AX1
+      AEV:
+        text: AEV
+      REM:
+        text: REM
+      REX:
+        text: REX
+      RE1:
+        text: RE1
+      RE2:
+        text: RE2
+      RPM:
+        text: RPM
+      RPV:
+        text: RPV
+      RPX:
+        text: RPX
+      RXM:
+        text: RXM
+      RXV:
+        text: RXV
+      RXX:
+        text: RXX
+      RX1:
+        text: RX1
+      AE1:
+        text: AE1
+      AE2:
+        text: AE2
+      APM:
+        text: APM
+      APV:
+        text: APV
+      APX:
+        text: APX
+      AXM:
+        text: AXM
+      AXV:
+        text: AXV
+      AXX:
+        text: AXX
+      AX2:
+        text: AX2
+      FBM:
+        text: FBM
+      FBV:
+        text: FBV
+      FBX:
+        text: FBX
+      FB1:
+        text: FB1
+      FB2:
+        text: FB2
+      FEM:
+        text: FEM
+      FEV:
+        text: FEV
+      FEX:
+        text: FEX
+      FE1:
+        text: FE1
+      FE2:
+        text: FE2
+      FPM:
+        text: FPM
+      FPV:
+        text: FPV
+      FPX:
+        text: FPX
+      FP1:
+        text: FP1
+      FP2:
+        text: FP2
+      FXM:
+        text: FXM
+      FXV:
+        text: FXV
+      FX1:
+        text: FX1
+      FX2:
+        text: FX2
+      RBM:
+        text: RBM
+      RBX:
+        text: RBX
+      RB1:
+        text: RB1
+      RB2:
+        text: RB2
+      RX2:
+        text: RX2
+      YBM:
+        text: YBM
+      YBV:
+        text: YBV
+      YBX:
+        text: YBX
+      YB1:
+        text: YB1
+      YB2:
+        text: YB2
+      YEM:
+        text: YEM
+      YEV:
+        text: YEV
+      YEX:
+        text: YEX
+      YE1:
+        text: YE1
+      YE2:
+        text: YE2
+      YPM:
+        text: YPM
+      YPV:
+        text: YPV
+      YPX:
+        text: YPX
+      YP1:
+        text: YP1
+      YP2:
+        text: YP2
+      YXM:
+        text: YXM
+      YXV:
+        text: YXV
+      YX1:
+        text: YX1
+      YX2:
+        text: YX2
+      ABM:
+        text: ABM
+      AEM:
+        text: AEM
+      FXX:
+        text: FXX
+      YXX:
+        text: YXX
+      AP1:
+        text: AP1
+      AP2:
+        text: AP2
+      RBV:
+        text: RBV
+      REV:
+        text: REV
+  activityCode_options:
+    name: activityCode_options
+    permissible_values:
+      ZGR:
+        text: ZGR
+      ZPV:
+        text: ZPV
+      ZCA:
+        text: ZCA
+      ZRA:
+        text: ZRA
+      ZRF:
+        text: ZRF
+      ZRT:
+        text: ZRT
+      ZDA:
+        text: ZDA
+      ZTA:
+        text: ZTA
+      ZTF:
+        text: ZTF
+      ZVO:
+        text: ZVO
+      ZAF:
+        text: ZAF
+      ZIN:
+        text: ZIN
+      ZIP:
+        text: ZIP
+      ZAR:
+        text: ZAR
+      ZAO:
+        text: ZAO
+      ZAB:
+        text: ZAB
+      ZOP:
+        text: ZOP
+      ZCT:
+        text: ZCT
+      ZTI:
+        text: ZTI
+      ZBO:
+        text: ZBO
+      ZCO:
+        text: ZCO
+      ZRE:
+        text: ZRE
+      ZDE:
+        text: ZDE
+      ZAP:
+        text: ZAP
+      ZDR:
+        text: ZDR
+      ZPB:
+        text: ZPB
+      ZCL:
+        text: ZCL
+      ZDJ:
+        text: ZDJ
+      ZMR:
+        text: ZMR
+      ZPR:
+        text: ZPR
+      ZRM:
+        text: ZRM
+      ZVA:
+        text: ZVA
+      ZDS:
+        text: ZDS
+      ZOT:
+        text: ZOT
+      EST:
+        text: EST
+      ZSA:
+        text: ZSA
+      ZSH:
+        text: ZSH
+      ZSE:
+        text: ZSE
+      ZSC:
+        text: ZSC
+      ZSV:
+        text: ZSV

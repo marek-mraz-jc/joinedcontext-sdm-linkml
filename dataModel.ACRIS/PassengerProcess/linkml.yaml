@@ -1,0 +1,59 @@
+id: https://github.com/smart-data-models/dataModel.ACRIS/PassengerProcess
+name: PassengerProcess
+title: Smart Data Models - Mapping of ACRIS data model PassengerProcess
+description: Property. Information about the Passenger Party Process.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ACRIS
+  spec.source.path: PassengerProcess/schema.json
+  spec.source.commit: 82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.ACRIS/master/context.jsonld"],
+    "Name": {"type": "Property", "value": ""}, "PassengerProcessType": {"type": "Property",
+    "value": {"Code": "code1", "Description": ""}}, "id": "urn:ngsi-ld:PassengerProcess:id:YOUE:15643415",
+    "type": "PassengerProcess"}'
+classes:
+  PassengerProcess:
+    class_uri: https://smartdatamodels.org/dataModel.ACRIS/PassengerProcess
+    description: Property. Information about the Passenger Party Process.
+    is_a: Entity
+    slots:
+    - Name
+    - PassengerProcessType
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  PassengerProcessType:
+    description: Property. Information about the type of Passenger Party Process.
+    attributes:
+      Code:
+        description: Property. Unique code for the type of Passenger Party Process.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Description:
+        description: Property. Description of the type of Passenger Party Process.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+slots:
+  Name:
+    description: Property. Unique name for the Passenger Process.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/Name
+  PassengerProcessType:
+    description: Property. Information about the type of Passenger Party Process.
+    range: PassengerProcessType
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/PassengerProcessType

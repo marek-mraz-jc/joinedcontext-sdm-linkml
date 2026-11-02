@@ -1,0 +1,389 @@
+id: https://github.com/smart-data-models/dataModel.OpenStreetMap/OSMCycleRoute
+name: OSMCycleRoute
+title: Smart Data Models - OpenStreetMap / OSMCycleRoute
+description: A dedicated cycling infrastructure element from OpenStreetMap. Represents
+  cycle paths, shared cycle lanes, and bike routes tagged with highway=cycleway or
+  cycleway=* on road ways.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OpenStreetMap
+  spec.source.path: OSMCycleRoute/schema.json
+  spec.source.commit: 5188df53c66d3c9f2441b6cffea0b604364ace68
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.OpenStreetMap/refs/heads/master/context.jsonld"],
+    "access": {"type": "Property", "value": "yes"}, "cyclewayType": {"type": "Property",
+    "value": "track"}, "id": "urn:ngsi-ld:OSMCycleRoute:way:107532891", "lit": {"type":
+    "Property", "value": true}, "location": {"type": "GeoProperty", "value": {"coordinates":
+    [[-3.6939, 40.4141], [-3.6938, 40.416], [-3.6937, 40.418]], "type": "LineString"}},
+    "name": {"type": "Property", "value": "Carril bici Paseo del Prado"}, "oneway":
+    {"type": "Property", "value": false}, "osmId": {"type": "Property", "value": 107532891},
+    "osmLastModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2023-03-11T14:00:00Z"}}, "osmType": {"type": "Property", "value": "way"}, "seeAlso":
+    {"type": "Property", "value": ["https://www.openstreetmap.org/way/107532891"]},
+    "segregated": {"type": "Property", "value": true}, "source": {"type": "Property",
+    "value": "https://www.openstreetmap.org"}, "surface": {"type": "Property", "value":
+    "asphalt"}, "type": "OSMCycleRoute", "widthMeters": {"type": "Property", "unitCode":
+    "MTR", "value": 2.5}}'
+classes:
+  OSMCycleRoute:
+    class_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/OSMCycleRoute
+    description: A dedicated cycling infrastructure element from OpenStreetMap. Represents
+      cycle paths, shared cycle lanes, and bike routes tagged with highway=cycleway
+      or cycleway=* on road ways.
+    is_a: Entity
+    slots:
+    - access
+    - address
+    - alternateName
+    - areaServed
+    - cyclewayType
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - lit
+    - maxSpeed
+    - name
+    - ncnRef
+    - oneway
+    - operator
+    - osmId
+    - osmLastModified
+    - osmType
+    - owner
+    - rcnRef
+    - seeAlso
+    - segregated
+    - source
+    - surface
+    - widthMeters
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. List of URIs pointing to additional resources about this
+      item.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/areaServed
+  osmId:
+    description: Property. The original OpenStreetMap element integer identifier.
+      Model:'https://wiki.openstreetmap.org/wiki/Elements'
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmId
+  osmType:
+    description: Property. The type of the original OpenStreetMap element. Model:'https://wiki.openstreetmap.org/wiki/Elements'
+    range: osmType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmType
+  osmLastModified:
+    description: Property. Timestamp of the last modification of the OSM element.
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmLastModified
+  cyclewayType:
+    description: Property. Classification of the cycling infrastructure. Enum:'lane,
+      track, opposite, opposite_lane, shared_busway, path, separate, shared'. Model:'https://wiki.openstreetmap.org/wiki/Key:cycleway'
+    range: cyclewayType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/cyclewayType
+  surface:
+    description: Property. Physical surface material of the cycle path. Model:'https://wiki.openstreetmap.org/wiki/Key:surface'
+    range: surface_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/surface
+  oneway:
+    description: Property. Indicates whether the cycle route is one-way for cyclists.
+      Model:'https://wiki.openstreetmap.org/wiki/Key:oneway'
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/oneway
+  segregated:
+    description: Property. Indicates whether the cycling infrastructure is physically
+      separated from pedestrian use. Model:'https://wiki.openstreetmap.org/wiki/Key:segregated'
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/segregated
+  lit:
+    description: Property. Indicates whether the cycle route has street lighting.
+      Model:'https://wiki.openstreetmap.org/wiki/Key:lit'
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/lit
+  access:
+    description: Property. Access restriction applying to cyclists on this route.
+      Model:'https://wiki.openstreetmap.org/wiki/Key:access'
+    range: access_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/access
+  widthMeters:
+    description: Property. Width of the cycle path in metres. Units:'m'. Model:'https://wiki.openstreetmap.org/wiki/Key:width'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/widthMeters
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  maxSpeed:
+    description: Property. Maximum permitted speed in kilometres per hour. Units:'Km/h'.
+      Model:'https://wiki.openstreetmap.org/wiki/Key:maxspeed'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/maxSpeed
+    unit:
+      ucum_code: km.h-1
+      exact_mappings:
+      - ucefact:KMH
+      - qudt-unit:KiloM-PER-HR
+      has_quantity_kind: qudt-quantkind:LinearVelocity
+  rcnRef:
+    description: Property. Regional Cycle Network route reference number. Model:'https://wiki.openstreetmap.org/wiki/Key:rcn_ref'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/rcnRef
+  ncnRef:
+    description: Property. National Cycle Network route reference number. Model:'https://wiki.openstreetmap.org/wiki/Key:ncn_ref'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/ncnRef
+  operator:
+    description: Property. Name of the entity responsible for maintaining this cycle
+      route. Model:'https://wiki.openstreetmap.org/wiki/Key:operator'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/operator
+enums:
+  osmType_options:
+    name: osmType_options
+    permissible_values:
+      node:
+        text: node
+      way:
+        text: way
+      relation:
+        text: relation
+  cyclewayType_options:
+    name: cyclewayType_options
+    permissible_values:
+      lane:
+        text: lane
+      track:
+        text: track
+      opposite:
+        text: opposite
+      opposite_lane:
+        text: opposite_lane
+      shared_busway:
+        text: shared_busway
+      path:
+        text: path
+      separate:
+        text: separate
+      shared:
+        text: shared
+  surface_options:
+    name: surface_options
+    permissible_values:
+      asphalt:
+        text: asphalt
+      concrete:
+        text: concrete
+      gravel:
+        text: gravel
+      dirt:
+        text: dirt
+      paving_stones:
+        text: paving_stones
+      cobblestone:
+        text: cobblestone
+      unpaved:
+        text: unpaved
+      grass:
+        text: grass
+      compacted:
+        text: compacted
+      fine_gravel:
+        text: fine_gravel
+      sand:
+        text: sand
+      ground:
+        text: ground
+      wood:
+        text: wood
+  access_options:
+    name: access_options
+    permissible_values:
+      'yes':
+        text: 'yes'
+      'no':
+        text: 'no'
+      private:
+        text: private
+      permissive:
+        text: permissive
+      destination:
+        text: destination
+      designated:
+        text: designated

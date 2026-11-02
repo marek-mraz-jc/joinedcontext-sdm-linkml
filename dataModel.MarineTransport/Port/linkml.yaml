@@ -1,0 +1,106 @@
+id: https://github.com/smart-data-models/dataModel.MarineTransport/Port
+name: Port
+title: Smart Data models Port schema
+description: The data model is intended to provide information about ports
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.MarineTransport
+  spec.source.path: Port/schema.json
+  spec.source.commit: 4ffb0d8d8c29470e169df9d8c329135ec0806f72
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smart-data-models.github.io/dataModel.MarineTransport/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "ES", "addressLocality":
+    "Locality", "postalCode": "1234", "streetAddress": "Avda. Example"}}, "contactPoint":
+    {"type": "Property", "value": {"availableLanguage": ["en-EN", "es-ES"], "email":
+    "example@port.com", "faxProperty": "12 345 67 89", "name": "Portname", "telephone":
+    "+34 12 34 56 78", "url": "https://URL"}}, "description": {"type": "Property",
+    "value": "Port description"}, "gln": {"type": "Property", "value": 123456789},
+    "id": "urn:mrn:amura:port:UNLOCODE", "location": {"type": "GeoProperty", "value":
+    {"coordinates": [-0.3048254137983776, 39.431348987126704], "type": "Point"}},
+    "name": {"type": "Property", "value": "Port name"}, "portArea": {"type": "GeoProperty",
+    "value": {"coordinates": [[[[-0.33295074395914526, 39.4631637203228], [-0.33295074395914526,
+    39.42053808578652], [-0.2829300303054083, 39.42053808578652], [-0.2829300303054083,
+    39.4631637203228], [-0.33295074395914526, 39.4631637203228]]]], "type": "MultiPolygon"}},
+    "portType": {"type": "Property", "value": "Sea"}, "refPortAuthority": {"type":
+    "Relationship", "value": "urn:mrn:amura:port-authority:UNLOCODE"}, "timeZone":
+    {"type": "Property", "value": "Europe/London"}, "type": "Port", "unlocode": {"type":
+    "Property", "value": "Unlocode"}}'
+classes:
+  Port:
+    class_uri: https://smartdatamodels.org/dataModel.MarineTransport/Port
+    description: The data model is intended to provide information about ports
+    is_a: Entity
+    slots:
+    - gln
+    - portArea
+    - portType
+    - refPortAuthority
+    - timeZone
+    - unlocode
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+slots:
+  unlocode:
+    description: Property. Model:'https://schema.org/Text'. United Nations Code for
+      Trade and Transport Locations. See [Unlocode](https://unece.org/trade/cefact/unlocode-code-list-country-and-territory)
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/unlocode
+  portArea:
+    description: GeoProperty. Geojson reference to the item. It can be Polygon or
+      MultiPolygon
+    annotations:
+      ngsi_ld_kind: GeoProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/portArea
+  timeZone:
+    description: Property. Model:'https://schema.org/Text'. The value provided should
+      be among those listed in the IANA Time Zone Database. See [Time Zone Database](https://timezonedb.com/time-zones)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/timeZone
+  gln:
+    description: Property. Model:'https://schema.org/Number'. Global Location Number.
+      See [GLN](https://gs1id.org/global-location-number-gln)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/gln
+  portType:
+    description: 'Property. Model:''http://schema.org/Text''. Enum: ''Sea, Inland,
+      Fishing, WarmWater, Dry''. Classification by type of port'
+    range: portType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/portType
+  refPortAuthority:
+    description: Relationship. Model:'https://schema.org/URL'. Reference to the PortAuthority
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/refPortAuthority
+enums:
+  portType_options:
+    name: portType_options
+    permissible_values:
+      Dry:
+        text: Dry
+      Fishing:
+        text: Fishing
+      Inland:
+        text: Inland
+      Sea:
+        text: Sea
+      WarmWater:
+        text: WarmWater

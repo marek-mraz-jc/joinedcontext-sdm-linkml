@@ -1,0 +1,422 @@
+id: https://github.com/smart-data-models/dataModel.OpenStreetMap/OSMRailway
+name: OSMRailway
+title: Smart Data Models - OpenStreetMap / OSMRailway
+description: A railway track or infrastructure element from OpenStreetMap tagged with
+  the railway key. Covers all types of rail infrastructure, from mainline heavy rail
+  to trams, subways and funiculars.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OpenStreetMap
+  spec.source.path: OSMRailway/schema.json
+  spec.source.commit: 5188df53c66d3c9f2441b6cffea0b604364ace68
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.OpenStreetMap/refs/heads/master/context.jsonld"],
+    "electrified": {"type": "Property", "value": "contact_line"}, "frequency": {"type":
+    "Property", "unitCode": "HTZ", "value": 0}, "gauge": {"type": "Property", "unitCode":
+    "MMT", "value": 1445}, "id": "urn:ngsi-ld:OSMRailway:way:2903182", "location":
+    {"type": "GeoProperty", "value": {"coordinates": [[-3.6931, 40.4189], [-3.6955,
+    40.4185], [-3.698, 40.418]], "type": "LineString"}}, "maxSpeed": {"type": "Property",
+    "unitCode": "KMH", "value": 70}, "name": {"type": "Property", "value": "Madrid
+    Metro Line 1"}, "operator": {"type": "Property", "value": "Metro de Madrid"},
+    "osmId": {"type": "Property", "value": 2903182}, "osmLastModified": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2024-01-08T15:45:00Z"}}, "osmType":
+    {"type": "Property", "value": "way"}, "railwayType": {"type": "Property", "value":
+    "subway"}, "ref": {"type": "Property", "value": "1"}, "seeAlso": {"type": "Property",
+    "value": ["https://www.openstreetmap.org/way/2903182"]}, "source": {"type": "Property",
+    "value": "https://www.openstreetmap.org"}, "tracks": {"type": "Property", "value":
+    2}, "tunnel": {"type": "Property", "value": true}, "type": "OSMRailway", "usage":
+    {"type": "Property", "value": "main"}, "voltage": {"type": "Property", "unitCode":
+    "VLT", "value": 600}}'
+classes:
+  OSMRailway:
+    class_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/OSMRailway
+    description: A railway track or infrastructure element from OpenStreetMap tagged
+      with the railway key. Covers all types of rail infrastructure, from mainline
+      heavy rail to trams, subways and funiculars.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - bridge
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - electrified
+    - frequency
+    - gauge
+    - layer
+    - maxSpeed
+    - name
+    - operator
+    - osmId
+    - osmLastModified
+    - osmType
+    - owner
+    - railwayType
+    - ref
+    - seeAlso
+    - service
+    - source
+    - tracks
+    - tunnel
+    - usage
+    - voltage
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. List of URIs pointing to additional resources about this
+      item.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/areaServed
+  osmId:
+    description: Property. The original OpenStreetMap element integer identifier.
+      Model:'https://wiki.openstreetmap.org/wiki/Elements'
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmId
+  osmType:
+    description: Property. The type of the original OpenStreetMap element. Model:'https://wiki.openstreetmap.org/wiki/Elements'
+    range: osmType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmType
+  osmLastModified:
+    description: Property. Timestamp of the last modification of the OSM element.
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmLastModified
+  railwayType:
+    description: Property. The OSM railway tag value that classifies the type of rail
+      infrastructure. Enum:'rail, subway, tram, light_rail, narrow_gauge, monorail,
+      funicular, miniature, preserved, disused, abandoned, construction, proposed'.
+      Model:'https://wiki.openstreetmap.org/wiki/Key:railway'
+    range: railwayType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/railwayType
+  ref:
+    description: Property. Official line reference number or code. Model:'https://wiki.openstreetmap.org/wiki/Key:ref'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/ref
+  gauge:
+    description: Property. Track gauge in millimetres (distance between the two rails).
+      Units:'mm'. Model:'https://wiki.openstreetmap.org/wiki/Key:gauge'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/gauge
+  electrified:
+    description: Property. Method of electrification of the railway. Model:'https://wiki.openstreetmap.org/wiki/Key:electrified'
+    range: electrified_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/electrified
+  voltage:
+    description: Property. Electrical voltage used for traction in Volts. Units:'V'.
+      Model:'https://wiki.openstreetmap.org/wiki/Key:voltage'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/voltage
+  frequency:
+    description: Property. Electrical frequency of the traction current in Hertz.
+      Units:'Hz'. Model:'https://wiki.openstreetmap.org/wiki/Key:frequency'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/frequency
+  maxSpeed:
+    description: Property. Maximum permitted speed on this track in kilometres per
+      hour. Units:'Km/h'. Model:'https://wiki.openstreetmap.org/wiki/Key:maxspeed'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/maxSpeed
+    unit:
+      ucum_code: km.h-1
+      exact_mappings:
+      - ucefact:KMH
+      - qudt-unit:KiloM-PER-HR
+      has_quantity_kind: qudt-quantkind:LinearVelocity
+  tracks:
+    description: Property. Number of parallel tracks. Model:'https://wiki.openstreetmap.org/wiki/Key:tracks'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/tracks
+  operator:
+    description: Property. Name of the railway operator or company. Model:'https://wiki.openstreetmap.org/wiki/Key:operator'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/operator
+  usage:
+    description: Property. Intended usage of the railway line. Model:'https://wiki.openstreetmap.org/wiki/Key:usage'
+    range: usage_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/usage
+  service:
+    description: Property. Type of service track, if not part of the main running
+      line. Model:'https://wiki.openstreetmap.org/wiki/Key:service'
+    range: service_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/service
+  bridge:
+    description: Property. Indicates whether this railway segment runs over a bridge.
+      Model:'https://wiki.openstreetmap.org/wiki/Key:bridge'
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/bridge
+  tunnel:
+    description: Property. Indicates whether this railway segment runs through a tunnel.
+      Model:'https://wiki.openstreetmap.org/wiki/Key:tunnel'
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/tunnel
+  layer:
+    description: Property. Vertical layer relative to other features at the same location.
+      Model:'https://wiki.openstreetmap.org/wiki/Key:layer'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/layer
+enums:
+  osmType_options:
+    name: osmType_options
+    permissible_values:
+      node:
+        text: node
+      way:
+        text: way
+      relation:
+        text: relation
+  railwayType_options:
+    name: railwayType_options
+    permissible_values:
+      rail:
+        text: rail
+      subway:
+        text: subway
+      tram:
+        text: tram
+      light_rail:
+        text: light_rail
+      narrow_gauge:
+        text: narrow_gauge
+      monorail:
+        text: monorail
+      funicular:
+        text: funicular
+      miniature:
+        text: miniature
+      preserved:
+        text: preserved
+      disused:
+        text: disused
+      abandoned:
+        text: abandoned
+      construction:
+        text: construction
+      proposed:
+        text: proposed
+  electrified_options:
+    name: electrified_options
+    permissible_values:
+      contact_line:
+        text: contact_line
+      rail:
+        text: rail
+      'yes':
+        text: 'yes'
+      'no':
+        text: 'no'
+      4_rail:
+        text: 4_rail
+  usage_options:
+    name: usage_options
+    permissible_values:
+      main:
+        text: main
+      branch:
+        text: branch
+      industrial:
+        text: industrial
+      military:
+        text: military
+      tourism:
+        text: tourism
+      test:
+        text: test
+      scientific:
+        text: scientific
+  service_options:
+    name: service_options
+    permissible_values:
+      spur:
+        text: spur
+      yard:
+        text: yard
+      siding:
+        text: siding
+      crossover:
+        text: crossover

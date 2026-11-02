@@ -1,0 +1,353 @@
+id: https://github.com/smart-data-models/dataModel.IssueTracking/service_requests
+name: service_requests
+title: FIWARE - Open311 Service Requests
+description: An entity of type ServiceRequest is an acceptable Open 311 service request.
+  Such entity encompasses all the properties defined by Open 311 at POST Service Request
+  and GET Service Request.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.IssueTracking
+  spec.source.path: service_requests/schema.json
+  spec.source.commit: 37cd76540e7a33a93101a8862b58929efe5548da
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.IssueTracking/master/context.jsonld"],
+    "address_string": {"type": "Property", "value": "Calle San Juan Bautista, 2"},
+    "agency_responsible": {"type": "Property", "value": "Ayuntamiento de Ciudad"},
+    "attributes": {"type": "Property", "value": [{"code": "ISSUE_TYPE", "values":
+    [{"key": 1, "name": "Bordillo"}]}]}, "description": {"type": "Property", "value":
+    "Acera en mal estado con bordillo partido en dos"}, "expected_datetime": {"type":
+    "Property", "value": {"@type": "DateTime", "@value": "2010-04-15T06:37:38-08:00Z"}},
+    "id": "urn:ngsi-ld:Open311ServiceRequest:service-request:638344", "location":
+    {"type": "GeoProperty", "value": {"coordinates": [-3.164485591715449, 40.62785133667262],
+    "type": "Point"}}, "media_url": {"type": "Property", "value": "http://exaple.org/media/638344.jpg"},
+    "requested_datetime": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2010-04-14T06:37:38-08:00"}}, "service_code": {"type": "Property", "value": "234"},
+    "service_name": {"type": "Property", "value": "Aceras"}, "service_request_id":
+    {"type": "Property", "value": "638344"}, "status": {"type": "Property", "value":
+    "closed"}, "status_notes": {"type": "Property", "value": "Duplicate request."},
+    "type": "service_requests", "updated_datetime": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "2010-04-14T06:37:38-08:00"}}}'
+classes:
+  service_requests:
+    class_uri: https://smartdatamodels.org/dataModel.IssueTracking/service_requests
+    description: An entity of type ServiceRequest is an acceptable Open 311 service
+      request. Such entity encompasses all the properties defined by Open 311 at POST
+      Service Request and GET Service Request.
+    is_a: Entity
+    slots:
+    - account_id
+    - address
+    - address_string
+    - agency_responsible
+    - alternateName
+    - areaServed
+    - attributes
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - device_id
+    - email
+    - expected_datetime
+    - first_name
+    - jurisdiction_id
+    - last_name
+    - media_url
+    - name
+    - owner
+    - phone
+    - requested_datetime
+    - seeAlso
+    - service_code
+    - service_name
+    - service_notice
+    - service_request_id
+    - source
+    - status
+    - status_notes
+    - updated_datetime
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/areaServed
+  service_request_id:
+    description: Property. The unique ID of the service request created
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/service_request_id
+  jurisdiction_id:
+    description: Property. The unique ID of the legal entity of the service (i.e.
+      city)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/jurisdiction_id
+  service_code:
+    description: Property. The unique identifier for the service request type
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/service_code
+  service_name:
+    description: Property. The human readable name of the service request type
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/service_name
+  agency_responsible:
+    description: Property. Please note that this is semantically equivalent to the
+      provider property (name subproperty) of schema.org. Model:'http://schema.org/provider'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/agency_responsible
+  service_notice:
+    description: Property. Information about the action expected to fulfill the request
+      or otherwise address the information reported
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/service_notice
+  status:
+    description: Property. Allows one to search for requests which have a specific
+      status. This defaults to all statuses; can be declared multiple times, comma
+      delimited. Enum:'open, closed'
+    range: status_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://uri.etsi.org/ngsi-ld/status
+  status_notes:
+    description: Property. Explanation of why status was changed to current state
+      or more details on current status than conveyed with status alone
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/status_notes
+  requested_datetime:
+    description: Property. The date and time when the service request was made. Model:'https://schema.org/DateTime'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/requested_datetime
+  updated_datetime:
+    description: Property. The date and time when the service request was last modified.
+      For requests with status=closed, this will be the date the request was closed.
+      Model:'https://schema.org/DateTime'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/updated_datetime
+  expected_datetime:
+    description: Property. The date and time when the service request can be expected
+      to be fulfilled. This may be based on a service-specific service level agreement.
+      Model:'https://schema.org/DateTime'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/expected_datetime
+  media_url:
+    description: Property. A URL to media associated with the request, eg an image.
+      Model:'https://schema.org/URL'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/media_url
+  email:
+    description: Property. Email address of owner
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/email
+  first_name:
+    description: Property. Model:'https://schema.org/Text'. Given name. In the U.S.,
+      the first name of a Person
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/first_name
+  last_name:
+    description: Property. Model:'https://schema.org/Text'. Family name. In the U.S.,
+      the last name of a Person
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/last_name
+  phone:
+    description: Property. Model:'https://schema.org/Text'. The telephone number
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/phone
+  device_id:
+    description: Relationship. The unique device ID of the device submitting the request.
+      This is usually only used for mobile devices. Model:'https://schema.org/URL'
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/device_id
+  account_id:
+    description: Relationship. The unique ID for the user account of the person submitting
+      the request. Model:'https://schema.org/URL'
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/account_id
+  address_string:
+    description: Property. Human entered address or description of location. This
+      is required if no lat/long or address_id are provided. This should be written
+      from most specific to most general geographic unit, eg address number or cross
+      streets, street name, neighborhood/district, city/town/village, county, postal
+      code
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://smartdatamodels.org/dataModel.IssueTracking/address_string
+  attributes:
+    description: Property. Variable attributes of the request response
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.IssueTracking@37cd76540e7a33a93101a8862b58929efe5548da
+    slot_uri: https://uri.etsi.org/ngsi-ld/attributes
+enums:
+  status_options:
+    name: status_options
+    permissible_values:
+      closed:
+        text: closed
+      open:
+        text: open

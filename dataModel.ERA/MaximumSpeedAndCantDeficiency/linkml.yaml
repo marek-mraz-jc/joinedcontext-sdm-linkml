@@ -1,0 +1,211 @@
+id: https://github.com/smart-data-models/dataModel.ERA/MaximumSpeedAndCantDeficiency
+name: MaximumSpeedAndCantDeficiency
+title: MaximumSpeedAndCantDeficiency + mapped from ERA ontology by Smart Data Models
+description: Combination of maximum speed and maximum cant deficiency for which the
+  vehicle was assessed.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ERA
+  spec.source.path: MaximumSpeedAndCantDeficiency/schema.json
+  spec.source.commit: 4c4f8ebffc25dd413db62527072eac74559f0b70
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.ERA/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Hope item civil.
+    Population total carry today purpose significant rock. Pretty truth simply huge.",
+    "addressLocality": "Inside born clear run budget about green. Certainly baby under
+    budget wonder.", "addressRegion": "Purpose take tonight themselves foot maybe
+    foreign. Administration enjoy tonight research five. City defense recently responsibility.",
+    "district": "Society white card region much specific. Without pretty my various
+    price resource program quite.", "postOfficeBoxNumber": "Charge agree message edge
+    main ", "postalCode": "Cold that again including create. Upon recent pattern choose
+    require message when reduce. Factor of", "streetAddress": "College thing born
+    our. Military join language old throw lot responsibility suddenly.", "streetNr":
+    "Everything same unit rule imagine option responsibility. Around out future almost
+    some throw. Central president close work a"}}, "alternateName": {"type": "Property",
+    "value": "Something process c"}, "areaServed": {"type": "Property", "value": "Build
+    positive decide listen behind city. Employee exactly nothing material. Ball window
+    mention phone state concern."}, "dataProvider": {"type": "Property", "value":
+    "Since possible deep care actually see side. Budget mean everybody ago hot."},
+    "dateCreated": {"type": "Property", "value": {"@type": "DateTime", "@value": "1976-12-27T03:20:14Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "1978-08-12T05:10:54Z"}}, "description": {"type": "Property", "value": "Natural
+    window weight police easy second leader. Benefit I let inside."}, "id": "urn:ngsi-ld:MaximumSpeedAndCantDeficiency:id:BFGJ:99213827",
+    "location": {"type": "Property", "value": {"coordinates": [-65.854435, 85.690336],
+    "type": "Point"}}, "name": {"type": "Property", "value": "Base eat lose toward
+    alone sure arrive. Writer "}, "owner": {"type": "Property", "value": ["urn:ngsi-ld:MaximumSpeedAndCantDeficiency:items:LZWP:28604460",
+    "urn:ngsi-ld:MaximumSpeedAndCantDeficiency:items:TIOK:10942469"]}, "seeAlso":
+    {"type": "Property", "value": ["urn:ngsi-ld:MaximumSpeedAndCantDeficiency:items:GDOF:24605591"]},
+    "source": {"type": "Property", "value": "She response spring everyone western."},
+    "type": "MaximumSpeedAndCantDeficiency", "vehicleTypeMaximumCantDeficiency": {"type":
+    "Property", "value": 615}, "vehicleTypeMaximumSpeed": {"type": "Property", "value":
+    988}}'
+classes:
+  MaximumSpeedAndCantDeficiency:
+    class_uri: https://smartdatamodels.org/dataModel.ERA/MaximumSpeedAndCantDeficiency
+    description: Combination of maximum speed and maximum cant deficiency for which
+      the vehicle was assessed.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - name
+    - owner
+    - seeAlso
+    - source
+    - vehicleTypeMaximumCantDeficiency
+    - vehicleTypeMaximumSpeed
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/areaServed
+  vehicleTypeMaximumCantDeficiency:
+    description: Property. Vehicle type maximum cant deficiency
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/vehicleTypeMaximumCantDeficiency
+  vehicleTypeMaximumSpeed:
+    description: Property. Vehicle type maximum speed
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/vehicleTypeMaximumSpeed

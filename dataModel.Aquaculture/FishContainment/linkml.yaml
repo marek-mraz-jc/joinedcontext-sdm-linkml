@@ -1,0 +1,397 @@
+id: https://github.com/smart-data-models/dataModel.Aquaculture/FishContainment
+name: FishContainment
+title: FishContainment
+description: FishContainment entity represents a fish containment unit (tank, cage,
+  pond, or any enclosed water structure) used in aquaculture to house and monitor
+  fish populations and water quality parameters
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Aquaculture
+  spec.source.path: FishContainment/schema.json
+  spec.source.commit: 090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"],
+    "category": {"type": "Property", "value": "Tank"}, "conductivity": {"observedAt":
+    "2020-06-26T21:32:52Z", "type": "Property", "unitCode": "S4", "value": 7}, "depth":
+    {"type": "Property", "unitCode": "MTR", "value": 10}, "dissolvedOxygen": {"observedAt":
+    "2020-06-26T21:32:52Z", "type": "Property", "unitCode": "P1", "value": 80}, "fishDensity":
+    {"observedAt": "2021-10-19T14:22:19Z", "type": "Property", "value": -26.0}, "fishDirection":
+    {"observedAt": "2021-10-19T14:22:19Z", "type": "Property", "value": "SW"}, "fishSpeed":
+    {"observedAt": "2021-10-19T14:22:19Z", "type": "Property", "value": 25.0}, "id":
+    "urn:ngsi-ld:FishContainment:1", "location": {"type": "GeoProperty", "value":
+    {"coordinates": [0, 0], "type": "Point"}}, "marineCurrents": {"type": "Property",
+    "value": "NA"}, "pH": {"observedAt": "2020-06-26T21:32:52Z", "type": "Property",
+    "unitCode": "Q30", "value": 7}, "redoxPotential": {"observedAt": "2020-06-26T21:32:52Z",
+    "type": "Property", "unitCode": "2Z", "value": 7}, "refFarm": {"object": "urn:ngsi-ld:Farm:1",
+    "type": "Relationship"}, "refSump": {"object": "urn:ngsi-ld:Sump:1", "type": "Relationship"},
+    "salinity": {"observedAt": "2020-06-26T21:32:52Z", "type": "Property", "unitCode":
+    "GL", "value": 7}, "startedAt": {"type": "Property", "value": "2021-05-04T08:30:00Z"},
+    "temperature": {"observedAt": "2020-06-26T21:32:52Z", "type": "Property", "unitCode":
+    "CEL", "value": 15.2}, "totalDissolvedSolids": {"observedAt": "2020-06-26T21:32:52Z",
+    "type": "Property", "unitCode": "G42", "value": 35404}, "turbidity": {"observedAt":
+    "2020-06-26T21:32:52Z", "type": "Property", "unitCode": "NTU", "value": 7}, "type":
+    "FishContainment", "videoStream": {"type": "Property", "value": "rtsp://example.com/fishcam"}}'
+classes:
+  FishContainment:
+    class_uri: https://smartdatamodels.org/dataModel.Aquaculture/FishContainment
+    description: FishContainment entity represents a fish containment unit (tank,
+      cage, pond, or any enclosed water structure) used in aquaculture to house and
+      monitor fish populations and water quality parameters
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - category
+    - conductivity
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - depth
+    - description
+    - dissolvedOxygen
+    - feedingOperation
+    - fishDensity
+    - fishDirection
+    - fishSpeed
+    - marineCurrents
+    - name
+    - observation
+    - owner
+    - pH
+    - redoxPotential
+    - refFarm
+    - refSump
+    - salinity
+    - seeAlso
+    - source
+    - startedAt
+    - temperature
+    - threats
+    - totalDissolvedSolids
+    - turbidity
+    - videoStream
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/areaServed
+  category:
+    description: Property. Category or type of the fish containment unit (e.g. Tank,
+      Cage, Pond, Net)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/category
+  refSump:
+    description: Relationship. Reference to the Sump unit associated with this fish
+      containment
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/refSump
+  refFarm:
+    description: Relationship. Reference to the Farm entity that manages this fish
+      containment unit
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/refFarm
+  depth:
+    description: Property. Model:'https://schema.org/Number'. Units:'m'. Depth of
+      the fish containment unit in metres
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/depth
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  videoStream:
+    description: Property. Model:'https://schema.org/URL'. URL of the video stream
+      providing live monitoring of the fish containment unit
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/videoStream
+  temperature:
+    description: Property. Model:'https://schema.org/Number'. Units:'Cel'. Array of
+      water temperature measurements (degrees Celsius) recorded at different depths
+      of the containment unit
+    range: float
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/temperature
+    unit:
+      ucum_code: Cel
+      exact_mappings:
+      - ucefact:CEL
+      - qudt-unit:DEG_C
+      has_quantity_kind: qudt-quantkind:Temperature
+  dissolvedOxygen:
+    description: Property. Model:'https://schema.org/Number'. Units:'mg/L'. Dissolved
+      oxygen concentration measured in the fish containment unit
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/dissolvedOxygen
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  pH:
+    description: Property. Model:'https://schema.org/Number'. Water pH level measured
+      in the fish containment unit
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/pH
+  redoxPotential:
+    description: Property. Model:'https://schema.org/Number'. Units:'mV'. Oxidation-reduction
+      (redox) potential of the water in the containment unit
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/redoxPotential
+  turbidity:
+    description: Property. Model:'https://schema.org/Number'. Units:'NTU'. Water turbidity
+      level measured in the fish containment unit
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/turbidity
+  conductivity:
+    description: Property. Model:'https://schema.org/Number'. Units:'mS/cm'. Electrical
+      conductivity of the water in the fish containment unit
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/conductivity
+  salinity:
+    description: Property. Model:'https://schema.org/Number'. Units:'g/kg'. Water
+      salinity level measured in the fish containment unit
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/salinity
+  totalDissolvedSolids:
+    description: Property. Model:'https://schema.org/Number'. Units:'mg/L'. Total
+      dissolved solids concentration measured in the fish containment water
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/totalDissolvedSolids
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  marineCurrents:
+    description: Property. Description of water currents present in or affecting the
+      fish containment unit
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/marineCurrents
+  feedingOperation:
+    description: Property. Reference or description of the feeding operation or automated
+      feeder device associated with this fish containment unit
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/feedingOperation
+  observation:
+    description: Property. Free-text observations or notes about the current state
+      of the fish containment unit
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/observation
+  threats:
+    description: Property. Description of threats, anomalies, or risks detected in
+      or around the fish containment unit
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/threats
+  startedAt:
+    description: Property. Model:'https://schema.org/DateTime'. Date and time when
+      the monitoring or operational session for the fish containment started
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/startedAt
+  fishDensity:
+    description: Property. Model:'https://schema.org/Number'. Units:'kg/m3'. Array
+      of fish density measurements recorded at different depths of the containment
+      unit
+    range: float
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/fishDensity
+  fishSpeed:
+    description: Property. Model:'https://schema.org/Number'. Average swimming speed
+      of fish measured inside the containment unit
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/fishSpeed
+  fishDirection:
+    description: Property. Predominant swimming direction of fish in the containment
+      unit (e.g. N, NE, E, SE, S, SW, W, NW, NA)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aquaculture@090b40a9ff575c62ab3462cb35e14eac6f6b61e5
+    slot_uri: https://smartdatamodels.org/dataModel.Aquaculture/fishDirection

@@ -1,0 +1,346 @@
+id: https://github.com/smart-data-models/dataModel.ERA/Tunnel
+name: Tunnel
+title: Tunnel + mapped from ERA ontology by Smart Data Models
+description: A railway tunnel is an excavation or a construction around the track
+  provided to allow the railway to pass for example higher land, buildings or water.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ERA
+  spec.source.path: Tunnel/schema.json
+  spec.source.commit: 4c4f8ebffc25dd413db62527072eac74559f0b70
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@contex": ["https://raw.githubusercontent.com/smart-data-models/dataModel.ERA/master/context.jsonld"],
+    "@context": ["https://smartdatamodels.org/context.jsonld"], "address": {"type":
+    "Property", "value": {"addressCountry": "Executive seek source southern item.
+    Easy cause together foreign.", "addressLocality": "Once human computer same leader.
+    Federal prepare adult partner light amount. Direction my bag", "addressRegion":
+    "Prevent author allow candidate. Run beautiful rise suddenly current resource.
+    Talk decade her both professor manage interview.", "district": "Production life
+    me position type. While miss check purpose major oil including.", "postOfficeBoxNumber":
+    "Outside miss region. Letter standard coach call leave dark leg. Official fire
+    generation table everyone.", "postalCode": "Energy notice hundred then. Certain
+    human parent none suggest like which.", "streetAddress": "Six throw concern day
+    order knowledge. And director then begin federal old above.", "streetNr": "Nature
+    tough walk number. Fund address name."}}, "alternateName": {"type": "Property",
+    "value": "Outside gas admit age. War remember effort lose throughout single possible.
+    Image perhaps floor style me."}, "areaServed": {"type": "Property", "value": "Mission
+    news student your. Late enjoy figure physical."}, "complianceInfTsi": {"type":
+    "Property", "value": true}, "crossSectionArea": {"type": "Property", "value":
+    753}, "dataProvider": {"type": "Property", "value": "Across employee usually avoid
+    police my. Third today run discuss night major now itself. American bring here
+    sea money s"}, "dateCreated": {"type": "Property", "value": {"@type": "DateTime",
+    "@value": "1970-10-12T15:22:01Z"}}, "dateModified": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "2000-08-21T06:04:12Z"}}, "demonstrationSRT":
+    {"type": "Property", "value": "Computer fire say hotel though ef"}, "description":
+    {"type": "Property", "value": ""}, "dieselThermalAllowed": {"type": "Property",
+    "value": true}, "endLocation": {"object": "urn:ngsi-ld:Tunnel:endLocation:WRDQ:94614100",
+    "type": "Relationship"}, "hasEmergencyPlan": {"type": "Property", "value": true},
+    "hasEvacuationAndRescuePoints": {"type": "Property", "value": true}, "hasWalkway":
+    {"type": "Property", "value": true}, "id": "urn:ngsi-ld:Tunnel:id:YMRP:29425393",
+    "location": {"type": "Property", "value": {"coordinates": [-46.185967, 147.441006],
+    "type": "Point"}}, "name": {"type": "Property", "value": "Modern us visit money.
+    Experience yourself life home section may bar discover. How without suggest"},
+    "nationalRollingStockFireCategory": {"type": "Property", "value": "Safe cost just
+    force business career save. Will act raise according method customer share."},
+    "owner": {"type": "Property", "value": ["urn:ngsi-ld:Tunnel:items:EHZA:05225209",
+    "urn:ngsi-ld:Tunnel:items:CCXR:67610141"]}, "rollingStockFireCategory": {"object":
+    "urn:ngsi-ld:Tunnel:rollingStockFireCategory:IAAZ:08611397", "type": "Relationship"},
+    "seeAlso": {"type": "Property", "value": ["urn:ngsi-ld:Tunnel:items:ICRE:18932978"]},
+    "source": {"type": "Property", "value": "Prevent before forget ask successful.
+    Identify strategy character answer."}, "specialTunnelArea": {"object": "urn:ngsi-ld:Tunnel:specialTunnelArea:VINZ:05152325",
+    "type": "Relationship"}, "startLocation": {"object": "urn:ngsi-ld:Tunnel:startLocation:UCYY:96379223",
+    "type": "Relationship"}, "tunnelDocRef": {"type": "Property", "value": "Floor
+    campaign later bar performance. Pay scientist senior girl. T"}, "tunnelIdentification":
+    {"type": "Property", "value": "Kid who detail look bad. Certainly environmental
+    politics. Local serious take along occur."}, "tunnelKilometerEnd": {"type": "Property",
+    "value": 986.2}, "tunnelKilometerStart": {"type": "Property", "value": 714.8},
+    "type": "Tunnel", "verificationSRT": {"type": "Property", "value": "Final light
+    treat against enter especially. Energy compare week performance table. Conference
+    front team late once wind."}}'
+classes:
+  Tunnel:
+    class_uri: https://smartdatamodels.org/dataModel.ERA/Tunnel
+    description: A railway tunnel is an excavation or a construction around the track
+      provided to allow the railway to pass for example higher land, buildings or
+      water.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - complianceInfTsi
+    - crossSectionArea
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - demonstrationSRT
+    - description
+    - dieselThermalAllowed
+    - endLocation
+    - hasEmergencyPlan
+    - hasEvacuationAndRescuePoints
+    - hasWalkway
+    - name
+    - nationalRollingStockFireCategory
+    - owner
+    - rollingStockFireCategory
+    - seeAlso
+    - source
+    - specialTunnelArea
+    - startLocation
+    - tunnelDocRef
+    - tunnelIdentification
+    - tunnelKilometerEnd
+    - tunnelKilometerStart
+    - verificationSRT
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/areaServed
+  complianceInfTsi:
+    description: Property. Compliance of the tunnel with INF TSI
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/complianceInfTsi
+  crossSectionArea:
+    description: Property. Cross section area
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/crossSectionArea
+  demonstrationSRT:
+    description: Property. EI declaration of demonstration for tunnel (SRT)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/demonstrationSRT
+  dieselThermalAllowed:
+    description: Property. Diesel or other thermal traction allowed
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/dieselThermalAllowed
+  hasEmergencyPlan:
+    description: Property. Existence of emergency plan
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/hasEmergencyPlan
+  hasEvacuationAndRescuePoints:
+    description: Property. Existence of evacuation and rescue points
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/hasEvacuationAndRescuePoints
+  hasWalkway:
+    description: Property. Existence of walkways
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/hasWalkway
+  nationalRollingStockFireCategory:
+    description: Property. National fire category of rolling stock required
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/nationalRollingStockFireCategory
+  tunnelDocRef:
+    description: Property. Reference to a document available from the IM with precise
+      description of the tunnel
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/tunnelDocRef
+  tunnelIdentification:
+    description: Property. Tunnel identification
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/tunnelIdentification
+  tunnelKilometerEnd:
+    description: Property. Tunnel kilometer end
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/tunnelKilometerEnd
+  tunnelKilometerStart:
+    description: Property. Tunnel kilometer start
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/tunnelKilometerStart
+  verificationSRT:
+    description: Property. EC declaration of verification for tunnel (SRT)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/verificationSRT
+  endLocation:
+    description: Relationship. End of tunnel
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/endLocation
+  rollingStockFireCategory:
+    description: Relationship. Fire category of rolling stock required
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/rollingStockFireCategory
+  specialTunnelArea:
+    description: Relationship. Special tunnel area
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/specialTunnelArea
+  startLocation:
+    description: Relationship. Start of tunnel
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/startLocation

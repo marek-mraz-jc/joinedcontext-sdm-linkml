@@ -1,0 +1,200 @@
+id: https://github.com/smart-data-models/dataModel.ERA/SpecialArea
+name: SpecialArea
+title: SpecialArea + mapped from ERA ontology by Smart Data Models
+description: Encompasses all those areas or sections such as safe areas, restricted
+  areas (non-stopping areas or industrial risk locations).
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ERA
+  spec.source.path: SpecialArea/schema.json
+  spec.source.commit: 4c4f8ebffc25dd413db62527072eac74559f0b70
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.ERA/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Professor near behind
+    of will little. Pattern agent nothing arm message say he. Size doctor thing me
+    benefit.", "addressLocality": "Serious off dog record call somebody. C", "addressRegion":
+    "Resource threat scientist candidate specific realize. Education event population
+    he behavior. Other white member chair image.", "district": "Focus ", "postOfficeBoxNumber":
+    "Statement court method chance street develop sound.", "postalCode": "Standard
+    for same agreement foot wind government. Now project citizen within course trial.
+    Country role report wear indicate customer him simply. Trial smile want marriage
+    m", "streetAddress": "Everything how similar", "streetNr": "Interest she rather
+    media reality attack. Seat service professor."}}, "alternateName": {"type": "Property",
+    "value": "Concern threat require Mr suggest benefit. Short run home hard forward."},
+    "areaServed": {"type": "Property", "value": "Grow same something good. Still go
+    small move fall international mean."}, "dataProvider": {"type": "Property", "value":
+    "Bar teach middle mean born. Skill have person window media man. Run court treatment
+    eat second."}, "dateCreated": {"type": "Property", "value": {"@type": "DateTime",
+    "@value": "2017-07-13T20:29:53Z"}}, "dateModified": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "1996-03-16T13:18:03Z"}}, "description": {"type":
+    "Property", "value": "Environment economy scene se"}, "id": "urn:ngsi-ld:SpecialArea:id:BXVG:20578065",
+    "location": {"type": "Property", "value": {"coordinates": [-44.9842385, -63.929183],
+    "type": "Point"}}, "name": {"type": "Property", "value": "Vote upon star show
+    occur. Meeting technology half marriage role number."}, "owner": {"type": "Property",
+    "value": ["urn:ngsi-ld:SpecialArea:items:AFRV:18308441", "urn:ngsi-ld:SpecialArea:items:MUMA:06460118"]},
+    "seeAlso": {"type": "Property", "value": ["urn:ngsi-ld:SpecialArea:items:YBKX:99238445"]},
+    "source": {"type": "Property", "value": "Work it low government."}, "specialAreaType":
+    {"object": "urn:ngsi-ld:SpecialArea:specialAreaType:VEIZ:54748811", "type": "Relationship"},
+    "type": "SpecialArea"}'
+classes:
+  SpecialArea:
+    class_uri: https://smartdatamodels.org/dataModel.ERA/SpecialArea
+    description: Encompasses all those areas or sections such as safe areas, restricted
+      areas (non-stopping areas or industrial risk locations).
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - name
+    - owner
+    - seeAlso
+    - source
+    - specialAreaType
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/areaServed
+  specialAreaType:
+    description: Relationship. Special area type
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/specialAreaType

@@ -1,0 +1,559 @@
+id: https://github.com/smart-data-models/dataModel.OpenStreetMap/OSMBuilding
+name: OSMBuilding
+title: Smart Data Models - OpenStreetMap / OSMBuilding
+description: A building or group of connected buildings from OpenStreetMap tagged
+  with building=*. Represents the physical structure of a building, including its
+  geometry, dimensions, materials, and functional classification. For specific functions
+  within a building (shop, amenity, etc.) additional entities should be used.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OpenStreetMap
+  spec.source.path: OSMBuilding/schema.json
+  spec.source.commit: 5188df53c66d3c9f2441b6cffea0b604364ace68
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.OpenStreetMap/refs/heads/master/context.jsonld"],
+    "access": {"type": "Property", "value": "yes"}, "address": {"type": "Property",
+    "value": {"addressCity": "Madrid", "addressCountry": "ES", "houseNumber": "261",
+    "postalCode": "28046", "streetAddress": "Paseo de la Castellana"}}, "amenity":
+    {"type": "Property", "value": "hospital"}, "buildingColour": {"type": "Property",
+    "value": "#F5F5F0"}, "buildingHeight": {"type": "Property", "unitCode": "MTR",
+    "value": 48.5}, "buildingLevels": {"type": "Property", "value": 12}, "buildingLevelsUnderground":
+    {"type": "Property", "value": 2}, "buildingMaterial": {"type": "Property", "value":
+    "concrete"}, "buildingType": {"type": "Property", "value": "hospital"}, "id":
+    "urn:ngsi-ld:OSMBuilding:way:22234584", "location": {"type": "GeoProperty", "value":
+    {"coordinates": [[[-3.689, 40.4781], [-3.687, 40.4781], [-3.687, 40.476], [-3.689,
+    40.476], [-3.689, 40.4781]]], "type": "Polygon"}}, "name": {"type": "Property",
+    "value": "Hospital La Paz"}, "openingHours": {"type": "Property", "value": "24/7"},
+    "operator": {"type": "Property", "value": "Comunidad de Madrid"}, "osmId": {"type":
+    "Property", "value": 22234584}, "osmLastModified": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "2024-02-20T11:00:00Z"}}, "osmType": {"type":
+    "Property", "value": "way"}, "roofShape": {"type": "Property", "value": "flat"},
+    "seeAlso": {"type": "Property", "value": ["https://www.openstreetmap.org/way/22234584",
+    "https://www.wikidata.org/wiki/Q1321393"]}, "source": {"type": "Property", "value":
+    "https://www.openstreetmap.org"}, "startDate": {"type": "Property", "value": "1964"},
+    "type": "OSMBuilding", "wheelchair": {"type": "Property", "value": "yes"}}'
+classes:
+  OSMBuilding:
+    class_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/OSMBuilding
+    description: A building or group of connected buildings from OpenStreetMap tagged
+      with building=*. Represents the physical structure of a building, including
+      its geometry, dimensions, materials, and functional classification. For specific
+      functions within a building (shop, amenity, etc.) additional entities should
+      be used.
+    is_a: Entity
+    slots:
+    - access
+    - address
+    - alternateName
+    - amenity
+    - areaServed
+    - buildingColour
+    - buildingHeight
+    - buildingLevels
+    - buildingLevelsUnderground
+    - buildingMaterial
+    - buildingType
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - flats
+    - minHeight
+    - name
+    - openingHours
+    - operator
+    - osmId
+    - osmLastModified
+    - osmType
+    - owner
+    - roofColour
+    - roofMaterial
+    - roofShape
+    - seeAlso
+    - source
+    - startDate
+    - wheelchair
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+  Address:
+    description: Property. Address of the building, structured following schema.org
+      PostalAddress.
+    attributes:
+      streetAddress:
+        description: 'Property. Street name. OSM: addr:street'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      houseNumber:
+        description: 'Property. House or building number. OSM: addr:housenumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      addressCity:
+        description: 'Property. City. OSM: addr:city'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      postalCode:
+        description: 'Property. Postal code. OSM: addr:postcode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      addressCountry:
+        description: 'Property. ISO 3166-1 alpha-2 country code. OSM: addr:country'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. List of URIs pointing to additional resources about this
+      item.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. Address of the building, structured following schema.org
+      PostalAddress.
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/areaServed
+  osmId:
+    description: Property. The original OpenStreetMap element integer identifier.
+      Model:'https://wiki.openstreetmap.org/wiki/Elements'
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmId
+  osmType:
+    description: Property. The type of the original OpenStreetMap element. Model:'https://wiki.openstreetmap.org/wiki/Elements'
+    range: osmType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmType
+  osmLastModified:
+    description: Property. Timestamp of the last modification of the OSM element.
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmLastModified
+  buildingType:
+    description: Property. The OSM building tag value classifying the type or function
+      of the building. Enum:'annexe, apartments, barn, barracks, bungalow, cabin,
+      cathedral, chapel, church, civic, clinic, commercial, conservatory, detached,
+      dormitory, farm, farm_auxiliary, garage, garages, ger, government, grandstand,
+      greenhouse, hospital, hotel, house, industrial, kiosk, mosque, office, public,
+      residential, retail, roof, ruins, school, service, shed, sports_hall, stadium,
+      supermarket, synagogue, temple, train_station, transportation, university, warehouse,
+      yes'. Model:'https://wiki.openstreetmap.org/wiki/Key:building'
+    range: buildingType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/buildingType
+  buildingLevels:
+    description: Property. Number of above-ground floors in the building. Model:'https://wiki.openstreetmap.org/wiki/Key:building:levels'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/buildingLevels
+  buildingLevelsUnderground:
+    description: Property. Number of underground or basement floors in the building.
+      Model:'https://wiki.openstreetmap.org/wiki/Key:building:levels:underground'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/buildingLevelsUnderground
+  buildingHeight:
+    description: Property. Total height of the building in metres from ground to highest
+      point. Units:'m'. Model:'https://wiki.openstreetmap.org/wiki/Key:height'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/buildingHeight
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  minHeight:
+    description: Property. Height of the base of the building above ground level in
+      metres, used for buildings on slopes or elevated structures. Units:'m'. Model:'https://wiki.openstreetmap.org/wiki/Key:min_height'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/minHeight
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  roofShape:
+    description: Property. Shape of the roof. Enum:'flat, gabled, hipped, half-hipped,
+      pyramidal, gambrel, mansard, dome, skillion, round, saltbox, onion, cone'. Model:'https://wiki.openstreetmap.org/wiki/Key:roof:shape'
+    range: roofShape_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/roofShape
+  roofMaterial:
+    description: Property. Primary material of the roof surface. Model:'https://wiki.openstreetmap.org/wiki/Key:roof:material'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/roofMaterial
+  roofColour:
+    description: Property. Colour of the roof, expressed as a CSS colour name or hex
+      code. Model:'https://wiki.openstreetmap.org/wiki/Key:roof:colour'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/roofColour
+  buildingMaterial:
+    description: Property. Primary structural or facade material of the building.
+      Model:'https://wiki.openstreetmap.org/wiki/Key:building:material'
+    range: buildingMaterial_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/buildingMaterial
+  buildingColour:
+    description: Property. Colour of the main facade, expressed as a CSS colour name
+      or hex code. Model:'https://wiki.openstreetmap.org/wiki/Key:building:colour'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/buildingColour
+  startDate:
+    description: Property. Year or date when the building was constructed. Free-form
+      date or year value. Model:'https://wiki.openstreetmap.org/wiki/Key:start_date'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/startDate
+  amenity:
+    description: Property. Primary amenity function of the building (e.g. hospital,
+      school). Model:'https://wiki.openstreetmap.org/wiki/Key:amenity'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/amenity
+  operator:
+    description: Property. Name of the entity operating or managing the building.
+      Model:'https://wiki.openstreetmap.org/wiki/Key:operator'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/operator
+  wheelchair:
+    description: Property. Level of wheelchair accessibility of the building. Model:'https://wiki.openstreetmap.org/wiki/Key:wheelchair'
+    range: wheelchair_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/wheelchair
+  access:
+    description: Property. General access restriction to the building. Model:'https://wiki.openstreetmap.org/wiki/Key:access'
+    range: access_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/access
+  flats:
+    description: Property. Total number of individual dwelling units within the building.
+      Model:'https://wiki.openstreetmap.org/wiki/Key:building:flats'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/flats
+  openingHours:
+    description: Property. Opening hours of the building or its primary function in
+      OSM opening_hours syntax. Model:'https://wiki.openstreetmap.org/wiki/Key:opening_hours'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/openingHours
+enums:
+  osmType_options:
+    name: osmType_options
+    permissible_values:
+      node:
+        text: node
+      way:
+        text: way
+      relation:
+        text: relation
+  buildingType_options:
+    name: buildingType_options
+    permissible_values:
+      annexe:
+        text: annexe
+      apartments:
+        text: apartments
+      barn:
+        text: barn
+      barracks:
+        text: barracks
+      bungalow:
+        text: bungalow
+      cabin:
+        text: cabin
+      cathedral:
+        text: cathedral
+      chapel:
+        text: chapel
+      church:
+        text: church
+      civic:
+        text: civic
+      clinic:
+        text: clinic
+      commercial:
+        text: commercial
+      conservatory:
+        text: conservatory
+      detached:
+        text: detached
+      dormitory:
+        text: dormitory
+      farm:
+        text: farm
+      farm_auxiliary:
+        text: farm_auxiliary
+      garage:
+        text: garage
+      garages:
+        text: garages
+      ger:
+        text: ger
+      government:
+        text: government
+      grandstand:
+        text: grandstand
+      greenhouse:
+        text: greenhouse
+      hospital:
+        text: hospital
+      hotel:
+        text: hotel
+      house:
+        text: house
+      industrial:
+        text: industrial
+      kiosk:
+        text: kiosk
+      mosque:
+        text: mosque
+      office:
+        text: office
+      public:
+        text: public
+      residential:
+        text: residential
+      retail:
+        text: retail
+      roof:
+        text: roof
+      ruins:
+        text: ruins
+      school:
+        text: school
+      service:
+        text: service
+      shed:
+        text: shed
+      sports_hall:
+        text: sports_hall
+      stadium:
+        text: stadium
+      supermarket:
+        text: supermarket
+      synagogue:
+        text: synagogue
+      temple:
+        text: temple
+      train_station:
+        text: train_station
+      transportation:
+        text: transportation
+      university:
+        text: university
+      warehouse:
+        text: warehouse
+      'yes':
+        text: 'yes'
+  roofShape_options:
+    name: roofShape_options
+    permissible_values:
+      flat:
+        text: flat
+      gabled:
+        text: gabled
+      hipped:
+        text: hipped
+      half-hipped:
+        text: half-hipped
+      pyramidal:
+        text: pyramidal
+      gambrel:
+        text: gambrel
+      mansard:
+        text: mansard
+      dome:
+        text: dome
+      skillion:
+        text: skillion
+      round:
+        text: round
+      saltbox:
+        text: saltbox
+      onion:
+        text: onion
+      cone:
+        text: cone
+  buildingMaterial_options:
+    name: buildingMaterial_options
+    permissible_values:
+      brick:
+        text: brick
+      concrete:
+        text: concrete
+      wood:
+        text: wood
+      glass:
+        text: glass
+      steel:
+        text: steel
+      stone:
+        text: stone
+      plaster:
+        text: plaster
+      metal:
+        text: metal
+      timber_framing:
+        text: timber_framing
+      clay:
+        text: clay
+      sand:
+        text: sand
+      adobe:
+        text: adobe
+      granite:
+        text: granite
+      limestone:
+        text: limestone
+      marble:
+        text: marble
+  wheelchair_options:
+    name: wheelchair_options
+    permissible_values:
+      'yes':
+        text: 'yes'
+      'no':
+        text: 'no'
+      limited:
+        text: limited
+  access_options:
+    name: access_options
+    permissible_values:
+      'yes':
+        text: 'yes'
+      'no':
+        text: 'no'
+      private:
+        text: private
+      permissive:
+        text: permissive
+      customers:
+        text: customers
+      destination:
+        text: destination

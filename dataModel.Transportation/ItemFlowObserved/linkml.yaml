@@ -1,0 +1,413 @@
+id: https://github.com/smart-data-models/dataModel.Transportation/ItemFlowObserved
+name: ItemFlowObserved
+title: Flow Observed schema
+description: The data model intended to measure an observation linked to the movement
+  of an item at a certain location and over a given period. This Data Model proposes
+  an evolution of two Data Model by merging them and integrating all the attributes
+  of the initial version of [TrafficFlowObserved] and [CrowFlowObserved] and by extension
+  any type of item that we want to analyze the movements. Attributes `vehicleType`
+  and `vehicleSubType` are removed from the initial data Model in order to become
+  generic `itemType` and `itemSubType` of possible values. (people, Type of vehicle,
+  Type of boat, Type of plane, ...).
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Transportation
+  spec.source.path: ItemFlowObserved/schema.json
+  spec.source.commit: 48e0e7ebaaee430f04a47efb27fc38825f79b725
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "FR", "addressLocality":
+    "Nice", "streetAddress": "Port Lympia"}}, "areaServed": {"type": "Property", "value":
+    "Nice Harbor"}, "averageGapDistance": {"type": "Property", "unitCode": "MTR",
+    "value": 35.28}, "averageHeadwayTime": {"type": "Property", "unitCode": "SEC",
+    "value": 156}, "averageLength": {"type": "Property", "unitCode": "MTR", "value":
+    7.44}, "averageSpeed": {"type": "Property", "unitCode": "KNT", "value": 2.7},
+    "congested": {"type": "Property", "value": false}, "dateObserved": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2020-03-20T16:30:00Z"}}, "dateObservedFrom":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2020-03-20T16:30:00Z"}},
+    "dateObservedTo": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2020-03-20T22:30:00Z"}}, "description": {"type": "Property", "value": "Boat Flow
+    Observed from Nice Harbor."}, "id": "FlowObserved:BFO-NCE-MNCA-SP-001", "intensity":
+    {"type": "Property", "value": 12}, "itemSubType": {"type": "Property", "value":
+    "monoHull"}, "itemType": {"type": "Property", "value": "yatching"}, "laneDirection":
+    {"type": "Property", "value": "outbound"}, "laneId": {"type": "Property", "value":
+    1}, "location": {"type": "GeoProperty", "value": {"coordinates": [7.196545, 43.664809],
+    "type": "Point"}}, "maxSpeed": {"type": "Property", "unitCode": "KNT", "value":
+    3.8}, "minSpeed": {"type": "Property", "unitCode": "KNT", "value": 2.6}, "name":
+    {"type": "Property", "value": "BFO-NCE-MNCA-SP-001"}, "occupancy": {"type": "Property",
+    "value": 0.1562}, "refDevice": {"object": "urn:ngsi-ld:Device:BFO-NCE-MNCA-SP-001-Dev-02",
+    "type": "Relationship"}, "reverseLane": {"type": "Property", "value": false},
+    "type": "ItemFlowObserved"}'
+classes:
+  ItemFlowObserved:
+    class_uri: https://smartdatamodels.org/dataModel.Transportation/ItemFlowObserved
+    description: The data model intended to measure an observation linked to the movement
+      of an item at a certain location and over a given period. This Data Model proposes
+      an evolution of two Data Model by merging them and integrating all the attributes
+      of the initial version of [TrafficFlowObserved] and [CrowFlowObserved] and by
+      extension any type of item that we want to analyze the movements. Attributes
+      `vehicleType` and `vehicleSubType` are removed from the initial data Model in
+      order to become generic `itemType` and `itemSubType` of possible values. (people,
+      Type of vehicle, Type of boat, Type of plane, ...).
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - averageGapDistance
+    - averageHeadwayTime
+    - averageLength
+    - averageSpeed
+    - congested
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - dateObserved
+    - dateObservedFrom
+    - dateObservedTo
+    - description
+    - intensity
+    - itemSubType
+    - itemType
+    - laneDirection
+    - laneId
+    - maxSpeed
+    - minSpeed
+    - name
+    - occupancy
+    - owner
+    - refDevice
+    - refRoadSegment
+    - reverseLane
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/areaServed
+  refDevice:
+    description: Relationship. The device or devices used to obtain the data expressed
+      by this record
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/refDevice
+  refRoadSegment:
+    description: Relationship. Concerned road segment on which the observation has
+      been made
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/refRoadSegment
+  dateObserved:
+    description: Property. Date of the observed entity defined by the user
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateObserved
+  dateObservedFrom:
+    description: 'Property. Observation period : Start date and time in an ISO8601
+      UTC format'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/dateObservedFrom
+  dateObservedTo:
+    description: 'Property. Observation period : End date and time in an ISO8601 UTC
+      format'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/dateObservedTo
+  itemType:
+    description: Property. Reference to an identifier of an existing 'Type' attribute
+      of an NGSI entity (Vehicle / BoatType / Person) or of a future entity listing
+      an item 'Type' to be counted. Enum:'people, ship, vehicle, yacht'
+    range: itemType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/itemType
+  itemSubType:
+    description: Property. Reference to an identifier of an existing 'subType' attribute
+      of an NGSI entity (Vehicle / BoatType / Person ) or of a future entity listing
+      an item 'subType' to be counted
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/itemSubType
+  laneId:
+    description: Property. Lane identifier. Lane identification is done using the
+      conventions defined by RoadSegment entity which are based on [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Forward_%26_backward,_left_%26_right)
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/laneId
+  laneDirection:
+    description: Property. Usual direction of travel in the lane referred by this
+      observation. This attribute is useful when the observation is not referencing
+      any road segment, allowing to know the direction of travel of the traffic flow
+      observed. See RoadSegment for a description of the semantics of these values
+    range: laneDirection_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/laneDirection
+  reverseLane:
+    description: Property. Flags whether traffic in the lane was reversed during the
+      observation period. The absence of this attribute means no lane reversion
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/reverseLane
+  intensity:
+    description: Property. Total number of items detected during this observation
+      period
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/intensity
+  occupancy:
+    description: Property. Fraction of the observation time where a item has been
+      occupying the observed lane
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/occupancy
+  congested:
+    description: Property. Flags whether there was a crowd congestion during the observation
+      period in the referred walkway. The absence of this attribute means no crowd
+      congestion
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/congested
+  averageSpeed:
+    description: Property. Average speed of detected items transiting during the observation
+      period. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)
+      . Depending the type of Flow, the value can be **KMH** f(vehicule, pedestrian,
+      etc.) represents Kilometer per hour (km/h) or **KNT** represents Knot (Boat)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/averageSpeed
+  averageLength:
+    description: Property. Average length of detected items transiting during the
+      observation period. The unit code (text) is given using the [UN/CEFACT Common
+      Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)
+      . For instance, **MTR** represents Meter
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/averageLength
+  averageHeadwayTime:
+    description: Property. Average headway time. Head away time is the time elapsed
+      between two consecutive items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **SEC** represents Second
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/averageHeadwayTime
+  averageGapDistance:
+    description: Property. Average gap distance between consecutive 2 detected items.
+      The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **MTR** represents Meter
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/averageGapDistance
+  minSpeed:
+    description: Property. Minimum speed detected during the observation period. The
+      unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)
+      . Depending the type of Flow, the value can be **KMH** (vehicule, pedestrian,
+      ...) represents Kilometer per hour (km/h) or **KNT** represents Knot (Boat)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/minSpeed
+  maxSpeed:
+    description: Property. Maximum speed detected during the observation period. The
+      unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)
+      . Depending the type of Flow, the value can be **KMH** (vehicule, pedestrian,
+      ...) represents Kilometer per hour (km/h) or **KNT** represents Knot (Boat)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/maxSpeed
+enums:
+  itemType_options:
+    name: itemType_options
+    permissible_values:
+      people:
+        text: people
+      ship:
+        text: ship
+      vehicle:
+        text: vehicle
+      yacht:
+        text: yacht
+  laneDirection_options:
+    name: laneDirection_options
+    permissible_values:
+      forward:
+        text: forward
+      backward:
+        text: backward
+      inbound:
+        text: inbound
+      outbound:
+        text: outbound
+      right:
+        text: right
+      left:
+        text: left

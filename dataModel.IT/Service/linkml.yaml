@@ -1,0 +1,223 @@
+id: https://github.com/smart-data-models/dataModel.IT/Service
+name: Service
+title: Smart Data Models - ITinfrastructure / Service
+description: Service deployed in the Cloud-Edge-IoT continuum, which is composed of
+  a set of ServiceComponents running on top of InfrastructureElements.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.IT
+  spec.source.path: Service/schema.json
+  spec.source.commit: df045cbab80ae09db9eb308e05c89b18840be637
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "actionType": {"type": "Property", "value": "Deployed"}, "description": {"type":
+    "Property", "value": "Web application deployed for testing purposes"}, "domainHandler":
+    {"object": "urn:ngsi-ld:Domain:Cloud", "type": "Relationship"}, "hasOverlay":
+    {"type": "Property", "value": true}, "id": "urn:ngsi-ld:Service:WebApp01", "name":
+    {"type": "Property", "value": "Web application number 1"}, "serviceType": {"object":
+    "urn:ngsi-ld:ServiceType:WebApplication", "type": "Relationship"}, "type": "Service"}'
+classes:
+  Service:
+    class_uri: https://smartdatamodels.org/dataModel.IT/Service
+    description: Service deployed in the Cloud-Edge-IoT continuum, which is composed
+      of a set of ServiceComponents running on top of InfrastructureElements.
+    is_a: Entity
+    slots:
+    - actionType
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - domainHandler
+    - hasOverlay
+    - name
+    - owner
+    - seeAlso
+    - serviceType
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/areaServed
+  serviceType:
+    description: Relationship. Type of the deployed service, which must be a ServiceType
+      entity.
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/serviceType
+  actionType:
+    description: Property. Enum:'Deploying', 'Deployed', 'Destroying', 'Finished',
+      'Handled'. Current status of whole service in the orchestration process.
+    range: actionType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/actionType
+  domainHandler:
+    description: Relationship. Domain which is in charge of performing the orchestration
+      process of the service.
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/domainHandler
+  hasOverlay:
+    description: Property. Defines if the components of this services are connected
+      through an overlay network.
+    range: boolean
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/hasOverlay
+enums:
+  actionType_options:
+    name: actionType_options
+    permissible_values:
+      Deploying:
+        text: Deploying
+      Deployed:
+        text: Deployed
+      Destroying:
+        text: Destroying
+      Finished:
+        text: Finished
+      Handled:
+        text: Handled

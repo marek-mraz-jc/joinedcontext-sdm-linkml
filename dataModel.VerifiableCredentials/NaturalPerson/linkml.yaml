@@ -1,0 +1,98 @@
+id: https://github.com/smart-data-models/dataModel.VerifiableCredentials/NaturalPerson
+name: NaturalPerson
+title: EBSI Natural Person Verifiable ID
+description: Schema of an EBSI Verifiable ID for a natural person
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.VerifiableCredentials
+  spec.source.path: NaturalPerson/schema.json
+  spec.source.commit: 6d7f230e04c68631174483adfc610bb4fab53ab0
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+classes:
+  NaturalPerson:
+    class_uri: https://smartdatamodels.org/dataModel.VerifiableCredentials/NaturalPerson
+    description: Schema of an EBSI Verifiable ID for a natural person
+    is_a: Entity
+    slots:
+    - credentialSubject
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+  CredentialSubject:
+    description: Property. Defines additional information about the subject that is
+      described by the Verifiable ID
+    attributes:
+      id:
+        description: Property. Defines the DID of the subject that is described by
+          the Verifiable Attestation
+        range: uriorcurie
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      familyName:
+        description: Property. Defines current family name(s) of the credential subject
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      firstName:
+        description: Property. Defines current first name(s) of the credential subject
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      dateOfBirth:
+        description: Property. Defines date of birth of the credential subject
+        range: date
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      personalIdentifier:
+        description: Property. Defines the unique national identifier of the credential
+          subject (constructed by the sending Member State in accordance with the
+          technical specifications for the purposes of cross-border identification
+          and which is as persistent as possible in time)
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      nameAndFamilyNameAtBirth:
+        description: Property. Defines the first and the family name(s) of the credential
+          subject at the time of their birth
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      placeOfBirth:
+        description: Property. Defines the place where the credential subjectis born
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      currentAddress:
+        description: Property. Defines the current address of the credential subject
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      gender:
+        description: Property. Defines the gender of the credential subject
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+slots:
+  credentialSubject:
+    description: Property. Defines additional information about the subject that is
+      described by the Verifiable ID
+    range: CredentialSubject
+    required: true
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    slot_uri: https://smartdatamodels.org/dataModel.VerifiableCredentials/credentialSubject

@@ -1,0 +1,294 @@
+id: https://github.com/smart-data-models/dataModel.ERA/ContactLineSystem
+name: ContactLineSystem
+title: ContactLineSystem + mapped from ERA ontology by Smart Data Models
+description: System that is used to transmit electrical energy to road or rail vehicles.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ERA
+  spec.source.path: ContactLineSystem/schema.json
+  spec.source.commit: 4c4f8ebffc25dd413db62527072eac74559f0b70
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.ERA/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Lead consider hundred
+    offer look hit future. Fly appear remain pattern wall goal.", "addressLocality":
+    "Report yet sit hundred use political his. Build special recently make.", "addressRegion":
+    "Floor someone tend. News fight against fall television. Writer full bed official
+    concern small.", "district": "Next respond oil important guy leave capital. Provide
+    street good create range growth war. Visit across media consumer land spring total
+    well.", "postOfficeBoxNumber": "Current wha", "postalCode": "Suddenly our visit
+    that field. Trip fi", "streetAddress": "Role even option. Push play firm may.
+    City grow director audience body reduce.", "streetNr": "Page effort station."}},
+    "alternateName": {"type": "Property", "value": "Trade international loss friend
+    every sing available because. Per agent stock call manage share."}, "areaServed":
+    {"type": "Property", "value": "White laugh space discussion. Throw international
+    continue while senior gas pro"}, "conditionalRegenerativeBrake": {"type": "Property",
+    "value": false}, "conditionsAppliedRegenerativeBraking": {"type": "Property",
+    "value": "Design hard short dream cost entire year. Better consumer recently.
+    Population rich recent tough environmental rock image speech."}, "conditionsChargingElectricEnergyStorage":
+    {"type": "Property", "value": "Force inside tell. Daughter miss true member voice
+    thus. Dream many which church strong "}, "contactLineSystemType": {"object": "urn:ngsi-ld:ContactLineSystem:contactLineSystemType:JNYV:94337272",
+    "type": "Relationship"}, "currentLimitationRequired": {"type": "Property", "value":
+    true}, "dataProvider": {"type": "Property", "value": "Including future politics
+    return table mention section. Together year agency know. Manager image positive
+    suffer perform enough."}, "dateCreated": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "1989-01-20T05:58:09Z"}}, "dateModified": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "1972-01-07T08:46:29Z"}}, "description":
+    {"type": "Property", "value": "Worry certain if our thought it resource. Everyone
+    blood commercial respond face take probably. Culture their concern trade crime."},
+    "energySupplySystem": {"object": "urn:ngsi-ld:ContactLineSystem:energySupplySystem:BFQY:01787468",
+    "type": "Relationship"}, "energySupplySystemTSICompliant": {"type": "Property",
+    "value": false}, "id": "urn:ngsi-ld:ContactLineSystem:id:YUFG:14034194", "location":
+    {"type": "Property", "value": {"coordinates": [88.082114, -116.450812], "type":
+    "Point"}}, "maxCurrentStandstillPantograph": {"type": "Property", "value": 773.8},
+    "maxTrainCurrent": {"type": "Property", "value": 68}, "name": {"type": "Property",
+    "value": "Face response pass cut perform easy. Discuss couple think no difference
+    singl"}, "owner": {"type": "Property", "value": ["urn:ngsi-ld:ContactLineSystem:items:GYWA:00643390",
+    "urn:ngsi-ld:ContactLineSystem:items:WEEM:69764788"]}, "permissionChargingElectricEnergyTractionStandstill":
+    {"type": "Property", "value": false}, "seeAlso": {"type": "Property", "value":
+    ["urn:ngsi-ld:ContactLineSystem:items:WMLL:21052726"]}, "source": {"type": "Property",
+    "value": "Pick red ability information. Positive development policy financial
+    learn career. Nothing firm at memory."}, "type": "ContactLineSystem", "umax2":
+    {"type": "Property", "value": 756}}'
+classes:
+  ContactLineSystem:
+    class_uri: https://smartdatamodels.org/dataModel.ERA/ContactLineSystem
+    description: System that is used to transmit electrical energy to road or rail
+      vehicles.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - conditionalRegenerativeBrake
+    - conditionsAppliedRegenerativeBraking
+    - conditionsChargingElectricEnergyStorage
+    - contactLineSystemType
+    - currentLimitationRequired
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - energySupplySystem
+    - energySupplySystemTSICompliant
+    - maxCurrentStandstillPantograph
+    - maxTrainCurrent
+    - name
+    - owner
+    - permissionChargingElectricEnergyTractionStandstill
+    - seeAlso
+    - source
+    - umax2
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/areaServed
+  conditionalRegenerativeBrake:
+    description: Property. Permission for regenerative braking
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/conditionalRegenerativeBrake
+  conditionsAppliedRegenerativeBraking:
+    description: Property. Conditions applying in regards to regenerative braking
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/conditionsAppliedRegenerativeBraking
+  conditionsChargingElectricEnergyStorage:
+    description: Property. Permitted conditions for charging electric energy storage
+      for traction purposes at standstill
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/conditionsChargingElectricEnergyStorage
+  currentLimitationRequired:
+    description: Property. Current or power limitation on board required
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/currentLimitationRequired
+  energySupplySystemTSICompliant:
+    description: Property. Energy supply system TSI compliant
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/energySupplySystemTSICompliant
+  maxCurrentStandstillPantograph:
+    description: Property. Maximum current at standstill per pantograph
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/maxCurrentStandstillPantograph
+  maxTrainCurrent:
+    description: Property. Maximum train current
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/maxTrainCurrent
+  permissionChargingElectricEnergyTractionStandstill:
+    description: Property. Permission for charging electric energy storage for traction
+      purposes at standstill
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/permissionChargingElectricEnergyTractionStandstill
+  umax2:
+    description: Property. Umax2 for lines referred to in sections 7.4.2.2.1 and 7.4.2.11.1
+      of Regulation (EU)1301/2014.
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/umax2
+  contactLineSystemType:
+    description: Relationship. Type of contact line system
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/contactLineSystemType
+  energySupplySystem:
+    description: Relationship. Energy supply system
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/energySupplySystem

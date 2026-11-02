@@ -1,0 +1,255 @@
+id: https://github.com/smart-data-models/dataModel.S4BLDG/TransportElement
+name: TransportElement
+title: Smart data models - TransportElement schema
+description: 'A transport element is a generalization of all transport related objects
+  that move people, animals or goods within a building or building complex. The TransportElement
+  defines the occurrence of a transport element. '
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.S4BLDG
+  spec.source.path: TransportElement/schema.json
+  spec.source.commit: 06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.S4BLDG/master/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"], "alternateName":
+    {"type": "Property", "value": "TransportElement type 2"}, "capacityPeople": {"type":
+    "Property", "value": 0.6165672857973306}, "capacityWeight": {"observedAt": "2023-01-26T09:13:00Z",
+    "type": "Property", "unitCode": "g", "value": 0.20941132111490557}, "dataProvider":
+    {"type": "Property", "value": "IFC file"}, "dateCreated": {"type": "Property",
+    "value": "2023-01-25T17:08:38Z"}, "dateModified": {"type": "Property", "value":
+    "2023-01-26T09:55:44Z"}, "description": {"type": "Property", "value": "TransportElement
+    of limited TransportElement types"}, "fireExit": {"type": "Property", "value":
+    true}, "hasManufacturer": {"type": "Property", "value": "TransportElement Company
+    Inc."}, "hasModel": {"type": "Property", "value": "TransportElement 0.1.2"}, "id":
+    "urn:ngsi-ld:TransportElement:c41e2acc-4b47-4703-a669-2d70e355da7c", "isContainedInBuildingSpace":
+    {"object": "urn:ngsi-ld:BuildingSpace:aa3fe628-ef96-4bf6-9fd7-c3ea6250d82a", "type":
+    "Relationship"}, "isContainedInPhysicalObject": {"object": "urn:ngsi-ld:PhysicalObject:c07479d7-3b83-4a0d-82ce-63f76a9f0633",
+    "type": "Relationship"}, "isSubSystemOf": [{"object": "urn:ngsi-ld:System:73fd8be2-d2ed-4de5-bff8-2cf0e74348ce",
+    "type": "Relationship"}, {"object": "urn:ngsi-ld:System:b92b21cf-fb79-4f9f-b83f-e5f3cb0d54ea",
+    "type": "Relationship"}, {"object": "urn:ngsi-ld:System:54de7679-42e2-40bb-b735-e09188b1d7d6",
+    "type": "Relationship"}], "name": {"type": "Property", "value": "TransportElement"},
+    "source": {"type": "Property", "value": "Import"}, "type": "TransportElement"}'
+classes:
+  TransportElement:
+    class_uri: https://smartdatamodels.org/dataModel.S4BLDG/TransportElement
+    description: 'A transport element is a generalization of all transport related
+      objects that move people, animals or goods within a building or building complex.
+      The TransportElement defines the occurrence of a transport element. '
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - capacityPeople
+    - capacityWeight
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - fireExit
+    - hasManufacturer
+    - hasModel
+    - isContainedInBuildingSpace
+    - isContainedInPhysicalObject
+    - isSubSystemOf
+    - name
+    - owner
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/areaServed
+  capacityPeople:
+    description: Property. Capacity of the transportation element measured in numbers
+      of person
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/capacityPeople
+  capacityWeight:
+    description: Property. Capacity of the transport element measured by weight. Usually
+      measured in kilograms (kg) or grams (g)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/capacityWeight
+  fireExit:
+    description: Property. Indication whether this object is designed to serve as
+      an exit in the case of fire (TRUE) or not (FALSE). Here whether the transport
+      element (in case of e.g., a lift) is designed to serve as a fire exit, e.g.,
+      for fire escape purposes
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/fireExit
+  hasManufacturer:
+    description: Property. A relationship identifying the manufacturer of an entity
+      (e.g., device). The value is expected to be a string or a string with language
+      tag
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/hasManufacturer
+  hasModel:
+    description: Property. A relationship identifying the model of an entity (e.g.,
+      device). The value is expected to be a string or a string with language tag
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/hasModel
+  isContainedInBuildingSpace:
+    description: Relationship. An entity used to define the physical spaces of the
+      building. A building space contains devices or building objects. (BuildingSpace)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isContainedInBuildingSpace
+  isContainedInPhysicalObject:
+    description: Relationship. Any Object that has a proper space region.  (Definition
+      extracted from DUL ontology) (PhysicalObject)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isContainedInPhysicalObject
+  isSubSystemOf:
+    description: Relationship. A reference to a system(s) that this Physical Object
+      is part of
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isSubSystemOf

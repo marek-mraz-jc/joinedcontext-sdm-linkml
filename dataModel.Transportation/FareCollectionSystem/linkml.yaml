@@ -1,0 +1,534 @@
+id: https://github.com/smart-data-models/dataModel.Transportation/FareCollectionSystem
+name: FareCollectionSystem
+title: Smart Dta Models - FareCollectionSystem
+description: A public transit fare collection system Data Model
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Transportation
+  spec.source.path: FareCollectionSystem/schema.json
+  spec.source.commit: 48e0e7ebaaee430f04a47efb27fc38825f79b725
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "France", "addressLocality":
+    "Nice", "addressRegion": "Provenza-Alpes-Costa Azul", "postOfficeBoxNumber": "",
+    "postalCode": "06000", "streetAddress": "Av. Nicolas II"}}, "alternateName": {"type":
+    "Property", "value": ""}, "areaServed": {"type": "Property", "value": "Nice"},
+    "cardId": {"type": "Property", "value": "987201910"}, "currentTripCount": {"type":
+    "Property", "value": 12}, "dataProvider": {"type": "Property", "value": ""}, "dateCreated":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2020-11-02T06:16:42Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2020-12-27T15:13:17Z"}}, "description": {"type": "Property", "value": "Fare collection
+    system Nize for regional routes"}, "destinationStopCategory": {"type": "Property",
+    "value": "Airport"}, "destinationStopId": {"type": "Property", "value": "Nice-Airport"},
+    "destinationStopName": {"type": "Property", "value": "Hour risk somebody deal
+    system discussion other plan. Stage the film occur."}, "direction_id": {"type":
+    "Property", "value": 1}, "entryAreaCode": {"type": "Property", "value": "city-bus-service"},
+    "equipmentCompanyCode": {"type": "Property", "value": "103"}, "equipmentId": {"type":
+    "Property", "value": "S23"}, "equipmentSequenceNumber": {"type": "Property", "value":
+    2}, "equipmentStopId": {"type": "Property", "value": "BRTS-Sen-23"}, "equipmentType":
+    {"type": "Property", "value": "Entry sensor"}, "equipmentTypeCode": {"type": "Property",
+    "value": "42"}, "exitAreaCode": {"type": "Property", "value": "city-bus-service"},
+    "fareForAdult": {"type": "Property", "value": 4.5}, "fareForChild": {"type": "Property",
+    "value": 3.6}, "id": "urn:ngsi-ld:FareCollectionSystem:id:RJSB:34513580", "location":
+    {"type": "Property", "value": {"coordinates": [43.7034, 7.2663], "type": "Point"}},
+    "name": {"type": "Property", "value": "Fare collection system Nize"}, "observationDateTime":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "1988-12-24T07:06:19Z"}},
+    "occupancyLevel": {"type": "Property", "value": "Green"}, "originDestinationCode":
+    {"type": "Property", "value": "23"}, "originStopCategory": {"type": "Property",
+    "value": "Bus stop"}, "originStopId": {"type": "Property", "value": "9"}, "originStopName":
+    {"type": "Property", "value": "Vauban"}, "owner": {"type": "Property", "value":
+    ["urn:ngsi-ld:FareCollectionSystem:items:XMXR:79897582", "urn:ngsi-ld:FareCollectionSystem:items:SKAX:98192518"]},
+    "passengerCount": {"type": "Property", "value": 6}, "route_id": {"type": "Property",
+    "value": "4"}, "seeAlso": {"type": "Property", "value": ["urn:ngsi-ld:FareCollectionSystem:items:VSVS:72352464",
+    "urn:ngsi-ld:FareCollectionSystem:items:VMFR:36424993"]}, "shiftOfOperation":
+    {"type": "Property", "value": "2"}, "source": {"type": "Property", "value": ""},
+    "stage": {"type": "Property", "value": 4}, "ticketTypeCode": {"type": "Property",
+    "value": "Normal"}, "transactionDateTime": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "2021-08-20T15:45:22Z"}}, "transactionType": {"type": "Property",
+    "value": "Issue"}, "transactionTypeDescription": {"type": "Property", "value":
+    "Regular Fare."}, "transactionVehicleNum": {"type": "Property", "value": 23},
+    "travelDistance": {"type": "Property", "value": 7.5}, "trip_id": {"type": "Property",
+    "value": "4A"}, "type": "FareCollectionSystem", "vehicle_label": {"type": "Property",
+    "value": "5821JZS"}}'
+classes:
+  FareCollectionSystem:
+    class_uri: https://smartdatamodels.org/dataModel.Transportation/FareCollectionSystem
+    description: A public transit fare collection system Data Model
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - cardId
+    - currentTripCount
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - destinationStopCategory
+    - destinationStopId
+    - destinationStopName
+    - direction_id
+    - entryAreaCode
+    - equipmentCompanyCode
+    - equipmentId
+    - equipmentSequenceNumber
+    - equipmentStopId
+    - equipmentType
+    - equipmentTypeCode
+    - exitAreaCode
+    - fareForAdult
+    - fareForChild
+    - name
+    - observationDateTime
+    - occupancyLevel
+    - originDestinationCode
+    - originStopCategory
+    - originStopId
+    - originStopName
+    - owner
+    - passengerCount
+    - route_id
+    - seeAlso
+    - shiftOfOperation
+    - source
+    - stage
+    - ticketTypeCode
+    - transactionDateTime
+    - transactionType
+    - transactionTypeDescription
+    - transactionVehicleNum
+    - travelDistance
+    - trip_id
+    - vehicle_label
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/areaServed
+  destinationStopName:
+    description: Property. Model:'https://schema.org/Text'. The name of the destination
+      bus stop corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/destinationStopName
+  occupancyLevel:
+    description: Property. Model:'https://schema.org/Text'. Occupancy level in the
+      public transit bus corresponding to this observation. 'Red' indicates the congestion
+      level in the bus is HIGH, 'Yellow' indicates the congestion level in the bus
+      is MODERATE and 'Green' indicates the congestion level in the bus is LOW
+    range: occupancyLevel_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/occupancyLevel
+  travelDistance:
+    description: Property. Model:'https://schema.org/Number'. The distance between
+      the origin bus stop and the destination bus stop corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/travelDistance
+  passengerCount:
+    description: Property. Model:'https://schema.org/Number'. Number of passengers
+      travelling in the public transit bus corresponding to this observation. This
+      count is computed based on the realtime ticketing transactions in the public
+      transit bus
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/passengerCount
+  transactionType:
+    description: Property. Model:'https://schema.org/Text'. Type of the transaction
+      corresponding to this observation. For Eg - Issue, ReIssue, Entry, Exit etc
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/transactionType
+  ticketTypeCode:
+    description: Property. Model:'https://schema.org/Text'. Unique ticket type code
+      of the corresponding trip
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/ticketTypeCode
+  originStopName:
+    description: Property. Model:'https://schema.org/Text'. The name of the origin
+      bus stop corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/originStopName
+  entryAreaCode:
+    description: Property. Model:'https://schema.org/Text'. Area code of the passenger
+      boarding stop (used by the fare collection agency). For example, whether the
+      stop is city-bus-service stop or brts stop or other service type stop etc
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/entryAreaCode
+  cardId:
+    description: Property. Model:'https://schema.org/Text'. Unique ticket Id of the
+      transaction or Id of the smart card used in the transaction
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/cardId
+  stage:
+    description: Property. Model:'https://schema.org/Number'. Total number of stages
+      from the origin bus stop to the destination bus stop
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/stage
+  equipmentId:
+    description: Property. Model:'https://schema.org/Text'. Unique Id of the equipment
+      corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/equipmentId
+  direction_id:
+    description: 'Property. Model:''https://schema.org/Number''. Indicates the direction
+      of travel of the vehicle corresponding to this observation, can be referenced
+      from the GTFS static feed trips.txt. SameAs: ''direction_id'' field from GTFS
+      Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/direction_id
+  equipmentSequenceNumber:
+    description: Property. Model:'https://schema.org/Number'. Sequence number for
+      the given equipment
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/equipmentSequenceNumber
+  shiftOfOperation:
+    description: Property. Model:'https://schema.org/Text'. Shift of operation of
+      the public transit vehicle operated by the fare collection agency/ public transit
+      agency or the employee corresponding to this observation. Indicated as '1' when
+      the vehicle operates in the first shift, '2' when the vehicle operates in the
+      second shift and '3' when the vehicle operates in the third shift
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/shiftOfOperation
+  route_id:
+    description: 'Property. Model:''https://schema.org/Text''. Route Id assigned to
+      the route on which the bus/vehicle corresponding to the bus in this observation
+      is currently plying on. SameAs: ''route_id'' field from GTFS Realtime message-TripDescriptor
+      (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/route_id
+  trip_id:
+    description: 'Property. Model:''https://schema.org/Text''. Trip Id/Trip name alloted
+      to the bus corresponding to this observation, in consideration to the time of
+      the day and the direction of the trip on the given routeId. SameAs: ''trip_id''
+      field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/trip_id
+  originStopCategory:
+    description: Property. Model:'https://schema.org/Text'. Type of the origin bus
+      stop corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/originStopCategory
+  vehicle_label:
+    description: 'Property. Model:''https://schema.org/Text''. User visible label,
+      i.e., something that must be shown to the passenger to help identify the correct
+      vehicle. SameAs: ''label'' field from GTFS Realtime message-VehicleDescriptor
+      (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/vehicle_label
+  fareForChild:
+    description: Property. Model:'https://schema.org/Number'. The fare for a child
+      in the journey corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/fareForChild
+  transactionDateTime:
+    description: Property. Model:'https://schema.org/Text'. Date-time of the transaction
+      corresponding to this observation
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/transactionDateTime
+  destinationStopId:
+    description: Property. Model:'https://schema.org/Text'. Unique Id of the bus stop
+      at which the passenger deboards from the bus corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/destinationStopId
+  originDestinationCode:
+    description: Property. Model:'https://schema.org/Text'. The code for the origin
+      and destination stops corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/originDestinationCode
+  currentTripCount:
+    description: Property. Model:'https://schema.org/Number'. The current count of
+      trips made by the vehicle corresponding to this observation on the given day
+      of operation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/currentTripCount
+  equipmentTypeCode:
+    description: Property. Model:'https://schema.org/Text'. Unique code indicating
+      the type of equipment used in the transaction (used by fare collection agency).ENUM
+      [1B, 42, 02, 08, 41] 1B - POS, 42 - HTT, 02- Mobile, 08- Fare Gate, 41- Pole
+      Validator
+    range: equipmentTypeCode_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/equipmentTypeCode
+  destinationStopCategory:
+    description: Property. Model:'https://schema.org/Text'. Type of the destination
+      bus stop corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/destinationStopCategory
+  transactionVehicleNum:
+    description: Property. Model:'https://schema.org/Number'. Code used by fare collection
+      agency for the vehicle number corresponding to the transaction
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/transactionVehicleNum
+  fareForAdult:
+    description: Property. Model:'https://schema.org/Number'. The fare for an adult
+      in the journey corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/fareForAdult
+  observationDateTime:
+    description: Property. Model:'https://schema.org/Text'. Last reported time of
+      observation
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/observationDateTime
+  equipmentCompanyCode:
+    description: Property. Model:'https://schema.org/Text'. Company/Agency code for
+      the transaction equipment (used by fare collection agency). For example, 103
+      - CBS (city bus service),102 - BRTS etc
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/equipmentCompanyCode
+  transactionTypeDescription:
+    description: Property. Model:'https://schema.org/Text'. Description of the transaction
+      type. Explanation of various transactionTypeId codes used in the data
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/transactionTypeDescription
+  exitAreaCode:
+    description: Property. Model:'https://schema.org/Text'. Area code of the passenger
+      alighting stop (used by the fare collection agency). For example, whether the
+      stop is city-bus-service stop or BRTS stop or other service type stop etc
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/exitAreaCode
+  equipmentType:
+    description: Property. Model:'https://schema.org/Text'. Type of equipment or the
+      name of the equipment corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/equipmentType
+  equipmentStopId:
+    description: Property. Model:'https://schema.org/Text'. Stop Id (BRTS) at which
+      the equipment corresponding to this transaction is installed
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/equipmentStopId
+  originStopId:
+    description: Property. Model:'https://schema.org/Text'. Unique Id of the bus stop
+      at which the passenger boards into the bus corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/originStopId
+enums:
+  occupancyLevel_options:
+    name: occupancyLevel_options
+    permissible_values:
+      Red:
+        text: Red
+      Yellow:
+        text: Yellow
+      Green:
+        text: Green
+  equipmentTypeCode_options:
+    name: equipmentTypeCode_options
+    permissible_values:
+      1B:
+        text: 1B
+      '42':
+        text: '42'
+      '02':
+        text: '02'
+      08:
+        text: 08
+      '41':
+        text: '41'

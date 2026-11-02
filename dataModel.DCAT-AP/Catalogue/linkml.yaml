@@ -1,0 +1,275 @@
+id: https://github.com/smart-data-models/dataModel.DCAT-AP/Catalogue
+name: Catalogue
+title: ' Smart Data Models - CatalogueDCAT-AP'
+description: Catalogue of datasets compliant with DCAT-AP specification version 2.1.1.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.DCAT-AP
+  spec.source.path: Catalogue/schema.json
+  spec.source.commit: ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.DCAT-AP/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Luxembourg", "addressLocality":
+    "Luxembourg", "addressRegion": "Luxembourg", "postOfficeBoxNumber": "", "postalCode":
+    "2985 ", "streetAddress": "2 Rue Mercier"}}, "catalog": {"object": ["urn:ngsi-ld:Catalogue:items:LZMQ:44249979",
+    "urn:ngsi-ld:Catalogue:items:PECX:02526105"], "type": "Relationship"}, "creator":
+    {"object": [""], "type": "Relationship"}, "dataset": {"object": ["urn:ngsi-ld:Catalogue:dataset:ZBCW:95668818"],
+    "type": "Relationship"}, "description": {"type": "Property", "value": [""]}, "hasPart":
+    {"object": ["urn:ngsi-ld:Catalogue:hasPart:GVZM:66676591"], "type": "Relationship"},
+    "homepage": {"type": "Property", "value": "Catalogue:homepage:ZFAW:13633782"},
+    "id": "urn:ngsi-ld:Catalogue:id:LMVP:18269678", "isPartOf": {"object": "urn:ngsi-ld:Catalogue:isPartOf:NXBZ:88517287",
+    "type": "Relationship"}, "issued": {"type": "Property", "value": {"@type": "DateTime",
+    "@value": "2004-08-22T22:32:47Z"}}, "language": {"type": "Property", "value":
+    ["ES", "DE"]}, "license": {"type": "Property", "value": "Creative Commons 3.0
+    International"}, "location": {"type": "GeoProperty", "value": {"coordinates":
+    [-83.400987, 0.152532], "type": "Point"}}, "modified": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "1982-09-02T03:16:28Z"}}, "publisher": {"type":
+    "Property", "value": "Spain open data portal"}, "record": {"object": ["Catalogue.items.HLGA.73285516",
+    "Catalogue.items.IHOB.85266800"], "type": "Relationship"}, "rights": {"type":
+    "Property", "value": ""}, "spatial": {"type": "GeoProperty", "value": {"coordinates":
+    [57.234944, 52.840273], "type": "Point"}}, "themeTaxonomy": {"type": "Property",
+    "value": ["Tourism", "Economy"]}, "title": {"type": "Property", "value": ["New
+    catalogue", "Nuevo catalogo"]}, "type": "Catalogue"}'
+classes:
+  Catalogue:
+    class_uri: https://smartdatamodels.org/dataModel.DCAT-AP/Catalogue
+    description: Catalogue of datasets compliant with DCAT-AP specification version
+      2.1.1.
+    is_a: Entity
+    slots:
+    - address
+    - areaServed
+    - catalog
+    - creator
+    - dataset
+    - description
+    - hasPart
+    - homepage
+    - isPartOf
+    - issued
+    - language
+    - license
+    - modified
+    - publisher
+    - record
+    - rights
+    - service
+    - spatial
+    - themeTaxonomy
+    - title
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+slots:
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/areaServed
+  description:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Literal'. This
+      property contains a free-text account of the Catalogue. This property can be
+      repeated for parallel language versions of the description. For further information
+      on multilingual issues, please refer to section 8 of the pdf document https://codeload.github.com/SEMICeu/DCAT-AP/zip/refs/tags/v2.1.1
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: http://purl.org/dc/terms/description
+  publisher:
+    description: Property. Model:'http://xmlns.com/foaf/0.1/#term_Agent'. This property
+      refers to an entity (organisation) responsible for making the Catalogue available
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/publisher
+  title:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Literal'. This
+      property contains a name given to the Catalogue. This property can be repeated
+      for parallel language versions of the name
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: http://purl.org/dc/terms/title
+  dataset:
+    description: Relationship. Model:'http://www.w3.org/ns/dcat#dataset'. This property
+      links the Catalogue with a Dataset that is part of the Catalogue
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://uri.etsi.org/ngsi-ld/hasDataset
+  service:
+    description: Relationship. Model:'http://www.w3.org/ns/dcat#DataService'. This
+      property refers to a site or end-point (Data Service) that is listed in the
+      Catalogue. As empty Catalogues are usually indications of problems, this property
+      should be combined with the previous property dataset to implement an empty
+      Catalogue check
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/service
+  homepage:
+    description: Property. Model:'http://xmlns.com/foaf/0.1/homepage'. This property
+      refers to a web page that acts as the main page for the Catalogue
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/homepage
+  language:
+    description: Property. Model:'http://purl.org/dc/terms/LinguisticSystem'. This
+      property refers to a language used in the textual metadata describing titles,
+      descriptions, etc. of the Datasets in the Catalogue. This property can be repeated
+      if the  metadata is provided in multiple languages
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/language
+  license:
+    description: Property. Model:'http://purl.org/dc/terms/LicenseDocument'. This
+      property refers to the licence under which the Catalogue can be used or reused
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/license
+  issued:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Literal'. This
+      property contains the date of formal issuance (e.g., publication) of the Catalogue
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/issued
+  spatial:
+    description: GeoProperty. Model:'http://purl.org/dc/terms/Location'. This property
+      refers to a geographical area covered by the Catalogue
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/spatial
+  themeTaxonomy:
+    description: Property. Model:'http://www.w3.org/2004/02/skos/core#ConceptScheme'.
+      This property refers to a knowledge organization system used to classify the
+      Catalogue's Datasets
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/themeTaxonomy
+  modified:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Literal'. This
+      property contains the most recent date on which the Catalogue was modified
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/modified
+  hasPart:
+    description: Relationship. Model:'http://www.w3.org/ns/dcat#Catalog'. This property
+      refers to a related Catalogue that is part of the described Catalogue
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/hasPart
+  isPartOf:
+    description: Relationship. Model:'http://www.w3.org/ns/dcat#Catalog'. This property
+      refers to a related Catalogue in which the described Catalogue is physically
+      or logically included
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/isPartOf
+  record:
+    description: Relationship. Model:'http://www.w3.org/ns/dcat#CatalogRecord'. This
+      property refers to a Catalogue Record that is part of the Catalogue
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/record
+  rights:
+    description: Property. Model:'http://purl.org/dc/terms/RightsStatement'. This
+      property refers to a statement that specifies rights associated with the Catalogue
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/rights
+  catalog:
+    description: Relationship. Model:'http://www.w3.org/ns/dcat#Catalog'. This property
+      refers to a catalog whose contents are of interest in the context of this catalog
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/catalog
+  creator:
+    description: Relationship. Model:'http://xmlns.com/foaf/0.1/Agent'. The entities
+      primarily responsible for producing the catalogue
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/creator

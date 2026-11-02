@@ -1,0 +1,571 @@
+id: https://github.com/smart-data-models/dataModel.Hl7/Practitioner
+name: Practitioner
+title: Smart Data Models - HL7 / Practitioner data model based on HL7 equivalent
+description: A person who is directly or indirectly involved in the provisioning of
+  healthcare.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Hl7
+  spec.source.path: Practitioner/schema.json
+  spec.source.commit: 880ee42901b2176fee5aa56a5ded515403917e5e
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Hl7/master/context.jsonld"],
+    "active": {"type": "Property", "value": true}, "address": {"type": "Property",
+    "value": [{"city": "PleasantVille", "line": ["534 Erewhon St"], "postalCode":
+    "3999", "state": "Vic", "use": "home"}]}, "id": "example", "identifier": {"type":
+    "Property", "value": [{"system": "http://www.acme.org/practitioners", "value":
+    "23"}]}, "meta": {"type": "Property", "value": {"tag": [{"code": "HTEST", "display":
+    "test health data", "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"}]}},
+    "name": {"type": "Property", "value": [{"family": "Careful", "given": ["Adam"],
+    "prefix": ["Dr"]}]}, "qualification": {"type": "Property", "value": [{"code":
+    {"coding": [{"code": "BS", "display": "Bachelor of Science", "system": "http://terminology.hl7.org/CodeSystem/v2-0360/2.7"}],
+    "text": "Bachelor of Science"}, "identifier": [{"system": "http://example.org/UniversityIdentifier",
+    "value": "12345"}], "issuer": {"display": "Example University"}, "period": {"start":
+    "1995"}}]}, "resourceType": {"type": "Property", "value": "Practitioner"}, "text":
+    {"type": "Property", "value": {"div": "<div xmlns=''http://www.w3.org/1999/xhtml''>\n      <p>Dr
+    Adam Careful is a Referring Practitioner for Acme Hospital from 1-Jan 2012 to
+    31-Mar\n        2012</p>\n    </div>", "status": "generated"}}, "type": "Practitioner"}'
+classes:
+  Practitioner:
+    class_uri: https://smartdatamodels.org/dataModel.Hl7/Practitioner
+    description: A person who is directly or indirectly involved in the provisioning
+      of healthcare.
+    is_a: Entity
+    slots:
+    - _active
+    - _birthDate
+    - _gender
+    - _implicitRules
+    - _language
+    - active
+    - address
+    - birthDate
+    - communication
+    - contained
+    - extension
+    - gender
+    - identifier
+    - implicitRules
+    - language
+    - meta
+    - modifierExtension
+    - name
+    - photo
+    - qualification
+    - resourceType
+    - telecom
+    - text
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+  _versionId:
+    description: Extensions for versionId
+    attributes:
+      id:
+        description: Unique id for the element within a resource (for internal references).
+          This may be any string value that does not contain spaces
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      extension:
+        description: May be used to represent additional information that is not part
+          of the basic definition of the element. To make the use of extensions safe
+          and manageable, there is a strict set of governance  applied to the definition
+          and use of extensions. Though any implementer can define an extension, there
+          is a set of requirements that SHALL be met as part of the definition of
+          the extension
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+  _lastUpdated:
+    description: Extensions for lastUpdated
+    attributes:
+      id:
+        description: Unique id for the element within a resource (for internal references).
+          This may be any string value that does not contain spaces
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      extension:
+        description: May be used to represent additional information that is not part
+          of the basic definition of the element. To make the use of extensions safe
+          and manageable, there is a strict set of governance  applied to the definition
+          and use of extensions. Though any implementer can define an extension, there
+          is a set of requirements that SHALL be met as part of the definition of
+          the extension
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+  _source:
+    description: Extensions for source
+    attributes:
+      id:
+        description: Unique id for the element within a resource (for internal references).
+          This may be any string value that does not contain spaces
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      extension:
+        description: May be used to represent additional information that is not part
+          of the basic definition of the element. To make the use of extensions safe
+          and manageable, there is a strict set of governance  applied to the definition
+          and use of extensions. Though any implementer can define an extension, there
+          is a set of requirements that SHALL be met as part of the definition of
+          the extension
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+  Meta:
+    description: Property. The metadata about the resource. This is content that is
+      maintained by the infrastructure. Changes to the content might not always be
+      associated with version changes to the resource
+    attributes:
+      id:
+        description: Unique id for the element within a resource (for internal references).
+          This may be any string value that does not contain spaces
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      extension:
+        description: May be used to represent additional information that is not part
+          of the basic definition of the element. To make the use of extensions safe
+          and manageable, there is a strict set of governance  applied to the definition
+          and use of extensions. Though any implementer can define an extension, there
+          is a set of requirements that SHALL be met as part of the definition of
+          the extension
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      versionId:
+        description: The version specific identifier, as it appears in the version
+          portion of the URL. This value changes when the resource is created, updated,
+          or deleted
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      _versionId:
+        description: Extensions for versionId
+        range: _versionId
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      lastUpdated:
+        description: When the resource last changed - e.g. when the version changed
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      _lastUpdated:
+        description: Extensions for lastUpdated
+        range: _lastUpdated
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      source:
+        description: A uri that identifies the source system of the resource. This
+          provides a minimal amount of [[[Provenance]]] information that can be used
+          to track or differentiate the source of information in the resource. The
+          source may identify another FHIR server, document, message, database, etc
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      _source:
+        description: Extensions for source
+        range: _source
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      profile:
+        description: A list of profiles (references to [[[StructureDefinition]]] resources)
+          that this resource claims to conform to. The URL is a reference to [[[StructureDefinition.url]]]
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      security:
+        description: Security labels applied to this resource. These tags connect
+          specific resources to the overall security policy and infrastructure
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      tag:
+        description: Tags applied to this resource. Tags are intended to be used to
+          identify and relate resources to process and workflow, and applications
+          are not required to consider the tags when interpreting the meaning of a
+          resource
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+  _implicitRules:
+    description: Property. Extensions for implicitRules
+    attributes:
+      id:
+        description: Unique id for the element within a resource (for internal references).
+          This may be any string value that does not contain spaces
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      extension:
+        description: May be used to represent additional information that is not part
+          of the basic definition of the element. To make the use of extensions safe
+          and manageable, there is a strict set of governance  applied to the definition
+          and use of extensions. Though any implementer can define an extension, there
+          is a set of requirements that SHALL be met as part of the definition of
+          the extension
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+  _language:
+    description: Property. Extensions for language
+    attributes:
+      id:
+        description: Unique id for the element within a resource (for internal references).
+          This may be any string value that does not contain spaces
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      extension:
+        description: May be used to represent additional information that is not part
+          of the basic definition of the element. To make the use of extensions safe
+          and manageable, there is a strict set of governance  applied to the definition
+          and use of extensions. Though any implementer can define an extension, there
+          is a set of requirements that SHALL be met as part of the definition of
+          the extension
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+  _status:
+    description: Extensions for status
+    attributes:
+      id:
+        description: Unique id for the element within a resource (for internal references).
+          This may be any string value that does not contain spaces
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      extension:
+        description: May be used to represent additional information that is not part
+          of the basic definition of the element. To make the use of extensions safe
+          and manageable, there is a strict set of governance  applied to the definition
+          and use of extensions. Though any implementer can define an extension, there
+          is a set of requirements that SHALL be met as part of the definition of
+          the extension
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+  Text:
+    description: Property. A human-readable narrative that contains a summary of the
+      resource and can be used to represent the content of the resource to a human.
+      The narrative need not encode all the structured data, but is required to contain
+      sufficient detail to make it clinically safe for a human to just read the narrative.
+      Resource definitions may define what content should be represented in the narrative
+      to ensure clinical safety
+    attributes:
+      id:
+        description: Unique id for the element within a resource (for internal references).
+          This may be any string value that does not contain spaces
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      extension:
+        description: May be used to represent additional information that is not part
+          of the basic definition of the element. To make the use of extensions safe
+          and manageable, there is a strict set of governance  applied to the definition
+          and use of extensions. Though any implementer can define an extension, there
+          is a set of requirements that SHALL be met as part of the definition of
+          the extension
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      status:
+        description: The status of the narrative - whether it's entirely generated
+          (from just the defined data or the extensions too), or whether a human authored
+          it and it may contain additional data
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      _status:
+        description: Extensions for status
+        range: _status
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      div:
+        description: The actual narrative content, a stripped down version of XHTML
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+  _active:
+    description: Property. Extensions for active
+    attributes:
+      id:
+        description: Unique id for the element within a resource (for internal references).
+          This may be any string value that does not contain spaces
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      extension:
+        description: May be used to represent additional information that is not part
+          of the basic definition of the element. To make the use of extensions safe
+          and manageable, there is a strict set of governance  applied to the definition
+          and use of extensions. Though any implementer can define an extension, there
+          is a set of requirements that SHALL be met as part of the definition of
+          the extension
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+  _gender:
+    description: Property. Extensions for gender
+    attributes:
+      id:
+        description: Unique id for the element within a resource (for internal references).
+          This may be any string value that does not contain spaces
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      extension:
+        description: May be used to represent additional information that is not part
+          of the basic definition of the element. To make the use of extensions safe
+          and manageable, there is a strict set of governance  applied to the definition
+          and use of extensions. Though any implementer can define an extension, there
+          is a set of requirements that SHALL be met as part of the definition of
+          the extension
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+  _birthDate:
+    description: Property. Extensions for birthDate
+    attributes:
+      id:
+        description: Unique id for the element within a resource (for internal references).
+          This may be any string value that does not contain spaces
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+      extension:
+        description: May be used to represent additional information that is not part
+          of the basic definition of the element. To make the use of extensions safe
+          and manageable, there is a strict set of governance  applied to the definition
+          and use of extensions. Though any implementer can define an extension, there
+          is a set of requirements that SHALL be met as part of the definition of
+          the extension
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+slots:
+  resourceType:
+    description: Property. This is a Practitioner resource
+    range: resourceType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/resourceType
+  meta:
+    description: Property. The metadata about the resource. This is content that is
+      maintained by the infrastructure. Changes to the content might not always be
+      associated with version changes to the resource
+    range: Meta
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/meta
+  implicitRules:
+    description: Property. A reference to a set of rules that were followed when the
+      resource was constructed, and which must be understood when processing the content.
+      Often, this is a reference to an implementation guide that defines the special
+      rules along with other profiles etc
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/implicitRules
+  _implicitRules:
+    description: Property. Extensions for implicitRules
+    range: _implicitRules
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/_implicitRules
+  language:
+    description: Property. The base language in which the resource is written
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/language
+  _language:
+    description: Property. Extensions for language
+    range: _language
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/_language
+  text:
+    description: Property. A human-readable narrative that contains a summary of the
+      resource and can be used to represent the content of the resource to a human.
+      The narrative need not encode all the structured data, but is required to contain
+      sufficient detail to make it clinically safe for a human to just read the narrative.
+      Resource definitions may define what content should be represented in the narrative
+      to ensure clinical safety
+    range: Text
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/text
+  contained:
+    description: Property. These resources do not have an independent existence apart
+      from the resource that contains them - they cannot be identified independently,
+      and nor can they have their own independent transaction scope
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/contained
+  extension:
+    description: Property. May be used to represent additional information that is
+      not part of the basic definition of the resource. To make the use of extensions
+      safe and manageable, there is a strict set of governance  applied to the definition
+      and use of extensions. Though any implementer can define an extension, there
+      is a set of requirements that SHALL be met as part of the definition of the
+      extension
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/extension
+  modifierExtension:
+    description: 'Property. May be used to represent additional information that is
+      not part of the basic definition of the resource and that modifies the understanding
+      of the element that contains it and/or the understanding of the containing elements
+      descendants. Usually modifier elements provide negation or qualification. To
+      make the use of extensions safe and manageable, there is a strict set of governance
+      applied to the definition and use of extensions. Though any implementer is allowed
+      to define an extension, there is a set of requirements that SHALL be met as
+      part of the definition of the extension. Applications processing a resource
+      are required to check for modifier extensions.
+
+
+      Modifier extensions SHALL NOT change the meaning of any elements on Resource
+      or DomainResource (including cannot change the meaning of modifierExtension
+      itself)'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/modifierExtension
+  identifier:
+    description: Property. An identifier that applies to this person in this role
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/identifier
+  active:
+    description: Property. Whether this practitioners record is in active use
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/active
+  _active:
+    description: Property. Extensions for active
+    range: _active
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/_active
+  name:
+    description: Property. The name(s) associated with the practitioner
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/name
+  telecom:
+    description: Property. A contact detail for the practitioner, e.g. a telephone
+      number or an email address
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/telecom
+  address:
+    description: "Property. Address(es) of the practitioner that are not role specific\
+      \ (typically home address). \rWork addresses are not typically entered in this\
+      \ property as they are usually role dependent"
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/address
+  gender:
+    description: Property. Administrative Gender - the gender that the person is considered
+      to have for administration and record keeping purposes
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/gender
+  _gender:
+    description: Property. Extensions for gender
+    range: _gender
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/_gender
+  birthDate:
+    description: Property. The date of birth for the practitioner
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/birthDate
+  _birthDate:
+    description: Property. Extensions for birthDate
+    range: _birthDate
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/_birthDate
+  photo:
+    description: Property. Image of the person
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/photo
+  qualification:
+    description: Property. The official certifications, training, and licenses that
+      authorize or otherwise pertain to the provision of care by the practitioner.  For
+      example, a medical license issued by a medical board authorizing the practitioner
+      to practice medicine within a certian locality
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/qualification
+  communication:
+    description: Property. A language the practitioner can use in patient communication
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Hl7@880ee42901b2176fee5aa56a5ded515403917e5e
+    slot_uri: https://smartdatamodels.org/dataModel.Hl7/communication
+enums:
+  resourceType_options:
+    name: resourceType_options
+    permissible_values:
+      Practitioner:
+        text: Practitioner

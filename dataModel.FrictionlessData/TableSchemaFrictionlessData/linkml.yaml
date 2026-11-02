@@ -1,0 +1,149 @@
+id: https://github.com/smart-data-models/dataModel.FrictionlessData/TableSchemaFrictionlessData
+name: TableSchemaFrictionlessData
+title: Smart Data Models - Table Schema
+description: A Table Schema for this resource, compliant with the Table Schema specification.
+  Converted for Smart Data Models initiative from original frictionless data
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.FrictionlessData
+  spec.source.path: TableSchemaFrictionlessData/schema.json
+  spec.source.commit: 0fb05ed83f08370f87fd736e44f2b2df41306579
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.FrictionlessData/master/context.jsonld"],
+    "fields": {"type": "Property", "value": [{"constraints": {"required": true}, "name":
+    "first_name", "type": "string"}, {"name": "age", "type": "integer"}]}, "id": "urn:ngsi-ld:TableSchemaFrictionlessData:XVFE:0034",
+    "primaryKey": {"type": "Property", "value": ["name"]}, "type": "TableSchemaFrictionlessData"}'
+classes:
+  TableSchemaFrictionlessData:
+    class_uri: https://smartdatamodels.org/dataModel.FrictionlessData/TableSchemaFrictionlessData
+    description: A Table Schema for this resource, compliant with the Table Schema
+      specification. Converted for Smart Data Models initiative from original frictionless
+      data
+    is_a: Entity
+    slots:
+    - alternateName
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - fields
+    - foreignKeys
+    - missingValues
+    - name
+    - owner
+    - primaryKey
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/seeAlso
+  fields:
+    description: Property. An array of Table Schema Field objects
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/dataModel.FrictionlessData/fields
+  primaryKey:
+    description: Property. Field name in the primaryKey 'MUST' be unique, and 'MUST'
+      match a field name in the associated table. It is acceptable to have an array
+      with a single value, indicating that the value of a single field is the primary
+      key. A primary key is a field name or an array of field names, whose values
+      'MUST' uniquely identify each row in the table
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/dataModel.FrictionlessData/primaryKey
+  foreignKeys:
+    description: 'Property. '
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/dataModel.FrictionlessData/foreignKeys
+  missingValues:
+    description: Property. Many datasets arrive with missing data values, either because
+      a value was not collected or it never existed. Missing values may be indicated
+      simply by the value being empty in other cases a special value may have been
+      used e.g. '-', 'NaN', '0', '-9999' etc.The 'missingValues' property provides
+      a way to indicate that these values should be interpreted as equivalent to null.
+      The 'missingValues' are strings rather than being the data type of the particular
+      field. This allows for comparison prior to casting and for fields to have missing
+      value which are not of their type, for example a 'number' field to have missing
+      values indicated by '-'.The default value of 'missingValue' for a non-string
+      type field is the empty string ''. For string type fields there is no default
+      for 'missingValue' (for string fields the empty string '' is a valid value and
+      need not indicate null). Values that when encountered in the source, should
+      be considered as 'null', 'not present', or 'blank' values
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/dataModel.FrictionlessData/missingValues

@@ -1,0 +1,403 @@
+id: https://github.com/smart-data-models/dataModel.Ports/BoatPlacesAvailable
+name: BoatPlacesAvailable
+title: Boat Place Available schema
+description: The purpose of the data model is to provide information on the availability
+  of mooring rings for boats in the port by category. The information received relates
+  only to pleasure boats and excludes commercial and passenger transport boats. The
+  information on the Spot categories for boats is taken from the ISO 8666 standard.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Ports
+  spec.source.path: BoatPlacesAvailable/schema.json
+  spec.source.commit: fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Ports/master/context.jsonld"],
+    "alternateName": {"type": "Property", "value": "Riviera Port - Available places"},
+    "areaServed": {"type": "Property", "value": "Riviera Port"}, "availableSpotNumber":
+    {"type": "Property", "value": 3}, "dateObserved": {"metadata": {"TimeInstant":
+    {"type": "Text", "value": "2020-03-17T08:45:00Z"}}, "type": "DateTime", "value":
+    "2020-03-17T08:45:00Z"}, "description": {"type": "Property", "value": "Availability
+    places"}, "id": "urn:ngsi-ld:BoatPlaceAvailable:BoatPlaceAvailable:MNCA-BPA-Range-FG",
+    "location": {"type": "GeoProperty", "value": {"coordinates": [123, 45], "type":
+    "Point"}}, "maxDraft": {"type": "Property", "value": 2.55}, "maxLength": {"type":
+    "Property", "value": 7.99}, "maxWidth": {"type": "Property", "value": 2.8}, "minLength":
+    {"type": "Property", "value": 7}, "name": {"type": "Property", "value": "Riviera-Port-NCE-SPAP-BPA-Range-FG"},
+    "refSeaPort": {"object": "urn:ngsi-ld:SeaPort:Riviera-Port-NCE-SP-001", "type":
+    "Relationship"}, "seeAlso": {"type": "Property", "value": "https://ccinicecotedazur/docs/tarifs-plaisance-yachting-ports-passage-2019"},
+    "spotCategoryRange": {"type": "property", "value": ["F", "G"]}, "totalCapacitySpotNumber":
+    {"type": "Property", "value": 10}, "type": "BoatPlacesAvailable"}'
+classes:
+  BoatPlacesAvailable:
+    class_uri: https://smartdatamodels.org/dataModel.Ports/BoatPlacesAvailable
+    description: The purpose of the data model is to provide information on the availability
+      of mooring rings for boats in the port by category. The information received
+      relates only to pleasure boats and excludes commercial and passenger transport
+      boats. The information on the Spot categories for boats is taken from the ISO
+      8666 standard.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - availableSpotNumber
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - dateObserved
+    - description
+    - maxDraft
+    - maxLength
+    - maxWidth
+    - minLength
+    - name
+    - owner
+    - refPointOfInterest
+    - refSeaPort
+    - seeAlso
+    - source
+    - spotCategoryRange
+    - totalCapacitySpotNumber
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/areaServed
+  dateObserved:
+    description: Property. The date and time of this observation in ISO8601 UTC format.
+      It can be represented by a specific time instant or by an ISO8601 interval.
+      Model:'https://schema.org/DateTime'
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dateObserved
+  refSeaPort:
+    description: Relationship. Model:'https://schema.org/URL'. Port that belongs to
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataModel.Ports/refSeaPort
+  refPointOfInterest:
+    description: Relationship. Model:'https://schema.org/URL'. Point of Interest that
+      the element has relation to
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataModel.Ports/refPointOfInterest
+  spotCategoryRange:
+    description: 'Property.  List from the lowest to the highest categories: A combination
+      of the items listed. Enum:''A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P,
+      Q, R, S, T1, T2, U, V, W, X, Y, Z, Z01, Z02, Z03, Z04, Z05, Z06, Z07, Z08, Z08,
+      Z09, Z10, Z11, Z12, Z13, Z14, Z15, Z16, Z17''. Model:''https://schema.org/Text'''
+    range: spotCategoryRange_options
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataModel.Ports/spotCategoryRange
+  minLength:
+    description: Property. Minimum length allowed to access the harbor. The unit code
+      (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **MTR** represents Meter. Model:'https://schema.org/length'. Units:'meters'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataModel.Ports/minLength
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  maxLength:
+    description: Property. Maximum length allowed to access the harbor. The unit code
+      (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **MTR** represents Meter. Model:'https://schema.org/length'. Units:'meters'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataModel.Ports/maxLength
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  maxWidth:
+    description: Property. Maximum width allowed to access the harbor. The unit code
+      (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)
+      . For instance, **MTR** represents Meter. Model:'https://schema.org/width'.
+      Units:'meters'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataModel.Ports/maxWidth
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  maxDraft:
+    description: Property. Maximum draft allowed to access the harbor. The unit code
+      (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)
+      . For instance, **MTR** represents Meter. Model:'https://schema.org/depth'.
+      Units:'meters'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataModel.Ports/maxDraft
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  totalCapacitySpotNumber:
+    description: Property. Total Capacity of Spot in the port for this range. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataModel.Ports/totalCapacitySpotNumber
+  availableSpotNumber:
+    description: Property. Number of places available in the port for this category.
+      Model:'https://schema.org/Number'
+    range: float
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataModel.Ports/availableSpotNumber
+enums:
+  spotCategoryRange_options:
+    name: spotCategoryRange_options
+    permissible_values:
+      A:
+        text: A
+      B:
+        text: B
+      C:
+        text: C
+      D:
+        text: D
+      E:
+        text: E
+      F:
+        text: F
+      G:
+        text: G
+      H:
+        text: H
+      I:
+        text: I
+      J:
+        text: J
+      K:
+        text: K
+      L:
+        text: L
+      M:
+        text: M
+      N:
+        text: N
+      O:
+        text: O
+      P:
+        text: P
+      Q:
+        text: Q
+      R:
+        text: R
+      S:
+        text: S
+      T1:
+        text: T1
+      T2:
+        text: T2
+      U:
+        text: U
+      V:
+        text: V
+      W:
+        text: W
+      X:
+        text: X
+      Y:
+        text: Y
+      Z:
+        text: Z
+      Z01:
+        text: Z01
+      Z02:
+        text: Z02
+      Z03:
+        text: Z03
+      Z04:
+        text: Z04
+      Z05:
+        text: Z05
+      Z06:
+        text: Z06
+      Z07:
+        text: Z07
+      Z08:
+        text: Z08
+      Z09:
+        text: Z09
+      Z10:
+        text: Z10
+      Z11:
+        text: Z11
+      Z12:
+        text: Z12
+      Z13:
+        text: Z13
+      Z14:
+        text: Z14
+      Z15:
+        text: Z15
+      Z16:
+        text: Z16
+      Z17:
+        text: Z17

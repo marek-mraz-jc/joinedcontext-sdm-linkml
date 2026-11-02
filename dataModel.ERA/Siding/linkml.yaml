@@ -1,0 +1,327 @@
+id: https://github.com/smart-data-models/dataModel.ERA/Siding
+name: Siding
+title: Siding + mapped from ERA ontology by Smart Data Models
+description: Sidings are all those tracks where running trains in service movements
+  ends and which are not used for operational routing of a train.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ERA
+  spec.source.path: Siding/schema.json
+  spec.source.commit: 4c4f8ebffc25dd413db62527072eac74559f0b70
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.ERA/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "American sure message",
+    "addressLocality": "", "addressRegion": "Energy better life herself listen minute
+    attorney. Bank you produce magazine.", "district": "Discussion early quality that
+    morning eye full. My at", "postOfficeBoxNumber": "Those public may range public.
+    Hous", "postalCode": "Everything stand agreement hope forward. End debate deep
+    act.", "streetAddress": "According laugh government goal teacher social. Only
+    speak effect policy easy learn. Material suddenly appear animal keep.", "streetNr":
+    "Discussion clear action add key reflect. Skill beautiful leg worker least "}},
+    "alternateName": {"type": "Property", "value": "Necessary billion gas Congress
+    need explain safe. Law media people a sister consider."}, "areaServed": {"type":
+    "Property", "value": "Report democratic en"}, "dataProvider": {"type": "Property",
+    "value": "Board movement understand. Each I give soon."}, "dateCreated": {"type":
+    "Property", "value": {"@type": "DateTime", "@value": "1996-09-19T23:08:47Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "1994-06-22T11:37:34Z"}}, "demonstrationINF": {"type": "Property", "value": "Pm
+    can assume agency Mr reach music computer"}, "description": {"type": "Property",
+    "value": "Hotel country risk. Method bit seat organization partner."}, "gradient":
+    {"type": "Property", "value": 733.9}, "hasElectricShoreSupply": {"type": "Property",
+    "value": true}, "hasExternalCleaning": {"type": "Property", "value": true}, "hasRefuelling":
+    {"type": "Property", "value": true}, "hasSandRestocking": {"type": "Property",
+    "value": true}, "hasToiletDischarge": {"type": "Property", "value": false}, "hasWaterRestocking":
+    {"type": "Property", "value": false}, "id": "urn:ngsi-ld:Siding:id:LIKW:54042696",
+    "location": {"type": "Property", "value": {"coordinates": [28.4755575, 91.269469],
+    "type": "Point"}}, "maxCurrentStandstillPantograph": {"type": "Property", "value":
+    818.3}, "minimumHorizontalRadius": {"type": "Property", "value": 975}, "minimumVerticalRadius":
+    {"type": "Property", "value": "Police almost show day. Number only form skin t"},
+    "minimumVerticalRadiusCrest": {"type": "Property", "value": 799}, "minimumVerticalRadiusHollow":
+    {"type": "Property", "value": 937}, "name": {"type": "Property", "value": "Great
+    discover down event record milita"}, "owner": {"type": "Property", "value": ["urn:ngsi-ld:Siding:items:RYOP:03718728",
+    "urn:ngsi-ld:Siding:items:OGDX:73134134"]}, "seeAlso": {"type": "Property", "value":
+    ["urn:ngsi-ld:Siding:items:SIJP:84831513"]}, "sidingId": {"type": "Property",
+    "value": "Air owner child site team modern behavior figure. Behavior near pick
+    which civil door."}, "source": {"type": "Property", "value": "Structure decision
+    camera reach purpose role prepare. Fish nor team avoid party memory most unit."},
+    "tenClassification": {"object": "urn:ngsi-ld:Siding:tenClassification:IURD:46677461",
+    "type": "Relationship"}, "type": "Siding", "verificationINF": {"type": "Property",
+    "value": "Establish wh"}}'
+classes:
+  Siding:
+    class_uri: https://smartdatamodels.org/dataModel.ERA/Siding
+    description: Sidings are all those tracks where running trains in service movements
+      ends and which are not used for operational routing of a train.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - demonstrationINF
+    - description
+    - gradient
+    - hasElectricShoreSupply
+    - hasExternalCleaning
+    - hasRefuelling
+    - hasSandRestocking
+    - hasToiletDischarge
+    - hasWaterRestocking
+    - maxCurrentStandstillPantograph
+    - minimumHorizontalRadius
+    - minimumVerticalRadius
+    - minimumVerticalRadiusCrest
+    - minimumVerticalRadiusHollow
+    - name
+    - owner
+    - seeAlso
+    - sidingId
+    - source
+    - tenClassification
+    - verificationINF
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/areaServed
+  demonstrationINF:
+    description: Property. EI declaration of demonstration for track/siding [INF]
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/demonstrationINF
+  gradient:
+    description: Property. Gradient for stabling tracks
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/gradient
+  hasElectricShoreSupply:
+    description: Property. Existence of electric shore supply
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/hasElectricShoreSupply
+  hasExternalCleaning:
+    description: Property. Existence of external cleaning facilities
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/hasExternalCleaning
+  hasRefuelling:
+    description: Property. Existence of refuelling
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/hasRefuelling
+  hasSandRestocking:
+    description: Property. Existence of sand restocking
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/hasSandRestocking
+  hasToiletDischarge:
+    description: Property. Existence of toilet discharge
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/hasToiletDischarge
+  hasWaterRestocking:
+    description: Property. Existence of water restocking
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/hasWaterRestocking
+  maxCurrentStandstillPantograph:
+    description: Property. Maximum current at standstill per pantograph
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/maxCurrentStandstillPantograph
+  minimumHorizontalRadius:
+    description: Property. Minimum radius of horizontal curve
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/minimumHorizontalRadius
+  minimumVerticalRadius:
+    description: Property. Minimum radius of vertical curve
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/minimumVerticalRadius
+  minimumVerticalRadiusCrest:
+    description: Property. Minimum radius of vertical curve crest
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/minimumVerticalRadiusCrest
+  minimumVerticalRadiusHollow:
+    description: Property. Minimum radius of vertical curve hollow
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/minimumVerticalRadiusHollow
+  sidingId:
+    description: Property. Identification of siding
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/sidingId
+  verificationINF:
+    description: Property. EC declaration of verification for track/siding [INF]
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/verificationINF
+  tenClassification:
+    description: Relationship. TEN classification (of track, of platform, of siding)
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/tenClassification

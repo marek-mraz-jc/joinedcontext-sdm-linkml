@@ -1,0 +1,229 @@
+id: https://github.com/smart-data-models/dataModel.GreenEnergy/GreenEnergyMeasurement
+name: GreenEnergyMeasurement
+title: GSMA / Smart Data Models - GreenEnergyMeasurement
+description: A instantaneous measure of power generation using green energy sources
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.GreenEnergy
+  spec.source.path: GreenEnergyMeasurement/schema.json
+  spec.source.commit: c6d53698a521b415318a5b67905a91c6e70c307e
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.GreenEnergy/master/context.jsonld"],
+    "biomassPowerGenerated": {"type": "Property", "value": 2.1}, "eolicPowerGenerated":
+    {"type": "Property", "value": 2.1}, "geothermalPowerGenerated": {"type": "Property",
+    "value": 2.1}, "hydroPowerGenerated": {"type": "Property", "value": 2.1}, "id":
+    "urn:ngsi-ld:GreenEnergyMeasurement:santander:GreenEnergyMeasurement-Generator:a34f24b",
+    "refGreenEnergyGenerator": {"type": "Relationship", "value": "urn:ngsi-ld:GreenEnergyGenerator:santander:GreenEnergy:greenEnergyGenerator:0001"},
+    "solarPowerGenerated": {"type": "Property", "value": 5.1}, "type": "GreenEnergyMeasurement"}'
+classes:
+  GreenEnergyMeasurement:
+    class_uri: https://smartdatamodels.org/dataModel.GreenEnergy/GreenEnergyMeasurement
+    description: A instantaneous measure of power generation using green energy sources
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - biomassPowerGenerated
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - eolicPowerGenerated
+    - geothermalPowerGenerated
+    - hydroPowerGenerated
+    - name
+    - owner
+    - refGreenEnergyGenerator
+    - seeAlso
+    - solarPowerGenerated
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/areaServed
+  solarPowerGenerated:
+    description: Property. Model:'https://schema.org/Number'. Specifies the amount
+      of power generated using solar energy. Units:'KWT'. The unit code (text) of
+      measurement given using the UN/CEFACT Common Code (max. 3 characters)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/solarPowerGenerated
+  eolicPowerGenerated:
+    description: Property. Model:'https://schema.org/Number'. Specifies the amount
+      of power generated using eolic energy. Units:'KWT'. The unit code (text) of
+      measurement given using the UN/CEFACT Common Code (max. 3 characters)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/eolicPowerGenerated
+  hydroPowerGenerated:
+    description: Property. Model:'https://schema.org/Number'. Specifies the amount
+      of power generated using hydropower energy. Units:'KWT'. The unit code (text)
+      of measurement given using the UN/CEFACT Common Code (max. 3 characters)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/hydroPowerGenerated
+  biomassPowerGenerated:
+    description: Property. Model:'https://schema.org/Number'. Specifies the amount
+      of power generated using biomass energy. Units:'KWT'. The unit code (text) of
+      measurement given using the UN/CEFACT Common Code (max. 3 characters)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/biomassPowerGenerated
+  geothermalPowerGenerated:
+    description: Property. Model:'https://schema.org/Number'. Specifies the amount
+      of power generated using geothermal energy. Units:'KWT'. The unit code (text)
+      of measurement given using the UN/CEFACT Common Code (max. 3 characters)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/geothermalPowerGenerated
+  refGreenEnergyGenerator:
+    description: Relationship. Model:'https://schema.org/URL'. A reference to the
+      entity `GreenEnergyGenerator` which it belongs the measurement
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.GreenEnergy@c6d53698a521b415318a5b67905a91c6e70c307e
+    slot_uri: https://smartdatamodels.org/dataModel.GreenEnergy/refGreenEnergyGenerator

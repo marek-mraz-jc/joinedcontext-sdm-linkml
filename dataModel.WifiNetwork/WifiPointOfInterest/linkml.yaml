@@ -1,0 +1,250 @@
+id: https://github.com/smart-data-models/dataModel.WifiNetwork/WifiPointOfInterest
+name: WifiPointOfInterest
+title: Smart Data Models - Wifi Point Of Interest
+description: This entity describes a Point of Interest that has a wireless network
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.WifiNetwork
+  spec.source.path: WifiPointOfInterest/schema.json
+  spec.source.commit: cd7ce788c6592f876b7db7ce780921ad0e363548
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"address": {"type": "Property", "value": "Avda. Plata, 26.
+    Valencia"}, "category": {"type": "Property", "value": ["70-Servicios de Emergencia"]},
+    "clientsConnected": {"type": "Property", "value": 1563}, "dataProvider": {"type":
+    "Property", "value": "B\u00fasqueda del nombre/direcci\u00f3n en google"}, "description":
+    {"type": "Property", "value": "Edificio del Parque Central de Bomberos"}, "email":
+    {"type": "Property", "value": "asistencia_tecnica_wifi@valencia.es"}, "id": "poi_226",
+    "location": {"type": "GeoProperty", "value": {"coordinates": [-0.367589, 39.454197],
+    "type": "Point"}}, "name": {"type": "Property", "value": "Parque Central de Bomberos"},
+    "service": {"type": "Property", "value": ["Bomberos"]}, "source": {"type": "Property",
+    "value": ""}, "timeInstant": {"type": "DateTime", "value": {"@type": "DateTime",
+    "@value": "2020-09-22T09:30:03.00Z"}}, "type": "WifiPointOfInterest", "wifiStatus":
+    {"type": "Property", "value": "working"}}'
+classes:
+  WifiPointOfInterest:
+    class_uri: https://smartdatamodels.org/dataModel.WifiNetwork/WifiPointOfInterest
+    description: This entity describes a Point of Interest that has a wireless network
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - category
+    - clientsConnected
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - email
+    - name
+    - owner
+    - seeAlso
+    - service
+    - source
+    - timeInstant
+    - wifiStatus
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+    slot_uri: https://smartdatamodels.org/areaServed
+  clientsConnected:
+    description: Property. Model:'https://schema.org/Number'. Number of clients or
+      users connected in this point of interest
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+    slot_uri: https://smartdatamodels.org/dataModel.WifiNetwork/clientsConnected
+  wifiStatus:
+    description: 'Property. Model:''https://schema.org/Text''. Indicates if there
+      is a wireless network available at    this location and the service that it
+      is providing. The allowed values are: ''noService'' when the point of interest
+      has no access points installed, ''working'' when the point of interest has access
+      points installed and all of them are working (up), ''totalFailure'' when the
+      point of interest has access points installed and all of them are not working
+      (down), and ''workingPartially'' when the point of interest has access points
+      installed and some of them are working (up) and some of then are not working
+      (down). Enum:''noService, totalFailure, working, workingPartially'''
+    range: wifiStatus_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+    slot_uri: https://smartdatamodels.org/dataModel.WifiNetwork/wifiStatus
+  service:
+    description: 'Property. Model:''https://schema.org/Number''. This attribute is
+      used to assign the access point to one or several municipal service departments
+      that receive the wireless service. For example: Library, Museums, Social Services,
+      Sports'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+    slot_uri: https://smartdatamodels.org/dataModel.WifiNetwork/service
+  timeInstant:
+    description: Property. Model:'https://schema.org/Datetime'. Timestamp of the payload
+      . There can be production environments where the attribute type is equal to
+      the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`.
+      This attribute is kept for backwards compatibility with old FIWARE reference
+      implementations
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+    slot_uri: https://smartdatamodels.org/timeInstant
+  category:
+    description: 'Property. Model:''https://schema.org/Number''. Category of this
+      point of interest. Allowed values: Those defined by the [Factual taxonomy](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json)
+      together with other categories that the user of the data model may implement'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+    slot_uri: https://smartdatamodels.org/dataModel.WifiNetwork/category
+  email:
+    description: Property. Email address of owner
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WifiNetwork@cd7ce788c6592f876b7db7ce780921ad0e363548
+    slot_uri: https://smartdatamodels.org/email
+enums:
+  wifiStatus_options:
+    name: wifiStatus_options
+    permissible_values:
+      noService:
+        text: noService
+      totalFailure:
+        text: totalFailure
+      working:
+        text: working
+      workingPartially:
+        text: workingPartially

@@ -1,0 +1,262 @@
+id: https://github.com/smart-data-models/dataModel.Agrifood/AgriGreenhouse
+name: AgriGreenhouse
+title: Smart Data Models - Agri Greenhouse
+description: This entity contains a harmonised description of the conditions recorded
+  within a generic greenhouse, a type of AgriParcel.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Agrifood
+  spec.source.path: AgriGreenhouse/schema.json
+  spec.source.commit: e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"],
+    "belongsTo": {"object": "urn:ngsi-ld:AgriFarm:f67adcbc-4479-22bc-9de1-cb228de7a765",
+    "type": "Relationship"}, "co2": {"observedAt": "2016-08-22T19:20Z", "type": "Property",
+    "unitCode": "M1", "value": 28}, "dailyLight": {"observedAt": "2016-08-22T19:20Z",
+    "type": "Property", "unitCode": "N78", "value": 24}, "drainFlow": {"observedAt":
+    "2016-08-22T19:20Z", "type": "Property", "unitCode": "G51", "value": {"maxValue":
+    50, "minValue": 25, "unitText": "Litre per second", "value": 33}}, "hasAgriParcelChildren":
+    {"object": ["urn:ngsi-ld:AgriParcel:8c3a525d-b42e-4048-bcdd-a119d8ddb0a5", "urn:ngsi-ld:AgriParcel:178d74c1-e6fe-4042-b955-2c164fc90b83"],
+    "type": "Relationship"}, "hasAgriParcelParent": {"object": "urn:ngsi-ld:AgriParcel:c8b475e5-84a8-4346-ad79-cde1d2a4028b",
+    "type": "Relationship"}, "hasDevice": {"object": ["urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",
+    "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b", "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",
+    "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"], "type": "Relationship"},
+    "hasWaterQualityObserved": {"object": ["urn:ngsi-ld:WaterQualityObserved:49f86e0b-bb90-4751-a1c3-d5a891920807",
+    "urn:ngsi-ld:WaterQualityObserved:853bf420-43fc-11e8-942f-6b7615517118"], "type":
+    "Relationship"}, "hasWeatherObserved": {"object": "urn:ngsi-ld:WeatherObserved:c720cec5-ac6f-40b7-8e89-becb75702d0d",
+    "type": "Relationship"}, "id": "urn:ngsi-ld:AgriGreenhouse:df72dc57-1eb9-42a3-88a9-8647ecc954b4",
+    "leafTemperature": {"observedAt": "2016-08-22T19:20Z", "type": "Property", "unitCode":
+    "CEL", "value": 22}, "ownedBy": {"object": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",
+    "type": "Relationship"}, "relatedSource": {"type": "Property", "value": [{"application":
+    "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a", "applicationEntityId":
+    "app:greenhouse1"}]}, "relativeHumidity": {"observedAt": "2016-08-22T19:20Z",
+    "type": "Property", "unitCode": "C62", "value": 0.4}, "seeAlso": {"type": "Property",
+    "value": ["https://example.org/concept/agrigreenhouse", "https://datamodel.org/example/agrigreenhouse"]},
+    "type": "AgriGreenhouse"}'
+classes:
+  AgriGreenhouse:
+    class_uri: https://smartdatamodels.org/dataModel.Agrifood/AgriGreenhouse
+    description: This entity contains a harmonised description of the conditions recorded
+      within a generic greenhouse, a type of AgriParcel.
+    is_a: Entity
+    slots:
+    - alternateName
+    - belongsTo
+    - co2
+    - dailyLight
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - drainFlow
+    - hasAgriParcelChildren
+    - hasAgriParcelParent
+    - hasDevice
+    - hasWaterQualityObserved
+    - hasWeatherObserved
+    - leafTemperature
+    - name
+    - ownedBy
+    - owner
+    - relativeHumidity
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  DrainFlow:
+    description: Property. Model:'http://schema.org/Number'. Units:'L/s'. The observed
+      drain flow rate in litres per second
+    attributes:
+      value:
+        description: Property. Value of the drain flow
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      maxValue:
+        description: Property. Maximum value of the drain flow
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      minValue:
+        description: Property. Minimum value of the drain flow
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      unitText:
+        description: Property. Description of the units of the drainflow
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/seeAlso
+  ownedBy:
+    description: Relationship. Owner (Person or Organization) of the AgriGreenhouse
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/ownedBy
+  belongsTo:
+    description: Relationship. Entity the Greenhouse belongs to
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/belongsTo
+  hasAgriParcelParent:
+    description: Relationship. Reference to the AgriParcel entity to which this entity
+      relates
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/hasAgriParcelParent
+  hasAgriParcelChildren:
+    description: Relationship. Related sub AgriParcel records to which this entity
+      relates
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/hasAgriParcelChildren
+  hasWeatherObserved:
+    description: Relationship. Reference to the weather observation record current
+      for this entity
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/hasWeatherObserved
+  hasWaterQualityObserved:
+    description: Relationship. Reference to one or more water quality observation
+      records current for this entity
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/hasWaterQualityObserved
+  relativeHumidity:
+    description: Property. Model:'http://schema.org/Number'. Units:'Degrees centigrade'.
+      The inside relative humidity expressed as a number between 0 and 1 representing
+      the range 0% to 100 (%).<br/><br/>0 <= relativeHumidity <= 1
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/relativeHumidity
+  leafTemperature:
+    description: Property. Model:'http://schema.org/Number'. The average leaf temperature
+      nominally in degrees centigrade
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/leafTemperature
+  co2:
+    description: Property. Model:'http://schema.org/Number'. Units:'mg/L'. The measured
+      interior C02 concentration nominally in mg/L
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/co2
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  dailyLight:
+    description: Property. Model:'http://schema.org/Number'. Units:'kw/m2'. Daily
+      Accumulated light measured in kW per square metre
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/dailyLight
+  drainFlow:
+    description: Property. Model:'http://schema.org/Number'. Units:'L/s'. The observed
+      drain flow rate in litres per second
+    range: DrainFlow
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/drainFlow
+  hasDevice:
+    description: Relationship. Model:'http://schema.org/URL'. Reference to the IoT
+      devices associated with this greenhouse i.e. sensors, controls
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/hasDevice

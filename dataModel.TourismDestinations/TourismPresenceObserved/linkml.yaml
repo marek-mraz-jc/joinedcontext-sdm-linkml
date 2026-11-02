@@ -1,0 +1,262 @@
+id: https://github.com/smart-data-models/dataModel.TourismDestinations/TourismPresenceObserved
+name: TourismPresenceObserved
+title: Tourism Presence Observed
+description: Hourly observation of visitor presence at a specific location (municipality),
+  segmented by nationality. Each entity represents one hour of observation.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.TourismDestinations
+  spec.source.path: TourismPresenceObserved/schema.json
+  spec.source.commit: 6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://smart-data-models.github.io/dataModel.Transportation/context.jsonld"],
+    "aggregationType": {"type": "Property", "value": "hourly_sum"}, "dataProvider":
+    {"type": "Property", "value": "INE"}, "dateObserved": {"type": "Property", "value":
+    "2024-12-31T10:30:00Z"}, "hour": {"type": "Property", "value": 10}, "id": "urn:ngsi-ld:TourismPresenceObserved:PT:OUTROS-GDPR:IN:20241231T10",
+    "location": {"type": "GeoProperty", "value": {"coordinates": [0, 0], "type": "Point"}},
+    "locationCode": {"type": "Property", "value": "Outros - GDPR"}, "locationName":
+    {"type": "Property", "value": "Outros - GDPR"}, "nationality": {"type": "Property",
+    "value": "IN"}, "nationalityName": {"type": "Property", "value": "India"}, "type":
+    "TourismPresenceObserved", "visitorCount": {"type": "Property", "value": 54}}'
+classes:
+  TourismPresenceObserved:
+    class_uri: https://smartdatamodels.org/dataModel.TourismDestinations/TourismPresenceObserved
+    description: Hourly observation of visitor presence at a specific location (municipality),
+      segmented by nationality. Each entity represents one hour of observation.
+    is_a: Entity
+    slots:
+    - address
+    - aggregationType
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - dateObserved
+    - description
+    - district
+    - hour
+    - locationCode
+    - locationName
+    - name
+    - nationality
+    - nationalityName
+    - owner
+    - seeAlso
+    - source
+    - visitorCount
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. Original source of the data as a URL. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. Provider of the harmonised data entity. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where the service or data applies.
+      Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/areaServed
+  aggregationType:
+    description: Property. Type of aggregation used for this hourly observation. Model:'https://schema.org/Text'
+    range: aggregationType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/aggregationType
+  dateObserved:
+    description: Property. Date and time of this hourly observation in ISO8601 UTC
+      format. It should represent the middle of the hour (e.g. 10:30 for 10:00–10:59).
+      Model:'https://schema.org/DateTime'
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dateObserved
+  hour:
+    description: Property. Hour of the day (0–23) for this observation. Model:'https://schema.org/Number'
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/hour
+  locationCode:
+    description: Property. Official code of the location/municipality (e.g. DICOFRE
+      code in Portugal). Model:'https://schema.org/Text'
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/locationCode
+  locationName:
+    description: Property. Name of the location/municipality. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/locationName
+  district:
+    description: Property. Administrative district of the location. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/district
+  nationality:
+    description: Property. Nationality of visitors expressed as ISO 3166-1 alpha-2
+      country code (e.g. ES, FR, PT). Model:'https://schema.org/Text'
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/nationality
+  nationalityName:
+    description: Property. Full name of the nationality country (optional, for human
+      readability). Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/nationalityName
+  visitorCount:
+    description: Property. Number of visitors observed during this specific hour.
+      Units:'persons'. Model:'https://schema.org/Number'
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/visitorCount
+enums:
+  aggregationType_options:
+    name: aggregationType_options
+    permissible_values:
+      hourly_sum:
+        text: hourly_sum
+      hourly_average:
+        text: hourly_average
+      hourly_snapshot:
+        text: hourly_snapshot
+      hourly_estimate:
+        text: hourly_estimate

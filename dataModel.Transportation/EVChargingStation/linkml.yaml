@@ -1,0 +1,682 @@
+id: https://github.com/smart-data-models/dataModel.Transportation/EVChargingStation
+name: EVChargingStation
+title: Smart Data Models - Transportation / EV Charging Station
+description: EV Charging Station
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Transportation
+  spec.source.path: EVChargingStation/schema.json
+  spec.source.commit: 48e0e7ebaaee430f04a47efb27fc38825f79b725
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smart-data-models.github.io/dataModel.Transportation/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Espa\u00f1a", "addressLocality":
+    "Valladolid", "streetAddress": "Paseo de Zorrilla, 191"}}, "allowedVehicleType":
+    {"type": "Property", "value": ["car"]}, "amountCollected": {"type": "Property",
+    "value": 0.08}, "capacity": {"type": "Property", "value": 2}, "chargeType": {"type":
+    "Property", "value": ["free"]}, "chargingUnitId": {"type": "Property", "value":
+    "PZEV01-DeltaBharatAC001-SCTLGandhiPark001"}, "contactPoint": {"type": "Property",
+    "value": {"email": "vehiculoelectrico@ava.es"}}, "endDateTime": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2022-06-28T20:28:41+05:30"}}, "id":
+    "urn:ngsi-ld:EVChargingStation:ValladolI+D_Covaresa", "location": {"type": "GeoProperty",
+    "value": {"coordinates": [-4.747901, 41.618265], "type": "Point"}}, "name": {"type":
+    "Property", "value": "Agencia de Innovaci\u00f3n"}, "observationDateTime": {"type":
+    "Property", "value": {"@type": "DateTime", "@value": "2022-06-28T20:27:29+05:30"}},
+    "operator": {"type": "Property", "value": "Iberdrola"}, "powerConsumption": {"type":
+    "Property", "value": 10.0}, "socketType": {"type": "Property", "value": ["Wall_Euro"]},
+    "source": {"type": "Property", "value": "https://openchargemap.org/"}, "startDateTime":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2022-06-28T20:27:27+05:30"}},
+    "stationName": {"type": "Property", "value": "SmartCityTvmGandhiParkOne"}, "taxAmountCollected":
+    {"type": "Property", "value": 0.0}, "transactionId": {"type": "Property", "value":
+    "84068784"}, "transactionType": {"type": "Property", "value": "RFID"}, "type":
+    "EVChargingStation", "vehicleType": {"type": "Property", "value": "e-motorcycle"}}'
+classes:
+  EVChargingStation:
+    class_uri: https://smartdatamodels.org/dataModel.Transportation/EVChargingStation
+    description: EV Charging Station
+    is_a: Entity
+    slots:
+    - acceptedPaymentMethod
+    - address
+    - allowedVehicleType
+    - alternateName
+    - amountCollected
+    - amperage
+    - areaServed
+    - availableCapacity
+    - capacity
+    - chargeType
+    - chargingUnitId
+    - contactPoint
+    - dataDescriptor
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - endDateTime
+    - name
+    - network
+    - observationDateTime
+    - openingHours
+    - operator
+    - owner
+    - powerConsumption
+    - seeAlso
+    - socketNumber
+    - socketType
+    - source
+    - startDateTime
+    - stationName
+    - status
+    - taxAmountCollected
+    - transactionId
+    - transactionType
+    - vehicleType
+    - voltage
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  ContactPoint:
+    description: Property. Model:'https://schema.org/ContactPoint'. The details to
+      contact with the item
+    attributes:
+      contactType:
+        description: Property. Contact type of this item
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      email:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      telephone:
+        description: Property. Telephone of this contact
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      name:
+        description: Property. The name of this item
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      url:
+        description: Property. URL which provides a description or further information
+          about this item
+        range: uriorcurie
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      areaServed:
+        description: Property. The geographic area where a service or offered item
+          is provided. Supersedes serviceArea
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      availableLanguage:
+        description: Property. Model:'http://schema.org/availableLanguage'. A language
+          someone may use with or at the item, service or place. Please use one of
+          the language codes from the IETF BCP 47 standard. It is implemented the
+          Text option but it could be also Language
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      contactOption:
+        description: Property. Model:'http://schema.org/contactOption'. An option
+          available on this contact point (e.g. a toll-free number or support for
+          hearing-impaired callers)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      faxNumber:
+        description: Property. Model:'https://schema.org/Text'. The fax number of
+          the item
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      productSupported:
+        description: Property. Model:'https://schema.org/Text'. The product or service
+          this support contact point is related to (such as product support for a
+          particular product line). This can be a specific product or product line
+          (e.g. 'iPhone') or a general category of products or services (e.g. 'smartphones')
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      availabilityRestriction:
+        description: Relationship. Model:'https://schema.org/hoursAvailable'. This
+          property links a contact point to information about when the contact point
+          is not available. The details are provided using the Opening Hours Specification
+          class
+        annotations:
+          ngsi_ld_kind: Relationship
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/areaServed
+  capacity:
+    description: 'Property. The total number of vehicles which can be charged at the
+      same time. The total number of sockets can be higher. Model:''http://schema.org/Number''. '
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/capacity
+  socketNumber:
+    description: Property. The total number of sockets offered by this charging station.
+      Model:'http://schema.org/Number'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/socketNumber
+  availableCapacity:
+    description: Property. The number of vehicles which currently can be charged.
+      Model:'http://schema.org/Number'. It must lower or equal than `capacity`
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/availableCapacity
+  allowedVehicleType:
+    description: 'Property. Vehicle type(s) which can be charged. Model:''http://schema.org/Text''.
+      Enum:''bicycle, bus, car, caravan, motorcycle, motorscooter, truck'' '
+    range: allowedVehicleType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/allowedVehicleType
+  socketType:
+    description: Property. The type of sockets offered by this station. Model:'http://schema.org/Text'.
+      Enum:'Caravan_Mains_Socket, CHAdeMO, CCS/SAE, Dual_CHAdeMO, Dual_J-1772, Dual_Mennekes,
+      J-1772, Mennekes, Other, Tesla, Type2, Type3, Wall_Euro'
+    range: socketType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/socketType
+  openingHours:
+    description: 'Property. Opening hours of the charging station. Model:''http://schema.org/openingHours''. '
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/openingHours
+  status:
+    description: Property. Model:'http://schema.org/Text'. Status of the charging
+      station. Enum:'almostEmpty, almostFull, empty, full, outOfService, withIncidence,
+      working'. Or any other application-specific
+    range: status_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://uri.etsi.org/ngsi-ld/status
+  network:
+    description: 'Property. The name of the Network, with that the operator cooperates.
+      Model:''https://schema.org/Text''. '
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/network
+  operator:
+    description: 'Property. Charging station''s operator. Model:''https://schema.org/Text''. '
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/operator
+  contactPoint:
+    description: Property. Model:'https://schema.org/ContactPoint'. The details to
+      contact with the item
+    range: ContactPoint
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/contactPoint
+  amperage:
+    description: Property. The total amperage offered by the charging station.. Model:'http://schema.org/Number'.
+      Units:'Ampers (A)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/amperage
+  voltage:
+    description: Property. The total voltage offered by the charging station. Model:'http://schema.org/Number'.
+      Units:'Volts (V)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/voltage
+  chargeType:
+    description: Property. Type(s) of charge when using this station. Model:'https://schema.org/Text'.
+      Enum:'annualPayment, flat, free, monthlyPayment, other'
+    range: chargeType_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/chargeType
+  acceptedPaymentMethod:
+    description: Property. Type(s) of charge when using this station. Model:'https://schema.org/Text'.
+      Enum:'ByBankTransferInAdvance, ByInvoice, Cash, CheckInAdvance, COD, DirectDebit,
+      GoogleCheckout, PayPal, PaySwarm'
+    range: acceptedPaymentMethod_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/acceptedPaymentMethod
+  dataDescriptor:
+    description: Relationship. URI pointing to the data-descriptor entity
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/dataDescriptor
+  powerConsumption:
+    description: Property. Power consumed by the entity corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/powerConsumption
+  chargingUnitId:
+    description: Property. The Id of the charging point in the EV charging station
+      corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/chargingUnitId
+  transactionId:
+    description: Property. Unique transaction Id of the entity corresponding to this
+      observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/transactionId
+  transactionType:
+    description: Property. Type of the transaction based on the mode of payment (For
+      eg. mobile/UPI, card, etc) or mode of service (For eg. Issue, ReIssue, Entry,
+      Exit etc.) corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/transactionType
+  stationName:
+    description: Property. The name station corresponding to this observation. It
+      can be the name of bike docking station, charging station, etc
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/stationName
+  amountCollected:
+    description: Property. Amount collected towards the service corresponding to this
+      observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/amountCollected
+  taxAmountCollected:
+    description: Property. The amount of tax levied on the products, things and services
+      which includes sales tax, value-added tax, service tax, Good and Service tax,
+      customs duty, etc
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/taxAmountCollected
+  endDateTime:
+    description: Property. Reported end time corresponding to this observation
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/endDateTime
+  startDateTime:
+    description: Property. Reported start time corresponding to this observation
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/startDateTime
+  vehicleType:
+    description: Property. Type of vehicle from the point of view of its structural
+      characteristics. This is different than the vehicle category . Model:'https://schema.org/Text'.
+      Enum:'agriculturalVehicle, ambulance, anyVehicle, articulatedVehicle, autorickshaw,
+      bicycle, binTrolley, BRT bus, BRT minibus, bus, car, caravan, carOrLightVehicle,
+      carWithCaravan, carWithTrailer, cleaningTrolley, compactor, constructionOrMaintenanceVehicle,
+      dumper, e-moped, e-scooter, e-motorcycle,fire tender, fourWheelDrive, highSidedVehicle,
+      hopper, lorry, minibus, moped, motorcycle, motorcycleWithSideCar, motorscooter,
+      police van, sweepingMachine, tanker, tempo, threeWheeledVehicle, tipper, trailer,
+      tram, twoWheeledVehicle, trolley, van, vehicleWithoutCatalyticConverter, vehicleWithCaravan,
+      vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates,
+      other'. The following values defined by _VehicleTypeEnum_ and _VehicleTypeEnum2_,
+      [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/_static/umlmodel/v2.3/index.htm)
+    range: vehicleType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/vehicleType
+  observationDateTime:
+    description: Property. Last reported time of observation
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/observationDateTime
+enums:
+  allowedVehicleType_options:
+    name: allowedVehicleType_options
+    permissible_values:
+      bicycle:
+        text: bicycle
+      bus:
+        text: bus
+      car:
+        text: car
+      caravan:
+        text: caravan
+      motorcycle:
+        text: motorcycle
+      motorscooter:
+        text: motorscooter
+      truck:
+        text: truck
+  socketType_options:
+    name: socketType_options
+    permissible_values:
+      Caravan_Mains_Socket:
+        text: Caravan_Mains_Socket
+      CHAdeMO:
+        text: CHAdeMO
+      CCS/SAE:
+        text: CCS/SAE
+      Dual_CHAdeMO:
+        text: Dual_CHAdeMO
+      Dual_J-1772:
+        text: Dual_J-1772
+      Dual_Mennekes:
+        text: Dual_Mennekes
+      J-1772:
+        text: J-1772
+      Mennekes:
+        text: Mennekes
+      Other:
+        text: Other
+      Tesla:
+        text: Tesla
+      Type2:
+        text: Type2
+      Type3:
+        text: Type3
+      Wall_Euro:
+        text: Wall_Euro
+  status_options:
+    name: status_options
+    permissible_values:
+      almostEmpty:
+        text: almostEmpty
+      almostFull:
+        text: almostFull
+      empty:
+        text: empty
+      full:
+        text: full
+      outOfService:
+        text: outOfService
+      withIncidence:
+        text: withIncidence
+      working:
+        text: working
+  chargeType_options:
+    name: chargeType_options
+    permissible_values:
+      annualPayment:
+        text: annualPayment
+      flat:
+        text: flat
+      free:
+        text: free
+      monthlyPayment:
+        text: monthlyPayment
+      other:
+        text: other
+  acceptedPaymentMethod_options:
+    name: acceptedPaymentMethod_options
+    permissible_values:
+      ByBankTransferInAdvance:
+        text: ByBankTransferInAdvance
+      ByInvoice:
+        text: ByInvoice
+      Cash:
+        text: Cash
+      CheckInAdvance:
+        text: CheckInAdvance
+      COD:
+        text: COD
+      DirectDebit:
+        text: DirectDebit
+      GoogleCheckout:
+        text: GoogleCheckout
+      PayPal:
+        text: PayPal
+      PaySwarm:
+        text: PaySwarm
+  vehicleType_options:
+    name: vehicleType_options
+    permissible_values:
+      agriculturalVehicle:
+        text: agriculturalVehicle
+      ambulance:
+        text: ambulance
+      articulatedVehicle:
+        text: articulatedVehicle
+      autorickshaw:
+        text: autorickshaw
+      bicycle:
+        text: bicycle
+      binTrolley:
+        text: binTrolley
+      BRT bus:
+        text: BRT bus
+      BRT minibus:
+        text: BRT minibus
+      bus:
+        text: bus
+      car:
+        text: car
+      caravan:
+        text: caravan
+      carOrLightVehicle:
+        text: carOrLightVehicle
+      carWithCaravan:
+        text: carWithCaravan
+      carWithTrailer:
+        text: carWithTrailer
+      cleaningTrolley:
+        text: cleaningTrolley
+      compactor:
+        text: compactor
+      constructionOrMaintenanceVehicle:
+        text: constructionOrMaintenanceVehicle
+      dumper:
+        text: dumper
+      e-moped:
+        text: e-moped
+      e-scooter:
+        text: e-scooter
+      e-motorcycle:
+        text: e-motorcycle
+      fire tender:
+        text: fire tender
+      fourWheelDrive:
+        text: fourWheelDrive
+      highSidedVehicle:
+        text: highSidedVehicle
+      hopper:
+        text: hopper
+      lorry:
+        text: lorry
+      minibus:
+        text: minibus
+      moped:
+        text: moped
+      motorcycle:
+        text: motorcycle
+      motorcycleWithSideCar:
+        text: motorcycleWithSideCar
+      motorscooter:
+        text: motorscooter
+      police van:
+        text: police van
+      sweepingMachine:
+        text: sweepingMachine
+      tanker:
+        text: tanker
+      tempo:
+        text: tempo
+      threeWheeledVehicle:
+        text: threeWheeledVehicle
+      tipper:
+        text: tipper
+      trailer:
+        text: trailer
+      tram:
+        text: tram
+      twoWheeledVehicle:
+        text: twoWheeledVehicle
+      trolley:
+        text: trolley
+      van:
+        text: van

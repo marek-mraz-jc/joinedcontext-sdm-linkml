@@ -1,0 +1,900 @@
+id: https://github.com/smart-data-models/dataModel.WaterQuality/WaterQualityObserved
+name: WaterQualityObserved
+title: Water quality observed schema
+description: Water Quality data model is intended to represent water quality parameters
+  at a certain water mass (river,  lake, sea, etc.) section
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.WaterQuality
+  spec.source.path: WaterQualityObserved/schema.json
+  spec.source.commit: 30ebc231866fb0811836a1e7d49605b4bf0a425a
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.WaterQuality/master/context.jsonld"],
+    "Al": {"type": "Property", "value": 0.01}, "As": {"type": "Property", "value":
+    0.0}, "B": {"type": "Property", "value": 0.2}, "Ba": {"type": "Property", "value":
+    0.0}, "Cd": {"type": "Property", "value": 0.001}, "Cr": {"type": "Property", "value":
+    0.0}, "Cr-III": {"type": "Property", "value": 0.0}, "Cr-VI": {"type": "Property",
+    "value": 0.0}, "Cu": {"type": "Property", "value": 0.0}, "Fe": {"type": "Property",
+    "value": 7.4}, "Hg": {"type": "Property", "value": 0.0}, "N-TOT": {"type": "Property",
+    "value": 6.0}, "NO2": {"type": "Property", "value": 0.09}, "NO3": {"type": "Property",
+    "value": 0.01}, "Ni": {"type": "Property", "value": 0.0}, "P-PO4": {"type": "Property",
+    "value": 0.5}, "P-TOT": {"type": "Property", "value": 0.6}, "Pb": {"type": "Property",
+    "value": 0.0}, "Se": {"type": "Property", "value": 0.0}, "Sn": {"type": "Property",
+    "value": 0.0}, "THC": {"type": "Property", "value": 0.0}, "TKN": {"type": "Property",
+    "value": 1.0}, "TO": {"type": "Property", "value": 0.01}, "Zn": {"type": "Property",
+    "value": 0.0}, "alkalinity": {"type": "Property", "value": 0.1}, "anionic-surfactants":
+    {"type": "Property", "value": 0.3}, "cationic-surfactants": {"type": "Property",
+    "value": 0.2}, "componentAnalyzed": {"type": "Property", "value": "Cl"}, "componentName":
+    {"type": "Property", "value": "Chlorine"}, "concentration": {"type": "Property",
+    "value": 20}, "conductivity": {"type": "Property", "value": 0.005}, "dateObserved":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2017-01-31T06:45:00Z"}},
+    "flow": {"type": "Property", "value": 127.53}, "fluoride": {"type": "Property",
+    "value": 0.0}, "id": "urn:ngsi-ld:WaterQualityObserved:waterqualityobserved:Sevilla:D1",
+    "location": {"type": "GeoProperty", "value": {"coordinates": [-5.993307, 37.362882],
+    "type": "Point"}}, "measurand": {"type": "Property", "value": ["NO3, 0.01, M1,
+    Concentration of Nitrates"]}, "non-ionic-surfactants": {"type": "Property", "value":
+    0.1}, "pH": {"type": "Property", "value": 7.4}, "sulphate": {"type": "Property",
+    "value": 143.3}, "sulphite": {"type": "Property", "value": 0.0}, "temperature":
+    {"type": "Property", "value": 24.4}, "total-surfactants": {"type": "Property",
+    "value": 0.3}, "type": "WaterQualityObserved"}'
+classes:
+  WaterQualityObserved:
+    class_uri: https://smartdatamodels.org/dataModel.WaterQuality/WaterQualityObserved
+    description: Water Quality data model is intended to represent water quality parameters
+      at a certain water mass (river,  lake, sea, etc.) section
+    is_a: Entity
+    slots:
+    - Al
+    - As
+    - B
+    - Ba
+    - Cd
+    - Chla
+    - Cl-
+    - Cr
+    - Cr-III
+    - Cr-VI
+    - Cu
+    - Fe
+    - Hg
+    - N-TOT
+    - NH3
+    - NH4
+    - NO2
+    - NO3
+    - Ni
+    - O2
+    - P-PO4
+    - P-TOT
+    - PC
+    - PE
+    - PO4
+    - Pb
+    - Se
+    - Sn
+    - THC
+    - TKN
+    - TO
+    - Zn
+    - address
+    - alkalinity
+    - alternateName
+    - anionic-surfactants
+    - areaServed
+    - bod
+    - cationic-surfactants
+    - cod
+    - componentAnalyzed
+    - componentName
+    - concentration
+    - conductance
+    - conductivity
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - dateObserved
+    - description
+    - enterococci
+    - escherichiaColi
+    - flow
+    - fluoride
+    - measurand
+    - name
+    - non-ionic-surfactants
+    - orp
+    - owner
+    - pH
+    - refPointOfInterest
+    - salinity
+    - seeAlso
+    - source
+    - sulphate
+    - sulphite
+    - tds
+    - temperature
+    - total-surfactants
+    - tss
+    - turbidity
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/areaServed
+  dateObserved:
+    description: Property. Model:'https://schema.org/DateTime'. The date and time
+      of this observation in ISO8601 UTCformat. It can be represented by an specific
+      time instant or by an ISO8601 interval
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dateObserved
+  measurand:
+    description: Property. An array of strings containing details (see format below)
+      about extra measurands provided by this observation
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/measurand
+  temperature:
+    description: Property. Temperature
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/temperature
+  bod:
+    description: Property. Biochemical oxygen demand (BOD) is the amount of dissolved
+      oxygen (DO) needed (i.e. demanded) by aerobic biological organisms to break
+      down organic material present in a given water sample at certain temperature
+      over a specific time period. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/bod
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  cod:
+    description: Property. Chemical oxygen demand (COD) is an indicative measure of
+      the amount of oxygen that can be consumed by reactions in a measured solution.
+      Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/cod
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  conductivity:
+    description: Property. Electrical Conductivity
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/conductivity
+  conductance:
+    description: Property. Specific Conductance
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/conductance
+  tss:
+    description: Property. Total suspended solids
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/tss
+  tds:
+    description: 'Property. Total dissolved solids. '
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/tds
+  turbidity:
+    description: Property. Amount of light scattered by particles in the water column
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/turbidity
+  salinity:
+    description: Property. Amount of salts dissolved in water
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/salinity
+  pH:
+    description: Property. Acidity or basicity of an aqueous solution
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/pH
+  orp:
+    description: Property. Oxidation-Reduction potential
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/orp
+  O2:
+    description: Property. Level of free, non-compound oxygen present
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/O2
+  Chla:
+    description: Property. Concentration of chlorophyll A
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/Chla
+  PE:
+    description: Property. Concentration of pigment phycoerythrin which can be measured
+      to estimate cyanobacteria concentrations specifically
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/PE
+  PC:
+    description: Property. Concentration of pigment phycocyanin which can be measured
+      to estimate cyanobacteria concentrations specifically
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/PC
+  NH4:
+    description: Property. Concentration of ammonium
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/NH4
+  NH3:
+    description: Property. Concentration of ammonia
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/NH3
+  Cl-:
+    description: Property. Concentration of chlorides
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/Cl-
+  NO3:
+    description: Property. Concentration of nitrates
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/NO3
+  PO4:
+    description: Property. Concentration of phosphates
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/PO4
+  escherichiaColi:
+    description: Property. Concentration of Escherichia coli. Units:'Total number
+      of bacteria/100mL'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/escherichiaColi
+  enterococci:
+    description: Property. Concentration of Enterococci. Units:'Total number of bacteria/100mL'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/enterococci
+  refPointOfInterest:
+    description: Relationship. A reference to a point of interest associated to this
+      observation
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/refPointOfInterest
+  flow:
+    description: 'Property. Units:''cubic meters/hour''. Water Flow observed. '
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/flow
+  alkalinity:
+    description: Property. The alkalinity of water is its acid-neutralizing capacity
+      comprised of the total of all titratable bases. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/alkalinity
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  TKN:
+    description: Property. Total Kjeldahl Nitrogen. A measure that determines both
+      the organic and the inorganic forms of nitrogen. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/TKN
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  NO2:
+    description: Property. Nitrite nitrogen. Concentration of a sample in nitrite
+      nitrogen. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/NO2
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  N-TOT:
+    description: Property. Total Nitrogen. Total Nitrogen (TN) is the sum of nitrate-nitrogen
+      (NO3-N), nitrite-nitrogen (NO2-N), ammonia-nitrogen (NH3-N) and organically
+      bonded nitrogen. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/N-TOT
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  P-TOT:
+    description: Property. Total Phosphorus. Total phosphorus is a measure of all
+      forms of phosphorus in the water, including dissolved and particulate, organic
+      and inorganic. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/P-TOT
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  P-PO4:
+    description: Property. Phosphate-phosphorus. Concentration of phosphorus as phosphate.
+      Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/P-PO4
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  Al:
+    description: Property. Aluminium. Concentration of aluminium. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/Al
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  As:
+    description: Property. Arsenic. Concentration of arsenic. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/As
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  B:
+    description: Property. Boron. Concentration of boron. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/B
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  Ba:
+    description: Property. Barium. Concentration of barium. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/Ba
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  Cd:
+    description: Property. Cadmium. Concentration of cadmium. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/Cd
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  Cr:
+    description: Property. Chromium. Concentration of chromium. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/Cr
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  Cr-III:
+    description: Property. Chromium III. Concentration of chromium at the oxidation
+      state +3. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/Cr-III
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  Cr-VI:
+    description: Property. Chromium VI. Concentration of chromium at the oxidation
+      state +6. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/Cr-VI
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  Cu:
+    description: Property. Copper. Concentration of copper. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/Cu
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  Fe:
+    description: Property. Iron. Concentration of iron. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/Fe
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  fluoride:
+    description: Property. Concentration of fluoride. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/fluoride
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  Hg:
+    description: Property. Mercury. Concentration of mercury. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/Hg
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  THC:
+    description: Property. Total hydrocarbon. Concentration of total hydrocarbon.
+      Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/THC
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  Ni:
+    description: Property. Nickel. Concentration of Nickel. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/Ni
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  TO:
+    description: Property. Total oil content. Concentration of oil. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/TO
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  Pb:
+    description: Property. Lead. Concentration of lead. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/Pb
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  Se:
+    description: Property. Selenium. Concentration of selenium. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/Se
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  Sn:
+    description: Property. Tin. Concentration of tin. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/Sn
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  sulphate:
+    description: Property. Concentration of sulfate. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/sulphate
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  sulphite:
+    description: Property. Concentration of sulfite. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/sulphite
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  anionic-surfactants:
+    description: Property. Concentration of anionic surfactants. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/anionic-surfactants
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  cationic-surfactants:
+    description: Property. Concentrtation of cationic surfactants. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/cationic-surfactants
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  non-ionic-surfactants:
+    description: Property. Concentration of non-ionic surfactants. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/non-ionic-surfactants
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  total-surfactants:
+    description: Property. Concentration of total surfactants. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/total-surfactants
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  Zn:
+    description: Property. Zinc. Concentration of zinc. Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/Zn
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  componentAnalyzed:
+    description: Property. The component symbol analyzed in the sample
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/componentAnalyzed
+  componentName:
+    description: Property. The component full name analyzed in the sample
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/componentName
+  concentration:
+    description: Property. The concentration of the component analyzed in the sample.
+      Units:'mg/l'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/concentration
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density

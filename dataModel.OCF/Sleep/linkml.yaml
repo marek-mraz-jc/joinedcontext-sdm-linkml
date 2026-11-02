@@ -1,0 +1,370 @@
+id: https://github.com/smart-data-models/dataModel.OCF/Sleep
+name: Sleep
+title: Sleep
+description: Smart Data Models Program adaptation of the original IoTData data Models.
+  This Resource describes the Properties associated with Sleep. Sleep shows the time
+  spent in each of the sleep stages (awake, nrem1, nrem2, nrem3, nrem4, rem, light
+  sleep, deep sleep), along with a sleep score indicating the quality of sleep.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: Sleep/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Build later fear
+    wall.", "addressLocality": "Toward as work better enough. Not wife yes pretty
+    quickly. Stage field nor. House dream field", "addressRegion": "Build expect doctor
+    official. Detail into should treatment part. Capital resource another two.", "district":
+    "Force before sing leader some traditional scientist. Tv particularly such painting
+    open her fig", "postOfficeBoxNumber": "Alone another defense get. Into population
+    pretty baby.", "postalCode": "Value dream on off pretty avoid. Perhaps large collection
+    buy budget. Begin send everybody to manager.", "streetAddress": "Reach black huge
+    image care compa", "streetNr": "Impact easy rise chair guess. Pretty imagine charge
+    red garden. Growth guy pattern little environmental dream"}}, "alternateName":
+    {"type": "Property", "value": "Sport effort race seven million energy hotel. Treat
+    sign card market least court American particular. Computer put quite hospital
+    walk score."}, "areaServed": {"type": "Property", "value": "Inside matter technology
+    white shake. Light t"}, "awake": {"type": "Property", "value": 864}, "dataProvider":
+    {"type": "Property", "value": "Want person season form model thought song head.
+    Picture himself realize far your art mouth real. Low or born enter."}, "dateCreated":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2012-05-08T18:33:40Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2017-08-05T04:09:21Z"}}, "deepsleep": {"type": "Property", "value": 864}, "description":
+    {"type": "Property", "value": ""}, "id": "urn:ngsi-ld:Sleep:id:EOXI:64784328",
+    "if": {"type": "Property", "value": ["oic.if.baseline"]}, "lightsleep": {"type":
+    "Property", "value": 864}, "location": {"type": "GeoProperty", "value": {"coordinates":
+    [-43.8165545, 170.462299], "type": "Point"}}, "n": {"type": "Property", "value":
+    "Soldier player professor ever style"}, "name": {"type": "Property", "value":
+    "Know myself treat include fund blood and. Himself population pull partner walk
+    vote."}, "nrem1": {"type": "Property", "value": 864}, "nrem2": {"type": "Property",
+    "value": 864}, "nrem3": {"type": "Property", "value": 864}, "nrem4": {"type":
+    "Property", "value": 864}, "owner": {"type": "Property", "value": ["urn:ngsi-ld:Sleep:items:EVHF:32347913",
+    "urn:ngsi-ld:Sleep:items:QUUJ:68624316"]}, "precision": {"type": "Property", "value":
+    394.0}, "range_phases": {"type": "Property", "value": [864, 864]}, "range_score":
+    {"type": "Property", "value": [796.4, 476.3]}, "rem": {"type": "Property", "value":
+    864}, "rt": {"type": "Property", "value": ["oic.r.sleep"]}, "seeAlso": {"type":
+    "Property", "value": ["urn:ngsi-ld:Sleep:items:BYWE:96773582"]}, "sleepscore":
+    {"type": "Property", "value": 877.2}, "source": {"type": "Property", "value":
+    "Experience somebody democratic happen form. Born recently field. Answer activity
+    image control difficult value simple."}, "step_phases": {"type": "Property", "value":
+    864}, "step_score": {"type": "Property", "value": 276.4}, "type": "Sleep"}'
+classes:
+  Sleep:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/Sleep
+    description: Smart Data Models Program adaptation of the original IoTData data
+      Models. This Resource describes the Properties associated with Sleep. Sleep
+      shows the time spent in each of the sleep stages (awake, nrem1, nrem2, nrem3,
+      nrem4, rem, light sleep, deep sleep), along with a sleep score indicating the
+      quality of sleep.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - awake
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - deepsleep
+    - description
+    - if
+    - lightsleep
+    - n
+    - name
+    - nrem1
+    - nrem2
+    - nrem3
+    - nrem4
+    - owner
+    - precision
+    - range_phases
+    - range_score
+    - rem
+    - rt
+    - seeAlso
+    - sleepscore
+    - source
+    - step_phases
+    - step_score
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  awake:
+    description: Property. Time spent in Awake stage (in seconds)
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/awake
+  nrem1:
+    description: Property. Time spent in Non Rapid Eye Movement stage 1 (in seconds)
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/nrem1
+  nrem2:
+    description: Property. Time spent in Non Rapid Eye Movement stage 2 (in seconds)
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/nrem2
+  nrem3:
+    description: Property. Time spent in Non Rapid Eye Movement stage 3 (in seconds)
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/nrem3
+  nrem4:
+    description: Property. Time spent in Non Rapid Eye Movement stage 4 (in seconds)
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/nrem4
+  rem:
+    description: Property. Time spent in Rapid Eye Movement (in seconds)
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rem
+  lightsleep:
+    description: Property. Time spent in Light Sleep stage, consisting in NREM stages
+      1 and 2 (in seconds)
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/lightsleep
+  deepsleep:
+    description: Property. Time spent in Deep Sleep stage, consisting in NREM stages
+      3 and 4 (in seconds)
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/deepsleep
+  sleepscore:
+    description: Property. Score computed from the time spent in each sleep stage,
+      indicative of the quality of sleep
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/sleepscore
+  if:
+    description: Property. The Interface set supported by this Resource
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+  rt:
+    description: Property. Resource Type
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  range_phases:
+    description: Property. The valid range for the Property in the Resource as an
+      integer. The first value in the array is the minimum value, the second value
+      in the array is the maximum value.
+    range: integer
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/range_phases
+  step_phases:
+    description: Property. Step value across the defined range when the range is an
+      integer.  This is the increment for valid values across the range; so if range
+      is 0..10 and step is 2 then valid values are 0,2,4,6,8,10.
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/step_phases
+  range_score:
+    description: Property. The valid range for the Property in the Resource as a number.
+      The first value in the array is the minimum value, the second value in the array
+      is the maximum value.
+    range: float
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/range_score
+  step_score:
+    description: Property. Step value across the defined range an integer when the
+      range is a number.  This is the increment for valid values across the range;
+      so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/step_score
+  precision:
+    description: Property. When exposed the value in 'precision' provides a +/- tolerance
+      against the Properties in the Resource. Thus if a Property is UPDATED to a value
+      and that Property then RETRIEVED, the RETRIEVED value is valid if in the range
+      of the set value +/- precision
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/precision
+enums:
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.s:
+        text: oic.if.s
+      oic.if.baseline:
+        text: oic.if.baseline
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.sleep:
+        text: oic.r.sleep

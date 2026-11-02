@@ -1,0 +1,343 @@
+id: https://github.com/smart-data-models/dataModel.OpenChannelManagement/SluiceGate
+name: SluiceGate
+title: 'Open Channel Management - SluiceGate '
+description: This entity contains a harmonised description of a generic Sluice Gate
+  made for Raw-Water (Open Channels) System Management domain.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OpenChannelManagement
+  spec.source.path: SluiceGate/schema.json
+  spec.source.commit: 4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.OpenChannelManagement/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "", "addressLocality":
+    "", "addressRegion": "", "areaServed": "", "postOfficeBoxNumber": "", "postalCode":
+    "", "streetAddress": ""}}, "alternateName": {"type": "Property", "value": "SG01
+    - Thivae"}, "areaServed": {"type": "Property", "value": ""}, "curveDischargeCoefficient":
+    {"object": "urn:ngsi-ld:SluiceGate:curveDischargeCoefficient:ZPPL:48418583", "type":
+    "Relationship"}, "dataProvider": {"type": "Property", "value": "EYDAP"}, "dateCreated":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "1972-01-13T19:49:28Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2000-05-11T14:06:00Z"}}, "description": {"type": "Property", "value": "Sluice
+    Gate 01 - Thivae"}, "downstreamControlPoint": {"object": "urn:ngsi-ld:SluiceGate:downstreamControlPoint:GIWE:80160975",
+    "type": "Relationship"}, "downstreamEndControlPoint": {"object": "urn:ngsi-ld:SluiceGate:downstreamEndControlPoint:CBWI:21948924",
+    "type": "Relationship"}, "flowType": {"type": "Property", "value": "Submerged-Flow"},
+    "gateBottomElevation": {"type": "Property", "value": 52.3}, "gateDischargeCoefficient":
+    {"type": "Property", "value": 0.5}, "gateOpening": {"type": "Property", "value":
+    0.5}, "gateType": {"type": "Property", "value": "Sluice Gate"}, "gateWidth": {"type":
+    "Property", "value": 2.5}, "headDifference": {"type": "Property", "value": 1.5},
+    "id": "urn:ngsi-ld:SluiceGate:id:OZDE:42332657", "location": {"type": "Geoproperty",
+    "value": {"coordinates": [-7.578066, -25.535857], "type": "Point"}}, "name": {"type":
+    "Property", "value": "SG01"}, "observedBy": {"object": "urn:ngsi-ld:SluiceGate:observedBy:ZWZM:93328711",
+    "type": "Relationship"}, "orificeDischargeCoefficient": {"type": "Property", "value":
+    0.5}, "owner": {"type": "Property", "value": ["urn:ngsi-ld:SluiceGate:items:LXOX:42416570",
+    "urn:ngsi-ld:SluiceGate:items:FSOL:83758025"]}, "seeAlso": {"type": "Property",
+    "value": ["urn:ngsi-ld:SluiceGate:items:ETJS:41829811", "urn:ngsi-ld:SluiceGate:items:IKTE:29167907"]},
+    "source": {"type": "Property", "value": ""}, "tag": {"type": "Property", "value":
+    ""}, "type": "SluiceGate", "upstreamControlPoint": {"object": "urn:ngsi-ld:SluiceGate:upstreamControlPoint:MWGU:81565938",
+    "type": "Relationship"}, "upstreamEndControlPoint": {"object": "urn:ngsi-ld:SluiceGate:upstreamEndControlPoint:JXFD:60487647",
+    "type": "Relationship"}, "waterDischarge": {"type": "Property", "value": 9}}'
+classes:
+  SluiceGate:
+    class_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/SluiceGate
+    description: This entity contains a harmonised description of a generic Sluice
+      Gate made for Raw-Water (Open Channels) System Management domain.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - curveDischargeCoefficient
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - downstreamControlPoint
+    - downstreamEndControlPoint
+    - flowType
+    - gateBottomElevation
+    - gateDischargeCoefficient
+    - gateOpening
+    - gateWidth
+    - headDifference
+    - name
+    - observedBy
+    - orificeDischargeCoefficient
+    - owner
+    - seeAlso
+    - source
+    - tag
+    - upstreamControlPoint
+    - upstreamEndControlPoint
+    - waterDischarge
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+slots:
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/areaServed
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/seeAlso
+  tag:
+    description: Property. Model:'https://schema.org/Text'. An optional text string
+      used to qualify an item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/tag
+  gateWidth:
+    description: 'Property. The width of the sluice gate. Units: ''meters'''
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/gateWidth
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  gateOpening:
+    description: Property. The height of gate opening
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/gateOpening
+  gateBottomElevation:
+    description: Property. Elevation of the bottom (crest) of the gate
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/gateBottomElevation
+  gateDischargeCoefficient:
+    description: Property. Discharge coefficient of the gate that accounts for energy
+      losses as water passes under the gate
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/gateDischargeCoefficient
+  orificeDischargeCoefficient:
+    description: Property. Orifice discharge coefficient that accounts for energy
+      losses as water passes under the gate, and the downstream tailwater increases
+      so that the gate is no longer flowing freely
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/orificeDischargeCoefficient
+  waterDischarge:
+    description: Property. The discharge that passes the weir (Q)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/waterDischarge
+  headDifference:
+    description: Property. The difference between the upstream depth and the depth
+      just downstream
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/headDifference
+  flowType:
+    description: 'Property. It defines the flow conditions in the gate. It takes the
+      values: ''Overflow'' (upstream water level exceeds the weir crest level), ''Free-Flow''
+      (water level is lower than gate edge), ''Submerged Flow'' (the rate of flow
+      passing through the gate is regulated by the opening of the gate). Enum:''Overflow,
+      Free-Flow, Submerged-Flow'''
+    range: flowType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/flowType
+  upstreamEndControlPoint:
+    description: Relationship. A relationship indicating the ID of an entity of type
+      Cross Section, representing a cross section just upstream of the sluice gate
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/upstreamEndControlPoint
+  downstreamEndControlPoint:
+    description: Relationship. A relationship indicating the ID of an entity of type
+      Cross Section, representing a cross section just downstream of the sluice gate
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/downstreamEndControlPoint
+  upstreamControlPoint:
+    description: Relationship. A relationship indicating the ID of an entity of type
+      Cross Section, representing a cross section in a distance where the flow conditions
+      are permanent, upstream of the sluice gate
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/upstreamControlPoint
+  downstreamControlPoint:
+    description: Relationship. A relationship indicating the ID of an entity of type
+      Cross Section, representing a cross section in a distance where the flow conditions
+      are permanent, downstream of the sluice gate
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/downstreamControlPoint
+  observedBy:
+    description: Relationship. A relationship to the ID of the device that monitors
+      raw-water properties. Model:'https://smart-data-models.github.io/dataModel.Device/device-schema.json'
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/observedBy
+  curveDischargeCoefficient:
+    description: Relationship. The URI of an OpenChannelCurve entity that represents
+      the Discharge Coefficient (C) as a function of relative weir opening (weir opening
+      (a) over upstream depth(H)), C over a/H
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/curveDischargeCoefficient
+enums:
+  flowType_options:
+    name: flowType_options
+    permissible_values:
+      Free-Flow:
+        text: Free-Flow
+      Overflow:
+        text: Overflow
+      Submerged-Flow:
+        text: Submerged-Flow

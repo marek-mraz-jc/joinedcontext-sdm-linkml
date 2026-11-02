@@ -1,0 +1,246 @@
+id: https://github.com/smart-data-models/dataModel.OCF/AutoWhiteBalance
+name: AutoWhiteBalance
+title: Auto White Balance
+description: 'Smart Data Models Program adaptation of the original IoTData data Models.
+  This Resource describes an auto balance on/off feature. The Property ''autoWhiteBalance''
+  is a boolean. An AutoWhiteBalance value of ''true'' means that the auto white balance
+  feature is on. An AutoWhiteBalance value of ''false'' means that the auto white
+  balance feature is off. '
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: AutoWhiteBalance/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Result key e", "addressLocality":
+    "History maybe any me. City support anyone participant central wife place. Bar
+    open set until safe in outside. Design management respons", "addressRegion": "Soldier
+    east coach. Close marriage perhaps despite she pattern tough. Spring conf", "district":
+    "Significant admit TV far meeting health bit. Increase factor anyone provide probably.",
+    "postOfficeBoxNumber": "Through house read school change cell before. Data city
+    order future put bit play animal.", "postalCode": "Very Congress body. Financial
+    quite fear area run according evidence. Power sound reality law change call.",
+    "streetAddress": "Across speak research build blue method lawyer. Top require
+    too campaign travel condition. Use player sing Mrs.", "streetNr": "Own condition
+    expert time kee"}}, "alternateName": {"type": "Property", "value": "Manager wear
+    exist article kind. Hope smile recent than once property more. Cause personal
+    actually war choice unit assume."}, "areaServed": {"type": "Property", "value":
+    "Various notice tree. Real within on go doctor officer glass."}, "autoWhiteBalance":
+    {"type": "Property", "value": true}, "dataProvider": {"type": "Property", "value":
+    "Without meet majority station. Ok yourself president Republican."}, "dateCreated":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2006-08-15T17:31:25Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2009-08-14T00:51:49Z"}}, "description": {"type": "Property", "value": "Security
+    benefit rather eat member whose southern. Painting individual himself g"}, "id":
+    "urn:ngsi-ld:AutoWhiteBalance:id:IWWJ:89932325", "if": {"type": "Property", "value":
+    ["oic.if.baseline", "oic.if.a"]}, "location": {"type": "GeoProperty", "value":
+    {"coordinates": [-77.6840755, -114.923609], "type": "Point"}}, "n": {"type": "Property",
+    "value": "Face picture case entire face house describe autho"}, "name": {"type":
+    "Property", "value": "International management go get. Degree production skill
+    season attention away many."}, "owner": {"type": "Property", "value": ["urn:ngsi-ld:AutoWhiteBalance:items:BDSM:75724340",
+    "urn:ngsi-ld:AutoWhiteBalance:items:QYOC:51435150"]}, "rt": {"type": "Property",
+    "value": ["oic.r.colour.autowhitebalance"]}, "seeAlso": {"type": "Property", "value":
+    ["urn:ngsi-ld:AutoWhiteBalance:items:ZSQT:71423685"]}, "source": {"type": "Property",
+    "value": "Though realize sav"}, "type": "AutoWhiteBalance"}'
+classes:
+  AutoWhiteBalance:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/AutoWhiteBalance
+    description: 'Smart Data Models Program adaptation of the original IoTData data
+      Models. This Resource describes an auto balance on/off feature. The Property
+      ''autoWhiteBalance'' is a boolean. An AutoWhiteBalance value of ''true'' means
+      that the auto white balance feature is on. An AutoWhiteBalance value of ''false''
+      means that the auto white balance feature is off. '
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - autoWhiteBalance
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - if
+    - n
+    - name
+    - owner
+    - rt
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. The Resource Type.
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  autoWhiteBalance:
+    description: Property. The status of the Auto White balance feature.
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/autoWhiteBalance
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  if:
+    description: Property. The OCF Interface set supported by this Resource.
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.colour.autowhitebalance:
+        text: oic.r.colour.autowhitebalance
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.a:
+        text: oic.if.a
+      oic.if.baseline:
+        text: oic.if.baseline

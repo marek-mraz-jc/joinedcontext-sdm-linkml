@@ -1,0 +1,284 @@
+id: https://github.com/smart-data-models/dataModel.OCF/OpaqueData
+name: OpaqueData
+title: Smart Data models - OpaqueData schema derived from the open connectivity foundation
+  repository https://github.com/openconnectivityfoundation/IoTDataModels
+description: This Resource defines opaque data that can be transfered between endpoints
+  where the data itself is not interpretable by the OCF endpoints.The stringdata is
+  a string of ASCII characters.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: OpaqueData/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Cold long against
+    tonight word. At fear facto", "addressLocality": "Military free key realize analysis
+    but interview. Among machine enter watch during economic sell.", "addressRegion":
+    "Instead spring our east. Card physical left nation believe. Start interview year
+    bit cut.", "district": "Recently save their here official. Risk interview piece
+    memory hair. Reflect will main program reveal product wife.", "postOfficeBoxNumber":
+    "Beautiful condition pay", "postalCode": "Particularly policy quite whom rise.
+    Image in politics result despite technology financial. Charge central life experience
+    man.", "streetAddress": "All answer phone them.", "streetNr": "Also another international
+    claim fill. Garden behind article."}}, "alternateName": {"type": "Property", "value":
+    "Decision best recent what business. Goal general week member also us eight. It
+    soon accept"}, "areaServed": {"type": "Property", "value": "Increase instead work
+    class info"}, "dataProvider": {"type": "Property", "value": "Rich thousand short
+    in play others reality. Especial"}, "dateCreated": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "1973-11-29T04:07:21Z"}}, "dateModified": {"type":
+    "Property", "value": {"@type": "DateTime", "@value": "1971-10-13T05:50:39Z"}},
+    "description": {"type": "Property", "value": "Of suggest year dream. Difference
+    guy everything sign s"}, "encoding": {"type": "Property", "value": "Natural every"},
+    "hash": {"type": "Property", "value": "American whole magazine truth stop whose.
+    On traditional measure example sense peace. Would mouth relate own chair."}, "id":
+    "urn:ngsi-ld:OpaqueData:id:ZNOG:11395995", "if": {"type": "Property", "value":
+    ["oic.if.baseline", "oic.if.rw"]}, "location": {"type": "GeoProperty", "value":
+    {"coordinates": [51.774314, 105.057187], "type": "Point"}}, "name": {"type": "Property",
+    "value": "Them not painting executive cup home. Suffer management enjoy market
+    hard. Third take production involve. Mission last situatio"}, "owner": {"type":
+    "Property", "value": ["urn:ngsi-ld:OpaqueData:items:LWKP:53355978", "urn:ngsi-ld:OpaqueData:items:JKSX:17016600"]},
+    "payload": {"type": "Property", "value": "Drop produce medical defense size. Money
+    especially exist artis"}, "payloadtype": {"type": "Property", "value": "Soldier
+    light read do not "}, "rt": {"type": "Property", "value": ["oic.r.opaquedata"]},
+    "seeAlso": {"type": "Property", "value": ["urn:ngsi-ld:OpaqueData:items:DJCA:66200669"]},
+    "size": {"type": "Property", "value": 864}, "source": {"type": "Property", "value":
+    "Scientist attorney movement imagine station. Rest where industry entire even.
+    Admit whose step different provide purpose"}, "system": {"type": "Property", "value":
+    "Together range line beyond. First policy daughter need kind miss."}, "type":
+    "OpaqueData"}'
+classes:
+  OpaqueData:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/OpaqueData
+    description: This Resource defines opaque data that can be transfered between
+      endpoints where the data itself is not interpretable by the OCF endpoints.The
+      stringdata is a string of ASCII characters.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - encoding
+    - hash
+    - if
+    - name
+    - owner
+    - payload
+    - payloadtype
+    - rt
+    - seeAlso
+    - size
+    - source
+    - system
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. The Resource Type
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  payload:
+    description: Property. This Property contains the opaque data
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/payload
+  encoding:
+    description: Property. This Property describes the encoding of the payload, e.g.
+      binary as base64, json, xml, utf-8
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/encoding
+  payloadtype:
+    description: 'Property. This Property describes the identification of the payload,
+      e.g. what the payload is representing '
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/payloadtype
+  size:
+    description: Property. The size in bytes of the decoded binary object
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/size
+  hash:
+    description: Property. The hash code of the blob. If present, it is used to check
+      the decoded content of the object data point for integrity. The algorithm used
+      for generating the hash value is SHA-2 [15]. The data point contains the hash
+      as a hex encoded value
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/hash
+  system:
+    description: Property. The eco system that is using the payload
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/system
+  if:
+    description: Property. The OCF Interface set supported by this Resource
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.opaquedata:
+        text: oic.r.opaquedata
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.baseline:
+        text: oic.if.baseline
+      oic.if.rw:
+        text: oic.if.rw

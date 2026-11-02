@@ -1,0 +1,330 @@
+id: https://github.com/smart-data-models/dataModel.S4BLDG/Valve
+name: Valve
+title: Smart data models - Valve schema
+description: A valve is used in a building services piping distribution system to
+  control or modulate the flow of the fluid.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.S4BLDG
+  spec.source.path: Valve/schema.json
+  spec.source.commit: 06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.S4BLDG/master/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"], "alternateName":
+    {"type": "Property", "value": "Valve type 2"}, "closeOffRating": {"observedAt":
+    "2023-01-25T21:38:33Z", "type": "Property", "unitCode": "N/m2", "value": 0.4968075534065832},
+    "dataProvider": {"type": "Property", "value": "IFC file"}, "dateCreated": {"type":
+    "Property", "value": "2023-01-25T16:14:40Z"}, "dateModified": {"type": "Property",
+    "value": "2023-01-26T03:09:51Z"}, "description": {"type": "Property", "value":
+    "Valve of limited Valve types"}, "flowCoefficient": {"observedAt": "2023-01-26T07:44:38Z",
+    "type": "Property", "unitCode": "NA", "value": 0.3336750880832986}, "hasManufacturer":
+    {"type": "Property", "value": "Valve Company Inc."}, "hasModel": {"type": "Property",
+    "value": "Valve 0.1.2"}, "id": "urn:ngsi-ld:Valve:ca643e8d-ccbe-4bc2-a132-c5a51578501a",
+    "isContainedInBuildingSpace": {"object": "urn:ngsi-ld:BuildingSpace:ef5535ea-a226-4e13-ad18-534fe0998b5e",
+    "type": "Relationship"}, "isContainedInPhysicalObject": {"object": "urn:ngsi-ld:PhysicalObject:269255de-ebf6-4014-b255-7769687247ae",
+    "type": "Relationship"}, "isSubSystemOf": [{"object": "urn:ngsi-ld:System:3199df5c-0c82-41fa-8c1c-450850408792",
+    "type": "Relationship"}, {"object": "urn:ngsi-ld:System:756104c3-38c5-400b-9598-4a604d9415e1",
+    "type": "Relationship"}, {"object": "urn:ngsi-ld:System:e8b9c356-91e3-4ff9-a98c-5bcae397ed67",
+    "type": "Relationship"}], "name": {"type": "Property", "value": "Valve"}, "size":
+    {"observedAt": "2023-01-26T10:49:30Z", "type": "Property", "unitCode": "mm", "value":
+    0.686759934652535}, "source": {"type": "Property", "value": "Import"}, "testPressure":
+    {"observedAt": "2023-01-26T10:54:40Z", "type": "Property", "unitCode": "N/m2",
+    "value": 0.2729778598678245}, "type": "Valve", "valveMechanism": {"type": "Property",
+    "value": "SSL"}, "valveOperation": {"type": "Property", "value": "navigate"},
+    "valvePattern": {"type": "Property", "value": "Central"}, "workingPressure": {"observedAt":
+    "2023-01-26T10:53:59Z", "type": "Property", "unitCode": "N/m2", "value": 0.9890036767805558}}'
+classes:
+  Valve:
+    class_uri: https://smartdatamodels.org/dataModel.S4BLDG/Valve
+    description: A valve is used in a building services piping distribution system
+      to control or modulate the flow of the fluid.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - closeOffRating
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - flowCoefficient
+    - hasManufacturer
+    - hasModel
+    - isContainedInBuildingSpace
+    - isContainedInPhysicalObject
+    - isSubSystemOf
+    - name
+    - owner
+    - seeAlso
+    - size
+    - source
+    - testPressure
+    - valveMechanism
+    - valveOperation
+    - valvePattern
+    - workingPressure
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/areaServed
+  closeOffRating:
+    description: Property. Close off rating. Usually measured in Pascals (Pa, N/m2)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/closeOffRating
+  flowCoefficient:
+    description: Property. Flow coefficient (the quantity of fluid that passes through
+      a fully open valve at unit pressure drop), typically expressed as the Kv or
+      Cv value for the valve
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/flowCoefficient
+  size:
+    description: Property. The size of the connection to the valve (or to each connection
+      for faucets, mixing valves, etc.). Usually measured in millimeters (mm)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/size
+  testPressure:
+    description: Property. The maximum pressure to which the valve has been subjected
+      under test. Usually measured in Pascals (Pa, N/m2)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/testPressure
+  valveMechanism:
+    description: 'Property. The mechanism by which the valve function is achieved
+      where: BALL: Valve that has a ported ball that can be turned relative to the
+      body seat ports. BUTTERFLY: Valve in which a streamlined disc pivots about a
+      diametric axis. CONFIGUREDGATE: Screwdown valve in which the closing gate is
+      shaped in a configured manner to have a more precise control of pressure and
+      flow change across the valve. GLAND: Valve with a tapered seating, in which
+      a rotatable plug is retained by means of a gland and gland packing. GLOBE: Screwdown
+      valve that has a spherical body. LUBRICATEDPLUG: Plug valve in which a lubricant
+      is injected under pressure between the plug face and the body. NEEDLE: Valve
+      for regulating the flow in or from a pipe, in which a slender cone moves along
+      the axis of flow to close against a fixed conical seat. PARALLELSLIDE: Screwdown
+      valve that has a machined plate that slides in formed grooves to form a seal.
+      PLUG: Valve that has a ported plug that can be turned relative to the body seat
+      ports. WEDGEGATE: Screwdown valve that has a wedge shaped plate fitting into
+      tapered guides to form a seal'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/valveMechanism
+  valveOperation:
+    description: 'Property. The method of valve operation where: DROPWEIGHT: A valve
+      that is closed by the action of a weighted lever being released, the weight
+      normally being prevented from dropping by being held by a wire, the closure
+      normally being made by the action of heat on a fusible link in the wire FLOAT:
+      A valve that is opened and closed by the action of a float that rises and falls
+      with water level. The float may be a ball attached to a lever or other mechanism
+      HYDRAULIC: A valve that is opened and closed by hydraulic actuation LEVER: A
+      valve that is opened and closed by the action of a lever rotating the gate within
+      the valve. LOCKSHIELD: A valve that requires the use of a special lockshield
+      key for opening and closing, the operating mechanism being protected by a shroud
+      during normal operation. MOTORIZED: A valve that is opened and closed by the
+      action of an electric motor on an actuator PNEUMATIC: A valve that is opened
+      and closed by pneumatic actuation SOLENOID: A valve that is normally held open
+      by a magnetic field in a coil acting on the gate but that is closed immediately
+      if the electrical current generating the magnetic field is removed. SPRING:
+      A valve that is normally held in position by the pressure of a spring on a plate
+      but that may be caused to open if the pressure of the fluid is sufficient to
+      overcome the spring pressure. THERMOSTATIC: A valve in which the ports are opened
+      or closed to maintain a required predetermined temperature. WHEEL: A valve that
+      is opened and closed by the action of a wheel moving the gate within the valve'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/valveOperation
+  valvePattern:
+    description: 'Property. The configuration of the ports of a valve according to
+      either the linear route taken by a fluid flowing through the valve or by the
+      number of ports where: SINGLEPORT: Valve that has a single entry port from the
+      system that it serves, the exit port being to the surrounding environment. ANGLED_2_PORT:
+      Valve in which the direction of flow is changed through 90 degrees. STRAIGHT_2_PORT:
+      Valve in which the flow is straight through. STRAIGHT_3_PORT: Valve with three
+      separate ports. CROSSOVER_4_PORT: Valve with 4 separate ports'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/valvePattern
+  workingPressure:
+    description: Property. The normally expected maximum working pressure of the valve.
+      Usually measured in Pascals (Pa, N/m2)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/workingPressure
+  isContainedInBuildingSpace:
+    description: Relationship. An entity used to define the physical spaces of the
+      building. A building space contains devices or building objects. (BuildingSpace)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isContainedInBuildingSpace
+  isContainedInPhysicalObject:
+    description: Relationship. Any Object that has a proper space region.  (Definition
+      extracted from DUL ontology) (PhysicalObject)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isContainedInPhysicalObject
+  isSubSystemOf:
+    description: Relationship. A reference to a system(s) that this Physical Object
+      is part of
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isSubSystemOf
+  hasManufacturer:
+    description: Property. A relationship identifying the manufacturer of an entity
+      (e.g., device). The value is expected to be a string or a string with language
+      tag
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/hasManufacturer
+  hasModel:
+    description: Property. A relationship identifying the model of an entity (e.g.,
+      device). The value is expected to be a string or a string with language tag
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/hasModel

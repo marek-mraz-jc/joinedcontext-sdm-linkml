@@ -1,0 +1,752 @@
+id: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/SimulationScenario
+name: SimulationScenario
+title: WaterNetwork - SimulationScenario
+description: This entity contains a harmonised description of a generic simulation
+  scenario made for the Water Network Management domain. This entity is primarily
+  associated with the water network management vertical and related IoT applications.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET
+  spec.source.path: SimulationScenario/schema.json
+  spec.source.commit: 890ba2a90ddd72a8ff61bb829a071db9687cadd2
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"],
+    "accuracy": {"type": "Property", "unitCode": "C62", "value": 0.001}, "bulkOrder":
+    {"type": "Property", "unitCode": "C62", "value": 1}, "checkFrequency": {"type":
+    "Property", "unitCode": "C62", "value": 2}, "chemicalName": {"type": "Property",
+    "value": "Chlorine"}, "chemicalUnits": {"type": "Property", "value": "mg/l"},
+    "concentrationLimit": {"type": "Property", "unitCode": "C62", "value": 0}, "createdBy":
+    {"object": "urn:ngsi-ld:User:u1", "type": "Relationship"}, "dampLimit": {"type":
+    "Property", "unitCode": "C62", "value": 0}, "demandCharge": {"type": "Property",
+    "value": 2}, "demandModel": {"type": "Property", "value": "PDA"}, "description":
+    {"type": "Property", "value": "Free Text"}, "diffusivity": {"type": "Property",
+    "unitCode": "C62", "value": 1}, "duration": {"type": "Property", "unitCode": "SEC",
+    "value": 86400}, "emitterExponent": {"type": "Property", "unitCode": "C62", "value":
+    0.5}, "flowChange": {"type": "Property", "unitCode": "MQS", "value": 0.01}, "flowUnits":
+    {"type": "Property", "value": "LPS"}, "hasInputNetwork": {"object": "urn:ngsi-ld:WaterNetwork:01",
+    "type": "Relationship"}, "hasSimulationResult": {"object": "urn:ngsi-ld:SimulationResult:01",
+    "type": "Relationship"}, "headError": {"type": "Property", "unitCode": "MTR",
+    "value": 0}, "headlossFormula": {"type": "Property", "value": "H-W"}, "hydraulicTimeStep":
+    {"type": "Property", "unitCode": "SEC", "value": 3600}, "id": "urn:ngsi-ld:SimulationScenario:01",
+    "inputParameters": [{"datasetId": "urn:ngsi-ld:Dataset:ValveSetting", "setting":
+    {"targetURI": {"type": "Property", "value": "urn:ngsi-ld:Valve:V1"}, "type": "Property",
+    "value": 50}, "type": "Property", "value": "Property 1"}, {"datasetId": "urn:ngsi-ld:Dataset:TankInitialQuality",
+    "initialQuality": {"targetURI": {"object": "urn:ngsi-ld:Tank:T1", "type": "Relationship"},
+    "type": "Property", "value": 2}, "type": "Property", "value": "Property 2"}, {"datasetId":
+    "urn:ngsi-ld:Dataset:PumpCurve", "efficCurve": {"object": "urn:ngsi-ld:Curve:C1",
+    "targetURI": {"object": "urn:ngsi-ld:Pump:P1", "type": "Relationship"}, "type":
+    "Relationship"}, "type": "Property", "value": "Property 1"}, {"datasetId": "urn:ngsi-ld:Dataset:Demand1",
+    "demandCategory": {"baseDemand": {"type": "Property", "value": 1.1}, "demandPattern":
+    {"object": "urn:ngsi-ld:Pattern:Agriculture", "type": "Relationship"}, "targetURI":
+    {"object": "urn:ngsi-ld:Junction:J1", "type": "Relationship"}, "type": "Property",
+    "value": "agriculture demand"}, "type": "Property", "value": "demand Category
+    1"}, {"datasetId": "urn:ngsi-ld:Dataset:Demand2", "demandCategory": {"baseDemand":
+    {"type": "Property", "value": 1.7}, "demandPattern": {"object": "urn:ngsi-ld:Pattern:Residential",
+    "type": "Relationship"}, "targetURI": {"object": "urn:ngsi-ld:Junction:J1", "type":
+    "Relationship"}, "type": "Property", "value": "residential demand"}, "type": "Property",
+    "value": "demand Category 2"}], "maxCheck": {"type": "Property", "unitCode": "C62",
+    "value": 10}, "minimumPressure": {"type": "Property", "unitCode": "MTR", "value":
+    0}, "operationalControl": [{"controlType": {"type": "Property", "value": "HILEVEL"},
+    "controlledLink": {"datasetId": "urn:ngsi-ld:Dataset:Control01:Node01", "object":
+    "urn:ngsi-ld:Tank:T1", "type": "Relationship"}, "datasetId": "urn:ngsi-ld:Dataset:HiLevel",
+    "monitoredNode": {"datasetId": "urn:ngsi-ld:Dataset:Control01:Link01", "object":
+    "urn:ngsi-ld:Pump:P1", "type": "Relationship"}, "setting": {"type": "Property",
+    "value": 0}, "triggerLevel": {"type": "Property", "value": 30}, "type": "Property",
+    "value": "Operational Control 1"}, {"controlType": {"type": "Property", "value":
+    "LOWLEVEL"}, "controlledLink": {"object": "urn:ngsi-ld:Pump:P1", "type": "Relationship"},
+    "datasetId": "urn:ngsi-ld:Dataset:LowLevel", "monitoredNode": {"object": "urn:ngsi-ld:Tank:T1",
+    "type": "Relationship"}, "setting": {"type": "Property", "value": 1}, "triggerLevel":
+    {"type": "Property", "value": 10}, "type": "Property", "value": "Operational Control
+    2"}], "pressureExponent": {"type": "Property", "unitCode": "C62", "value": 0.5},
+    "qualityTimeStep": {"type": "Property", "unitCode": "SEC", "value": 60}, "qualityType":
+    {"type": "Property", "value": "CHEM"}, "reportStart": {"type": "Property", "unitCode":
+    "SEC", "value": 0}, "reportStep": {"type": "Property", "unitCode": "SEC", "value":
+    3600}, "requiredPressure": {"type": "Property", "unitCode": "MTR", "value": 20},
+    "ruleTimeStep": {"type": "Property", "unitCode": "SEC", "value": 900}, "specificGravity":
+    {"type": "Property", "unitCode": "C62", "value": 1}, "startClockTime": {"type":
+    "Property", "unitCode": "SEC", "value": 0}, "statistic": {"type": "Property",
+    "value": "NONE"}, "tankOrder": {"type": "Property", "unitCode": "C62", "value":
+    1}, "tolerance": {"type": "Property", "unitCode": "C62", "value": 0.01}, "trials":
+    {"type": "Property", "unitCode": "C62", "value": 40}, "type": "SimulationScenario",
+    "unbalanced": {"type": "Property", "value": "CONTINUE_N"}, "unbalancedN": {"type":
+    "Property", "unitCode": "C62", "value": 20}, "viscosity": {"type": "Property",
+    "unitCode": "C62", "value": 1}, "wallOrder": {"type": "Property", "unitCode":
+    "C62", "value": 1}}'
+classes:
+  SimulationScenario:
+    class_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/SimulationScenario
+    description: This entity contains a harmonised description of a generic simulation
+      scenario made for the Water Network Management domain. This entity is primarily
+      associated with the water network management vertical and related IoT applications.
+    is_a: Entity
+    slots:
+    - accuracy
+    - address
+    - alternateName
+    - areaServed
+    - bulkOrder
+    - checkFrequency
+    - chemicalName
+    - chemicalUnits
+    - concentrationLimit
+    - createdBy
+    - dampLimit
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - demandCharge
+    - demandModel
+    - description
+    - diffusivity
+    - duration
+    - emitterExponent
+    - flowChange
+    - flowUnits
+    - hasInputNetwork
+    - hasSimulationResult
+    - headError
+    - headlossFormula
+    - hydraulicTimeStep
+    - inputParameter
+    - maxCheck
+    - minimumPressure
+    - name
+    - operationalControl
+    - owner
+    - patternStart
+    - patternStep
+    - pressureExponent
+    - qualityTimeStep
+    - qualityType
+    - reportStart
+    - reportStep
+    - requiredPressure
+    - ruleTimeStep
+    - seeAlso
+    - source
+    - specificGravity
+    - startClockTime
+    - statistic
+    - tankOrder
+    - tolerance
+    - traceNodeID
+    - trials
+    - unbalanced
+    - unbalancedN
+    - viscosity
+    - wallOrder
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/areaServed
+  createdBy:
+    description: Relationship. The ID of who created/triggered the simulation. Reference
+      to an entity of type 'User'. Model:'https://schema.org/URL'
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/createdBy
+  hasInputNetwork:
+    description: Relationship. The ID of the network used in the simulation. Model:'https://schema.org/URL'
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/hasInputNetwork
+  hasSimulationResult:
+    description: Relationship. The ID of the related simulation result. Reference
+      to an entity of type 'SimulationResult'. Model:'https://schema.org/URL'
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/hasSimulationResult
+  qualityTimeStep:
+    description: Property. Model:'https://schema.org/Number'. The timestep used to
+      track changes in water quality in the network. Given in seconds. Units:'seconds'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/qualityTimeStep
+    unit:
+      ucum_code: s
+      exact_mappings:
+      - ucefact:SEC
+      - qudt-unit:SEC
+      has_quantity_kind: qudt-quantkind:Time
+  duration:
+    description: Property. Model:'https://schema.org/Number'. Duration of the simulation,
+      given in seconds. Units:'seconds'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/duration
+    unit:
+      ucum_code: s
+      exact_mappings:
+      - ucefact:SEC
+      - qudt-unit:SEC
+      has_quantity_kind: qudt-quantkind:Time
+  hydraulicTimeStep:
+    description: Property. Model:'https://schema.org/Number'. Determines how often
+      the hydraulic state of the network is calculated. Given in seconds. Units:'seconds'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/hydraulicTimeStep
+    unit:
+      ucum_code: s
+      exact_mappings:
+      - ucefact:SEC
+      - qudt-unit:SEC
+      has_quantity_kind: qudt-quantkind:Time
+  patternStep:
+    description: Property. Model:'https://schema.org/Number'. Pattern step of the
+      simulation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/patternStep
+  patternStart:
+    description: Property. Model:'https://schema.org/DateTime'. Start time of the  the
+      simulation
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/patternStart
+  reportStep:
+    description: Property. Model:'https://schema.org/Number'. Interval at which output
+      results are reported. given in seconds. Units:'seconds'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/reportStep
+    unit:
+      ucum_code: s
+      exact_mappings:
+      - ucefact:SEC
+      - qudt-unit:SEC
+      has_quantity_kind: qudt-quantkind:Time
+  reportStart:
+    description: Property. Model:'https://schema.org/Number'. Simulation time at which
+      results start to be reported. Given in seconds from start of simulation. Units:'seconds'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/reportStart
+    unit:
+      ucum_code: s
+      exact_mappings:
+      - ucefact:SEC
+      - qudt-unit:SEC
+      has_quantity_kind: qudt-quantkind:Time
+  ruleTimeStep:
+    description: Property. Model:'https://schema.org/Number'. Time step used to check
+      for changes in system status due to rule-based controls. Given in seconds. Units:'seconds'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/ruleTimeStep
+    unit:
+      ucum_code: s
+      exact_mappings:
+      - ucefact:SEC
+      - qudt-unit:SEC
+      has_quantity_kind: qudt-quantkind:Time
+  startClockTime:
+    description: Property. Model:'https://schema.org/Number'. Time of day at which
+      the simulation begins. Given as seconds from start of day. Units:'seconds'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/startClockTime
+    unit:
+      ucum_code: s
+      exact_mappings:
+      - ucefact:SEC
+      - qudt-unit:SEC
+      has_quantity_kind: qudt-quantkind:Time
+  statistic:
+    description: Property. Model:'https://schema.org/string'. The type of statistical
+      post-processing that is done on the time series of simulation results generated.
+      Options are AVERAGED (report time-averaged results), MINIMUM (report only minimum
+      values), MAXIMUM (report only maximum values), RANGE (report difference between
+      minimum and maximum values) and NONE (report full time series). Enum:'averaged,
+      minimum, maximum, range, none'
+    range: statistic_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/statistic
+  trials:
+    description: Property. Model:'https://schema.org/Number'. The maximum number of
+      trials used to solve network hydraulics at each hydraulic time step of a simulation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/trials
+  accuracy:
+    description: Property. Model:'https://schema.org/Number'. Total normalized flow
+      change convergence criterion for determining when a hydraulic solution has been
+      reached
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/accuracy
+  tolerance:
+    description: Property. Model:'https://schema.org/Number'. Water quality tolerance
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/tolerance
+  emitterExponent:
+    description: Property. Model:'https://schema.org/Number'. Power to which pressure
+      at a junction is raised when computing from an emitter
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/emitterExponent
+  headError:
+    description: Property. Model:'https://schema.org/Number'. Maximum headloss convergence
+      criterion for determining when a hydraulic solution has been reached
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/headError
+  flowChange:
+    description: Property. Model:'https://schema.org/Number'. Maximum flow change
+      convergence criterion for determining when a hydraulic solution has been reached
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/flowChange
+  demandCharge:
+    description: Property. Model:'https://schema.org/Number'. Energy charge per maximum
+      kW usage
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/demandCharge
+  specificGravity:
+    description: Property. Model:'https://schema.org/Number'. The ratio of the density
+      of the fluid being modeled to that of water at 4 deg. C
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/specificGravity
+  requiredPressure:
+    description: Property. Model:'https://schema.org/Number'. Pressure required to
+      supply a node's full demand under a pressure driven analysis. Only used if demandModel
+      is 'PDA'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/requiredPressure
+  pressureExponent:
+    description: Property. Model:'https://schema.org/Number'. Power to which pressure
+      is raised when calculating the demand delivered under a pressure driven analysis.
+      Only used if demandModel is 'PDA'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/pressureExponent
+  viscosity:
+    description: Property. Model:'https://schema.org/Number'. The kinematic viscosity
+      of the fluid being modeled relative to that of water at 20 deg. C
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/viscosity
+  unbalanced:
+    description: Property. Model:'https://schema.org/Text'. Determines what happens
+      if a hydraulic solution cannot be reached within the allowed number of trials.
+      Allowable options are STOP (halt analysis), CONTINUE (continue analysis but
+      with a warning message) and CONTINUE_N (continue for another N trials, where
+      the value of N is given by 'unbalancedN'). Enum:'stop, continue, continue_N'
+    range: unbalanced_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/unbalanced
+  unbalancedN:
+    description: Property. Model:'https://schema.org/Number'. Number of additional
+      trials allowed if 'unbalanced' is set to continue_N. Mandatory if 'unbalanced'
+      is set to continue_N, else not required
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/unbalancedN
+  checkFrequency:
+    description: Property. Model:'https://schema.org/Number'. Frequency of hydraulic
+      status checks
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/checkFrequency
+  maxCheck:
+    description: Property. Model:'https://schema.org/Number'. Number of trials after
+      which status checks are discontinued
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/maxCheck
+  dampLimit:
+    description: Property. Model:'https://schema.org/Number'. Accuracy value at which
+      solution damping and status checks begin for PRVs and PSVs
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/dampLimit
+  diffusivity:
+    description: Property. Model:'https://schema.org/Number'. Molecular diffusivity
+      of the chemical analysed in a quality analysis, relative to diffusivity of chlorine
+      in water
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/diffusivity
+  bulkOrder:
+    description: Property. Model:'https://schema.org/Number'. Bulk water reaction
+      order for pipes
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/bulkOrder
+  wallOrder:
+    description: Property. Model:'https://schema.org/Number'. Wall reaction order
+      for pipes
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/wallOrder
+  tankOrder:
+    description: Property. Model:'https://schema.org/Number'. Bulk water reaction
+      order for tanks
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/tankOrder
+  concentrationLimit:
+    description: Property. Model:'https://schema.org/Number'. Limiting concentration
+      for growth reactions
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/concentrationLimit
+  qualityType:
+    description: Property. Model:'https://schema.org/Text'. Type of water quality
+      analysis. Enum:'chem, age, trace, none'
+    range: qualityType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/qualityType
+  chemicalName:
+    description: Property. Model:'https://schema.org/Text'. Name of the chemical modelled.
+      Only used if 'qualityType' is CHEM
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/chemicalName
+  chemicalUnits:
+    description: Property. Model:'https://schema.org/Text'. Units of the chemical
+      modelled. Only used if 'qualityType' is CHEM
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/chemicalUnits
+  traceNodeID:
+    description: Relationship. URI of node being traced in the quality analysis. Mandatory
+      if 'qualityType' is TRACE, otherwise not required. Model:'https://schema.org/URL'
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/traceNodeID
+  flowUnits:
+    description: Property. Model:'https://schema.org/Text'. Units in which flow rates
+      are expressed in the simulation. Allowable options are CFS (cubic feet per second),
+      GPM (gallons per minute), MGD (million gallons per day), IMGD (imperial MGD),
+      AFD (acre-feet per day), LPS (litres pre second), LPM (litres per minute), MLD
+      (million litres per day), CMH (cubic metres per hour) and CMD (cubic metres
+      per day). Enum:'AFD, CFS, CMD, CMH, GPM, IMGD, LPS, LPM, MLD, MGD'
+    range: flowUnits_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/flowUnits
+  headlossFormula:
+    description: Property. Model:'https://schema.org/Text'. Formula used for computing
+      head loss for flow through a pipe. The choices are the Hazen-Williams (H-W),
+      Darcy-Weisbach (D-W) or Chezy-Manning (C-M) formulas. Allowable options are
+      'H-W', 'D-W', 'C-M'. Enum:'C-M, D-W, H-W'
+    range: headlossFormula_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/headlossFormula
+  demandModel:
+    description: Property. Model:'https://schema.org/Text'. Specifies whether the
+      analysis is pressure driven (PDA) or demand driven (DDA). Enum:'DDA, PDA'
+    range: demandModel_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/demandModel
+  minimumPressure:
+    description: Property. Model:'https://schema.org/Number'. Pressure below which
+      no demand can be delivered under a pressure dirven analysis. Only used if demandModel
+      is 'PDA'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/minimumPressure
+  operationalControl:
+    description: Property. The operational control of de item
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/operationalControl
+  inputParameter:
+    description: Property. Model:'https://Text'. Description of the set of modifications
+      to be applied to the network for the simulation
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/inputParameter
+enums:
+  statistic_options:
+    name: statistic_options
+    permissible_values:
+      averaged:
+        text: averaged
+      maximum:
+        text: maximum
+      minimum:
+        text: minimum
+      none:
+        text: none
+      range:
+        text: range
+  unbalanced_options:
+    name: unbalanced_options
+    permissible_values:
+      stop:
+        text: stop
+      continue:
+        text: continue
+      continue_N:
+        text: continue_N
+  qualityType_options:
+    name: qualityType_options
+    permissible_values:
+      age:
+        text: age
+      chem:
+        text: chem
+      none:
+        text: none
+      trace:
+        text: trace
+  flowUnits_options:
+    name: flowUnits_options
+    permissible_values:
+      AFD:
+        text: AFD
+      CFS:
+        text: CFS
+      CMD:
+        text: CMD
+      CMH:
+        text: CMH
+      GPM:
+        text: GPM
+      IMGD:
+        text: IMGD
+      LPS:
+        text: LPS
+      LPM:
+        text: LPM
+      MLD:
+        text: MLD
+      MGD:
+        text: MGD
+  headlossFormula_options:
+    name: headlossFormula_options
+    permissible_values:
+      H-W:
+        text: H-W
+      D-W:
+        text: D-W
+      C-M:
+        text: C-M
+  demandModel_options:
+    name: demandModel_options
+    permissible_values:
+      DDA:
+        text: DDA
+      PDA:
+        text: PDA

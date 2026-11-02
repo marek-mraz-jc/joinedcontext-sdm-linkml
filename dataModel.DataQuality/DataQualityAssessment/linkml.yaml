@@ -1,0 +1,449 @@
+id: https://github.com/smart-data-models/dataModel.DataQuality/DataQualityAssessment
+name: DataQualityAssessment
+title: Smart Data Models - Data Quality Assessment schema
+description: This entity describes the data quality properties of a measurement, such
+  as temperature.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.DataQuality
+  spec.source.path: DataQualityAssessment/schema.json
+  spec.source.commit: 52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.DataQuality/master/context.jsonld",
+    "https://smartdatamodels.org/context.jsonld"], "accuracy": {"observedAt": "2022-09-10T10:01:20Z",
+    "type": "Property", "unitCode": "CEL", "value": 0.25}, "completeness": {"observedAt":
+    "2022-09-10T10:01:20Z", "type": "Property", "unitCode": "P1", "value": 0.5}, "dateCalculated":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2022-09-10T10:01:20Z"}},
+    "duplicate": {"type": "Property", "value": {"foundMatches": {"type": "Property",
+    "value": ["urn:ngsi-ld:DataQualityAssessment:Temperature:smartsantander:u7jcfa:f3062"]},
+    "isDuplicate": {"type": "Property", "value": true}}}, "id": "urn:ngsi-ld:DataQualityAssessment:Temperature:smartsantander:u7jcfa:f3058",
+    "outlier": {"observedAt": "2022-09-10T10:01:20Z", "type": "Property", "value":
+    {"isOutlier": {"type": "Property", "value": true}, "methodology": {"object": "urn:ngsi-ld:AI-Methodology:Outlier:Temperature:smartsantander:u7jcfa:f3058",
+    "type": "Relationship"}, "outlierScore": {"type": "Property", "value": 0.7}}},
+    "precision": {"observedAt": "2022-09-10T10:01:20Z", "type": "Property", "unitCode":
+    "CEL", "value": 1.3}, "source": {"type": "Property", "value": "https://salted-project.eu"},
+    "synthetic": {"observedAt": "2022-09-10T10:01:20Z", "type": "Property", "value":
+    {"isSynthetic": {"type": "Property", "value": false}, "methodology": {"object":
+    "urn:ngsi-ld:AI-Methodology:Synthetic:Temperature:smartsantander:u7jcfa:f3058",
+    "type": "Relationship"}}}, "timeliness": {"observedAt": "2022-09-10T10:01:20Z",
+    "type": "Property", "unitCode": "minutes", "value": 3}, "type": "DataQualityAssessment"}'
+classes:
+  DataQualityAssessment:
+    class_uri: https://smartdatamodels.org/dataModel.DataQuality/DataQualityAssessment
+    description: This entity describes the data quality properties of a measurement,
+      such as temperature.
+    is_a: Entity
+    slots:
+    - accuracy
+    - address
+    - alternateName
+    - areaServed
+    - completeness
+    - dataProvider
+    - dataQualityAssessmentDomains
+    - dataQualityAssessmentParameters
+    - dataQualityAssessmentVariableNames
+    - dateCalculated
+    - dateCreated
+    - dateModified
+    - description
+    - duplicate
+    - name
+    - outlier
+    - owner
+    - precision
+    - seeAlso
+    - source
+    - synthetic
+    - timeliness
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+  Outlier:
+    description: Property. Includes information about the outlier characteristics
+      of the measurement
+    attributes:
+      isOutlier:
+        description: Property. Determine whether the measurement has been considered
+          an outlier or not
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      outlierScore:
+        description: Property. A score indicating the degree of outlierness
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      methodology:
+        description: Relationship. Reference to the other entity including AI methodology
+          information
+        annotations:
+          ngsi_ld_kind: Relationship
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+  Duplicate:
+    description: Property. Includes information about duplicated data
+    attributes:
+      isDuplicate:
+        description: Property. Determine whether the measurement is duplicated or
+          not
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      foundMatches:
+        description: Property. If this is a duplicate, determine measurements it does
+          match with
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+  Synthetic:
+    description: Property. Includes information about the origin of the measurement
+    attributes:
+      isSynthetic:
+        description: Property. Determine whether the measurement has been created
+          synthetically or not
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      methodology:
+        description: Relationship. Reference to the other entity including AI methodology
+          information
+        annotations:
+          ngsi_ld_kind: Relationship
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+  DataQualityAssessmentDomains:
+    description: Property. Data quality assessment domains with their respective scores
+    attributes:
+      completeness:
+        description: Property. Completeness scores for variables
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      consistency:
+        description: Property. Consistency scores for variables
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      timeliness:
+        description: Property. Timeliness scores for variables
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      uniqueness:
+        description: Property. Uniqueness scores for variables
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      validity:
+        description: Property. Validity scores for variables
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+  DataQualityAssessmentParameters:
+    description: Property. Configuration parameters for data quality assessment
+    attributes:
+      id_columns:
+        description: Property. Columns used as identifiers in the dataset
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      date_column:
+        description: Property. Name of the column containing date information used
+          for timeliness assessments
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      drop_columns:
+        description: Property. Columns to be excluded from data quality assessment
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      group_id:
+        description: Property. Columns used for grouping data in quality assessments
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      lower_bd:
+        description: Property. Minimum acceptable value for numeric data
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      upper_bd:
+        description: Property. Maximum acceptable value for numeric data
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      all_positive:
+        description: Property. Whether all numeric values must be positive
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      non_zero:
+        description: Property. Whether all numeric values must be non-zero
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      str_min_len:
+        description: Property. Minimum acceptable length for string values
+        range: integer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      str_max_len:
+        description: Property. Maximum acceptable length for string values
+        range: integer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      dec_places:
+        description: Property. Maximum number of decimal places allowed for numeric
+          values
+        range: integer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      thousands_sep:
+        description: Property. Whether numeric values can include thousands separators
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      freq_unit:
+        description: Property. Unit of frequency for data timestamps
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+      freq_num:
+        description: Property. Number of frequency units to consider
+        range: integer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    slot_uri: https://smartdatamodels.org/areaServed
+  dateCalculated:
+    description: Property. Date of the calculated entity defined by the user
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    slot_uri: https://smartdatamodels.org/dataModel.DataQuality/dateCalculated
+  outlier:
+    description: Property. Includes information about the outlier characteristics
+      of the measurement
+    range: Outlier
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    slot_uri: https://smartdatamodels.org/dataModel.DataQuality/outlier
+  duplicate:
+    description: Property. Includes information about duplicated data
+    range: Duplicate
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    slot_uri: https://smartdatamodels.org/dataModel.DataQuality/duplicate
+  synthetic:
+    description: Property. Includes information about the origin of the measurement
+    range: Synthetic
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    slot_uri: https://smartdatamodels.org/dataModel.DataQuality/synthetic
+  accuracy:
+    description: Property. Accuracy measures the maximum systematic numerical error
+      produced in a sensor measurement
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    slot_uri: https://smartdatamodels.org/dataModel.DataQuality/accuracy
+  timeliness:
+    description: Property. Average timeliness of the data-stream. Units:'minutes'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    slot_uri: https://smartdatamodels.org/dataModel.DataQuality/timeliness
+  completeness:
+    description: Property. Completeness quantifies the number of missed measurements
+      or observations in a given time window. Units:'P1'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    slot_uri: https://smartdatamodels.org/dataModel.DataQuality/completeness
+  precision:
+    description: Property. Precision measures the standard deviation of a dataset.
+      That is, it measures how close the values in the dataset are to each other
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+    slot_uri: https://smartdatamodels.org/dataModel.DataQuality/precision
+  dataQualityAssessmentVariableNames:
+    description: Relationship. Array of variable names used to describe the values
+      for each dataQualityAssessmentDomain property
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+  dataQualityAssessmentDomains:
+    description: Property. Data quality assessment domains with their respective scores
+    range: DataQualityAssessmentDomains
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f
+  dataQualityAssessmentParameters:
+    description: Property. Configuration parameters for data quality assessment
+    range: DataQualityAssessmentParameters
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DataQuality@52f7b85aa41a441d44ac47e67877c8fdce31bd4f

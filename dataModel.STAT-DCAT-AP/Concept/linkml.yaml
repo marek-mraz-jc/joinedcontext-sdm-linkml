@@ -1,0 +1,300 @@
+id: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP/Concept
+name: Concept
+title: Smart Data models - SKOS Concept schema
+description: A SKOS concept can be viewed as an idea or notion; a unit of thought.
+  However, what constitutes a unit of thought is subjective, and this definition is
+  meant to be suggestive, rather than restrictive. The notion of a SKOS concept is
+  useful when describing the conceptual or intellectual structure of a knowledge organization
+  system, and when referring to specific ideas or meanings established within a KOS.
+  Note that, because SKOS is designed to be a vehicle for representing semi-formal
+  KOS, such as thesauri and classification schemes, a certain amount of flexibility
+  has been built in to the formal definition of this class.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP
+  spec.source.path: Concept/schema.json
+  spec.source.commit: afab368490bf559379e3743336e7adec0e34f739
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smart-data-models.github.io/dataModel.STAT-DCAT-AP/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"], "id": "urn:ngsi-ld:Concept:N",
+    "inScheme": {"object": "urn:ngsi-ld:ConceptSchema:ajustementsSaisonnier", "type":
+    "Relationship"}, "language": {"type": "Property", "value": ["en", "fr"]}, "notation":
+    {"type": "Property", "value": "N"}, "prefLabel": {"type": "Property", "value":
+    {"en": "Neither seasonally adjusted nor calendar adjusted data", "fr": "Non ajust\u00e9e"}},
+    "type": "Concept"}'
+classes:
+  Concept:
+    class_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/Concept
+    description: A SKOS concept can be viewed as an idea or notion; a unit of thought.
+      However, what constitutes a unit of thought is subjective, and this definition
+      is meant to be suggestive, rather than restrictive. The notion of a SKOS concept
+      is useful when describing the conceptual or intellectual structure of a knowledge
+      organization system, and when referring to specific ideas or meanings established
+      within a KOS. Note that, because SKOS is designed to be a vehicle for representing
+      semi-formal KOS, such as thesauri and classification schemes, a certain amount
+      of flexibility has been built in to the formal definition of this class.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - inScheme
+    - language
+    - name
+    - notation
+    - owner
+    - prefLabel
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+  PrefLabel:
+    description: Property. Model:'https://www.w3.org/TR/skos-reference/#prefLabel'.
+      A preferred label is a string of UNICODE characters, such as 'romantic love'
+      or 'れんあい', in a given natural language, such as English or Japanese (written
+      here in hiragana). The Simple Knowledge Organization System provides some basic
+      vocabulary for associating lexical labels with resources of any type. The preferred
+      label is useful when generating or creating human-readable representations of
+      a knowledge organization system. These labels provide the strongest clues as
+      to the meaning of a SKOS concept. Formally, a preferred label is an RDF plain
+      literal [RDF-CONCEPTS, https://www.w3.org/TR/skos-reference/#ref-RDF-CONCEPTS].
+      An RDF plain literal is composed of a lexical form, which is a string of UNICODE
+      characters, and an optional language tag, which is a string of characters conforming
+      to the syntax defined by [BCP47, https://www.w3.org/TR/skos-reference/#ref-BCP47]
+    attributes:
+      en:
+        description: Property. Label in English
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      fr:
+        description: Property. Label in French
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      it:
+        description: Property. Label in Italian
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      es:
+        description: Property. Label in Spanish
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      de:
+        description: Property. Label in German language
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      jp:
+        description: Property. Label in Japanese
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      zh:
+        description: Property. Label in Chinese
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/areaServed
+  language:
+    description: Property. Model:'https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#LinguisticSystem'.
+      This property refers to a language of the Concept
+    range: language_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/language
+  inScheme:
+    description: Relationship. Model:'https://www.w3.org/TR/skos-reference/#schemes'.
+      Link to the ConceptSchema in which it is defined this Concept
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/inScheme
+  prefLabel:
+    description: Property. Model:'https://www.w3.org/TR/skos-reference/#prefLabel'.
+      A preferred label is a string of UNICODE characters, such as 'romantic love'
+      or 'れんあい', in a given natural language, such as English or Japanese (written
+      here in hiragana). The Simple Knowledge Organization System provides some basic
+      vocabulary for associating lexical labels with resources of any type. The preferred
+      label is useful when generating or creating human-readable representations of
+      a knowledge organization system. These labels provide the strongest clues as
+      to the meaning of a SKOS concept. Formally, a preferred label is an RDF plain
+      literal [RDF-CONCEPTS, https://www.w3.org/TR/skos-reference/#ref-RDF-CONCEPTS].
+      An RDF plain literal is composed of a lexical form, which is a string of UNICODE
+      characters, and an optional language tag, which is a string of characters conforming
+      to the syntax defined by [BCP47, https://www.w3.org/TR/skos-reference/#ref-BCP47]
+    range: PrefLabel
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/prefLabel
+  notation:
+    description: Property. Model:'https://www.w3.org/TR/skos-reference/#notations'.
+      A notation is a string of characters such as 'T58.5' or '303.4833' used to uniquely
+      identify a concept within the scope of a given concept scheme. A notation is
+      different from a lexical label in that a notation is not normally recognizable
+      as a word or sequence of words in any natural language
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/notation
+enums:
+  language_options:
+    name: language_options
+    permissible_values:
+      en:
+        text: en
+      fr:
+        text: fr
+      it:
+        text: it
+      es:
+        text: es
+      de:
+        text: de
+      jp:
+        text: jp
+      zh:
+        text: zh

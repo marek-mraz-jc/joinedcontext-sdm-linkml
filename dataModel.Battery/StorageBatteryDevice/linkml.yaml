@@ -1,0 +1,1206 @@
+id: https://github.com/smart-data-models/dataModel.Battery/StorageBatteryDevice
+name: StorageBatteryDevice
+title: StorageBattery schema
+description: The storage battery device data model is intended to describe the technical
+  characteristics of the battery and the charging and discharging conditions of the
+  energy.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Battery
+  spec.source.path: StorageBatteryDevice/schema.json
+  spec.source.commit: bbb912274121dd67b2d439e5f82ad1e4dad6718f
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Battery/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "FR", "addressLocality":
+    "Nice", "streetAddress": "Airport - Terminal 1 - Ground 0 - Local  27"}}, "alternateName":
+    {"type": "Property", "value": "AirPort \u2013 global Observation"}, "application":
+    {"type": "Property", "value": ["energyStorage", "emergencyStorage"]}, "areaServed":
+    {"type": "Property", "value": "Nice Aeroport"}, "averageLife": {"type": "Property",
+    "value": 15}, "batteryType": {"type": "Property", "value": "Li-Ion"}, "brandName":
+    {"type": "Property", "value": "LG ELEC"}, "capacityCnnn": {"type": "Property",
+    "value": {"C001": [153.9, 1.6], "C005": [214.0, 1.75], "C010": [250.0, 1.8], "C020":
+    [260.0, 1.8]}}, "chargeDischargeReactivity": {"type": "Property", "value": 0.4},
+    "chargeEfficiency": {"type": "Property", "value": 98}, "chargePower": {"type":
+    "Property", "value": 123}, "chargingModeAllowed": {"type": "Property", "value":
+    ["normal"]}, "communication": {"type": "Property", "value": ["CAN 2.0 B", "RS485Inverter",
+    "RS485BMS", "dryContactTerminal", "maintenanceInterface"]}, "dateLastReported":
+    {"type": "Property", "value": {"type": "DateTime", "value": "2020-03-17T08:45:00Z"}},
+    "description": {"type": "Property", "value": "Description of the Solar Storage
+    Battery Device"}, "dimension": {"type": "Property", "value": {"depth": 20.6, "height":
+    90.7, "width": 74.4}}, "dischargeEfficiency": {"type": "Property", "value": 95},
+    "dischargePower": {"type": "Property", "value": 96.8}, "documentation": {"type":
+    "Property", "value": "https://www.myStoragebattery.fr"}, "durationPeakPower":
+    {"type": "Property", "value": 10}, "id": "urn:ngsi-ld:StorageBatteryDevice:StorageBatteryDevice:MNCA-SBD-T1-G0-027",
+    "installationCondition": {"type": "Property", "value": ["extremeClimate"]}, "installationMode":
+    {"type": "Property", "value": "ground"}, "lifeCycleNumber": {"type": "Property",
+    "value": {"max": 2400, "min": 600}}, "location": {"type": "GeoProperty", "value":
+    {"coordinates ": [43.66481, 7.196545], "type": "Point"}}, "manufacturerName":
+    {"type": "Property", "value": "OSCPOWER"}, "massEnergyDensity": {"type": "Property",
+    "value": {"max": 50, "min": 30}}, "maxOutputPower": {"type": "Property", "value":
+    12.8}, "maximumVoltageEOC": {"type": "Property", "value": 48.6}, "minimumVoltageEOD":
+    {"type": "Property", "value": 47.3}, "modelName": {"type": "Property", "value":
+    "SBRESU10H"}, "name": {"type": "Property", "value": "SBD-T1-G0-027"}, "nominalAmpere":
+    {"type": "Property", "value": 20}, "nominalCapacity": {"type": "Property", "value":
+    63}, "nominalFrequency": {"type": "Property", "value": 60}, "nominalVoltage":
+    {"type": "Property", "value": 48}, "operatingAltitude": {"type": "Property", "value":
+    {"max": 500, "min": 0}}, "operatingAmpere": {"type": "Property", "value": {"max":
+    1.5, "min": 1.0}}, "operatingFrequency": {"type": "Property", "value": {"max":
+    63, "min": 57}}, "operatingTemperature": {"type": "Property", "value": {"charge":
+    [0, 40], "discharge": [-15, 40], "storage": [-10, 50]}}, "operatingVoltage": {"type":
+    "Property", "value": {"max": 55.0, "min": 38.5}}, "overloadAccepted": {"type":
+    "Property", "value": true}, "overloadAcceptedTime": {"type": "Property", "value":
+    {"type": "DateTime", "value": "T00:00:03"}}, "owners": {"type": "Property", "value":
+    ["Airport-Division Maintenance"]}, "peakPower": {"type": "Property", "value":
+    5.0}, "possibilityOfUse": {"type": "Property", "value": "stationary"}, "protectionIK":
+    {"type": "Property", "value": 10}, "protectionIP": {"type": "Property", "value":
+    "55"}, "rechargeEnergySource": {"type": "Property", "value": "electric"}, "roundTripEfficiency":
+    {"type": "Property", "value": 96.8}, "selfDischargeRate": {"type": "Property",
+    "value": 2}, "serialNumber": {"type": "Property", "value": "BSSMA10267841259"},
+    "storableEnergy": {"type": "Property", "value": 3.025}, "temperature": {"type":
+    "Property", "value": 25}, "toolBMS": {"type": "Property", "value": true}, "type":
+    "StorageBatteryDevice", "typeEnergySource": {"type": "Property", "value": ["network",
+    "photovoltaic"]}, "typeOfUse": {"type": "Property", "value": "mixed"}, "usableEnergy":
+    {"type": "Property", "value": 3.012}, "volEnergyDensity": {"type": "Property",
+    "value": {"max": 120, "min": 75}}, "weight": {"type": "Property", "value": 175}}'
+classes:
+  StorageBatteryDevice:
+    class_uri: https://smartdatamodels.org/dataModel.Battery/StorageBatteryDevice
+    description: The storage battery device data model is intended to describe the
+      technical characteristics of the battery and the charging and discharging conditions
+      of the energy.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - application
+    - areaServed
+    - averageLife
+    - batteryAssessmentMethods
+    - batteryType
+    - brandName
+    - capacityCnnn
+    - chargeDischargeReactivity
+    - chargeEfficiency
+    - chargePower
+    - chargingModeAllowed
+    - communication
+    - dataProvider
+    - dateCreated
+    - dateLastReported
+    - dateModified
+    - description
+    - dimension
+    - dischargeEfficiency
+    - dischargePower
+    - documentation
+    - durationPeakPower
+    - installationCondition
+    - installationMode
+    - lifeCycleNumber
+    - manufacturerName
+    - massEnergyDensity
+    - maxOutputPower
+    - maximumVoltageEOC
+    - minimumVoltageEOD
+    - modelName
+    - name
+    - nominalAmpere
+    - nominalCapacity
+    - nominalFrequency
+    - nominalVoltage
+    - operatingAltitude
+    - operatingAmpere
+    - operatingFrequency
+    - operatingTemperature
+    - operatingVoltage
+    - overloadAccepted
+    - overloadAcceptedTime
+    - owner
+    - peakPower
+    - possibilityOfUse
+    - protectionIK
+    - protectionIP
+    - rechargeEnergySource
+    - refDevice
+    - refPointOfInterest
+    - roundTripEfficiency
+    - seeAlso
+    - selfDischargeRate
+    - serialNumber
+    - source
+    - storableEnergy
+    - toolBMS
+    - typeEnergySource
+    - typeOfUse
+    - usableEnergy
+    - volEnergyDensity
+    - weight
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+  Dimension:
+    description: Property. External dimension of a Panel. The format is structured
+      by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **CMT** represents Centimeter. Units:'Centimeters'
+    attributes:
+      height:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      width:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      depth:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+  OperatingTemperature:
+    description: Property. Ambient operating temperature range. This is the minimum
+      and maximum resistance to cold and heat for an [event]. The format is structured
+      by a sub-property of 3 items with the format  {`event`:[`min`,`max`]}. The unit
+      code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **CEL** represents Degree Celsius. Units:'degrees Celsius'
+    attributes:
+      storage:
+        description: Property. Model:'https://schema.org/Number'. Storage of the item
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      discharge:
+        description: 'Property. Model:''https://schema.org/Number''. Discharge of
+          the item '
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      charge:
+        description: Property. Model:'https://schema.org/Number'. Charge of the item
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+  OperatingVoltage:
+    description: Property. Model:'https://schema.org/Number'. Minimum and Maximum
+      voltage allowed. The format is structured by a sub-property of 2 items. The
+      unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **VLT** represents Volt. Units:'volt'
+    attributes:
+      min:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      max:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+  OperatingAmpere:
+    description: Property. Model:'https://schema.org/Number'.  Minimum and Maximum
+      Ampere allowed. The format is structured by a sub-property of 2 items. The unit
+      code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **AMP** represents Ampere. Units:'amperes'
+    attributes:
+      min:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      max:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+  OperatingFrequency:
+    description: Property. Model:'https://schema.org/Number'.  Minimum and Maximum
+      frequency allowed. The format is structured by a sub-property of 2 items. The
+      unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **HTZ** represents Hertz. Units:'hertz'
+    attributes:
+      min:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      max:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+  MassEnergyDensity:
+    description: Property. Model:'https://schema.org/Number'. Mass Energy density
+      *(Code D)*. Ratio between the capacity of the battery to deliver a certain power
+      for a certain time and its weight. The format is structured by a sub-property
+      of 2 items. The unit code (text) of measurement is **Wh/Kg** WattHour per Kilogram.
+      Units:'W hour / Kg'
+    attributes:
+      min:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      max:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+  VolEnergyDensity:
+    description: Property. Model:'https://schema.org/Number'. Volume Energy density
+      *(Code D)*. The format is structured by a sub-property of 2 items. The unit
+      code (text) of measurement is **Wh/L** WattHour per Liter. Units:'Wh/L'
+    attributes:
+      min:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      max:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+  OperatingAltitude:
+    description: Property. Model:'https://schema.org/Number'. Operating altitude with
+      minimum and maximum resistance to height and depth. The format is structured
+      by a sub-property of 2 items with the keys [min] =<0 and [max] >=0. The unit
+      code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **MTR** represents Meter. Units:'meters'
+    attributes:
+      min:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      max:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+  LifeCycleNumber:
+    description: Property. Model:'https://schema.org/Number'. Number of admissible
+      charge / discharge life cycles. The format is structured by a sub-property of
+      2 items
+    attributes:
+      min:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      max:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+  CapacityCnnn:
+    description: Property. Model:'https://schema.org/Number'. Remaining energy as
+      a function of the discharge time for 6 keys according the temperature of reference.
+      Each Key is a structured value with the format {`Cnnn`:[`value1`,`value2`]}
+      describing the different measurement of [CapacityCnnn]
+    attributes:
+      C001:
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      C005:
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      C010:
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      C020:
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      C050:
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+      C100:
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/areaServed
+  refDevice:
+    description: Relationship. Model:'https://schema.org/URL'. Reference to the Main
+      Entity [Device](https://github.com/smart-data-models/dataModel.Device/blob/master/Device/doc/spec.md)
+      if used as second link
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/refDevice
+  refPointOfInterest:
+    description: Property. Model:'https://schema.org/URL'. Reference to a [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)
+      linked with the observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/refPointOfInterest
+  dateLastReported:
+    description: 'Property. Model:''https://schema.org/DateTime''. A timestamp which
+      denotes the last time when the device successfully reported data. Date and time
+      in an ISO8601 UTCformat. '
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/dateLastReported
+  batteryAssessmentMethods:
+    description: 'Property. Model:''https://schema.org/Text''. Enum:''ampereHourMeter,
+      dischargeTest, electrolyteDensity, highFrequencyImpedance, lowFrequencyImpedance,
+      mathematicalModel, operatingVoltageWithClosedCircuit, quiescentVoltageWithOpenCircuit''.  '
+    range: batteryAssessmentMethods_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/batteryAssessmentMethods
+  brandName:
+    description: Property. Model:'https://schema.org/Text'. Brand Name of the item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/brandName
+  modelName:
+    description: 'Property. Model:''https://schema.org/Text''. Model Name of the item. '
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/modelName
+  manufacturerName:
+    description: Property. Model:'https://schema.org/Text'. Manufacturer Name of the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/manufacturerName
+  serialNumber:
+    description: Property. Model:'https://schema.org/Text'. Serial numbers of the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/serialNumber
+  application:
+    description: Property. Model:'https://schema.org/Text'. Enum:'electricMobility,
+      energyStorage, emergencyStorage, houseHoldStorage, industrialStorage, lighting,
+      production, robotics, other'. Target application of the Device regarding the
+      storage. A combination of the enumeration
+    range: application_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/application
+  typeOfUse:
+    description: Property. Model:'https://schema.org/Text'. Accepted use regarding
+      its positioning in an indoor / outdoor environment. Enum:' indoor, mixed, outdoor,
+      other'
+    range: typeOfUse_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/typeOfUse
+  installationMode:
+    description: Property. Model:'https://schema.org/Text'. Enum:'aerial, ground,
+      pole, roofing, underGround, wall, other'. Positioning of the device in relation
+      to a ground reference system
+    range: installationMode_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/installationMode
+  installationCondition:
+    description: Property. Model:'https://schema.org/Text'. Enum:'desert, dust, extremeClimate,
+      extremeCold, extremeHeat, extremeHumidity, marine, saline, sand, seismic, other'.
+      Condition and possibility of use in the following environments
+    range: installationCondition_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/installationCondition
+  possibilityOfUse:
+    description: 'Property. Model:''https://schema.org/Text''. Possibility of use.
+      A unique value. Enum:''mobile, mixed, stationary, other''.  '
+    range: possibilityOfUse_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/possibilityOfUse
+  batteryType:
+    description: Property. Model:'https://schema.org/Text'. Enum:'alkaline, gel, lead,
+      lead-AGM, Li-Ion, Li-Po, Li-Po4, LMP, Li-Air, Na-NiCl2(Zebra), Ni-Cd, Ni-MH,
+      Ni-Zn, other'. Type of battery used
+    range: batteryType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/batteryType
+  rechargeEnergySource:
+    description: 'Property. Model:''https://schema.org/Text''. Enum:''electric, hydraulic,
+      windTurbine, other''. Recharge Energy Source. A unique value of the list '
+    range: rechargeEnergySource_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/rechargeEnergySource
+  typeEnergySource:
+    description: Property. Model:'https://schema.org/Text'. Enum:'dam, fall, generator,
+      network, photovoltaic, river, sea, waterTurbine, wind, other'. Type of Energy
+      Source regarding `RechargeEnergySource` attribute
+    range: typeEnergySource_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/typeEnergySource
+  documentation:
+    description: Property. Model:'https://schema.org/URL'. Technical Documentation
+      (Installation / maintenance / use)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/documentation
+  dimension:
+    description: Property. External dimension of a Panel. The format is structured
+      by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **CMT** represents Centimeter. Units:'Centimeters'
+    range: Dimension
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/dimension
+  weight:
+    description: Property. Model:'https://schema.org/weight'. Weight. The unit code
+      (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **KGM** represents KiloGramme. Units:'Kilograms'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/weight
+    unit:
+      ucum_code: kg
+      exact_mappings:
+      - ucefact:KGM
+      - qudt-unit:KiloGM
+      has_quantity_kind: qudt-quantkind:CO2Equivalent
+  protectionIP:
+    description: 'Property. IP *Ingress Protection* for the Junction Box. This is
+      the level classifies and rates the degree of protection provided by mechanical
+      casings and electrical enclosures against intrusion, dust, accidental contact,
+      and water according to International Electrotechnical Commission standard (EN
+      60-529). - First digit: Solid particle protection (Single numeral: 0–6 or ''X'').
+      - Second digit: Liquid ingress protection (Single numeral: 0–9 or ''X''). -
+      Third digit: Personal Protection  against access to dangerous parts (optional
+      additional letter). - Fourth digit: Other protections (optional additional letter).
+      Model:''https://en.wikipedia.org/wiki/IP_Code'''
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/protectionIP
+  protectionIK:
+    description: Property. IK 'Mecanic Protection' level relating to numeric classification
+      for the degrees of protection provided by enclosures for electrical equipment
+      against external mechanical impacts, according to International Electro technical
+      Commission standard (EN 62-262). - IK varies from 0 (minimum resistance) to
+      10 (maximum resistance) which represents an Impact Energy (Unit Joule). Model:''https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/protectionIK
+  operatingTemperature:
+    description: Property. Ambient operating temperature range. This is the minimum
+      and maximum resistance to cold and heat for an [event]. The format is structured
+      by a sub-property of 3 items with the format  {`event`:[`min`,`max`]}. The unit
+      code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **CEL** represents Degree Celsius. Units:'degrees Celsius'
+    range: OperatingTemperature
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/operatingTemperature
+    unit:
+      ucum_code: Cel
+      exact_mappings:
+      - ucefact:CEL
+      - qudt-unit:DEG_C
+      has_quantity_kind: qudt-quantkind:Temperature
+  nominalVoltage:
+    description: Property. Model:'https://schema.org/Number'. Nominal battery voltage.
+      *(Code U)* The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **VLT** represents Volt. Units:'volts'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/nominalVoltage
+  nominalAmpere:
+    description: Property. Model:'https://schema.org/Number'. Nominal Amperage. *(Code
+      I)*. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **AMP** represents Ampere. Units:'amperes'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/nominalAmpere
+  nominalFrequency:
+    description: Property. Model:'https://schema.org/Number'. Nominal Frequency. The
+      unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **HTZ** represents Hertz. Units:'hertz'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/nominalFrequency
+  nominalCapacity:
+    description: Property. Model:'https://schema.org/Number'. Nominal Energy capacity.
+      *(Code C)* to link with the attribute [CapacityCnnn] to measure the predefined
+      levels parameters C / xx h of discharge regimes. The unit code (text) is given
+      using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **AMH** represents Ampere Hour. Units:'Ampere Hour'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/nominalCapacity
+  storableEnergy:
+    description: Property. Model:'https://schema.org/Number'. Total Storage Energy
+      = [nominalVoltage] * [nominalCapacity]. The unit code (text) is given using
+      the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **KWH** represents Kilowatt Hour. Units:'Kw Hour'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/storableEnergy
+  usableEnergy:
+    description: Property. Model:'https://schema.org/Number'. Usable Energy. The unit
+      code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **KWH** represents Kilowatt Hour. Units:'Kw Hour'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/usableEnergy
+  operatingVoltage:
+    description: Property. Model:'https://schema.org/Number'. Minimum and Maximum
+      voltage allowed. The format is structured by a sub-property of 2 items. The
+      unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **VLT** represents Volt. Units:'volt'
+    range: OperatingVoltage
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/operatingVoltage
+  operatingAmpere:
+    description: Property. Model:'https://schema.org/Number'.  Minimum and Maximum
+      Ampere allowed. The format is structured by a sub-property of 2 items. The unit
+      code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **AMP** represents Ampere. Units:'amperes'
+    range: OperatingAmpere
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/operatingAmpere
+  operatingFrequency:
+    description: Property. Model:'https://schema.org/Number'.  Minimum and Maximum
+      frequency allowed. The format is structured by a sub-property of 2 items. The
+      unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **HTZ** represents Hertz. Units:'hertz'
+    range: OperatingFrequency
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/operatingFrequency
+  massEnergyDensity:
+    description: Property. Model:'https://schema.org/Number'. Mass Energy density
+      *(Code D)*. Ratio between the capacity of the battery to deliver a certain power
+      for a certain time and its weight. The format is structured by a sub-property
+      of 2 items. The unit code (text) of measurement is **Wh/Kg** WattHour per Kilogram.
+      Units:'W hour / Kg'
+    range: MassEnergyDensity
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/massEnergyDensity
+  volEnergyDensity:
+    description: Property. Model:'https://schema.org/Number'. Volume Energy density
+      *(Code D)*. The format is structured by a sub-property of 2 items. The unit
+      code (text) of measurement is **Wh/L** WattHour per Liter. Units:'Wh/L'
+    range: VolEnergyDensity
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/volEnergyDensity
+  maxOutputPower:
+    description: Property. Model:'https://schema.org/Number'. Maximum Power. The unit
+      code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **KWT** represents Kilowatt. Units:'Kw'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/maxOutputPower
+  peakPower:
+    description: Property. Model:'https://schema.org/Number'.  Maximum intensity extractable
+      over a short period. The unit code (text) is given using the [UN/CEFACT Common
+      Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **KWT** represents Kilowatt. Units:'Kw'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/peakPower
+  durationPeakPower:
+    description: Property. Model:'https://schema.org/Number'. Reference Time recorded
+      for the attribute [peakPower]. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **SEC** represents Second. Units:'seconds'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/durationPeakPower
+    unit:
+      ucum_code: s
+      exact_mappings:
+      - ucefact:SEC
+      - qudt-unit:SEC
+      has_quantity_kind: qudt-quantkind:Time
+  communication:
+    description: Property. Model:'https://schema.org/'. List of communication protocol
+      with others device depending manufacturers. Enum:'CAN 2.0 B, dryContactTerminal,
+      maintenanceInterface, RS485, RS485BMS, RS485Inverter, other'
+    range: communication_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/communication
+  operatingAltitude:
+    description: Property. Model:'https://schema.org/Number'. Operating altitude with
+      minimum and maximum resistance to height and depth. The format is structured
+      by a sub-property of 2 items with the keys [min] =<0 and [max] >=0. The unit
+      code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **MTR** represents Meter. Units:'meters'
+    range: OperatingAltitude
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/operatingAltitude
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  averageLife:
+    description: Property. Model:'https://schema.org/Number'. average life under normal
+      battery usage conditions at reference temperatures. The unit code (text) is
+      given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **ANN** represents Year. Units:'year'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/averageLife
+  lifeCycleNumber:
+    description: Property. Model:'https://schema.org/Number'. Number of admissible
+      charge / discharge life cycles. The format is structured by a sub-property of
+      2 items
+    range: LifeCycleNumber
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/lifeCycleNumber
+  toolBMS:
+    description: Property. Model:'https://schema.org/Boolean'. Use of a Battery Management
+      System tool to protect, guarantee and optimize battery life. (`true` for yes)
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/toolBMS
+  chargingModeAllowed:
+    description: Property. Model:'https://schema.org/Text'.  Charging mode permitted
+      to avoid damage to the battery. enum:'fast, normal, quick'
+    range: chargingModeAllowed_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/chargingModeAllowed
+  overloadAccepted:
+    description: Property. Model:'https://schema.org/Boolean'. Overload is permitted
+      after exceeding the threshold.(`true` for yes)
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/overloadAccepted
+  overloadAcceptedTime:
+    description: Property. Model:'https://schema.org/DateTime'. Accepted overcharge
+      time without damage to the battery
+    range: time
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/overloadAcceptedTime
+  selfDischargeRate:
+    description: Property. Model:'https://schema.org/Number'. Battery discharge rate
+      without any use on a baseline of 1 month according the [temperature of reference].
+      The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **P1** represents Percentage
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/selfDischargeRate
+  capacityCnnn:
+    description: Property. Model:'https://schema.org/Number'. Remaining energy as
+      a function of the discharge time for 6 keys according the temperature of reference.
+      Each Key is a structured value with the format {`Cnnn`:[`value1`,`value2`]}
+      describing the different measurement of [CapacityCnnn]
+    range: CapacityCnnn
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/capacityCnnn
+  roundTripEfficiency:
+    description: Property. Model:'https://schema.org/Number'. Round-Trip Efficiency.
+      Efficiency, defined as the ratio between stored energy and returned energy.
+      The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **P1** represents Percent
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/roundTripEfficiency
+  chargeDischargeReactivity:
+    description: Property. Model:'https://schema.org/Number'.  Charge and Discharge
+      Reactivity which characterizes the reactive behavior of the system. The unit
+      code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **SEC** represents Second. Units:'seconds'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/chargeDischargeReactivity
+    unit:
+      ucum_code: s
+      exact_mappings:
+      - ucefact:SEC
+      - qudt-unit:SEC
+      has_quantity_kind: qudt-quantkind:Time
+  chargePower:
+    description: Property. Model:'https://schema.org/Number'. Load Power. The unit
+      code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **VLT** represents Volt. Units:'volts'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/chargePower
+  chargeEfficiency:
+    description: Property. Model:'https://schema.org/Number'. Charge Efficiency *(code
+      PV-BAT)*. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **P1** represents Percent
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/chargeEfficiency
+  maximumVoltageEOC:
+    description: Property. Model:'https://schema.org/Number'. Maximum authorized voltage
+      after end of charge and Battery still connected to to a charge generator. The
+      unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **VLT** represents Volt. Units:'volts'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/maximumVoltageEOC
+  dischargePower:
+    description: Property. Model:'https://schema.org/Number'. Discharge Power. The
+      unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **VLT** represents Volt. Units:'volts'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/dischargePower
+  dischargeEfficiency:
+    description: Property. Model:'https://schema.org/Number'. Discharge Efficiency
+      *(code PV-OND)*. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **P1** represents Percent
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/dischargeEfficiency
+  minimumVoltageEOD:
+    description: Property. Model:'https://schema.org/Number'. Minimum voltage after
+      end of discharge and not connected to to a charge generator. The unit code (text)
+      is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **VLT** represents Volt. Units:'volts'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Battery@bbb912274121dd67b2d439e5f82ad1e4dad6718f
+    slot_uri: https://smartdatamodels.org/dataModel.Battery/minimumVoltageEOD
+enums:
+  batteryAssessmentMethods_options:
+    name: batteryAssessmentMethods_options
+    permissible_values:
+      ampereHourMeter:
+        text: ampereHourMeter
+      dischargeTest:
+        text: dischargeTest
+      electrolyteDensity:
+        text: electrolyteDensity
+      highFrequencyImpedance:
+        text: highFrequencyImpedance
+      lowFrequencyImpedance:
+        text: lowFrequencyImpedance
+      mathematicalModel:
+        text: mathematicalModel
+      operatingVoltageWithClosedCircuit:
+        text: operatingVoltageWithClosedCircuit
+      quiescentVoltageWithOpenCircuit:
+        text: quiescentVoltageWithOpenCircuit
+  application_options:
+    name: application_options
+    permissible_values:
+      electricMobility:
+        text: electricMobility
+      energyStorage:
+        text: energyStorage
+      emergencyStorage:
+        text: emergencyStorage
+      houseHoldStorage:
+        text: houseHoldStorage
+      industrialStorage:
+        text: industrialStorage
+      lighting:
+        text: lighting
+      production:
+        text: production
+      robotics:
+        text: robotics
+      other:
+        text: other
+  typeOfUse_options:
+    name: typeOfUse_options
+    permissible_values:
+      indoor:
+        text: indoor
+      mixed:
+        text: mixed
+      outdoor:
+        text: outdoor
+      other:
+        text: other
+  installationMode_options:
+    name: installationMode_options
+    permissible_values:
+      aerial:
+        text: aerial
+      ground:
+        text: ground
+      pole:
+        text: pole
+      roofing:
+        text: roofing
+      underGround:
+        text: underGround
+      wall:
+        text: wall
+      other:
+        text: other
+  installationCondition_options:
+    name: installationCondition_options
+    permissible_values:
+      desert:
+        text: desert
+      dust:
+        text: dust
+      extremeClimate:
+        text: extremeClimate
+      extremeCold:
+        text: extremeCold
+      extremeHeat:
+        text: extremeHeat
+      extremeHumidity:
+        text: extremeHumidity
+      marine:
+        text: marine
+      saline:
+        text: saline
+      sand:
+        text: sand
+      seismic:
+        text: seismic
+      other:
+        text: other
+  possibilityOfUse_options:
+    name: possibilityOfUse_options
+    permissible_values:
+      mobile:
+        text: mobile
+      mixed:
+        text: mixed
+      stationary:
+        text: stationary
+      other:
+        text: other
+  batteryType_options:
+    name: batteryType_options
+    permissible_values:
+      alkaline:
+        text: alkaline
+      gel:
+        text: gel
+      lead:
+        text: lead
+      lead-AGM:
+        text: lead-AGM
+      Li-Ion:
+        text: Li-Ion
+      Li-Po:
+        text: Li-Po
+      Li-Po4:
+        text: Li-Po4
+      LMP:
+        text: LMP
+      Li-Air:
+        text: Li-Air
+      Na-NiCl2(Zebra):
+        text: Na-NiCl2(Zebra)
+      Ni-Cd:
+        text: Ni-Cd
+      Ni-MH:
+        text: Ni-MH
+      Ni-Zn:
+        text: Ni-Zn
+      other:
+        text: other
+  rechargeEnergySource_options:
+    name: rechargeEnergySource_options
+    permissible_values:
+      electric:
+        text: electric
+      hydraulic:
+        text: hydraulic
+      windTurbine:
+        text: windTurbine
+      other:
+        text: other
+  typeEnergySource_options:
+    name: typeEnergySource_options
+    permissible_values:
+      dam:
+        text: dam
+      fall:
+        text: fall
+      generator:
+        text: generator
+      network:
+        text: network
+      photovoltaic:
+        text: photovoltaic
+      river:
+        text: river
+      sea:
+        text: sea
+      waterTurbine:
+        text: waterTurbine
+      wind:
+        text: wind
+      other:
+        text: other
+  communication_options:
+    name: communication_options
+    permissible_values:
+      CAN 2.0 B:
+        text: CAN 2.0 B
+      dryContactTerminal:
+        text: dryContactTerminal
+      maintenanceInterface:
+        text: maintenanceInterface
+      RS485:
+        text: RS485
+      RS485BMS:
+        text: RS485BMS
+      RS485Inverter:
+        text: RS485Inverter
+      other:
+        text: other
+  chargingModeAllowed_options:
+    name: chargingModeAllowed_options
+    permissible_values:
+      normal:
+        text: normal
+      quick:
+        text: quick
+      fast:
+        text: fast

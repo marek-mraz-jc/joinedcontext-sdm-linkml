@@ -1,0 +1,106 @@
+id: https://github.com/smart-data-models/dataModel.GBFS/system_calendar
+name: system_calendar
+title: Smart Data Models adaptation of GBFS standard data model system_calendar
+description: Describes the operating calendar for a system. According to the Standard
+  GBFS 2.2
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.GBFS
+  spec.source.path: system_calendar/schema.json
+  spec.source.commit: ce81f1f4250d60ce8908fc371e5eea22b010074e
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.GBFS/master/context.jsonld"],
+    "data": {"type": "Property", "value": {"calendars": [{"end_day": 5, "end_month":
+    11, "end_year": 2020, "start_day": 1, "start_month": 4, "start_year": 2020}]}},
+    "id": "urn:ngsi-ld:system_calendar:id:FNNO:60592292", "last_updated": {"type":
+    "Property", "value": 1604333830}, "ttl": {"type": "Property", "value": 86400},
+    "type": "system_calendar", "version": {"type": "Property", "value": "3.0"}}'
+classes:
+  system_calendar:
+    class_uri: https://smartdatamodels.org/dataModel.GBFS/system_calendar
+    description: Describes the operating calendar for a system. According to the Standard
+      GBFS 2.2
+    is_a: Entity
+    slots:
+    - data
+    - last_updated
+    - ttl
+    - version
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+  Data:
+    description: Property. Array that contains opertions calendar for the system.
+    attributes:
+      calendars:
+        required: true
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+slots:
+  last_updated:
+    description: Property. Last time the data in the feed was updated in POSIX time.
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+    slot_uri: https://smartdatamodels.org/dataModel.GBFS/last_updated
+  ttl:
+    description: Property. Number of seconds before the data in the feed will be updated
+      again (0 if the data should always be refreshed).
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+    slot_uri: https://smartdatamodels.org/dataModel.GBFS/ttl
+  version:
+    description: Property. GBFS version number to which the feed conforms, according
+      to the versioning framework (added in v1.1).
+    range: version_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+    slot_uri: https://smartdatamodels.org/dataModel.GBFS/version
+  data:
+    description: Property. Array that contains opertions calendar for the system.
+    range: Data
+    required: true
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.GBFS@ce81f1f4250d60ce8908fc371e5eea22b010074e
+    slot_uri: https://uri.etsi.org/ngsi-ld/data
+enums:
+  version_options:
+    name: version_options
+    permissible_values:
+      1.1-RC:
+        text: 1.1-RC
+      '1.1':
+        text: '1.1'
+      2.0-RC:
+        text: 2.0-RC
+      '2.0':
+        text: '2.0'
+      2.1-RC:
+        text: 2.1-RC
+      2.1-RC2:
+        text: 2.1-RC2
+      '2.1':
+        text: '2.1'
+      '2.2':
+        text: '2.2'
+      3.0-RC:
+        text: 3.0-RC
+      '3.0':
+        text: '3.0'

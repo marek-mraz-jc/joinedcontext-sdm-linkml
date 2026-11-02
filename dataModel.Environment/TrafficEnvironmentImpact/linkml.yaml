@@ -1,0 +1,227 @@
+id: https://github.com/smart-data-models/dataModel.Environment/TrafficEnvironmentImpact
+name: TrafficEnvironmentImpact
+title: Smart Data Models - Traffic Environment Impact
+description: Environmental Impact of traffic based on the vehicles traffic and their
+  emission characteristics
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Environment
+  spec.source.path: TrafficEnvironmentImpact/schema.json
+  spec.source.commit: 2f048407ccc243df67aee7e1b1ca5470092d743e
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "France", "addressLocality":
+    "Valbonne", "addressRegion": "Sophia Antipolis", "postOfficeBoxNumber": "", "postalCode":
+    "06550", "streetAddress": "Rue Fr\u00e9d\u00e9ric Mistral"}}, "alternateName":
+    {"type": "Property", "value": ""}, "areaServed": {"type": "Property", "value":
+    ""}, "co2": {"type": "Property", "value": 582.3}, "dataProvider": {"type": "Property",
+    "value": "City sensors"}, "dateCreated": {"type": "Property", "value": "2022-08-17T05:21:50Z"},
+    "dateModified": {"type": "Property", "value": "2022-08-30T08:09:40Z"}, "dateObservedFrom":
+    {"type": "Property", "value": "2022-08-30T08:09:40Z"}, "dateObservedTo": {"type":
+    "Property", "value": "2022-08-30T08:19:40Z"}, "description": {"type": "Property",
+    "value": ""}, "id": "urn:ngsi-ld:TrafficEnvironmentImpact:id:BGGK:76812356", "location":
+    {"type": "GeoProperty", "value": {"coordinates": [43.7034, 7.2663], "type": "Point"}},
+    "name": {"type": "Property", "value": "Environmental impact"}, "owner": {"type":
+    "Property", "value": ["urn:ngsi-ld:TrafficEnvironmentImpact:items:FAVE:94166126",
+    "urn:ngsi-ld:TrafficEnvironmentImpact:items:EWHQ:53940846"]}, "seeAlso": {"type":
+    "Property", "value": ["urn:ngsi-ld:TrafficEnvironmentImpact:items:JSNF:11004684",
+    "urn:ngsi-ld:TrafficEnvironmentImpact:items:HURK:65683455"]}, "source": {"type":
+    "Property", "value": ""}, "traffic": {"type": "Property", "value": [{"refTrafficFlowObserved":
+    "urn:ngsi-ld:TrafficObserved:items:FAVE:94166126", "vehicleClass": "A"}, {"refTrafficFlowObserved":
+    "urn:ngsi-ld:TrafficObserved:items:BAAE:94166236", "vehicleClass": "B"}]}, "type":
+    "TrafficEnvironmentImpact"}'
+classes:
+  TrafficEnvironmentImpact:
+    class_uri: https://smartdatamodels.org/dataModel.Environment/TrafficEnvironmentImpact
+    description: Environmental Impact of traffic based on the vehicles traffic and
+      their emission characteristics
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - co2
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - dateObservedFrom
+    - dateObservedTo
+    - description
+    - name
+    - owner
+    - seeAlso
+    - source
+    - traffic
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/areaServed
+  co2:
+    description: Property. The measured C02 emission concentration. Units:'mg/L'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/co2
+    unit:
+      ucum_code: mg.L-1
+      exact_mappings:
+      - ucefact:M1
+      - qudt-unit:MilliGM-PER-L
+      has_quantity_kind: qudt-quantkind:Density
+  dateObservedFrom:
+    description: Property. Date of the start of measurement (timestamp) in ISO 8601
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/dateObservedFrom
+  dateObservedTo:
+    description: Property. Date of the end of measurement (timestamp) in ISO 8601
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/dateObservedTo
+  traffic:
+    description: Property. Array of objects containing the different types of vehicles
+      and its relations with the object of the traffic flow observations
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/traffic

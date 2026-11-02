@@ -1,0 +1,475 @@
+id: https://github.com/smart-data-models/dataModel.WasteWater/WasteWaterPlant
+name: WasteWaterPlant
+title: Smart Data models -Waste Water Plant schema
+description: Data model for waste water treatment plant.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.WasteWater
+  spec.source.path: WasteWaterPlant/schema.json
+  spec.source.commit: 6abce4a1290843cd3aa6d95a60913015d7e104a1
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.WasteWater/master/context.jsonld"],
+    "bod": {"type": "Property", "value": 250}, "cod": {"type": "Property", "value":
+    25}, "do": {"type": "Property", "value": 4}, "id": "uri:ngsi-ld:1234:A43R", "inFlow":
+    {"type": "Property", "value": 5}, "municipalityInfo": {"type": "Property", "value":
+    {"cityId": "23", "cityName": "Bangalore", "district": "Bangalore Urban", "stateName":
+    "Karnataka", "ulbName": "BMC", "wardId": "23", "wardName": "Bangalore Urban",
+    "wardNum": 4, "zoneId": "2", "zoneName": "South"}}, "nh4": {"type": "Property",
+    "value": 50}, "no3": {"type": "Property", "value": 10}, "observationDateTime":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2021-03-11T15:51:02+05:30"}},
+    "outFlow": {"type": "Property", "value": 6.7}, "pHTSA": {"type": "Property", "value":
+    {"avgOverTime": 8, "instValue": 6, "maxOverTime": 10, "minOverTime": 6}}, "po4":
+    {"type": "Property", "value": 6}, "redox": {"type": "Property", "value": 25},
+    "tic": {"type": "Property", "value": 2}, "tn": {"type": "Property", "value": 9},
+    "toc": {"type": "Property", "value": 0.7}, "treatmentPlantCapacity": {"type":
+    "Property", "value": 10}, "treatmentPlantCode": {"type": "Property", "value":
+    "2"}, "treatmentPlantId": {"type": "Property", "value": 7}, "treatmentPlantName":
+    {"type": "Property", "value": "A"}, "tss": {"type": "Property", "value": 2}, "type":
+    "WasteWaterPlant"}'
+classes:
+  WasteWaterPlant:
+    class_uri: https://smartdatamodels.org/dataModel.WasteWater/WasteWaterPlant
+    description: Data model for waste water treatment plant.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - bod
+    - cod
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - do
+    - inFlow
+    - municipalityInfo
+    - name
+    - nh4
+    - no3
+    - observationDateTime
+    - outFlow
+    - owner
+    - pHTSA
+    - po4
+    - redox
+    - seeAlso
+    - source
+    - tic
+    - tn
+    - toc
+    - treatmentPlantCapacity
+    - treatmentPlantCode
+    - treatmentPlantId
+    - treatmentPlantName
+    - tss
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+  PHTSA:
+    description: Property. Model:'https://schema.org/Text. Acidity level or basicity
+      level observed in the water. Object defining the temporal processing of the
+      magnitude property during a period. It provides maximum, minimum, instant value
+      and average
+    attributes:
+      avgOverTime:
+        description: Property. Model:'https://schema.org/Number'. Describes the average
+          value of a time-series data over a specified duration in past. The duration
+          is specified using another parameter in the value descriptor object related
+          to this value
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+      maxOverTime:
+        description: Property. Model:'https://schema.org/Number'. Describes the maximum
+          value of a time-series data over a specified duration in past. The duration
+          is specified using another parameter in the value descriptor object related
+          to this value
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+      instValue:
+        description: Property. Model:'https://schema.org/Number'. Describes the instantaneous
+          value (associated with the current timestamp) of a time varying quantity
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+      minOverTime:
+        description: Property. Model:'https://schema.org/Number'. Describes the minimum
+          value of a time-series data over a specified duration in past. The duration
+          is specified using another parameter in the value descriptor object related
+          to this value
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+  MunicipalityInfo:
+    description: Property. Model:'https://schema.org/Text. Municipality information
+      corresponding to this observation
+    attributes:
+      district:
+        description: Property. Model:'https://schema.org/Text'. District name corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+      ulbName:
+        description: Property. Model:'https://schema.org/Text'. Name of the Urban
+          Local Body corresponding to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+      cityId:
+        description: Property. Model:'https://schema.org/Text'. City Id corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+      wardId:
+        description: Property. Model:'https://schema.org/Text'. Ward Id corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+      stateName:
+        description: Property. Model:'https://schema.org/Text'. Name of the state
+          corresponding to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+      cityName:
+        description: Property. Model:'https://schema.org/Text'. City name corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+      zoneName:
+        description: Property. Model:'https://schema.org/Text'. Zone name corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+      zoneId:
+        description: Property. Model:'https://schema.org/Text'. Zone Id corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+      wardName:
+        description: Property. Model:'https://schema.org/Text'. Ward name corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+      wardNum:
+        description: Property. Model:'https://schema.org/Number'. Ward number corresponding
+          to this observation
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/areaServed
+  no3:
+    description: Property. Model:'https://schema.org/Number'. Nitrate concentration
+      measured in waste-water treatment plant corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/no3
+  bod:
+    description: Property. Model:'https://schema.org/Number'. Biological Oxygen Demand
+      concentration measured in the waste-water treatment plant corresponding to this
+      observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/bod
+  inFlow:
+    description: Property. Model:'https://schema.org/Number'. In-flow amount into
+      the treatment plant/reservoir corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/inFlow
+  toc:
+    description: Property. Model:'https://schema.org/Number'. Total Organic Carbon
+      concentration measured in the waste-water treatment plant corresponding to this
+      observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/toc
+  nh4:
+    description: Property. Model:'https://schema.org/Number'. Ammonium concentration
+      measured in the waste-water treatment plant corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/nh4
+  redox:
+    description: Property. Model:'https://schema.org/Number'. Reduction potential
+      or oxidation measured in waste-water treatment plant corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/redox
+  do:
+    description: Property. Model:'https://schema.org/Number'. Dissolved oxygen measured
+      in the waste-water treatment plant corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/do
+  treatmentPlantId:
+    description: Property. Model:'https://schema.org/Number'. Unique identification
+      number for the waste-water treatment plant corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/treatmentPlantId
+  outFlow:
+    description: Property. Model:'https://schema.org/Number'. Out-flow amount into
+      the treatment plant/reservoir corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/outFlow
+  tss:
+    description: Property. Model:'https://schema.org/Number'. Total suspended solids
+      concentration measured in a waste-water treatment plant corresponding to this
+      observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/tss
+  treatmentPlantCapacity:
+    description: Property. Model:'https://schema.org/Number'. Handling capacity of
+      the waste-water treatment plant corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/treatmentPlantCapacity
+  tic:
+    description: Property. Model:'https://schema.org/Number'. Total Inorganic Carbon
+      concentration measured in the waste-water treatment plant corresponding to this
+      observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/tic
+  tn:
+    description: Property. Model:'https://schema.org/Number'. Total Nitrogen concentration
+      measured in waste-water treatment plant corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/tn
+  po4:
+    description: Property. Model:'https://schema.org/Number'. Ortho-phosphate concentration
+      measured in the waste-water treatment plant corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/po4
+  cod:
+    description: Property. Model:'https://schema.org/Number'. Chemical Oxygen Demand
+      concentration measured in the waste-water treatment plant corresponding to this
+      observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/cod
+  treatmentPlantName:
+    description: Property. Model:'https://schema.org/Text'. Name of the waste-water
+      treatment plant corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/treatmentPlantName
+  treatmentPlantCode:
+    description: Property. Model:'https://schema.org/Text'. Unique code for the waste-water
+      treatment plant corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/treatmentPlantCode
+  observationDateTime:
+    description: Property. Model:'https://schema.org/Text'. Last reported time of
+      observation
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/observationDateTime
+  pHTSA:
+    description: Property. Model:'https://schema.org/Text. Acidity level or basicity
+      level observed in the water. Object defining the temporal processing of the
+      magnitude property during a period. It provides maximum, minimum, instant value
+      and average
+    range: PHTSA
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/pHTSA
+  municipalityInfo:
+    description: Property. Model:'https://schema.org/Text. Municipality information
+      corresponding to this observation
+    range: MunicipalityInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteWater@6abce4a1290843cd3aa6d95a60913015d7e104a1
+    slot_uri: https://smartdatamodels.org/dataModel.WasteWater/municipalityInfo

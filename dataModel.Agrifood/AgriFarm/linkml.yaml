@@ -1,0 +1,298 @@
+id: https://github.com/smart-data-models/dataModel.Agrifood/AgriFarm
+name: AgriFarm
+title: Smart Data Models - Agri Farm
+description: This entity contains a harmonised description of a generic farm made
+  up of buildings and parcels. This entity is primarily associated with the agricultural
+  vertical and related IoT applications.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Agrifood
+  spec.source.path: AgriFarm/schema.json
+  spec.source.commit: e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "ES", "addressLocality":
+    "Valdepe\u00f1as", "streetAddress": "Camino de Membrilla 17", "type": "PostalAddress"}},
+    "contactPoint": {"type": "Property", "value": {"email": "wheatfarm@email.com",
+    "telephone": "00349674532", "type": "ContactPoint"}}, "description": {"type":
+    "Property", "value": "A farm producing wheat"}, "hasAgriParcel": {"object": ["urn:ngsi-ld:AgriParcel:26ba4be0-4474-11e8-8ec1-ab9e0ea93835",
+    "urn:ngsi-ld:AgriParcel:2d5b8874-4474-11e8-8d6b-dbe14425b5e4"], "type": "Relationship"},
+    "hasBuilding": {"object": ["urn:ngsi-ld:Building:a6ba44e0-4474-11e8-8ed1-ab9e0ea93827",
+    "urn:ngsi-ld:Building:d95b8874-4474-11e8-8d6b-dbe144258354"], "type": "Relationship"},
+    "id": "urn:ngsi-ld:AgriFarm:72d9fb43-53f8-4ec8-a33c-fa931360259a", "landLocation":
+    {"type": "GeoProperty", "value": {"coordinates": [[[100, 0], [101, 0], [101, 1],
+    [100, 1], [100, 0]]], "type": "Polygon"}}, "location": {"type": "GeoProperty",
+    "value": {"coordinates": [100, 0], "type": "Point"}}, "name": {"type": "Property",
+    "value": "Wheat farm"}, "ownedBy": {"object": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",
+    "type": "Relationship"}, "relatedSource": {"type": "Property", "value": [{"application":
+    "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a", "applicationEntityId":
+    "app:farm1"}]}, "seeAlso": {"type": "Property", "value": ["https://example.org/concept/farm",
+    "https://datamodel.org/example/farm"]}, "type": "AgriFarm"}'
+classes:
+  AgriFarm:
+    class_uri: https://smartdatamodels.org/dataModel.Agrifood/AgriFarm
+    description: This entity contains a harmonised description of a generic farm made
+      up of buildings and parcels. This entity is primarily associated with the agricultural
+      vertical and related IoT applications.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - contactPoint
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - hasAgriParcel
+    - hasBuilding
+    - landLocation
+    - name
+    - ownedBy
+    - owner
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  ContactPoint:
+    description: Property. Model:'https://schema.org/ContactPoint'. The details to
+      contact with the item
+    attributes:
+      contactType:
+        description: Property. Contact type of this item
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      email:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      telephone:
+        description: Property. Telephone of this contact
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      name:
+        description: Property. The name of this item
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      url:
+        description: Property. URL which provides a description or further information
+          about this item
+        range: uriorcurie
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      areaServed:
+        description: Property. The geographic area where a service or offered item
+          is provided. Supersedes serviceArea
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      availableLanguage:
+        description: Property. Model:'http://schema.org/availableLanguage'. A language
+          someone may use with or at the item, service or place. Please use one of
+          the language codes from the IETF BCP 47 standard. It is implemented the
+          Text option but it could be also Language
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      contactOption:
+        description: Property. Model:'http://schema.org/contactOption'. An option
+          available on this contact point (e.g. a toll-free number or support for
+          hearing-impaired callers)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      faxNumber:
+        description: Property. Model:'https://schema.org/Text'. The fax number of
+          the item
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      productSupported:
+        description: Property. Model:'https://schema.org/Text'. The product or service
+          this support contact point is related to (such as product support for a
+          particular product line). This can be a specific product or product line
+          (e.g. 'iPhone') or a general category of products or services (e.g. 'smartphones')
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      availabilityRestriction:
+        description: Relationship. Model:'https://schema.org/hoursAvailable'. This
+          property links a contact point to information about when the contact point
+          is not available. The details are provided using the Opening Hours Specification
+          class
+        annotations:
+          ngsi_ld_kind: Relationship
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/areaServed
+  landLocation:
+    description: GeoProperty. Geojson reference to the item. It can be Point, LineString,
+      Polygon, MultiPoint, MultiLineString or MultiPolygon
+    annotations:
+      ngsi_ld_kind: GeoProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/landLocation
+  contactPoint:
+    description: Property. Model:'https://schema.org/ContactPoint'. The details to
+      contact with the item
+    range: ContactPoint
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/contactPoint
+  ownedBy:
+    description: Relationship. Owner (Person or Organization) of the farm
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/ownedBy
+  hasBuilding:
+    description: Relationship. List of buildings belonging to the farm
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/hasBuilding
+  hasAgriParcel:
+    description: Relationship. List of agri parcels belonging to the farm
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/hasAgriParcel

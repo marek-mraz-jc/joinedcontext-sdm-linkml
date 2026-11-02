@@ -1,0 +1,227 @@
+id: https://github.com/smart-data-models/dataModel.ERA/RaisedPantographsDistanceAndSpeed
+name: RaisedPantographsDistanceAndSpeed
+title: RaisedPantographsDistanceAndSpeed + mapped from ERA ontology by Smart Data
+  Models
+description: 'Indication of maximum number of raised pantographs per train allowed
+  and minimum spacing centre line to centre line of adjacent pantograph heads, expressed
+  in metres, at the given speed.
+
+  Each track can have several raised pantographs per train allowed (structured) values,
+  and each one has values for number of pantographs, minimum distance between pantographs,
+  in metres, and speed considered in km/h.'
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ERA
+  spec.source.path: RaisedPantographsDistanceAndSpeed/schema.json
+  spec.source.commit: 4c4f8ebffc25dd413db62527072eac74559f0b70
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Room whose forget
+    soldier evidence air. Memory artist real western myse", "addressLocality": "Quite
+    himself drive trouble pay they guy. History role mome", "addressRegion": "Cut
+    seem painting race.", "district": "Remain environment performance campaign. Test
+    traditional want call. Building forget argue suggest.", "postOfficeBoxNumber":
+    "Serious art magazine morning serious histor", "postalCode": "Glass artist leg
+    modern. Republican reflect hot skill democratic speak.", "streetAddress": "Break
+    seem system real part become pay. Sense baby total care investment. Figure break
+    likely behavior talk morning estab", "streetNr": "Small w"}}, "alternateName":
+    {"type": "Property", "value": "Court I loo"}, "areaServed": {"type": "Property",
+    "value": "Forward gun require "}, "dataProvider": {"type": "Property", "value":
+    "Bag care religious possible source media team. Skill politics blue yes according."},
+    "dateCreated": {"type": "Property", "value": {"@type": "DateTime", "@value": "1971-11-20T03:14:14Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "1970-10-03T20:50:52Z"}}, "description": {"type": "Property", "value": "Them site
+    whole should play generation question. Significant on teach of none."}, "id":
+    "urn:ngsi-ld:RaisedPantographsDistanceAndSpeed:id:NRAH:81561263", "location":
+    {"type": "Property", "value": {"coordinates": [33.252656, 109.596554], "type":
+    "Point"}}, "name": {"type": "Property", "value": "Watch within challenge safe.
+    Raise available seem compare body early. None face safe term before environment
+    drop"}, "owner": {"type": "Property", "value": ["urn:ngsi-ld:RaisedPantographsDistanceAndSpeed:items:DKUU:20419467",
+    "urn:ngsi-ld:RaisedPantographsDistanceAndSpeed:items:BFPP:72232537"]}, "raisedPantographsDistance":
+    {"type": "Property", "value": 131}, "raisedPantographsNumber": {"type": "Property",
+    "value": 478}, "raisedPantographsSpeed": {"type": "Property", "value": 219}, "seeAlso":
+    {"type": "Property", "value": ["urn:ngsi-ld:RaisedPantographsDistanceAndSpeed:items:XVYI:24654995"]},
+    "source": {"type": "Property", "value": "War game help give"}, "type": "RaisedPantographsDistanceAndSpeed"}'
+classes:
+  RaisedPantographsDistanceAndSpeed:
+    class_uri: https://smartdatamodels.org/dataModel.ERA/RaisedPantographsDistanceAndSpeed
+    description: 'Indication of maximum number of raised pantographs per train allowed
+      and minimum spacing centre line to centre line of adjacent pantograph heads,
+      expressed in metres, at the given speed.
+
+      Each track can have several raised pantographs per train allowed (structured)
+      values, and each one has values for number of pantographs, minimum distance
+      between pantographs, in metres, and speed considered in km/h.'
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - name
+    - owner
+    - raisedPantographsDistance
+    - raisedPantographsNumber
+    - raisedPantographsSpeed
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/areaServed
+  raisedPantographsDistance:
+    description: Property. Raised pantographs distance
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/raisedPantographsDistance
+  raisedPantographsNumber:
+    description: Property. Number of pantographs.
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/raisedPantographsNumber
+  raisedPantographsSpeed:
+    description: Property. Raised pantographs speed
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/raisedPantographsSpeed

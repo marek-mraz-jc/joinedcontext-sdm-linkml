@@ -1,0 +1,360 @@
+id: https://github.com/smart-data-models/dataModel.S4BLDG/CoolingTower
+name: CoolingTower
+title: Smart data models - CoolingTower schema
+description: A cooling tower is a device which rejects heat to ambient air by circulating
+  a fluid such as water through it to reduce its temperature by partial evaporation.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.S4BLDG
+  spec.source.path: CoolingTower/schema.json
+  spec.source.commit: 06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.S4BLDG/master/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"], "alternateName":
+    {"type": "Property", "value": "CoolingTower type 2"}, "ambientDesignDryBulbTemperature":
+    {"observedAt": "2023-01-26T08:09:09Z", "type": "Property", "unitCode": "K", "value":
+    0.9762464796853121}, "ambientDesignWetBulbTemperature": {"observedAt": "2023-01-25T14:29:40Z",
+    "type": "Property", "unitCode": "K", "value": 0.3062794162138128}, "basinReserveVolume":
+    {"observedAt": "2023-01-26T01:28:50Z", "type": "Property", "unitCode": "m3", "value":
+    0.9472477891325785}, "capacityControl": {"type": "Property", "value": "input"},
+    "circuitType": {"type": "Property", "value": "Mauritania"}, "controlStrategy":
+    {"type": "Property", "value": "Investor"}, "dataProvider": {"type": "Property",
+    "value": "IFC file"}, "dateCreated": {"type": "Property", "value": "2023-01-25T23:05:59Z"},
+    "dateModified": {"type": "Property", "value": "2023-01-25T18:47:19Z"}, "description":
+    {"type": "Property", "value": "CoolingTower of limited CoolingTower types"}, "flowArrangement":
+    {"type": "Property", "value": "Direct"}, "hasManufacturer": {"type": "Property",
+    "value": "CoolingTower Company Inc."}, "hasModel": {"type": "Property", "value":
+    "CoolingTower 0.1.2"}, "id": "urn:ngsi-ld:CoolingTower:eb831bd2-82be-42c3-a0c9-a6c0a231e316",
+    "isContainedInBuildingSpace": {"object": "urn:ngsi-ld:BuildingSpace:61ad4f84-a577-49d5-a088-aa301efa4ec6",
+    "type": "Relationship"}, "isContainedInPhysicalObject": {"object": "urn:ngsi-ld:PhysicalObject:f02a5bc4-2f87-4ff7-8dd7-fb61243128a1",
+    "type": "Relationship"}, "isSubSystemOf": [{"object": "urn:ngsi-ld:System:b9323186-933c-46fd-815f-7f025b04ca80",
+    "type": "Relationship"}, {"object": "urn:ngsi-ld:System:1cea31ba-2978-4af2-b717-5c2a98a431b4",
+    "type": "Relationship"}, {"object": "urn:ngsi-ld:System:13dbe647-863b-4b1f-b10c-1737310d7c51",
+    "type": "Relationship"}], "liftElevationDifference": {"observedAt": "2023-01-26T02:02:47Z",
+    "type": "Property", "unitCode": "mm", "value": 0.36539365901818843}, "name": {"type":
+    "Property", "value": "CoolingTower"}, "nominalCapacity": {"observedAt": "2023-01-25T22:40:21Z",
+    "type": "Property", "unitCode": "J/s", "value": 0.3624642546775261}, "numberOfCells":
+    {"type": "Property", "value": 0.5588013730579288}, "operationTemperatureMax":
+    {"observedAt": "2023-01-25T23:30:50Z", "type": "Property", "unitCode": "K", "value":
+    0.660338038211496}, "operationTemperatureMin": {"observedAt": "2023-01-25T23:56:27Z",
+    "type": "Property", "unitCode": "K", "value": 0.0877235060077185}, "source": {"type":
+    "Property", "value": "Import"}, "sprayType": {"type": "Property", "value": "Money
+    Market Account"}, "type": "CoolingTower", "waterRequirement": {"observedAt": "2023-01-25T16:48:25Z",
+    "type": "Property", "unitCode": "m3/s", "value": 0.40722633971933253}}'
+classes:
+  CoolingTower:
+    class_uri: https://smartdatamodels.org/dataModel.S4BLDG/CoolingTower
+    description: A cooling tower is a device which rejects heat to ambient air by
+      circulating a fluid such as water through it to reduce its temperature by partial
+      evaporation.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - ambientDesignDryBulbTemperature
+    - ambientDesignWetBulbTemperature
+    - areaServed
+    - basinReserveVolume
+    - capacityControl
+    - circuitType
+    - controlStrategy
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - flowArrangement
+    - hasManufacturer
+    - hasModel
+    - isContainedInBuildingSpace
+    - isContainedInPhysicalObject
+    - isSubSystemOf
+    - liftElevationDifference
+    - name
+    - nominalCapacity
+    - numberOfCells
+    - operationTemperatureMax
+    - operationTemperatureMin
+    - owner
+    - seeAlso
+    - source
+    - sprayType
+    - waterRequirement
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/areaServed
+  ambientDesignDryBulbTemperature:
+    description: Property. Ambient design dry bulb temperature used for selecting
+      the cooling tower. Usually measured in degrees Kelvin (K)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/ambientDesignDryBulbTemperature
+  ambientDesignWetBulbTemperature:
+    description: Property. Ambient design wet bulb temperature used for selecting
+      the cooling tower. Usually measured in degrees Kelvin (K)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/ambientDesignWetBulbTemperature
+  basinReserveVolume:
+    description: Property. Volume between operating and overflow levels in cooling
+      tower basin. Usually measured in cubic metre (m3)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/basinReserveVolume
+  capacityControl:
+    description: 'Property. FanCycling: Fan is cycled on and off to control duty.
+      TwoSpeedFan: Fan is switched between low and high speed to control duty. VariableSpeedFan:
+      Fan speed is varied to control duty. DampersControl: Dampers modulate the air
+      flow to control duty. BypassValveControl: Bypass valve modulates the water flow
+      to control duty. MultipleSeriesPumps: Turn on/off multiple series pump to control
+      duty. TwoSpeedPump: Switch between high/low pump speed to control duty. VariableSpeedPump:
+      vary pump speed to control duty'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/capacityControl
+  circuitType:
+    description: 'Property. OpenCircuit: Exposes water directly to the cooling atmosphere.
+      CloseCircuit: The fluid is separated from the atmosphere by a heat exchanger.
+      Wet: The air stream or the heat exchange surface is evaporatively cooled. Dry:
+      No evaporation into the air stream. DryWet: A combination of a dry tower and
+      a wet tower'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/circuitType
+  controlStrategy:
+    description: 'Property. FixedExitingWaterTemp: The capacity is controlled to maintain
+      a fixed exiting water temperature. WetBulbTempReset: The set-point is reset
+      based on the wet-bulb temperature'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/controlStrategy
+  flowArrangement:
+    description: 'Property. CounterFlow: Air and water flow enter in different directions.
+      CrossFlow: Air and water flow are perpendicular. ParallelFlow: air and water
+      flow enter in same directions'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/flowArrangement
+  liftElevationDifference:
+    description: Property. Elevation difference between cooling tower sump and the
+      top of the tower. Usually measured in millimeters (mm)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/liftElevationDifference
+  nominalCapacity:
+    description: Property. Nominal capacity. Usually measured in Watts (W, J/s)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/nominalCapacity
+  numberOfCells:
+    description: Property. Number of cells in one cooling tower unit
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/numberOfCells
+  operationTemperatureMax:
+    description: Property. Allowable operation ambient (air, fluid) temperature range.
+      Usually measured in degrees Kelvin (K)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/operationTemperatureMax
+  operationTemperatureMin:
+    description: Property. Allowable operation ambient (air, fluid) temperature range.
+      Usually measured in degrees Kelvin (K)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/operationTemperatureMin
+  sprayType:
+    description: 'Property. SprayFilled: Water is sprayed into airflow. SplashTypeFill:
+      water cascades over successive rows of splash bars. FilmTypeFill: water flows
+      in a thin layer over closely spaced sheets'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/sprayType
+  waterRequirement:
+    description: Property. Make-up water requirement. Usually measured in m3/s
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/waterRequirement
+  isContainedInBuildingSpace:
+    description: Relationship. An entity used to define the physical spaces of the
+      building. A building space contains devices or building objects. (BuildingSpace)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isContainedInBuildingSpace
+  isContainedInPhysicalObject:
+    description: Relationship. Any Object that has a proper space region.  (Definition
+      extracted from DUL ontology) (PhysicalObject)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isContainedInPhysicalObject
+  isSubSystemOf:
+    description: Relationship. A reference to a system(s) that this Physical Object
+      is part of
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isSubSystemOf
+  hasManufacturer:
+    description: Property. A relationship identifying the manufacturer of an entity
+      (e.g., device). The value is expected to be a string or a string with language
+      tag
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/hasManufacturer
+  hasModel:
+    description: Property. A relationship identifying the model of an entity (e.g.,
+      device). The value is expected to be a string or a string with language tag
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/hasModel

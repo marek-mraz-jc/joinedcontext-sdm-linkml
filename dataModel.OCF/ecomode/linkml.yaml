@@ -1,0 +1,281 @@
+id: https://github.com/smart-data-models/dataModel.OCF/ecomode
+name: ecomode
+title: Eco Mode
+description: 'Smart Data Models Program adaptation of the original IoTData data Models.
+  This Resource specifies the supported and currently active Eco Mode of a Device
+  The Resource is a deriviative of the Mode Resource (oic.r.mode) with a restriction
+  that the population of supportedmodes and modes Properties is restricted to the
+  set of values: ''disabled'',''enabled'',''notsupported''. The adminforced Property
+  indicates that the value has been set by another party (e.g. via some offboard Smart
+  Energy interaction) '
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: ecomode/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Of door research
+    tell. When clearly type up", "addressLocality": "Someone painting senior entire
+    expect investm", "addressRegion": "Guess we no in pass sound. Tonight gun word
+    citizen create. Physical market room eat through ever.", "district": "Likely fire",
+    "postOfficeBoxNumber": "Let stop camera report foreign agency list miss.", "postalCode":
+    "Action econ", "streetAddress": "Game act return travel. Secti", "streetNr": "Not
+    girl above course."}}, "adminforced": {"type": "Property", "value": true}, "alternateName":
+    {"type": "Property", "value": "Sea stuff no response."}, "areaServed": {"type":
+    "Property", "value": "Throughout treat relate respond. Role mind statement."},
+    "dataProvider": {"type": "Property", "value": "Significant now energy. Lay return
+    identify. Anything event yet effect quite reflect upon."}, "dateCreated": {"type":
+    "Property", "value": {"@type": "DateTime", "@value": "1985-05-13T16:22:28Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2014-07-01T04:44:52Z"}}, "description": {"type": "Property", "value": "Billion
+    pick report past always future scene heavy. Usually already bed fall character
+    door green save. Front sound war address morning explain."}, "id": "urn:ngsi-ld:ecomode:id:AHBA:98025070",
+    "if": {"type": "Property", "value": ["oic.if.a", "oic.if.baseline"]}, "location":
+    {"type": "GeoProperty", "value": {"coordinates": [62.6331415, -156.591688], "type":
+    "Point"}}, "modes": {"type": "Property", "value": ["disabled", "enabled"]}, "n":
+    {"type": "Property", "value": "Spend cut end red. S"}, "name": {"type": "Property",
+    "value": "North but west. About catch than m"}, "owner": {"type": "Property",
+    "value": ["urn:ngsi-ld:ecomode:items:SKZH:38856431", "urn:ngsi-ld:ecomode:items:BSEL:98522509"]},
+    "rt": {"type": "Property", "value": ["oic.r.ecomode"]}, "seeAlso": {"type": "Property",
+    "value": ["urn:ngsi-ld:ecomode:items:FAZE:54457696"]}, "source": {"type": "Property",
+    "value": "Start general professional career. Large center fin"}, "supportedModes":
+    {"type": "Property", "value": ["notsupported", "disabled"]}, "type": "ecomode"}'
+classes:
+  ecomode:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/ecomode
+    description: 'Smart Data Models Program adaptation of the original IoTData data
+      Models. This Resource specifies the supported and currently active Eco Mode
+      of a Device The Resource is a deriviative of the Mode Resource (oic.r.mode)
+      with a restriction that the population of supportedmodes and modes Properties
+      is restricted to the set of values: ''disabled'',''enabled'',''notsupported''.
+      The adminforced Property indicates that the value has been set by another party
+      (e.g. via some offboard Smart Energy interaction) '
+    is_a: Entity
+    slots:
+    - address
+    - adminforced
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - if
+    - modes
+    - n
+    - name
+    - owner
+    - rt
+    - seeAlso
+    - source
+    - supportedModes
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. The Resource Type.
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  modes:
+    description: Property. The array of the currently active mode(s).
+    range: modes_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/modes
+  supportedModes:
+    description: Property. The array of possible modes the device supports.
+    range: supportedModes_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/supportedModes
+  adminforced:
+    description: Property. The indicator that the current mode of operation has been
+      forced by admin action.
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/adminforced
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  if:
+    description: Property. The OCF Interface set supported by this Resource.
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.ecomode:
+        text: oic.r.ecomode
+  modes_options:
+    name: modes_options
+    permissible_values:
+      disabled:
+        text: disabled
+      enabled:
+        text: enabled
+      notsupported:
+        text: notsupported
+  supportedModes_options:
+    name: supportedModes_options
+    permissible_values:
+      disabled:
+        text: disabled
+      enabled:
+        text: enabled
+      notsupported:
+        text: notsupported
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.a:
+        text: oic.if.a
+      oic.if.baseline:
+        text: oic.if.baseline

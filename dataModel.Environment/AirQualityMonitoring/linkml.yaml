@@ -1,0 +1,620 @@
+id: https://github.com/smart-data-models/dataModel.Environment/AirQualityMonitoring
+name: AirQualityMonitoring
+title: Smart Data Models - Air quality Monitoring
+description: Air Quality Monitoring (AQM) Data Model.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Environment
+  spec.source.path: AirQualityMonitoring/schema.json
+  spec.source.commit: 2f048407ccc243df67aee7e1b1ca5470092d743e
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "India", "addressLocality":
+    "Bangalore", "addressRegion": "Karnataka", "postOfficeBoxNumber": "", "postalCode":
+    "110001", "streetAddress": "Avenue Road"}}, "airQualityIndex": {"type": "Property",
+    "value": 90}, "airQualityLevel": {"type": "Property", "value": "SATISFACTORY"},
+    "airTemperatureTSA": {"type": "Property", "value": {"avgOverTime": 23.1, "instValue":
+    30.8, "maxOverTime": 32.8, "minOverTime": 12.7}}, "alternateName": {"type": "Property",
+    "value": "EnvAQM sampling"}, "ambientNoiseTSA": {"type": "Property", "value":
+    {"avgOverTime": 57.9, "instValue": 57.6, "maxOverTime": 59.2, "minOverTime": 50.5}},
+    "aqiMajorPollutant": {"type": "Property", "value": "no2"}, "areaServed": {"type":
+    "Property", "value": "Bangalore"}, "arsenicTSA": {"type": "Property", "value":
+    {"avgOverTime": 0.4, "instValue": 0.35, "maxOverTime": 0.44, "minOverTime": 0.29}},
+    "atmosphericPressure": {"type": "Property", "value": 633.2}, "atmosphericPressureTSA":
+    {"type": "Property", "value": {"avgOverTime": 968.3, "instValue": 982.9, "maxOverTime":
+    982.7, "minOverTime": 961.9}}, "bapTSA": {"type": "Property", "value": {"avgOverTime":
+    492.1, "instValue": 439.1, "maxOverTime": 573.7, "minOverTime": 398.7}}, "benzeneTSA":
+    {"type": "Property", "value": {"avgOverTime": 266.7, "instValue": 321.7, "maxOverTime":
+    576.9, "minOverTime": 210.1}}, "co2TSA": {"type": "Property", "value": {"avgOverTime":
+    318.51, "instValue": 320.4, "maxOverTime": 390.2, "minOverTime": 302.6}}, "coTSA":
+    {"type": "Property", "value": {"avgOverTime": 3.51, "instValue": 4.0, "maxOverTime":
+    8.9, "minOverTime": 3.4}}, "dataProvider": {"type": "Property", "value": ""},
+    "dateCreated": {"type": "Property", "value": {"@type": "DateTime", "@value": "2017-12-31T03:39:27Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2021-12-22T04:21:57Z"}}, "description": {"type": "Property", "value": "Air quality
+    monitoring"}, "deviceInfo": {"type": "Property", "value": {"RFID": "AB463478",
+    "deviceBatteryStatus": "Connected", "deviceID": "12345", "deviceList": "12", "deviceModel":
+    {"areaServed": "Agartala", "brandName": "Climo", "manufacturerName": "Bosch",
+    "modelName": "sensor", "modelURL": "www.boschclimo.com"}, "deviceName": "Climo",
+    "deviceSimNumber": "12345678", "measurand": "", "refDevice": "urn:ngsi-ld:device:12"}},
+    "deviceStatus": {"type": "Property", "value": "ACTIVE"}, "id": "urn:ngsi-ld:AirQualityMonitoring:id:ARET:00795717",
+    "illuminance": {"type": "Property", "value": 3319.41}, "location": {"type": "Property",
+    "value": {"coordinates": [12.979, 77.591], "type": "Point"}}, "name": {"type":
+    "Property", "value": ""}, "nh3TSA": {"type": "Property", "value": {"avgOverTime":
+    865.1, "instValue": 900.2, "maxOverTime": 990.8, "minOverTime": 834.7}}, "nickelTSA":
+    {"type": "Property", "value": {"avgOverTime": 434.0, "instValue": 527.2, "maxOverTime":
+    559.6, "minOverTime": 132.2}}, "no2TSA": {"type": "Property", "value": {"avgOverTime":
+    409.7, "instValue": 511.0, "maxOverTime": 611.5, "minOverTime": 242.4}}, "noTSA":
+    {"type": "Property", "value": {"avgOverTime": 3.65, "instValue": 3.6, "maxOverTime":
+    4.8, "minOverTime": 2.7}}, "o2TSA": {"type": "Property", "value": {"avgOverTime":
+    18.1, "instValue": 18.0, "maxOverTime": 18.2, "minOverTime": 18.0}}, "o3TSA":
+    {"type": "Property", "value": {"avgOverTime": 218.8, "instValue": 173.1, "maxOverTime":
+    236.4, "minOverTime": 167.7}}, "observationDateTime": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "2020-09-16T11:00:00+05:30"}}, "owner": {"type":
+    "Property", "value": ["urn:ngsi-ld:AirQualityMonitoring:items:WCBR:34036943",
+    "urn:ngsi-ld:AirQualityMonitoring:items:PLLV:16542546"]}, "pbTSA": {"type": "Property",
+    "value": {"avgOverTime": 473.0, "instValue": 391.0, "maxOverTime": 542.1, "minOverTime":
+    287.5}}, "pm10TSA": {"type": "Property", "value": {"avgOverTime": 847.3, "instValue":
+    439.1, "maxOverTime": 568.1, "minOverTime": 54.3}}, "pm25TSA": {"type": "Property",
+    "value": {"avgOverTime": 28.3, "instValue": 56.6, "maxOverTime": 56.8, "minOverTime":
+    10.1}}, "precipitation": {"type": "Property", "value": 846.0}, "relativeHumidityTSA":
+    {"type": "Property", "value": {"avgOverTime": 326.3, "instValue": 401.2, "maxOverTime":
+    599.3, "minOverTime": 211.6}}, "seeAlso": {"type": "Property", "value": ["urn:ngsi-ld:AirQualityMonitoring:items:FCTF:59597941",
+    "urn:ngsi-ld:AirQualityMonitoring:items:JAYJ:76906163"]}, "so2TSA": {"type": "Property",
+    "value": {"avgOverTime": 3.65, "instValue": 3.5, "maxOverTime": 3.72, "minOverTime":
+    2.9}}, "solarRadiation": {"type": "Property", "value": 3.65}, "source": {"type":
+    "Property", "value": "Bangalore Smart city"}, "type": "AirQualityMonitoring",
+    "uvTSA": {"type": "Property", "value": {"avgOverTime": 6.0, "instValue": 8.2,
+    "maxOverTime": 8.3, "minOverTime": 5.7}}, "versionInfo": {"type": "Property",
+    "value": {"comments": "Version 1", "endDateTime": {"@type": "DateTime", "@value":
+    "2020-09-16T11:00:00+05:30"}, "startDateTime": {"@type": "DateTime", "@value":
+    "2020-09-16T11:00:00+05:30"}, "versionName": "Version 1"}}}'
+classes:
+  AirQualityMonitoring:
+    class_uri: https://smartdatamodels.org/dataModel.Environment/AirQualityMonitoring
+    description: Air Quality Monitoring (AQM) Data Model.
+    is_a: Entity
+    slots:
+    - address
+    - airQualityIndex
+    - airQualityLevel
+    - airTemperatureTSA
+    - alternateName
+    - ambientNoiseTSA
+    - aqiMajorPollutant
+    - areaServed
+    - arsenicTSA
+    - atmosphericPressure
+    - atmosphericPressureTSA
+    - bapTSA
+    - benzeneTSA
+    - co2TSA
+    - coTSA
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - deviceInfo
+    - deviceStatus
+    - illuminance
+    - name
+    - nh3TSA
+    - nickelTSA
+    - no2TSA
+    - noTSA
+    - o2TSA
+    - o3TSA
+    - observationDateTime
+    - owner
+    - pbTSA
+    - pm10TSA
+    - pm25TSA
+    - precipitation
+    - relativeHumidityTSA
+    - seeAlso
+    - so2TSA
+    - solarRadiation
+    - source
+    - uvTSA
+    - versionInfo
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+  DeviceModel:
+    description: Property. Describes the information of the device, sensor or system
+      in consideration
+    attributes:
+      brandName:
+        description: Property. Model:'https://schema.org/Text'. Name of the brand
+          associated with an entity, e.g., sensor, device etc
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      manufacturerName:
+        description: Property. Model:'https://schema.org/Text'. Name of the manufacturer
+          associated with an entity, e.g., sensor, device etc
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      modelName:
+        description: Property. Model:'https://schema.org/Text'. Name of a specific
+          model associated with an entity, e.g., sensor, device etc
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      modelURL:
+        description: Property. Model:'https://schema.org/Text'. URL providing further
+          information of a specific model associated with an entity, e.g., sensor,
+          device etc
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      areaServed:
+        description: 'Property. Model:''https://schema.org/Text''. Area served by
+          the entity or a service. '
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+  DeviceInfo:
+    description: Property. Information about the device associated with the observations
+    attributes:
+      deviceList:
+        description: Property. Model:'https://schema.org/Text'. Information of device
+          part number and sub devices corresponding to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      deviceBatteryStatus:
+        description: Property. Model:'https://schema.org/Text'. Gives the Battery
+          charging status of the reporting device(Connected, Disconnected)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      deviceName:
+        description: Property. Model:'https://schema.org/Text'. Device Name or Station
+          name of the sensor device/station corresponding to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      deviceID:
+        description: Property. Model:'https://schema.org/Text'. Device ID of the physical
+          sensor/ measurement station corresponding to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      RFID:
+        description: Property. Model:'https://schema.org/Text'. Gives the ID of the
+          RFID reader
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      measurand:
+        description: Property. Model:'https://schema.org/Text'. Property/properties
+          sensed/observed/measured by the device
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      deviceSimNumber:
+        description: Property. Model:'https://schema.org/Text'. Gives the sim number
+          of the device in the waste management vehicle
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      deviceModel:
+        description: Property. Describes the information of the device, sensor or
+          system in consideration
+        range: DeviceModel
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      refDevice:
+        description: Relationship. Unique identifier of the entity
+        annotations:
+          ngsi_ld_kind: Relationship
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+  VersionInfo:
+    description: Property. Version information corresponding to this observation
+    attributes:
+      startDateTime:
+        description: Property. Model:'https://schema.org/DateTime'. Reported start
+          time corresponding to this observation
+        range: datetime
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      endDateTime:
+        description: Property. Model:'https://schema.org/DateTime'. Reported end time
+          corresponding to this observation
+        range: datetime
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      versionName:
+        description: Property. Model:'https://schema.org/Text'. Version name corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      comments:
+        description: Property. Model:'https://schema.org/Text'. User comments corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      windType:
+        description: Property. Wind type dominate during the last 24 hours
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/areaServed
+  deviceInfo:
+    description: Property. Information about the device associated with the observations
+    range: DeviceInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/deviceInfo
+  observationDateTime:
+    description: Property. Model:'https://schema.org/DateTime'. Last reported time
+      of observation
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/observationDateTime
+  deviceStatus:
+    description: Property. Model:'https://schema.org/Text'. Indicates the status of
+      physical device or devices
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/deviceStatus
+  atmosphericPressure:
+    description: Property. Model:'https://schema.org/Number'. Observed air (atmospheric
+      or barometric) pressure
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/atmosphericPressure
+  airQualityIndex:
+    description: Property. Model:'https://schema.org/Number'. Overall Air Quality
+      Index (AQI) for the observed air quality
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/airQualityIndex
+  airQualityLevel:
+    description: Property. Model:'https://schema.org/Text'. Air Quality Category Indication.
+      Qualitative level defined according to the local health agencies. For example,
+      'GOOD', 'MODERATE', 'POOR', 'UNHEALTHY', 'SEVERE', 'HAZARDOUS' etc
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/airQualityLevel
+  aqiMajorPollutant:
+    description: Property. Model:'https://schema.org/Text'. Major pollutant in the
+      Air Quality Index (AQI). Enum:'arsenic, bap, benzene, co2, nh3, no, no2, o2,
+      o3, so2, pb'
+    range: aqiMajorPollutant_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/aqiMajorPollutant
+  airTemperatureTSA:
+    description: Property. Air temperature time series aggregation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/airTemperatureTSA
+  ambientNoiseTSA:
+    description: Property. ambient Noise time series aggregation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/ambientNoiseTSA
+  arsenicTSA:
+    description: Property. Arsenic time series aggregation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/arsenicTSA
+  atmosphericPressureTSA:
+    description: Property. Atmospheric pressure time series aggregation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/atmosphericPressureTSA
+  bapTSA:
+    description: Property. Benzo(a)Pyrene time series aggregation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/bapTSA
+  benzeneTSA:
+    description: Property. Benzene time series aggregation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/benzeneTSA
+  coTSA:
+    description: Property. Carbon monoxide time series aggregation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/coTSA
+  co2TSA:
+    description: Property. Carbon dioxide time series aggregation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/co2TSA
+  nh3TSA:
+    description: Property. Ammonia time series aggregation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/nh3TSA
+  nickelTSA:
+    description: Property. Nickel time series aggregation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/nickelTSA
+  noTSA:
+    description: Property. Nitrogen monoxide time series aggregation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/noTSA
+  no2TSA:
+    description: Property. Nitrogen dioxide time series aggregation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/no2TSA
+  o2TSA:
+    description: Property. Oxygen time series aggregation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/o2TSA
+  o3TSA:
+    description: 'Property. Ozone time series aggregation '
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/o3TSA
+  pm10TSA:
+    description: Property. Particulate matter in the air with a diameter of 10 micrometers
+      or less time series aggregation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/pm10TSA
+  pm25TSA:
+    description: Property. Particulate matter in the air with a diameter of 25 micrometers
+      or less time series aggregation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/pm25TSA
+  relativeHumidityTSA:
+    description: Property. Relative Humidity time series aggregation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/relativeHumidityTSA
+  so2TSA:
+    description: Property. Sulfur dioxide time series aggregation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/so2TSA
+  pbTSA:
+    description: Property. Lead time series aggregation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/pbTSA
+  uvTSA:
+    description: Property. Ultra violet radiation time series aggregation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/uvTSA
+  illuminance:
+    description: Property. Measured illuminance
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/illuminance
+  solarRadiation:
+    description: Property. Model:'http://schema.org/Number'. Instantaneous solar radiation
+      measured in kW/m2. Units:'kW/m2'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/solarRadiation
+  precipitation:
+    description: Property. Model:'https://schema.org/Number'. Observed precipitation/rainfall
+      level over a given duration
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/precipitation
+  versionInfo:
+    description: Property. Version information corresponding to this observation
+    range: VersionInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/versionInfo
+enums:
+  aqiMajorPollutant_options:
+    name: aqiMajorPollutant_options
+    permissible_values:
+      arsenic:
+        text: arsenic
+      bap:
+        text: bap
+      benzene:
+        text: benzene
+      co2:
+        text: co2
+      nh3:
+        text: nh3
+      'no':
+        text: 'no'
+      no2:
+        text: no2
+      o2:
+        text: o2
+      o3:
+        text: o3
+      so2:
+        text: so2
+      pb:
+        text: pb

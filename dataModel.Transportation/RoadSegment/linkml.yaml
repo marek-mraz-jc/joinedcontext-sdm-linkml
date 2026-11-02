@@ -1,0 +1,902 @@
+id: https://github.com/smart-data-models/dataModel.Transportation/RoadSegment
+name: RoadSegment
+title: Smart Data Models - Transportation / Road Segment
+description: This entity contains a harmonised geographic and contextual description
+  of a road segment. A collection of road segments are used to describe a Road.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Transportation
+  spec.source.path: RoadSegment/schema.json
+  spec.source.commit: 48e0e7ebaaee430f04a47efb27fc38825f79b725
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"],
+    "agency_name": {"type": "Property", "value": "CORPORATION"}, "allowedVehicleType":
+    {"type": "Property", "value": ["car", "bus", "lorry", "trailer", "tanker", "van",
+    "caravan"]}, "bridgeCount": {"type": "Property", "value": 1}, "carriagewayLength":
+    {"type": "Property", "value": 0.095454461114818}, "carriagewayWidth": {"type":
+    "Property", "value": 3}, "category": {"type": "Property", "value": ["oneway"]},
+    "culvertCount": {"type": "Property", "value": 0}, "cyclePathLeftHeight": {"type":
+    "Property", "value": 1}, "cyclePathLeftWidth": {"type": "Property", "value": 2.5},
+    "cyclePathPlacement": {"type": "Property", "value": "NOT_AVAILABLE"}, "cyclePathRightHeight":
+    {"type": "Property", "value": 1}, "cyclePathRightWidth": {"type": "Property",
+    "value": 2.5}, "endPoint": {"type": "Property", "value": {"coordinates": [-4.55167335377909,
+    41.8570461783071], "type": "Point"}}, "id": "urn:ngsi-ld:RoadSegment:Spain-RoadSegment-A62-osm-24702186",
+    "laneUsage": {"type": "Property", "value": ["forward", "forward"]}, "location":
+    {"type": "GeoProperty", "value": {"coordinates": [[-4.7299180606009, 41.6844918725019],
+    [-4.72855890957602, 41.6860596957855], [-4.5520357341647, 41.8569278186523], [-4.55167335377909,
+    41.8570461783071]], "type": "LineString"}}, "maximumAllowedHeight": {"type": "Property",
+    "value": 72}, "maximumAllowedSpeed": {"type": "Property", "value": 120}, "maximumAllowedWeight":
+    {"type": "Property", "value": 109}, "maximumAllowedWidth": {"type": "Property",
+    "value": 74}, "medianHeight": {"type": "Property", "value": 3.6}, "medianLength":
+    {"type": "Property", "value": 0.09}, "medianWidth": {"type": "Property", "value":
+    1.5}, "minimumAllowedSpeed": {"type": "Property", "value": 60}, "municipalityInfo":
+    {"type": "Property", "value": {"ulbName": "KANNUR MUNICIPAL CORPORATION"}}, "name":
+    {"type": "Property", "value": "Valladolid-Due\u00f1as"}, "pedestrianPathLeftHeight":
+    {"type": "Property", "value": 2}, "pedestrianPathLeftWidth": {"type": "Property",
+    "value": 3.5}, "pedestrianPathMaterial": {"type": "Property", "value": "PAVEMENT
+    BLOCK"}, "pedestrianPathPlacement": {"type": "Property", "value": "NOT_AVAILABLE"},
+    "pedestrianPathRightHeight": {"type": "Property", "value": 2}, "pedestrianPathRightWidth":
+    {"type": "Property", "value": 3.5}, "refRoad": {"object": "urn:ngsi-ld:Road:Spain-Road-A62",
+    "type": "Relationship"}, "rightOfWayWidth": {"type": "Property", "value": 4},
+    "roadClass": {"type": "Property", "value": "OTHER_PUBLIC_ROAD"}, "roadDirection":
+    {"type": "Property", "value": "N"}, "roadId": {"type": "Property", "value": "5272"},
+    "roadMaterial": {"type": "Property", "value": "TAR"}, "roadName": {"type": "Property",
+    "value": "GREEN VILLA ROAD TO CHAITHRAM HOUSE"}, "roadWork": {"type": "Property",
+    "value": "OTHER"}, "source": {"type": "Property", "value": "http://wwww.openstreetmap.org"},
+    "startPoint": {"type": "Property", "value": {"coordinates": [-4.7299180606009,
+    41.6844918725019], "type": "Point"}}, "status": {"type": "Property", "value":
+    "open"}, "statusDescription": {"type": "Property", "value": "Bridge state = DOWN"},
+    "totalCyclePathWidth": {"type": "Property", "value": 5}, "totalLaneNumber": {"type":
+    "Property", "value": 2}, "totalPedestrianPathLength": {"type": "Property", "value":
+    0.09}, "totalPedestrianPathWidth": {"type": "Property", "value": 7}, "type": "RoadSegment"}'
+classes:
+  RoadSegment:
+    class_uri: https://smartdatamodels.org/dataModel.Transportation/RoadSegment
+    description: This entity contains a harmonised geographic and contextual description
+      of a road segment. A collection of road segments are used to describe a Road.
+    is_a: Entity
+    slots:
+    - address
+    - agency_name
+    - allowedVehicleType
+    - alternateName
+    - annotations
+    - areaServed
+    - bridgeCount
+    - carriagewayLength
+    - carriagewayWidth
+    - category
+    - color
+    - culvertCount
+    - cyclePathLeftHeight
+    - cyclePathLeftWidth
+    - cyclePathMaterial
+    - cyclePathPlacement
+    - cyclePathRightHeight
+    - cyclePathRightWidth
+    - dataDescriptor
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - endKilometer
+    - endPoint
+    - image
+    - laneInfo
+    - laneUsage
+    - length
+    - maximumAllowedHeight
+    - maximumAllowedSpeed
+    - maximumAllowedWeight
+    - maximumAllowedWidth
+    - medianHeight
+    - medianLength
+    - medianWidth
+    - minimumAllowedSpeed
+    - municipalityInfo
+    - name
+    - owner
+    - pedestrianPathLeftHeight
+    - pedestrianPathLeftWidth
+    - pedestrianPathMaterial
+    - pedestrianPathPlacement
+    - pedestrianPathRightHeight
+    - pedestrianPathRightWidth
+    - refRoad
+    - rightOfWayWidth
+    - roadClass
+    - roadDirection
+    - roadId
+    - roadMaterial
+    - roadName
+    - roadWork
+    - seeAlso
+    - source
+    - startKilometer
+    - startPoint
+    - status
+    - statusDescription
+    - totalCyclePathWidth
+    - totalLaneNumber
+    - totalPedestrianPathLength
+    - totalPedestrianPathWidth
+    - width
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  LaneInfo:
+    description: Property. Describes the aspects of lanes of the road corresponding
+      to this observation
+    attributes:
+      laneId:
+        description: Property. Unique identification number of the lane corresponding
+          to this observation
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      laneDirection:
+        description: Property. Describes the direction in which vehicles are plying
+          on the lane corresponding to this observation. Enum:'FORWARD, BACKWARD,
+          INBOUND, OUTBOUND, RIGHT, LEFT'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  MunicipalityInfo:
+    description: Property. Model:'https://schema.org/Text. Municipality information
+      corresponding to this observation
+    attributes:
+      district:
+        description: Property. Model:'https://schema.org/Text'. District name corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      ulbName:
+        description: Property. Model:'https://schema.org/Text'. Name of the Urban
+          Local Body corresponding to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      cityId:
+        description: Property. Model:'https://schema.org/Text'. City ID corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      wardId:
+        description: Property. Model:'https://schema.org/Text'. Ward ID corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      stateName:
+        description: Property. Model:'https://schema.org/Text'. Name of the state
+          corresponding to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      cityName:
+        description: Property. Model:'https://schema.org/Text'. City name corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      zoneName:
+        description: Property. Model:'https://schema.org/Text'. Zone name corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      zoneId:
+        description: Property. Model:'https://schema.org/Text'. Zone ID corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      wardName:
+        description: Property. Model:'https://schema.org/Text'. Ward name corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      wardNum:
+        description: Property. Model:'https://schema.org/Number'. Ward number corresponding
+          to this observation
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/areaServed
+  color:
+    description: Property. The color of the product. Model:'https://schema.org/color'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/color
+  image:
+    description: Property. An image of the item. Model:'https://schema.org/URL'
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/image
+  annotations:
+    description: Property. Annotations about the item. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/annotations
+  refRoad:
+    description: Relationship. Road to which this road segment belongs to
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/refRoad
+  startPoint:
+    description: GeoProperty. Geojson reference to the item. It can be Point, LineString,
+      Polygon, MultiPoint, MultiLineString or MultiPolygon
+    required: true
+    annotations:
+      ngsi_ld_kind: GeoProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/startPoint
+  endPoint:
+    description: GeoProperty. Geojson reference to the item. It can be Point, LineString,
+      Polygon, MultiPoint, MultiLineString or MultiPolygon
+    required: true
+    annotations:
+      ngsi_ld_kind: GeoProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/endPoint
+  startKilometer:
+    description: 'Property. The kilometer number (measured from the road''s start
+      point) where this road segment starts. Model:''https://schema.org/Number''. '
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/startKilometer
+  endKilometer:
+    description: 'Property. The kilometer number (measured from the road''s start
+      point) where this road segment ends. Model:''https://schema.org/Number''. '
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/endKilometer
+  allowedVehicleType:
+    description: 'Property. Vehicle type(s) allowed to transit through this road segment.
+      Model:''https://schema.org/Text''. Enum:''agriculturalVehicle, bicycle, bus,
+      car, caravan, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle,
+      lorry, moped, motorcycle, motorcycleWithSideCar, motorscooter, tanker, trailer,
+      van, anyVehicle''. Allowed values: The following values defined by _VehicleTypeEnum_,
+      [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/):'
+    range: allowedVehicleType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/allowedVehicleType
+  totalLaneNumber:
+    description: Property. Total number of lanes offered by this road segment. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/totalLaneNumber
+  length:
+    description: Property. Total length of this road segment in kilometers. Model:'https://schema.org/length'.
+      Units:'Kilometer (Km)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/length
+  maximumAllowedSpeed:
+    description: Property. Maximum allowed speed plying the road segment. More restrictive
+      limits might be applied to specific vehicle types (trucks, caravans, etc.).
+      Model:'https://schema.org/Number'. Units:'Kilometer per hour (Km/h)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/maximumAllowedSpeed
+  minimumAllowedSpeed:
+    description: Property. Minimum allowed speed while transiting this road segment.
+      Model:'https://schema.org/Number'. Units:'Kilometer per hour (Km/h)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/minimumAllowedSpeed
+  maximumAllowedHeight:
+    description: Property. Maximum allowed height for vehicles transiting this road
+      segment. Model:'https://schema.org/Number'. Units:'Meter (m)'. Model:'https://schema.org/height'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/maximumAllowedHeight
+  maximumAllowedWeight:
+    description: Property. Maximum allowed weight for vehicles transiting this road
+      segment. Model:'https://schema.org/Number'. Units:'Kilogram (Kg)'. Model:'https://schema.org/weight'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/maximumAllowedWeight
+  width:
+    description: Property. Road's segment width.. Model:'https://schema.org/Number'.
+      Units:'Meter (m)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/width
+  laneUsage:
+    description: 'Property. This attribute can be used to convey specific parameters
+      describing each lane. Model:''https://schema.org/Text''. It must contain a string
+      per road segment lane. The element 0 of the array must contain the information
+      of lane 1, and so on. Format of the referred string must be: <lane_direction>,
+      <lane_minimumAllowedSpeed>, <lane_maximumAllowedSpeed>, <lane_maximumAllowedHeight>,
+      <lane_maximumAllowedWeight>. <lane_direction> is a text string with the following
+      allowed values: `forward`. The lane is currently used in the `forwards` direction.
+      `backward`. The lane is currently used in the `backwards` direction. The only
+      mandatory parameter is `lane_direction`. If not specified, the rest of parameters
+      can be assumed to be equal to those specified at entity level'
+    range: laneUsage_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/laneUsage
+  category:
+    description: 'Property. Allows to convey extra characteristics of a road segment.
+      Model:''https://schema.org/Text''. Enum:''oneway, toll, link''.  `oneway`: Flags
+      whether the road segment can only be used in one direction. If not present it
+      means road segment can be used in both directions (forwards and backwards).
+      See also [http://wiki.openstreetmap.org/wiki/Key:oneway](http://wiki.openstreetmap.org/wiki/Key:oneway).
+      `toll` : Flags whether the road segment is under toll fees. `link` : Flags whether
+      this road segment is an auxiliary link segment for exiting or entering a road.
+      See [https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link).
+      Any other value meaningful to an application'
+    range: category_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/category
+  status:
+    description: 'Property. Specific driving conditions on the roadsegment. Use statusDescription
+      for additional information. Enum: ‘open, closed, limited’.  `open`: the roadsegment
+      can be used in full intended capacity, `closed`: no traffic is possible, e.g.
+      due to roadworks, an open bridge or lock, or any other event preventing traffic.
+      `limited`: traffic is possible, but not in the full capacity'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://uri.etsi.org/ngsi-ld/status
+  statusDescription:
+    description: Property. Additional information to the status attribute
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/statusDescription
+  dataDescriptor:
+    description: Relationship. URI pointing to the data-descriptor entity
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/dataDescriptor
+  cyclePathMaterial:
+    description: Property. Construction material used for laying the cycle path on
+      the sides of the road corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/cyclePathMaterial
+  carriagewayLength:
+    description: Property. Total length of the carriage way of the road segment corresponding
+      to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/carriagewayLength
+  bridgeCount:
+    description: Property. Number of bridges in the road segment corresponding to
+      this observation. Takes 0 (zero) as the value when the road segment has no bridges
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/bridgeCount
+  pedestrianPathLeftHeight:
+    description: Property. Height of the walkway placed on the left edge of the road
+      corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/pedestrianPathLeftHeight
+  totalPedestrianPathLength:
+    description: Property. Total length of the walkway present in the road corresponding
+      to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/totalPedestrianPathLength
+  totalPedestrianPathWidth:
+    description: Property. Total width of the walkway present in the road corresponding
+      to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/totalPedestrianPathWidth
+  culvertCount:
+    description: Property. Number of culverts prevalent in the trace of the road corresponding
+      to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/culvertCount
+  roadName:
+    description: Property. The name of the road corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/roadName
+  roadClass:
+    description: 'Property. The type of road corresponding to this observation. Enum:
+      [OTHER_PUBLIC_ROAD, PRIVATE_ROAD, MINOR_CITY_ROAD, MAJOR_DISTRICT_ROAD, MAJOR_CITY_ROAD,
+      NATIONAL_HIGHWAY, SERVICE_ROAD, STATE_HIGHWAY, OTHER_DISTRICT_ROAD, PORT_ROAD]'
+    range: roadClass_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/roadClass
+  medianHeight:
+    description: Property. Height of the median or central reservation in the road
+      corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/medianHeight
+  roadWork:
+    description: Property. Reasons for the road work in case of urgent intervention.
+      A combination of these values. Enum:'COLLAPSE, DERAILMENT, FIRE, FLOOD, GASLEAK,
+      LANDSLIDE, OTHER, POWERCUT, ROCKFALL, SAGGING, WATERLEAK'
+    range: roadWork_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/roadWork
+  roadId:
+    description: Property. Unique internal representation of the road corresponding
+      to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/roadId
+  cyclePathRightWidth:
+    description: Property. Width of the cycle track on the right edge of the road
+      corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/cyclePathRightWidth
+  roadMaterial:
+    description: Property. The construction material used for laying the carriageway
+      corresponding to this observation. For eg. concrete, earthen, tar etc
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/roadMaterial
+  medianWidth:
+    description: Property. Width of the median or central reservation in the road
+      corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/medianWidth
+  carriagewayWidth:
+    description: Property. Total width of the carriage way of the road segment corresponding
+      to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/carriagewayWidth
+  cyclePathRightHeight:
+    description: Property. Height of the cycle track on the right edge of the road
+      corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/cyclePathRightHeight
+  roadDirection:
+    description: Property. Represents the direction the road is heading to. Enum:'
+      ['N, S, E, W'. The values N,S,E,W represent North,South,East,West respectively
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/roadDirection
+  medianLength:
+    description: Property. Length of the median or central reservation in the road
+      corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/medianLength
+  pedestrianPathMaterial:
+    description: Property. Construction material used for laying the walkway / footpath
+      on the sides of the road corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/pedestrianPathMaterial
+  cyclePathLeftWidth:
+    description: Property. Width of the cycle track on the left edge of the road corresponding
+      to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/cyclePathLeftWidth
+  maximumAllowedWidth:
+    description: Property. Maximum allowed width for vehicles using the entity corresponding
+      to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/maximumAllowedWidth
+  rightOfWayWidth:
+    description: Property. Right of Way (RoW) is the total land area available for
+      the roadway. Its width accommodates for carriages way + other necessities +
+      future extension, along the road's alignment
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/rightOfWayWidth
+  cyclePathLeftHeight:
+    description: Property. Height of the cycle track on the left edge of the road
+      corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/cyclePathLeftHeight
+  pedestrianPathRightWidth:
+    description: Property. Width of the walkway placed on the right edge of the road
+      corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/pedestrianPathRightWidth
+  pedestrianPathLeftWidth:
+    description: Property. Width of the walkway placed on the left edge of the road
+      corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/pedestrianPathLeftWidth
+  laneInfo:
+    description: Property. Describes the aspects of lanes of the road corresponding
+      to this observation
+    range: LaneInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/laneInfo
+  pedestrianPathPlacement:
+    description: Property. Describes the presence and placement of pedestrian along
+      the road segment corresponding to this observation. Enum:'RIGHT, LEFT, BOTH,
+      NOT_AVAILABLE'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/pedestrianPathPlacement
+  pedestrianPathRightHeight:
+    description: Property. Height of the walkway placed on the right edge of the road
+      corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/pedestrianPathRightHeight
+  cyclePathPlacement:
+    description: Property. Describes the placement of cycle track along the road segment
+      corresponding to this observation. Enum:' ['RIGHT, LEFT, BOTH, NOT_AVAILABLE'
+    range: cyclePathPlacement_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/cyclePathPlacement
+  totalCyclePathWidth:
+    description: Property. Total width of the cycle track present in the road corresponding
+      to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/totalCyclePathWidth
+  agency_name:
+    description: 'Property. The agency_name field contains the full name of the agency
+      or organisation responsible for maintenance of the entity under consideration.
+      SameAs: ''agency_name'' field from GTFS Static Field Definition - agency.txt
+      (https://developers.google.com/transit/gtfs/reference#agencytxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/agency_name
+  municipalityInfo:
+    description: Property. Model:'https://schema.org/Text. Municipality information
+      corresponding to this observation
+    range: MunicipalityInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/municipalityInfo
+enums:
+  allowedVehicleType_options:
+    name: allowedVehicleType_options
+    permissible_values:
+      agriculturalVehicle:
+        text: agriculturalVehicle
+      bicycle:
+        text: bicycle
+      bus:
+        text: bus
+      car:
+        text: car
+      caravan:
+        text: caravan
+      carWithCaravan:
+        text: carWithCaravan
+      carWithTrailer:
+        text: carWithTrailer
+      constructionOrMaintenanceVehicle:
+        text: constructionOrMaintenanceVehicle
+      lorry:
+        text: lorry
+      moped:
+        text: moped
+      motorcycle:
+        text: motorcycle
+      motorcycleWithSideCar:
+        text: motorcycleWithSideCar
+      motorscooter:
+        text: motorscooter
+      tanker:
+        text: tanker
+      trailer:
+        text: trailer
+      van:
+        text: van
+      anyVehicle:
+        text: anyVehicle
+  laneUsage_options:
+    name: laneUsage_options
+    permissible_values:
+      forward:
+        text: forward
+      backward:
+        text: backward
+  category_options:
+    name: category_options
+    permissible_values:
+      oneway:
+        text: oneway
+      toll:
+        text: toll
+      link:
+        text: link
+  roadClass_options:
+    name: roadClass_options
+    permissible_values:
+      MAJOR_DISTRICT_ROAD:
+        text: MAJOR_DISTRICT_ROAD
+      MAJOR_CITY_ROAD:
+        text: MAJOR_CITY_ROAD
+      MINOR_CITY_ROAD:
+        text: MINOR_CITY_ROAD
+      NATIONAL_HIGHWAY:
+        text: NATIONAL_HIGHWAY
+      OTHER_DISTRICT_ROAD:
+        text: OTHER_DISTRICT_ROAD
+      OTHER_PUBLIC_ROAD:
+        text: OTHER_PUBLIC_ROAD
+      PORT_ROAD:
+        text: PORT_ROAD
+      PRIVATE_ROAD:
+        text: PRIVATE_ROAD
+      SERVICE_ROAD:
+        text: SERVICE_ROAD
+      STATE_HIGHWAY:
+        text: STATE_HIGHWAY
+  roadWork_options:
+    name: roadWork_options
+    permissible_values:
+      COLLAPSE:
+        text: COLLAPSE
+      DERAILMENT:
+        text: DERAILMENT
+      FIRE:
+        text: FIRE
+      FLOOD:
+        text: FLOOD
+      GASLEAK:
+        text: GASLEAK
+      LANDSLIDE:
+        text: LANDSLIDE
+      OTHER:
+        text: OTHER
+      POWERCUT:
+        text: POWERCUT
+      ROCKFALL:
+        text: ROCKFALL
+      SAGGING:
+        text: SAGGING
+      WATERLEAK:
+        text: WATERLEAK
+  cyclePathPlacement_options:
+    name: cyclePathPlacement_options
+    permissible_values:
+      BOTH:
+        text: BOTH
+      LEFT:
+        text: LEFT
+      NOT_AVAILABLE:
+        text: NOT_AVAILABLE
+      RIGHT:
+        text: RIGHT

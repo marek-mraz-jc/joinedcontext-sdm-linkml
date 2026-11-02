@@ -1,0 +1,1011 @@
+id: https://github.com/smart-data-models/dataModel.Transportation/RoadAccident
+name: RoadAccident
+title: Smart Data Models - RoadAccident schema
+description: A road accident description with causes and aftermath. First version
+  developed in Synchronicity project
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Transportation
+  spec.source.path: RoadAccident/schema.json
+  spec.source.commit: 48e0e7ebaaee430f04a47efb27fc38825f79b725
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"],
+    "accidentDate": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2021-03-12T13:59:36Z"}}, "accidentDescription": {"type": "Property", "value":
+    ["23", "46"]}, "accidentLocation": {"type": "Property", "value": "5"}, "accidentStatisticalDate":
+    {"type": "Property", "value": {"hour": 4, "quarter": 1, "weekday": "Friday", "year":
+    2021}}, "accidentType": {"type": "Property", "value": ["10", "6"]}, "address":
+    {"type": "Property", "value": {"addressCountry": "Germany", "addressLocality":
+    "Berlin", "addressRegion": "Berlin", "areaServed": "worldwide.", "postOfficeBoxNumber":
+    "", "postalCode": "10387", "streetAddress": "FranklinStrasse"}}, "alternateName":
+    {"type": "Property", "value": "Other name."}, "areaServed": {"type": "Property",
+    "value": "worldwide"}, "dataProvider": {"type": "Property", "value": "Municipality."},
+    "dateCreated": {"type": "Property", "value": {"@type": "DateTime", "@value": "2018-06-23T04:19:24Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2020-10-29T08:36:40Z"}}, "description": {"type": "Property", "value": "Clash
+    in the middle of a traffic light"}, "id": "urn:ngsi-ld:RoadAccident:id:ORHW:45620815",
+    "localId": {"type": "Property", "value": "20210312-A1."}, "location": {"type":
+    "GeoProperty", "value": {"coordinates": [-56.6404505, 88.370658], "type": "Point"}},
+    "name": {"type": "Property", "value": "Name of the element of the accident."},
+    "numPassengersDead": {"type": "Property", "value": 1}, "numPassengersInjured":
+    {"type": "Property", "value": 1}, "numPedestrianDead": {"type": "Property", "value":
+    0}, "numPedestrianInjured": {"type": "Property", "value": 1}, "owner": {"type":
+    "Property", "value": ["urn:ngsi-ld:RoadAccident:items:SUUU:18395806", "urn:ngsi-ld:RoadAccident:items:GVOF:30958855"]},
+    "pedestriansInvolved": {"type": "Property", "value": true}, "roadClass": {"type":
+    "Property", "value": "Motorway."}, "roadIntersection": {"type": "Property", "value":
+    "8"}, "roadPaving": {"type": "Property", "value": "2"}, "roadSign": {"type": "Property",
+    "value": "5"}, "roadSurface": {"type": "Property", "value": "2"}, "roadTrunk":
+    {"type": "Property", "value": "12"}, "seeAlso": {"type": "Property", "value":
+    ["urn:ngsi-ld:RoadAccident:items:ESLS:37894243", "urn:ngsi-ld:RoadAccident:items:ZNUH:87936284"]},
+    "source": {"type": "Property", "value": "To be defined"}, "status": {"type": "Property",
+    "value": "onGoing"}, "totalDeadPeopleWithin24Hours": {"type": "Property", "value":
+    0}, "totalDeadPeopleWithin30Days": {"type": "Property", "value": 0}, "totalInjured":
+    {"type": "Property", "value": 2}, "type": "RoadAccident", "vehiclesInvolved":
+    {"type": "Property", "value": ["21", "6"]}, "weakestSubject": {"type": "Property",
+    "value": "20"}, "weatherConditions": {"type": "Property", "value": ["10", "20"]}}'
+classes:
+  RoadAccident:
+    class_uri: https://smartdatamodels.org/dataModel.Transportation/RoadAccident
+    description: A road accident description with causes and aftermath. First version
+      developed in Synchronicity project
+    is_a: Entity
+    slots:
+    - accidentDate
+    - accidentDescription
+    - accidentLocation
+    - accidentStatisticalDate
+    - accidentType
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - localId
+    - name
+    - numPassengersDead
+    - numPassengersInjured
+    - numPedestrianDead
+    - numPedestrianInjured
+    - owner
+    - pedestriansInvolved
+    - roadClass
+    - roadIntersection
+    - roadPaving
+    - roadSign
+    - roadSurface
+    - roadTrunk
+    - seeAlso
+    - source
+    - status
+    - totalDeadPeopleWithin24Hours
+    - totalDeadPeopleWithin30Days
+    - totalInjured
+    - vehiclesInvolved
+    - weakestSubject
+    - weatherConditions
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  AccidentStatisticalDate:
+    description: Property. approximate datetime of the accident (often original accident
+      data source reports only statistical attributes such as season, weekday and
+      approximate hour. Model:'https://schema.org/DateTime'
+    attributes:
+      year:
+        range: integer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      quarter:
+        range: integer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      weekday:
+        description: Week days
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      hour:
+        range: integer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/areaServed
+  localId:
+    description: Property. Unique identifier from the source data set. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/localId
+  status:
+    description: Property. Status of the Road Accident. Model:'https://schema.org/Text'.
+      Enum:'archived, onGoing, solved'
+    range: status_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://uri.etsi.org/ngsi-ld/status
+  accidentDate:
+    description: Property. Datetime of the accident. Model:'https://schema.org/DateTime'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/accidentDate
+  accidentStatisticalDate:
+    description: Property. approximate datetime of the accident (often original accident
+      data source reports only statistical attributes such as season, weekday and
+      approximate hour. Model:'https://schema.org/DateTime'
+    range: AccidentStatisticalDate
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/accidentStatisticalDate
+  accidentType:
+    description: 'Property. Quick classification this Road Accident. 1: Frontal collision;
+      2: Frontal-lateral collision; 3: Side crash; 4: Collision; 5: Pedestrian investment;
+      6: Impact with vehicle stopped or stopped; 7: Impact with parked vehicle; 8:
+      Impact with obstacle; 9: Impact with train; 10: Spill, slip; 11: Accident due
+      to sudden braking; 12: Accident due to falling from a vehicle;. '
+    range: accidentType_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/accidentType
+  accidentDescription:
+    description: 'Property. Description about this Road Accident as a combination
+      of codified situation enlisted. 0: Unspecified circumstance; 1: Driver proceeded
+      regularly without turning; 2: Driver proceeded with a distracted driving or
+      undecided course; 3: Driver proceeded without maintaining a safe distance; 4:
+      Driver proceeded without giving priority to the vehicle coming from the right;
+      5: Driver proceeded without respecting the stop; 6: Driver proceeded without
+      respecting the signal to give precedence; 7: Driver proceeded against traffic;
+      8: Driver proceeded without respecting the traffic light or agent signals; 10:
+      Driver proceeded without respecting the signs of prohibition of transit or access;
+      11: Driver proceeded with speeding; 12: Driver proceeded without respecting
+      the speed limits; 13: Driver proceeded with the dazzling lights crossing other
+      vehicles; 14: Driver turned right regularly; 15: It turned irregularly to the
+      right; 16: Driver turned left regularly; 17: It turned irregularly to the left;
+      18: Driver passed at the intersection; 20: Driver proceeded regularly; 21: Driver
+      proceeded with a distracted driving or undecided course; 22: Driver proceeded
+      without maintaining a safe distance; 23: Driver proceeded with speeding; 24:
+      Driver proceeded without respecting the speed limits; 25: It proceeded not near
+      the right edge of the roadway; 26: Driver proceeded against traffic; 27: Driver
+      proceeded without respecting the signs of prohibition of transit or access;
+      28: Driver proceeded with the dazzling lights crossing other vehicles; 29: Driver
+      passed regularly; 30: It passed irregularly to the right; 31: Driver overtook
+      on a curve, on a hill or with insufficient visibility; 32: It overtook a vehicle
+      that was overtaking another; 33: Driver passed without observing the appropriate
+      prohibition sign; 34: Maneuvered in relegation or conversion; 35: Driver maneuvered
+      to get into the flow of circulation; 36: Maneuvering To turn left (private passage,
+      distributor); 37: Driver maneuvered regularly to stop or stop; 38: Driver maneuvered
+      irregularly to stop or stop; 39: It was joined by other irregular two-wheeled
+      vehicles; 40: Driver proceeded regularly; 41: Driver proceeded with speeding;
+      42: Driver proceeded without respecting the speed limits; 43: Driver proceeded
+      against traffic; 44: Driver passed the vehicle in gear; 45: Maneuvered; 46:
+      Maneuvered without respecting traffic light or agent signals; 47: Driver came
+      out of the driveway without precaution; 48: Driver stepped out of the lane and
+      hit the pawn; 49: It did not give priority to the pedestrian on the appropriate
+      crossings; 50: It overtook a vehicle stopped to allow the crossing; 51: Driver
+      hit the pedestrian with the load; 52: Driver was passing a tram unevenly at
+      the stop; 60: Driver proceeded regularly; 61: Driver proceeded with a distracted
+      driving or undecided course; 62: Driver proceeded without maintaining a safe
+      distance; 63: Driver proceeded against traffic; 64: Driver proceeded with speeding;
+      65: Driver proceeded without respecting the speed limits; 66: Driver proceeded
+      without respecting the signs of prohibition of transit or access; 67: Driver
+      was passing another vehicle in gear; 68: Driver imprudently crossed the level
+      crossing; 70: Spill with spillage to avoid impact; 71: Listening with spillage
+      for distracted driving; 72: List with over-speed spill; 73: Driver suddenly
+      braked with consequence to the transported; 74: Fall of person from vehicle
+      for: door opening; 75: Fall of person from vehicle for: descent from vehicle
+      in motion; 76: Fall of person from vehicle due to: clinging or improperly placed;
+      80: Brake failure or failure; 81: Breakage or steering failure; 82: Tire burst
+      or excessive wear; 83: Lack or insufficiency of headlights or position lights;
+      84: Lack or insufficiency of flashing lights or stopping light signals; 85:
+      Breaking of trailer coupling parts; 86: Deficiency of dangerous goods transport
+      equipment; 87: Deficiency of the adaptations prescribed to vehicles of physically
+      handicapped people; 88: Wheel detachment; 89: Lack or insufficiency of visual
+      devices for cycles. Model:''https://schema.org/Text'''
+    range: accidentDescription_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/accidentDescription
+  weatherConditions:
+    description: 'Property. Brief description of weather conditions during this Road
+      Accident. 0 : clearNight 1 : sunnyDay 2 : slightlyCloudy 3 : partlyCloudy 4
+      : mist 5 : fog 6 : highClouds 7 : cloudy 8 : veryCloudy 9 : overcast 10 : lightRainShower
+      11 : drizzle 12 : lightRain 13 : heavyRainShower 14 : heavyRain 15 : sleetShower
+      16 : sleet 17 : hailShower 18 : hail 19 : shower 20 : lightSnow 21 : snow 22
+      : heavySnowShower 23 : heavySnow 24 : thunderShower 25 : thunder'
+    range: weatherConditions_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/weatherConditions
+  roadSurface:
+    description: 'Property. Brief description of the condition of the road during
+      the accident. 1: Dry; 2: Wet; 3: Slippery; 4: frozen; 5: Snowcapped;'
+    range: roadSurface_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/roadSurface
+  roadPaving:
+    description: 'Property. Road paving. 1: Paved road; 2: Rough paved road; 3: Unpaved
+      road;'
+    range: roadPaving_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/roadPaving
+  accidentLocation:
+    description: 'Property. Brief description if the accident took place in a urban
+      or extra-urban area. 0: Regional within the urban area 1: Urban road in the
+      town 2: Provincial road within the town 3: State road within the village 4:
+      Extra-urban road 5: Provincial 6: State road 7: Highway 8: Another way 9: Regional
+      road'
+    range: accidentLocation_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/accidentLocation
+  roadClass:
+    description: Property.  The classification of road where this accident took place.
+      Model:'https://wiki.openstreetmap.org/wiki/Key:highway'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/roadClass
+  roadIntersection:
+    description: 'Property. Brief description of the piece of the road where the accident
+      took place.   1: Crossroad; 2: Roundabout; 3: Reported intersection; 4: Intersection
+      with traffic light; 5: Intersection not reported; 6: Rail crossing; 7: Straight;
+      8: Curve; 9: Bump, bottleneck; 10: Slope; 11: Illuminated gallery; 12: Unlit
+      gallery;'
+    range: roadIntersection_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/roadIntersection
+  roadTrunk:
+    description: 'Property. Brief description of type of trunk of the road where the
+      accident took place. 1: Road branch; 2: Secondary branch; 3: Minor branch; 4:
+      Junction branch; 5: Road junction; 6: Motorway left lane; 7: Highway carriageway
+      right; 8: Motorway junction entrance; 9: Highway exit junction; 10: Highway
+      junction trunk; 11: Highway station; 12: Other cases; 15: Extra urban road'
+    range: roadTrunk_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/roadTrunk
+  roadSign:
+    description: 'Property. Brief description of the road sign where the accident
+      took place. 1: Absent; 2: Vertical; 3: Horizontal; 4: Vertical and horizontal;
+      5: Temporary by construction site;'
+    range: roadSign_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/roadSign
+  pedestriansInvolved:
+    description: Property. Boolean to determine if pedestrians were involved in the
+      accidents
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/pedestriansInvolved
+  vehiclesInvolved:
+    description: 'Property. List of the vehicles (and pedestrians) involved because
+      the accident 0 : pedestrian 1 : bicycle 2 : agriculturalVehicle 3 : bus 4 :
+      minibus 5 : car 6 : caravan 7 : tram 8 : tanker 9 : carWithCaravan 10 : carWithTrailer
+      11 : lorry 12 : moped 13 : tanker 14 : motorcycle 15 : motorcycleWithSideCar
+      16 : motorscooter 17 : trailer 18 : van 19 : caravan 20 : constructionOrMaintenanceVehicle
+      21 : trolley 22 : binTrolley 23 : sweepingMachine 24 : cleaningTrolley'
+    range: vehiclesInvolved_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/vehiclesInvolved
+  weakestSubject:
+    description: 'Property. vehicle that represent the weakest subject involved because
+      the accident (usually pedestrian). 0 : pedestrian 1 : bicycle 2 : agriculturalVehicle
+      3 : bus 4 : minibus 5 : car 6 : caravan 7 : tram 8 : tanker 9 : carWithCaravan
+      10 : carWithTrailer 11 : lorry 12 : moped 13 : tanker 14 : motorcycle 15 : motorcycleWithSideCar
+      16 : motorscooter 17 : trailer 18 : van 19 : caravan 20 : constructionOrMaintenanceVehicle
+      21 : trolley 22 : binTrolley 23 : sweepingMachine 24 : cleaningTrolley'
+    range: weakestSubject_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/weakestSubject
+  numPassengersInjured:
+    description: Property. Model:'https://schema.org/Number'. Number of vehicle's
+      passengers injured because the accident
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/numPassengersInjured
+  numPassengersDead:
+    description: Property. Model:'https://schema.org/Number'. Number of vehicle's
+      passengers dead because the accident
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/numPassengersDead
+  numPedestrianInjured:
+    description: Property. Model:'https://schema.org/Number'. Number of pedestrians
+      injured because the accident
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/numPedestrianInjured
+  numPedestrianDead:
+    description: Property. Model:'https://schema.org/Number'. Number of pedestrians
+      dead because the accident
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/numPedestrianDead
+  totalInjured:
+    description: Property. Model:'https://schema.org/Number'. total number of people
+      injured (not dead) because the accident
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/totalInjured
+  totalDeadPeopleWithin30Days:
+    description: Property. Model:'https://schema.org/Number'. Number of people dead
+      because the aftermath of the accident
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/totalDeadPeopleWithin30Days
+  totalDeadPeopleWithin24Hours:
+    description: Property. Model:'https://schema.org/Number'. Number of people dead
+      directly because the accident
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/totalDeadPeopleWithin24Hours
+enums:
+  status_options:
+    name: status_options
+    permissible_values:
+      archived:
+        text: archived
+      onGoing:
+        text: onGoing
+      solved:
+        text: solved
+  accidentType_options:
+    name: accidentType_options
+    permissible_values:
+      '1':
+        text: '1'
+      '2':
+        text: '2'
+      '3':
+        text: '3'
+      '4':
+        text: '4'
+      '5':
+        text: '5'
+      '6':
+        text: '6'
+      '7':
+        text: '7'
+      '8':
+        text: '8'
+      '9':
+        text: '9'
+      '10':
+        text: '10'
+      '11':
+        text: '11'
+      '12':
+        text: '12'
+  accidentDescription_options:
+    name: accidentDescription_options
+    permissible_values:
+      '0':
+        text: '0'
+      '1':
+        text: '1'
+      '2':
+        text: '2'
+      '3':
+        text: '3'
+      '4':
+        text: '4'
+      '5':
+        text: '5'
+      '6':
+        text: '6'
+      '7':
+        text: '7'
+      '8':
+        text: '8'
+      '9':
+        text: '9'
+      '10':
+        text: '10'
+      '11':
+        text: '11'
+      '12':
+        text: '12'
+      '13':
+        text: '13'
+      '14':
+        text: '14'
+      '15':
+        text: '15'
+      '16':
+        text: '16'
+      '17':
+        text: '17'
+      '18':
+        text: '18'
+      '19':
+        text: '19'
+      '20':
+        text: '20'
+      '21':
+        text: '21'
+      '22':
+        text: '22'
+      '23':
+        text: '23'
+      '24':
+        text: '24'
+      '25':
+        text: '25'
+      '26':
+        text: '26'
+      '27':
+        text: '27'
+      '28':
+        text: '28'
+      '29':
+        text: '29'
+      '30':
+        text: '30'
+      '31':
+        text: '31'
+      '32':
+        text: '32'
+      '33':
+        text: '33'
+      '34':
+        text: '34'
+      '35':
+        text: '35'
+      '36':
+        text: '36'
+      '37':
+        text: '37'
+      '38':
+        text: '38'
+      '39':
+        text: '39'
+      '40':
+        text: '40'
+      '41':
+        text: '41'
+      '42':
+        text: '42'
+      '43':
+        text: '43'
+      '44':
+        text: '44'
+      '45':
+        text: '45'
+      '46':
+        text: '46'
+      '47':
+        text: '47'
+      '48':
+        text: '48'
+      '49':
+        text: '49'
+      '50':
+        text: '50'
+      '51':
+        text: '51'
+      '52':
+        text: '52'
+      '53':
+        text: '53'
+      '54':
+        text: '54'
+      '55':
+        text: '55'
+      '56':
+        text: '56'
+      '57':
+        text: '57'
+      '58':
+        text: '58'
+      '59':
+        text: '59'
+      '60':
+        text: '60'
+      '61':
+        text: '61'
+      '62':
+        text: '62'
+      '63':
+        text: '63'
+      '64':
+        text: '64'
+      '65':
+        text: '65'
+      '66':
+        text: '66'
+      '67':
+        text: '67'
+      '68':
+        text: '68'
+      '69':
+        text: '69'
+      '70':
+        text: '70'
+      '71':
+        text: '71'
+      '72':
+        text: '72'
+      '73':
+        text: '73'
+      '74':
+        text: '74'
+      '75':
+        text: '75'
+      '76':
+        text: '76'
+      '77':
+        text: '77'
+      '78':
+        text: '78'
+      '79':
+        text: '79'
+      '80':
+        text: '80'
+      '81':
+        text: '81'
+      '82':
+        text: '82'
+      '83':
+        text: '83'
+      '84':
+        text: '84'
+      '85':
+        text: '85'
+      '86':
+        text: '86'
+      '87':
+        text: '87'
+      '88':
+        text: '88'
+      '89':
+        text: '89'
+  weatherConditions_options:
+    name: weatherConditions_options
+    permissible_values:
+      '0':
+        text: '0'
+      '1':
+        text: '1'
+      '2':
+        text: '2'
+      '3':
+        text: '3'
+      '4':
+        text: '4'
+      '5':
+        text: '5'
+      '6':
+        text: '6'
+      '7':
+        text: '7'
+      '8':
+        text: '8'
+      '9':
+        text: '9'
+      '10':
+        text: '10'
+      '11':
+        text: '11'
+      '12':
+        text: '12'
+      '13':
+        text: '13'
+      '14':
+        text: '14'
+      '15':
+        text: '15'
+      '16':
+        text: '16'
+      '17':
+        text: '17'
+      '18':
+        text: '18'
+      '19':
+        text: '19'
+      '20':
+        text: '20'
+      '21':
+        text: '21'
+      '22':
+        text: '22'
+      '23':
+        text: '23'
+      '24':
+        text: '24'
+      '25':
+        text: '25'
+  roadSurface_options:
+    name: roadSurface_options
+    permissible_values:
+      '1':
+        text: '1'
+      '2':
+        text: '2'
+      '3':
+        text: '3'
+      '4':
+        text: '4'
+      '5':
+        text: '5'
+  roadPaving_options:
+    name: roadPaving_options
+    permissible_values:
+      '1':
+        text: '1'
+      '2':
+        text: '2'
+      '3':
+        text: '3'
+  accidentLocation_options:
+    name: accidentLocation_options
+    permissible_values:
+      '0':
+        text: '0'
+      '1':
+        text: '1'
+      '2':
+        text: '2'
+      '3':
+        text: '3'
+      '4':
+        text: '4'
+      '5':
+        text: '5'
+      '6':
+        text: '6'
+      '7':
+        text: '7'
+      '8':
+        text: '8'
+      '9':
+        text: '9'
+  roadIntersection_options:
+    name: roadIntersection_options
+    permissible_values:
+      '1':
+        text: '1'
+      '2':
+        text: '2'
+      '3':
+        text: '3'
+      '4':
+        text: '4'
+      '5':
+        text: '5'
+      '6':
+        text: '6'
+      '7':
+        text: '7'
+      '8':
+        text: '8'
+      '9':
+        text: '9'
+      '10':
+        text: '10'
+      '11':
+        text: '11'
+      '12':
+        text: '12'
+  roadTrunk_options:
+    name: roadTrunk_options
+    permissible_values:
+      '1':
+        text: '1'
+      '2':
+        text: '2'
+      '3':
+        text: '3'
+      '4':
+        text: '4'
+      '5':
+        text: '5'
+      '6':
+        text: '6'
+      '7':
+        text: '7'
+      '8':
+        text: '8'
+      '9':
+        text: '9'
+      '10':
+        text: '10'
+      '11':
+        text: '11'
+      '12':
+        text: '12'
+      '15':
+        text: '15'
+  roadSign_options:
+    name: roadSign_options
+    permissible_values:
+      '1':
+        text: '1'
+      '2':
+        text: '2'
+      '3':
+        text: '3'
+      '4':
+        text: '4'
+      '5':
+        text: '5'
+  vehiclesInvolved_options:
+    name: vehiclesInvolved_options
+    permissible_values:
+      '0':
+        text: '0'
+      '1':
+        text: '1'
+      '2':
+        text: '2'
+      '3':
+        text: '3'
+      '4':
+        text: '4'
+      '5':
+        text: '5'
+      '6':
+        text: '6'
+      '7':
+        text: '7'
+      '8':
+        text: '8'
+      '9':
+        text: '9'
+      '10':
+        text: '10'
+      '11':
+        text: '11'
+      '12':
+        text: '12'
+      '13':
+        text: '13'
+      '14':
+        text: '14'
+      '15':
+        text: '15'
+      '16':
+        text: '16'
+      '17':
+        text: '17'
+      '18':
+        text: '18'
+      '19':
+        text: '19'
+      '20':
+        text: '20'
+      '21':
+        text: '21'
+      '22':
+        text: '22'
+      '23':
+        text: '23'
+      '24':
+        text: '24'
+  weakestSubject_options:
+    name: weakestSubject_options
+    permissible_values:
+      '0':
+        text: '0'
+      '1':
+        text: '1'
+      '2':
+        text: '2'
+      '3':
+        text: '3'
+      '4':
+        text: '4'
+      '5':
+        text: '5'
+      '6':
+        text: '6'
+      '7':
+        text: '7'
+      '8':
+        text: '8'
+      '9':
+        text: '9'
+      '10':
+        text: '10'
+      '11':
+        text: '11'
+      '12':
+        text: '12'
+      '13':
+        text: '13'
+      '14':
+        text: '14'
+      '15':
+        text: '15'
+      '16':
+        text: '16'
+      '17':
+        text: '17'
+      '18':
+        text: '18'
+      '19':
+        text: '19'
+      '20':
+        text: '20'
+      '21':
+        text: '21'
+      '22':
+        text: '22'
+      '23':
+        text: '23'
+      '24':
+        text: '24'

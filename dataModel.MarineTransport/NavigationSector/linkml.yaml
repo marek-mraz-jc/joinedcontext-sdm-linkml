@@ -1,0 +1,132 @@
+id: https://github.com/smart-data-models/dataModel.MarineTransport/NavigationSector
+name: NavigationSector
+title: Smart Data models Navigation Sector schema
+description: This data model describes a navigation sector in a port, including geographic
+  boundaries and operational details
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.MarineTransport
+  spec.source.path: NavigationSector/schema.json
+  spec.source.commit: 4ffb0d8d8c29470e169df9d8c329135ec0806f72
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Ports/master/context.jsonld"],
+    "id": "urn:ngsi-ld:NavigationSector:urn:mrn:eshuv:facilities:navigationsector:id:10",
+    "location": {"type": "GeoProperty", "value": {"coordinates": [[[-3.70379, 40.416775],
+    [-3.70379, 40.426775], [-3.69379, 40.426775], [-3.69379, 40.416775]]], "type":
+    "Polygon"}}, "minProbe": {"type": "Property", "value": 99.0}, "minProbeDate":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2022-01-01T00:00:00"}},
+    "navigationArea": {"type": "Property", "value": "AEXT"}, "navigationSector": {"type":
+    "Property", "value": "S95"}, "portCode": {"type": "Property", "value": "ESVLC"},
+    "rank": {"type": "Property", "value": 1}, "remarks": {"type": "Property", "value":
+    "Monoboya de crudo"}, "sectorType": {"type": "Property", "value": "AEXT"}, "type":
+    "NavigationSector"}'
+classes:
+  NavigationSector:
+    class_uri: https://smartdatamodels.org/dataModel.MarineTransport/NavigationSector
+    description: This data model describes a navigation sector in a port, including
+      geographic boundaries and operational details
+    is_a: Entity
+    slots:
+    - minProbe
+    - minProbeDate
+    - modifiedDate
+    - mrn
+    - navigationArea
+    - navigationSector
+    - portCode
+    - rank
+    - remarks
+    - sectorType
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+slots:
+  mrn:
+    description: "Property. MRN coded identifier. It has to be related to the entity\
+      \ in a way that is well-known by different organisms the meaning and the initiator\
+      \ of the entity, and all next parties will maintain on its origianl value. This\
+      \ identifier must be an UNIQUE identifier of the PortCall entity assigned by\
+      \ the system who created on first the entity. This URN should Conforms MRN &\
+      \ IETF specifically RFC 2141, RFC 5234, and RFC 8141. \n    The propossed format\
+      \ is \n    id::='urn:mrn:eshuv:<ONSS>:portcalls:navigationsector:id:[0-9]+'\
+      \ or  \n    where OID:= Organisation UN/LOCODE, OONSS:=Organization Name of\
+      \ Service, 2099 the year on which the portcall was initiated, 9999999 an increasing,\
+      \ unique identifier that the issuer of the Bollard entity will identify on his\
+      \ sistems (i.e. a SQL row-id), \n    i.e. urn:mrn:eshuv:portcalls:navigationsector:id:16\
+      \ \n     See [Unlocode](https://unece.org/trade/cefact/unlocode-code-list-country-and-territory)In\
+      \ international standards is also known as [Ship's Visit]"
+    range: mrn_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mrn
+  portCode:
+    description: Property. Code of the port where this navigation sector is located
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/portCode
+  navigationSector:
+    description: Property. Identifier for the navigation sector within the port
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/navigationSector
+  navigationArea:
+    description: Property. The broader navigation area where this sector is situated
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/navigationArea
+  rank:
+    description: Property. Rank or priority level of the navigation sector
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/rank
+  sectorType:
+    description: Property. Type of navigation sector
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/sectorType
+  minProbe:
+    description: Property. Minimum depth of water in meters within the sector
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/minProbe
+  minProbeDate:
+    description: Property. Date when the minimum depth was last recorded
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/minProbeDate
+  remarks:
+    description: Property. Additional remarks or notes about the navigation sector
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/remarks
+  modifiedDate:
+    description: Property. Date and time of last modification of the navigation sector
+      entity
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/modifiedDate
+enums:
+  mrn_options:
+    name: mrn_options
+    permissible_values:
+      PortCall:
+        text: PortCall

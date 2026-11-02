@@ -1,0 +1,213 @@
+id: https://github.com/smart-data-models/dataModel.RiskManagement/CyberAnalysis
+name: CyberAnalysis
+title: Smart Data Models - Risk Assessment - CyberAnalysis Entity
+description: Entity that represents analysis performed by digital tools to detect
+  for example, network traffic anomalies
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.RiskManagement
+  spec.source.path: CyberAnalysis/schema.json
+  spec.source.commit: fde381ce01bc30479a17e447577fd2401afdf45a
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"],
+    "affects": {"type": "Property", "value": ["urn:ngsi-ld:Asset:01"]}, "analysisType":
+    {"type": "Property", "value": "CyberAnalysis-AnomalyDetector"}, "generate": {"type":
+    "Property", "value": ["urn:ngsi-ld:NetworkServiceAlert:01"]}, "id": "urn:ngsi-ld:CyberAnalysis:01",
+    "type": "CyberAnalysis", "validFrom": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "2021-02-18T12:00:00Z"}}, "validTo": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2021-02-18T12:00:00Z"}}}'
+classes:
+  CyberAnalysis:
+    class_uri: https://smartdatamodels.org/dataModel.RiskManagement/CyberAnalysis
+    description: Entity that represents analysis performed by digital tools to detect
+      for example, network traffic anomalies
+    is_a: Entity
+    slots:
+    - address
+    - affects
+    - alternateName
+    - analysisType
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - generate
+    - name
+    - owner
+    - seeAlso
+    - source
+    - validFrom
+    - validTo
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/areaServed
+  validTo:
+    description: Property. Model:'https://schema.org/Time'. The time at which the
+      risk materialziation is started
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/dataModel.RiskManagement/validTo
+  validFrom:
+    description: Property. Model:'https://schema.org/Time'. The time at which the
+      risk materialziation is finished
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/validFrom
+  analysisType:
+    description: Property. The type of analysis
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/dataModel.RiskManagement/analysisType
+  affects:
+    description: Relationship. Array of URIs related to the area in which the risk
+      could affect
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/dataModel.RiskManagement/affects
+  generate:
+    description: Relationship. Array of URIs related to the area in which the risk
+      could affect
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/dataModel.RiskManagement/generate

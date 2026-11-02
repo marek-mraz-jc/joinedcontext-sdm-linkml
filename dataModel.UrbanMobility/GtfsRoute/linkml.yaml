@@ -1,0 +1,179 @@
+id: https://github.com/smart-data-models/dataModel.UrbanMobility/GtfsRoute
+name: GtfsRoute
+title: Smart Data Models. GTFS Schema - Route
+description: GTFS Route
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.UrbanMobility
+  spec.source.path: GtfsRoute/schema.json
+  spec.source.commit: 81a052c84d275a71489910c4f93eb3b6c80c4830
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"],
+    "id": "urn:ngsi-ld:GtfsRoute:Spain:Malaga:1", "name": {"type": "Property", "value":
+    "Parque del Sur _ Alameda Principal _ San Andr\u00e9s"}, "operatedBy": {"object":
+    "urn:ngsi-ld:GtfsAgency:Malaga_EMT", "type": "Relationship"}, "page": {"type":
+    "Property", "value": "http://www.emtmalaga.es/emt-mobile/informacionLinea.html"},
+    "routeType": {"type": "Property", "value": "3"}, "shortName": {"type": "Property",
+    "value": "1"}, "type": "GtfsRoute"}'
+classes:
+  GtfsRoute:
+    class_uri: https://smartdatamodels.org/dataModel.UrbanMobility/GtfsRoute
+    description: GTFS Route
+    is_a: Entity
+    slots:
+    - alternateName
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - name
+    - operatedBy
+    - owner
+    - page
+    - routeColor
+    - routeSortOrder
+    - routeTextColor
+    - routeType
+    - seeAlso
+    - shortName
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/seeAlso
+  page:
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/page
+  routeColor:
+    description: Property. Same as GTFS `route_color`. Model:'https://schema.org/Text'.
+      See [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/routeColor
+  routeTextColor:
+    description: Property. Same as GTFS `route_text_color`. Model:'https://schema.org/Text'.
+      See [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/routeTextColor
+  routeType:
+    description: Property. Same as GTFS `route_type`. Model:'https://schema.org/Text'.
+      allowed values those allowed for `route_type` as prescribed by [GTFS](https://developers.google.com/transit/gtfs/reference/#routestxt).
+      Enum:'0, 1, 2, 3, 4, 5, 6, 7'
+    range: routeType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/routeType
+  routeSortOrder:
+    description: Property. Same as GTFS `route_sort_order`. Model:'https://schema.org/Number'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/routeSortOrder
+  operatedBy:
+    description: Relationship. Agency that operates this route. Model:'https://schema.org/Text'.
+      It shall point to an Entity of Type GtfsAgency
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/operatedBy
+  shortName:
+    description: Property. Same as GTFS `route_short_name`. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/shortName
+enums:
+  routeType_options:
+    name: routeType_options
+    permissible_values:
+      '0':
+        text: '0'
+      '1':
+        text: '1'
+      '2':
+        text: '2'
+      '3':
+        text: '3'
+      '4':
+        text: '4'
+      '5':
+        text: '5'
+      '6':
+        text: '6'
+      '7':
+        text: '7'

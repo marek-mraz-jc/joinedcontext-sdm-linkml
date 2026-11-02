@@ -1,0 +1,221 @@
+id: https://github.com/smart-data-models/dataModel.Agrifood/VeterinarianTreatment
+name: VeterinarianTreatment
+title: Veterinarian Treatment
+description: Object modelling a veterinary treatment for a livestock farm.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Agrifood
+  spec.source.path: VeterinarianTreatment/schema.json
+  spec.source.commit: e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"],
+    "animals": {"object": ["urn:ngsi-ld:Animal:ca3f1295-500c-4aa3-b745-d143097d5c01",
+    "urn:ngsi-ld:Animal:bb3f1295-500c-4aa3-b745-d143097d4321"], "type": "Relationship"},
+    "appliedProduct": {"type": "Property", "value": "Pisadug"}, "date": {"type": "Property",
+    "value": {"type": "Date-Time", "value": "2022-01-01T01:20:00Z"}}, "id": "urn:ngsi-ld:VeterinarianTreatment:ca3f1295-500c-4aa3-b745-d143097d5c01",
+    "phaseOutPeriod": {"type": "Property", "value": 4}, "quantity": {"type": "Property",
+    "value": 1}, "type": "VeterinarianTreatment", "veterinarian": {"object": "urn:ngsi-ld:Veterinarian:ca3f1295-500c-4aa3-b745-d143097d5d11",
+    "type": "Relationship"}}'
+classes:
+  VeterinarianTreatment:
+    class_uri: https://smartdatamodels.org/dataModel.Agrifood/VeterinarianTreatment
+    description: Object modelling a veterinary treatment for a livestock farm.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - animals
+    - appliedProduct
+    - areaServed
+    - dataProvider
+    - date
+    - dateCreated
+    - dateModified
+    - description
+    - name
+    - owner
+    - phaseOutPeriod
+    - quantity
+    - seeAlso
+    - source
+    - veterinarian
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/areaServed
+  appliedProduct:
+    description: Property. Veterinary product applied
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/appliedProduct
+  quantity:
+    description: Property. Amount of veterinary product applied
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/quantity
+  date:
+    description: Property. Date of application
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/date
+  phaseOutPeriod:
+    description: Property. It is the period of time in days between the last administration
+      of the veterinary medicinal product to an animal, under normal conditions of
+      use, and the production of foodstuffs from that animal
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/phaseOutPeriod
+  animals:
+    description: Relationship. Animals treated with the applied product. Model:'https://github.com/smart-data-models/dataModel.Agrifood/blob/master/Animal/schema.json'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/animals
+  veterinarian:
+    description: Relationship. Identifier of the entity storing the prescribing veterinarian
+      data
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/veterinarian

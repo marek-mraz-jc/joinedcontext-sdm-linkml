@@ -1,0 +1,177 @@
+id: https://github.com/smart-data-models/dataModel.Agrifood/AgriProductType
+name: AgriProductType
+title: Smart Data Models - Agri Product Type
+description: This entity contains a harmonised description of a generic agricultural
+  product type. This entity is primarily associated with the agricultural vertical
+  and related IoT applications. The AgriProductType includes a hierarchical structure
+  that allows product types to be grouped in a flexible way.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Agrifood
+  spec.source.path: AgriProductType/schema.json
+  spec.source.commit: e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"],
+    "agroVocConcept": {"type": "Property", "value": "http://aims.fao.org/aos/agrovoc/c_3128"},
+    "category": {"type": "Property", "value": ["cropVariety"]}, "dateCreated": {"type":
+    "Property", "value": {"@type": "DateTime", "@value": "2017-01-01T01:20:00Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2017-05-04T12:30:00Z"}}, "description": {"type": "Property", "value": "Soft edible
+    fruits"}, "hasAgriProductTypeChildren": {"object": ["urn:ngsi-ld:AgriProductType:836258d0-448b-11e8-84ec-ef61d9425fe8",
+    "urn:ngsi-ld:AgriProductType:83d607f8-448b-11e8-9fe3-0fd5140ae8db", "urn:ngsi-ld:AgriProductType:90cbac88-448b-11e8-acb0-a78dab9d0555"],
+    "type": "Relationship"}, "hasAgriProductTypeParent": {"object": "urn:ngsi-ld:AgriProductType:b99c940d-7156-4280-9a2b-4a9e533cd20e",
+    "type": "Relationship"}, "id": "urn:ngsi-ld:AgriProductType:398aa5f4-6a81-4dea-9f85-e9869441a257",
+    "name": {"type": "Property", "value": "Soft Fruits"}, "relatedSource": {"type":
+    "Property", "value": [{"application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a",
+    "applicationEntityId": "app:product1"}]}, "root": {"type": "Property", "value":
+    true}, "type": "AgriProductType"}'
+classes:
+  AgriProductType:
+    class_uri: https://smartdatamodels.org/dataModel.Agrifood/AgriProductType
+    description: This entity contains a harmonised description of a generic agricultural
+      product type. This entity is primarily associated with the agricultural vertical
+      and related IoT applications. The AgriProductType includes a hierarchical structure
+      that allows product types to be grouped in a flexible way.
+    is_a: Entity
+    slots:
+    - agroVocConcept
+    - alternateName
+    - category
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - hasAgriProductTypeChildren
+    - hasAgriProductTypeParent
+    - name
+    - owner
+    - root
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/seeAlso
+  agroVocConcept:
+    description: Relationship. Model:'http://schema.org/URL'. Reference to the agrovoc
+      term associated with this item
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/agroVocConcept
+  category:
+    description: Property. Model:'http://schema.org/URL'. Category of the product.
+      Enum:'fertiliser, cropNutrition, cropProtection, cropVariety, harvestCommodity'
+    range: category_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/category
+  hasAgriProductTypeParent:
+    description: Relationship. Reference to the parent product type i.e. immediately
+      above the entity in the hierarchy
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/hasAgriProductTypeParent
+  hasAgriProductTypeChildren:
+    description: Relationship. Reference to child product types i.e. immediately below
+      this entity in the hierarchy
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/hasAgriProductTypeChildren
+  root:
+    description: Property. A logical indicator that this product is the root of an
+      AgriProductType hierarchy. Logical true indicates it is the root
+    range: boolean
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/root
+enums:
+  category_options:
+    name: category_options
+    permissible_values:
+      cropNutrition:
+        text: cropNutrition
+      cropProtection:
+        text: cropProtection
+      cropVariety:
+        text: cropVariety
+      fertiliser:
+        text: fertiliser
+      harvestCommodity:
+        text: harvestCommodity

@@ -1,0 +1,259 @@
+id: https://github.com/smart-data-models/dataModel.EnergyCIM/Measurement
+name: Measurement
+title: ' Smart Data Models - Measurement'
+description: Adapted from CIM data models. A Measurement represents any measured,
+  calculated or non-measured non-calculated quantity. Any piece of equipment may contain
+  Measurements, e.g. a substation may have temperature measurements and door open
+  indications, a transformer may have oil temperature and tank pressure measurements,
+  a bay may contain a number of power flow measurements and a Breaker may contain
+  a switch status measurement.  The PSR - Measurement association is intended to capture
+  this use of Measurement and is included in the naming hierarchy based on EquipmentContainer.
+  The naming hierarchy typically has Measurements as leafs, e.g. Substation-VoltageLevel-Bay-Switch-Measurement.
+  Some Measurements represent quantities related to a particular sensor location in
+  the network, e.g. a voltage transformer (PT) at a busbar or a current transformer
+  (CT) at the bar between a breaker and an isolator. The sensing position is not captured
+  in the PSR - Measurement association. Instead it is captured by the Measurement
+  - Terminal association that is used to define the sensing location in the network
+  topology. The location is defined by the connection of the Terminal to ConductingEquipment.  If
+  both a Terminal and PSR are associated, and the PSR is of type ConductingEquipment,
+  the associated Terminal should belong to that ConductingEquipment instance. When
+  the sensor location is needed both Measurement-PSR and Measurement-Terminal are
+  used. The Measurement-Terminal association is never used alone.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.EnergyCIM
+  spec.source.path: Measurement/schema.json
+  spec.source.commit: a133118adea199b471b89c0908e7275312ef7a4c
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+classes:
+  Measurement:
+    class_uri: https://smartdatamodels.org/dataModel.EnergyCIM/Measurement
+    description: Adapted from CIM data models. A Measurement represents any measured,
+      calculated or non-measured non-calculated quantity. Any piece of equipment may
+      contain Measurements, e.g. a substation may have temperature measurements and
+      door open indications, a transformer may have oil temperature and tank pressure
+      measurements, a bay may contain a number of power flow measurements and a Breaker
+      may contain a switch status measurement.  The PSR - Measurement association
+      is intended to capture this use of Measurement and is included in the naming
+      hierarchy based on EquipmentContainer. The naming hierarchy typically has Measurements
+      as leafs, e.g. Substation-VoltageLevel-Bay-Switch-Measurement. Some Measurements
+      represent quantities related to a particular sensor location in the network,
+      e.g. a voltage transformer (PT) at a busbar or a current transformer (CT) at
+      the bar between a breaker and an isolator. The sensing position is not captured
+      in the PSR - Measurement association. Instead it is captured by the Measurement
+      - Terminal association that is used to define the sensing location in the network
+      topology. The location is defined by the connection of the Terminal to ConductingEquipment.  If
+      both a Terminal and PSR are associated, and the PSR is of type ConductingEquipment,
+      the associated Terminal should belong to that ConductingEquipment instance.
+      When the sensor location is needed both Measurement-PSR and Measurement-Terminal
+      are used. The Measurement-Terminal association is never used alone.
+    is_a: Entity
+    slots:
+    - PowerSystemResource
+    - Terminal
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - measurementType
+    - name
+    - owner
+    - phases
+    - seeAlso
+    - source
+    - unitMultiplier
+    - unitSymbol
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/areaServed
+  PowerSystemResource:
+    description: 'Property. Model:''https://schema.org/Number''. The measurements
+      associated with this power system resource. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/PowerSystemResource
+  Terminal:
+    description: 'Property. Model:''https://schema.org/Number''. One or more measurements
+      may be associated with a terminal in the network. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/Terminal
+  measurementType:
+    description: 'Property. Model:''https://schema.org/Number''. Specifies the type
+      of measurement.  For example, this specifies if the measurement represents an
+      indoor temperature, outdoor temperature, bus voltage, line flow, etc. Default:
+      '''''
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/measurementType
+  phases:
+    description: 'Property. Model:''https://schema.org/Number''. Indicates to which
+      phases the measurement applies and avoids the need to use `measurementType`
+      to also encode phase information (which would explode the types). The phase
+      information in Measurement, along with `measurementType` and `phases` uniquely
+      defines a Measurement for a device, based on normal network phase. Their meaning
+      will not change when the computed energizing phasing is changed due to jumpers
+      or other reasons. If the attribute is missing three phases (ABC) shall be assumed.
+      Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/phases
+  unitMultiplier:
+    description: 'Property. Model:''https://schema.org/Number''. The unit multiplier
+      of the measured quantity. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/unitMultiplier
+  unitSymbol:
+    description: 'Property. Model:''https://schema.org/Number''. The unit of measure
+      of the measured quantity. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/unitSymbol

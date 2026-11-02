@@ -1,0 +1,161 @@
+id: https://github.com/smart-data-models/dataModel.MachineLearning/MLProcessing
+name: MLProcessing
+title: ' Smart Data Models - Machine Learning Processing'
+description: Data model for compilation of the elements about the execution of a machine
+  learning model.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.MachineLearning
+  spec.source.path: MLProcessing/schema.json
+  spec.source.commit: 1d957f3200a1d2261438f7a121809854721d1aa5
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.MachineLearning/master/context.jsonld"],
+    "id": "urn:ngsi-ld:MLProcessing:01", "refMLModel": {"type": "string", "value":
+    "urn:ngsi-ld:MLModel:01"}, "refSubscriptionQuery": {"type": "string", "value":
+    "urn:ngsi-ld:SubscriptionQuery:01"}, "type": "MLProcessing"}'
+classes:
+  MLProcessing:
+    class_uri: https://smartdatamodels.org/dataModel.MachineLearning/MLProcessing
+    description: Data model for compilation of the elements about the execution of
+      a machine learning model.
+    is_a: Entity
+    slots:
+    - alternateName
+    - connectionParameters
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - dueDate
+    - name
+    - objective
+    - owner
+    - refMLModel
+    - refSubscriptionQuery
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+  ConnectionParameters:
+    description: Property. Parameters for running the connection with the system
+    attributes:
+      server:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+      port:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+      user:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/seeAlso
+  refMLModel:
+    description: Relationship. Relationship targeting the Machine Learning model to
+      use for the processing
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dataModel.MachineLearning/refMLModel
+  refSubscriptionQuery:
+    description: Relationship. Relationship targeting the subscription query to use
+      by the Machine Learning model
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dataModel.MachineLearning/refSubscriptionQuery
+  connectionParameters:
+    description: Property. Parameters for running the connection with the system
+    range: ConnectionParameters
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dataModel.MachineLearning/connectionParameters
+  objective:
+    description: Property. Objective of the processing
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dataModel.MachineLearning/objective
+  dueDate:
+    description: Property. Expected data / time for running the processing (for later
+      versions, to allow planned processings)
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MachineLearning@1d957f3200a1d2261438f7a121809854721d1aa5
+    slot_uri: https://smartdatamodels.org/dataModel.MachineLearning/dueDate

@@ -1,0 +1,37 @@
+id: https://github.com/smart-data-models/dataModel.ACRIS/MeasurementTimePeriod
+name: MeasurementTimePeriod
+title: Smart Data Models - Mapping of ACRIS data model MeasurementTimePeriod
+description: Property. The time period over which a Measurement is taken.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ACRIS
+  spec.source.path: MeasurementTimePeriod/schema.json
+  spec.source.commit: 82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.ACRIS/master/context.jsonld"],
+    "EndTime": {"type": "Property", "value": {"@type": "date-time", "@value": "2023-03-22T18:59:02Z"}},
+    "id": "urn:ngsi-ld:MeasurementTimePeriod:id:RKKY:28707515", "type": "MeasurementTimePeriod"}'
+classes:
+  MeasurementTimePeriod:
+    class_uri: https://smartdatamodels.org/dataModel.ACRIS/MeasurementTimePeriod
+    description: Property. The time period over which a Measurement is taken.
+    is_a: Entity
+    slots:
+    - EndTime
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+slots:
+  EndTime:
+    description: Property. The date and time at the end of the time period over which
+      a Measurement is taken. Date time should be UTC, compliant with ISO 8601 format
+      (e.g. 2023-04-20T11:54:59Z)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/EndTime

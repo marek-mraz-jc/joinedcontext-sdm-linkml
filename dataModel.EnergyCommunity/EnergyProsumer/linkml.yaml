@@ -1,0 +1,264 @@
+id: https://github.com/smart-data-models/dataModel.EnergyCommunity/EnergyProsumer
+name: EnergyProsumer
+title: Smart Data Models - EnergyProsumer
+description: A role played by an individual or organization that both consumes and
+  produces energy within an energy community.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.EnergyCommunity
+  spec.source.path: EnergyProsumer/schema.json
+  spec.source.commit: 62e19ef2f8d3fa188c1f4701700026c8360f1523
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"],
+    "consumes": {"object": "urn:ngsi-ld:Consumption:consumption-001", "type": "Relationship"},
+    "contractedPower": {"type": "Property", "value": 10}, "controls": {"object": "urn:ngsi-ld:PhotovoltaicDevice:pv-001",
+    "type": "Relationship"}, "description": {"type": "Property", "value": "Residential
+    prosumer participating in a local energy community"}, "id": "urn:ngsi-ld:EnergyProsumer:prosumer-001",
+    "location": {"type": "GeoProperty", "value": {"coordinates": [11.9746, 57.7089],
+    "type": "Point"}}, "memberOf": {"object": "urn:ngsi-ld:EnergyCommunity:community-001",
+    "type": "Relationship"}, "name": {"type": "Property", "value": "Household Prosumer
+    001"}, "produces": {"object": "urn:ngsi-ld:GreenEnergyMeasurement:production-001",
+    "type": "Relationship"}, "represents": {"object": "urn:ngsi-ld:Person:person-001",
+    "type": "Relationship"}, "roleType": {"type": "Property", "value": "prosumer"},
+    "timezone": {"type": "Property", "value": "Europe/Stockholm"}, "totalEnergyExported":
+    {"type": "Property", "value": 1800}, "totalEnergyImported": {"type": "Property",
+    "value": 4200}, "type": "EnergyProsumer"}'
+classes:
+  EnergyProsumer:
+    class_uri: https://smartdatamodels.org/dataModel.EnergyCommunity/EnergyProsumer
+    description: A role played by an individual or organization that both consumes
+      and produces energy within an energy community.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - consumes
+    - contractedPower
+    - controls
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - memberOf
+    - name
+    - owner
+    - produces
+    - represents
+    - roleType
+    - seeAlso
+    - source
+    - timezone
+    - totalEnergyExported
+    - totalEnergyImported
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/areaServed
+  roleType:
+    description: Property. Energy participation role of the entity.
+    range: roleType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCommunity/roleType
+  timezone:
+    description: Property. Timezone of the prosumer location (IANA TZ database).
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCommunity/timezone
+  contractedPower:
+    description: Property. Contracted active power for the prosumer.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCommunity/contractedPower
+  totalEnergyImported:
+    description: Property. Total cumulative imported energy.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCommunity/totalEnergyImported
+  totalEnergyExported:
+    description: Property. Total cumulative exported energy.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCommunity/totalEnergyExported
+  memberOf:
+    description: Relationship. Energy community in which the prosumer participates.
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCommunity/memberOf
+  represents:
+    description: Relationship. Person or organization playing the energy prosumer
+      role.
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCommunity/represents
+  controls:
+    description: Relationship. Energy assets controlled by the prosumer.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCommunity/controls
+  consumes:
+    description: Relationship. Energy consumption entities associated with the prosumer.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCommunity/consumes
+  produces:
+    description: Relationship. Energy production entities associated with the prosumer.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCommunity@62e19ef2f8d3fa188c1f4701700026c8360f1523
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCommunity/produces
+enums:
+  roleType_options:
+    name: roleType_options
+    permissible_values:
+      consumer:
+        text: consumer
+      producer:
+        text: producer
+      prosumer:
+        text: prosumer

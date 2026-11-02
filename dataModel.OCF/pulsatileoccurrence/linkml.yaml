@@ -1,0 +1,257 @@
+id: https://github.com/smart-data-models/dataModel.OCF/pulsatileoccurrence
+name: pulsatileoccurrence
+title: Pulsatile Occurrence for Pulse Oximeter
+description: Smart Data Models Program adaptation of the original IoTData data Models.
+  This Resource describes the Properties associated with a Pulsatile Occurrence detected
+  by a Pulse Oximeter.  The occurrence Property is a read-only value that is provided
+  by the server.  When range (from 'oic.r.baseresource') is omitted the default is
+  0 to +MAXFLOAT.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: pulsatileoccurrence/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Team serious school
+    leader difficult Congress detail. Energy member will likely option worry red.
+    Color compare middle what gun.", "addressLocality": "Scien", "addressRegion":
+    "Agency forward use throw. Trade newsp", "district": "Piece already itself care
+    debate finish.", "postOfficeBoxNumber": "Put dog seven only think appear. Point
+    we media sport contain practice then wear.", "postalCode": "Machine animal these
+    discuss other worry poor. Some decision artist lead often d", "streetAddress":
+    "His not hospital house compare. Song fill machine job his but current.", "streetNr":
+    "End edge system heart drug fear. Common m"}}, "alternateName": {"type": "Property",
+    "value": "Nor plant court. Them you southern stand car ten ground."}, "areaServed":
+    {"type": "Property", "value": "Real old last choice president difficult. Upon
+    ten can."}, "dataProvider": {"type": "Property", "value": "Rise cell board inside
+    impact. Manage throw job fine able major smile. Show better success sure."}, "dateCreated":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "1976-10-07T06:44:17Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "1999-08-17T03:28:07Z"}}, "description": {"type": "Property", "value": "Sport
+    while hope plant her nation. Movie successful bit improve trial back on."}, "id":
+    "urn:ngsi-ld:pulsatileoccurrence:id:TNGX:81857858", "if": {"type": "Property",
+    "value": ["oic.if.s"]}, "location": {"type": "GeoProperty", "value": {"coordinates":
+    [60.3722035, 154.825539], "type": "Point"}}, "n": {"type": "Property", "value":
+    "Occur know call story give next. Fill"}, "name": {"type": "Property", "value":
+    "International clearly want newspaper budget system. Study off could when film
+    other stuff. Term woman memb"}, "occurrence": {"type": "Property", "value": "BEAT_MAX_INRUSH"},
+    "owner": {"type": "Property", "value": ["urn:ngsi-ld:pulsatileoccurrence:items:JRQW:01391931",
+    "urn:ngsi-ld:pulsatileoccurrence:items:AAHU:96179055"]}, "rt": {"type": "Property",
+    "value": ["oic.r.pulsatileoccurrence"]}, "seeAlso": {"type": "Property", "value":
+    ["urn:ngsi-ld:pulsatileoccurrence:items:DLAX:18891740"]}, "source": {"type": "Property",
+    "value": "Best but cultural themselves identify. Population arrive democratic
+    drive book director your of."}, "type": "pulsatileoccurrence"}'
+classes:
+  pulsatileoccurrence:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/pulsatileoccurrence
+    description: Smart Data Models Program adaptation of the original IoTData data
+      Models. This Resource describes the Properties associated with a Pulsatile Occurrence
+      detected by a Pulse Oximeter.  The occurrence Property is a read-only value
+      that is provided by the server.  When range (from 'oic.r.baseresource') is omitted
+      the default is 0 to +MAXFLOAT.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - if
+    - n
+    - name
+    - occurrence
+    - owner
+    - rt
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  occurrence:
+    description: Property. This Property describes the Pulsatile Occurrence detected
+      by a Pulse Oximeter. BEAT - Pulsatile occurrence has occurred. BEAT_MAX_INRUSH
+      - Maximal inrush of the pulsatile wave has occurred. NOS - No pulsatile event
+      occurred.
+    range: occurrence_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/occurrence
+  rt:
+    description: Property. The Resource Type.
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  if:
+    description: Property. The OCF Interface set supported by this Resource.
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  occurrence_options:
+    name: occurrence_options
+    permissible_values:
+      BEAT:
+        text: BEAT
+      BEAT_MAX_INRUSH:
+        text: BEAT_MAX_INRUSH
+      NOS:
+        text: NOS
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.pulsatileoccurrence:
+        text: oic.r.pulsatileoccurrence
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.s:
+        text: oic.if.s
+      oic.if.baseline:
+        text: oic.if.baseline

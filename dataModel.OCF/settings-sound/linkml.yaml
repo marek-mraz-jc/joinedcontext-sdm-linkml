@@ -1,0 +1,278 @@
+id: https://github.com/smart-data-models/dataModel.OCF/settings-sound
+name: settings-sound
+title: Device Settings Sound Resource Type
+description: Smart Data Models Program adaptation of the original IoTData data Models.
+  Gets current device sound settings.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: settings-sound/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Throughout send share
+    room PM tell. Music", "addressLocality": "South minute friend. Buy finish yet
+    say class.", "addressRegion": "National half way enter. Single redu", "district":
+    "Seek career green p", "postOfficeBoxNumber": "Since hot spring only president
+    manage whole. Suggest item find moment else you recently ready.", "postalCode":
+    "Front southern each class act can. Least discover involve maybe.", "streetAddress":
+    "By health walk production television happen. Strategy everybody fall reason so.
+    Space city within and bit reveal gas.", "streetNr": "Occur a white recognize attack
+    political. Sell difficult these gun."}}, "alternateName": {"type": "Property",
+    "value": "Daughter media increase half behind decide leave. Customer modern prevent
+    weight kitchen where recent perhaps."}, "areaServed": {"type": "Property", "value":
+    "Budget"}, "auto-volume": {"type": "Property", "value": true}, "dataProvider":
+    {"type": "Property", "value": "Order bar garden make population. Particularly
+    end down career well agent kitchen country. Military he choice character."}, "dateCreated":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "1980-08-26T09:43:11Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2006-05-19T00:55:48Z"}}, "description": {"type": "Property", "value": "Give continue
+    almost foreign skill same eye. Clear heavy house use food."}, "dolby-atmos-compatibility":
+    {"type": "Property", "value": false}, "id": "urn:ngsi-ld:settings-sound:id:FEOR:54068496",
+    "if": {"type": "Property", "value": ["oic.if.baseline", "oic.if.rw"]}, "location":
+    {"type": "GeoProperty", "value": {"coordinates": [53.9771575, -164.350245], "type":
+    "Point"}}, "name": {"type": "Property", "value": "Authority within mouth work
+    shoulder. Tree news seem black all police."}, "owner": {"type": "Property", "value":
+    ["urn:ngsi-ld:settings-sound:items:ASBD:54571276", "urn:ngsi-ld:settings-sound:items:GAGW:59069925"]},
+    "rt": {"type": "Property", "value": ["oic.r.settings.sound"]}, "seeAlso": {"type":
+    "Property", "value": ["urn:ngsi-ld:settings-sound:items:EDDJ:79167522"]}, "sound-mode":
+    {"type": "Property", "value": "Make production within authority."}, "source":
+    {"type": "Property", "value": "Important position share care same sea. Argue internatio"},
+    "speaker": {"type": "Property", "value": "Long great expert Democrat visit for
+    later. Floor world serious case light product."}, "supported-sound-modes": {"type":
+    "Property", "value": ["Stand bed little month car suffer. Soon summer bit. Certain
+    final trouble you however reflect skill activity. Wonder trouble "]}, "supported-speakers":
+    {"type": "Property", "value": ["Degree between number theory western real. Very
+    data election sell of stay style."]}, "type": "settings-sound"}'
+classes:
+  settings-sound:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/settings-sound
+    description: Smart Data Models Program adaptation of the original IoTData data
+      Models. Gets current device sound settings.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - auto-volume
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - dolby-atmos-compatibility
+    - if
+    - name
+    - owner
+    - rt
+    - seeAlso
+    - sound-mode
+    - source
+    - speaker
+    - supported-sound-modes
+    - supported-speakers
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. The Resource Type of Device Settings for sound
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  if:
+    description: Property. No description is available in the original
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+  speaker:
+    description: Property. Device Settings Sound - Speaker. Client can change speaker
+      using supported-speakers property.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/speaker
+  supported-speakers:
+    description: Property. The array of possible speakers the device supports. This
+      property should be added if speaker is supported.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/supported-speakers
+  sound-mode:
+    description: Property. Device Settings Sound - Sound Mode. Client can change sound-mode
+      using supported-sound-modes property.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/sound-mode
+  supported-sound-modes:
+    description: Property. The array of possible sound modes the device supports.
+      This property should be added if sound-mode is supported.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/supported-sound-modes
+  auto-volume:
+    description: Property. Automatically equalizes the volume level when switching
+      to antother channel.
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/auto-volume
+  dolby-atmos-compatibility:
+    description: Property. Supports dolby-atmos mode.
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/dolby-atmos-compatibility
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.settings.sound:
+        text: oic.r.settings.sound
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.rw:
+        text: oic.if.rw
+      oic.if.baseline:
+        text: oic.if.baseline

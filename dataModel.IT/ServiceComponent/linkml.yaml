@@ -1,0 +1,312 @@
+id: https://github.com/smart-data-models/dataModel.IT/ServiceComponent
+name: ServiceComponent
+title: Smart Data Models - ITinfrastructure / ServiceComponent
+description: Component (packaged software, for instance, a container) of a service
+  deployed in the Cloud-Edge-IoT continuum, which runs on top of an InfrastructureElement.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.IT
+  spec.source.path: ServiceComponent/schema.json
+  spec.source.commit: df045cbab80ae09db9eb308e05c89b18840be637
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "cliArgs": {"type": "Property", "value": [{"key": "-app-env", "value": "production"},
+    {"key": "-db-url", "value": "http://db-svc.default.svc.cluster.local:27017"}]},
+    "containerImage": {"type": "Property", "value": "ravaga/webapp-backend:1.5.1"},
+    "currentCpuUsage": {"type": "Property", "unit": "Cores", "value": 0.25}, "currentMemoryUsage":
+    {"type": "Property", "unit": "Megabytes", "value": 512}, "envVars": {"type": "Property",
+    "value": [{"key": "APP_ENV", "value": "production"}, {"key": "DB_URL", "value":
+    "http://db-svc.default.svc.cluster.local:27017"}]}, "id": "urn:ngsi-ld:Service:WebApp01:Component:Backend",
+    "infrastructureElement": {"object": "urn:ngsi-ld:InfrastructureElement:Cloud:00155dc09474",
+    "type": "Relationship"}, "infrastructureElementRequirements": {"object": "urn:ngsi-ld:Service:WebApp01:Component:Backend:InfrastructureElementRequirements",
+    "type": "Relationship"}, "isJob": {"type": "Property", "value": false}, "networkPorts":
+    {"object": ["urn:ngsi-ld:Service:WebApp01:Component:Backend:NetworkPort:01", "urn:ngsi-ld:Service:WebApp01:Component:Backend:NetworkPort:02"],
+    "type": "Relationship"}, "overlayNetworkIP": {"type": "Property", "value": "10.0.0.15"},
+    "persistentStorage": {"object": ["urn:ngsi-ld:Service:WebApp01:Component:Backend:PersistentStorage:01",
+    "urn:ngsi-ld:Service:WebApp01:Component:Backend:PersistentStorage:02"], "type":
+    "Relationship"}, "service": {"object": "urn:ngsi-ld:Service:WebApp01", "type":
+    "Relationship"}, "serviceComponentStatus": {"type": "Property", "value": "Starting"},
+    "type": "ServiceComponent"}'
+classes:
+  ServiceComponent:
+    class_uri: https://smartdatamodels.org/dataModel.IT/ServiceComponent
+    description: Component (packaged software, for instance, a container) of a service
+      deployed in the Cloud-Edge-IoT continuum, which runs on top of an InfrastructureElement.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - cliArgs
+    - containerImage
+    - currentCpuUsage
+    - currentMemoryUsage
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - envVars
+    - infrastructureElement
+    - infrastructureElementRequirements
+    - isJob
+    - name
+    - networkPorts
+    - overlayNetworkIP
+    - owner
+    - persistentStorage
+    - seeAlso
+    - service
+    - serviceComponentStatus
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/areaServed
+  infrastructureElement:
+    description: Relationship. InfrastructureElement in which the component has been
+      deployed.
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/infrastructureElement
+  service:
+    description: Relationship. Service to which the component belongs.
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/service
+  serviceComponentStatus:
+    description: Property. Current status of the component. Enum:'Failed', 'Finished',
+      'Locating', 'Migrating', 'Removing', 'Running', 'Starting'
+    range: serviceComponentStatus_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/serviceComponentStatus
+  infrastructureElementRequirements:
+    description: Relationship. Requirements of infrastructure (e.g. RAM, CPU, ...)
+      that are needed for running the component.
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/infrastructureElementRequirements
+  containerImage:
+    description: Property. Container image used for the component, it must point to
+      a valid image stored in a container registry (e.g. Docker Hub or GitHub/Gitlab
+      container registry).
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/containerImage
+  cliArgs:
+    description: Property. Command line arguments (in key-value format) that are needed
+      to run the component.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/cliArgs
+  envVars:
+    description: Property. Environment variables (in key-value format) that are needed
+      to run the component.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/envVars
+  networkPorts:
+    description: Relationship. Network ports that are exposed by the component.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/networkPorts
+  persistentStorage:
+    description: Relationship. Requirements of persistent storage that are needed
+      for running the component.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/persistentStorage
+  isJob:
+    description: 'Property. Defines if the component is deployed as a job: a one-off
+      task that runs to completion and then stops.'
+    range: boolean
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/isJob
+  overlayNetworkIP:
+    description: Property. IP address assigned to the component in the network overlay
+      that connects all the components of the same service.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/overlayNetworkIP
+  currentCpuUsage:
+    description: Property. Units:'CPU cores'. Current CPU usage of the component.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/currentCpuUsage
+  currentMemoryUsage:
+    description: Property. Units:'Megabytes (MB)'. Current memory usage of the component.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/currentMemoryUsage
+enums:
+  serviceComponentStatus_options:
+    name: serviceComponentStatus_options
+    permissible_values:
+      Failed:
+        text: Failed
+      Finished:
+        text: Finished
+      Locating:
+        text: Locating
+      Migrating:
+        text: Migrating
+      Removing:
+        text: Removing
+      Running:
+        text: Running
+      Starting:
+        text: Starting

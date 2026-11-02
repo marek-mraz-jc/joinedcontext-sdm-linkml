@@ -1,0 +1,290 @@
+id: https://github.com/smart-data-models/dataModel.PredictiveMaintenance/MaintenanceService
+name: MaintenanceService
+title: MaintenancePrediction
+description: Represent a scheduled maintenance operation
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.PredictiveMaintenance
+  spec.source.path: MaintenanceService/schema.json
+  spec.source.commit: 0823f12add109397d1257a5dc528e2f157e8710e
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "activityRequiredOfCustomer": {"type": "Property", "value": ["Clear workstation",
+    "Dispose of WIPs"]}, "anomalyIndicator": {"type": "ListProperty", "value": ["High
+    Temperature", "Unusual Vibration"]}, "anomalyType": {"type": "Property", "value":
+    "ClassA-Grade1"}, "costForecast": {"type": "Property", "value": 1000}, "customerID":
+    {"type": "Property", "value": "CUST001"}, "durationOfOperation": {"type": "Property",
+    "value": 4.5}, "hasConfiguration": {"type": "ListProperty", "value": [{"id": "MachineComponent:machineComponent01",
+    "type": "Relationship"}]}, "id": "https://smart-data-models.github.io/dataModel.PredictiveMaintenance/MaintenanceService/maintenanceService01",
+    "machineAddressLocation": {"type": "Property", "value": "123 Factory Street, Anytown,
+    USA"}, "machineID": {"type": "Property", "value": "S/N123456789"}, "maintenanceDateScheduled":
+    {"type": "Property", "value": "2023-10-19"}, "maintenanceDeadline": {"type": "Property",
+    "value": "2023-10-20"}, "maintenanceRequired": {"type": "ListProperty", "value":
+    ["Replace ComponentA", "Lubricate ComponentB"]}, "requiresComponent": {"type":
+    "ListProperty", "value": [{"id": "MachineComponent:machineComponent01", "type":
+    "Relationship"}]}, "type": "MaintenanceService"}'
+classes:
+  MaintenanceService:
+    class_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/MaintenanceService
+    description: Represent a scheduled maintenance operation
+    is_a: Entity
+    slots:
+    - activityRequiredOfCustomer
+    - address
+    - alternateName
+    - anomalyIndicator
+    - anomalyType
+    - areaServed
+    - costForecast
+    - customerID
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - durationOfOperation
+    - hasConfiguration
+    - machineAddressLocation
+    - machineID
+    - maintenanceDateScheduled
+    - maintenanceDeadline
+    - maintenanceOperator
+    - maintenanceRequired
+    - name
+    - owner
+    - requiresComponent
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+slots:
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  machineID:
+    description: Property. Identify the system (S/N or Unique Identifier).
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/machineID
+  customerID:
+    description: Property. Identify the customer.
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/customerID
+  machineAddressLocation:
+    description: Property. Machine address (Factory address).
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/machineAddressLocation
+  hasConfiguration:
+    description: ListProperty. Machine description.
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/hasConfiguration
+  anomalyType:
+    description: Property. Class and Grade of anomaly (Classification referred to
+      the maintenance).
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/anomalyType
+  anomalyIndicator:
+    description: ListProperty. Technical information about the anomaly (Information
+      on analysis).
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/anomalyIndicator
+  maintenanceDeadline:
+    description: Property. Maintenance required by .. (Last date for optimal action).
+    range: date
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/maintenanceDeadline
+  maintenanceDateScheduled:
+    description: Property. Maintenance date proposed (To be confirmed by customer).
+    range: date
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/maintenanceDateScheduled
+  maintenanceRequired:
+    description: ListProperty. Maintenance Service description (List of activity).
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/maintenanceRequired
+  maintenanceOperator:
+    description: Relationship. Operator in charge of the activity.
+    range: uriorcurie
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/maintenanceOperator
+  requiresComponent:
+    description: ListProperty. List of machine components required for the maintenance.
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/requiresComponent
+  durationOfOperation:
+    description: Property. Working time on system (Number of hours to execute the
+      activity).
+    range: float
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/durationOfOperation
+  activityRequiredOfCustomer:
+    description: ListProperty. Customer preparation activities for maintenance (To
+      be confirmed by customer).
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/activityRequiredOfCustomer
+  costForecast:
+    description: Property. Calculated cost of the activity (To be confirmed at the
+      end of maintenance).
+    range: float
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/costForecast

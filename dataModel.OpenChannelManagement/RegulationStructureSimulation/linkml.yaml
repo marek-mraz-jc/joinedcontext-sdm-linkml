@@ -1,0 +1,290 @@
+id: https://github.com/smart-data-models/dataModel.OpenChannelManagement/RegulationStructureSimulation
+name: RegulationStructureSimulation
+title: Smart Data Models - RegulationStructureSimulation
+description: This entity contains a harmonised description of a data model for regulation
+  structure simulation, for Raw-Water (Open Channels) System Management domain.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OpenChannelManagement
+  spec.source.path: RegulationStructureSimulation/schema.json
+  spec.source.commit: 4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.OpenChannelManagement/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "", "addressLocality":
+    "", "addressRegion": "", "postOfficeBoxNumber": "", "postalCode": "", "streetAddress":
+    ""}}, "alternateName": {"type": "Property", "value": "Regulation Structure Simulation
+    1"}, "areaServed": {"type": "Property", "value": ""}, "dataProvider": {"type":
+    "Property", "value": "NTUA"}, "dateCreated": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "2020-09-09T09:53:49Z"}}, "dateModified": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "1978-02-07T04:20:08Z"}}, "description":
+    {"type": "Property", "value": "Regulation Structure Simulation"}, "endSimulationTime":
+    {"type": "Property", "value": {"@type": "Datetime", "@value": "2020-12-19T09:56:49Z"}},
+    "equivalentSluiceOpening": {"type": "Property", "value": 490}, "estimatedGateDischargeCoefficient":
+    {"type": "Property", "value": 0.401}, "id": "urn:ngsi-ld:RegulationStructureSimulation:id:SCAU:96103454",
+    "initialConditions": {"type": "Property", "value": [{"targetURI": "urn:ngsi-ld:CrossSection:CS01",
+    "value": 13.29, "waterAttribute": "WaterFlow"}, {"targetURI": "urn:ngsi-ld:CrossSection:CS02",
+    "value": 21, "waterAttribute": "Upstream Depth"}, {"targetURI": "urn:ngsi-ld:SluiceGate:SG01",
+    "value": 515, "waterAttribute": "GateOpening"}]}, "inputParameters": {"type":
+    "Property", "value": [{"targetURI": "urn:ngsi-ld:Spillway:SP01", "value": 1.9,
+    "waterAttribute": "dischargeCoefficient"}, {"targetURI": "urn:ngsi-ld:SluiceGate:SG01",
+    "value": 0.45, "waterAttribute": "gateDischargeCoefficient"}]}, "location": {"type":
+    "Geoproperty", "value": {"coordinates": [-27.391838, -16.801411], "type": "Point"}},
+    "modelError": {"type": "Property", "value": 0.004}, "modelledDischarge": {"type":
+    "Property", "value": 14}, "name": {"type": "Property", "value": "Regulation_Structure_Simulation_1"},
+    "owner": {"type": "Property", "value": ["urn:ngsi-ld:RegulationStructureSimulation:items:XYXQ:62496984",
+    "urn:ngsi-ld:RegulationStructureSimulation:items:ZHVH:90072950"]}, "seeAlso":
+    {"type": "Property", "value": ["urn:ngsi-ld:RegulationStructureSimulation:items:HQQG:85737160",
+    "urn:ngsi-ld:RegulationStructureSimulation:items:PCHL:09983431"]}, "simulationOutput":
+    {"type": "Property", "value": [{"targetURI": "urn:ngsi-ld:CrossSection:CS01",
+    "value": 3.5, "waterAttribute": "waterLevel"}, {"targetURI": "urn:ngsi-ld:SluiceGate:SG01",
+    "value": 450, "waterAttribute": "gateOpening"}]}, "source": {"type": "Property",
+    "value": ""}, "spillwayFlow": {"type": "Property", "value": 0}, "startSimulationTime":
+    {"type": "Property", "value": {"@type": "Datetime", "@value": "2020-12-19T09:55:49Z"}},
+    "targetDischarge": {"type": "Property", "value": 14}, "type": "RegulationStructureSimulation"}'
+classes:
+  RegulationStructureSimulation:
+    class_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/RegulationStructureSimulation
+    description: This entity contains a harmonised description of a data model for
+      regulation structure simulation, for Raw-Water (Open Channels) System Management
+      domain.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - endSimulationTime
+    - equivalentSluiceOpening
+    - estimatedGateDischargeCoefficient
+    - initialConditions
+    - inputParameters
+    - modelError
+    - modelledDischarge
+    - name
+    - owner
+    - seeAlso
+    - simulationOutput
+    - source
+    - spillwayFlow
+    - startSimulationTime
+    - targetDischarge
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/areaServed
+  startSimulationTime:
+    description: Property. Time of day in ISO8601 UTC format at which the simulation
+      begins
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/startSimulationTime
+  endSimulationTime:
+    description: Property. Time of day in ISO8601 UTC format at which the simulation
+      ends
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/endSimulationTime
+  modelError:
+    description: Property. Percentage error between observed and simulated discharge
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/modelError
+  targetDischarge:
+    description: Property. Desirable discharge to be established in the channel, defined
+      by the utility’s operators
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/targetDischarge
+  modelledDischarge:
+    description: Property. Discharge estimated from the simulation model
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/modelledDischarge
+  spillwayFlow:
+    description: Property. Ratio of the spillway discharge to the new total discharge
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/spillwayFlow
+  estimatedGateDischargeCoefficient:
+    description: Property. Calibrated discharge coefficient of the sluice gate
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/estimatedGateDischargeCoefficient
+  equivalentSluiceOpening:
+    description: Property. Equivalent sluice gate opening in the case of multiple
+      sluice gates, estimated as the mean value of the different openings
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/equivalentSluiceOpening
+  simulationOutput:
+    description: Property. Description of the set of results of simulation of the
+      regulation structure
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/simulationOutput
+  inputParameters:
+    description: Property. Description of the set of the modifications to be applied
+      to the Regulation Structure for the simulation
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/inputParameters
+  initialConditions:
+    description: Property. Description of the set of the modifications to be applied
+      to the Regulation Structure for the simulation
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/initialConditions

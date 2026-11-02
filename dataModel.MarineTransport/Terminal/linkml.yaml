@@ -1,0 +1,90 @@
+id: https://github.com/smart-data-models/dataModel.MarineTransport/Terminal
+name: Terminal
+title: Smart Data models Terminal schema
+description: This data model describes a terminal in a port as a join of facilities
+  and ground, which can be used for various maritime operations.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.MarineTransport
+  spec.source.path: Terminal/schema.json
+  spec.source.commit: 4ffb0d8d8c29470e169df9d8c329135ec0806f72
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Ports/master/context.jsonld"],
+    "code": {"type": "Property", "value": "LEV"}, "id": "urn:ngsi-ld:Terminal:urn:mrn:eshuv:facilities:terminal:id:20",
+    "mrn": {"type": "Property", "value": "urn:mrn:eshuv:facilities:terminal:id:20"},
+    "portCode": {"type": "Property", "value": "ESVLC"}, "remarks": {"type": "Property",
+    "value": "Fishing terminal"}, "tafTsiLocationCode": {"type": "Property", "value":
+    "XXXxxxx TAF-TSI label localizacion secundaria de la terminal"}, "terminal": {"type":
+    "Property", "value": "Levante Pesquero"}, "type": "Terminal"}'
+classes:
+  Terminal:
+    class_uri: https://smartdatamodels.org/dataModel.MarineTransport/Terminal
+    description: This data model describes a terminal in a port as a join of facilities
+      and ground, which can be used for various maritime operations.
+    is_a: Entity
+    slots:
+    - code
+    - mrn
+    - portCode
+    - remarks
+    - tafTsiLocationCode
+    - terminal
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+slots:
+  mrn:
+    description: Property. MRN coded identifier. It has to be related to the entity
+      in a way that is well-known by different organisms the meaning and the initiator
+      of the entity, and all next parties will maintain on its original value. This
+      identifier must be an UNIQUE identifier of the PortCall entity assigned by the
+      system who created on first the entity. This URN should Conforms MRN & IETF
+      specifically RFC 2141, RFC 5234, and RFC 8141. The proposed format is id::='urn:mrn:eshuv:<ONSS>:portcalls:terminal:code:[A-Z0-9]+'
+      or  . where OID:= Organisation UN/LOCODE, OONSS:=Organization Name of Service,
+      2099 the year on which the portcall was initiated, 9999999 an increasing, unique
+      identifier that the issuer of the Terminal entity will identify on his systems
+      (i.e. a SQL row-id), . i.e. urn:mrn:eshuv:portcalls:terminal:id:4 . See [Unlocode](https://unece.org/trade/cefact/unlocode-code-list-country-and-territory)In
+      international standards is also known as [Ship's Visit]
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mrn
+  portCode:
+    description: Property. Code of the port where this terminal is located
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/portCode
+  terminal:
+    description: Property. Name of the terminal
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/terminal
+  code:
+    description: Property. Code identifying the terminal
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/code
+  remarks:
+    description: Property. Additional remarks or notes about the terminal
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/remarks
+  tafTsiLocationCode:
+    description: Property. TAF-TSI location code for secondary identification of the
+      terminal
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/tafTsiLocationCode

@@ -1,0 +1,326 @@
+id: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/Valve
+name: Valve
+title: Smart Data Models WaterNetworkManagementEPANET - Valve
+description: This entity contains a harmonised description of a generic Valve made
+  for the Water Network Management domain. This entity is primarily associated with
+  the water management vertical and related IoT applications.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET
+  spec.source.path: Valve/schema.json
+  spec.source.commit: 890ba2a90ddd72a8ff61bb829a071db9687cadd2
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"],
+    "createdAt": "2020-03-02T15:42:00Z", "diameter": {"type": "Property", "unitCode":
+    "MMT", "value": 203.2}, "endsAt": {"object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",
+    "type": "Relationship"}, "id": "urn:ngsi-ld:Valve:87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",
+    "initiaStatus": {"type": "Property", "value": "OPEN"}, "minorLoss": {"type": "Property",
+    "unitCode": "C62", "value": 0.0}, "modifiedAt": "2020-03-02T15:45:00Z", "openStatus":
+    {"type": "Property", "value": 0.3}, "setting": {"type": "Property", "unitCode":
+    "C62", "value": 40.0}, "startsAt": {"object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
+    "type": "Relationship"}, "status": {"type": "Property", "value": "OPEN"}, "tag":
+    {"type": "Property", "value": "DMA1"}, "type": "Valve", "valveType": {"type":
+    "Property", "value": "PRV"}, "vertices": {"type": "GeoProperty", "value": {"coordinates":
+    [[24.40623, 60.17966], [24.50623, 60.27966]], "type": "MultiPoint"}}}'
+classes:
+  Valve:
+    class_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/Valve
+    description: This entity contains a harmonised description of a generic Valve
+      made for the Water Network Management domain. This entity is primarily associated
+      with the water management vertical and related IoT applications.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - diameter
+    - endsAt
+    - flow
+    - initialStatus
+    - minorLoss
+    - name
+    - openStatus
+    - owner
+    - quality
+    - seeAlso
+    - setting
+    - source
+    - startsAt
+    - status
+    - tag
+    - valveCurve
+    - valveType
+    - velocity
+    - vertices
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/areaServed
+  tag:
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/tag
+  status:
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://uri.etsi.org/ngsi-ld/status
+  initialStatus:
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/initialStatus
+  openStatus:
+    description: 'Property. Model: ''https://schema.org/Number''. Units: ''%''. Status
+      of a valve as a numeric percentage value representing how open or close the
+      valve is. 0% - completely closed, 100% - fully open'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/openStatus
+    unit:
+      ucum_code: '%'
+      exact_mappings:
+      - ucefact:P1
+      - qudt-unit:PERCENT
+      has_quantity_kind: qudt-quantkind:DimensionlessRatio
+  diameter:
+    description: Property.  Model:'https://schema.org/Number'. Units:'millimetre'.
+      The valve diameter. All units are accepted in [CEFACT](https://www.unece.org/cefact.html)
+      code
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/diameter
+  valveType:
+    description: Property. Model:'https://schema.org/Text'. The valve type of the
+      element. enum:'FCV, GPV, PBV, PRV, PSV, TCV'
+    range: valveType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/valveType
+  setting:
+    description: Property. Model:'https://schema.org/Number'. Units:'No unit'. A parameter
+      that describes the valve's operational setting. All units are accepted in [CEFACT](https://www.unece.org/cefact.html)
+      code
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/setting
+  minorLoss:
+    description: Property. Model:'https://schema.org/Number'. Units:'No unit'. Unitless
+      minor loss coefficient that applies when the valve is completely opened. All
+      units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/minorLoss
+  startsAt:
+    description: Relationship. The ID of the node on the nominal upstream or inflow
+      side of the valve
+    range: uriorcurie
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/startsAt
+  endsAt:
+    description: Relationship. The ID of the node on the nominal downstream or discharge
+      side of the valve
+    range: uriorcurie
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/endsAt
+  valveCurve:
+    description: Relationship. A relationship to the curve of the setting property.
+      Only required when valveType is GPV
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/valveCurve
+  vertices:
+    description: 'Geoproperty. Coordinates of all vertices in the valve, ordered from
+      the startsAt node to the endsAt node and encoded as a GeoJSON '
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/vertices
+  flow:
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/flow
+  velocity:
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/velocity
+  quality:
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET@890ba2a90ddd72a8ff61bb829a071db9687cadd2
+    slot_uri: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/quality
+enums:
+  valveType_options:
+    name: valveType_options
+    permissible_values:
+      FCV:
+        text: FCV
+      GPV:
+        text: GPV
+      PBV:
+        text: PBV
+      PRV:
+        text: PRV
+      PSV:
+        text: PSV
+      TCV:
+        text: TCV

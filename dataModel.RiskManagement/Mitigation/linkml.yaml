@@ -1,0 +1,293 @@
+id: https://github.com/smart-data-models/dataModel.RiskManagement/Mitigation
+name: Mitigation
+title: Smart Data Models - Risk Assessment - Mitigation Entity
+description: The mitigation of consequences reduces the risk after an event has occurred.
+  Therefore, this risk reduction measure is not suitable for the reduction of the
+  likelihood of events but for the reduction of the negative consequences. Examples
+  for consequence mitigation measures could be e.g. the construction of connection
+  pipes to the neighbor water supplier(s) to get water from them in case of a breakdown
+  of the own water supply, the construction of wells for an emergency supply or signing
+  of contracts with organizations providing small mobile emergency water treatment
+  plants.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.RiskManagement
+  spec.source.path: Mitigation/schema.json
+  spec.source.commit: fde381ce01bc30479a17e447577fd2401afdf45a
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.RiskManagement/master/context.jsonld"],
+    "affects": {"type": "Relationship", "value": "urn:ngsi-ld:ServiceGISData:01"},
+    "apply": {"type": "Relationship", "value": "urn:ngsi-ld:Measure:01"}, "consequence":
+    {"type": "Property", "value": "reputation"}, "description": {"type": "Property",
+    "value": "Mitigation01 Corresponds to reboot the pump"}, "event": {"type": "Property",
+    "value": "interruption"}, "id": "urn:ngsi-ld:Mitigation:01", "likelihood": {"type":
+    "Property", "value": 0.5}, "location": {"type": "GeoProperty", "value": {"coordinates":
+    [[[23.6627, 41.88768], [25.85598, 43.38622], [23.4899, 43.78691], [22.35609, 42.28869],
+    [23.6627, 41.88769]]], "type": "Polygon"}}, "threat": {"type": "Property", "value":
+    "physical"}, "type": "Mitigation", "validFrom": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "2021-02-18T12:00:00Z"}}, "validTo": {"type":
+    "Property", "value": {"@type": "DateTime", "@value": "2021-02-18T12:00:00Z"}}}'
+classes:
+  Mitigation:
+    class_uri: https://smartdatamodels.org/dataModel.RiskManagement/Mitigation
+    description: The mitigation of consequences reduces the risk after an event has
+      occurred. Therefore, this risk reduction measure is not suitable for the reduction
+      of the likelihood of events but for the reduction of the negative consequences.
+      Examples for consequence mitigation measures could be e.g. the construction
+      of connection pipes to the neighbor water supplier(s) to get water from them
+      in case of a breakdown of the own water supply, the construction of wells for
+      an emergency supply or signing of contracts with organizations providing small
+      mobile emergency water treatment plants.
+    is_a: Entity
+    slots:
+    - address
+    - affects
+    - alternateName
+    - apply
+    - areaServed
+    - consequence
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - event
+    - likelihood
+    - name
+    - owner
+    - seeAlso
+    - source
+    - threat
+    - validFrom
+    - validTo
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+slots:
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/areaServed
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/alternateName
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/seeAlso
+  validTo:
+    description: Property. Model:'https://schema.org/Time'. The time at which the
+      risk materialization is started
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/dataModel.RiskManagement/validTo
+  validFrom:
+    description: Property. Model:'https://schema.org/Time'. The time at which the
+      risk materialization is finished
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/validFrom
+  consequence:
+    description: Property. The consequence caused by a risk materialization. Enum:'quality,
+      quantity, reputation'
+    range: consequence_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/dataModel.RiskManagement/consequence
+  description:
+    description: Property. The risk description in a natural language
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: http://purl.org/dc/terms/description
+  event:
+    description: Property. Occurrence or change of a particular set of circumstances.
+      Enum:'destruction, interruption, manipulation, pollution'
+    range: event_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/dataModel.RiskManagement/event
+  threat:
+    description: Property. The potential cause of an incident that may result in a
+      breach of information security or compromise business operations. Enum:'cyber,
+      physical, cyber-physical'
+    range: threat_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/dataModel.RiskManagement/threat
+  likelihood:
+    description: Property. Chance of something happening. In risk management terminology,
+      the word 'likelihood' is used to refer to the chance of something happening,
+      whether defined, measured or determined objectively or subjectively, qualitatively
+      or quantitatively, and described using general terms or mathematically (includes
+      also the types of offered likelihood such as LoAH, LoAS, LoC)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/dataModel.RiskManagement/likelihood
+  affects:
+    description: Relationship. Array of URIs related to the area in which the risk
+      could affect
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/dataModel.RiskManagement/affects
+  apply:
+    description: Relationship. Array of URIs related to Measures associated to the
+      mitigation
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.RiskManagement@fde381ce01bc30479a17e447577fd2401afdf45a
+    slot_uri: https://smartdatamodels.org/dataModel.RiskManagement/apply
+enums:
+  consequence_options:
+    name: consequence_options
+    permissible_values:
+      quality:
+        text: quality
+      quantity:
+        text: quantity
+      reputation:
+        text: reputation
+  event_options:
+    name: event_options
+    permissible_values:
+      destruction:
+        text: destruction
+      interruption:
+        text: interruption
+      manipulation:
+        text: manipulation
+      pollution:
+        text: pollution
+  threat_options:
+    name: threat_options
+    permissible_values:
+      cyber:
+        text: cyber
+      physical:
+        text: physical
+      cyber-physical:
+        text: cyber-physical

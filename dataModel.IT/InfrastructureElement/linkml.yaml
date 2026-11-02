@@ -1,0 +1,583 @@
+id: https://github.com/smart-data-models/dataModel.IT/InfrastructureElement
+name: InfrastructureElement
+title: Smart Data Models - ITinfrastructure / InfrastructureElement
+description: An Infrastructure Element (IE) is a computing node of the Cloud-Edge-IoT
+  computing continuum that can run different ServiceComponents.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.IT
+  spec.source.path: InfrastructureElement/schema.json
+  spec.source.commit: df045cbab80ae09db9eb308e05c89b18840be637
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "availableDisk": {"type": "Property", "unitCode": "Megabytes (MB)", "value": 30585},
+    "availableRam": {"type": "Property", "unitCode": "Megabytes (MB)", "value": 5100},
+    "avgPowerConsumption": {"type": "Property", "value": 100}, "containerTechnology":
+    {"type": "Property", "value": "Kubernetes"}, "cpuArchitecture": {"type": "Property",
+    "value": "AMD64"}, "cpuCores": {"type": "Property", "value": 4}, "cpuFreqMax":
+    {"type": "Property", "unitCode": "Megahertzs (MHz)", "value": 2100.5}, "currentCpuUsage":
+    {"type": "Property", "unitCode": "Percentage (%)", "value": 20}, "currentDiskUsage":
+    {"type": "Property", "unitCode": "Megabytes (MB)", "value": 34951}, "currentDiskUsagePct":
+    {"type": "Property", "unitCode": "Percentage (%)", "value": 53}, "currentPowerConsumption":
+    {"type": "Property", "value": 95}, "currentRamUsage": {"type": "Property", "unitCode":
+    "Megabytes (MB)", "value": 3092}, "currentRamUsagePct": {"type": "Property", "unitCode":
+    "Percentage (%)", "value": 37.7}, "diskCapacity": {"type": "Property", "unitCode":
+    "Megabytes (MB)", "value": 65536}, "diskType": {"type": "Property", "value": "SSD"},
+    "domain": {"object": "urn:ngsi-ld:Domain:Production", "type": "Relationship"},
+    "energyEfficiencyRatio": {"type": "Property", "value": 0.8}, "gpu": {"type": "Property",
+    "value": true}, "gpuMemory": {"type": "Property", "unitCode": "Megabytes (MB)",
+    "value": 2048}, "hostname": {"type": "Property", "value": "continuum-worker-1"},
+    "id": "urn:ngsi-ld:InfrastructureElement:Production:00155dc09474", "infrastructureElementStatus":
+    {"type": "Property", "value": "Ready"}, "infrastructureElementTier": {"type":
+    "Property", "value": "Edge"}, "internalIpAddress": {"type": "Property", "value":
+    "192.168.1.35"}, "location": {"type": "GeoProperty", "value": {"coordinates":
+    [-0.3411743020092746, 39.48103451588121], "type": "Point"}}, "lowLevelOrchestrator":
+    {"object": "urn:ngsi-ld:LowLevelOrchestrator:Production:Kubernetes", "type": "Relationship"},
+    "macAddress": {"type": "Property", "value": "00:15:5d:c0:94:74"}, "netLostPackages":
+    {"type": "Property", "value": 200}, "netSpeedDown": {"type": "Property", "unitCode":
+    "Megabits per second (Mbps)", "value": 520}, "netSpeedUp": {"type": "Property",
+    "unitCode": "Megabits per second (Mbps)", "value": 510}, "netTrafficDown": {"type":
+    "Property", "unitCode": "Megabytes per second (MBps)", "value": 3.5}, "netTrafficUp":
+    {"type": "Property", "unitCode": "Megabytes per second (MBps)", "value": 2.5},
+    "operatingSystem": {"type": "Property", "value": "Linux"}, "powerSource": {"object":
+    "urn:ngsi-ld:PowerSource:Production:SolarFarm01", "type": "Relationship"}, "ramCapacity":
+    {"type": "Property", "unitCode": "Megabytes (MB)", "value": 8192}, "realTimeCapable":
+    {"type": "Property", "value": true}, "trustScore": {"type": "Property", "value":
+    0.58}, "type": "InfrastructureElement"}'
+classes:
+  InfrastructureElement:
+    class_uri: https://smartdatamodels.org/dataModel.IT/InfrastructureElement
+    description: An Infrastructure Element (IE) is a computing node of the Cloud-Edge-IoT
+      computing continuum that can run different ServiceComponents.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - availableDisk
+    - availableRam
+    - avgPowerConsumption
+    - containerTechnology
+    - cpuArchitecture
+    - cpuCores
+    - cpuFreqMax
+    - currentCpuUsage
+    - currentDiskUsage
+    - currentDiskUsagePct
+    - currentPowerConsumption
+    - currentRamUsage
+    - currentRamUsagePct
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - diskCapacity
+    - diskType
+    - domain
+    - energyEfficiencyRatio
+    - gpu
+    - gpuMemory
+    - hostname
+    - infrastructureElementStatus
+    - infrastructureElementTier
+    - internalIpAddress
+    - lowLevelOrchestrator
+    - name
+    - netLostPackages
+    - netSpeedDown
+    - netSpeedUp
+    - netTrafficDown
+    - netTrafficUp
+    - operatingSystem
+    - owner
+    - powerSource
+    - ramCapacity
+    - realTimeCapable
+    - seeAlso
+    - source
+    - trustScore
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/areaServed
+  domain:
+    description: Relationship. Domain to which belongs the Infrastructure Element
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/domain
+  hostname:
+    description: Property. Hostname (or internal name) of the Infrastructure Element.
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/hostname
+  internalIpAddress:
+    description: Property. Model:'https://schema.org/Text'. Internal IP address of
+      the main network interface of the Infrastructure Element.
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/internalIpAddress
+  infrastructureElementStatus:
+    description: Property. Enum:'Disabled', 'Insecure', 'Maintenance', 'Overloaded',
+      'Ready', 'Untrusted'. Current status of the Infrastructure Element.
+    range: infrastructureElementStatus_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/infrastructureElementStatus
+  trustScore:
+    description: Property. Numerical score between 0 and 1 that aims to indicate the
+      trustworthiness index of the Infrastructure Element
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/trustScore
+  containerTechnology:
+    description: Property. Enum:'Kubernetes', 'Docker', 'containerd', 'Podman', 'iSulad'.
+      Technology or container management framework that uses the IE to run containers
+      (so that ServiceComponents) on it.
+    range: containerTechnology_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/containerTechnology
+  lowLevelOrchestrator:
+    description: Relationship. LowLevelOrchestrator related to the Infrastructure
+      Element.
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/lowLevelOrchestrator
+  infrastructureElementTier:
+    description: Property. Enum:'Cloud', 'Edge', 'FarEdge', 'IoT', 'CloudOnPremises'.
+      Architectural layer or tier in the Cloud-Edge-Iot continuum to which belongs
+      the Infrastructure Element.
+    range: infrastructureElementTier_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/infrastructureElementTier
+  operatingSystem:
+    description: Property. Enum:'Linux', 'macOS', 'Windows'. Operating System that
+      runs the Infrastructure Element.
+    range: operatingSystem_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/operatingSystem
+  cpuArchitecture:
+    description: Property. Enum:'AMD64', 'ARM64', 'ARM32', 'MIPS64LE', 'PPC64LE',
+      'RISC-V', 'S390X'. CPU architecture that must have the Infrastructure Element.
+    range: cpuArchitecture_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/cpuArchitecture
+  cpuCores:
+    description: Property. Number of CPU cores of the Infrastructure Element.
+    range: float
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/cpuCores
+  cpuFreqMax:
+    description: Property. Units:'Megahertzs (MHz)'. Maximum CPU frequency of the
+      Infrastructure Element.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/cpuFreqMax
+  currentCpuUsage:
+    description: Property. Current percentage of CPU usage in the Infrastructure Element.
+    range: float
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/currentCpuUsage
+  ramCapacity:
+    description: Property. Units:'Megabytes (MB)'. RAM capacity of the Infrastructure
+      Element.
+    range: float
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/ramCapacity
+  availableRam:
+    description: Property. Units:'Megabytes (MB)'. Current RAM available in Infrastructure
+      Element.
+    range: float
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/availableRam
+  currentRamUsage:
+    description: Property. Units:'Megabytes (MB)'. Current RAM in use in Infrastructure
+      Element.
+    range: float
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/currentRamUsage
+  currentRamUsagePct:
+    description: Property. Current percentage of RAM usage in the Infrastructure Element.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/currentRamUsagePct
+  gpu:
+    description: Property. Indicates if the Infrastructure Element has a dedicated
+      GPU.
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/gpu
+  gpuMemory:
+    description: Property. Units:'Megabytes (MB)'. (Only if the IE has GPU) GPU memory
+      of the Infrastructure Element.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/gpuMemory
+  diskType:
+    description: Property. Enum:'HDD', 'SSD'. Disk type of the Infrastructure Element.
+    range: diskType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/diskType
+  diskCapacity:
+    description: Property. Units:'Megabytes (MB)'. Maximum disk capacity of the Infrastructure
+      Element.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/diskCapacity
+  availableDisk:
+    description: Property. Units:'Megabytes (MB)'. Current disk space available in
+      Infrastructure Element.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/availableDisk
+  currentDiskUsage:
+    description: Property. Units:'Megabytes (MB)'. Current disk usage of the Infrastructure
+      Element.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/currentDiskUsage
+  currentDiskUsagePct:
+    description: Property. Current percentage of disk usage of the Infrastructure
+      Element.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/currentDiskUsagePct
+  realTimeCapable:
+    description: Property. Defines if the Infrastructure Element is capable of real-time
+      processing.
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/realTimeCapable
+  netSpeedUp:
+    description: Property. Units:'Megabits per second (Mbps)'. Current upload speed
+      of the main network interface of the Infrastructure Element.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/netSpeedUp
+  netSpeedDown:
+    description: Property. Units:'Megabits per second (Mbps)'. Current download speed
+      of the main network interface of the Infrastructure Element.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/netSpeedDown
+  netTrafficUp:
+    description: Property. Units:'Megabytes per second (MBps)'. Current upload traffic
+      of the main network interface of the Infrastructure Element.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/netTrafficUp
+  netTrafficDown:
+    description: Property. Units:'Megabytes per second (MBps)'. Current download traffic
+      of the main network interface of the Infrastructure Element.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/netTrafficDown
+  netLostPackages:
+    description: Property. Number of packages lost from the main network interface
+      of the Infrastructure Element.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/netLostPackages
+  avgPowerConsumption:
+    description: Property. Units:'Watts (W)'. Average energy consumption of the Infrastructure
+      Element.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/avgPowerConsumption
+  currentPowerConsumption:
+    description: Property. Units:'Watts (W)'. Current energy consumption of the Infrastructure
+      Element.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/currentPowerConsumption
+  powerSource:
+    description: Relationship. PowerSource which feeds the Infrastructure Element.
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/powerSource
+  energyEfficiencyRatio:
+    description: Property. Ratio (between 0 and 1) that aims to depict the energy
+      efficiency of the Infrastructure Element.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/energyEfficiencyRatio
+enums:
+  infrastructureElementStatus_options:
+    name: infrastructureElementStatus_options
+    permissible_values:
+      Disabled:
+        text: Disabled
+      Insecure:
+        text: Insecure
+      Maintenance:
+        text: Maintenance
+      Overloaded:
+        text: Overloaded
+      Ready:
+        text: Ready
+      Untrusted:
+        text: Untrusted
+  containerTechnology_options:
+    name: containerTechnology_options
+    permissible_values:
+      Kubernetes:
+        text: Kubernetes
+      Docker:
+        text: Docker
+      containerd:
+        text: containerd
+      Podman:
+        text: Podman
+      iSulad:
+        text: iSulad
+  infrastructureElementTier_options:
+    name: infrastructureElementTier_options
+    permissible_values:
+      Cloud:
+        text: Cloud
+      Edge:
+        text: Edge
+      FarEdge:
+        text: FarEdge
+      IoT:
+        text: IoT
+      CloudOnPremises:
+        text: CloudOnPremises
+  operatingSystem_options:
+    name: operatingSystem_options
+    permissible_values:
+      Linux:
+        text: Linux
+      macOS:
+        text: macOS
+      Windows:
+        text: Windows
+  cpuArchitecture_options:
+    name: cpuArchitecture_options
+    permissible_values:
+      AMD64:
+        text: AMD64
+      ARM64:
+        text: ARM64
+      ARM32:
+        text: ARM32
+      MIPS64LE:
+        text: MIPS64LE
+      PPC64LE:
+        text: PPC64LE
+      RISC-V:
+        text: RISC-V
+      S390X:
+        text: S390X
+  diskType_options:
+    name: diskType_options
+    permissible_values:
+      HDD:
+        text: HDD
+      SSD:
+        text: SSD

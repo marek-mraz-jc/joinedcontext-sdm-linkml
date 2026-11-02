@@ -1,0 +1,322 @@
+id: https://github.com/smart-data-models/dataModel.Agrifood/AgriParcelOperation
+name: AgriParcelOperation
+title: Smart Data Models - Agri Parcel Operation
+description: This entity contains a harmonised description of a generic operations
+  performed on a parcel of land. This entity is primarily associated with the agricultural
+  vertical and related IoT applications.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Agrifood
+  spec.source.path: AgriParcelOperation/schema.json
+  spec.source.commit: e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"],
+    "dateCreated": {"type": "Property", "value": {"@type": "DateTime", "@value": "2017-01-01T01:20:00Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2017-05-04T12:30:00Z"}}, "description": {"type": "Property", "value": "Monthly
+    fertiliser application"}, "endedAt": {"type": "Property", "value": {"@type": "DateTime",
+    "@value": "2016-08-22T10:18:16Z"}}, "hasAgriParcel": {"object": "urn:ngsi-ld:AgriParcel:318366a9-7643-4d8e-9a11-c76a8c29d8eb",
+    "type": "Relationship"}, "hasAgriProductType": {"object": "urn:ngsi-ld:AgriProductType:a8f616b8-13fb-473a-8e61-b7a80c6c93ec",
+    "type": "Relationship"}, "hasOperator": {"object": "urn:ngsi-ld:Person:fce9dcbc-4479-11e8-9de1-cb228de7a15c",
+    "type": "Relationship"}, "id": "urn:ngsi-ld:AgriParcelOperation:e1e9d3a3-074f-46f1-9375-52000d05a62b",
+    "irrigationRecord": {"type": "Property", "value": "https://example.com/agriparcelrecords/irrigationrecord1"},
+    "operationType": {"type": "Property", "value": "fertiliser"}, "plannedEndAt":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2016-08-22T10:18:16Z"}},
+    "plannedStartAt": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2016-08-22T10:18:16Z"}}, "quantity": {"type": "Property", "unitCode": "KGM",
+    "value": 40}, "relatedSource": {"type": "Property", "value": [{"application":
+    "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a", "applicationEntityId":
+    "app:parcelop1"}]}, "reportedAt": {"type": "Property", "value": {"@type": "DateTime",
+    "@value": "2016-08-22T10:18:16Z"}}, "result": {"type": "Property", "value": "ok"},
+    "seeAlso": {"type": "Property", "value": ["https://example.org/concept/agriparcelop",
+    "https://datamodel.org/example/agriparcelop"]}, "startedAt": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2016-08-22T10:18:16Z"}}, "status": {"type":
+    "Property", "value": "finished"}, "type": "AgriParcelOperation", "waterSource":
+    {"type": "Property", "value": "rainwater capture"}, "workOrder": {"type": "Property",
+    "value": "https://example.com/agriparcelrecords/workorder1"}, "workRecord": {"type":
+    "Property", "value": "https://example.com/agriparcelrecords/workrecord1"}}'
+classes:
+  AgriParcelOperation:
+    class_uri: https://smartdatamodels.org/dataModel.Agrifood/AgriParcelOperation
+    description: This entity contains a harmonised description of a generic operations
+      performed on a parcel of land. This entity is primarily associated with the
+      agricultural vertical and related IoT applications.
+    is_a: Entity
+    slots:
+    - alternateName
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - endedAt
+    - hasAgriParcel
+    - hasAgriProductType
+    - hasOperator
+    - irrigationRecord
+    - name
+    - operationType
+    - owner
+    - plannedEndAt
+    - plannedStartAt
+    - quantity
+    - reportedAt
+    - result
+    - seeAlso
+    - source
+    - startedAt
+    - status
+    - waterSource
+    - workOrder
+    - workRecord
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/seeAlso
+  hasAgriParcel:
+    description: Relationship. Reference to the AgriParcel
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/hasAgriParcel
+  operationType:
+    description: Property. A choice from an enumerated list describing the operation
+      performed on the parcel. Enum:'fertiliser, inspection, pesticide, water, other'
+    range: operationType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/operationType
+  result:
+    description: Property. A description of the results of the operation. Enum:'ok,
+      aborted, failed'
+    range: result_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/result
+  plannedStartAt:
+    description: Property. Model:'http://schema.org/DateTime'. The planned start date/timestamp
+      for the operation. Note that this is advisory and the actual time the operation
+      starts may be before or after the planned start
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/plannedStartAt
+  plannedEndAt:
+    description: Property. Model:'http://schema.org/DateTime'. The planned end date/timestamp
+      for the operation. <br/><br/>Note that this is advisory and the actual time
+      the operation finishes may be before or after the planned end
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/plannedEndAt
+  status:
+    description: Property. A choice from an enumerated list describing the status.
+      Enum:'planned, ongoing, finished, scheduled, cancelled'
+    range: status_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://uri.etsi.org/ngsi-ld/status
+  hasOperator:
+    description: Relationship. Reference to the operator conducting the operation
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/hasOperator
+  startedAt:
+    description: Property. Model:'http://schema.org/DateTime'. Timestamp when the
+      operation actually started to be performed
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/startedAt
+  endedAt:
+    description: Property. Model:'http://schema.org/DateTime'. Timestamp when the
+      operation actually finished
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/endedAt
+  reportedAt:
+    description: Property. Model:'http://schema.org/DateTime'. Timestamp when the
+      event fault was reported
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/reportedAt
+  hasAgriProductType:
+    description: Relationship. Reference to the AgriProductType used/applied
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/hasAgriProductType
+  quantity:
+    description: Property. Model:'http://schema.org/Number'. The total quantity of
+      water or product used/ applied. It is recommended this is measured in litres
+      for liquids or kilogrammes for solids
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/quantity
+  waterSource:
+    description: Property. Model:'http://schema.org/Text'. Type of water sources.
+      Enum:'borehole, rainfall, river, rainwater capture, water dam, commercial supply'
+    range: waterSource_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/waterSource
+  workOrder:
+    description: Relationship. Model:'http://schema.org/URL'. Relationship with the
+      workorder for the execution
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/workOrder
+  workRecord:
+    description: Relationship. Model:'http://schema.org/URL'. Relationship with the
+      work record of the execution
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/workRecord
+  irrigationRecord:
+    description: Relationship. Model:'http://schema.org/URL'. Relationship with the
+      irrigation record of the execution
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/irrigationRecord
+enums:
+  operationType_options:
+    name: operationType_options
+    permissible_values:
+      fertiliser:
+        text: fertiliser
+      inspection:
+        text: inspection
+      pesticide:
+        text: pesticide
+      water:
+        text: water
+      other:
+        text: other
+  result_options:
+    name: result_options
+    permissible_values:
+      ok:
+        text: ok
+      aborted:
+        text: aborted
+      failed:
+        text: failed
+  status_options:
+    name: status_options
+    permissible_values:
+      planned:
+        text: planned
+      ongoing:
+        text: ongoing
+      finished:
+        text: finished
+      scheduled:
+        text: scheduled
+      cancelled:
+        text: cancelled
+  waterSource_options:
+    name: waterSource_options
+    permissible_values:
+      borehole:
+        text: borehole
+      rainfall:
+        text: rainfall
+      river:
+        text: river
+      rainwater capture:
+        text: rainwater capture
+      water dam:
+        text: water dam
+      commercial supply:
+        text: commercial supply

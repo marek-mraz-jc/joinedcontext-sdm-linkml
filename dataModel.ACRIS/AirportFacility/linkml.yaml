@@ -1,0 +1,52 @@
+id: https://github.com/smart-data-models/dataModel.ACRIS/AirportFacility
+name: AirportFacility
+title: Smart Data Models - Mapping of ACRIS data model AirportFacility
+description: Property. Information about an Airport as buildings or infrastructure
+  used to provide services.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ACRIS
+  spec.source.path: AirportFacility/schema.json
+  spec.source.commit: 82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.ACRIS/master/context.jsonld"],
+    "IataCode": {"type": "Property", "value": "BMA"}, "IcaoCode": {"type": "Property",
+    "value": "ESSB"}, "Name": {"type": "Property", "value": "control"}, "id": "urn:ngsi-ld:AirportFacility:id:CJKH:90684356",
+    "type": "AirportFacility"}'
+classes:
+  AirportFacility:
+    class_uri: https://smartdatamodels.org/dataModel.ACRIS/AirportFacility
+    description: Property. Information about an Airport as buildings or infrastructure
+      used to provide services.
+    is_a: Entity
+    slots:
+    - IataCode
+    - IcaoCode
+    - Name
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+slots:
+  IataCode:
+    description: Property. Three character IATA code for the Airport.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/IataCode
+  IcaoCode:
+    description: Property. Four character ICAO code for the Airport.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/IcaoCode
+  Name:
+    description: Property. Common name of the Airport.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/Name

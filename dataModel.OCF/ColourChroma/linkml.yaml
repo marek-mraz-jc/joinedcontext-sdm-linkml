@@ -1,0 +1,289 @@
+id: https://github.com/smart-data-models/dataModel.OCF/ColourChroma
+name: ColourChroma
+title: Colour Chroma
+description: Smart Data Models Program adaptation of the original IoTData data Models.
+  This Resource describes the colour using chroma conventions. Properties are 'hue',
+  'saturation', 'csc', and 'ct'. The Property 'hue' is the hue angle, it is an integer
+  value as defined by the CIECAM02 model definition (see reference [CIE CIE159:2004]).
+  The Property 'saturation' is an integer value as defined by the CIECAM02 model definition
+  (see reference [CIE CIE159:2004]). The Property 'maximumsaturation' is the upper
+  bound on the saturation supported by the Device. If not present the maximum value
+  for 'saturation' is 32767. The Property 'csc' is the colour space coordinates in
+  CIE colour space.   The first item in the array is the X coordinate.   The second
+  item in the array is the Y coordinate. The Property 'nct' is the Mired colour temperature.
+  The Resource provides the colour using chroma conventions.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: ColourChroma/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Say floor radio similar
+    former high. Director ch", "addressLocality": "Receive skin join opportunity government
+    activity relate. Job region shake executive. Any father help decide bad go.",
+    "addressRegion": "Pressure board collection", "district": "Follow price at matter
+    contain fine. North environmental citizen hundred start. Many live upon name Mrs.",
+    "postOfficeBoxNumber": "Better little why. Discover report local chair a. Letter
+    American later minute scientist. Great change every artist return.", "postalCode":
+    "Send pressure yet executive computer.", "streetAddress": "Contain color start
+    respond pressure seven entire. Theory step difficult.", "streetNr": "Citizen "}},
+    "alternateName": {"type": "Property", "value": "Great pay beat. D"}, "areaServed":
+    {"type": "Property", "value": "Recognize never"}, "csc": {"type": "Property",
+    "value": [0.4, 0.6]}, "ct": {"type": "Property", "value": 864}, "dataProvider":
+    {"type": "Property", "value": "Suffer prove push "}, "dateCreated": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "1993-07-29T18:02:30Z"}}, "dateModified":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "1997-02-20T15:50:29Z"}},
+    "description": {"type": "Property", "value": "Read pass respond hour which hea"},
+    "hue": {"type": "Property", "value": 80.9}, "id": "urn:ngsi-ld:ColourChroma:id:VBKK:04819905",
+    "if": {"type": "Property", "value": ["oic.if.a", "oic.if.baseline"]}, "location":
+    {"type": "GeoProperty", "value": {"coordinates": [-9.2514065, 77.705794], "type":
+    "Point"}}, "maximumsaturation": {"type": "Property", "value": 25247}, "n": {"type":
+    "Property", "value": "Sure although middle eye official."}, "name": {"type": "Property",
+    "value": "As investment offer fact become senior. Avoid want information them
+    west present."}, "owner": {"type": "Property", "value": ["urn:ngsi-ld:ColourChroma:items:PUPR:35081327",
+    "urn:ngsi-ld:ColourChroma:items:DDOU:92095052"]}, "rt": {"type": "Property", "value":
+    ["oic.r.colour.chroma"]}, "saturation": {"type": "Property", "value": 25247},
+    "seeAlso": {"type": "Property", "value": ["urn:ngsi-ld:ColourChroma:items:ZIZO:86166167"]},
+    "source": {"type": "Property", "value": "Similar let phone prevent live local.
+    Lay thus teacher send ea"}, "type": "ColourChroma"}'
+classes:
+  ColourChroma:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/ColourChroma
+    description: Smart Data Models Program adaptation of the original IoTData data
+      Models. This Resource describes the colour using chroma conventions. Properties
+      are 'hue', 'saturation', 'csc', and 'ct'. The Property 'hue' is the hue angle,
+      it is an integer value as defined by the CIECAM02 model definition (see reference
+      [CIE CIE159:2004]). The Property 'saturation' is an integer value as defined
+      by the CIECAM02 model definition (see reference [CIE CIE159:2004]). The Property
+      'maximumsaturation' is the upper bound on the saturation supported by the Device.
+      If not present the maximum value for 'saturation' is 32767. The Property 'csc'
+      is the colour space coordinates in CIE colour space.   The first item in the
+      array is the X coordinate.   The second item in the array is the Y coordinate.
+      The Property 'nct' is the Mired colour temperature. The Resource provides the
+      colour using chroma conventions.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - csc
+    - ct
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - hue
+    - if
+    - maximumsaturation
+    - n
+    - name
+    - owner
+    - rt
+    - saturation
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. The Resource Type.
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  ct:
+    description: Property. The Mired colour temperature.
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/ct
+  hue:
+    description: Property. The hue angle as defined by the CIECAM02 model definition.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/hue
+  saturation:
+    description: Property. The saturation as defined by the CIECAM02 model definition.
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/saturation
+  maximumsaturation:
+    description: Property. The maximum supported value of 'saturation' for this Device.
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/maximumsaturation
+  csc:
+    description: Property. The X and Y coordinates of the colour in CIE colour space
+    range: float
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/csc
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  if:
+    description: Property. The OCF Interface set supported by this Resource.
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.colour.chroma:
+        text: oic.r.colour.chroma
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.a:
+        text: oic.if.a
+      oic.if.baseline:
+        text: oic.if.baseline

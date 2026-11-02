@@ -1,0 +1,376 @@
+id: https://github.com/smart-data-models/dataModel.SDMX/Observation
+name: Observation
+title: Smart Data models - SDMX Observation schema
+description: A single observation in the SDMX Cube, may have one or more associated
+  measured values
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.SDMX
+  spec.source.path: Observation/schema.json
+  spec.source.commit: 7bb24993a8cabde0d1c8665039359585dab1a556
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.SDMX/master/context.jsonld"],
+    "confStatus": {"type": "Property", "value": "F"}, "dataset": {"object": "urn:ngsi-ld:CatalogueDCAT-AP:ds1002",
+    "type": "Property"}, "decimals": {"type": "Property", "value": 1}, "dimensions":
+    {"type": "Property", "value": [{"key": "urn:ngsi-ld:DimensionProperty:d3002",
+    "value": "urn:ngsi-ld:Concept:N"}, {"key": "urn:ngsi-ld:DimensionProperty:d3004",
+    "value": "W2"}, {"key": "urn:ngsi-ld:DimensionProperty:d3005", "value": "S1"},
+    {"key": "urn:ngsi-ld:DimensionProperty:d3006", "value": "S1"}, {"key": "urn:ngsi-ld:DimensionProperty:d3007",
+    "value": "B"}, {"key": "urn:ngsi-ld:DimensionProperty:d3008", "value": "B1G"},
+    {"key": "urn:ngsi-ld:DimensionProperty:d3009", "value": "_Z"}, {"key": "urn:ngsi-ld:DimensionProperty:d3010",
+    "value": "A"}, {"key": "urn:ngsi-ld:DimensionProperty:d3011", "value": "_Z"},
+    {"key": "urn:ngsi-ld:DimensionProperty:d3012", "value": "XDC"}, {"key": "urn:ngsi-ld:DimensionProperty:d3013",
+    "value": "V"}, {"key": "urn:ngsi-ld:DimensionProperty:d3014", "value": "N"}]},
+    "freq": {"type": "Property", "value": "A"}, "id": "urn:ngsi-ld:SDMX:Observation:obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012",
+    "identifier": {"type": "Property", "value": "obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012"},
+    "obsStatus": {"type": "Property", "value": "A"}, "obsValue": {"type": "Property",
+    "value": 3016.9}, "refArea": {"type": "Property", "value": "BE"}, "timePeriod":
+    {"type": "Property", "value": "2012"}, "title": {"type": "Property", "value":
+    "http://bauhaus/jeuDeDonnees/ds1002/obs-A-N-BE-W2-S1-S1-NA-B1G-_Z-A-_Z-XDC-V-N-2012"},
+    "type": "Observation", "unitMult": {"type": "Property", "value": 6}}'
+classes:
+  Observation:
+    class_uri: https://smartdatamodels.org/dataModel.SDMX/Observation
+    description: A single observation in the SDMX Cube, may have one or more associated
+      measured values
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - confStatus
+    - dataProvider
+    - dataset
+    - dateCreated
+    - dateModified
+    - decimals
+    - description
+    - dimensions
+    - freq
+    - identifier
+    - name
+    - obsStatus
+    - obsValue
+    - owner
+    - refArea
+    - seeAlso
+    - source
+    - timePeriod
+    - title
+    - unitMult
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: https://smartdatamodels.org/areaServed
+  title:
+    description: Property. Model:'dct:title'. This property contains the main identifier
+      for the Observation, the URI
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: http://purl.org/dc/terms/title
+  identifier:
+    description: Property. Model:'dct:identifier'. This property contains a name given
+      to the Dataset
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: dct:identifier
+  dimensions:
+    description: Property. Model:'https://schema.org/StructuredValue'. This property
+      contains the list of dimensions identified by its key and value
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: https://smartdatamodels.org/dataModel.SDMX/dimensions
+  dataset:
+    description: Relationship. Model:'http://purl.org/linked-data/cube#Dataset'. Represents
+      a collection of observations, conforming to some common dimensional structure
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: https://uri.etsi.org/ngsi-ld/hasDataset
+  confStatus:
+    description: Property. Model:'http://purl.org/linked-data/sdmx/2009/code#confStatus'.
+      Confidentiality Status (CONF_STATUS). This code list provides coded information
+      about the sensitivity and confidentiality status of the data. The different
+      values are defined based in Code List Confidentially Status v1.3 (https://sdmx.org/wp-content/uploads/CL_CONF_STATUS_1_3_2022.docx)
+    range: confStatus_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: sdmx-attribute:confStatus
+  decimals:
+    description: Property. Model:'http://purl.org/linked-data/sdmx/2009/code#decimals'.
+      Provide a list of values showing the number of decimal digits used in the data.
+      The different values are defined based in Code List Decimals v1.3 (https://sdmx.org/wp-content/uploads/CL_CONF_STATUS_1_3_2022.docx)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: sdmx-attribute:decimals
+  obsStatus:
+    description: Property. Model:'http://purl.org/linked-data/sdmx/2009/code#obsStatus'.
+      This code list provides coded information about the "status" of an observation
+      (with respect events such as the ones reflected in the codes composing the code
+      list). The different values are defined based in Code List Observation Status
+      v2.2 (https://sdmx.org/wp-content/uploads/CL_OBS_STATUS_v2_2.docx)
+    range: obsStatus_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: sdmx-attribute:obsStatus
+  unitMult:
+    description: Property. Model:'http://purl.org/linked-data/sdmx/2009/code#unitMult'.
+      Provide code values for indicating the magnitude in the units of measurements.
+      In scientific notation, expressed as ten raised to the power of the number.
+      The different values are defined based in Unit Multiplier v1.1 (https://sdmx.org/wp-content/uploads/CL_UNIT_MULT_v1.1.docx)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: sdmx-attribute:unitMult
+  freq:
+    description: Property. Model:'http://purl.org/linked-data/sdmx/2009/dimension#freq'.
+      This code list provides a set of values indicating the 'frequency' of the data
+      (e.g. weekly, monthly, quarterly). The concept “frequency” may refer to various
+      stages in the production process, e.g. data collection or data dissemination.
+      For example, a time series could be disseminated at annual frequency, but the
+      underlying data are compiled monthly. The code list is applicable for all different
+      uses of “frequency”. The different values are defined based in Unit Multiplier
+      v1.1 (https://sdmx.org/wp-content/uploads/CL_FREQ-2.1_February_2021.docx)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: sdmx-dimension:freq
+  refArea:
+    description: Property. Model:'http://purl.org/linked-data/sdmx/2009/dimension#refArea'.
+      The country or geographic area to which the measured statistical phenomenon
+      relates. The different values are defined based in Reference Area v2.0 (https://sdmx.org/wp-content/uploads/CL_AREA_2_0_March_2019.docx)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: sdmx-dimension:refArea
+  timePeriod:
+    description: Property. Model:'http://purl.org/linked-data/sdmx/2009/dimension#timePeriod'.
+      The period of time or point in time to which the measured observation refers.
+      The measurement represented by each observation corresponds to a specific point
+      in time (e.g. a single day) or a period (e.g. a month, a fiscal year, or a calendar
+      year). This is used as a time stamp and is of particular importance for time
+      series data. In cases where the actual time period of the data differs from
+      the target reference period, “time period” refers to the actual period
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: sdmx-dimension:timePeriod
+  obsValue:
+    description: Property. Model:'http://purl.org/linked-data/sdmx/2009/measure#obsValue'.
+      The value of a particular variable at a particular period
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SDMX@7bb24993a8cabde0d1c8665039359585dab1a556
+    slot_uri: sdmx-measure:obsValue
+enums:
+  confStatus_options:
+    name: confStatus_options
+    permissible_values:
+      F:
+        text: F
+      N:
+        text: N
+      C:
+        text: C
+      D:
+        text: D
+      S:
+        text: S
+      A:
+        text: A
+      O:
+        text: O
+      T:
+        text: T
+      G:
+        text: G
+      M:
+        text: M
+      E:
+        text: E
+      P:
+        text: P
+  obsStatus_options:
+    name: obsStatus_options
+    permissible_values:
+      A:
+        text: A
+      B:
+        text: B
+      D:
+        text: D
+      E:
+        text: E
+      F:
+        text: F
+      G:
+        text: G
+      I:
+        text: I
+      K:
+        text: K
+      W:
+        text: W
+      O:
+        text: O
+      M:
+        text: M
+      P:
+        text: P
+      S:
+        text: S
+      L:
+        text: L
+      H:
+        text: H
+      Q:
+        text: Q
+      J:
+        text: J
+      N:
+        text: N
+      U:
+        text: U
+      V:
+        text: V

@@ -1,0 +1,255 @@
+id: https://github.com/smart-data-models/dataModel.OCF/KeyCardSwitch
+name: KeyCardSwitch
+title: KeyCard Switch
+description: 'Smart Data Models Program adaptation of the original IoTData data Models.
+  This Resource describes the operation of a KeyCard style switch. It has one mandatory
+  Property,''stateofcard'', which is a string enum type. It has two enum values: ''validCardInserted'',
+  ''validCardNotInserted''. ''validCardInserted'' means that a keycard was inserted
+  and passed validation check. ''validCardNotInserted'' means that a keycard is not
+  inserted or it was inserted but failed to pass validation check.'
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: KeyCardSwitch/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Enough accept nearly
+    sport hotel. Know child away en", "addressLocality": "Deep relationship about
+    fight mind. Really wall today cause position.", "addressRegion": "Do authority
+    religious college director thought. Hear air nat", "district": "Writer share reduce
+    child form. Growth smile clear information nothing heavy sport. Figure method
+    church southern attorney fish.", "postOfficeBoxNumber": "S", "postalCode": "Near
+    huge black. Would issue he need.", "streetAddress": "View ball rock subject those
+    decide bring. Number ok line use door.", "streetNr": "System plan tax point analysis
+    reduce. Individual stand work"}}, "alternateName": {"type": "Property", "value":
+    "Special say hundred "}, "areaServed": {"type": "Property", "value": "Campaign
+    paper seven. List former movement throughout all red act."}, "dataProvider": {"type":
+    "Property", "value": "Total big nation couple writer picture voice. Easy charge
+    centur"}, "dateCreated": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "1984-05-02T03:57:17Z"}}, "dateModified": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "1990-10-10T17:17:22Z"}}, "description": {"type": "Property",
+    "value": "Go own involve region candidate there go. Provide finish card thousand.
+    Why raise second pick thus."}, "id": "urn:ngsi-ld:KeyCardSwitch:id:EICU:62882679",
+    "if": {"type": "Property", "value": ["oic.if.baseline", "oic.if.s"]}, "location":
+    {"type": "GeoProperty", "value": {"coordinates": [79.4951555, -149.538487], "type":
+    "Point"}}, "n": {"type": "Property", "value": "Use su"}, "name": {"type": "Property",
+    "value": "Institution game o"}, "owner": {"type": "Property", "value": ["urn:ngsi-ld:KeyCardSwitch:items:MQFE:06102243",
+    "urn:ngsi-ld:KeyCardSwitch:items:JYJG:56880066"]}, "rt": {"type": "Property",
+    "value": ["oic.r.keycardswitch"]}, "seeAlso": {"type": "Property", "value": ["urn:ngsi-ld:KeyCardSwitch:items:QFUB:66511170"]},
+    "source": {"type": "Property", "value": "Early generation once couple whom would.
+    Item toni"}, "stateofcard": {"type": "Property", "value": "validCardInserted"},
+    "type": "KeyCardSwitch"}'
+classes:
+  KeyCardSwitch:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/KeyCardSwitch
+    description: 'Smart Data Models Program adaptation of the original IoTData data
+      Models. This Resource describes the operation of a KeyCard style switch. It
+      has one mandatory Property,''stateofcard'', which is a string enum type. It
+      has two enum values: ''validCardInserted'', ''validCardNotInserted''. ''validCardInserted''
+      means that a keycard was inserted and passed validation check. ''validCardNotInserted''
+      means that a keycard is not inserted or it was inserted but failed to pass validation
+      check.'
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - if
+    - n
+    - name
+    - owner
+    - rt
+    - seeAlso
+    - source
+    - stateofcard
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. The Resource Type of KeyCardSwitch
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  stateofcard:
+    description: Property. The status of the keycardswitch. 'validCardInserted' means
+      that a keycard was inserted and passed validation check. 'validCardNotInserted'
+      means that a keycard is not inserted or it was inserted but failed to pass validation
+      check.
+    range: stateofcard_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/stateofcard
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  if:
+    description: Property. The OCF Interface set supported by this Resource.
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.keycardswitch:
+        text: oic.r.keycardswitch
+  stateofcard_options:
+    name: stateofcard_options
+    permissible_values:
+      validCardInserted:
+        text: validCardInserted
+      validCardNotInserted:
+        text: validCardNotInserted
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.s:
+        text: oic.if.s
+      oic.if.baseline:
+        text: oic.if.baseline

@@ -1,0 +1,232 @@
+id: https://github.com/smart-data-models/dataModel.UrbanMobility/PublicTransportRoute
+name: PublicTransportRoute
+title: SynchroniCity - Urban mobility PublicTransportRoute schema
+description: A generic public transport route data model
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.UrbanMobility
+  spec.source.path: PublicTransportRoute/schema.json
+  spec.source.commit: 81a052c84d275a71489910c4f93eb3b6c80c4830
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"],
+    "dataProvider": {"type": "Property", "value": "http://www.smartsantander.eu/"},
+    "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3", "name":
+    {"type": "Property", "value": "PE ACASTILLO-PLAZA DE ITALIA "}, "routeCode": {"type":
+    "Property", "value": "5200103000"}, "routeColor": {"type": "Property", "value":
+    "#ff0000"}, "routeSegments": {"type": "Property", "value": [{"refPublicTransportStops":
+    ["urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311", "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"],
+    "segmentName": "PE ACASTILLO-PLAZA DE ITALIA:1"}, {"refPublicTransportStops":
+    ["urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130", "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"],
+    "segmentName": "PE ACASTILLO-PLAZA DE ITALIA:2"}]}, "routeTextColor": {"type":
+    "Property", "value": "RED"}, "schedule": {"type": "Property", "value": [{"closes":
+    "23:00", "opens": "09:00", "validFrom": "2018-01-24", "validThrough": "2018-05-25"},
+    {"closes": "14:00", "dayOfWeek": "Sunday", "opens": "09:00"}]}, "shortRouteCode":
+    {"type": "Property", "value": "N3"}, "source": {"type": "Property", "value": "https://api.smartsantander.eu/"},
+    "transportationType": {"type": "Property", "value": 3}, "type": "PublicTransportRoute"}'
+classes:
+  PublicTransportRoute:
+    class_uri: https://smartdatamodels.org/dataModel.UrbanMobility/PublicTransportRoute
+    description: A generic public transport route data model
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - name
+    - owner
+    - routeCode
+    - routeColor
+    - routeSegments
+    - routeTextColor
+    - schedule
+    - seeAlso
+    - shortRouteCode
+    - source
+    - transportationType
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/areaServed
+  routeCode:
+    description: Property. ID or code of the route (e.g. HT5200104000).  Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/routeCode
+  shortRouteCode:
+    description: Property. Shorter form of the ID/code of the route (e.g. 5200104000).
+      Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/shortRouteCode
+  transportationType:
+    description: Property. Types of public transport using this stop as defined in
+      (https://developers.google.com/transit/gtfs/reference/#routestxt). Model:'https://schema.org/Number'.
+      Enum:'0, 1, 2, 3, 4, 5, 6, 7'
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/transportationType
+  routeColor:
+    description: Property. Color assigned to route in text.  Model:'https://schema.org/color'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/routeColor
+  routeTextColor:
+    description: Property. Color assigned to route in hexadecimal.  Model:'https://schema.org/color'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/routeTextColor
+  routeSegments:
+    description: Property. Segments of this route defined by their name and stops
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/routeSegments
+  schedule:
+    description: Property. Working hours of this route. Model:'https://schema.org/OpeningHoursSpecification'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/schedule

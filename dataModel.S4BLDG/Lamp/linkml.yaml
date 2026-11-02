@@ -1,0 +1,348 @@
+id: https://github.com/smart-data-models/dataModel.S4BLDG/Lamp
+name: Lamp
+title: Smart data models - Lamp schema
+description: A lamp is an artificial light source such as a light bulb or tube.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.S4BLDG
+  spec.source.path: Lamp/schema.json
+  spec.source.commit: 06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.S4BLDG/master/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"], "alternateName":
+    {"type": "Property", "value": "Lamp type 2"}, "colorAppearance": {"type": "Property",
+    "value": "card"}, "colorRenderingIndex": {"type": "Property", "value": 0.6745960848595047},
+    "colorTemperature": {"observedAt": "2023-01-26T05:53:48Z", "type": "Property",
+    "unitCode": "K", "value": 0.03839635886669124}, "contributedLuminousFlux": {"observedAt":
+    "2023-01-26T12:44:07Z", "type": "Property", "unitCode": "Steradian", "value":
+    0.43828304543957874}, "dataProvider": {"type": "Property", "value": "IFC file"},
+    "dateCreated": {"type": "Property", "value": "2023-01-25T21:41:50Z"}, "dateModified":
+    {"type": "Property", "value": "2023-01-25T17:39:08Z"}, "description": {"type":
+    "Property", "value": "Lamp of limited Lamp types"}, "hasManufacturer": {"type":
+    "Property", "value": "Lamp Company Inc."}, "hasModel": {"type": "Property", "value":
+    "Lamp 0.1.2"}, "id": "urn:ngsi-ld:Lamp:a14c597e-ec02-4db5-aad5-6107d6435015",
+    "isContainedInBuildingSpace": {"object": "urn:ngsi-ld:BuildingSpace:550d9127-0996-4282-af73-1a7cbef3bee7",
+    "type": "Relationship"}, "isContainedInPhysicalObject": {"object": "urn:ngsi-ld:PhysicalObject:6fc10ce2-d07f-4837-9104-c17e7b33b812",
+    "type": "Relationship"}, "isSubSystemOf": [{"object": "urn:ngsi-ld:System:a76465e2-2473-4048-849b-8f59eb40e19e",
+    "type": "Relationship"}, {"object": "urn:ngsi-ld:System:eaa2ffb0-4ea6-4904-a271-01c8cb171034",
+    "type": "Relationship"}, {"object": "urn:ngsi-ld:System:dc605242-4054-4fc8-89ba-8bce59724d02",
+    "type": "Relationship"}], "lampBallastType": {"type": "Property", "value": "mobile"},
+    "lampCompensationType": {"type": "Property", "value": "seize"}, "lampMaintenanceFactor":
+    {"observedAt": "2023-01-26T06:20:56Z", "type": "Property", "unitCode": "NA", "value":
+    0.035996560482205564}, "lightEmitterNominalPower": {"observedAt": "2023-01-25T17:44:26Z",
+    "type": "Property", "unitCode": "J/s", "value": 0.3144630350336074}, "name": {"type":
+    "Property", "value": "Lamp"}, "source": {"type": "Property", "value": "Import"},
+    "spectrumMax": {"observedAt": "2023-01-25T17:43:19Z", "type": "Property", "unitCode":
+    "NA", "value": 0.5533105661727246}, "spectrumMin": {"observedAt": "2023-01-25T16:58:44Z",
+    "type": "Property", "unitCode": "NA", "value": 0.3399337921412814}, "type": "Lamp"}'
+classes:
+  Lamp:
+    class_uri: https://smartdatamodels.org/dataModel.S4BLDG/Lamp
+    description: A lamp is an artificial light source such as a light bulb or tube.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - colorAppearance
+    - colorRenderingIndex
+    - colorTemperature
+    - contributedLuminousFlux
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - hasManufacturer
+    - hasModel
+    - isContainedInBuildingSpace
+    - isContainedInPhysicalObject
+    - isSubSystemOf
+    - lampBallastType
+    - lampCompensationType
+    - lampMaintenanceFactor
+    - lightEmitterNominalPower
+    - name
+    - owner
+    - seeAlso
+    - source
+    - spectrumMax
+    - spectrumMin
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/areaServed
+  colorAppearance:
+    description: Property. In both the DIN and CIE standards, artificial light sources
+      are classified in terms of their color appearance. To the human eye they all
+      appear to be white the difference can only be detected by direct comparison.
+      Visual performance is not directly affected by differences in color appearance
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/colorAppearance
+  colorRenderingIndex:
+    description: Property. The CRI indicates how well a light source renders eight
+      standard colors compared to perfect reference lamp with the same color temperature.
+      The CRI scale ranges from 1 to 100, with 100 representing perfect rendering
+      properties
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/colorRenderingIndex
+  colorTemperature:
+    description: Property. The color temperature of any source of radiation is defined
+      as the temperature (in Kelvin) of a black-body or Planckian radiator whose radiation
+      has the same chromaticity as the source of radiation. Often the values are only
+      approximate color temperatures as the black-body radiator cannot emit radiation
+      of every chromaticity value. The color temperatures of the commonest artificial
+      light sources range from less than 3000K (warm white) to 4000K (intermediate)
+      and over 5000K (daylight). Usually measured in degrees Kelvin (K)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/colorTemperature
+  contributedLuminousFlux:
+    description: Property. Luminous flux is a photometric measure of radiant flux,
+      i.e. the volume of light emitted from a light source. Luminous flux is measured
+      either for the interior as a whole or for a part of the interior (partial luminous
+      flux for a solid angle). All other photometric parameters are derivatives of
+      luminous flux. Luminous flux is measured in lumens (lm). The luminous flux is
+      given as a nominal value for each lamp. Usually measured in Lumen (lm, Candela
+      Steradian)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/contributedLuminousFlux
+  lampBallastType:
+    description: Property. The type of ballast used to stabilise gas discharge by
+      limiting the current during operation and to deliver the necessary striking
+      voltage for starting. Ballasts are needed to operate Discharge Lamps such as
+      Fluorescent, Compact Fluorescent, High-pressure Mercury, Metal Halide and High-pressure
+      Sodium Lamps. Magnetic ballasts are chokes which limit the current passing through
+      a lamp connected in series on the principle of self-induction. The resultant
+      current and power are decisive for the efficient operation of the lamp. A specially
+      designed ballast is required for every type of lamp to comply with lamp rating
+      in terms of Luminous Flux, Color Appearance and service life. The two types
+      of magnetic ballasts for fluorescent lamps are KVG Conventional (EC-A series)
+      and VVG Low-loss ballasts (EC-B series). Low-loss ballasts have a higher efficiency,
+      which means reduced ballast losses and a lower thermal load. Electronic ballasts
+      are used to run fluorescent lamps at high frequencies (approx. 35 - 40 kHz)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/lampBallastType
+  lampCompensationType:
+    description: Property. Identifies the form of compensation used for power factor
+      correction and radio suppression
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/lampCompensationType
+  lampMaintenanceFactor:
+    description: Property. Non recoverable losses of luminous flux of a lamp due to
+      lamp depreciation i.e. the decreasing of light output of a luminaire due to
+      aging and dirt
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/lampMaintenanceFactor
+  lightEmitterNominalPower:
+    description: Property. Light emitter nominal power. Usually measured in Watts
+      (W, J/s)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/lightEmitterNominalPower
+  spectrumMax:
+    description: Property. The spectrum of radiation describes its composition with
+      regard to wavelength. Light, for example, as the portion of electromagnetic
+      radiation that is visible to the human eye, is radiation with wavelengths in
+      the range of approx. 380 to 780 nm (1 nm = 10 m). The corresponding range of
+      colours varies from violet to indigo, blue, green, yellow, orange, and red.
+      These colours form a continuous spectrum, in which the various spectral sectors
+      merge into each other
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/spectrumMax
+  spectrumMin:
+    description: Property. The spectrum of radiation describes its composition with
+      regard to wavelength. Light, for example, as the portion of electromagnetic
+      radiation that is visible to the human eye, is radiation with wavelengths in
+      the range of approx. 380 to 780 nm (1 nm = 10 m). The corresponding range of
+      colours varies from violet to indigo, blue, green, yellow, orange, and red.
+      These colours form a continuous spectrum, in which the various spectral sectors
+      merge into each other
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/spectrumMin
+  isContainedInBuildingSpace:
+    description: Relationship. An entity used to define the physical spaces of the
+      building. A building space contains devices or building objects. (BuildingSpace)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isContainedInBuildingSpace
+  isContainedInPhysicalObject:
+    description: Relationship. Any Object that has a proper space region.  (Definition
+      extracted from DUL ontology) (PhysicalObject)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isContainedInPhysicalObject
+  isSubSystemOf:
+    description: Relationship. A reference to a system(s) that this Physical Object
+      is part of
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isSubSystemOf
+  hasManufacturer:
+    description: Property. A relationship identifying the manufacturer of an entity
+      (e.g., device). The value is expected to be a string or a string with language
+      tag
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/hasManufacturer
+  hasModel:
+    description: Property. A relationship identifying the model of an entity (e.g.,
+      device). The value is expected to be a string or a string with language tag
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/hasModel

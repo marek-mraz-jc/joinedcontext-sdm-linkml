@@ -1,0 +1,487 @@
+id: https://github.com/smart-data-models/dataModel.Environment/AirQualityObserved
+name: AirQualityObserved
+title: Smart Data Models - Air quality observed schema
+description: An observation of air quality conditions at a certain place and time.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Environment
+  spec.source.path: AirQualityObserved/schema.json
+  spec.source.commit: 2f048407ccc243df67aee7e1b1ca5470092d743e
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "ES", "addressLocality":
+    "Madrid", "streetAddress": "Plaza de Espa\u00f1a", "type": "PostalAddress"}},
+    "airQualityIndex": {"type": "Property", "value": 65}, "airQualityLevel": {"type":
+    "Property", "value": "moderate"}, "areaServed": {"type": "Property", "value":
+    "Brooklands"}, "charge": {"type": "Property", "value": 5}, "co": {"type": "Property",
+    "unitCode": "GP", "value": 500}, "coLevel": {"type": "Property", "value": "moderate"},
+    "dateObserved": {"type": "Property", "value": "2016-03-15T11:00:00"}, "id": "urn:ngsi-ld:AirQualityObserved:Madrid-AmbientObserved-28079004-2016-03-15T11:00:00",
+    "location": {"type": "GeoProperty", "value": {"coordinates": [-3.712247222222222,
+    40.423852777777775], "type": "Point"}}, "no": {"type": "Property", "unitCode":
+    "GQ", "value": 45}, "no2": {"type": "Property", "unitCode": "GQ", "value": 69},
+    "nox": {"type": "Property", "unitCode": "GQ", "value": 139}, "pm4": {"type": "Property",
+    "value": 37}, "precipitation": {"type": "Property", "value": 0}, "pressure": {"type":
+    "Property", "value": 1.1}, "refPointOfInterest": {"object": "urn:ngsi-ld:PointOfInterest:28079004-Pza.deEspanya",
+    "type": "Relationship"}, "relativeHumidity": {"type": "Property", "value": 0.54},
+    "reliability": {"type": "Property", "value": 0.7}, "so2": {"type": "Property",
+    "unitCode": "GQ", "value": 11}, "source": {"type": "Property", "value": "http://datos.madrid.es"},
+    "temperature": {"type": "Property", "value": 12.2}, "tpc": {"type": "Property",
+    "value": 108}, "tsp": {"type": "Property", "value": 73}, "type": "AirQualityObserved",
+    "typeOfLocation": {"type": "Property", "value": "outdoor"}, "windDirection": {"type":
+    "Property", "value": 176}, "windSpeed": {"type": "Property", "value": 0.64}}'
+classes:
+  AirQualityObserved:
+    class_uri: https://smartdatamodels.org/dataModel.Environment/AirQualityObserved
+    description: An observation of air quality conditions at a certain place and time.
+    is_a: Entity
+    slots:
+    - address
+    - airQualityIndex
+    - airQualityLevel
+    - alternateName
+    - areaServed
+    - as
+    - c6h6
+    - cd
+    - charge
+    - co
+    - co2
+    - coLevel
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - dateObserved
+    - description
+    - name
+    - ni
+    - 'no'
+    - no2
+    - nox
+    - o3
+    - owner
+    - pb
+    - pm1
+    - pm10
+    - pm25
+    - pm4
+    - precipitation
+    - pressure
+    - refDevice
+    - refPointOfInterest
+    - refWeatherObserved
+    - relativeHumidity
+    - reliability
+    - seeAlso
+    - sh2
+    - so2
+    - source
+    - temperature
+    - tpc
+    - tsp
+    - typeofLocation
+    - volatileOrganicCompoundsTotal
+    - windDirection
+    - windSpeed
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/address
+  dateObserved:
+    description: 'Property. The date and time of this observation in ISO8601 UTCformat.
+      Model:''https://schema.org/Text'' '
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dateObserved
+  areaServed:
+    description: 'Property. Higher level area to which this air quality measurement
+      belongs to. Model:''https://schema.org/Text'' '
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/areaServed
+  airQualityIndex:
+    description: Property. Model:'https://schema.org/Number'. Air quality index is
+      a number used to report the quality of the air on any given day
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/airQualityIndex
+  airQualityLevel:
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/airQualityLevel
+  reliability:
+    description: 'Property. Reliability (percentage, expressed in parts per one) corresponding
+      to the air quality observed. Model:''https://schema.org/Number'' '
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/reliability
+  as:
+    description: Property. Model:'https://schema.org/Number'. Arsenic detected
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/as
+  c6h6:
+    description: Property. Benzene detected
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/c6h6
+  cd:
+    description: Property. Cadmium detected
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/cd
+  co:
+    description: Property. Carbon Monoxide detected
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/co
+  coLevel:
+    description: Property. Qualitative Carbon Monoxide presence
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/coLevel
+  co2:
+    description: Property. Carbon Dioxide detected
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/co2
+  ni:
+    description: 'Property. Nickel detected '
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/ni
+  'no':
+    description: Property. Nitrogen monoxide detected
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/no
+  no2:
+    description: Property. Nitrogen dioxide detected
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/no2
+  nox:
+    description: Property. Other Nitrogen oxides detected
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/nox
+  o3:
+    description: 'Property. Ozone detected '
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/o3
+  pm10:
+    description: Property. Particulate matter 10 micrometers or less in diameter
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/pm10
+  pm25:
+    description: Property. Particulate matter 2.5 micrometers or less in diameter
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/pm25
+  pb:
+    description: 'Property. Lead detected   '
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/pb
+  precipitation:
+    description: Property. Model:'https://schema.org/Number'. Amount of water rain.
+      Units:'Liters per square meter'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/precipitation
+  relativeHumidity:
+    description: Property. Relative Humidity of the air (a number between 0 and 1
+      representing the range of 0% to 100%)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/relativeHumidity
+  sh2:
+    description: Property. Hydrogen sulfide detected
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/sh2
+  so2:
+    description: Property. Sulfur dioxide detected
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/so2
+  typeofLocation:
+    description: Property. Model:'https://schema.org/Text'. Type of location of the
+      sampled item
+    range: typeofLocation_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/typeofLocation
+  volatileOrganicCompoundsTotal:
+    description: Property. Alkanes <C10, ketones <C6, aldehydes <C10, carboxylic acids
+      <C5, aspirits<C7, Alkenes <C8, Aromatics
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/volatileOrganicCompoundsTotal
+  refDevice:
+    description: Relationship. A reference to the device(s) which captured this observation
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/refDevice
+  refPointOfInterest:
+    description: Relationship. A reference to a point of interest (usually an air
+      quality station) associated to this observation
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/refPointOfInterest
+  refWeatherObserved:
+    description: Relationship.  Weather observed associated to the air quality conditions
+      described by this entity
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/refWeatherObserved
+  temperature:
+    description: Property. Temperature of the item
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/temperature
+  windDirection:
+    description: Property. Model:'http://schema.org/Number'. Direction of the weather
+      vane
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/windDirection
+  windSpeed:
+    description: Property. Model:'http//schema.org/Number'. Intensity of the wind
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/windSpeed
+  pm1:
+    description: Property. Particulate matter 1 micrometers or less in diameter
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/pm1
+  pm4:
+    description: Property. Particulate matter 4 micrometers or less in diameter
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/pm4
+  tpc:
+    description: Property. Total Particulate Counter (Total concentration of particles
+      suspended in the air.)
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/tpc
+  tsp:
+    description: Property. Total Suspended Particles (Concentration of all airborne
+      particles regardless of their size or composition.)
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/tsp
+  pressure:
+    description: Property. Atmospheric pressure (hPa) observed.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/pressure
+  charge:
+    description: Property. Input charging voltage of the monitoring device.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Environment@2f048407ccc243df67aee7e1b1ca5470092d743e
+    slot_uri: https://smartdatamodels.org/dataModel.Environment/charge
+enums:
+  typeofLocation_options:
+    name: typeofLocation_options
+    permissible_values:
+      indoor:
+        text: indoor
+      outdoor:
+        text: outdoor

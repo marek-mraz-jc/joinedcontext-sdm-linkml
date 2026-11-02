@@ -1,0 +1,683 @@
+id: https://github.com/smart-data-models/dataModel.Agrifood/AgriFertilize
+name: AgriFertilize
+title: AgriFertilize Schema
+description: Schema for AgriFertilize entity. To fertilize land means to improve its
+  quality in order to make plants grow well on it, by spreading solid animal waste
+  or a chemical mixture on it
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Agrifood
+  spec.source.path: AgriFertilize/schema.json
+  spec.source.commit: e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"],
+    "bill": {"type": "Property", "value": ""}, "dateCreated": {"type": "Property",
+    "value": "2024-05-30T09:14:44.000Z"}, "dateModified": {"type": "Property", "value":
+    "2024-05-30T09:14:44.000Z"}, "detail": {"type": "Property", "value": ""}, "dose":
+    {"type": "Property", "value": 10}, "enddate": {"type": "Property", "value": ""},
+    "id": "urn:ngsi-ld:AgriFertilize:1", "idcp": {"type": "Property", "value": [{"type":
+    "Property", "value": "13"}, {"type": "Property", "value": "14"}, {"type": "Property",
+    "value": "15"}]}, "inidate": {"type": "Property", "value": "2024-05-30T09:14:44.000Z"},
+    "machine": {"type": "Property", "value": []}, "maf": {"type": "Property", "value":
+    {"id": {"type": "Property", "value": "1"}, "name": {"type": "Property", "value":
+    "Esparcido general"}, "type": "MAF"}}, "measure": {"type": "Property", "value":
+    {"code": {"type": "Property", "value": 17}, "detail": {"type": "Property", "value":
+    ""}, "id": {"type": "Property", "value": "501"}, "name": {"type": "Property",
+    "value": "Kilogramo por hect\u00e1rea"}, "prior": {"type": "Property", "value":
+    "1"}, "subtype": {"type": "Property", "value": {"id": {"type": "Property", "value":
+    6}, "name": {"type": "Property", "value": "Fertilizante"}, "type": "TypeMeasure"}},
+    "symbol": {"type": "Property", "value": "kg/ha"}, "type": "Measure"}}, "msoup":
+    {"type": "Property", "value": {"code": {"type": "Property", "value": 4}, "detail":
+    {"type": "Property", "value": ""}, "id": {"type": "Property", "value": "514"},
+    "name": {"type": "Property", "value": "Litro"}, "prior": {"type": "Property",
+    "value": "3"}, "subtype": {"type": "Property", "value": {"id": {"type": "Property",
+    "value": 6}, "name": {"type": "Property", "value": "Fertilizante"}, "type": "TypeMeasure"}},
+    "symbol": {"type": "Property", "value": "l"}, "type": "Measure"}}, "mud": {"type":
+    "Property", "value": 0}, "name": {"type": "Property", "value": ""}, "plan": {"type":
+    "Property", "value": ""}, "r10": {"type": "Property", "value": ""}, "soup": {"type":
+    "Property", "value": 1000}, "subtype": {"type": "Property", "value": {"aacm":
+    {"type": "Property", "value": []}, "accm": {"type": "Property", "value": []},
+    "check": {"type": "Property", "value": 0}, "code": {"type": "Property", "value":
+    "F0002478/2025"}, "comp": {"type": "Property", "value": {"id": {"type": "Property",
+    "value": 269}, "name": {"type": "Property", "value": "Organicos Pedrin, S.l"},
+    "nif": {"type": "Property", "value": ""}, "type": "Company"}}, "hecm": {"type":
+    "Property", "value": []}, "id": {"type": "Property", "value": 1339}, "macm": {"type":
+    "Property", "value": []}, "manure": {"type": "Property", "value": ""}, "matdet":
+    {"type": "Property", "value": ""}, "material": {"type": "Property", "value": {"id":
+    {"type": "Property", "value": 15}, "name": {"type": "Property", "value": "Productos
+    fertilizantes: abonos org\u00e1nicos"}, "type": "TMF"}}, "metadata": {"type":
+    "Property", "value": [{"date": {"type": "Property", "value": "2024-02-09T15:48:46.000Z"},
+    "type": "Create", "user": {"type": "Property", "value": {"email": {"type": "Property",
+    "value": ""}, "id": {"type": "Property", "value": "1"}, "loginname": {"type":
+    "Property", "value": "sistema"}, "name": {"type": "Property", "value": "Sistema"},
+    "nif": {"type": "Property", "value": ""}, "surname": {"type": "Property", "value":
+    ""}, "type": "UserMetadata"}}}]}, "micm": {"type": "Property", "value": []}, "mmcm":
+    {"type": "Property", "value": [{"id": {"type": "Property", "value": 10000}, "subtype":
+    {"type": "Property", "value": {"code": {"type": "Property", "value": 1}, "id":
+    {"type": "Property", "value": 1}, "name": {"type": "Property", "value": "Nitr\u00f3geno
+    total"}, "subtype": {"type": "Property", "value": {"id": {"type": "Property",
+    "value": 1}, "name": {"type": "Property", "value": "Macronutriente principal"},
+    "type": "SCM"}}, "symbol": {"type": "Property", "value": "% N total"}, "type":
+    "TCM"}}, "type": "CM", "value": {"type": "Property", "value": 1.5}}, {"id": {"type":
+    "Property", "value": 10001}, "subtype": {"type": "Property", "value": {"code":
+    {"type": "Property", "value": 6}, "id": {"type": "Property", "value": 6}, "name":
+    {"type": "Property", "value": "\u00d3xido de f\u00f3sforo total"}, "subtype":
+    {"type": "Property", "value": {"id": {"type": "Property", "value": 1}, "name":
+    {"type": "Property", "value": "Macronutriente principal"}, "type": "SCM"}}, "symbol":
+    {"type": "Property", "value": "% P2O5 total"}, "type": "TCM"}}, "type": "CM",
+    "value": {"type": "Property", "value": 1}}, {"id": {"type": "Property", "value":
+    10002}, "subtype": {"type": "Property", "value": {"code": {"type": "Property",
+    "value": 9}, "id": {"type": "Property", "value": 9}, "name": {"type": "Property",
+    "value": "\u00d3xido de potasio"}, "subtype": {"type": "Property", "value": {"id":
+    {"type": "Property", "value": 1}, "name": {"type": "Property", "value": "Macronutriente
+    principal"}, "type": "SCM"}}, "symbol": {"type": "Property", "value": "% K2O total"},
+    "type": "TCM"}}, "type": "CM", "value": {"type": "Property", "value": 2}}]}, "name":
+    {"type": "Property", "value": "Abono Organico Npk (Ca) 1,5-1-2 (2) Mezcla De Origen
+    Animal Y Vegetal Sirlepur"}, "nif": {"type": "Property", "value": ""}, "otcm":
+    {"type": "Property", "value": []}, "provider": {"type": "Property", "value": ""},
+    "reviewed": {"type": "Property", "value": 1}, "type": "TypeFertilize"}}, "taf":
+    {"type": "Property", "value": {"id": {"type": "Property", "value": "1"}, "name":
+    {"type": "Property", "value": "Abonado de fondo"}, "type": "TAF"}}, "tmi": {"type":
+    "Property", "value": {"acronym": {"type": "Property", "value": ""}, "id": {"type":
+    "Property", "value": "1"}, "name": {"type": "Property", "value": "Sin especificar"},
+    "type": "TMI"}}, "type": "AgriFertilize"}'
+classes:
+  AgriFertilize:
+    class_uri: https://smartdatamodels.org/dataModel.Agrifood/AgriFertilize
+    description: Schema for AgriFertilize entity. To fertilize land means to improve
+      its quality in order to make plants grow well on it, by spreading solid animal
+      waste or a chemical mixture on it
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - bill
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - detail
+    - dose
+    - enddate
+    - idcp
+    - inidate
+    - machine
+    - maf
+    - measure
+    - msoup
+    - mud
+    - name
+    - owner
+    - plan
+    - r10
+    - seeAlso
+    - soup
+    - source
+    - subtype
+    - taf
+    - target
+    - tmi
+    - typsoil
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  Measure:
+    description: Property. Details of the measure
+    attributes:
+      detail:
+        description: Property. Notes about the measurement
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      id:
+        description: Property. Identifier of the measure
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      name:
+        description: Property. Name assigned to the measure
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      prior:
+        description: Property. Level of importance of the measure. Available values
+          are between 0 (priority) and 10 (least priority)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      type:
+        description: Property. Type of the measure
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      code:
+        description: Property. Ministry code assigned to the measure
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      symbol:
+        description: Property. Symbol assigned to the measure
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  Comp:
+    description: Property. Details of the company associated with the subtype
+    attributes:
+      id:
+        description: Property. Identifier of the company
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      name:
+        description: Property. Name of the company that owns the fertilizer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      vat:
+        description: Property. VAT of the company that owns the fertilizer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      type:
+        description: Property. Type of the company
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  Material:
+    description: Property. Material details associated with the subtype
+    attributes:
+      id:
+        description: Property. Identifier of the material
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      name:
+        description: Property. Name of the material that uses compost or fertilizer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      type:
+        description: Property. Type of the material that uses compost or fertilizer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  Subtype:
+    description: Property. Subtype details of the AgriFertilize entity
+    attributes:
+      aacm:
+        description: Property. Array of aacm objects associated with the subtype,
+          information on amino acids of the fertilizer type
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      check:
+        description: Property. Check value associated with the subtype
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      code:
+        description: Property. Code of the subtype
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      comp:
+        description: Property. Details of the company associated with the subtype
+        range: Comp
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      hecm:
+        description: Property. Array of hecm objects associated with the subtype,
+          information heavy metals of the fertilizer type
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      id:
+        description: Property. Identifier of the subtype
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      macm:
+        description: Property. Array of macm objects associated with the subtype,
+          information on other macronutrients of the fertilizer type
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      manure:
+        description: Property. Manure details, if any
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      matdet:
+        description: Property. Material fertilize detail, if any
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      material:
+        description: Property. Material details associated with the subtype
+        range: Material
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      metadata:
+        description: Property. Array of metadata objects associated with the subtype
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      micm:
+        description: Property. Array of micm objects associated with the subtype,
+          information on micronutrients of the type of fertilizer
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      mmcm:
+        description: Property. Array of mmcm objects associated with the subtype
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      name:
+        description: Property. Name of the type of fertilizer used and associated
+          with the fertilization code
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      notes:
+        description: Property. Notes associated with the subtype
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      subcode:
+        description: Property. Subcode of the subtype
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      symbol:
+        description: Property. Symbol of the subtype
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  Maf:
+    description: Property. Information on fertilizer application methods
+    attributes:
+      id:
+        description: Property. Identifier of fertilizer application mode
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      name:
+        description: Property. Name of fertilizer application mode
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      type:
+        description: Property. Type of fertilizer application mode
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  Msoup:
+    description: Property. Information on the measurement used for the final amount
+      of broth administered
+    attributes:
+      detail:
+        description: Property. Details of the msoup
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      id:
+        description: Property. Identifier of the msoup
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      name:
+        description: Property. Name of the measure used for the final amount of broth
+          administered
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      prior:
+        description: Property. Prior details of the measure used for the final amount
+          of broth administered
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      type:
+        description: Property. Type of the measure used for the final amount of broth
+          administered
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      code:
+        description: Property. Code of the measure used for the final amount of broth
+          administered
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      symbol:
+        description: Property. Symbol of the measure used for the final amount of
+          broth administered
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  Taf:
+    description: Property. Information on types of fertilizer application
+    attributes:
+      id:
+        description: Property. Identifier of the TAF
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      name:
+        description: Property. Name of the types of fertilizer application
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      type:
+        description: Property. Type of the types of fertilizer application
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  Tmi:
+    description: Property. Information on the types of inhibitory molecule
+    attributes:
+      id:
+        description: Property. Identifier of the types of inhibitory molecule
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      name:
+        description: Property. Name of the types of inhibitory molecule
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      type:
+        description: Property. Type of the types of inhibitory molecule
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/areaServed
+  dose:
+    description: Property. Fertilizer dose administered
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/dose
+  enddate:
+    description: Property. Final date of fertilizer process. This field can be empty
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/enddate
+  inidate:
+    description: Property. The start date of the fertilization process
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/inidate
+  measure:
+    description: Property. Details of the measure
+    range: Measure
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/measure
+  subtype:
+    description: Property. Subtype details of the AgriFertilize entity
+    range: Subtype
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/subtype
+  target:
+    description: Property. Target details for the AgriFertilize entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/target
+  typsoil:
+    description: Property. Type of soil associated with the AgriFertilize entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/typsoil
+  bill:
+    description: Property. Invoice or delivery note number
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/bill
+  detail:
+    description: Property. User notes on administered fertilizer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://uri.etsi.org/ngsi-ld/detail
+  idcp:
+    description: Property. IDs of the CropSigpac on which the fertilizer is applied
+      in the campaign
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/idcp
+  machine:
+    description: Property. Information on the machinery assigned to the application
+      of the fertilizer as well as information on its hygiene
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/machine
+  maf:
+    description: Property. Information on fertilizer application methods
+    range: Maf
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/maf
+  msoup:
+    description: Property. Information on the measurement used for the final amount
+      of broth administered
+    range: Msoup
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/msoup
+  mud:
+    description: Property. Indicates whether sewage sludge application document has
+      been used or not
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/mud
+  plan:
+    description: Property. Information about the subscriber plans that are part of
+      the campaign
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/plan
+  r10:
+    description: Property. Waste authorisation number R10. The treatment of soil by
+      applying waste to the land is considered a recovery operation coded as R1001.
+      Residues must be applied to agricultural soils exclusively for the purpose of
+      producing a benefit to agriculture or an ecological improvement of the same
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/r10
+  soup:
+    description: Property. Final soup amount administered
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/soup
+  taf:
+    description: Property. Information on types of fertilizer application
+    range: Taf
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/taf
+  tmi:
+    description: Property. Information on the types of inhibitory molecule
+    range: Tmi
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/tmi

@@ -1,0 +1,301 @@
+id: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP/AttributeProperty
+name: AttributeProperty
+title: Smart Data models - Attribute Property schema (Cube)
+description: The class of component properties which represent attributes of observations
+  in the cube, e.g. unit of measurement.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP
+  spec.source.path: AttributeProperty/schema.json
+  spec.source.commit: afab368490bf559379e3743336e7adec0e34f739
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smart-data-models.github.io/dataModel.STAT-DCAT-AP/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"], "concept": {"type":
+    "Relationship", "value": "urn:ngsi-ld:Concept:c4303"}, "created": {"type": "Property",
+    "value": "2022-01-15T07:00:00+00:00"}, "id": "urn:ngsi-ld:AttributeProperty:a3003",
+    "identifier": {"type": "Property", "value": "a3003"}, "label": {"type": "Property",
+    "value": {"en": "SDMX attribute COMMENT_OBS", "fr": "Attribut SDMX "}}, "language":
+    {"type": "Property", "value": ["en", "fr"]}, "modified": {"type": "Property",
+    "value": "2022-01-15T07:30:00+00:00"}, "range": {"type": "Property", "value":
+    "xsd:string"}, "type": "AttributeProperty"}'
+classes:
+  AttributeProperty:
+    class_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/AttributeProperty
+    description: The class of component properties which represent attributes of observations
+      in the cube, e.g. unit of measurement.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - concept
+    - created
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - identifier
+    - label
+    - language
+    - modified
+    - name
+    - owner
+    - range
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+  Label:
+    description: Property. Model:'https://www.w3.org/TR/rdf-schema/#ch_label'. Label
+      is an instance of rdf:Property that may be used to provide a human-readable
+      version of a resource's name
+    attributes:
+      en:
+        description: Property. Label in English
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      fr:
+        description: Property. Label in French
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      it:
+        description: Property. Label in Italian
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      es:
+        description: Property. Label in Spanish
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      de:
+        description: Property. Label in German language
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      jp:
+        description: Property. Label in Japanese
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+      zh:
+        description: Property. Label in Chinese
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/areaServed
+  language:
+    description: Property. Model:'https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#LinguisticSystem'.
+      This property refers to a language of the Attribute Property
+    range: language_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/language
+  label:
+    description: Property. Model:'https://www.w3.org/TR/rdf-schema/#ch_label'. Label
+      is an instance of rdf:Property that may be used to provide a human-readable
+      version of a resource's name
+    range: Label
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/label
+  concept:
+    description: Relationship. Model:'http://purl.org/linked-data/cube#concept'. Gives
+      the concept which is being measured or indicated by the Attribute Property
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/concept
+  created:
+    description: Property. Model:'https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#created'.
+      Date of creation of this attribute property. A string instance is valid against
+      this attribute if it is a valid representation according to the 'date-time'
+      ABNF rule. Date and time format names are derived from RFC 3339, section 5.6
+      [https://json-schema.org/draft/2020-12/json-schema-validation.html#RFC3339]
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/created
+  identifier:
+    description: Property. Model:'https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#identifier'.
+      An unambiguous reference to the resource within a given context
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/identifier
+  modified:
+    description: Property. Model:'https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#modified'.
+      Date on which the resource was changed. A string instance is valid against this
+      attribute if it is a valid representation according to the 'date-time' ABNF
+      rule. Date and time format names are derived from RFC 3339, section 5.6 [https://json-schema.org/draft/2020-12/json-schema-validation.html#RFC3339]
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/modified
+  range:
+    description: Property. Model:'https://www.w3.org/TR/rdf-schema/#ch_range'. Range
+      is an instance of rdf:Property that is used to state that the values of a property
+      are instances of one or more classes
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.STAT-DCAT-AP@afab368490bf559379e3743336e7adec0e34f739
+    slot_uri: https://smartdatamodels.org/dataModel.STAT-DCAT-AP/range
+enums:
+  language_options:
+    name: language_options
+    permissible_values:
+      en:
+        text: en
+      fr:
+        text: fr
+      it:
+        text: it
+      es:
+        text: es
+      de:
+        text: de
+      jp:
+        text: jp
+      zh:
+        text: zh

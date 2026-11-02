@@ -1,0 +1,39 @@
+id: https://github.com/smart-data-models/dataModel.ACRIS/AirportElevationUnitOfMeasurement
+name: AirportElevationUnitOfMeasurement
+title: Smart Data Models - Mapping of ACRIS data model AirportElevationUnitOfMeasurement
+description: Property. The unit of measure of the height of an Airport above sea level
+  (FT for foot or M for metre).
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ACRIS
+  spec.source.path: AirportElevationUnitOfMeasurement/schema.json
+  spec.source.commit: 82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.ACRIS/master/context.jsonld"],
+    "Name": {"type": "Property", "value": "Group policy somebody service growth many.
+    A beat performance clear."}, "id": "urn:ngsi-ld:AirportElevationUnitOfMeasurement:id:FUWV:30612468",
+    "type": "AirportElevationUnitOfMeasurement"}'
+classes:
+  AirportElevationUnitOfMeasurement:
+    class_uri: https://smartdatamodels.org/dataModel.ACRIS/AirportElevationUnitOfMeasurement
+    description: Property. The unit of measure of the height of an Airport above sea
+      level (FT for foot or M for metre).
+    is_a: Entity
+    slots:
+    - Name
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+slots:
+  Name:
+    description: Property. The name of the unit of measure for an Airport elevation
+      above sea level.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/Name

@@ -1,0 +1,391 @@
+id: https://github.com/smart-data-models/dataModel.MarineTransport/TrackedManeuver
+name: TrackedManeuver
+title: TrackedManeuver schema
+description: TrackedManoeuvre entity coming from Tracked (Operation Tracking System).
+  Tracked maneuver. The entityId follows the pattern mrn:urn:eshuv:pdph:Tracked:type:attr:value,
+  where type=Manoeuvre and attr=manoeuvreCode
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.MarineTransport
+  spec.source.path: TrackedManeuver/schema.json
+  spec.source.commit: 4ffb0d8d8c29470e169df9d8c329135ec0806f72
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Ports/master/context.jsonld"],
+    "amendedOnMooringLocation": {"type": "Property", "value": "REINA SOFIA"}, "anchoringAnchorUpDate":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2024-06-14T08:30:00Z"}},
+    "anchoringDate": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2024-06-14T08:30:00Z"}}, "anchoringLocation": {"type": "GeoProperty", "value":
+    {"coordinates": [-6.3872, 36.02], "type": "Point"}}, "anchoringZone": {"type":
+    "Property", "value": "string"}, "durationHours": {"type": "Property", "value":
+    0.33}, "endDate": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2024-06-14T08:30:00Z"}}, "id": "urn:ngsi-ld:TrackedManeuver:mrn:urn:eshuv:pdph:sigo:sigomanoeuvre:manoeuvrecode:E11:22-M2",
+    "maneuverCode": {"type": "Property", "value": "E11/22-M2"}, "maneuverType": {"type":
+    "Property", "value": "Atraque"}, "mooringCablesNumber": {"type": "Property", "value":
+    3}, "mooringChangeCablesNumber": {"type": "Property", "value": 2}, "mooringChangeFirstLandCableDate":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2024-06-14T08:30:00Z"}},
+    "mooringChangeInitialLocation": {"type": "Property", "value": "REINA SOFIA"},
+    "mooringChangeLastCableDate": {"type": "Property", "value": {"@type": "DateTime",
+    "@value": "2024-06-14T08:30:00Z"}}, "mooringChangeLastLocation": {"type": "Property",
+    "value": "MUELLE SUR"}, "mooringChangeNoraysFrom": {"type": "Property", "value":
+    1}, "mooringChangeNoraysTo": {"type": "Property", "value": 3}, "mooringChangeSide":
+    {"type": "Property", "value": "string"}, "mooringFirstCableDate": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2024-06-14T08:30:00Z"}}, "mooringLocation":
+    {"type": "Property", "value": "PANTALAN ERCROSS-ARAGONESAS"}, "mooringNoraysFrom":
+    {"type": "Property", "value": 4}, "mooringNoraysTo": {"type": "Property", "value":
+    6}, "mooringSide": {"type": "Property", "value": "Babor"}, "observations": {"type":
+    "Property", "value": "Observaciones de Maniobra ejemplo"}, "observedDate": {"type":
+    "Property", "value": {"@type": "DateTime", "@value": "2024-06-14T08:30:00Z"}},
+    "othersLocation": {"type": "GeoProperty", "value": {"coordinates": [-6.3872, 36.02],
+    "type": "Point"}}, "othersType": {"type": "Property", "value": "string"}, "othersZone":
+    {"type": "Property", "value": "string"}, "pilotageDisembarkDate": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2024-06-14T08:30:00Z"}}, "pilotageDisembarkLocation":
+    {"type": "Property", "value": "LEVANTE SUR"}, "pilotageEmbarkDate": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2024-06-14T08:30:00Z"}}, "pilotageEmbarkLocation":
+    {"type": "Property", "value": "LEVANTE NORTE"}, "pilotageExempt": {"type": "Property",
+    "value": "No"}, "pilotageObservations": {"type": "Property", "value": "Observaciones
+    de practicaje"}, "pilotagePilots": {"type": "Property", "value": "Carlos Bernal"},
+    "portCallCode": {"type": "Property", "value": "E36/24"}, "refPortCallId": {"object":
+    "urn:ngsi-ld:PortCallId:mrn:urn:eshuv:pdph:sigo:sigoportcall:stmregister:E36:24",
+    "type": "Relationship"}, "refTugServiceId": {"object": "urn:ngsi-ld:TugServiceId:mrn:urn:eshuv:pdph:sigo:sigotugboat:name:examplename",
+    "type": "Relationship"}, "startDate": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "2024-06-14T08:30:00Z"}}, "tugboatsNumber": {"type": "Property",
+    "value": 1}, "tugboatsObservations": {"type": "Property", "value": "Observaciones
+    de remolque"}, "type": "TrackedManeuver", "undockingLastCableDate": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2024-06-14T08:30:00Z"}}, "undockingLocation":
+    {"type": "Property", "value": "REINA SOFIA"}}'
+classes:
+  TrackedManeuver:
+    class_uri: https://smartdatamodels.org/dataModel.MarineTransport/TrackedManeuver
+    description: TrackedManoeuvre entity coming from Tracked (Operation Tracking System).
+      Tracked maneuver. The entityId follows the pattern mrn:urn:eshuv:pdph:Tracked:type:attr:value,
+      where type=Manoeuvre and attr=manoeuvreCode
+    is_a: Entity
+    slots:
+    - amendedOnMooringLocation
+    - anchoringAnchorUpDate
+    - anchoringDate
+    - anchoringLocation
+    - anchoringZone
+    - durationHours
+    - endDate
+    - maneuverCode
+    - maneuverType
+    - mooringCablesNumber
+    - mooringChangeCablesNumber
+    - mooringChangeFirstLandCableDate
+    - mooringChangeInitialLocation
+    - mooringChangeLastCableDate
+    - mooringChangeLastLocation
+    - mooringChangeNoraysFrom
+    - mooringChangeNoraysTo
+    - mooringChangeSide
+    - mooringFirstCableDate
+    - mooringLocation
+    - mooringNoraysFrom
+    - mooringNoraysTo
+    - mooringSide
+    - observations
+    - observedDate
+    - othersLocation
+    - othersType
+    - othersZone
+    - pilotageDisembarkDate
+    - pilotageDisembarkLocation
+    - pilotageEmbarkDate
+    - pilotageEmbarkLocation
+    - pilotageExempt
+    - pilotageObservations
+    - pilotagePilots
+    - portCallCode
+    - refPortCallId
+    - refTugServiceId
+    - startDate
+    - tugboatsNumber
+    - tugboatsObservations
+    - undockingLastCableDate
+    - undockingLocation
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+slots:
+  observedDate:
+    description: Property. Last update date of the entity
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/observedDate
+  refPortCallId:
+    description: Property. Reference to the port call
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/refPortCallId
+  refTugServiceId:
+    description: Property. Reference to the tug service
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/refTugServiceId
+  portCallCode:
+    description: Property. STM register of the port call
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/portCallCode
+  maneuverCode:
+    description: Property. Maneuver code
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/maneuverCode
+  maneuverType:
+    description: Property. Maneuver type
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/maneuverType
+  startDate:
+    description: Property. Maneuver start date
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/startDate
+  endDate:
+    description: Property. Maneuver end date
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/endDate
+  durationHours:
+    description: Property. Maneuver duration in hours
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/durationHours
+  observations:
+    description: Property. Maneuver observations
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/observations
+  mooringFirstCableDate:
+    description: Property. First line time for the mooring maneuver
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mooringFirstCableDate
+  mooringLocation:
+    description: Property. Location of the mooring maneuver
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mooringLocation
+  mooringCablesNumber:
+    description: Property. Number of lines for the mooring maneuver
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mooringCablesNumber
+  mooringNoraysFrom:
+    description: Property. Bollard number from (mooring maneuver)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mooringNoraysFrom
+  mooringNoraysTo:
+    description: Property. Bollard number to (mooring maneuver)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mooringNoraysTo
+  mooringSide:
+    description: Property. Mooring side for the mooring maneuver
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mooringSide
+  mooringChangeLastCableDate:
+    description: Property. Last line time for the berth-shifting maneuver
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mooringChangeLastCableDate
+  mooringChangeInitialLocation:
+    description: Property. Initial location of the berth-shifting maneuver
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mooringChangeInitialLocation
+  mooringChangeFirstLandCableDate:
+    description: Property. First shore line time for the berth-shifting maneuver
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mooringChangeFirstLandCableDate
+  mooringChangeLastLocation:
+    description: Property. Final location of the berth-shifting maneuver
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mooringChangeLastLocation
+  mooringChangeCablesNumber:
+    description: Property. Number of lines for the berth-shifting maneuver
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mooringChangeCablesNumber
+  mooringChangeNoraysFrom:
+    description: Property. Bollard number from (berth-shifting maneuver)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mooringChangeNoraysFrom
+  mooringChangeNoraysTo:
+    description: Property. Bollard number to (berth-shifting maneuver)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mooringChangeNoraysTo
+  mooringChangeSide:
+    description: Property. Mooring side for the berth-shifting maneuver
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mooringChangeSide
+  undockingLastCableDate:
+    description: Property. Last line time for the unmooring (undocking) maneuver
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/undockingLastCableDate
+  undockingLocation:
+    description: Property. Location of the unmooring (undocking) maneuver
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/undockingLocation
+  amendedOnMooringLocation:
+    description: Property. Location of the 'made fast alongside / amended on mooring'
+      maneuver
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/amendedOnMooringLocation
+  anchoringZone:
+    description: Property. Anchorage zone for the anchoring maneuver
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/anchoringZone
+  anchoringLocation:
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/anchoringLocation
+  anchoringDate:
+    description: Property. Anchor down time for the anchoring maneuver
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/anchoringDate
+  anchoringAnchorUpDate:
+    description: Property. Anchor aweigh (anchor up) time for the anchoring maneuver
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/anchoringAnchorUpDate
+  othersType:
+    description: Property. Type of other maneuver
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/othersType
+  othersZone:
+    description: Property. Zone/location of the other maneuver
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/othersZone
+  othersLocation:
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/othersLocation
+  pilotageEmbarkLocation:
+    description: Property. Pilot embarkation location for the pilotage maneuver
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/pilotageEmbarkLocation
+  pilotageEmbarkDate:
+    description: Property. Pilot embarkation time for the pilotage maneuver
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/pilotageEmbarkDate
+  pilotageDisembarkLocation:
+    description: Property. Pilot disembarkation location for the pilotage maneuver
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/pilotageDisembarkLocation
+  pilotageDisembarkDate:
+    description: Property. Pilot disembarkation time for the pilotage maneuver
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/pilotageDisembarkDate
+  pilotagePilots:
+    description: Property. Pilots involved in the pilotage maneuver
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/pilotagePilots
+  pilotageExempt:
+    description: Property. Pilotage exemption
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/pilotageExempt
+  pilotageObservations:
+    description: Property. Pilotage maneuver observations
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/pilotageObservations
+  tugboatsNumber:
+    description: Property. Number of tugboats for the tug service maneuver
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/tugboatsNumber
+  tugboatsObservations:
+    description: Property. Tug service maneuver observations
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/tugboatsObservations

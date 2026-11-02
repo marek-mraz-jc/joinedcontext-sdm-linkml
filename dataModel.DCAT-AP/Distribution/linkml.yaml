@@ -1,0 +1,360 @@
+id: https://github.com/smart-data-models/dataModel.DCAT-AP/Distribution
+name: Distribution
+title: Smart Data models DCAT-AP distribution of a Dataset, according to DCAT-AP 2.1.1
+description: This is a distribution belonging ot a dataset according to the DCAT-AP
+  standard 2.1.1
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.DCAT-AP
+  spec.source.path: Distribution/schema.json
+  spec.source.commit: ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.DCAT-AP/master/context.jsonld"],
+    "accessService": {"type": "Property", "value": [""]}, "accessURL": {"type": "Property",
+    "value": ["https://datos.comunidad.madrid/catalogo/dataset/134210b4-3fbc-457d-8064-18d6d8cc785e/resource/fca9a0ef-60b3-44bc-8a69-c17d607b122d/download/alojamientos_turisticos.csv"]},
+    "address": {"type": "Property", "value": {"addressCountry": "Luxembourg", "addressLocality":
+    "Luxembourg", "addressRegion": "Luxembourg", "postOfficeBoxNumber": "", "postalCode":
+    "24004", "streetAddress": "Luxembourg platz 2"}}, "availability": {"type": "Property",
+    "value": "yes"}, "belongsToDataset": {"object": "urn:ngsi-ld:Dataset:items:CHIF:23645981",
+    "type": "Relationship"}, "byteSize": {"type": "Property", "value": 43503}, "checksum":
+    {"type": "Property", "value": "H3FR."}, "compressionFormat": {"type": "Property",
+    "value": ""}, "conformsTo": {"type": "Property", "value": []}, "dataProvider":
+    {"type": "Property", "value": "Meloda.org"}, "description": {"type": "Property",
+    "value": ["Distribution of open data portals in csv"]}, "documentation": {"type":
+    "Property", "value": []}, "downloadURL": {"type": "Property", "value": ["urn:ngsi-ld:DistributionDCAT-AP:items:HVWX:12201868",
+    "urn:ngsi-ld:DistributionDCAT-AP:items:ICPI:96947751"]}, "format": {"type": "Property",
+    "value": " text/csv"}, "hasPolicy": {"type": "Property", "value": "Open data policy."},
+    "id": "urn:ngsi-ld:Distribution:id:NUZE:76215118", "issued": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "1997-05-06T05:04:10Z"}}, "language":
+    {"type": "Property", "value": ["EN", "ES"]}, "license": {"type": "Property", "value":
+    "CC-BY"}, "location": {"type": "Property", "value": {"coordinates": [-67.057831,
+    67.968509], "type": "Point"}}, "mediaType": {"type": "Property", "value": ""},
+    "modified": {"type": "Property", "value": {"@type": "DateTime", "@value": "1970-07-14T10:48:19Z"}},
+    "packagingFormat": {"type": "Property", "value": "zip"}, "rights": {"type": "Property",
+    "value": "copyleft"}, "spatialResolutionInMeters": {"type": "Property", "value":
+    [0.5, 0.5]}, "status": {"type": "Property", "value": "Withdrawn"}, "temporalResolution":
+    {"type": "Property", "value": [2, 10]}, "title": {"type": "Property", "value":
+    ["Dataset base"]}, "type": "Distribution"}'
+classes:
+  Distribution:
+    class_uri: https://smartdatamodels.org/dataModel.DCAT-AP/Distribution
+    description: This is a distribution belonging ot a dataset according to the DCAT-AP
+      standard 2.1.1
+    is_a: Entity
+    slots:
+    - accessService
+    - accessURL
+    - address
+    - areaServed
+    - availability
+    - belongsToDataset
+    - byteSize
+    - checksum
+    - compressionFormat
+    - conformsTo
+    - description
+    - downloadURL
+    - format
+    - hasPolicy
+    - issued
+    - language
+    - license
+    - mediaType
+    - modified
+    - packageFormat
+    - packagingFormat
+    - page
+    - rights
+    - spatialResolutionInMeters
+    - status
+    - temporalResolution
+    - title
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+slots:
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/areaServed
+  accessURL:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Resource'.
+      This property contains a URL that gives access to a Distribution of the Dataset.
+      The resource at the access URL may contain information about how to get the
+      Dataset
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/accessURL
+  availability:
+    description: Property. Model:'http://www.w3.org/2004/02/skos/core#Concept'. This
+      property indicates how long it is planned to keep the Distributio of the Dataset
+      available
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/availability
+  description:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Literal'. This
+      property contains a free-text account of the Distribution. This property can
+      be repeated for parallel language versions of the description
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: http://purl.org/dc/terms/description
+  format:
+    description: Property. Model:'https://schema.org/Text'. This property refers to
+      the file format of the Distribution
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://uri.etsi.org/ngsi-ld/format
+  license:
+    description: Property. Model:'http://purl.org/dc/terms/LicenseDocument'. This
+      property refers to a data service that gives access to the distribution of the
+      dataset
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/license
+  accessService:
+    description: Property. Model:'http://www.w3.org/ns/dcat#DataService'. This property
+      refers to a data service that gives access to the distribution of the dataset
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/accessService
+  byteSize:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Literal'. This
+      property contains the size of a Distribution in bytes
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/byteSize
+  checksum:
+    description: Property. Model:'http://spdx.org/rdf/terms#Checksum'. This property
+      provides a mechanism that can be used to verify that the contents of a distribution
+      have not changed. The checksum is related to the downloadURL
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/checksum
+  compressionFormat:
+    description: Property. Model:'http://purl.org/dc/terms/MediaType'. This property
+      refers to the format of the file in which the data is contained in a compressed
+      form, e.g. to reduce the size of the downloadable file. It SHOULD be expressed
+      using a media type as defined in the official register of media types managed
+      by IANA
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/compressionFormat
+  packagingFormat:
+    description: Property. Model:'http://purl.org/dc/terms/MediaType'. This property
+      refers to the format of the file in which one or more data files are grouped
+      together, e.g. to enable a set of related files to be downloaded together. It
+      SHOULD be expressed using a media type as defined in the official register of
+      media types managed by IANA. Cardinality (0..1)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/packagingFormat
+  belongsToDataset:
+    description: 'Relationship. It links the Distribution to its parent Dataset. Model:''https://www.w3.org/ns/dcat#Dataset''.
+      Note: this attribute does not belong to the current version of DCAT-AP, 2.1.1'
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/belongsToDataset
+  page:
+    description: Property. Model:'http://xmlns.com/foaf/0.1/#term_Document'. This
+      property refers to a page or document about this Distribution
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/page
+  downloadURL:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Resource'.
+      This property contains a URL that is a direct link to a downloadable file in
+      a given format
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/downloadURL
+  hasPolicy:
+    description: Property. Model:'http://www.w3.org/ns/odrl/2/hasPolicy'. This property
+      refers to the policy expressing the rights associated with the distribution
+      if using the ODRL vocabulary
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/hasPolicy
+  language:
+    description: Property. Model:'http://purl.org/dc/terms/LinguisticSystem'. This
+      property refers to a language used in the Distribution. This property can be
+      repeated if the metadata is provided in multiple languages
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/language
+  conformsTo:
+    description: Property. Model:'http://purl.org/dc/terms/Standard'. This property
+      refers to an established schema to which the described Distribution conforms
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/conformsTo
+  mediaType:
+    description: Property. Model:'http://purl.org/dc/terms/MediaType'. This property
+      refers to the media type of the Distribution as defined in the official register
+      of media types managed by IANA
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/mediaType
+  packageFormat:
+    description: Property. Model:'http://purl.org/dc/terms/MediaType'. This property
+      refers to the format of the file in which one or more data files are grouped
+      together, e.g. to enable a set of related files to be downloaded together. It
+      SHOULD be expressed using a media type as defined in the official register of
+      media types managed by IANA
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/packageFormat
+  issued:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Literal'. This
+      property contains the date of formal issuance (e.g., publication) of the Distribution
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/issued
+  rights:
+    description: Property. Model:'http://purl.org/dc/terms/RightsStatement'. This
+      property refers to a statement that specifies rights associated with the Distribution
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/rights
+  spatialResolutionInMeters:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Literal'. This
+      property refers to the minimum spatial separation resolvable in a distribution,
+      measured in meters
+    range: float
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/spatialResolutionInMeters
+  status:
+    description: Property. Model:'http://www.w3.org/2004/02/skos/core#Concept'. This
+      property refers to the maturity of the Distribution. It MUST take one of the
+      values Completed, Deprecated, Under Development, Withdrawn
+    range: status_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://uri.etsi.org/ngsi-ld/status
+  temporalResolution:
+    description: 'Property. Model:''http://www.w3.org/2001/XMLSchema#duration''. This
+      property refers to the minimum time period resolvable in the dataset. '
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/temporalResolution
+  title:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Literal'. This
+      property contains a name given to the Distribution. This property can be repeated
+      for parallel language versions of the description
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: http://purl.org/dc/terms/title
+  modified:
+    description: Property. Model:'http://www.w3.org/2000/01/rdf-schema#Literal'. This
+      property contains the most recent date on which the Distribution was changed
+      or modified
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DCAT-AP@ba0a8cef86460ec008c5bc961fdb07f8c8d164ff
+    slot_uri: https://smartdatamodels.org/dataModel.DCAT-AP/modified
+enums:
+  status_options:
+    name: status_options
+    permissible_values:
+      Completed:
+        text: Completed
+      Deprecated:
+        text: Deprecated
+      Under Development:
+        text: Under Development
+      Withdrawn:
+        text: Withdrawn

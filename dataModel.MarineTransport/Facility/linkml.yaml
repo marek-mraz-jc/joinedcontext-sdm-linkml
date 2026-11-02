@@ -1,0 +1,257 @@
+id: https://github.com/smart-data-models/dataModel.MarineTransport/Facility
+name: Facility
+title: Smart Data models Facility schema
+description: This data model describes a facility in a port, which may include berths,
+  terminals, or other port infrastructure.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.MarineTransport
+  spec.source.path: Facility/schema.json
+  spec.source.commit: 4ffb0d8d8c29470e169df9d8c329135ec0806f72
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Ports/master/context.jsonld"],
+    "bollardCodes": {"type": "Property", "value": ["1", "2", "3", "4", "5"]}, "closed":
+    {"type": "Property", "value": false}, "deadweight": {"type": "Property", "value":
+    35000.0}, "displacement": {"type": "Property", "value": 103500.0}, "facilityCode":
+    {"type": "Property", "value": "0011"}, "facilityName": {"type": "Property", "value":
+    "Levante pesquero"}, "facilityType": {"type": "Property", "value": "BERTH"}, "firstBollard":
+    {"type": "Property", "value": 1}, "id": "urn:ngsi-ld:Facility:urn:mrn:eshuv:facilities:facility:code:20",
+    "lastBollard": {"type": "Property", "value": 34}, "latitude": {"type": "Property",
+    "value": 37.25229}, "longitude": {"type": "Property", "value": -6.958843}, "maxBeam":
+    {"type": "Property", "value": 36.5}, "maxDraught": {"type": "Property", "value":
+    4.0}, "maxLoa": {"type": "Property", "value": 240.0}, "minimumProbe": {"type":
+    "Property", "value": 2.4}, "minimumProbeDate": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "2024-12-01T00:00:00"}}, "navigationSector": {"type": "Property",
+    "value": "CINT"}, "planningGroup": {"type": "Property", "value": "Levante"}, "portCode":
+    {"type": "Property", "value": "ESVLC"}, "remarks": {"type": "Property", "value":
+    "Levante pesquero"}, "terminal": {"type": "Property", "value": "Levante"}, "terminalRef":
+    {"type": "Property", "value": "urn:mrn:eshuv:infrastructure:terminal:code:20"},
+    "type": "Facility"}'
+classes:
+  Facility:
+    class_uri: https://smartdatamodels.org/dataModel.MarineTransport/Facility
+    description: This data model describes a facility in a port, which may include
+      berths, terminals, or other port infrastructure.
+    is_a: Entity
+    slots:
+    - bollardCodes
+    - closed
+    - deadweight
+    - displacement
+    - facilityCode
+    - facilityName
+    - facilityType
+    - firstBollard
+    - lastBollard
+    - latitude
+    - longitude
+    - maxBeam
+    - maxDraught
+    - maxLoa
+    - minimumProbe
+    - minimumProbeDate
+    - modifiedDate
+    - mrn
+    - navigationSector
+    - planningGroup
+    - portCode
+    - remarks
+    - terminal
+    - terminalRef
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+slots:
+  mrn:
+    description: "Property. MRN coded identifier. It has to be related to the entity\
+      \ in a way that is well-known by different organisms the meaning and the initiator\
+      \ of the entity, and all next parties will maintain on its origianl value. This\
+      \ identifier must be an UNIQUE identifier of the PortCall entity assigned by\
+      \ the system who created on first the entity. This URN should Conforms MRN &\
+      \ IETF specifically RFC 2141, RFC 5234, and RFC 8141. \n    The propossed format\
+      \ is \n    id::='urn:mrn:eshuv:<ONSS>:portcalls:facility:code:[0-9]+' or  \n\
+      \    where OID:= Organisation UN/LOCODE, OONSS:=Organization Name of Service,\
+      \ 2099 the year on which the portcall was initiated, 9999999 an increasing,\
+      \ unique identifier that the issuer of the Facility entity will identify on\
+      \ his sistems (i.e. a SQL row-id), \n    i.e. urn:mrn:eshuv:portcalls:facility:id:196\
+      \ \n     See [Unlocode](https://unece.org/trade/cefact/unlocode-code-list-country-and-territory)In\
+      \ international standards is also known as [Ship's Visit]"
+    range: mrn_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/mrn
+  portCode:
+    description: Property. Code of the port where this facility is located.
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/portCode
+  facilityName:
+    description: Property. Name of the facility.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/facilityName
+  facilityCode:
+    description: Property. Code identifying the facility.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/facilityCode
+  facilityType:
+    description: Property. Type of facility, such as BERTH, TERMINAL, etc.
+    range: facilityType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/facilityType
+  terminal:
+    description: Property. Name of the terminal associated with this facility.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/terminal
+  terminalRef:
+    description: Property. Reference to the terminal entity associated with this facility.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/terminalRef
+  planningGroup:
+    description: Property. Planning group to which the facility belongs.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/planningGroup
+  navigationSector:
+    description: Property. Navigation sector associated with this facility.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/navigationSector
+  minimumProbe:
+    description: Property. Minimum depth of the facility in meters.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/minimumProbe
+  minimumProbeDate:
+    description: Property. Date when the minimum depth was last recorded.
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/minimumProbeDate
+  displacement:
+    description: Property. Maximum displacement allowed in the facility.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/displacement
+  latitude:
+    description: Property. Latitude coordinate of the facility location.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/latitude
+  longitude:
+    description: Property. Longitude coordinate of the facility location.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/longitude
+  deadweight:
+    description: Property. Maximum deadweight of vessels allowed in the facility.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/deadweight
+  maxDraught:
+    description: Property. Maximum draught allowed in meters.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/maxDraught
+  maxLoa:
+    description: Property. Maximum length overall (LOA) of vessels allowed in meters.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/maxLoa
+  maxBeam:
+    description: Property. Maximum beam width of vessels allowed in meters.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/maxBeam
+  remarks:
+    description: Property. Additional remarks or notes about the facility.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/remarks
+  firstBollard:
+    description: Property. First bollard identifier in the facility.
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/firstBollard
+  lastBollard:
+    description: Property. Last bollard identifier in the facility.
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/lastBollard
+  closed:
+    description: Property. Indicates if the facility is currently closed.
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/closed
+  modifiedDate:
+    description: Property. Date and time of last modification of the facility entity.
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/modifiedDate
+  bollardCodes:
+    description: Property. List of bollard codes available at the facility.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/bollardCodes
+enums:
+  mrn_options:
+    name: mrn_options
+    permissible_values:
+      PortCall:
+        text: PortCall
+  facilityType_options:
+    name: facilityType_options
+    permissible_values:
+      BERTH:
+        text: BERTH
+      TERMINAL:
+        text: TERMINAL
+      ANCHORAGE:
+        text: ANCHORAGE
+      OTHER:
+        text: OTHER

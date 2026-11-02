@@ -1,0 +1,100 @@
+id: https://github.com/smart-data-models/dataModel.VerifiableCredentials/Presentation
+name: Presentation
+title: EBSI Verifiable Presentation
+description: Schema of an EBSI Verifiable Presentation
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.VerifiableCredentials
+  spec.source.path: Presentation/schema.json
+  spec.source.commit: 6d7f230e04c68631174483adfc610bb4fab53ab0
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+classes:
+  Presentation:
+    class_uri: https://smartdatamodels.org/dataModel.VerifiableCredentials/Presentation
+    description: Schema of an EBSI Verifiable Presentation
+    is_a: Entity
+    slots:
+    - holder
+    - proof
+    - verifiableCredential
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+  Proof:
+    description: Property. Contains information about the proof
+    attributes:
+      type:
+        description: Property. Defines the proof type
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      proofPurpose:
+        description: Property. Defines the purpose of the proof
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      created:
+        description: Property. Defines the date and time, when the proof has been
+          created
+        range: datetime
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      verificationMethod:
+        description: Property. Contains information about the verification method
+          / proof mechanisms
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      challenge:
+        description: Property. Defines a random or pseudo-random value used by some
+          authentication protocols to mitigate replay attacks
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      domain:
+        description: Property. Defines a string value that specifies the operational
+          domain of a digital proof
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+      jws:
+        description: Property. Defines the proof value in JWS format
+        required: true
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+slots:
+  holder:
+    description: Property. Defines unique identifier of the party who shares the Verifiable
+      Presentation
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    slot_uri: https://smartdatamodels.org/dataModel.VerifiableCredentials/holder
+  verifiableCredential:
+    description: Property. Contains the personal information intended to be shared
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    slot_uri: https://smartdatamodels.org/dataModel.VerifiableCredentials/verifiableCredential
+  proof:
+    description: Property. Contains information about the proof
+    range: Proof
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.VerifiableCredentials@6d7f230e04c68631174483adfc610bb4fab53ab0
+    slot_uri: https://smartdatamodels.org/dataModel.VerifiableCredentials/proof

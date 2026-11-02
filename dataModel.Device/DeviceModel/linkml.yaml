@@ -1,0 +1,238 @@
+id: https://github.com/smart-data-models/dataModel.Device/DeviceModel
+name: DeviceModel
+title: ' Smart Data Models - Device Model schema'
+description: 'This entity captures the static properties of a Device. '
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Device
+  spec.source.path: DeviceModel/schema.json
+  spec.source.commit: eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Device/master/context.jsonld"],
+    "brandName": {"type": "Property", "value": "myDevice"}, "category": {"type": "Property",
+    "value": ["sensor"]}, "controlledProperty": {"type": "Property", "value": ["fillingLevel",
+    "temperature"]}, "deviceCategory": {"type": "Property", "value": ["sensor"]},
+    "function": {"type": "Property", "value": ["sensing"]}, "id": "urn:ngsi-ld:DeviceModel:myDevice-wastecontainer-sensor-345",
+    "manufacturerName": {"type": "Property", "value": "myDevice Inc."}, "modelName":
+    {"type": "Property", "value": "S4Container 345"}, "name": {"type": "Property",
+    "value": "myDevice Sensor for Containers 345"}, "type": "DeviceModel"}'
+classes:
+  DeviceModel:
+    class_uri: https://smartdatamodels.org/dataModel.Device/DeviceModel
+    description: 'This entity captures the static properties of a Device. '
+    is_a: Entity
+    slots:
+    - alternateName
+    - annotations
+    - brandName
+    - color
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - deviceClass
+    - documentation
+    - energyLimitationClass
+    - function
+    - image
+    - manufacturerName
+    - modelName
+    - name
+    - owner
+    - seeAlso
+    - source
+    - supportedUnits
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: https://smartdatamodels.org/seeAlso
+  color:
+    description: Property. The color of the product. Model:'https://schema.org/color'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: https://smartdatamodels.org/color
+  image:
+    description: Property. An image of the item. Model:'https://schema.org/URL'
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: https://smartdatamodels.org/image
+  annotations:
+    description: Property. Annotations about the item. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: https://smartdatamodels.org/annotations
+  deviceClass:
+    description: 'Property. Model:''https://schema.org/Text''. Class of constrained
+      device as specified by RFC 7228. If the device is not a constrained device this
+      property shall not be present. Normative References: [RFC7228](https://tools.ietf.org/html/rfc7228#section-3).
+      Enum:''C0, C1, C2'''
+    range: deviceClass_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: https://smartdatamodels.org/dataModel.Device/deviceClass
+  function:
+    description: Property. Model:'https://schema.org/Text'. The functionality necessary
+      to accomplish the task for which a Device is designed. A device can be designed
+      to perform more than one function. Defined by [SAREF](https://w3id.org/saref#Function).
+      Enum:'levelControl, sensing, onOff, openClose, metering, eventNotification
+    range: function_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: https://smartdatamodels.org/dataModel.Device/function
+  supportedUnits:
+    description: Property. Model:'https://schema.org/Text'. Units of measurement supported
+      by the device. The unit code (text) of measurement given using the [UN/CEFACT
+      Common Code](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)
+      (max. 3 characters)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: https://smartdatamodels.org/dataModel.Device/supportedUnits
+  energyLimitationClass:
+    description: 'Property. Model:''https://schema.org/Text''. Device''s class of
+      energy limitation as per RFC 7228. Normative References: [RFC7228](https://tools.ietf.org/html/rfc7228#page-11).
+      Enum:''E0, E1, E2, E9'''
+    range: energyLimitationClass_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: https://smartdatamodels.org/dataModel.Device/energyLimitationClass
+  documentation:
+    description: Property. Model:'https://schema.org/URL'. A link to device's documentation
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: https://smartdatamodels.org/dataModel.Device/documentation
+  brandName:
+    description: Property. Model:'https://schema.org/Text'. Device's brand name
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: https://smartdatamodels.org/dataModel.Device/brandName
+  modelName:
+    description: Property. Model:'https://schema.org/Text. Device's model name
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: https://smartdatamodels.org/dataModel.Device/modelName
+  manufacturerName:
+    description: Property. Model:'https://schema.org/Text'. Device's manufacturer
+      name
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Device@eb22fd87a9d89cf68099b0eef1c796969eae5bbf
+    slot_uri: https://smartdatamodels.org/dataModel.Device/manufacturerName
+enums:
+  deviceClass_options:
+    name: deviceClass_options
+    permissible_values:
+      C0:
+        text: C0
+      C1:
+        text: C1
+      C2:
+        text: C2
+  function_options:
+    name: function_options
+    permissible_values:
+      levelControl:
+        text: levelControl
+      sensing:
+        text: sensing
+      onOff:
+        text: onOff
+      openClose:
+        text: openClose
+      metering:
+        text: metering
+      eventNotification:
+        text: eventNotification
+  energyLimitationClass_options:
+    name: energyLimitationClass_options
+    permissible_values:
+      E0:
+        text: E0
+      E1:
+        text: E1
+      E2:
+        text: E2
+      E9:
+        text: E9

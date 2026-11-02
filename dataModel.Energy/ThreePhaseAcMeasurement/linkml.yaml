@@ -1,0 +1,951 @@
+id: https://github.com/smart-data-models/dataModel.Energy/ThreePhaseAcMeasurement
+name: ThreePhaseAcMeasurement
+title: Smart Data Models - Energy / Three Phase AC Measurement
+description: An electrical  measurement from a system that uses three phase alternating
+  current.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Energy
+  spec.source.path: ThreePhaseAcMeasurement/schema.json
+  spec.source.commit: 08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Energy/master/context.jsonld"],
+    "activePower": {"type": "Property", "value": {"L1": 11996.416016, "L2": 9461.501953,
+    "L3": 10242.351562}}, "apparentPower": {"measurementInterval": {"type": "Property",
+    "value": 1}, "measurementType": {"type": "Property", "value": "average"}, "observedAt":
+    "2019-01-24T22:00:00.173Z", "type": "Property", "value": {"L1": 13201.412109,
+    "L2": 10755.304688, "L3": 11941.094727}}, "current": {"observedAt": "2019-01-24T22:00:00.173Z",
+    "type": "Property", "value": {"L1": 56.126038, "L2": 45.894356, "L3": 50.872452,
+    "N": 0.0}}, "dateEnergyMeteringStarted": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "2018-07-07T15:05:59.408Z"}}, "description": {"type": "Property",
+    "value": "measurement corresponding to the ventilation machine rooms"}, "displacementPowerFactor":
+    {"measurementInterval": {"type": "Property", "value": 1}, "measurementType": {"type":
+    "Property", "value": "average"}, "observedAt": "2019-01-24T22:00:00.173Z", "onlyPositive":
+    {"type": "Property", "value": true}, "type": "Property", "value": {"L1": 0.978013,
+    "L2": 0.973317, "L3": 0.960382}}, "frequency": {"measurementInterval": {"type":
+    "Property", "value": 1}, "measurementType": {"type": "Property", "value": "average"},
+    "observedAt": "2019-01-24T22:00:00.173Z", "type": "Property", "value": 50.020672},
+    "id": "urn:ngsi-ld:ThreePhaseAcMeasurement:ThreePhaseAcMeasurement:LV3_Ventilation",
+    "name": {"type": "Property", "value": "HKAPK0200"}, "phaseToPhaseVoltage": {"measurementInterval":
+    {"type": "Property", "value": 1}, "measurementType": {"type": "Property", "value":
+    "rms"}, "observedAt": "2019-01-24T22:00:00.173Z", "type": "Property", "value":
+    {"L12": 406.769196, "L23": 407.081238, "L31": 407.734558}}, "phaseVoltage": {"measurementInterval":
+    {"type": "Property", "value": 1}, "measurementType": {"type": "Property", "value":
+    "rms"}, "observedAt": "2019-01-24T22:00:00.173Z", "type": "Property", "value":
+    {"L1": 234.961304, "L2": 234.563477, "L3": 235.354034}}, "powerFactor": {"measurementInterval":
+    {"type": "Property", "value": 1}, "measurementType": {"type": "Property", "value":
+    "average"}, "observedAt": "2019-01-24T22:00:00.173Z", "onlyPositive": {"type":
+    "Property", "value": true}, "type": "Property", "value": {"L1": 0.908817, "L2":
+    0.879906, "L3": 0.859293}}, "reactivePower": {"measurementInterval": {"type":
+    "Property", "value": 1}, "measurementType": {"type": "Property", "value": "average"},
+    "observedAt": "2019-01-24T22:00:00.173Z", "type": "Property", "value": {"L1":
+    -2612.606934, "L2": -2209.906006, "L3": -3007.81958}}, "refDevice": {"object":
+    ["urn:ngsi-ld:Device:Device:eQL-EDF3GL-2006201705"], "type": "Relationship"},
+    "thdCurrent": {"measurementInterval": {"type": "Property", "value": 1}, "measurementType":
+    {"type": "Property", "value": "average"}, "observedAt": "2019-01-24T22:00:00.173Z",
+    "type": "Property", "value": {"L1": 0.38497337, "L2": 0.45807529, "L3": 0.4938652}},
+    "thdVoltage": {"measurementInterval": {"type": "Property", "value": 1}, "measurementType":
+    {"type": "Property", "value": "average"}, "observedAt": "2019-01-24T22:00:00.173Z",
+    "type": "Property", "value": {"L1": 0.01471114, "L2": 0.01600046, "L3": 0.01541459}},
+    "totalActiveEnergyExport": {"observedAt": "2019-01-24T22:00:00.173Z", "type":
+    "Property", "value": 1059.80176}, "totalActiveEnergyImport": {"observedAt": "2019-01-24T22:00:00.173Z",
+    "type": "Property", "value": 150781.96448}, "totalActivePower": {"measurementInterval":
+    {"type": "Property", "value": 1}, "measurementType": {"type": "Property", "value":
+    "average"}, "observedAt": "2019-01-24T22:00:00.173Z", "type": "Property", "value":
+    31700.269531}, "totalApparentPower": {"measurementInterval": {"type": "Property",
+    "value": 1}, "measurementType": {"type": "Property", "value": "average"}, "observedAt":
+    "2019-01-24T22:00:00.173Z", "type": "Property", "value": 36019.089844}, "totalReactiveEnergyExport":
+    {"observedAt": "2019-01-24T22:00:00.173Z", "type": "Property", "value": 93275.02176},
+    "totalReactiveEnergyImport": {"observedAt": "2019-01-24T22:00:00.173Z", "type":
+    "Property", "value": 20490.3392}, "totalReactivePower": {"measurementInterval":
+    {"type": "Property", "value": 1}, "measurementType": {"type": "Property", "value":
+    "average"}, "observedAt": "2019-01-24T22:00:00.173Z", "type": "Property", "value":
+    -7830.332031}, "type": "ThreePhaseAcMeasurement"}'
+classes:
+  ThreePhaseAcMeasurement:
+    class_uri: https://smartdatamodels.org/dataModel.Energy/ThreePhaseAcMeasurement
+    description: An electrical  measurement from a system that uses three phase alternating
+      current.
+    is_a: Entity
+    slots:
+    - activeEnergyExport
+    - activeEnergyImport
+    - activePower
+    - address
+    - alternateName
+    - apparentEnergyExport
+    - apparentEnergyImport
+    - apparentPower
+    - areaServed
+    - current
+    - dataProvider
+    - dateCreated
+    - dateEnergyMeteringStarted
+    - dateModified
+    - description
+    - displacementPowerFactor
+    - frequency
+    - name
+    - owner
+    - phaseToPhaseVoltage
+    - phaseVoltage
+    - powerFactor
+    - reactiveEnergyExport
+    - reactiveEnergyImport
+    - reactivePower
+    - refDevice
+    - refTargetDevice
+    - seeAlso
+    - source
+    - thdCurrent
+    - thdVoltage
+    - totalActiveEnergyExport
+    - totalActiveEnergyImport
+    - totalActivePower
+    - totalApparentEnergyExport
+    - totalApparentEnergyImport
+    - totalApparentPower
+    - totalDisplacementPowerFactor
+    - totalPowerFactor
+    - totalReactiveEnergyExport
+    - totalReactiveEnergyImport
+    - totalReactivePower
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  ActiveEnergyImport:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''kilowatt
+      hour (kWh)''. Active energy imported i.e. consumed per Line since the metering
+      start date. The actual values will be conveyed by subproperties which names
+      will be equal to the name of each of the alternating current phases: L1, L2,
+      L3'
+    attributes:
+      L1:
+        description: Property. Line 1 of the active energy import
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L2:
+        description: Property. Line 2 of the active energy import
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L3:
+        description: Property. Line 3 of the active energy import
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  ReactiveEnergyImport:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''kilovolt-ampere-reactive-hour
+      (kVArh)''. Fundamental frequency reactive energy imported i.e. consumed per
+      phase since the metering start date. The actual values will be conveyed by subproperties
+      which names will be equal to the name of each of the alternating current phases:
+      L1, L2, L3'
+    attributes:
+      L1:
+        description: Property. Line 1 of the reactive energy import
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L2:
+        description: Property. Line 2 of the reactive energy import
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L3:
+        description: Property. Line 3 of the reactive energy import
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  ApparentEnergyImport:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''kilovolt-ampere-hour
+      (kVAh)''. Apparent energy imported i.e. consumed per phase since the metering
+      start date. The actual values will be conveyed by subproperties which names
+      will be equal to the name of each of the alternating current phases: L1, L2,
+      L3'
+    attributes:
+      L1:
+        description: Property. Line 1 of the apparent energy import
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L2:
+        description: Property. Line 2 of the apparent energy import
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L3:
+        description: Property. Line 3 of the apparent energy import
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  ActiveEnergyExport:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''kilowatt
+      hour (kWh)''. Active energy exported per phase since the metering start date.
+      The actual values will be conveyed by subproperties which names will be equal
+      to the name of each of the alternating current phases: L1, L2, L3'
+    attributes:
+      L1:
+        description: Property. Line 1 of the active energy export
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L2:
+        description: Property. Line 2 of the active energy export
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L3:
+        description: Property. Line 3 of the active energy export
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  ReactiveEnergyExport:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''kilovolt-ampere-reactive-hour
+      (kVArh)''. Fundamental frequency reactive energy exported per phase since the
+      metering start date. The actual values will be conveyed by subproperties which
+      names will be equal to the name of each of the alternating current phases: L1,
+      L2, L3'
+    attributes:
+      L1:
+        description: Property. Line 1 of the reactive energy export
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L2:
+        description: Property. Line 2 of the reactive energy export
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L3:
+        description: Property. Line 3 of the reactive energy export
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  ApparentEnergyExport:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''kilovolt-ampere-hour
+      (kVAh)''. Apparent energy exported per phase since the metering start date.
+      The actual values will be conveyed by subproperties which names will be equal
+      to the name of each of the alternating current phases: L1, L2, L3'
+    attributes:
+      L1:
+        description: Property. Line 1 of the apparent energy export
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L2:
+        description: Property. Line 2 of the apparent energy export
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L3:
+        description: Property. Line 3 of the apparent energy export
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  ActivePower:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''watt
+      (W)''.Active power consumed per phase. The actual values will beconveyed by
+      subproperties which names will be equal to the name of each of the alternating
+      current phases: L1, L2, L3. '
+    attributes:
+      L1:
+        description: Property. Line 1 of the active power
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L2:
+        description: Property. Line 2 of the active power
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L3:
+        description: Property. Line 3 of the active power
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  ReactivePower:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''volts-ampere-reactive
+      (VAr)''. Fundamental frequency reactive power. The actual values will be conveyed
+      by subproperties whose names will be equal to the name of each of the alternating
+      current phases: L1, L2, L3'
+    attributes:
+      L1:
+        description: Property. Line 1 of the reactive power
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L2:
+        description: Property. Line 2 of the reactive power
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L3:
+        description: Property. Line 3 of the reactive power
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  ApparentPower:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''volt-ampere
+      (VA)''. Apparent power consumed per phase. The actual values will be conveyed
+      by subproperties which names will be equal to the name of each of the alternating
+      current phases: L1, L2, L3'
+    attributes:
+      L1:
+        description: Property. Line 1 of the apparent power
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L2:
+        description: Property. Line 2 of the apparent power
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L3:
+        description: Property. Line 3 of the apparent power
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  PowerFactor:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''-1
+      to +1''. Power factor for each phase. The actual values will be conveyed by
+      one subproperty per alternating current phase: L1, L2 and L3'
+    attributes:
+      L1:
+        description: Property. Line 1 of the power factor
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L2:
+        description: Property. Line 2 of the power factor
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L3:
+        description: Property. Line 3 of the power factor
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  DisplacementPowerFactor:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''-1
+      to +1''. Displacement power factor for each phase. The quantity is based on
+      the fundamental frequency of the system. The actual values will be conveyed
+      by one subproperty per alternating current phase: L1, L2 and L3'
+    attributes:
+      L1:
+        description: Property. Line 1 of the displacement power factor
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L2:
+        description: Property. Line 2 of the displacement power factor
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L3:
+        description: Property. Line 3 of the displacement power factor
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  Current:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''Ampers
+      (A)''. Electrical current. The actual values will be conveyed by one subproperty
+      per alternating current phase and the neutral wire: L1, L2, L3 and N'
+    attributes:
+      L1:
+        description: Property. Line 1 of the current
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L2:
+        description: Property. Line 2 of the current
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L3:
+        description: Property. Line 3 of the current
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      N:
+        description: Property. Neutral of the current
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  PhaseVoltage:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''Volts
+      (V)''. The voltage between each phase and neutral conductor. The actual values
+      will be conveyed by one subproperty per alternating current phase: L1, L2 and
+      L3'
+    attributes:
+      L1:
+        description: Property. Line 1 of the phase voltage
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L2:
+        description: Property. Line 2 of the phase voltage
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L3:
+        description: Property. Line 3 of the phase voltage
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  PhaseToPhaseVoltage:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''Volts
+      (V)''. Voltage between phases. A value for each phase pair: phases 1 and 2 (L12),
+      phases 2 and 3 (L32), phases 3 and 1 (L31)'
+    attributes:
+      L12:
+        description: Property. Phase between line 1 and 2 of the phase voltage
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L23:
+        description: Property. Phase between line 2 and 3 of the phase voltage
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L31:
+        description: Property. Phase between line 3 and 1 of the phase voltage
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  ThdVoltage:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''0
+      to 1''. Total harmonic distortion of voltage for each phase. The actual values
+      will be conveyed by one subproperty per alternating current phase: L1, L2 and
+      L3'
+    attributes:
+      L1:
+        description: Property. Line 1 of the total harmonic distortion voltage
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L2:
+        description: Property. Line 2 of the total harmonic distortion voltage
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L3:
+        description: Property. Line 3 of the total harmonic distortion voltage
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  ThdCurrent:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''0
+      to 1''. Total harmonic distortion of electrical current. The actual values will
+      be conveyed by one subproperty per alternating current phase: L1, L2 and L3'
+    attributes:
+      L1:
+        description: Property. Line 1 of the total harmonic distortion current
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L2:
+        description: Property. Line 2 of the total harmonic distortion current
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      L3:
+        description: Property. Line 3 of the total harmonic distortion current
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/areaServed
+  refDevice:
+    description: Relationship. Device(s) used to obtain the measurement
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/refDevice
+  refTargetDevice:
+    description: Relationship. Device(s) for which the measurement was taken
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/refTargetDevice
+  dateEnergyMeteringStarted:
+    description: Property. Model:'http://schema.org/DateTime'. The starting date for
+      metering energy
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/dateEnergyMeteringStarted
+  totalActiveEnergyImport:
+    description: Property. Model:'https://schema.org/Number'. Units:'kilowatt hour
+      (kWh)'. Total energy imported i.e. consumed since metering started (since `dateEnergyMeteringStarted`)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/totalActiveEnergyImport
+  totalReactiveEnergyImport:
+    description: Property. Model:'https://schema.org/Number'. Units:'kilovolt-ampere-reactive-hour
+      (kVArh)'. Total energy imported i.e. consumed (with regards to fundamental frequency
+      reactive power) since the metering start date (`dateEnergyMeteringStarted`)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/totalReactiveEnergyImport
+  totalApparentEnergyImport:
+    description: Property. Model:'https://schema.org/Number'. Units:'kilovolt-ampere-hour
+      (kVAh)'. Total energy imported i.e. consumed (with regards to apparent power)
+      since the metering start date (`dateEnergyMeteringStarted`)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/totalApparentEnergyImport
+  totalActiveEnergyExport:
+    description: Property. Model:'https://schema.org/Number'. Units:'kilowatt hour
+      (kWh)'. Total energy exported since metering started (since `dateEnergyMeteringStarted`)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/totalActiveEnergyExport
+  totalReactiveEnergyExport:
+    description: Property. Model:'https://schema.org/Number'. Units:'kilovolt-ampere-reactive-hour
+      (kVArh)'. Total fundamental frequency reactive energy exported since metering
+      started (since `dateEnergyMeteringStarted`)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/totalReactiveEnergyExport
+  totalApparentEnergyExport:
+    description: Property. Model:'https://schema.org/Number'. Units:'kilovolt-ampere-reactive-hour
+      (kVArh)'. Total energy exported (with regards to apparent power) since the metering
+      start date (`dateEnergyMeteringStarted`)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/totalApparentEnergyExport
+  frequency:
+    description: Property. Model:'http://schema.org/Number'. Units:'Hertz (Hz)'. The
+      frequency of the circuit
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/frequency
+  totalActivePower:
+    description: Property. Model:'http://schema.org/Number'. Units:'watt (W)'. Active
+      power consumed (counting all phases)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/totalActivePower
+  totalReactivePower:
+    description: Property. Model:'http://schema.org/Number'. Units:'volt-ampere-reactive
+      (VAr)'. Reactive power consumed (counting all phases)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/totalReactivePower
+  totalApparentPower:
+    description: Property. Model:'http://schema.org/Number'. Units:'volt-ampere (VA)'.
+      Apparent power consumed (counting all phases)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/totalApparentPower
+  activeEnergyImport:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''kilowatt
+      hour (kWh)''. Active energy imported i.e. consumed per Line since the metering
+      start date. The actual values will be conveyed by subproperties which names
+      will be equal to the name of each of the alternating current phases: L1, L2,
+      L3'
+    range: ActiveEnergyImport
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/activeEnergyImport
+  reactiveEnergyImport:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''kilovolt-ampere-reactive-hour
+      (kVArh)''. Fundamental frequency reactive energy imported i.e. consumed per
+      phase since the metering start date. The actual values will be conveyed by subproperties
+      which names will be equal to the name of each of the alternating current phases:
+      L1, L2, L3'
+    range: ReactiveEnergyImport
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/reactiveEnergyImport
+  apparentEnergyImport:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''kilovolt-ampere-hour
+      (kVAh)''. Apparent energy imported i.e. consumed per phase since the metering
+      start date. The actual values will be conveyed by subproperties which names
+      will be equal to the name of each of the alternating current phases: L1, L2,
+      L3'
+    range: ApparentEnergyImport
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/apparentEnergyImport
+  activeEnergyExport:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''kilowatt
+      hour (kWh)''. Active energy exported per phase since the metering start date.
+      The actual values will be conveyed by subproperties which names will be equal
+      to the name of each of the alternating current phases: L1, L2, L3'
+    range: ActiveEnergyExport
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/activeEnergyExport
+  reactiveEnergyExport:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''kilovolt-ampere-reactive-hour
+      (kVArh)''. Fundamental frequency reactive energy exported per phase since the
+      metering start date. The actual values will be conveyed by subproperties which
+      names will be equal to the name of each of the alternating current phases: L1,
+      L2, L3'
+    range: ReactiveEnergyExport
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/reactiveEnergyExport
+  apparentEnergyExport:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''kilovolt-ampere-hour
+      (kVAh)''. Apparent energy exported per phase since the metering start date.
+      The actual values will be conveyed by subproperties which names will be equal
+      to the name of each of the alternating current phases: L1, L2, L3'
+    range: ApparentEnergyExport
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/apparentEnergyExport
+  activePower:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''watt
+      (W)''.Active power consumed per phase. The actual values will beconveyed by
+      subproperties which names will be equal to the name of each of the alternating
+      current phases: L1, L2, L3. '
+    range: ActivePower
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/activePower
+  reactivePower:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''volts-ampere-reactive
+      (VAr)''. Fundamental frequency reactive power. The actual values will be conveyed
+      by subproperties whose names will be equal to the name of each of the alternating
+      current phases: L1, L2, L3'
+    range: ReactivePower
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/reactivePower
+  apparentPower:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''volt-ampere
+      (VA)''. Apparent power consumed per phase. The actual values will be conveyed
+      by subproperties which names will be equal to the name of each of the alternating
+      current phases: L1, L2, L3'
+    range: ApparentPower
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/apparentPower
+  totalPowerFactor:
+    description: Property. Model:'http://schema.org/Number'. Units:'-1 to +1'. Power
+      factor including all phases
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/totalPowerFactor
+  powerFactor:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''-1
+      to +1''. Power factor for each phase. The actual values will be conveyed by
+      one subproperty per alternating current phase: L1, L2 and L3'
+    range: PowerFactor
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/powerFactor
+  totalDisplacementPowerFactor:
+    description: Property. Model:'http://schema.org/Number'. Units:'-1 to +1'. Displacement
+      power factor including all phases. The quantity is based on the fundamental
+      frequency of the system
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/totalDisplacementPowerFactor
+  displacementPowerFactor:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''-1
+      to +1''. Displacement power factor for each phase. The quantity is based on
+      the fundamental frequency of the system. The actual values will be conveyed
+      by one subproperty per alternating current phase: L1, L2 and L3'
+    range: DisplacementPowerFactor
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/displacementPowerFactor
+  current:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''Ampers
+      (A)''. Electrical current. The actual values will be conveyed by one subproperty
+      per alternating current phase and the neutral wire: L1, L2, L3 and N'
+    range: Current
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/current
+  phaseVoltage:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''Volts
+      (V)''. The voltage between each phase and neutral conductor. The actual values
+      will be conveyed by one subproperty per alternating current phase: L1, L2 and
+      L3'
+    range: PhaseVoltage
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/phaseVoltage
+  phaseToPhaseVoltage:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''Volts
+      (V)''. Voltage between phases. A value for each phase pair: phases 1 and 2 (L12),
+      phases 2 and 3 (L32), phases 3 and 1 (L31)'
+    range: PhaseToPhaseVoltage
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/phaseToPhaseVoltage
+  thdVoltage:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''0
+      to 1''. Total harmonic distortion of voltage for each phase. The actual values
+      will be conveyed by one subproperty per alternating current phase: L1, L2 and
+      L3'
+    range: ThdVoltage
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/thdVoltage
+  thdCurrent:
+    description: 'Property. Model:''http://schema.org/StructuredValue''. Units:''0
+      to 1''. Total harmonic distortion of electrical current. The actual values will
+      be conveyed by one subproperty per alternating current phase: L1, L2 and L3'
+    range: ThdCurrent
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/thdCurrent

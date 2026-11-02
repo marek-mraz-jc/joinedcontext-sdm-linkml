@@ -1,0 +1,231 @@
+id: https://github.com/smart-data-models/dataModel.Gaia-X/GPU
+name: GPU
+title: Gpu data model from Gaia-x service characteristics group
+description: Graphical processing unit of virtual and physical machines.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Gaia-X
+  spec.source.path: GPU/schema.json
+  spec.source.commit: 964954c5f6ddb24688baeca7d59cc6becd82edc7
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smart-data-models.github.io/dataModel.Gaia-X/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Belgium", "addressLocality":
+    "Brussels", "addressRegion": "Stay ", "district": "", "postOfficeBoxNumber": "",
+    "postalCode": "1210", "streetAddress": "Avenue des Arts", "streetNr": "6-9"}},
+    "alternateName": {"type": "Property", "value": ""}, "areaServed": {"type": "Property",
+    "value": "europe"}, "dataProvider": {"type": "Property", "value": ""}, "dateCreated":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2023-02-04T01:39:12Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2024-04-17T12:34:59Z"}}, "description": {"type": "Property", "value": ""}, "gpuInterconnection":
+    {"type": "Property", "value": "none"}, "gpuMemory": {"type": "Property", "unitCode":
+    "Gb", "value": 32}, "gpuPassthrough": {"type": "Property", "value": true}, "gpuProcessingUnits":
+    {"type": "Property", "value": 256}, "id": "urn:ngsi-ld:GPU:id:KDZU:28777210",
+    "location": {"type": "GeoProperty", "value": {"coordinates": [50.8484048, 4.3671841],
+    "type": "Point"}}, "name": {"type": "Property", "value": "regular GPU"}, "owner":
+    {"type": "Property", "value": ["urn:ngsi-ld:GPU:items:NYAZ:78598598"]}, "seeAlso":
+    {"type": "Property", "value": ["urn:ngsi-ld:additionalinfo:CDED:9773753"]}, "source":
+    {"type": "Property", "value": ""}, "type": "GPU"}'
+classes:
+  GPU:
+    class_uri: https://smartdatamodels.org/dataModel.Gaia-X/GPU
+    description: Graphical processing unit of virtual and physical machines.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - gpuInterconnection
+    - gpuMemory
+    - gpuPassthrough
+    - gpuProcessingUnits
+    - name
+    - owner
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+    slot_uri: https://smartdatamodels.org/areaServed
+  gpuMemory:
+    description: Property. Size of memory of the GPU.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+    slot_uri: https://smartdatamodels.org/dataModel.Gaia-X/gpuMemory
+  gpuInterconnection:
+    description: Property. Interconnection of multiple GPUs within a server systemEnum:'NVLink',
+      'RoCE2', 'Xe Link', 'Infinity Fabric', 'other', 'none'
+    range: gpuInterconnection_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+    slot_uri: https://smartdatamodels.org/dataModel.Gaia-X/gpuInterconnection
+  gpuProcessingUnits:
+    description: Property. Number of processing units, also called compute units,
+      execution units or streaming multiprocessors, of the GPU.
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+    slot_uri: https://smartdatamodels.org/dataModel.Gaia-X/gpuProcessingUnits
+  gpuPassthrough:
+    description: Property. If true, GPU is provided via passthrough, otherwise GPU
+      is virtualized.
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Gaia-X@964954c5f6ddb24688baeca7d59cc6becd82edc7
+    slot_uri: https://smartdatamodels.org/dataModel.Gaia-X/gpuPassthrough
+enums:
+  gpuInterconnection_options:
+    name: gpuInterconnection_options
+    permissible_values:
+      NVLink:
+        text: NVLink
+      RoCE2:
+        text: RoCE2
+      Xe Link:
+        text: Xe Link
+      Infinity Fabric:
+        text: Infinity Fabric
+      other:
+        text: other
+      none:
+        text: none

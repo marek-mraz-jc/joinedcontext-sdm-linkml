@@ -1,0 +1,483 @@
+id: https://github.com/smart-data-models/dataModel.ZEB/Area
+name: Area
+title: Smart Data Models - Area schema
+description: Information on Area (Area type, height, space area, etc.).
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ZEB
+  spec.source.path: Area/schema.json
+  spec.source.commit: 3a1526fd517f4fef0c40f280f3b618cac72e3d41
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smart-data-models.github.io/dataModel.ZEB/context.jsonld"],
+    "areaType": {"type": "Property", "value": "ac"}, "dateObjectCreated": {"type":
+    "Property", "value": {"@type": "string", "@value": "2020-07-20T17:17:00.621Z"}},
+    "dateObjectUpdated": {"type": "Property", "value": {"@type": "string", "@value":
+    "2020-07-20T17:17:00.621Z"}}, "flagDeleted": {"type": "Property", "value": "false"},
+    "id": "urn:ngsi-ld:Area:SAZ0000000001", "jointArea": {"type": "Property", "value":
+    0.368}, "jointDirection": {"type": "GeoProperty", "value": {"coordinates": [0,
+    0, 90], "type": "Point"}}, "jointSurface": {"type": "GeoProperty", "value": {"coordinates":
+    [[0, 0, 0], [100, 0, 0], [100, 100, 0], [0, 100, 0]], "type": "MultiPoint"}},
+    "objectName": {"type": "Property", "value": "area_1"}, "refAreaEnvironmentMeasurement":
+    {"object": "urn:ngsi-ld:AreaEnvironmentMeasurement:SAZ0000000001", "type": "Relationship"},
+    "refAreaPeopleForecast": {"object": "urn:ngsi-ld:AreaPeopleForecast:SAZ0000000001",
+    "type": "Relationship"}, "refIndoorAirConditioner": {"object": "urn:ngsi-ld:IndoorAirConditioner:FAI0000000001",
+    "type": "Relationship"}, "refOutdoorAirConditioner": {"object": "urn:ngsi-ld:OutdoorAirConditioner:FAO0000000001",
+    "type": "Relationship"}, "refRoom": {"object": ["urn:ngsi-ld:Room:SRZ0000000001"],
+    "type": "Relationship"}, "refStair": {"object": ["urn:ngsi-ld:Stair:BTZ0000000001"],
+    "type": "Relationship"}, "roomType": {"type": "Property", "value": "room"}, "shape":
+    {"type": "GeoProperty", "value": {"coordinates": [[0, 0, 0], [100, 0, 0], [0,
+    100, 0], [100, 100, 0], [0, 0, 100], [100, 0, 100], [0, 100, 100], [100, 100,
+    100]], "type": "MultiPoint"}}, "type": "Area"}'
+classes:
+  Area:
+    class_uri: https://smartdatamodels.org/dataModel.ZEB/Area
+    description: Information on Area (Area type, height, space area, etc.).
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - areaType
+    - baseSurface
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - dateObjectCreated
+    - dateObjectUpdated
+    - description
+    - flagDeleted
+    - height
+    - jointArea
+    - jointDirection
+    - jointSurface
+    - name
+    - objectName
+    - owner
+    - refAirConditionerTerminal
+    - refAreaEnvironmentMeasurement
+    - refAreaPeopleForecast
+    - refAreaPeopleMeasurement
+    - refColumn
+    - refDevice
+    - refDoor
+    - refElevator
+    - refEquipment
+    - refFan
+    - refIndoorAirConditioner
+    - refLighting
+    - refOpening
+    - refOutdoorAirConditioner
+    - refOutdoorAirTreatingUnit
+    - refRoom
+    - refSlab
+    - refStair
+    - refTotalHeatExchanger
+    - refWall
+    - refWaterHeater
+    - refWindow
+    - roomType
+    - seeAlso
+    - shape
+    - source
+    - spaceArea
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/areaServed
+  areaType:
+    description: Property. Area type. Enum:'ac, vent, light, hw, elv, acs, oa, analyze,
+      cell, sensor'
+    range: areaType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/areaType
+  baseSurface:
+    description: GeoProperty. Base Surface of this item.
+    annotations:
+      ngsi_ld_kind: GeoProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/baseSurface
+  dateObjectCreated:
+    description: Property. Model:'http://schema.org/DateTime'. The registration date
+      and time of this item as an object.
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/dateObjectCreated
+  dateObjectUpdated:
+    description: Property. Model:'http://schema.org/DateTime'. The update date and
+      time of this item as an object.
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/dateObjectUpdated
+  flagDeleted:
+    description: Property. Flag set when this item is deleted as an object.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/flagDeleted
+  height:
+    description: Property. Model:'https://schema.org/Number'. Height of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/height
+  jointDirection:
+    description: GeoProperty. Joint Direction of this item and Spatial Objects.
+    annotations:
+      ngsi_ld_kind: GeoProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/jointDirection
+  jointSurface:
+    description: GeoProperty. Joint Surface of this item and Spatial Objects.
+    annotations:
+      ngsi_ld_kind: GeoProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/jointSurface
+  jointArea:
+    description: Property. Model:'https://schema.org/Number'.  Joint Area of this
+      item and Spatial Objects.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/jointArea
+  objectName:
+    description: Property. Name of this item as an object.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/objectName
+  refAirConditionerTerminal:
+    description: Relationship. Reference to the air conditioner terminal containing
+      this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refAirConditionerTerminal
+  refAreaEnvironmentMeasurement:
+    description: Relationship. Reference to the area environment measurement containing
+      this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refAreaEnvironmentMeasurement
+  refAreaPeopleForecast:
+    description: Relationship. Reference to the area people forecast containing this
+      item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refAreaPeopleForecast
+  refAreaPeopleMeasurement:
+    description: Relationship. Reference to the area people measurement containing
+      this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refAreaPeopleMeasurement
+  refColumn:
+    description: Relationship. Reference to the column containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refColumn
+  refDevice:
+    description: Relationship. Reference to the device containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refDevice
+  refDoor:
+    description: Relationship. Reference to the door containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refDoor
+  refElevator:
+    description: Relationship. Reference to the elevator containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refElevator
+  refEquipment:
+    description: Relationship. Reference to the equipment containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refEquipment
+  refFan:
+    description: Relationship. Reference to the fan containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refFan
+  refIndoorAirConditioner:
+    description: Relationship. Reference to the indoor air conditioner containing
+      this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refIndoorAirConditioner
+  refLighting:
+    description: Relationship. Reference to the lighting containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refLighting
+  refOpening:
+    description: Relationship. Reference to the opening containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refOpening
+  refOutdoorAirConditioner:
+    description: Relationship. Reference to the outdoor air conditioner containing
+      this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refOutdoorAirConditioner
+  refOutdoorAirTreatingUnit:
+    description: Relationship. Reference to the outdoor air treating unit containing
+      this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refOutdoorAirTreatingUnit
+  refRoom:
+    description: Relationship. Reference to the room containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refRoom
+  refSlab:
+    description: Relationship. Reference to the slab containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refSlab
+  refStair:
+    description: Relationship. Reference to the stair containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refStair
+  refTotalHeatExchanger:
+    description: Relationship. Reference to the total heat exchanger containing this
+      item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refTotalHeatExchanger
+  refWall:
+    description: Relationship. Reference to the wall containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refWall
+  refWaterHeater:
+    description: Relationship. Reference to the water heater containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refWaterHeater
+  refWindow:
+    description: Relationship. Reference to the window containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refWindow
+  roomType:
+    description: Property. Wall type. Enum:'room, shaft, above_ceiling, under_floor'
+    range: roomType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/roomType
+  shape:
+    description: GeoProperty. Shape of this item.
+    annotations:
+      ngsi_ld_kind: GeoProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/shape
+  spaceArea:
+    description: Property. Model:'https://schema.org/Number'.  Space Area of this
+      item and Spatial Objects.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/spaceArea
+enums:
+  areaType_options:
+    name: areaType_options
+    permissible_values:
+      ac:
+        text: ac
+      vent:
+        text: vent
+      light:
+        text: light
+      hw:
+        text: hw
+      elv:
+        text: elv
+      acs:
+        text: acs
+      oa:
+        text: oa
+      analyze:
+        text: analyze
+      cell:
+        text: cell
+      sensor:
+        text: sensor
+  roomType_options:
+    name: roomType_options
+    permissible_values:
+      room:
+        text: room
+      shaft:
+        text: shaft
+      above_ceiling:
+        text: above_ceiling
+      under_floor:
+        text: under_floor

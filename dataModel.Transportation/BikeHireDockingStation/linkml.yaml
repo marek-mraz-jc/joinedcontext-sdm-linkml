@@ -1,0 +1,405 @@
+id: https://github.com/smart-data-models/dataModel.Transportation/BikeHireDockingStation
+name: BikeHireDockingStation
+title: ' - Transportation / Bike Hire Docking Station'
+description: Bike Hire Docking Station
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Transportation
+  spec.source.path: BikeHireDockingStation/schema.json
+  spec.source.commit: 48e0e7ebaaee430f04a47efb27fc38825f79b725
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "ES", "addressLocality":
+    "Barcelona", "streetAddress": "Gran Via Corts Catalanes,760"}}, "agency_fare_url":
+    {"type": "Property", "value": ""}, "agency_name": {"type": "Property", "value":
+    "PedalSaddle"}, "agency_url": {"type": "Property", "value": "http://pedalsaddle.in/"},
+    "availableBikeNumber": {"type": "Property", "value": 20}, "contactPoint": {"type":
+    "Property", "value": {"url": "uri:ngsi:www.lignesdazur.com"}}, "freeSlotNumber":
+    {"type": "Property", "value": 10}, "id": "urn:ngsi-ld:Bcn-BikeHireDockingStation-1",
+    "location": {"type": "GeoProperty", "value": {"coordinates": [2.180042, 41.397952],
+    "type": "Point"}}, "mediaURL": {"type": "Property", "value": "http://pedalsaddle.in/"},
+    "observationDate": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2021-03-11T15:51:02+05:30"}}, "openingHours": {"type": "Property", "value": "Mo-Fr
+    10:00-19:00, Sa 10:00-22:00, Su 10:00-21:00"}, "outOfServiceSlotNumber": {"type":
+    "Property", "value": 21}, "provider": {"type": "Property", "value": "University
+    of Mumbay"}, "stationCode": {"type": "Property", "value": "2"}, "stationName":
+    {"type": "Property", "value": "Pune"}, "status": {"type": "Property", "value":
+    "working"}, "totalSlotNumber": {"type": "Property", "value": 100}, "type": "BikeHireDockingStation"}'
+classes:
+  BikeHireDockingStation:
+    class_uri: https://smartdatamodels.org/dataModel.Transportation/BikeHireDockingStation
+    description: Bike Hire Docking Station
+    is_a: Entity
+    slots:
+    - address
+    - agency_fare_url
+    - agency_name
+    - agency_url
+    - alternateName
+    - areaServed
+    - availableBikeNumber
+    - contactPoint
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - freeSlotNumber
+    - mediaURL
+    - name
+    - observationDateTime
+    - openingHours
+    - outOfServiceSlotNumber
+    - owner
+    - provider
+    - seeAlso
+    - source
+    - stationCode
+    - stationName
+    - status
+    - totalSlotNumber
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  ContactPoint:
+    description: Property. Model:'https://schema.org/ContactPoint'. The details to
+      contact with the item
+    attributes:
+      contactType:
+        description: Property. Contact type of this item
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      email:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      telephone:
+        description: Property. Telephone of this contact
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      name:
+        description: Property. The name of this item
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      url:
+        description: Property. URL which provides a description or further information
+          about this item
+        range: uriorcurie
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      areaServed:
+        description: Property. The geographic area where a service or offered item
+          is provided. Supersedes serviceArea
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      availableLanguage:
+        description: Property. Model:'http://schema.org/availableLanguage'. A language
+          someone may use with or at the item, service or place. Please use one of
+          the language codes from the IETF BCP 47 standard. It is implemented the
+          Text option but it could be also Language
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      contactOption:
+        description: Property. Model:'http://schema.org/contactOption'. An option
+          available on this contact point (e.g. a toll-free number or support for
+          hearing-impaired callers)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      faxNumber:
+        description: Property. Model:'https://schema.org/Text'. The fax number of
+          the item
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      productSupported:
+        description: Property. Model:'https://schema.org/Text'. The product or service
+          this support contact point is related to (such as product support for a
+          particular product line). This can be a specific product or product line
+          (e.g. 'iPhone') or a general category of products or services (e.g. 'smartphones')
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      availabilityRestriction:
+        description: Relationship. Model:'https://schema.org/hoursAvailable'. This
+          property links a contact point to information about when the contact point
+          is not available. The details are provided using the Opening Hours Specification
+          class
+        annotations:
+          ngsi_ld_kind: Relationship
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/areaServed
+  totalSlotNumber:
+    description: Property. The total number of slots offered by this bike docking
+      station. Model:'https://schema.org/Number'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/totalSlotNumber
+  freeSlotNumber:
+    description: Property. The number of slots available for returning and parking
+      bikes. It must lower or equal than `totalSlotNumber`. Model:'https://schema.org/Number'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/freeSlotNumber
+  availableBikeNumber:
+    description: Property. The number of bikes available in the bike hire docking
+      station to be hired by users. Model:'https://schema.org/Number'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/availableBikeNumber
+  outOfServiceSlotNumber:
+    description: Property. The number of slots that are out of order and cannot be
+      used to hire or park a bike. It must lower or equal than `totalSlotNumber`.
+      Model:'https://schema.org/Number'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/outOfServiceSlotNumber
+  openingHours:
+    description: Property. Opening hours of the docking station. Model:'http://schema.org/openingHours'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/openingHours
+  status:
+    description: Property. Status of the bike hire docking station. Enum:'working,
+      outOfService, withIncidence, full, almostFull, empty, almostEmpty'. Model:'https://schema.org/Number'.
+      Or any other application specific
+    range: status_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://uri.etsi.org/ngsi-ld/status
+  provider:
+    description: Property. Bike hire service provider. Model:'https://schema.org/provider'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/provider
+  contactPoint:
+    description: Property. Model:'https://schema.org/ContactPoint'. The details to
+      contact with the item
+    range: ContactPoint
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/contactPoint
+  stationName:
+    description: Property. Model:'https://schema.org/Text'. The name of the bike hire
+      docking station corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/stationName
+  mediaURL:
+    description: Property. Model:'https://schema.org/Text'. URL providing further
+      information of any image(s) or media of the complaint or place
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/mediaURL
+  agency_url:
+    description: 'Property. Model:''https://schema.org/Text''. The agency_url field
+      contains the URL of the transit agency. SameAs: ''agency_url'' field from GTFS
+      Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)'
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/agency_url
+  agency_name:
+    description: 'Property. Model:''https://schema.org/Text''. The agency_name field
+      contains the full name of the transit agency. SameAs: ''agency_name'' field
+      from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/agency_name
+  stationCode:
+    description: Property. Model:'https://schema.org/Text'. The station number or
+      station code of the bike hire docking station corresponding to the observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/stationCode
+  observationDateTime:
+    description: Property. Model:'https://schema.org/Text'. Last reported time of
+      observation
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/observationDateTime
+  agency_fare_url:
+    description: 'Property. URL of a web page that contains the details of the fares
+      and also could allow to purchase tickets for that agency online. SameAs: ''agency_fare_url''
+      field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt) '
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/agency_fare_url
+enums:
+  status_options:
+    name: status_options
+    permissible_values:
+      almostEmpty:
+        text: almostEmpty
+      almostFull:
+        text: almostFull
+      empty:
+        text: empty
+      full:
+        text: full
+      outOfService:
+        text: outOfService
+      withIncidence:
+        text: withIncidence
+      working:
+        text: working

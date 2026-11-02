@@ -1,0 +1,263 @@
+id: https://github.com/smart-data-models/dataModel.PredictiveMaintenance/InventoryItem
+name: InventoryItem
+title: InventoryItem object
+description: Represent an item of the inventory inside a warehouse
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.PredictiveMaintenance
+  spec.source.path: InventoryItem/schema.json
+  spec.source.commit: 0823f12add109397d1257a5dc528e2f157e8710e
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "id": "https://smart-data-models.github.io/dataModel.PredictiveMaintenance/InventoryItem/inventoryItem01",
+    "itemLocation": {"type": "Property", "value": "SILO2/0027"}, "itemNumber": {"type":
+    "Property", "value": "1055.52395.191"}, "name": {"type": "Property", "value":
+    "Fusibile SIEMENS 3NA3 807"}, "netWeight": {"type": "Property", "value": 0.13},
+    "physicalStock": {"type": "Property", "value": 10}, "researchName": {"type": "Property",
+    "value": "FusibileSIEMENS3NA38"}, "site": {"type": "Property", "value": "01"},
+    "type": "InventoryItem", "warehouseID": {"type": "Property", "value": "0000"}}'
+classes:
+  InventoryItem:
+    class_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/InventoryItem
+    description: Represent an item of the inventory inside a warehouse
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - availableTotal
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - itemLocation
+    - itemNumber
+    - name
+    - netWeight
+    - onDelivery
+    - orderedBooked
+    - owner
+    - physicalAvailability
+    - physicalBooked
+    - physicalStock
+    - researchName
+    - seeAlso
+    - site
+    - source
+    - totalOrdered
+    - warehouseID
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+slots:
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  name:
+    description: Property. The name of the item.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  warehouseID:
+    description: Property. The unique identifier for the warehouse.
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/warehouseID
+  itemNumber:
+    description: Property. The unique identifier for the item.
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/itemNumber
+  physicalStock:
+    description: Property. The physical stock of the item.
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/physicalStock
+  physicalAvailability:
+    description: Property. The physical availability of the item.
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/physicalAvailability
+  physicalBooked:
+    description: Property. The physical booked quantity of the item.
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/physicalBooked
+  availableTotal:
+    description: Property. The total available quantity of the item.
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/availableTotal
+  researchName:
+    description: Property. The research name of the item.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/researchName
+  site:
+    description: Property. The site where the item is located.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/site
+  itemLocation:
+    description: Property. The location of the item.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/itemLocation
+  totalOrdered:
+    description: Property. The total quantity ordered for the item.
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/totalOrdered
+  onDelivery:
+    description: Property. The quantity of the item on delivery.
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/onDelivery
+  orderedBooked:
+    description: Property. The quantity of the item ordered and booked.
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/orderedBooked
+  netWeight:
+    description: Property. The net weight of the item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/netWeight

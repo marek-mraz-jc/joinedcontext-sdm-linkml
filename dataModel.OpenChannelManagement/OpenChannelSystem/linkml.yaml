@@ -1,0 +1,222 @@
+id: https://github.com/smart-data-models/dataModel.OpenChannelManagement/OpenChannelSystem
+name: OpenChannelSystem
+title: Open Channel Management - OpenChannelSystem
+description: This entity contains a harmonised description of a generic system made
+  for Raw-Water (Open Channels) System Management domain. This entity represents either
+  a system composed of different components (e.g., channels, junctions, cross-sections
+  etc.) or just a component (e.g., a SluiceGate).
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OpenChannelManagement
+  spec.source.path: OpenChannelSystem/schema.json
+  spec.source.commit: 4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.OpenChannelManagement/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "", "addressLocality":
+    "", "addressRegion": "", "areaServed": "", "postOfficeBoxNumber": "", "postalCode":
+    "", "streetAddress": ""}}, "alternateName": {"type": "Property", "value": ""},
+    "areaServed": {"type": "Property", "value": ""}, "dataProvider": {"type": "Property",
+    "value": "EYDAP"}, "dateCreated": {"type": "Property", "value": {"@type": "DateTime",
+    "@value": "2020-12-07T21:37:19Z"}}, "dateModified": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "2021-07-14T01:06:03Z"}}, "description": {"type":
+    "Property", "value": "Conveyance System near Thivae"}, "hasSubSystem": {"object":
+    "urn:ngsi-ld:OpenChannelSystem:hasSubSystem:BYUP:86302765", "type": "Relationship"},
+    "id": "urn:ngsi-ld:OpenChannelSystem:id:EHTH:11109231", "isComposedOf": {"object":
+    "urn:ngsi-ld:OpenChannelSystem:isComposedOf:UMLF:11032914", "type": "Relationship"},
+    "location": {"type": "Geoproperty", "value": {"coordinates": [59.820118, -157.397178],
+    "type": "Point"}}, "mostDownstreamPoint": {"object": "urn:ngsi-ld:OpenChannelSystem:mostDownstreamPoint:IXHM:68215414",
+    "type": "Relationship"}, "mostUpstreamPoint": {"object": "urn:ngsi-ld:OpenChannelSystem:mostUpstreamPoint:YUHY:75075828",
+    "type": "Relationship"}, "name": {"type": "Property", "value": "L7 - L11"}, "owner":
+    {"type": "Property", "value": ["urn:ngsi-ld:OpenChannelSystem:items:WPHN:07387656",
+    "urn:ngsi-ld:OpenChannelSystem:items:JNVF:94407376"]}, "seeAlso": {"type": "Property",
+    "value": ["urn:ngsi-ld:OpenChannelSystem:items:EZUE:70603867", "urn:ngsi-ld:OpenChannelSystem:items:MWLT:38533440"]},
+    "source": {"type": "Property", "value": ""}, "type": "OpenChannelSystem"}'
+classes:
+  OpenChannelSystem:
+    class_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/OpenChannelSystem
+    description: This entity contains a harmonised description of a generic system
+      made for Raw-Water (Open Channels) System Management domain. This entity represents
+      either a system composed of different components (e.g., channels, junctions,
+      cross-sections etc.) or just a component (e.g., a SluiceGate).
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - hasSubSystem
+    - isComposedOf
+    - mostDownstreamPoint
+    - mostUpstreamPoint
+    - name
+    - owner
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+slots:
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/areaServed
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/seeAlso
+  isComposedOf:
+    description: Relationship. Reference to the component entities of the open-channel
+      system, of type Channel, Cross-Section, Junction, Regulation Structure, SluiceGate,
+      Spillway
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/isComposedOf
+  hasSubSystem:
+    description: Relationship. Reference to an entity of type OpenChannelSystem -
+      an open-channel sub-system
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/hasSubSystem
+  mostUpstreamPoint:
+    description: Relationship. A relationship indicating the ID of the most upstream
+      node (e.g., a Junction or a Cross-section) of the system
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/mostUpstreamPoint
+  mostDownstreamPoint:
+    description: Relationship. A relationship indicating the ID of the most downstream
+      node (e.g., a Junction or a Cross-section) of the system
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/mostDownstreamPoint

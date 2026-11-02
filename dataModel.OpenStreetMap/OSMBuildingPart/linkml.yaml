@@ -1,0 +1,360 @@
+id: https://github.com/smart-data-models/dataModel.OpenStreetMap/OSMBuildingPart
+name: OSMBuildingPart
+title: Smart Data Models - OpenStreetMap / OSMBuildingPart
+description: A part or section of a building from OpenStreetMap tagged with building:part=*.
+  Used to represent buildings with varying heights, roof shapes, or materials across
+  different sections, enabling 3D building visualisation (Simple 3D Buildings standard).
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OpenStreetMap
+  spec.source.path: OSMBuildingPart/schema.json
+  spec.source.commit: 5188df53c66d3c9f2441b6cffea0b604364ace68
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.OpenStreetMap/refs/heads/master/context.jsonld"],
+    "buildingColour": {"type": "Property", "value": "#D0D0D0"}, "buildingHeight":
+    {"type": "Property", "unitCode": "MTR", "value": 72.0}, "buildingLevels": {"type":
+    "Property", "value": 18}, "buildingMaterial": {"type": "Property", "value": "concrete"},
+    "buildingPartType": {"type": "Property", "value": "yes"}, "id": "urn:ngsi-ld:OSMBuildingPart:way:305981241",
+    "location": {"type": "GeoProperty", "value": {"coordinates": [[[-3.6887, 40.4781],
+    [-3.6875, 40.4781], [-3.6875, 40.4773], [-3.6887, 40.4773], [-3.6887, 40.4781]]],
+    "type": "Polygon"}}, "minHeight": {"type": "Property", "unitCode": "MTR", "value":
+    0.0}, "name": {"type": "Property", "value": "Torre Norte - Hospital La Paz"},
+    "osmId": {"type": "Property", "value": 305981241}, "osmLastModified": {"type":
+    "Property", "value": {"@type": "DateTime", "@value": "2023-07-04T16:20:00Z"}},
+    "osmType": {"type": "Property", "value": "way"}, "refBuilding": {"object": "urn:ngsi-ld:OSMBuilding:way:22234584",
+    "type": "Relationship"}, "roofShape": {"type": "Property", "value": "flat"}, "seeAlso":
+    {"type": "Property", "value": ["https://www.openstreetmap.org/way/305981241"]},
+    "source": {"type": "Property", "value": "https://www.openstreetmap.org"}, "type":
+    "OSMBuildingPart"}'
+classes:
+  OSMBuildingPart:
+    class_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/OSMBuildingPart
+    description: A part or section of a building from OpenStreetMap tagged with building:part=*.
+      Used to represent buildings with varying heights, roof shapes, or materials
+      across different sections, enabling 3D building visualisation (Simple 3D Buildings
+      standard).
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - buildingColour
+    - buildingHeight
+    - buildingLevels
+    - buildingMaterial
+    - buildingPartType
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - minHeight
+    - minLevel
+    - name
+    - osmId
+    - osmLastModified
+    - osmType
+    - owner
+    - refBuilding
+    - roofColour
+    - roofMaterial
+    - roofShape
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. List of URIs pointing to additional resources about this
+      item.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/areaServed
+  osmId:
+    description: Property. The original OpenStreetMap element integer identifier.
+      Model:'https://wiki.openstreetmap.org/wiki/Elements'
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmId
+  osmType:
+    description: Property. The type of the original OpenStreetMap element. Model:'https://wiki.openstreetmap.org/wiki/Elements'
+    range: osmType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmType
+  osmLastModified:
+    description: Property. Timestamp of the last modification of the OSM element.
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmLastModified
+  buildingPartType:
+    description: Property. The OSM building:part tag value. Typically 'yes' or a specific
+      type label for the architectural section. Model:'https://wiki.openstreetmap.org/wiki/Key:building:part'
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/buildingPartType
+  buildingLevels:
+    description: Property. Number of above-ground floors in this part of the building.
+      Model:'https://wiki.openstreetmap.org/wiki/Key:building:levels'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/buildingLevels
+  buildingHeight:
+    description: Property. Total height of this building part in metres. Units:'m'.
+      Model:'https://wiki.openstreetmap.org/wiki/Key:height'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/buildingHeight
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  minHeight:
+    description: Property. Height above ground at which this building part starts,
+      in metres. Used for overhangs and elevated sections. Units:'m'. Model:'https://wiki.openstreetmap.org/wiki/Key:min_height'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/minHeight
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  minLevel:
+    description: Property. Floor level at which this building part starts. Used for
+      indoor mapping. Model:'https://wiki.openstreetmap.org/wiki/Key:min_level'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/minLevel
+  roofShape:
+    description: Property. Shape of the roof on this building part. Enum:'flat, gabled,
+      hipped, half-hipped, pyramidal, gambrel, mansard, dome, skillion, round, saltbox,
+      onion, cone'. Model:'https://wiki.openstreetmap.org/wiki/Key:roof:shape'
+    range: roofShape_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/roofShape
+  roofMaterial:
+    description: Property. Primary material of the roof surface on this part. Model:'https://wiki.openstreetmap.org/wiki/Key:roof:material'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/roofMaterial
+  roofColour:
+    description: Property. Colour of the roof on this part, expressed as a CSS colour
+      name or hex code. Model:'https://wiki.openstreetmap.org/wiki/Key:roof:colour'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/roofColour
+  buildingColour:
+    description: Property. Colour of the facade of this building part, expressed as
+      a CSS colour name or hex code. Model:'https://wiki.openstreetmap.org/wiki/Key:building:colour'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/buildingColour
+  buildingMaterial:
+    description: Property. Primary facade or structural material of this building
+      part. Model:'https://wiki.openstreetmap.org/wiki/Key:building:material'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/buildingMaterial
+  refBuilding:
+    description: Relationship. URI reference to the parent OSMBuilding entity this
+      part belongs to.
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/refBuilding
+enums:
+  osmType_options:
+    name: osmType_options
+    permissible_values:
+      node:
+        text: node
+      way:
+        text: way
+      relation:
+        text: relation
+  roofShape_options:
+    name: roofShape_options
+    permissible_values:
+      flat:
+        text: flat
+      gabled:
+        text: gabled
+      hipped:
+        text: hipped
+      half-hipped:
+        text: half-hipped
+      pyramidal:
+        text: pyramidal
+      gambrel:
+        text: gambrel
+      mansard:
+        text: mansard
+      dome:
+        text: dome
+      skillion:
+        text: skillion
+      round:
+        text: round
+      saltbox:
+        text: saltbox
+      onion:
+        text: onion
+      cone:
+        text: cone

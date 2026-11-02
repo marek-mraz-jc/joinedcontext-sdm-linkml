@@ -1,0 +1,258 @@
+id: https://github.com/smart-data-models/dataModel.OCF/heartRateZone
+name: heartRateZone
+title: Heart Rate Zone
+description: 'Smart Data Models Program adaptation of the original IoTData data Models.
+  This Resource describes a measured heart rate by the current Zone using the Zoladz
+  method. The Zoladz method defines Zones based on maximum heart rate; Zone 1 is the
+  lowest, Zone 5 is the highest. The heartRateZone is an enumeration containing one
+  of: ''Zone1'', ''Zone2'', ''Zone3'', ''Zone4'', and ''Zone5''. '
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: heartRateZone/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Night which white
+    popul", "addressLocality": "Chance nat", "addressRegion": "Industry thought office
+    poor nation. Usually argue teach option bed. Cut physical true name any enjoy
+    low.", "district": "Nature history run seek call skin me. Catch memory entire
+    writer ", "postOfficeBoxNumber": "About conference message that city. Main despite
+    region before. Occur information speak roa", "postalCode": "Picture why officer
+    store he order. Amount represent weight owner instead. Air reduce executive grow
+    question class.", "streetAddress": "Positive amount official. Small card throw
+    letter. Simply me whose grow according.", "streetNr": "There positive top country
+    walk someone on improve"}}, "alternateName": {"type": "Property", "value": "Religious
+    partner low conference husband. Director medical game city decide g"}, "areaServed":
+    {"type": "Property", "value": "Around daughter mouth condition operation. Two
+    su"}, "dataProvider": {"type": "Property", "value": "Research product nice bed.
+    Support may sure meeting subject politics."}, "dateCreated": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "1985-03-21T10:18:33Z"}}, "dateModified":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2001-06-01T12:28:15Z"}},
+    "description": {"type": "Property", "value": "Together authority must best. Artist
+    music his establish could."}, "heartRateZone": {"type": "Property", "value": "Zone3"},
+    "id": "urn:ngsi-ld:heartRateZone:id:ENQF:45741847", "if": {"type": "Property",
+    "value": ["oic.if.s"]}, "location": {"type": "GeoProperty", "value": {"coordinates":
+    [-52.4623695, 100.384494], "type": "Point"}}, "n": {"type": "Property", "value":
+    "Fly bag worry always. Base prev"}, "name": {"type": "Property", "value": "Throw
+    new behind catch great sport. Everyone family describe wonder par"}, "owner":
+    {"type": "Property", "value": ["urn:ngsi-ld:heartRateZone:items:OFPW:07697765",
+    "urn:ngsi-ld:heartRateZone:items:GPIR:74445561"]}, "rt": {"type": "Property",
+    "value": ["oic.r.sensor.heart.zone"]}, "seeAlso": {"type": "Property", "value":
+    ["urn:ngsi-ld:heartRateZone:items:KDLO:05139773"]}, "source": {"type": "Property",
+    "value": "Speak fund coach politics rate open. Fly black leave model all these.
+    Occur increase indeed home eight each soon community."}, "type": "heartRateZone"}'
+classes:
+  heartRateZone:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/heartRateZone
+    description: 'Smart Data Models Program adaptation of the original IoTData data
+      Models. This Resource describes a measured heart rate by the current Zone using
+      the Zoladz method. The Zoladz method defines Zones based on maximum heart rate;
+      Zone 1 is the lowest, Zone 5 is the highest. The heartRateZone is an enumeration
+      containing one of: ''Zone1'', ''Zone2'', ''Zone3'', ''Zone4'', and ''Zone5''. '
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - heartRateZone
+    - if
+    - n
+    - name
+    - owner
+    - rt
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. Resource Type
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  heartRateZone:
+    description: Property. Current heart rate zone based on the Zoladz system.
+    range: heartRateZone_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/heartRateZone
+  if:
+    description: Property. The OCF Interface set supported by this Resource
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.sensor.heart.zone:
+        text: oic.r.sensor.heart.zone
+  heartRateZone_options:
+    name: heartRateZone_options
+    permissible_values:
+      Zone1:
+        text: Zone1
+      Zone2:
+        text: Zone2
+      Zone3:
+        text: Zone3
+      Zone4:
+        text: Zone4
+      Zone5:
+        text: Zone5
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.s:
+        text: oic.if.s
+      oic.if.baseline:
+        text: oic.if.baseline

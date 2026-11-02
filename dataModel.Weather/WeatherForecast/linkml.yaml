@@ -1,0 +1,324 @@
+id: https://github.com/smart-data-models/dataModel.Weather/WeatherForecast
+name: WeatherForecast
+title: ' - Weather Forecast schema'
+description: A harmonised description of a Weather Forecast
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Weather
+  spec.source.path: WeatherForecast/schema.json
+  spec.source.commit: 803fec05b20cef20abda29cd70f54c3b88e08e3a
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Spain", "addressLocality":
+    "Valencia", "postalCode": "46005"}}, "dataProvider": {"type": "Property", "value":
+    "TEF"}, "dateIssued": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2016-12-01T10:40:01.00Z"}}, "dateRetrieved": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "2016-12-01T12:57:24.00Z"}}, "dayMaximum": {"type": "Property",
+    "value": {"feelsLikeTemperature": 15, "relativeHumidity": 0.9, "temperature":
+    15}}, "dayMinimum": {"type": "Property", "value": {"feelsLikeTemperature": 11,
+    "relativeHumidity": 0.7, "temperature": 11}}, "feelsLikeTemperature": {"type":
+    "Property", "value": 12}, "id": "Spain-WeatherForecast-46005_2016-12-01T18:00:00_2016-12-02T00:00:00",
+    "precipitationProbability": {"type": "Property", "value": 0.15}, "relativeHumidity":
+    {"type": "Property", "value": 0.85}, "source": {"type": "Property", "value": "http://www.aemet.es/xml/municipios/localidad_46250.xml"},
+    "temperature": {"type": "Property", "value": 12}, "type": "WeatherForecast", "uVIndexMax":
+    {"type": "Property", "value": 1.0}, "validFrom": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "2016-12-01T17:00:00.00Z"}}, "validTo": {"type":
+    "Property", "value": {"@type": "DateTime", "@value": "2016-12-01T23:00:00.00Z"}},
+    "validity": {"type": "Property", "value": "2016-12-01T18:00:00+01:00/2016-12-02T00:00:00+01:00"},
+    "weatherType": {"type": "Property", "value": "overcast"}, "windSpeed": {"type":
+    "Property", "value": 0.2}}'
+classes:
+  WeatherForecast:
+    class_uri: https://smartdatamodels.org/dataModel.Weather/WeatherForecast
+    description: A harmonised description of a Weather Forecast
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateIssued
+    - dateModified
+    - dateRetrieved
+    - dayMaximum
+    - dayMinimum
+    - description
+    - name
+    - owner
+    - precipitation
+    - precipitationProbability
+    - seeAlso
+    - source
+    - uVIndexMax
+    - validFrom
+    - validTo
+    - validity
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+  DayMaximum:
+    description: 'Property. Model:''https://schema.org/StructuredValue''. Maximum
+      values for the reported period. Subattributes:- `temperature` : Maximum temperature.
+      See `WeatherForecast.temperature` for description and units. - `feelLikesTemperature`.
+      Maximum feels like temperature. Same semantics and units as `WeatherForecast.feelsLikeTemperature`.-   `relativeHumidity`.
+      Maximum relative humidity. Same semantics and units as `WeatherForecast.relativeHumidity`'
+    attributes:
+      temperature:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+      feelLikesTemperature:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+      relativeHumidity:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+  DayMinimum:
+    description: 'Property. Model:''https://schema.org/Text''. Minimum values forecasted
+      for the reported period.  Minimum values for the reported period. Subattributes:-
+      `temperature` : Minimum temperature. See `WeatherForecast.temperature` for description
+      and units. - `feelLikesTemperature`. Minimum feels like temperature. Same semantics
+      and units as `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Minimum
+      relative humidity. Same semantics and units as `WeatherForecast.relativeHumidity`'
+    attributes:
+      temperature:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+      feelLikesTemperature:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+      relativeHumidity:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/areaServed
+  dateRetrieved:
+    description: Property. Model:'https://schema.org/DateTime'. The date and time
+      the forecast was retrieved in ISO8601 UTC format
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dataModel.Weather/dateRetrieved
+  dateIssued:
+    description: Property. Model:'https://schema.org/DateTime'. The date and time
+      the forecast was issued by the meteorological bureau in ISO8601 UTC format
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dataModel.Weather/dateIssued
+  validity:
+    description: 'Property. Model:''https://schema.org/Text''. Includes the validity
+      period for this forecast as a ISO8601 time interval. As a workaround for the
+      lack of support of Orion Context Broker for datetime intervals, it can be used
+      two separate attributes: `validFrom`, `validTo`'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dataModel.Weather/validity
+  validFrom:
+    description: Property. Model:'https://schema.org/Text'. Validity period start
+      date and time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/validFrom
+  validTo:
+    description: Property. Model:'https://schema.org/Text'. Validity period end date
+      and time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dataModel.Weather/validTo
+  dayMaximum:
+    description: 'Property. Model:''https://schema.org/StructuredValue''. Maximum
+      values for the reported period. Subattributes:- `temperature` : Maximum temperature.
+      See `WeatherForecast.temperature` for description and units. - `feelLikesTemperature`.
+      Maximum feels like temperature. Same semantics and units as `WeatherForecast.feelsLikeTemperature`.-   `relativeHumidity`.
+      Maximum relative humidity. Same semantics and units as `WeatherForecast.relativeHumidity`'
+    range: DayMaximum
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dataModel.Weather/dayMaximum
+  dayMinimum:
+    description: 'Property. Model:''https://schema.org/Text''. Minimum values forecasted
+      for the reported period.  Minimum values for the reported period. Subattributes:-
+      `temperature` : Minimum temperature. See `WeatherForecast.temperature` for description
+      and units. - `feelLikesTemperature`. Minimum feels like temperature. Same semantics
+      and units as `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Minimum
+      relative humidity. Same semantics and units as `WeatherForecast.relativeHumidity`'
+    range: DayMinimum
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dataModel.Weather/dayMinimum
+  uVIndexMax:
+    description: 'Property. Model:''https://schema.org/Number''. The maximum UV index
+      for the period, based on the World Health Organization''s UV Index measure.
+      Normative references: [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dataModel.Weather/uVIndexMax
+  precipitation:
+    description: Property. Model:'https://schema.org/Number'. Amount of water rain
+      expected. Units:'Liters per square meter'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dataModel.Weather/precipitation
+  precipitationProbability:
+    description: Property. Model:'https://schema.org/Number'. Probability of rainfall.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Weather@803fec05b20cef20abda29cd70f54c3b88e08e3a
+    slot_uri: https://smartdatamodels.org/dataModel.Weather/precipitationProbability

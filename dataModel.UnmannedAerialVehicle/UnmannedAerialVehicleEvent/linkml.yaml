@@ -1,0 +1,272 @@
+id: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle/UnmannedAerialVehicleEvent
+name: UnmannedAerialVehicleEvent
+title: Smart Data models - UnmannedAerialVehicleEvent schema
+description: The UAVEvent records the incursion of a specific UAV into or near protected
+  airspace or locations. It also records the control measure taken. This entity is
+  primarily associated with UAV command and control and related UAV transport applications.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle
+  spec.source.path: UnmannedAerialVehicleEvent/schema.json
+  spec.source.commit: 192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.UnmannedAerialVehicle/master/context.jsonld"],
+    "UnmannedAerialVehicle": {"object": "urn:ngsi-ld:UAV:23821045-33d4-46ec-b777-98f461bf4856",
+    "type": "Relationship"}, "dataProvider": {"type": "Property", "value": "https://provider.example.com"},
+    "description": {"type": "Property", "value": "The Unmanned Aerial Vehicle is flying
+    over a mandatory height limit"}, "elevation": {"type": "Property", "unitCode":
+    "MTR", "value": 1000}, "endAt": {"type": "Property", "value": {"@type": "DateTime",
+    "@value": "2016-08-23T10:19:16Z"}}, "eventResult": {"type": "Property", "value":
+    "forceBack"}, "eventType": {"type": "Property", "value": "overHeight"}, "id":
+    "urn:ngsi-ld:UAVEvent:85df05a8-5922-11e8-ad9c-d7fa968d409d", "location": {"type":
+    "GeoProperty", "value": {"coordinates": [-103.9904, 39.7564], "type": "Point"}},
+    "originator": {"object": "urn:ngsi-ld:UAV:23821045-33d4-46ec-b777-98f461bf4856",
+    "type": "Relationship"}, "source": {"type": "Property", "value": "https://source.example.com"},
+    "startAt": {"type": "Property", "value": {"@type": "DateTime", "@value": "2016-08-23T10:18:16Z"}},
+    "type": "UnmannedAerialVehicleEvent"}'
+classes:
+  UnmannedAerialVehicleEvent:
+    class_uri: https://smartdatamodels.org/dataModel.UnmannedAerialVehicle/UnmannedAerialVehicleEvent
+    description: The UAVEvent records the incursion of a specific UAV into or near
+      protected airspace or locations. It also records the control measure taken.
+      This entity is primarily associated with UAV command and control and related
+      UAV transport applications.
+    is_a: Entity
+    slots:
+    - UnmannedAerialVehicle
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - elevation
+    - endAt
+    - eventResult
+    - eventType
+    - name
+    - originator
+    - owner
+    - seeAlso
+    - source
+    - startAt
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/areaServed
+  UnmannedAerialVehicle:
+    description: Relationship. Reference to the UnmannedAerialVehicle entity to which
+      this event relates
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/dataModel.UnmannedAerialVehicle/UnmannedAerialVehicle
+  originator:
+    description: Relationship. Refers to a third party UAV instance or other entity
+      (e.g. listening station) that reported the information in the case the event
+      was not directly originated by the UAV
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/dataModel.UnmannedAerialVehicle/originator
+  elevation:
+    description: Property. The elevation of the UAV (relative to ground level at the
+      specified location). Specify value and units of measure
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/dataModel.UnmannedAerialVehicle/elevation
+  endAt:
+    description: Property. Indicates the date/time of when the event ended (if it
+      has ended)
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://uri.etsi.org/ngsi-ld/endAt
+  startAt:
+    description: Property. Indicates the date/time of when the event started
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://uri.etsi.org/ngsi-ld/startAt
+  eventType:
+    description: Property. The type of the UAV event, a choice from the list. Enum:'illegalFlight,
+      closeToUnpermittedAirspace, overSpeed, overHeight, illegalWork'
+    range: eventType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/dataModel.UnmannedAerialVehicle/eventType
+  eventResult:
+    description: Property. The handling result of the event, a choice from ths list,
+      Enum:'logged, notify, alarm, forceLand, forceBack, forceHover'
+    range: eventResult_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UnmannedAerialVehicle@192ff0b29d4ef4bad33d75e6b1bcce581c43b3a8
+    slot_uri: https://smartdatamodels.org/dataModel.UnmannedAerialVehicle/eventResult
+enums:
+  eventType_options:
+    name: eventType_options
+    permissible_values:
+      illegalFlight:
+        text: illegalFlight
+      closeToUnpermittedAirspace:
+        text: closeToUnpermittedAirspace
+      overSpeed:
+        text: overSpeed
+      overHeight:
+        text: overHeight
+      illegalWork:
+        text: illegalWork
+  eventResult_options:
+    name: eventResult_options
+    permissible_values:
+      alarm:
+        text: alarm
+      forceBack:
+        text: forceBack
+      forceHover:
+        text: forceHover
+      forceLand:
+        text: forceLand
+      logged:
+        text: logged
+      notify:
+        text: notify

@@ -1,0 +1,240 @@
+id: https://github.com/smart-data-models/dataModel.Building/BuildingOperation
+name: BuildingOperation
+title: Smart data models - Building Operation schema
+description: Information on a given Building Operation
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Building
+  spec.source.path: BuildingOperation/schema.json
+  spec.source.commit: 92aca4467cd5b9196c390335c9bb742236c278b2
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/context.jsonld"],
+    "dataProvider": {"type": "Property", "value": "OperatorA"}, "dateFinished": {"type":
+    "Property", "value": {"@type": "DateTime", "@value": "2016-08-20T10:18:16Z"}},
+    "dateStarted": {"type": "Property", "value": {"@type": "DateTime", "@value": "2016-08-08T10:18:16Z"}},
+    "description": {"type": "Property", "value": "Air conditioning levels reduced
+    due to out of hours"}, "endDate": {"type": "Property", "value": {"@type": "DateTime",
+    "@value": "2016-08-20T10:18:16Z"}}, "id": "urn:ngsi-ld:BuildingOperation:57b912ab-eb47-4cd5-bc9d-73abece1f1b3",
+    "operationSequence": {"type": "Property", "value": ["fan_power%3D0", "set_temperature%3D24"]},
+    "operationType": {"type": "Property", "value": "airConditioning"}, "refBuilding":
+    {"object": "urn:ngsi-ld:Building:building-a85e3da145c1", "type": "Relationship"},
+    "refRelatedBuildingOperation": {"object": ["urn:ngsi-ld:BuildingOperation:b4fb8bff-1a8f-455f-8cc0-ca43c069f865",
+    "urn:ngsi-ld:BuildingOperation:55c24793-3437-4157-9bda-667c9e1531fc"], "type":
+    "Relationship"}, "refRelatedDeviceOperation": {"object": ["urn:ngsi-ld:DeviceOperation:36744245-6716-4a28-84c7-0e3d7520f143",
+    "urn:ngsi-ld:DeviceOperation:33b2b713-9223-40a5-87a0-3f80a1264a6c"], "type": "Relationship"},
+    "result": {"type": "Property", "value": "ok"}, "source": {"type": "Property",
+    "value": "http://www.example.com"}, "startDate": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "2016-08-08T10:18:16Z"}}, "status": {"type": "Property",
+    "value": "finished"}, "type": "BuildingOperation"}'
+classes:
+  BuildingOperation:
+    class_uri: https://smartdatamodels.org/dataModel.Building/BuildingOperation
+    description: Information on a given Building Operation
+    is_a: Entity
+    slots:
+    - alternateName
+    - dataProvider
+    - dateCreated
+    - dateFinished
+    - dateModified
+    - dateStarted
+    - description
+    - endDate
+    - name
+    - operationSequence
+    - operationType
+    - owner
+    - refBuilding
+    - refOperator
+    - refRelatedBuildingOperation
+    - refRelatedDeviceOperation
+    - result
+    - seeAlso
+    - source
+    - startDate
+    - status
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://smartdatamodels.org/seeAlso
+  refBuilding:
+    description: Relationship. Model:'https://schema.org/URL'. Building reference
+      where the operation is performed
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://smartdatamodels.org/dataModel.Building/refBuilding
+  refOperator:
+    description: Relationship. Model:'https://schema.org/URL'. Reference to the Operator
+      doing the operation on the building
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://smartdatamodels.org/dataModel.Building/refOperator
+  operationType:
+    description: Property. Model:'https://schema.org/Text'. Type of the operation
+      on the building
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://smartdatamodels.org/dataModel.Building/operationType
+  result:
+    description: Property. Result of the building operation. Model:'https://schema.org/Text'.
+      Enum:'ok, aborted'
+    range: result_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://smartdatamodels.org/dataModel.Building/result
+  startDate:
+    description: Property. Model:'https://schema.org/DateTime'. The planned start
+      date for the operation
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://smartdatamodels.org/startDate
+  endDate:
+    description: Property. Model:'https://schema.org/DateTime'. The planned end date
+      for the operation
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://smartdatamodels.org/endDate
+  dateStarted:
+    description: Property. Model:'https://schema.org/DateTime'. The actual start date
+      for the operation
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://smartdatamodels.org/dataModel.Building/dateStarted
+  dateFinished:
+    description: Property. Model:'https://schema.org/DateTime'. The actual end date
+      for the operation
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://smartdatamodels.org/dataModel.Building/dateFinished
+  status:
+    description: 'Property. Status of the operation. Model:''https://schema.org/Text''.
+      Enum:''cancelled, finished, ongoing, planned, scheduled'' '
+    range: status_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://uri.etsi.org/ngsi-ld/status
+  operationSequence:
+    description: Property. Model:'https://schema.org/Text'. Id of the sequence of
+      the operation when available
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://smartdatamodels.org/dataModel.Building/operationSequence
+  refRelatedBuildingOperation:
+    description: Relationship. Reference to other building operations when in sequence
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://smartdatamodels.org/dataModel.Building/refRelatedBuildingOperation
+  refRelatedDeviceOperation:
+    description: Relationship. Devices related to the current operation. Model:'https://schema.org/URL'.
+      A list of references to an entity of type Device
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Building@92aca4467cd5b9196c390335c9bb742236c278b2
+    slot_uri: https://smartdatamodels.org/dataModel.Building/refRelatedDeviceOperation
+enums:
+  result_options:
+    name: result_options
+    permissible_values:
+      ok:
+        text: ok
+      aborted:
+        text: aborted
+  status_options:
+    name: status_options
+    permissible_values:
+      cancelled:
+        text: cancelled
+      finished:
+        text: finished
+      ongoing:
+        text: ongoing
+      planned:
+        text: planned
+      scheduled:
+        text: scheduled

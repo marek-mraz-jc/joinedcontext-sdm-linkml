@@ -1,0 +1,1379 @@
+id: https://github.com/smart-data-models/dataModel.TourismDestinations/Event
+name: Event
+title: Smart Data Models - Event
+description: Upcoming or past event associated with this place, organization, or action.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.TourismDestinations
+  spec.source.path: Event/schema.json
+  spec.source.commit: 6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"],
+    "accessPlan": {"type": "Property", "value": "https://www.billetreduc.com/lieu/nice/theatre-bellecour/#planAcces"},
+    "actor": {"type": "Property", "value": ["Lise Giraudier", "Richard Zanca", "Vanessa
+    Bellagamba", "Yann Bruno-Martinez"]}, "address": {"type": "Property", "value":
+    {"addressCountry": "France", "addressLocality": "Nice", "addressRegion": "Marseille
+    Nice Avignon Aix - (06)", "postalCode": "06000", "streetAddress": "14 rue Trachel
+    - Bat. B"}}, "alternateName": {"type": "Property", "value": "Elle en revait, il
+    l a fait : ils vont se marier !"}, "areaServed": {"type": "Property", "value":
+    "Gare de Nice"}, "audience": {"type": "Property", "value": ["allPublic"]}, "category":
+    {"type": "Property", "value": ["spectacle"]}, "composer": {"type": "Property",
+    "value": ["C\u00e9line Cara"]}, "contactPoint": {"type": "Property", "value":
+    {"availableLanguage": ["English", "French"], "contactType": "customer reception",
+    "email": "theatrebellecour@gmail.com", "telephone": "+33(0)4 93 87 08 87"}}, "contentURL":
+    {"type": "Property", "value": "https://www.nicetourisme.com/resources/ref/events/12552/mariage-d-enfer_168.jpg"},
+    "criticReview": {"type": "Property", "value": [{"language": "fr", "reviews": [{"article":
+    "Com\u00e9die \u00e0 ne pas rater. Tout y est la m\u00e8re, la belle m\u00e8re,
+    les copains et avant tout les rires les quiproquos, les retournements et tout
+    cela  encha\u00eene avec une grande vitesse.  Alors allez  pour feliciter les
+    \u00e9poux et rire de bon coeur avec eux.", "origin": "Revue Theatrale - L. Dupont",
+    "ratingValue": 9, "starRating": 6}]}]}, "currencyAccepted": {"type": "Property",
+    "value": ["EUR", "USD"]}, "dateLastReported": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "2020-03-17T08:45:00Z"}}, "description": {"type": "Property",
+    "value": "Information sur la pi\u00e9ce de th\u00e9atre"}, "director": {"type":
+    "Property", "value": ["S\u00e9bastien El Fassi"]}, "doorTimeClose": {"type": "Property",
+    "value": "10 mn before the show"}, "doorTimeOpen": {"type": "Property", "value":
+    "30 mn before the show"}, "duration": {"type": "Property", "value": 1.25}, "electricTransport":
+    {"type": "Property", "value": ["electricBicycle", "electricMotorBike"]}, "endDate":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2020-10-18T01:20:00Z"}},
+    "eventPriceFrom": {"type": "number", "value": 10.95}, "eventPriceTo": {"type":
+    "number", "value": 19.5}, "eventStatus": {"type": "Property", "value": ["scheduled"]},
+    "id": "urn:ngsi-ld:Event:Event:MNCA-EV-NCE-12552-MARIAGEDENFER", "isAccessibleForFree":
+    {"type": "boolean", "value": "false"}, "language": {"type": "Property", "value":
+    ["French"]}, "location": {"type": "Geoproperty", "value": {"coordinates": [43.7062,
+    7.26267], "type": "Point"}}, "locationName": {"type": "Property", "value": "Th\u00e9\u00e2tre
+    Bellecour"}, "maximumAttendeeCapacity": {"type": "number", "value": 60}, "name":
+    {"type": "Property", "value": "MARIAGE D ENFER"}, "offeredBy": {"type": "Property",
+    "value": {"name": "Notikumi", "type": "Organization", "url": "https://www.notikumi.com/"}},
+    "openingHoursSpecification": {"type": "Property", "value": [{"Opens": "21.00",
+    "dayOfWeek": "Saturday", "validFrom": "2020-08-08T00:00:00Z", "validThrough":
+    "2020-08-31T00:00:00Z"}, {"Opens": "19.00", "dayOfWeek": "Sunday", "validFrom":
+    "2020-08-08T00:00:00Z", "validThrough": "2020-08-31T00:00:00Z"}, {"Opens": "21.00",
+    "dayOfWeek": "Friday", "validFrom": "2020-09-01T00:00:00Z", "validThrough": "2020-10-18T00:00:00Z"},
+    {"dayOfWeek": "Saturday", "validFrom": "2020-09-01T00:00:00Z", "validThrough":
+    "2020-10-18T00:00:00Z"}, {"Opens": "19.00", "dayOfWeek": "Sunday", "validFrom":
+    "2020-09-01T00:00:00Z", "validThrough": "2020-10-18T00:00:00Z"}]}, "paymentAccepted":
+    {"type": "Property", "value": ["Cash", "CreditCard"]}, "performer": {"type": "Property",
+    "value": ["Lise Giraudier"]}, "pitch": {"type": "Property", "value": [{"article":
+    "Heureusement pour Max, la wedding planner c est elle, et elle a d\u00e9j\u00e0
+    tout anticip\u00e9 dans le moindre d\u00e9tail ! Tout ? Peut-\u00eatre pas...
+    En tout cas, un mariage \u00e7a se g\u00e8re \u00e0 deux... Et les conflits aussi
+    ! Quand on dit pour le meilleur et pour le pire, le pire c est certainement les
+    pr\u00e9paratifs d un mariage ! Que vous soyez mari\u00e9s, fianc\u00e9s, en couple,
+    juste amis ou c\u00e9libataire, cette com\u00e9die est faite pour vous ! Venez
+    d\u00e9couvrir les coulisses des pr\u00e9paratifs d un mariage haut en couleurs
+    avant de faire le grand saut !", "language ": "fr"}, {"article": "But before that
+    there are some details to settle and Elo knows it well: A beautiful wedding, cannnot
+    be organized just like that! Fortunately for Max, the wedding planner is her,
+    and she has already anticipated everything in every detail! Evrything ? Maybe
+    not... In any case, a marriage is managed by two ... And conflicts too! When we
+    say for better or for worse, the worst is certainly the preparations for a wedding!
+    Whether married, engaged, in a relationship, just friends or single, this comedy
+    is for you! Come and discover the preparations for a colorful wedding before taking
+    the plunge!", "language": "en"}]}, "priceSpecification": {"type": "Property",
+    "value": [{"categoryDescription": "Category 1 : Seat Range 1 to 2", "eligibleQuantity":
+    20, "price": 19.5}, {"categoryDescription": "Category 2 : Seat Range 3 to 6",
+    "eligibleQuantity": 40, "price": 15.95}, {"categoryDescription": "Special price
+    from Monday to Wednesday : Category 1 - 2", "eligibleQuantity": 60, "price": 10.95}]},
+    "ratingValueAverage": {"type": "number", "value": 9.2}, "routeType": {"type":
+    "Property", "value": ["tram", "subway", "bus"]}, "seeAlso": {"type": "Property",
+    "value": "https://www.billetreduc.com/260539/evt.htm"}, "slogan": {"type": "Property",
+    "value": "Elle en revait, il l a fait : ils vont se marier !"}, "starRatingDetailed":
+    {"type": "object", "value": {"1": 0, "2": 0, "3": 0, "4": 6, "5": 94}}, "startDate":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2020-08-01T01:20:00Z"}},
+    "subCategory": {"type": "Property", "value": ["cabaret", "theater", "boulevard",
+    "vaudeville", "humor"]}, "superEvent": {"type": "Property", "value": "urn:ngsi-ld:Event:Event:MNCA-EV-NCE-12552-FESTIVAL-THEATRE-NICE"},
+    "thematic": {"type": "Property", "value": ["humor"]}, "title": {"type": "Property",
+    "value": "MARIAGE D ENFER"}, "touristType": {"type": "Property", "value": "EVENTS
+    AND FESTIVALS TOURISM"}, "transportServices": {"type": "Property", "value": ["taxi",
+    "uber", "vtc", "parkingShuttle"]}, "type": "Event", "url": {"type": "string",
+    "value": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca"},
+    "webSite": {"type": "Property", "value": "http://www.theatrebellecour.com"}, "wheelChairAccessible":
+    {"type": "boolean", "value": "true"}}'
+classes:
+  Event:
+    class_uri: https://smartdatamodels.org/dataModel.TourismDestinations/Event
+    description: Upcoming or past event associated with this place, organization,
+      or action.
+    is_a: Entity
+    slots:
+    - accessPlan
+    - actor
+    - address
+    - alternateName
+    - areaServed
+    - audience
+    - category
+    - composer
+    - contactPoint
+    - contentURL
+    - criticReview
+    - currencyAccepted
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - director
+    - doorTimeClose
+    - doorTimeOpen
+    - duration
+    - electricTransport
+    - endDate
+    - eventPriceFrom
+    - eventPriceTo
+    - eventSchedule
+    - eventStatus
+    - isAccessibleForFree
+    - language
+    - maximumAttendeeCapacity
+    - name
+    - offeredBy
+    - openingHoursSpecification
+    - owner
+    - paymentAccepted
+    - performer
+    - pitch
+    - priceSpecification
+    - publicAccess
+    - ratingValueAverage
+    - refPointOfInterest
+    - routeType
+    - seeAlso
+    - slogan
+    - source
+    - starRatingDetailed
+    - startDate
+    - subCategory
+    - subEvent
+    - superEvent
+    - thematic
+    - title
+    - touristType
+    - transportServices
+    - url
+    - webSite
+    - wheelChairAccessible
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+  ContactPoint:
+    description: Property. Model:'https://schema.org/ContactPoint'. The details to
+      contact with the item
+    attributes:
+      contactType:
+        description: Property. Contact type of this item
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      email:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      telephone:
+        description: Property. Telephone of this contact
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      name:
+        description: Property. The name of this item
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      url:
+        description: Property. URL which provides a description or further information
+          about this item
+        range: uriorcurie
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      areaServed:
+        description: Property. The geographic area where a service or offered item
+          is provided. Supersedes serviceArea
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      availableLanguage:
+        description: Property. Model:'http://schema.org/availableLanguage'. A language
+          someone may use with or at the item, service or place. Please use one of
+          the language codes from the IETF BCP 47 standard. It is implemented the
+          Text option but it could be also Language
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      contactOption:
+        description: Property. Model:'http://schema.org/contactOption'. An option
+          available on this contact point (e.g. a toll-free number or support for
+          hearing-impaired callers)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      faxNumber:
+        description: Property. Model:'https://schema.org/Text'. The fax number of
+          the item
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      productSupported:
+        description: Property. Model:'https://schema.org/Text'. The product or service
+          this support contact point is related to (such as product support for a
+          particular product line). This can be a specific product or product line
+          (e.g. 'iPhone') or a general category of products or services (e.g. 'smartphones')
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      availabilityRestriction:
+        description: Relationship. Model:'https://schema.org/hoursAvailable'. This
+          property links a contact point to information about when the contact point
+          is not available. The details are provided using the Opening Hours Specification
+          class
+        annotations:
+          ngsi_ld_kind: Relationship
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+  StarRatingDetailed:
+    description: 'Property. Detailed star ratings which led to the average value expressed
+      in the ratingValue. Instructions for use: A structured value from 1 to 10 occurrences
+      (Stars) where each element is a string in the format: `NumberOfSTar`: Percent. '
+    attributes:
+      '10':
+        description: Property. Value 10 in the rating of the event
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      '9':
+        description: Property. Value 9 in the rating of the event
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      '8':
+        description: Property. Value 8 in the rating of the event
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      '7':
+        description: Property. Value 7 in the rating of the event
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      '6':
+        description: Property. Value 6 in the rating of the event
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      '5':
+        description: Property. Value 5 in the rating of the event
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      '4':
+        description: Property. Value 4 in the rating of the event
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      '3':
+        description: Property. Value 3 in the rating of the event
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      '2':
+        description: Property. Value 2 in the rating of the event
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      '1':
+        description: Property. Value 1 in the rating of the event
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+  OfferedBy:
+    description: Property. Description of the even organizer entity
+    attributes:
+      type:
+        description: Property. Type of event organizer entity. I.e. organization,
+          company, association
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      name:
+        description: Property. Name of the event organizer entity
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      url:
+        description: Property. Url to the main site of the event organizer entity
+        range: uriorcurie
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/areaServed
+  touristType:
+    description: Property. Model:'https://schema.org/Text'. Type of tourism depending
+      on the segment and the motivation of the trip.
+    range: touristType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/touristType
+  url:
+    description: Property. URL which provides a description or further information
+      about this item
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/url
+  isAccessibleForFree:
+    description: Property. Model:'https://schema.org/isAccessibleForFree'. A flag
+      to signal that the item, event, or place is accessible for free.
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/isAccessibleForFree
+  publicAccess:
+    description: Property. Model:'https://schema.org/publicAccess'. A flag to signal
+      that the Place is open to public visitors. If this property is omitted there
+      is no assumed default boolean value
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/publicAccess
+  startDate:
+    description: Property. Model:'https://schema.org/startDate'. The start date and
+      time of the item (in ISO 8601 date format).
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/startDate
+  endDate:
+    description: Property. Model:'https://schema.org/endDate'. The end date and time
+      of the item (in ISO 8601 date format).
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/endDate
+  refPointOfInterest:
+    description: Relationship. Reference to all the Point Of interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)
+      included in the Event. The POI list does not have a chronological order
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/refPointOfInterest
+  contactPoint:
+    description: Property. Model:'https://schema.org/ContactPoint'. The details to
+      contact with the item
+    range: ContactPoint
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/contactPoint
+  accessPlan:
+    description: Property.  Text or Link to the access plan to the item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/accessPlan
+  category:
+    description: Property. Category of the Event. A combination of free text to remain
+      flexible to a specific context is offered below as an initial repository or
+      any other value needed by an application. Enum:'shopping, gastronomy, museum,
+      religiousWorship, parksAndGardens, history, outdoorActivities, excursion, wellness'
+    range: category_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/category
+  subCategory:
+    description: 'Property. Sub-category of the `category` attribute. A combination
+      of free text to remain flexible to a specific context is offered below as an
+      initial example or any other value needed by an application. '
+    range: subCategory_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/subCategory
+  thematic:
+    description: Property. A list of thematic as keywords
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/thematic
+  title:
+    description: Property.  Title of the Event
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: http://purl.org/dc/terms/title
+  slogan:
+    description: 'Property. Event header line, matches the text hook. '
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/slogan
+  language:
+    description: Property. List of Formal language used during the Event expressed
+      from the IETF [BCP 47](https://tools.ietf.org/html/bcp47) standard. Model:'https://schema.org/language'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/language
+  superEvent:
+    description: Property. Reference to the Major Event that includes this Event
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/superEvent
+  subEvent:
+    description: Property. Reference to a list of Minor Events that are part of this
+      major Event
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/subEvent
+  eventStatus:
+    description: Property. Event Status regarding this event
+    range: eventStatus_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/eventStatus
+  eventSchedule:
+    description: 'Property. An Event that is associated with a Schedule using this
+      property should not have `startDate` or `endDate` properties. These are instead
+      defined within the associated Schedule, this avoids any ambiguity for clients
+      using the data. The property might have repeated values to specify different
+      schedules (different months or seasons).*** '
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/eventSchedule
+  duration:
+    description: Property. The duration of each show. The unit code (text) of measurement
+      is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **HUR** represents **Hours**
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/duration
+  doorTimeOpen:
+    description: Property. Doors opening time to access the show
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/doorTimeOpen
+  doorTimeClose:
+    description: Property. Doors closing time to access the show
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/doorTimeClose
+  openingHoursSpecification:
+    description: Property. A structured value providing information about the opening
+      hours of a place or a certain service inside a place. Model:'https://schema.org/openingHoursSpecification'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/openingHoursSpecification
+  pitch:
+    description: 'Property. Pitch of the Event. Each items have the format based on
+      the [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization)
+      integrating all items in a single property (ex number 71). Each item is represented
+      by a string with Language Value : Article Value. '
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/pitch
+  webSite:
+    description: Property. Link to the official website for more information
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/webSite
+  contentURL:
+    description: Property. Specifies the URL to the official image or video of the
+      Event for more information
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/contentURL
+  performer:
+    description: Property. Main actor or presenter or musician or musical group of
+      the event
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/performer
+  actor:
+    description: Property. List of actors or music group
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/actor
+  composer:
+    description: Property. List of person who wrote the composition
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/composer
+  director:
+    description: Property. List of director who manage the composition
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/director
+  criticReview:
+    description: 'Property. Review written or published by a source that is recognized
+      for its reviewing activities. Each items have the format based on the  [Internationalization
+      (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization)
+      integrating all items in a single property (ex number 71). Each item is represented
+      by a string with ''Language Value'' : ''Article Value'''
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/criticReview
+  ratingValueAverage:
+    description: 'Property. Rating value of Event. Usage guidelines: Use values from
+      0 to 10 depending on your standard. This is the average value of all detailed
+      scores of `starRatingDetailed` attribute'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/ratingValueAverage
+  starRatingDetailed:
+    description: 'Property. Detailed star ratings which led to the average value expressed
+      in the ratingValue. Instructions for use: A structured value from 1 to 10 occurrences
+      (Stars) where each element is a string in the format: `NumberOfSTar`: Percent. '
+    range: StarRatingDetailed
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/starRatingDetailed
+  audience:
+    description: Property. Type of public concerned by this Event. A combination of
+      Free text (family, adult, children, teenager, senior, allPublic, ...). Enum:'adult,
+      allPublic, children, family, senior, teenager'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/audience
+  wheelChairAccessible:
+    description: Property. Access possible for Person with Reduced Mobility
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/wheelChairAccessible
+  maximumAttendeeCapacity:
+    description: Property. The total number of people who can attend to the Event
+      at that location
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/maximumAttendeeCapacity
+  eventPriceFrom:
+    description: Property. Min Price. The unit code (text) of measurement is given
+      using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **EUR** represents **€uro**
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/eventPriceFrom
+  eventPriceTo:
+    description: Property. Max Price. The unit code (text) of measurement is given
+      using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **EUR** represents **€uro**
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/eventPriceTo
+  priceSpecification:
+    description: Property. A structured value representing a price or price range
+      depending categories or public
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/priceSpecification
+  paymentAccepted:
+    description: Property. Accepted payment if `isAccessibleForFree` is False. A combination
+      of a list of active codes defined in the model. Enum:'Cash, CreditCard, CryptoCurrency,
+      other'. Model:'https://schema.org/paymentAccepted'
+    range: paymentAccepted_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/paymentAccepted
+  currencyAccepted:
+    description: Property. Currency accepted for payment if `isAccessibleForFree`
+      is False. A combination of a list of active codes defined in the model. Model:'https://schema.org/currenciesAccepted'.
+      [Standard ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto Currencies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies)
+      , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)
+    range: currencyAccepted_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/currencyAccepted
+  routeType:
+    description: Property. List of the urban transports (subway, Bus, Tram, ...) available
+      near the event according to the GFTS standard [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt).
+      A combination of values. Enum:' bus, cableCar, cableTram, ferry, funicular,
+      monorail, subway, train, tram, trolleybus'
+    range: routeType_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/routeType
+  transportServices:
+    description: 'Property. List of private transport available near the Event. In
+      example taxi, uber, vtc, parkingShuttle '
+    range: transportServices_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/transportServices
+  electricTransport:
+    description: Property.  List of the different types of electric transport proposed
+      by the city. A combination of. Enum:'electricBicycle, electricCar, electricMotorBike,
+      electricScooter'
+    range: electricTransport_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/electricTransport
+  offeredBy:
+    description: Property. Description of the even organizer entity
+    range: OfferedBy
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/offeredBy
+enums:
+  touristType_options:
+    name: touristType_options
+    permissible_values:
+      ADVENTURE TOURISM:
+        text: ADVENTURE TOURISM
+      ASTRONOMY TOURISM:
+        text: ASTRONOMY TOURISM
+      BACKPACKING TOURISM:
+        text: BACKPACKING TOURISM
+      BEACH AND SUN TOURISM:
+        text: BEACH AND SUN TOURISM
+      BEER TOURISM:
+        text: BEER TOURISM
+      BIRDING TOURISM:
+        text: BIRDING TOURISM
+      BULLFIGHTING TOURISM:
+        text: BULLFIGHTING TOURISM
+      BUSINESS:
+        text: BUSINESS
+      COMMUNITY-BASED TOURISM:
+        text: COMMUNITY-BASED TOURISM
+      CRUISE TOURISM:
+        text: CRUISE TOURISM
+      CULTURAL TOURISM:
+        text: CULTURAL TOURISM
+      CYCLING TOURISM:
+        text: CYCLING TOURISM
+      DIVING TOURISM:
+        text: DIVING TOURISM
+      ECOTOURISM:
+        text: ECOTOURISM
+      EVENTS AND FESTIVALS TOURISM:
+        text: EVENTS AND FESTIVALS TOURISM
+      FAMILY TOURISM:
+        text: FAMILY TOURISM
+      FILM TOURISM:
+        text: FILM TOURISM
+      FISHING TOURISM:
+        text: FISHING TOURISM
+      FOOD TOURISM:
+        text: FOOD TOURISM
+      GAMBLING TOURISM:
+        text: GAMBLING TOURISM
+      GEOLOGICAL TOURISM:
+        text: GEOLOGICAL TOURISM
+      HERITAGE TOURISM:
+        text: HERITAGE TOURISM
+      HUNTING TOURISM:
+        text: HUNTING TOURISM
+      INDUSTRIAL TOURISM:
+        text: INDUSTRIAL TOURISM
+      LANGUAGE TOURISM:
+        text: LANGUAGE TOURISM
+      LGTBI TOURISM:
+        text: LGTBI TOURISM
+      LUXURY TOURISM:
+        text: LUXURY TOURISM
+      MEDICAL TOURISM:
+        text: MEDICAL TOURISM
+      MEMORIAL TOURISM:
+        text: MEMORIAL TOURISM
+      MICE TOURISM:
+        text: MICE TOURISM
+      NATURE TOURISM:
+        text: NATURE TOURISM
+      OLIVE OIL TOURISM:
+        text: OLIVE OIL TOURISM
+      PARTY TOURISM:
+        text: PARTY TOURISM
+      PHOTOGRAPHY TOURISM:
+        text: PHOTOGRAPHY TOURISM
+      RELIGIOUS TOURISM:
+        text: RELIGIOUS TOURISM
+      ROMANTIC TOURISM:
+        text: ROMANTIC TOURISM
+      RURAL TOURISM:
+        text: RURAL TOURISM
+      SAFARI TOURISM:
+        text: SAFARI TOURISM
+      SAILING TOURISM:
+        text: SAILING TOURISM
+      SENIOR TOURISM:
+        text: SENIOR TOURISM
+      SHOPPING TOURISM:
+        text: SHOPPING TOURISM
+      SHORT BREAK TOURISM:
+        text: SHORT BREAK TOURISM
+      SINGLES TOURISM:
+        text: SINGLES TOURISM
+      SPORTS TOURISM:
+        text: SPORTS TOURISM
+      TOURISM:
+        text: TOURISM
+      TREKKING TOURISM:
+        text: TREKKING TOURISM
+      URBAN TOURISM:
+        text: URBAN TOURISM
+      WATER SPORTS TOURISM:
+        text: WATER SPORTS TOURISM
+      WEDDING & HONEYMOON TOURISM:
+        text: WEDDING & HONEYMOON TOURISM
+      WELLNESS TOURISM:
+        text: WELLNESS TOURISM
+      WHISKY TOURISM:
+        text: WHISKY TOURISM
+      WINE TOURISM:
+        text: WINE TOURISM
+      WINTER SPORTS TOURISM:
+        text: WINTER SPORTS TOURISM
+      WOMEN TOURISM:
+        text: WOMEN TOURISM
+  category_options:
+    name: category_options
+    permissible_values:
+      excursion:
+        text: excursion
+      gastronomy:
+        text: gastronomy
+      history:
+        text: history
+      museum:
+        text: museum
+      outdoorActivities:
+        text: outdoorActivities
+      parksAndGardens:
+        text: parksAndGardens
+      religiousWorship:
+        text: religiousWorship
+      shopping:
+        text: shopping
+      spectacle:
+        text: spectacle
+      wellness:
+        text: wellness
+  subCategory_options:
+    name: subCategory_options
+    permissible_values:
+      --museum--:
+        text: --museum--
+      archaeology:
+        text: archaeology
+      contemporaryArt:
+        text: contemporaryArt
+      modernArt:
+        text: modernArt
+      appliedArts:
+        text: appliedArts
+      decorativeArts:
+        text: decorativeArts
+      scienceAndTechnology:
+        text: scienceAndTechnology
+      fineArts:
+        text: fineArts
+      music:
+        text: music
+      history:
+        text: history
+      sacredArt:
+        text: sacredArt
+      specials:
+        text: specials
+      literature:
+        text: literature
+      medicineAndPharmacy:
+        text: medicineAndPharmacy
+      maritime:
+        text: maritime
+      transports:
+        text: transports
+      military:
+        text: military
+      wax:
+        text: wax
+      popularArtsAndTraditions:
+        text: popularArtsAndTraditions
+      numismatic:
+        text: numismatic
+      ceramics:
+        text: ceramics
+      sumptuaryArts:
+        text: sumptuaryArts
+      naturalScience:
+        text: naturalScience
+      prehistoric:
+        text: prehistoric
+      ethnology:
+        text: ethnology
+      railway:
+        text: railway
+      mining:
+        text: mining
+      textile:
+        text: textile
+      sculpture:
+        text: sculpture
+      multiDisciplinar:
+        text: multiDisciplinar
+      painting:
+        text: painting
+      paleonthology:
+        text: paleonthology
+      thematic:
+        text: thematic
+      architecture:
+        text: architecture
+      museumHouse:
+        text: museumHouse
+      universitary:
+        text: universitary
+      bullfighting:
+        text: bullfighting
+      --excursion--:
+        text: --excursion--
+      sea:
+        text: sea
+      mountain:
+        text: mountain
+      river:
+        text: river
+      countryside:
+        text: countryside
+      ancientCity:
+        text: ancientCity
+      cultural:
+        text: cultural
+      culinary:
+        text: culinary
+      wineRoute:
+        text: wineRoute
+      --parksAndGardens--:
+        text: --parksAndGardens--
+      park:
+        text: park
+      garden:
+        text: garden
+      fountain:
+        text: fountain
+      --religiousWorship--:
+        text: --religiousWorship--
+      church:
+        text: church
+      cathedral:
+        text: cathedral
+      synagogue:
+        text: synagogue
+      mosque:
+        text: mosque
+      buddhistTemple:
+        text: buddhistTemple
+      hinduTemple:
+        text: hinduTemple
+      monastery:
+        text: monastery
+      sanctuary:
+        text: sanctuary
+      cemetery:
+        text: cemetery
+      sumptuar:
+        text: sumptuar
+      --history--:
+        text: --history--
+      castle:
+        text: castle
+      warMemorials:
+        text: warMemorials
+      memorial:
+        text: memorial
+      fortifiedCastles:
+        text: fortifiedCastles
+      archaeologicalSite:
+        text: archaeologicalSite
+      crypt:
+        text: crypt
+      cave:
+        text: cave
+      --shopping--:
+        text: --shopping--
+      departmentStore:
+        text: departmentStore
+      luxuryStores:
+        text: luxuryStores
+      outlet:
+        text: outlet
+      mall:
+        text: mall
+      clothing:
+        text: clothing
+      mensClothing:
+        text: mensClothing
+      womensClothing:
+        text: womensClothing
+      childrenClothing:
+        text: childrenClothing
+      localProducts:
+        text: localProducts
+      souvenir:
+        text: souvenir
+      wine:
+        text: wine
+      pastry:
+        text: pastry
+      chocolate:
+        text: chocolate
+      confectionery:
+        text: confectionery
+      jewelry:
+        text: jewelry
+      watch:
+        text: watch
+      shoe:
+        text: shoe
+      perfume:
+        text: perfume
+      cosmetics:
+        text: cosmetics
+      press:
+        text: press
+      sport:
+        text: sport
+      optics:
+        text: optics
+      leatherGoods:
+        text: leatherGoods
+      decoration:
+        text: decoration
+      market:
+        text: market
+      bike:
+        text: bike
+      book:
+        text: book
+      computer:
+        text: computer
+      convenience:
+        text: convenience
+      electronic:
+        text: electronic
+      florist:
+        text: florist
+      furniture:
+        text: furniture
+      grocery:
+        text: grocery
+      home:
+        text: home
+      liquor:
+        text: liquor
+      mobile:
+        text: mobile
+      movierental:
+        text: movierental
+      pawnShop:
+        text: pawnShop
+      tire:
+        text: tire
+      toy:
+        text: toy
+      --gastronomy--:
+        text: --gastronomy--
+      worldCuisine:
+        text: worldCuisine
+      traditional:
+        text: traditional
+      provencal:
+        text: provencal
+      mediterranean:
+        text: mediterranean
+      greek:
+        text: greek
+      spanish:
+        text: spanish
+      brazilian:
+        text: brazilian
+      lebanese:
+        text: lebanese
+      creole:
+        text: creole
+      mauritian:
+        text: mauritian
+      reunion:
+        text: reunion
+      hawaiian:
+        text: hawaiian
+      mexican:
+        text: mexican
+      american:
+        text: american
+      texMex:
+        text: texMex
+      vegetarian:
+        text: vegetarian
+      fish:
+        text: fish
+      seafood:
+        text: seafood
+      indian:
+        text: indian
+      vietnamese:
+        text: vietnamese
+      thai:
+        text: thai
+      laosian:
+        text: laosian
+      cambodian:
+        text: cambodian
+      chinese:
+        text: chinese
+      moroccan:
+        text: moroccan
+      tunisian:
+        text: tunisian
+      african:
+        text: african
+      sushi:
+        text: sushi
+      japanese:
+        text: japanese
+      scandinavian:
+        text: scandinavian
+      russian:
+        text: russian
+      --outdoorActivities--:
+        text: --outdoorActivities--
+      rafting:
+        text: rafting
+      canyoning:
+        text: canyoning
+      aquatichiking:
+        text: aquatichiking
+      hiking:
+        text: hiking
+      viaferrata:
+        text: viaferrata
+      climbing:
+        text: climbing
+      kitesurfing:
+        text: kitesurfing
+      canoeing:
+        text: canoeing
+      paddleboarding:
+        text: paddleboarding
+      jetSki:
+        text: jetSki
+      catamaran:
+        text: catamaran
+      sailing:
+        text: sailing
+      surfing:
+        text: surfing
+      deltaPlane:
+        text: deltaPlane
+      skiing:
+        text: skiing
+      scooter:
+        text: scooter
+      karting:
+        text: karting
+      --wellness--:
+        text: --wellness--
+      spa:
+        text: spa
+      haman:
+        text: haman
+      jacuzzi:
+        text: jacuzzi
+      hotSpring:
+        text: hotSpring
+      thalasso:
+        text: thalasso
+      bodyCare:
+        text: bodyCare
+      swimmingPool:
+        text: swimmingPool
+      relaxationArea:
+        text: relaxationArea
+      massage:
+        text: massage
+      careCenter:
+        text: careCenter
+      --spectacle--:
+        text: --spectacle--
+      cabaret:
+        text: cabaret
+      theater:
+        text: theater
+      boulevard:
+        text: boulevard
+      vaudeville:
+        text: vaudeville
+      humor:
+        text: humor
+  eventStatus_options:
+    name: eventStatus_options
+    permissible_values:
+      opened:
+        text: opened
+      closed:
+        text: closed
+      suspended:
+        text: suspended
+      cancelled:
+        text: cancelled
+      scheduled:
+        text: scheduled
+      finished:
+        text: finished
+      postponed:
+        text: postponed
+      rescheduled:
+        text: rescheduled
+  paymentAccepted_options:
+    name: paymentAccepted_options
+    permissible_values:
+      Cash:
+        text: Cash
+      CreditCard:
+        text: CreditCard
+      CryptoCurrency:
+        text: CryptoCurrency
+      other:
+        text: other
+  currencyAccepted_options:
+    name: currencyAccepted_options
+    permissible_values:
+      EUR:
+        text: EUR
+      USD:
+        text: USD
+  routeType_options:
+    name: routeType_options
+    permissible_values:
+      bus:
+        text: bus
+      cableCar:
+        text: cableCar
+      cableTram:
+        text: cableTram
+      ferry:
+        text: ferry
+      funicular:
+        text: funicular
+      monorail:
+        text: monorail
+      subway:
+        text: subway
+      train:
+        text: train
+      tram:
+        text: tram
+      trolleybus:
+        text: trolleybus
+  transportServices_options:
+    name: transportServices_options
+    permissible_values:
+      parkingShuttle:
+        text: parkingShuttle
+      taxi:
+        text: taxi
+      uber:
+        text: uber
+      vtc:
+        text: vtc
+  electricTransport_options:
+    name: electricTransport_options
+    permissible_values:
+      electricBicycle:
+        text: electricBicycle
+      electricCar:
+        text: electricCar
+      electricMotorBike:
+        text: electricMotorBike
+      electricScooter:
+        text: electricScooter

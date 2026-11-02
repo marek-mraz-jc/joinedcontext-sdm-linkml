@@ -1,0 +1,440 @@
+id: https://github.com/smart-data-models/dataModel.ERA/TrainDetectionSystem
+name: TrainDetectionSystem
+title: TrainDetectionSystem + mapped from ERA ontology by Smart Data Models
+description: System used to detect the position of vehicles in the railway track.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ERA
+  spec.source.path: TrainDetectionSystem/schema.json
+  spec.source.commit: 4c4f8ebffc25dd413db62527072eac74559f0b70
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.ERA/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Seem report world
+    table. Matter street leave support.", "addressLocality": "Market movement sister
+    pick figh", "addressRegion": "Inte", "district": "Cut Mr human. Information radio
+    light forget.", "postOfficeBoxNumber": "Look nearly cold special official sell.
+    Get ask space f", "postalCode": "Both work structure single finish read. Any too
+    generation never month form.", "streetAddress": "", "streetNr": "Nation che"}},
+    "alternateName": {"type": "Property", "value": "Us seven seem mother yard ac"},
+    "areaServed": {"type": "Property", "value": "Operation feel official certainly
+    until "}, "dataProvider": {"type": "Property", "value": "Compare bar human success
+    capital risk foreign. Show offer while language interview although sport."}, "dateCreated":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "1976-04-06T07:14:35Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2022-03-30T16:21:36Z"}}, "description": {"type": "Property", "value": "Light
+    commercial necessary. Cup light mean day claim."}, "flangeLubeRules": {"type":
+    "Property", "value": true}, "frenchTrainDetectionSystemLimitation": {"object":
+    "urn:ngsi-ld:TrainDetectionSystem:frenchTrainDetectionSystemLimitation:OBTM:14878740",
+    "type": "Relationship"}, "frequencyBandsForDetection": {"object": "urn:ngsi-ld:TrainDetectionSystem:frequencyBandsForDetection:IVZO:36111766",
+    "type": "Relationship"}, "id": "urn:ngsi-ld:TrainDetectionSystem:id:XRJX:98868894",
+    "location": {"type": "Property", "value": {"coordinates": [-75.8654365, -120.576306],
+    "type": "Point"}}, "maxDistConsecutiveAxles": {"type": "Property", "value": 181},
+    "maxDistEndTrainFirstAxle": {"type": "Property", "value": 718}, "maxFlangeHeight":
+    {"type": "Property", "value": 8.4}, "maxImpedanceWheelset": {"type": "Property",
+    "value": 107.7}, "maxSandingOutput": {"object": "urn:ngsi-ld:TrainDetectionSystem:maxSandingOutput:BRPN:65327532",
+    "type": "Relationship"}, "maximumInterferenceCurrent": {"type": "Property", "value":
+    727}, "minVehicleImpedance": {"type": "Property", "value": "Final wide spend move
+    st"}, "name": {"type": "Property", "value": "Weight out will. Put hand experience
+    rock. N"}, "owner": {"type": "Property", "value": ["urn:ngsi-ld:TrainDetectionSystem:items:ELJJ:62287367",
+    "urn:ngsi-ld:TrainDetectionSystem:items:SSON:19852267"]}, "requiredSandingOverride":
+    {"type": "Property", "value": false}, "seeAlso": {"type": "Property", "value":
+    ["urn:ngsi-ld:TrainDetectionSystem:items:DGHC:83105084"]}, "source": {"type":
+    "Property", "value": "Simple develop development. Room single toward end land
+    walk significant financial. Opportunity include role mean network significant."},
+    "tdsFrenchTrainDetectionSystemLimitation": {"object": "urn:ngsi-ld:TrainDetectionSystem:tdsFrenchTrainDetectionSystemLimitation:AGXG:32462190",
+    "type": "Relationship"}, "tdsMaximumMagneticField": {"object": "urn:ngsi-ld:TrainDetectionSystem:tdsMaximumMagneticField:YVRP:93021710",
+    "type": "Relationship"}, "tdsMinAxleLoadVehicleCategory": {"object": "urn:ngsi-ld:TrainDetectionSystem:tdsMinAxleLoadVehicleCategory:QQUL:82011951",
+    "type": "Relationship"}, "trainDetectionSystemSpecificCheck": {"object": "urn:ngsi-ld:TrainDetectionSystem:trainDetectionSystemSpecificCheck:JDQR:07763515",
+    "type": "Relationship"}, "trainDetectionSystemSpecificCheckDocument": {"type":
+    "Property", "value": "Boy sister management question which wide without appear.
+    View vote attack argue admit."}, "trainDetectionSystemType": {"object": "urn:ngsi-ld:TrainDetectionSystem:trainDetectionSystemType:SUHE:26880193",
+    "type": "Relationship"}, "tsiCompliantCompositeBrakeBlocks": {"object": "urn:ngsi-ld:TrainDetectionSystem:tsiCompliantCompositeBrakeBlocks:AZAV:93193273",
+    "type": "Relationship"}, "tsiCompliantFerromagneticWheel": {"object": "urn:ngsi-ld:TrainDetectionSystem:tsiCompliantFerromagneticWheel:ENCU:64842368",
+    "type": "Relationship"}, "tsiCompliantMaxDistConsecutiveAxles": {"object": "urn:ngsi-ld:TrainDetectionSystem:tsiCompliantMaxDistConsecutiveAxles:LKYH:16995932",
+    "type": "Relationship"}, "tsiCompliantMaxImpedanceWheelset": {"object": "urn:ngsi-ld:TrainDetectionSystem:tsiCompliantMaxImpedanceWheelset:BGUH:26716635",
+    "type": "Relationship"}, "tsiCompliantMetalConstruction": {"object": "urn:ngsi-ld:TrainDetectionSystem:tsiCompliantMetalConstruction:CLVA:49597210",
+    "type": "Relationship"}, "tsiCompliantMetalFreeSpace": {"object": "urn:ngsi-ld:TrainDetectionSystem:tsiCompliantMetalFreeSpace:DWIV:17651572",
+    "type": "Relationship"}, "tsiCompliantRSTShuntImpedance": {"object": "urn:ngsi-ld:TrainDetectionSystem:tsiCompliantRSTShuntImpedance:LAUR:25477709",
+    "type": "Relationship"}, "tsiCompliantSandCharacteristics": {"object": "urn:ngsi-ld:TrainDetectionSystem:tsiCompliantSandCharacteristics:FLJU:69780925",
+    "type": "Relationship"}, "tsiCompliantSanding": {"object": "urn:ngsi-ld:TrainDetectionSystem:tsiCompliantSanding:VSSS:83475520",
+    "type": "Relationship"}, "tsiCompliantShuntDevices": {"object": "urn:ngsi-ld:TrainDetectionSystem:tsiCompliantShuntDevices:QSVQ:03183703",
+    "type": "Relationship"}, "type": "TrainDetectionSystem"}'
+classes:
+  TrainDetectionSystem:
+    class_uri: https://smartdatamodels.org/dataModel.ERA/TrainDetectionSystem
+    description: System used to detect the position of vehicles in the railway track.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - flangeLubeRules
+    - frenchTrainDetectionSystemLimitation
+    - frequencyBandsForDetection
+    - maxDistConsecutiveAxles
+    - maxDistEndTrainFirstAxle
+    - maxFlangeHeight
+    - maxImpedanceWheelset
+    - maxSandingOutput
+    - maximumInterferenceCurrent
+    - minVehicleImpedance
+    - name
+    - owner
+    - requiredSandingOverride
+    - seeAlso
+    - source
+    - tdsFrenchTrainDetectionSystemLimitation
+    - tdsMaximumMagneticField
+    - tdsMinAxleLoadVehicleCategory
+    - trainDetectionSystemSpecificCheck
+    - trainDetectionSystemSpecificCheckDocument
+    - trainDetectionSystemType
+    - tsiCompliantCompositeBrakeBlocks
+    - tsiCompliantFerromagneticWheel
+    - tsiCompliantMaxDistConsecutiveAxles
+    - tsiCompliantMaxImpedanceWheelset
+    - tsiCompliantMetalConstruction
+    - tsiCompliantMetalFreeSpace
+    - tsiCompliantRSTShuntImpedance
+    - tsiCompliantSandCharacteristics
+    - tsiCompliantSanding
+    - tsiCompliantShuntDevices
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/areaServed
+  flangeLubeRules:
+    description: Property. Existence of rules on on-board flange lubrication
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/flangeLubeRules
+  maxDistConsecutiveAxles:
+    description: Property. Maximum permitted distance between two consecutive axles
+      in case of TSI non-compliance
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/maxDistConsecutiveAxles
+  maxDistEndTrainFirstAxle:
+    description: Property. Maximum distance between end of train and first axle
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/maxDistEndTrainFirstAxle
+  maxFlangeHeight:
+    description: Property. Maximum permitted height of the flange
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/maxFlangeHeight
+  maxImpedanceWheelset:
+    description: Property. Maximum permitted impedance between opposite wheels of
+      a wheelset when not TSI compliant
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/maxImpedanceWheelset
+  maximumInterferenceCurrent:
+    description: Property. Maximum interference current
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/maximumInterferenceCurrent
+  minVehicleImpedance:
+    description: Property. Vehicle impedance
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/minVehicleImpedance
+  requiredSandingOverride:
+    description: Property. Sanding override by driver required
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/requiredSandingOverride
+  trainDetectionSystemSpecificCheckDocument:
+    description: Property. Document with the procedure(s) related to the type of train
+      detection systems declared in 1.2.1.1.6.1
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/trainDetectionSystemSpecificCheckDocument
+  frenchTrainDetectionSystemLimitation:
+    description: Relationship. Section with train detection limitation, only for the
+      French network
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/frenchTrainDetectionSystemLimitation
+  frequencyBandsForDetection:
+    description: Relationship. Frequency bands for detection
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/frequencyBandsForDetection
+  maxSandingOutput:
+    description: Relationship. Maximum amount of sand
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/maxSandingOutput
+  tdsFrenchTrainDetectionSystemLimitation:
+    description: Relationship. Section with train detection limitation, only for the
+      French network
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/tdsFrenchTrainDetectionSystemLimitation
+  tdsMaximumMagneticField:
+    description: Relationship. Train detection system maximum magnetic field
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/tdsMaximumMagneticField
+  tdsMinAxleLoadVehicleCategory:
+    description: Relationship. Train detection system min axle load vehicle category
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/tdsMinAxleLoadVehicleCategory
+  trainDetectionSystemSpecificCheck:
+    description: Relationship. Type of track circuits to which specific checks are
+      needed
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/trainDetectionSystemSpecificCheck
+  trainDetectionSystemType:
+    description: Relationship. Type of train detection system
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/trainDetectionSystemType
+  tsiCompliantCompositeBrakeBlocks:
+    description: Relationship. TSI compliance of rules on the use of composite brake
+      blocks
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/tsiCompliantCompositeBrakeBlocks
+  tsiCompliantFerromagneticWheel:
+    description: Relationship. TSI compliance of Ferromagnetic characteristics of
+      wheel material required
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/tsiCompliantFerromagneticWheel
+  tsiCompliantMaxDistConsecutiveAxles:
+    description: Relationship. TSI compliance of maximum permitted distance between
+      two consecutive axles
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/tsiCompliantMaxDistConsecutiveAxles
+  tsiCompliantMaxImpedanceWheelset:
+    description: Relationship. TSI compliance of maximum permitted impedance between
+      opposite wheels of a wheelset
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/tsiCompliantMaxImpedanceWheelset
+  tsiCompliantMetalConstruction:
+    description: Relationship. TSI compliance of rules for vehicle metal construction
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/tsiCompliantMetalConstruction
+  tsiCompliantMetalFreeSpace:
+    description: Relationship. TSI compliance of rules for metal-free space around
+      wheels
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/tsiCompliantMetalFreeSpace
+  tsiCompliantRSTShuntImpedance:
+    description: Relationship. TSI compliance of rules on combination of RST characteristics
+      influencing shunting impedance
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/tsiCompliantRSTShuntImpedance
+  tsiCompliantSandCharacteristics:
+    description: Relationship. TSI Compliance of rules on sand characteristics
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/tsiCompliantSandCharacteristics
+  tsiCompliantSanding:
+    description: Relationship. TSI compliance of sanding
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/tsiCompliantSanding
+  tsiCompliantShuntDevices:
+    description: Relationship. TSI compliance of rules on shunt assisting devices
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/tsiCompliantShuntDevices

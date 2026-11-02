@@ -1,0 +1,138 @@
+id: https://github.com/smart-data-models/dataModel.FrictionlessData/DataPackageFrictionlessData
+name: DataPackageFrictionlessData
+title: Smart Data Models - Data Package
+description: Data Package is a simple specification for data access and delivery.Converted
+  for Smart Data Models initiative from original frictionless data
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.FrictionlessData
+  spec.source.path: DataPackageFrictionlessData/schema.json
+  spec.source.commit: 0fb05ed83f08370f87fd736e44f2b2df41306579
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.FrictionlessData/master/context.jsonld"],
+    "description": {"type": "Property", "value": "Annual Consumer Price Index (CPI)
+    for most countries in the world. Reference year is 2005."}, "id": "uri:ngsi-ld:datapackage:001",
+    "keywords": {"type": "Property", "value": ["CPI", "World", "Consumer Price Index",
+    "Annual Data", "The World Bank"]}, "licenses": {"type": "Property", "value": [{"name":
+    "CC-BY-4.0", "path": "https://creativecommons.org/licenses/by/4.0/", "title":
+    "Creative Commons Attribution 4.0"}]}, "name": {"type": "Property", "value": "cpi"},
+    "profile": {"type": "Property", "value": "tabular-data-package"}, "resources":
+    {"type": "Property", "value": [{"name": "cpi", "path": "data/cpi.csv", "profile":
+    "tabular-data-resource", "schema": {"fields": [{"name": "Country Name", "type":
+    "string"}, {"name": "Country Code", "type": "string"}, {"name": "Year", "type":
+    "year"}, {"description": "CPI (where 2005=100)", "name": "CPI", "type": "number"}]}}]},
+    "sources": {"type": "Property", "value": [{"path": "http://data.worldbank.org/indicator/FP.CPI.TOTL",
+    "title": "The World Bank"}]}, "title": {"type": "Property", "value": "Annual Consumer
+    Price Index (CPI)"}, "type": "DataPackageFrictionlessData"}'
+classes:
+  DataPackageFrictionlessData:
+    class_uri: https://smartdatamodels.org/dataModel.FrictionlessData/DataPackageFrictionlessData
+    description: Data Package is a simple specification for data access and delivery.Converted
+      for Smart Data Models initiative from original frictionless data
+    is_a: Entity
+    slots:
+    - contributors
+    - created
+    - description
+    - homepage
+    - image
+    - keywords
+    - licenses
+    - name
+    - profile
+    - resources
+    - sources
+    - title
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+slots:
+  profile:
+    description: Property. Profile. Every Package and Resource descriptor has a profile.
+      The default profile, if none is declared, is `data-package` for Package and
+      `data-resource` for Resource. The profile of this descriptor
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/dataModel.FrictionlessData/profile
+  name:
+    description: Property. Name. This is ideally a url-usable and human-readable name.
+      Name `SHOULD` be invariant, meaning it `SHOULD NOT` change when its parent descriptor
+      is updated. An identifier string. Lower case characters with `.`, `_`, `-` and
+      `/` are allowed
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/name
+  title:
+    description: Property. Title. . A human-readable title
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: http://purl.org/dc/terms/title
+  description:
+    description: Property. Description. . A text description. Markdown is encouraged
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: http://purl.org/dc/terms/description
+  homepage:
+    description: Property. Home Page. . The home on the web that is related to this
+      data package
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/dataModel.FrictionlessData/homepage
+  created:
+    description: Property. Created. The datetime must conform to the string formats
+      for datetime as described in [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.6).
+      The datetime on which this descriptor was created
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/dataModel.FrictionlessData/created
+  contributors:
+    description: Property. Contributors. The contributors to this descriptor
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/dataModel.FrictionlessData/contributors
+  keywords:
+    description: Property. Keywords. . A list of keywords that describe this package
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/dataModel.FrictionlessData/keywords
+  image:
+    description: Property. Image. A image to represent this package
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/image
+  licenses:
+    description: Property. Licenses. This property is not legally binding and does
+      not guarantee that the package is licensed under the terms defined herein. The
+      license(s) under which this package is published
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/dataModel.FrictionlessData/licenses
+  resources:
+    description: Property. Data Resources. An `array` of Data Resource objects, each
+      compliant with the [Data Resource](/data-resource/) specification
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/dataModel.FrictionlessData/resources
+  sources:
+    description: Property. Sources. The raw sources for this resource
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.FrictionlessData@0fb05ed83f08370f87fd736e44f2b2df41306579
+    slot_uri: https://smartdatamodels.org/dataModel.FrictionlessData/sources

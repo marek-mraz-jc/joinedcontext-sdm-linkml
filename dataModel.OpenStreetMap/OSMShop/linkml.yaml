@@ -1,0 +1,354 @@
+id: https://github.com/smart-data-models/dataModel.OpenStreetMap/OSMShop
+name: OSMShop
+title: Smart Data Models - OpenStreetMap / OSMShop
+description: A shop or retail store from OpenStreetMap tagged with shop=*. Represents
+  establishments selling retail products directly to end customers
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OpenStreetMap
+  spec.source.path: OSMShop/schema.json
+  spec.source.commit: 5188df53c66d3c9f2441b6cffea0b604364ace68
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.OpenStreetMap/refs/heads/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCity": "Madrid", "addressCountry":
+    "ES", "postalCode": "28001", "streetAddress": "Calle Ayala"}}, "brand": {"type":
+    "Property", "value": "Mercadona"}, "id": "urn:ngsi-ld:OSMShop:node:9876543210",
+    "location": {"type": "GeoProperty", "value": {"coordinates": [-3.6816, 40.4287],
+    "type": "Point"}}, "name": {"type": "Property", "value": "Mercadona"}, "openingHours":
+    {"type": "Property", "value": "Mo-Sa 09:00-21:30"}, "organic": {"type": "Property",
+    "value": "no"}, "osmId": {"type": "Property", "value": 9876543210}, "osmLastModified":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2024-01-22T10:15:00Z"}},
+    "osmType": {"type": "Property", "value": "node"}, "seeAlso": {"type": "Property",
+    "value": ["https://www.openstreetmap.org/node/9876543210"]}, "shopType": {"type":
+    "Property", "value": "supermarket"}, "source": {"type": "Property", "value": "https://www.openstreetmap.org"},
+    "type": "OSMShop", "wheelchair": {"type": "Property", "value": "yes"}}'
+classes:
+  OSMShop:
+    class_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/OSMShop
+    description: A shop or retail store from OpenStreetMap tagged with shop=*. Represents
+      establishments selling retail products directly to end customers
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - brand
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - name
+    - openingHours
+    - operator
+    - organic
+    - osmId
+    - osmLastModified
+    - osmType
+    - owner
+    - phone
+    - seeAlso
+    - shopType
+    - source
+    - website
+    - wheelchair
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+  Address:
+    description: Property. Address of the Shop, structured following schema.org PostalAddress
+    attributes:
+      streetAddress:
+        description: Property. Street name
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      houseNumber:
+        description: Property. House or building number
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      addressCity:
+        description: Property. City of the address
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      postalCode:
+        description: Property. Postal code
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+      addressCountry:
+        description: Property. ISO 3166-1 alpha-2 country code
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. List of URIs pointing to additional resources
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. Address of the Shop, structured following schema.org PostalAddress
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/areaServed
+  osmId:
+    description: Property. The original OpenStreetMap element integer identifier
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmId
+  osmType:
+    description: Property. The type of the original OSM element
+    range: osmType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmType
+  osmLastModified:
+    description: Property. Timestamp of the last modification
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/osmLastModified
+  shopType:
+    description: Property. The OSM shop tag classifying the retail category. Enum:'supermarket,
+      convenience, bakery, clothes, shoes, hairdresser, car_repair, bicycle, hardware,
+      electronics, florist, books...'. Model:'https://wiki.openstreetmap.org/wiki/Key:shop'
+    range: shopType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/shopType
+  brand:
+    description: Property. The brand name if the shop is part of a chain or franchise.
+      Model:'https://wiki.openstreetmap.org/wiki/Key:brand'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/brand
+  operator:
+    description: Property. Name of the entity operating the shop. Model:'https://wiki.openstreetmap.org/wiki/Key:operator'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/operator
+  organic:
+    description: Property. Indicates if the shop sells organic products. Model:'https://wiki.openstreetmap.org/wiki/Key:organic'
+    range: organic_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/organic
+  wheelchair:
+    description: Property. Wheelchair accessibility. Model:'https://wiki.openstreetmap.org/wiki/Key:wheelchair'
+    range: wheelchair_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/wheelchair
+  openingHours:
+    description: Property. Opening hours of the shop in OSM format. Model:'https://wiki.openstreetmap.org/wiki/Key:opening_hours'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/openingHours
+  phone:
+    description: Property. Phone number for the shop
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/phone
+  website:
+    description: Property. Official website URL
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenStreetMap@5188df53c66d3c9f2441b6cffea0b604364ace68
+    slot_uri: https://smartdatamodels.org/dataModel.OpenStreetMap/website
+enums:
+  osmType_options:
+    name: osmType_options
+    permissible_values:
+      node:
+        text: node
+      way:
+        text: way
+      relation:
+        text: relation
+  shopType_options:
+    name: shopType_options
+    permissible_values:
+      supermarket:
+        text: supermarket
+      convenience:
+        text: convenience
+      bakery:
+        text: bakery
+      butcher:
+        text: butcher
+      greengrocer:
+        text: greengrocer
+      deli:
+        text: deli
+      clothes:
+        text: clothes
+      shoes:
+        text: shoes
+      boutique:
+        text: boutique
+      tailor:
+        text: tailor
+      jewelry:
+        text: jewelry
+      optician:
+        text: optician
+      cosmetics:
+        text: cosmetics
+      hairdresser:
+        text: hairdresser
+      beauty:
+        text: beauty
+      massage:
+        text: massage
+      tattoo:
+        text: tattoo
+      car:
+        text: car
+      car_repair:
+        text: car_repair
+      bicycle:
+        text: bicycle
+      hardware:
+        text: hardware
+      electronics:
+        text: electronics
+      mobile_phone:
+        text: mobile_phone
+      computer:
+        text: computer
+      doityourself:
+        text: doityourself
+      florist:
+        text: florist
+      gift:
+        text: gift
+      books:
+        text: books
+      stationery:
+        text: stationery
+      sports:
+        text: sports
+      fishing:
+        text: fishing
+      outdoor:
+        text: outdoor
+      pet:
+        text: pet
+      toys:
+        text: toys
+      furniture:
+        text: furniture
+      interior_decoration:
+        text: interior_decoration
+      laundry:
+        text: laundry
+      dry_cleaning:
+        text: dry_cleaning
+  organic_options:
+    name: organic_options
+    permissible_values:
+      'yes':
+        text: 'yes'
+      'no':
+        text: 'no'
+      only:
+        text: only
+  wheelchair_options:
+    name: wheelchair_options
+    permissible_values:
+      'yes':
+        text: 'yes'
+      'no':
+        text: 'no'
+      limited:
+        text: limited

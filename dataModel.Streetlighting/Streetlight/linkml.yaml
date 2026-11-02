@@ -1,0 +1,640 @@
+id: https://github.com/smart-data-models/dataModel.Streetlighting/Streetlight
+name: Streetlight
+title: ' Smart Data Models - Streetlight'
+description: A Street light
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Streetlighting
+  spec.source.path: Streetlight/schema.json
+  spec.source.commit: e272fafc786f9dd2ab882dd104b5a42a17c13037
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Streetlighting/master/context.jsonld"],
+    "areaServed": {"type": "Property", "value": "Roundabouts city entrance"}, "circuit":
+    {"type": "Property", "value": "C-456-A467"}, "controllingMethod": {"type": "Property",
+    "value": "individual"}, "current": {"type": "Property", "value": 250}, "dateLastLampChange":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2016-07-08T08:02:21.753Z"}},
+    "feederID": {"type": "Property", "value": "F1"}, "feederPillarNum": {"type": "Property",
+    "value": "70"}, "id": "urn:ngsi-ld:Streetlight:streetlight:guadalajara:4567",
+    "lanternHeight": {"type": "Property", "value": 10}, "location": {"type": "GeoProperty",
+    "value": {"coordinates": [-3.164485591715449, 40.62785133667262], "type": "Point"}},
+    "locationCategory": {"type": "Property", "value": "centralIsland"}, "municipalityInfo":
+    {"deviceInfo": {"type": "Property", "value": {"deviceBatteryStatus": "Connected",
+    "deviceId": "43", "deviceModel": {"brandName": "abc", "manufacturerName": "xyz",
+    "modelName": "SL1", "modelURL": "www.abcstreetlight.com"}, "deviceName": "SL1",
+    "deviceSimNumber": "6755375727", "measurand": "6", "rfId": "5634684"}}, "type":
+    "Property", "value": {"cityId": "23", "cityName": "Bangalore", "district": "Bangalore
+    Urban", "stateName": "Karnataka", "ulbName": "BMC", "wardNum": 4, "zoneId": "2"}},
+    "observationDateTime": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2021-01-11T15:51:02+05:30"}}, "powerConsumption": {"type": "Property", "value":
+    10}, "powerFactor": {"type": "Property", "value": 0.7}, "powerRating": {"type":
+    "Property", "value": 5}, "powerState": {"type": "Property", "value": "off"}, "refStreetlightGroup":
+    {"object": "urn:ngsi-ld:StreetlightGroup:streetlightgroup:G345", "type": "Relationship"},
+    "refStreetlightModel": {"object": "urn:ngsi-ld:StreetlightModel:streetlightmodel:STEEL_Tubular_10m",
+    "type": "Relationship"}, "status": {"type": "Property", "value": "ok"}, "streetPoleNum":
+    {"type": "Property", "value": "2"}, "type": "Streetlight", "voltage": {"type":
+    "Property", "value": 50}}'
+classes:
+  Streetlight:
+    class_uri: https://smartdatamodels.org/dataModel.Streetlighting/Streetlight
+    description: A Street light
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - annotations
+    - areaServed
+    - circuit
+    - color
+    - controllingMethod
+    - current
+    - dataProvider
+    - dateCreated
+    - dateLastLampChange
+    - dateLastSwitchingOff
+    - dateLastSwitchingOn
+    - dateModified
+    - dateServiceStarted
+    - description
+    - deviceInfo
+    - feederID
+    - feederPillarNum
+    - illuminanceLevel
+    - image
+    - lanternHeight
+    - lifetimeMotionDetected
+    - lifetimePowerConsumption
+    - locationCategory
+    - municipalityInfo
+    - name
+    - observationDateTime
+    - owner
+    - powerConsumption
+    - powerFactor
+    - powerRating
+    - powerState
+    - refDevice
+    - refStreetlightControlCabinet
+    - refStreetlightGroup
+    - refStreetlightModel
+    - seeAlso
+    - source
+    - status
+    - streetPoleNum
+    - voltage
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+  MunicipalityInfo:
+    description: Property. Model:'https://schema.org/Text. Municipality information
+      corresponding to this observation
+    attributes:
+      district:
+        description: Property. Model:'https://schema.org/Text'. District name corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      ulbName:
+        description: Property. Model:'https://schema.org/Text'.Name of the Urban Local
+          Body corresponding to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      cityId:
+        description: Property. Model:'https://schema.org/Text'. City ID corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      stateName:
+        description: Property. Model:'https://schema.org/Text'. Name of the state
+          corresponding to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      cityName:
+        description: Property. Model:'https://schema.org/Text'. City name corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      zoneId:
+        description: Property. Model:'https://schema.org/Text'. Zone ID corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      wardNum:
+        description: Property. Model:'https://schema.org/Number'. Ward number corresponding
+          to this observation
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+  DeviceModel:
+    description: Property. Model:'https://schema.org/Text'. Describes the information
+      of the device, sensor or system in consideration
+    attributes:
+      brandName:
+        description: Property. Model:'https://schema.org/Text'. Name of the brand
+          associated with an entity, e.g., sensor, device etc
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      manufacturerName:
+        description: Property. Model:'https://schema.org/Text'. Name of the manufacturer
+          associated with an entity, e.g., sensor, device etc
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      modelName:
+        description: Property. Model:'https://schema.org/Text'. Name of a specific
+          model associated with an entity, e.g., sensor, device etc
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      modelURL:
+        description: Property. Model:'https://schema.org/Text'. URL providing further
+          information of a specific model associated with an entity, e.g., sensor,
+          device etc
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+  DeviceInfo:
+    description: Property. Model:'https://schema.org/Text. Information about the device
+      associated with the observations
+    attributes:
+      RFId:
+        description: Property. Model:'https://schema.org/Text'. Gives the ID of the
+          RFID reader
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      deviceBatteryStatus:
+        description: Property. Model:'https://schema.org/Text'. Gives the Battery
+          charging status of the reporting device(Connected, Disconnected)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      deviceName:
+        description: Property. Model:'https://schema.org/Text'. Device Name or Station
+          name of the sensor device/station corresponding to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      deviceId:
+        description: Property. Model:'https://schema.org/Text'. Device ID of the physical
+          sensor/ measurement station corresponding to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      measurand:
+        description: Property. Model:'https://schema.org/Text'. Property/properties
+          sensed/observed/measured by the device
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      deviceSimNumber:
+        description: Property. Model:'https://schema.org/Text'. Gives the sim number
+          of the device in the waste management vehicle
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      deviceModel:
+        description: Property. Model:'https://schema.org/Text'. Describes the information
+          of the device, sensor or system in consideration
+        range: DeviceModel
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/areaServed
+  color:
+    description: Property. The color of the product. Model:'https://schema.org/color'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/color
+  image:
+    description: Property. An image of the item. Model:'https://schema.org/URL'
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/image
+  annotations:
+    description: Property. Annotations about the item. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/annotations
+  circuit:
+    description: Property. The circuit to which this streetlight connects to and gets
+      power from. Typically it will contain an identifier that will allow to obtain
+      more information about such circuit
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/circuit
+  refStreetlightModel:
+    description: Relationship. Streetlight's model
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/refStreetlightModel
+  refStreetlightControlCabinet:
+    description: Relationship. If this streetlight is individually controlled, reference
+      to the control cabinet in charge of
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/refStreetlightControlCabinet
+  status:
+    description: Property. The overall status of this street light. Enum:'brokenLantern,
+      columnIssue, defectiveLamp, ok'
+    range: status_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://uri.etsi.org/ngsi-ld/status
+  powerState:
+    description: Property. Model:'https://schema.org/Text'. Streetlight's power state.
+      Enum:'bootingUp, low, off, on'
+    range: powerState_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/powerState
+  refDevice:
+    description: Relationship. Reference to the device(s) used to monitor this streetligth.
+      List of Reference to entity(ies) of type Device
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/refDevice
+  refStreetlightGroup:
+    description: Relationship. Streetlight's group, if this streetlight belongs to
+      any group
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/refStreetlightGroup
+  dateLastLampChange:
+    description: Property. Model:'https://schema.org/DateTime'. Timestamp of the last
+      change of lamp made
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/dateLastLampChange
+  dateLastSwitchingOn:
+    description: Property. Model:'https://schema.org/DateTime'. Timestamp of the last
+      switching on
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/dateLastSwitchingOn
+  dateLastSwitchingOff:
+    description: Property. Model:'https://schema.org/DateTime'. Timestamp of the last
+      switching off
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/dateLastSwitchingOff
+  controllingMethod:
+    description: 'Property. The method used to control this streetlight. Enum:''group,
+      individual''. '
+    range: controllingMethod_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/controllingMethod
+  dateServiceStarted:
+    description: Property. Model:'https://schema.org/Date'. Date at which the streetlight
+      started giving service
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/dateServiceStarted
+  locationCategory:
+    description: Property. Category of the location where the streetlight is placed.
+      Enum:'bridge, centralIsland, facade, garden, park, parking, pedestrianPath,
+      playground, road, sidewalk, tunnel'
+    range: locationCategory_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/locationCategory
+  lanternHeight:
+    description: Property. Lantern's height. In columns with many arms this can vary
+      between streetlights. Another variation source of this property are wall-mounted
+      streetlights
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/lanternHeight
+  lifetimeMotionDetected:
+    description: Property. Accumulated count of motion detections
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/lifetimeMotionDetected
+  lifetimePowerConsumption:
+    description: Property. Total power consumed by the device over its entire operational
+      lifespan
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/lifetimePowerConsumption
+  illuminanceLevel:
+    description: Property. Relative illuminance level setting. A number between 0
+      and 1
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/illuminanceLevel
+  powerConsumption:
+    description: Property. Model:'https://schema.org/Number'. Power consumed by the
+      LED or the streetlight bulb corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/powerConsumption
+  current:
+    description: Property. Model:'https://schema.org/Number'. Current value of the
+      streetlight corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/current
+  powerRating:
+    description: Property. Model:'https://schema.org/Number'. Power rating of the
+      LED or the streetlight bulb corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/powerRating
+  powerFactor:
+    description: Property. Model:'https://schema.org/Number'. Power factor or the
+      ratio of working power of the streetlight corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/powerFactor
+  voltage:
+    description: Property. Model:'https://schema.org/Number'. Voltage value of the
+      streetlight corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/voltage
+  feederPillarNum:
+    description: Property. Model:'https://schema.org/Text'. Streetlight feeder pillar
+      information associated with the streetlight corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/feederPillarNum
+  streetPoleNum:
+    description: Property. Model:'https://schema.org/Text'. Street pole information
+      associated with the streetlight corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/streetPoleNum
+  observationDateTime:
+    description: Property. Model:'https://schema.org/Text'. Last reported time of
+      observation
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/observationDateTime
+  feederID:
+    description: Relationship. Model:'https://schema.org/Text. Unique ID of the streetlight
+      feeder panel associated with the streetlight corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/feederID
+  municipalityInfo:
+    description: Property. Model:'https://schema.org/Text. Municipality information
+      corresponding to this observation
+    range: MunicipalityInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/municipalityInfo
+  deviceInfo:
+    description: Property. Model:'https://schema.org/Text. Information about the device
+      associated with the observations
+    range: DeviceInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/deviceInfo
+enums:
+  status_options:
+    name: status_options
+    permissible_values:
+      brokenLantern:
+        text: brokenLantern
+      columnIssue:
+        text: columnIssue
+      defectiveLamp:
+        text: defectiveLamp
+      ok:
+        text: ok
+  powerState_options:
+    name: powerState_options
+    permissible_values:
+      bootingUp:
+        text: bootingUp
+      low:
+        text: low
+      'off':
+        text: 'off'
+      'on':
+        text: 'on'
+  controllingMethod_options:
+    name: controllingMethod_options
+    permissible_values:
+      group:
+        text: group
+      individual:
+        text: individual
+  locationCategory_options:
+    name: locationCategory_options
+    permissible_values:
+      bridge:
+        text: bridge
+      centralIsland:
+        text: centralIsland
+      facade:
+        text: facade
+      garden:
+        text: garden
+      park:
+        text: park
+      parking:
+        text: parking
+      pedestrianPath:
+        text: pedestrianPath
+      playground:
+        text: playground
+      road:
+        text: road
+      sidewalk:
+        text: sidewalk
+      tunnel:
+        text: tunnel

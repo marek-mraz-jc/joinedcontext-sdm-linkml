@@ -1,0 +1,122 @@
+id: https://github.com/smart-data-models/dataModel.MarineTransport/Metocean
+name: Metocean
+title: Smart Data Models Metocean schema
+description: This data model represents metocean information (meteorology + oceanography)
+  for a given period and location. It supports both time-series measures and forecasts
+  using points with observed data samples
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.MarineTransport
+  spec.source.path: Metocean/schema.json
+  spec.source.commit: 4ffb0d8d8c29470e169df9d8c329135ec0806f72
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Ports/master/context.jsonld"],
+    "collectionName": {"type": "Property", "value": "10-min-metocean-measures"}, "fromDate":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2025-08-19T13:00:00Z"}},
+    "id": "urn:ngsi-ld:Metocean:urn:mrn:eshuv:iot:measures:20250819", "modifiedAt":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2025-08-19T13:07:46Z"}},
+    "points": {"type": "Property", "value": [{"data": [{"currentDir": 170, "currentSpeed":
+    2.24, "observedAt": "2024-11-30T01:03:00Z", "tideHeight": 2.24}, {"currentDir":
+    170, "currentSpeed": 2.24, "observedAt": "2024-11-30T02:12:00Z", "tideHeight":
+    2.24}], "dataNature": "measure", "pointCode": 12, "pointName": "reviroA", "pointType":
+    "current-meter", "variables": "currentSpeed,currentDir,tideHeight"}, {"data":
+    [{"currentDir": 170, "currentSpeed": 2.24, "observedAt": "2024-11-30T01:03:00Z",
+    "tideHeight": 2.24}, {"currentDir": 100, "currentSpeed": 2.0, "observedAt": "2024-11-30T02:12:00Z",
+    "tideHeight": 2.34}], "dataNature": "measure", "pointCode": 13, "pointName": "canal-ext",
+    "pointType": "current-meter", "variables": "currentSpeed,currentDir"}, {"data":
+    [{"observedAt": "2024-11-30T01:00:00Z", "significantWaveHeight": 0.0, "waveDir":
+    0.0, "waveHeight": 0.0, "wavePeakDir": 0.0, "wavePeakPeriod": 0.0}], "dataNature":
+    "measure", "pointCode": 301, "pointName": "mareografo-1", "pointType": "wave-gauge",
+    "variables": "waveDir,wavePeakDir,waveHeight,significantWaveHeight,wavePeakPeriod"},
+    {"data": [{"currentDir": 122.0, "currentSpeed": 2.53, "observedAt": "2024-11-30T02:00:00",
+    "peakDateTime": "", "peakHeight": 0.0, "peakType": "", "significantWaveHeight":
+    0.0, "tideHeight": 2.65, "tideHeight10mValues": [2.8984904, 2.870916, 2.8378513,
+    2.7995095, 2.7561383, 2.7080173], "waveDir": 120, "waveHeight": 1.2, "wavePeakDir":
+    100, "wavePeakPeriod": 0.0, "windDir": 61, "windSpeed": 2.16}, {"currentDir":
+    122.0, "currentSpeed": 2.53, "observedAt": "2024-11-30T03:00:00", "peakDateTime":
+    "", "peakHeight": 0.0, "peakType": "", "significantWaveHeight": 0.0, "tideHeight":
+    2.65, "tideHeight10mValues": [2.65, 2.59, 2.53, 2.47, 2.4, 2.33], "waveDir": 120,
+    "waveHeight": 1.2, "wavePeakDir": 100, "wavePeakPeriod": 0.0, "windDir": 61, "windSpeed":
+    2.16}], "dataNature": "forecast", "pointCode": 5231001, "pointName": "Muelle Levante",
+    "pointType": "cma-prediction", "variables": "height,peakDate,currentSpeed,peakHeight,peakType,waveHeightM,waveDir,windSpeed"},
+    {"data": [{"currentDir": 122.0, "currentSpeed": 2.53, "observedAt": "2024-11-30T02:00:00",
+    "peakDateTime": "", "peakHeight": 0.0, "peakType": "", "significantWaveHeight":
+    0.0, "tideHeight": 2.65, "tideHeight10mValues": [2.8984904, 2.870916, 2.8378513,
+    2.7995095, 2.7561383, 2.7080173], "waveDir": 120, "waveHeight": 1.2, "wavePeakDir":
+    100, "wavePeakPeriod": 0.0, "windDir": 61, "windSpeed": 2.16}, {"currentDir":
+    122.0, "currentSpeed": 2.53, "observedAt": "2024-11-30T03:00:00", "peakDateTime":
+    "", "peakHeight": 0.0, "peakType": "", "significantWaveHeight": 0.0, "tideHeight":
+    2.65, "tideHeight10mValues": [2.65, 2.59, 2.53, 2.47, 2.4, 2.33], "waveDir": 120,
+    "waveHeight": 1.2, "wavePeakDir": 100, "wavePeakPeriod": 0.0, "windDir": 61, "windSpeed":
+    2.16}], "dataType": "forecast", "pointCode": 5231003, "pointName": "Muelle Levante",
+    "pointType": "cma-prediction", "variables": "height,peakDate,currentSpeed,peakHeight,peakType,waveHeightM,waveDir,windSpeed"}]},
+    "source": {"type": "Property", "value": "PDPH/PCM/..."}, "toDate": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2025-08-22T13:10:00Z"}}, "type": "Metocean"}'
+classes:
+  Metocean:
+    class_uri: https://smartdatamodels.org/dataModel.MarineTransport/Metocean
+    description: This data model represents metocean information (meteorology + oceanography)
+      for a given period and location. It supports both time-series measures and forecasts
+      using points with observed data samples
+    is_a: Entity
+    slots:
+    - code
+    - collectionName
+    - fromDate
+    - modifiedAt
+    - points
+    - toDate
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+slots:
+  code:
+    description: Property. Model:'https://schema.org/Text'. Metocean product/area
+      code or identifier of the computation set
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/code
+  fromDate:
+    description: Property. ISO 8601 UTC start of the metocean period covered by this
+      entity
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/fromDate
+  toDate:
+    description: Property. ISO 8601 UTC end of the metocean period covered by this
+      entity
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/toDate
+  modifiedAt:
+    description: Property. ISO 8601 UTC timestamp when the forecast or dataset was
+      computed (if applicable)
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://uri.etsi.org/ngsi-ld/modifiedAt
+  collectionName:
+    description: Property. Model:'https://schema.org/Text'. Logical name of the metocean
+      collection (e.g. '10-min-metocean-measures', '12hour-daily-forecast')
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/collectionName
+  points:
+    description: Property. Array of metocean points (sensors, grid points, prediction
+      locations) each holding a time-series of data samples
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.MarineTransport@4ffb0d8d8c29470e169df9d8c329135ec0806f72
+    slot_uri: https://smartdatamodels.org/dataModel.MarineTransport/points

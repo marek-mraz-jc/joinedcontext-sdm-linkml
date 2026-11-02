@@ -1,0 +1,279 @@
+id: https://github.com/smart-data-models/dataModel.IT/InfrastructureElementRequirements
+name: InfrastructureElementRequirements
+title: Smart Data Models - ITinfrastructure / InfrastructureElementRequirements
+description: Computing requirements that must accomplish an InfrastructureElement
+  to run a certain ServiceComponent on it.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.IT
+  spec.source.path: InfrastructureElementRequirements/schema.json
+  spec.source.commit: df045cbab80ae09db9eb308e05c89b18840be637
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "cpuArchitecture": {"type": "Property", "value": "AMD64"}, "diskType": {"type":
+    "Property", "value": "SSD"}, "energyEfficiencyRatio": {"type": "Property", "value":
+    0.8}, "gpu": {"type": "Property", "value": true}, "greenEnergyRatio": {"type":
+    "Property", "value": 0.75}, "id": "urn:ngsi-ld:Service:01:Component:01:InfrastructureElementRequirements",
+    "infrastructureElement": {"object": "urn:ngsi-ld:InfrastructureElement:001", "type":
+    "Relationship"}, "location": {"type": "GeoProperty", "value": {"coordinates":
+    [[[-0.3411743020092746, 39.48103451588121], [-0.3411743020092746, 39.4103451588121],
+    [-0.3411743020092746, 39.48103451588121], [-0.3411743020092746, 39.48103451588121]]],
+    "type": "Polygon"}}, "realTimeCapable": {"type": "Property", "value": true}, "requiredCpuUsage":
+    {"type": "Property", "value": 0.2}, "requiredMemoryUsage": {"type": "Property",
+    "value": 4096}, "type": "InfrastructureElementRequirements"}'
+classes:
+  InfrastructureElementRequirements:
+    class_uri: https://smartdatamodels.org/dataModel.IT/InfrastructureElementRequirements
+    description: Computing requirements that must accomplish an InfrastructureElement
+      to run a certain ServiceComponent on it.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - cpuArchitecture
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - diskType
+    - energyEfficiencyRatio
+    - gpu
+    - greenEnergyRatio
+    - infrastructureElement
+    - name
+    - owner
+    - realTimeCapable
+    - requiredCpuUsage
+    - requiredMemoryUsage
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/areaServed
+  infrastructureElement:
+    description: Relationship. Only if an specific InfrastructureElement has been
+      selected to run the component.
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/infrastructureElement
+  cpuArchitecture:
+    description: Property. Enum:'AMD64', 'ARM64', 'ARM32', 'MIPS64LE', 'PPC64LE',
+      'RISC-V', 'S390X'. CPU architecture that must have the Infrastructure Element.
+    range: cpuArchitecture_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/cpuArchitecture
+  diskType:
+    description: Property. Enum:'HDD', 'SSD'. Disk type that must have the Infrastructure
+      Element.
+    range: diskType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/diskType
+  gpu:
+    description: Property. Defines if the Infrastructure Element must have a GPU.
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/gpu
+  realTimeCapable:
+    description: Property. Defines if the Infrastructure Element must be capable of
+      real-time processing.
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/realTimeCapable
+  requiredCpuUsage:
+    description: Property. Units:'CPU cores'. Required CPU usage of the component.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/requiredCpuUsage
+  requiredMemoryUsage:
+    description: Property. Units:'Megabytes (MB)'. Required memory usage of the component.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/requiredMemoryUsage
+  greenEnergyRatio:
+    description: Property. Ratio (between 0 and 1) of green energy that must use the
+      power source that feeds the Infrastructure Element.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/greenEnergyRatio
+  energyEfficiencyRatio:
+    description: Property. Energy efficiency ratio (between 0 and 1) that must have
+      the Infrastructure Element.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.IT@df045cbab80ae09db9eb308e05c89b18840be637
+    slot_uri: https://smartdatamodels.org/dataModel.IT/energyEfficiencyRatio
+enums:
+  cpuArchitecture_options:
+    name: cpuArchitecture_options
+    permissible_values:
+      AMD64:
+        text: AMD64
+      ARM64:
+        text: ARM64
+      ARM32:
+        text: ARM32
+      MIPS64LE:
+        text: MIPS64LE
+      PPC64LE:
+        text: PPC64LE
+      RISC-V:
+        text: RISC-V
+      S390X:
+        text: S390X
+  diskType_options:
+    name: diskType_options
+    permissible_values:
+      HDD:
+        text: HDD
+      SSD:
+        text: SSD

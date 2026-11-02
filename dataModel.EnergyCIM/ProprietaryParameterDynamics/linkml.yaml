@@ -1,0 +1,373 @@
+id: https://github.com/smart-data-models/dataModel.EnergyCIM/ProprietaryParameterDynamics
+name: ProprietaryParameterDynamics
+title: ' Smart Data Models - ProprietaryParameterDynamics'
+description: 'Adapted from CIM data models. Supports definition of one or more parameters
+  of several different datatypes for use by proprietary user-defined models.  NOTE:
+  This class does not inherit from IdentifiedObject since it is not intended that
+  a single instance of it be referenced by more than one proprietary user-defined
+  model instance.'
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.EnergyCIM
+  spec.source.path: ProprietaryParameterDynamics/schema.json
+  spec.source.commit: a133118adea199b471b89c0908e7275312ef7a4c
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+classes:
+  ProprietaryParameterDynamics:
+    class_uri: https://smartdatamodels.org/dataModel.EnergyCIM/ProprietaryParameterDynamics
+    description: 'Adapted from CIM data models. Supports definition of one or more
+      parameters of several different datatypes for use by proprietary user-defined
+      models.  NOTE: This class does not inherit from IdentifiedObject since it is
+      not intended that a single instance of it be referenced by more than one proprietary
+      user-defined model instance.'
+    is_a: Entity
+    slots:
+    - AsynchronousMachineUserDefined
+    - DiscontinuousExcitationControlUserDefined
+    - ExcitationSystemUserDefined
+    - LoadUserDefined
+    - MechanicalLoadUserDefined
+    - OverexcitationLimiterUserDefined
+    - PFVArControllerType1UserDefined
+    - PFVArControllerType2UserDefined
+    - PowerSystemStabilizerUserDefined
+    - SynchronousMachineUserDefined
+    - TurbineGovernorUserDefined
+    - TurbineLoadControllerUserDefined
+    - UnderexcitationLimiterUserDefined
+    - VoltageAdjusterUserDefined
+    - VoltageCompensatorUserDefined
+    - WindPlantUserDefined
+    - WindType1or2UserDefined
+    - WindType3or4UserDefined
+    - address
+    - alternateName
+    - areaServed
+    - booleanParameterValue
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - floatParameterValue
+    - integerParameterValue
+    - name
+    - owner
+    - parameterNumber
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/areaServed
+  AsynchronousMachineUserDefined:
+    description: 'Property. Model:''https://schema.org/Number''. Proprietary user-defined
+      model with which this parameter is associated. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/AsynchronousMachineUserDefined
+  DiscontinuousExcitationControlUserDefined:
+    description: 'Property. Model:''https://schema.org/Number''. Proprietary user-defined
+      model with which this parameter is associated. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/DiscontinuousExcitationControlUserDefined
+  ExcitationSystemUserDefined:
+    description: 'Property. Model:''https://schema.org/Number''. Proprietary user-defined
+      model with which this parameter is associated. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/ExcitationSystemUserDefined
+  LoadUserDefined:
+    description: 'Property. Model:''https://schema.org/Number''. Proprietary user-defined
+      model with which this parameter is associated. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/LoadUserDefined
+  MechanicalLoadUserDefined:
+    description: 'Property. Model:''https://schema.org/Number''. Proprietary user-defined
+      model with which this parameter is associated. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/MechanicalLoadUserDefined
+  OverexcitationLimiterUserDefined:
+    description: 'Property. Model:''https://schema.org/Number''. Proprietary user-defined
+      model with which this parameter is associated. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/OverexcitationLimiterUserDefined
+  PFVArControllerType1UserDefined:
+    description: 'Property. Model:''https://schema.org/Number''. Proprietary user-defined
+      model with which this parameter is associated. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/PFVArControllerType1UserDefined
+  PFVArControllerType2UserDefined:
+    description: 'Property. Model:''https://schema.org/Number''. Proprietary user-defined
+      model with which this parameter is associated. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/PFVArControllerType2UserDefined
+  PowerSystemStabilizerUserDefined:
+    description: 'Property. Model:''https://schema.org/Number''. Proprietary user-defined
+      model with which this parameter is associated. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/PowerSystemStabilizerUserDefined
+  SynchronousMachineUserDefined:
+    description: 'Property. Model:''https://schema.org/Number''. Proprietary user-defined
+      model with which this parameter is associated. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/SynchronousMachineUserDefined
+  TurbineGovernorUserDefined:
+    description: 'Property. Model:''https://schema.org/Number''. Proprietary user-defined
+      model with which this parameter is associated. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/TurbineGovernorUserDefined
+  TurbineLoadControllerUserDefined:
+    description: 'Property. Model:''https://schema.org/Number''. Proprietary user-defined
+      model with which this parameter is associated. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/TurbineLoadControllerUserDefined
+  UnderexcitationLimiterUserDefined:
+    description: 'Property. Model:''https://schema.org/Number''. Proprietary user-defined
+      model with which this parameter is associated. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/UnderexcitationLimiterUserDefined
+  VoltageAdjusterUserDefined:
+    description: 'Property. Model:''https://schema.org/Number''. Proprietary user-defined
+      model with which this parameter is associated. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/VoltageAdjusterUserDefined
+  VoltageCompensatorUserDefined:
+    description: 'Property. Model:''https://schema.org/Number''. Proprietary user-defined
+      model with which this parameter is associated. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/VoltageCompensatorUserDefined
+  WindPlantUserDefined:
+    description: 'Property. Model:''https://schema.org/Number''. Proprietary user-defined
+      model with which this parameter is associated. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/WindPlantUserDefined
+  WindType1or2UserDefined:
+    description: 'Property. Model:''https://schema.org/Number''. Proprietary user-defined
+      model with which this parameter is associated. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/WindType1or2UserDefined
+  WindType3or4UserDefined:
+    description: 'Property. Model:''https://schema.org/Number''. Proprietary user-defined
+      model with which this parameter is associated. Default: None'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/WindType3or4UserDefined
+  booleanParameterValue:
+    description: 'Property. Model:''https://schema.org/Number''. Used for boolean
+      parameter value. If this attribute is populated, integerParameterValue and floatParameterValue
+      will not be. Default: False'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/booleanParameterValue
+  floatParameterValue:
+    description: 'Property. Model:''https://schema.org/Number''. Used for floating
+      point parameter value.  If this attribute is populated, booleanParameterValue
+      and integerParameterValue will not be. Default: 0.0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/floatParameterValue
+  integerParameterValue:
+    description: 'Property. Model:''https://schema.org/Number''. Used for integer
+      parameter value.  If this attribute is populated, booleanParameterValue and
+      floatParameterValue will not be. Default: 0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/integerParameterValue
+  parameterNumber:
+    description: 'Property. Model:''https://schema.org/Number''. Sequence number of
+      the parameter among the set of parameters associated with the related proprietary
+      user-defined model. Default: 0'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.EnergyCIM@a133118adea199b471b89c0908e7275312ef7a4c
+    slot_uri: https://smartdatamodels.org/dataModel.EnergyCIM/parameterNumber

@@ -1,0 +1,564 @@
+id: https://github.com/smart-data-models/dataModel.Ports/BoatAuthorized
+name: BoatAuthorized
+title: Boat Authorized schema
+description: The data model is intended to provide information on the boats authorized
+  to operate within the port according to the ISO 8666 standard for Boat Category.
+  This repository is created by type of category of boat (pleasure craft, trade, passengers,
+  ...). For each type of category, a list of optional subtypes of category can be
+  associated.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Ports
+  spec.source.path: BoatAuthorized/schema.json
+  spec.source.commit: fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Ports/master/context.jsonld"],
+    "alternateName": {"type": "Property", "value": "Riviera Port - Autorized Boats
+    in the port"}, "areaServed": {"type": "Property", "value": "Nice Port"}, "boatSubType":
+    {"type": "Property", "value": ["monoHull", "catamaran", "yacht", "sailboat", "jetSki"]},
+    "boatType": {"type": "Property", "value": "yatching"}, "description": {"type":
+    "Property", "value": "List of Type and SubType of boats authorized to move and
+    moor in the harbor"}, "id": "urn:ngsi-ld:BoatAuthorized:BoatAuthorized:MNCA-NCE-BA-001-yatching",
+    "maxDraft": {"type": "Property", "value": 6.0}, "maxLength": {"type": "Property",
+    "value": 35}, "maxTonnage": {"type": "Property", "value": 3855}, "maxWidth": {"type":
+    "Property", "value": 15}, "minLength": {"type": "Property", "value": 3}, "name":
+    {"type": "Property", "value": "Riviera-Port-NCE-BA-001-yatching"}, "openingHoursSpecification":
+    {"type": "object", "value": [{"closes": "20:00:00", "dayOfWeek": "Monday", "opens":
+    "07:00:00", "validFrom": "2021-01-01T00:00:00", "validThrough": "2021-12-31T23:59:59"},
+    {"closes": "20:00:00", "dayOfWeek": "Tuesday", "opens": "07:00:00", "validFrom":
+    "2021-01-01T00:00:00", "validThrough": "2021-12-31T23:59:59"}, {"closes": "20:00:00",
+    "dayOfWeek": "Wednesday", "opens": "07:00:00", "validFrom": "2021-01-01T00:00:00",
+    "validThrough": "2021-12-31T23:59:59"}, {"closes": "20:00:00", "dayOfWeek": "Thursday",
+    "opens": "07:00:00", "validFrom": "2021-01-01T00:00:00", "validThrough": "2021-12-31T23:59:59"},
+    {"closes": "20:00:00", "dayOfWeek": "Friday", "opens": "07:00:00", "validFrom":
+    "2021-01-01T00:00:00", "validThrough": "2021-12-31T23:59:59"}, {"closes": "21:00:00",
+    "dayOfWeek": "Saturday", "opens": "08:30:00", "validFrom": "2021-01-01T00:00:00",
+    "validThrough": "2021-12-31T23:59:59"}, {"closes": "20:00:00", "dayOfWeek": "Sunday",
+    "opens": "08:30:00", "validFrom": "2021-01-01T00:00:00", "validThrough": "2021-12-31T23:59:59"},
+    {"closes": "19:30:00", "dayOfWeek": "PublicHolidays", "opens": "08:30:00", "validFrom":
+    "2021-01-01T00:00:00", "validThrough": "2021-12-31T23:59:59"}]}, "refSeaPort":
+    {"object": "urn:ngsi-ld:SeaPort:Riviera-Port-NCE-SP-001", "type": "Relationship"},
+    "seeAlso": {"type": "Property", "value": "https://ccinicecotedazur/docs/port-nice_z-card_2015"},
+    "type": "BoatAuthorized"}'
+classes:
+  BoatAuthorized:
+    class_uri: https://smartdatamodels.org/dataModel.Ports/BoatAuthorized
+    description: The data model is intended to provide information on the boats authorized
+      to operate within the port according to the ISO 8666 standard for Boat Category.
+      This repository is created by type of category of boat (pleasure craft, trade,
+      passengers, ...). For each type of category, a list of optional subtypes of
+      category can be associated.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - boatSubType
+    - boatType
+    - dataProvider
+    - dateCreated
+    - dateLastReported
+    - dateModified
+    - description
+    - maxDraft
+    - maxLength
+    - maxTonnage
+    - maxWidth
+    - minLength
+    - name
+    - openingHoursSpecification
+    - owner
+    - refPointOfInterest
+    - refSeaPort
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/areaServed
+  dateLastReported:
+    description: Property. Model:'https://schema.org/DateTime'. Last time data were
+      gathered
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataModel.Ports/dateLastReported
+  refSeaPort:
+    description: Relationship. Model:'https://schema.org/URL'. Port that belongs to
+    range: uriorcurie
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataModel.Ports/refSeaPort
+  refPointOfInterest:
+    description: Relationship. Model:'https://schema.org/URL'. Point of Interest that
+      the element has relation to
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataModel.Ports/refPointOfInterest
+  boatType:
+    description: Property. Model:'https://schema.org/Text'. A unique value of the
+      list. Enum:'cargo, fishing, historic, passenger, specialist, Tanker, war, yachting'
+    range: boatType_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataModel.Ports/boatType
+  boatSubType:
+    description: Property. Model:'https://schema.org/Text'. Sub Type for a boatType.
+      A combination of the elements. Enum:'aircraftCarrier, amphibiousAssaultShip,
+      anchorHandlingVessel, artisanVessel, bac, barge, bargeCarrier, bulkCarrier,
+      buoyTenderBoat, butaneCarrier, cableLayer, canoe, caravel, cargoCarrier, carrack,
+      catamaran, chemicalCarrier, clipper, coastalFerry, cog, containerCarrier, corvette,
+      craneBarge, crudeCarrier, cruise, cruiser, destroyer, dhow, divingVessel, djong,
+      dredger, drifter, drillRig, factoryShip, ferry, fireBoat, fisheriesResearchVessel,
+      flagshipBoat, floatingProductionStorageUnit, floatingStorageUnit, fluyt, frigate,
+      gabare, galleon, galley, gondola, harbourFerry, helicopterCarrier, highSpeedVessel,
+      houseBoat, hovercraft, iceBreakerShip, jetSki, junk, koch, lifeBoat, lightShip,
+      liner, lineVessel, LiquefiedGasCarrier, littoralCombatShip, livestockCarrier,
+      lngCarrier, longLiner, lpgCarrier, mineSweeping, monoHull, mooringBoat, multipurposeVessel,
+      oceanographicBoat, other, paddleSteamer, pilotBoat, pinisi, pipeLayer, productCarrier,
+      productionPlatform, referCarrier, researchVessel, roroCarrier, sailboat, sailingShip,
+      salvageOperation, seiner, speedBoat, submarineAttack, submarineBallisticMissile,
+      submarineCruiseMissile, supplyShip, tanker, timberCarrier, trawler, trimaran,
+      tugBoat, viking, yacht, zodiac'
+    range: boatSubType_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataModel.Ports/boatSubType
+  openingHoursSpecification:
+    description: Property. A structured value providing information about the opening
+      hours of a place or a certain service inside a place. Model:'https://schema.org/openingHoursSpecification'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/openingHoursSpecification
+  maxTonnage:
+    description: Property. Maximum tonnage authorized to access the harbor. The unit
+      code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)
+      . For instance, **TNE** represents Tonne Metric. Units:'Tons'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataModel.Ports/maxTonnage
+  minLength:
+    description: Property. Minimum length allowed to access the harbor. The unit code
+      (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **MTR** represents Meter. Model:'https://schema.org/length'. Units:'meters'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataModel.Ports/minLength
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  maxLength:
+    description: Property. Maximum length allowed to access the harbor. The unit code
+      (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **MTR** represents Meter. Model:'https://schema.org/length'. Units:'meters'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataModel.Ports/maxLength
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  maxWidth:
+    description: Property. Maximum width allowed to access the harbor. The unit code
+      (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)
+      . For instance, **MTR** represents Meter. Model:'https://schema.org/width'.
+      Units:'meters'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataModel.Ports/maxWidth
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  maxDraft:
+    description: Property. Maximum draft allowed to access the harbor. The unit code
+      (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)
+      . For instance, **MTR** represents Meter. Model:'https://schema.org/depth'.
+      Units:'meters'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Ports@fce7cfbcb516984c04041312e4d7fb94bd11fa2c
+    slot_uri: https://smartdatamodels.org/dataModel.Ports/maxDraft
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+enums:
+  boatType_options:
+    name: boatType_options
+    permissible_values:
+      cargo:
+        text: cargo
+      fishing:
+        text: fishing
+      historic:
+        text: historic
+      passenger:
+        text: passenger
+      specialist:
+        text: specialist
+      Tanker:
+        text: Tanker
+      war:
+        text: war
+      yachting:
+        text: yachting
+  boatSubType_options:
+    name: boatSubType_options
+    permissible_values:
+      aircraftCarrier:
+        text: aircraftCarrier
+      amphibiousAssaultShip:
+        text: amphibiousAssaultShip
+      anchorHandlingVessel:
+        text: anchorHandlingVessel
+      artisanVessel:
+        text: artisanVessel
+      bac:
+        text: bac
+      barge:
+        text: barge
+      bargeCarrier:
+        text: bargeCarrier
+      bulkCarrier:
+        text: bulkCarrier
+      buoyTenderBoat:
+        text: buoyTenderBoat
+      butaneCarrier:
+        text: butaneCarrier
+      cableLayer:
+        text: cableLayer
+      canoe:
+        text: canoe
+      caravel:
+        text: caravel
+      cargoCarrier:
+        text: cargoCarrier
+      carrack:
+        text: carrack
+      catamaran:
+        text: catamaran
+      chemicalCarrier:
+        text: chemicalCarrier
+      clipper:
+        text: clipper
+      coastalFerry:
+        text: coastalFerry
+      cog:
+        text: cog
+      containerCarrier:
+        text: containerCarrier
+      corvette:
+        text: corvette
+      craneBarge:
+        text: craneBarge
+      crudeCarrier:
+        text: crudeCarrier
+      cruise:
+        text: cruise
+      cruiser:
+        text: cruiser
+      destroyer:
+        text: destroyer
+      dhow:
+        text: dhow
+      divingVessel:
+        text: divingVessel
+      djong:
+        text: djong
+      dredger:
+        text: dredger
+      drifter:
+        text: drifter
+      drillRig:
+        text: drillRig
+      factoryShip:
+        text: factoryShip
+      ferry:
+        text: ferry
+      fireBoat:
+        text: fireBoat
+      fisheriesResearchVessel:
+        text: fisheriesResearchVessel
+      flagshipBoat:
+        text: flagshipBoat
+      floatingProductionStorageUnit:
+        text: floatingProductionStorageUnit
+      floatingStorageUnit:
+        text: floatingStorageUnit
+      fluyt:
+        text: fluyt
+      frigate:
+        text: frigate
+      gabare:
+        text: gabare
+      galleon:
+        text: galleon
+      galley:
+        text: galley
+      gondola:
+        text: gondola
+      harbourFerry:
+        text: harbourFerry
+      helicopterCarrier:
+        text: helicopterCarrier
+      highSpeedVessel:
+        text: highSpeedVessel
+      houseBoat:
+        text: houseBoat
+      hovercraft:
+        text: hovercraft
+      iceBreakerShip:
+        text: iceBreakerShip
+      jetSki:
+        text: jetSki
+      junk:
+        text: junk
+      koch:
+        text: koch
+      lifeBoat:
+        text: lifeBoat
+      lightShip:
+        text: lightShip
+      liner:
+        text: liner
+      lineVessel:
+        text: lineVessel
+      LiquefiedGasCarrier:
+        text: LiquefiedGasCarrier
+      littoralCombatShip:
+        text: littoralCombatShip
+      livestockCarrier:
+        text: livestockCarrier
+      lngCarrier:
+        text: lngCarrier
+      longLiner:
+        text: longLiner
+      lpgCarrier:
+        text: lpgCarrier
+      mineSweeping:
+        text: mineSweeping
+      monoHull:
+        text: monoHull
+      mooringBoat:
+        text: mooringBoat
+      multipurposeVessel:
+        text: multipurposeVessel
+      oceanographicBoat:
+        text: oceanographicBoat
+      other:
+        text: other
+      paddleSteamer:
+        text: paddleSteamer
+      pilotBoat:
+        text: pilotBoat
+      pinisi:
+        text: pinisi
+      pipeLayer:
+        text: pipeLayer
+      productCarrier:
+        text: productCarrier
+      productionPlatform:
+        text: productionPlatform
+      referCarrier:
+        text: referCarrier
+      researchVessel:
+        text: researchVessel
+      roroCarrier:
+        text: roroCarrier
+      sailboat:
+        text: sailboat
+      sailingShip:
+        text: sailingShip
+      salvageOperation:
+        text: salvageOperation
+      seiner:
+        text: seiner
+      speedBoat:
+        text: speedBoat
+      submarineAttack:
+        text: submarineAttack
+      submarineBallisticMissile:
+        text: submarineBallisticMissile
+      submarineCruiseMissile:
+        text: submarineCruiseMissile
+      supplyShip:
+        text: supplyShip
+      tanker:
+        text: tanker
+      timberCarrier:
+        text: timberCarrier
+      trawler:
+        text: trawler
+      trimaran:
+        text: trimaran
+      tugBoat:
+        text: tugBoat
+      viking:
+        text: viking
+      yacht:
+        text: yacht
+      zodiac:
+        text: zodiac

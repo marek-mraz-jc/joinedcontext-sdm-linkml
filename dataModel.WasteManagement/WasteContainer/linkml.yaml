@@ -1,0 +1,566 @@
+id: https://github.com/smart-data-models/dataModel.WasteManagement/WasteContainer
+name: WasteContainer
+title: ' - Waste Management / Waste Container'
+description: A waste container
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.WasteManagement
+  spec.source.path: WasteContainer/schema.json
+  spec.source.commit: 16d527b36a0c22c9acf7db27f31479e3e29adab4
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.WasteManagement/master/context.jsonld"],
+    "RFID": {"type": "Property", "value": "67855734"}, "binCapacity": {"type": "Property",
+    "value": 43}, "binColor": {"type": "Property", "value": "Green"}, "binFullnessThreshold":
+    {"type": "Property", "value": 80}, "binId": {"type": "Property", "value": "12"},
+    "binLoggedTime": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2021-03-11T15:51:02+05:30"}}, "binMaxLoad": {"type": "Property", "value": 75},
+    "binRecommendedLoad": {"type": "Property", "value": 30}, "id": "urn:ngsi-ld:wastecontainer:1021:AAWD",
+    "license_plate": {"type": "Property", "value": "KA23F2345"}, "location": {"type":
+    "GeoProperty", "value": {"coordinates": [-8.768460000000001, 42.60214472222222],
+    "type": "Point"}}, "type": "WasteContainer", "wardId": {"type": "Property", "value":
+    "21"}}'
+classes:
+  WasteContainer:
+    class_uri: https://smartdatamodels.org/dataModel.WasteManagement/WasteContainer
+    description: A waste container
+    is_a: Entity
+    slots:
+    - RFID
+    - actuationHours
+    - address
+    - alternateName
+    - annotations
+    - areaServed
+    - binCapacity
+    - binColor
+    - binFullnessThreshold
+    - binId
+    - binLoggedTime
+    - binMaxLoad
+    - binRecommendedLoad
+    - cargoWeight
+    - category
+    - color
+    - dataProvider
+    - dateCreated
+    - dateLastCleaning
+    - dateLastEmptying
+    - dateModified
+    - dateServiceStarted
+    - description
+    - fillingLevel
+    - image
+    - isleId
+    - license_plate
+    - methaneConcentration
+    - name
+    - nextActuationDeadline
+    - nextCleaningDeadline
+    - owner
+    - refDevice
+    - refWasteContainerIsle
+    - refWasteContainerModel
+    - regulation
+    - responsible
+    - seeAlso
+    - serialNumber
+    - source
+    - status
+    - storedWasteCode
+    - storedWasteKind
+    - storedWasteOrigin
+    - temperature
+    - timeInstant
+    - wardId
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/areaServed
+  color:
+    description: Property. The color of the product. Model:'https://schema.org/color'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/color
+  image:
+    description: Property. An image of the item. Model:'https://schema.org/URL'
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/image
+  annotations:
+    description: Property. Annotations about the item. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/annotations
+  fillingLevel:
+    description: Property. Model:'https://schema.org/Number'. Filling level of the
+      container
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/fillingLevel
+  category:
+    description: Property. Model:'https://schema.org/Text'. Container's category.
+      Enum:' fixed, ground, other, portable, underground'
+    range: category_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/category
+  cargoWeight:
+    description: Property. Model:'https://schema.org/Number'. Weight of the container
+      load
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/cargoWeight
+  temperature:
+    description: Property. Temperature inside the container. Model:'http://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/temperature
+  methaneConcentration:
+    description: Property. Model:'https://schema.org/Number'. Methane (CH4) concentration
+      inside the container
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/methaneConcentration
+  storedWasteKind:
+    description: 'Property. Model:''https://schema.org/Text''. Kind/s of waste stored
+      by the container. Enum:''organic, inorganic, glass, oil, plastic, metal, paper,
+      batteries, electronics, hazardous, other''. Or any other value which does not
+      fit within the former. '
+    range: storedWasteKind_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/storedWasteKind
+  storedWasteOrigin:
+    description: 'Property. Model:''https://schema.org/Text''. Origin of the waste
+      stored. Enum:''household, municipal, industrial, construction, hostelry, agriculture,
+      other'' '
+    range: storedWasteOrigin_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/storedWasteOrigin
+  storedWasteCode:
+    description: Property. Model:'https://schema.org/Text' As per the regulation,
+      waste codes which precisely identifies waste origin and kind. Depend on the
+      target regulation. For Europe, check [Europe's List of Waste](http://ec.europa.eu/environment/waste/framework/list.htm)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/storedWasteCode
+  serialNumber:
+    description: Property. Model:'https://schema.org/serialNumber'. Serial number
+      of the container
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/serialNumber
+  regulation:
+    description: Property. Regulation under which the container is operating. Model:'http://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/regulation
+  responsible:
+    description: Property. Responsible for the container, i.e. entity in charge of  actuating
+      (emptying, collecting, etc). Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/responsible
+  dateServiceStarted:
+    description: Property. Model:'https://schema.org/Date'. Date at which the container
+      started giving service
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/dateServiceStarted
+  dateLastEmptying:
+    description: Property. Model:'https://schema.org/DateTime'. Timestamp which represents
+      when the container was emptied last time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/dateLastEmptying
+  nextActuationDeadline:
+    description: Property. Model:'https://schema.org/DateTime'. Deadline for next
+      actuation to be performed (emptying, picking up, etc.)
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/nextActuationDeadline
+  actuationHours:
+    description: Property. Model:'openingHours'. Hours suitable for performing actuations
+      over the container
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/actuationHours
+  dateLastCleaning:
+    description: 'Property. When the container was cleaned last time. Model:''https://schema.org/DateTime''. '
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/dateLastCleaning
+  nextCleaningDeadline:
+    description: Property. Model:'https://schema.org/DateTime'. Deadline for next
+      cleaning
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/nextCleaningDeadline
+  isleId:
+    description: Property. Identifier (or name) of the isle where the container is
+      placed. This attribute should be used when entities of type `WasteContainerIsle`
+      are not being modelled specifically. Otherwise, `refWasteContainerIsle` should
+      be used
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/isleId
+  status:
+    description: Property. Container's status from the point of view of safety. Enum:'ok
+      , lidOpen , dropped , moved , vandalized , burning , unknown'.  -   `ok`. Container
+      is where it must be and stands properly. `lidOpen`. Container's lid has been
+      opened and not closed after a certain amount of time. `dropped`. Container has
+      been dropped for some reason. `moved`. Container has been moved from its regular
+      position and has not come back. `vandalized`. Container has been damaged or
+      destroyed due to vandalism. `burning`. Container is burning and an immediate
+      action has to be taken. `unknown`. The status of the container is not known
+      to the system
+    range: status_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://uri.etsi.org/ngsi-ld/status
+  refWasteContainerModel:
+    description: Relationship. Container's model. Model:'http://schema.org/URL'
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/refWasteContainerModel
+  refWasteContainerIsle:
+    description: Relationship. Isle where the container is placed. Model:'http://schema.org/URL'
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/refWasteContainerIsle
+  refDevice:
+    description: Relationship. Reference to the device(s) used to monitor this container.
+      Model:'http://schema.org/URL'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/refDevice
+  timeInstant:
+    description: Property. Model:'https://schema.org/Datetime'. Timestamp of the payload
+      . There can be production environments where the attribute type is equal to
+      the `ISO8601` string. If so, it must be considered as a synonym of `DateTime`.
+      This attribute is kept for backwards compatibility with old FIWARE reference
+      implementations
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/timeInstant
+  binCapacity:
+    description: Property. Model:'https://schema.org/Number'. Total capacity in terms
+      of the volume of waste the bin can hold
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/binCapacity
+  binColor:
+    description: Property. Model:'https://schema.org/Text'. Color of the bin. Could
+      be used for indicating the type of waste. The color coding should follow the
+      conventions applicable to the geographical area the bins are located
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/binColor
+  wardId:
+    description: Property. Model:'https://schema.org/Text. Ward Id of the entity corresponding
+      to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/wardId
+  license_plate:
+    description: 'Property. Model:''https://schema.org/Text. Gives the License Plate
+      number of the vehicle. SameAs: ''license_plate'' field from GTFS Realtime message-VehicleDescriptor
+      (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/license_plate
+  RFID:
+    description: Property. Model:'https://schema.org/Text. Gives the ID of the RFID
+      reader
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/RFID
+  binFullnessThreshold:
+    description: Property. Model:'https://schema.org/Number'. The fullness threshold
+      level of the bin defined as the level (in terms of percentage) when the bin
+      full alert or notification will be generated
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/binFullnessThreshold
+  binRecommendedLoad:
+    description: Property. Model:'https://schema.org/Number'. Recommended load (weight)
+      that the waste bin corresponding to this observation can hold
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/binRecommendedLoad
+  binId:
+    description: Property. Model:'https://schema.org/Text. Id of the waste carrying
+      bin
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/binId
+  binMaxLoad:
+    description: Property. Model:'https://schema.org/Number'. Maximum load (weight)
+      that the waste bin can hold
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/binMaxLoad
+  binLoggedTime:
+    description: Property. Model:'https://schema.org/Text'. Time when the bin's level
+      was last logged
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WasteManagement@16d527b36a0c22c9acf7db27f31479e3e29adab4
+    slot_uri: https://smartdatamodels.org/dataModel.WasteManagement/binLoggedTime
+enums:
+  category_options:
+    name: category_options
+    permissible_values:
+      fixed:
+        text: fixed
+      ground:
+        text: ground
+      other:
+        text: other
+      portable:
+        text: portable
+      underground:
+        text: underground
+  storedWasteKind_options:
+    name: storedWasteKind_options
+    permissible_values:
+      organic:
+        text: organic
+      inorganic:
+        text: inorganic
+      glass:
+        text: glass
+      oil:
+        text: oil
+      plastic:
+        text: plastic
+      metal:
+        text: metal
+      paper:
+        text: paper
+      batteries:
+        text: batteries
+      electronics:
+        text: electronics
+      hazardous:
+        text: hazardous
+      other:
+        text: other
+  storedWasteOrigin_options:
+    name: storedWasteOrigin_options
+    permissible_values:
+      household:
+        text: household
+      municipal:
+        text: municipal
+      industrial:
+        text: industrial
+      construction:
+        text: construction
+      hostelry:
+        text: hostelry
+      agriculture:
+        text: agriculture
+      other:
+        text: other
+  status_options:
+    name: status_options
+    permissible_values:
+      ok:
+        text: ok
+      lidOpen:
+        text: lidOpen
+      dropped:
+        text: dropped
+      moved:
+        text: moved
+      vandalized:
+        text: vandalized
+      burning:
+        text: burning
+      unknown:
+        text: unknown

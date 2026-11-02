@@ -1,0 +1,112 @@
+id: https://github.com/smart-data-models/dataModel.DataSpace/ParticipantAgent
+name: ParticipantAgent
+title: Smart Data Models - Participant Agent Service
+description: A data model for a Participant Agent (Connector) tool. This tool can
+  implement multiple services like Credential Store, Contract Negotiation, Transfer
+  Process, and Data Plane. It extends the base ToolInformation model.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.DataSpace
+  spec.source.path: ParticipantAgent/schema.json
+  spec.source.commit: 6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": "https://smart-data-models.github.io/dataModel.DataSpace/context.jsonld",
+    "credentialStore": {"type": "Property", "value": {"contractNegotiation": {"type":
+    "Property", "value": {"conformsTo": "5.0.0", "homepage": "https://www.tmforum.org/oda/open-apis/agreement",
+    "name": "Agreement Management API", "standardizedBy": "TMForum"}}, "dataPlane":
+    {"type": "Property", "value": [{"accepts": ["application/json", "application/ld+json"],
+    "apiSpecification": {"conformsTo": ["1.8.1", "1.9.1"], "homepage": "https://www.etsi.org/deliver/etsi_gs/CIM/001_099/009/01.09.01_60/gs_CIM009v010901p.pdf",
+    "name": "NGSI-LD", "standardizedBy": "ETSI"}, "contentType": ["application/json",
+    "application/ld+json", "application/geo+json"], "openAPI": "https://forge.etsi.org/rep/cim/ngsi-ld-openapi/-/raw/v1.9.1/ngsi-ld-api-v1.9.1.yaml"},
+    {"accepts": "*", "apiSpecification": {"conformsTo": "RFC7231", "homepage": "https:/tools.ietf.org/html/rfc7231",
+    "name": "HTTP File Download", "standardizedBy": "IETF"}, "contentType": ["image/jpeg",
+    "image/png"]}]}, "transferProcess": {"type": "Property", "value": {"authorization":
+    {"conformsTo": "2.2", "homepage": "https://www.w3.org/TR/odrl-model/", "name":
+    "ODRL", "standardizedBy": "W3C"}, "protocol": {"conformsTo": "2024-1", "homepage":
+    "https://docs.internationaldataspaces.org/dataspace-protocol/", "name": "Dataspace
+    Protocol", "standardizedBy": "DSP"}}}, "vcDataModel": {"name": "Verifiable Credentials
+    Data Model", "standardizedBy": {"conformsTo": ["1.1", "2.0"], "homepage": "https://www.w3.org/TR/vc-data-model/",
+    "type": "Property", "value": "W3C"}, "vcIssuanceAPI": {"conformsTo": "1.0.15",
+    "homepage": "https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html",
+    "name": "OpenID for Verifiable Credential Issuance", "standardizedBy": "OpenID"},
+    "vcPresentationAPI": {"conformsTo": "1.0", "homepage": "https://openid.net/specs/openid-4-verifiable-presentations-1_0.html",
+    "name": "OpenID for Verifiable Presentations", "standardizedBy": "OpenID"}}}},
+    "dataspaceBuildingBlock": {"type": "Property", "value": ["Identity Management",
+    "Contract and Usage Policies", "Data Exchange"]}, "dataspaceProductPurpose": {"type":
+    "Property", "value": "To provide a ready-to-use component for participants to
+    join and interact within a data space."}, "dataspaceService": {"type": "Property",
+    "value": ["Credential Store", "Contract Negotiation", "Transfer Process", "Data
+    Plane"]}, "dataspaceServiceCategory": {"type": "Property", "value": "Participant
+    Agent services"}, "description": {"type": "Property", "value": "An integrated
+    suite of components implementing DSBA recommendations"}, "documentation": {"type":
+    "Property", "value": "https://github.com/FIWARE/data-space-connector/blob/main/README.md"},
+    "hasVersion": {"type": "Property", "value": "2.28.0"}, "id": "urn:ngsi-ld:ParticipantAgent:FIWARE-DSC-2.28.0",
+    "license": {"type": "Property", "value": "https://github.com/FIWARE/data-space-connector/blob/main/LICENSE"},
+    "licenseDeclared": {"type": "Property", "value": "MIT"}, "maintainer": {"type":
+    "Property", "value": {"name": "FIWARE Foundation"}}, "technologyReadinessLevel":
+    {"type": "Property", "value": 8}, "title": {"type": "Property", "value": "FIWARE
+    Data Space Connector"}, "type": "ParticipantAgent", "url": {"type": "Property",
+    "value": "https:/github.com/FIWARE/data-space-connector"}}'
+classes:
+  ParticipantAgent:
+    class_uri: https://smartdatamodels.org/dataModel.DataSpace/ParticipantAgent
+    description: A data model for a Participant Agent (Connector) tool. This tool
+      can implement multiple services like Credential Store, Contract Negotiation,
+      Transfer Process, and Data Plane. It extends the base ToolInformation model.
+    is_a: Entity
+    slots:
+    - contractNegotiation
+    - credentialStore
+    - dataPlane
+    - transferProcess
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+  TransferProcess:
+    description: Property. Details of the transfer process capabilities.
+    attributes:
+      protocol:
+        description: Property. Details of protocol(s) defining the transfer process.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+      authorization:
+        description: Property. Details of authorization mechanisms used behind the
+          transfer process.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+slots:
+  credentialStore:
+    description: Property. Details of the credential store capabilities.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataModel.DataSpace/credentialStore
+  contractNegotiation:
+    description: Property. Details of the contract negotiation capabilities.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataModel.DataSpace/contractNegotiation
+  transferProcess:
+    description: Property. Details of the transfer process capabilities.
+    range: TransferProcess
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataModel.DataSpace/transferProcess
+  dataPlane:
+    description: Property. Details of the data plane capabilities, defining one or
+      more data exchange APIs.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataModel.DataSpace/dataPlane

@@ -1,0 +1,258 @@
+id: https://github.com/smart-data-models/dataModel.Organization/Organization
+name: Organization
+title: ' Smart Data Models - Organization'
+description: An organization such as a school, NGO, corporation, club, etc, mapped
+  from schema.org
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Organization
+  spec.source.path: Organization/schema.json
+  spec.source.commit: 77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smart-data-models.github.io/dataModel.Organization/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressLocality": "Heidelberg", "postalCode":
+    "69115", "streetAddress": "Example-Street 42"}}, "areaServed": {"type": "Property",
+    "value": "Stadt Heidelberg"}, "dateCreated": {"type": "Property", "value": "2022-06-21T08:24:35.905712+02:00"},
+    "dateModified": {"type": "Property", "value": "2022-06-22T09:24:35.905712+02:00"},
+    "id": "urn:ngsi-ld:Organization:34f91f29-aadd-45f7-ab9e-4fca2baffdd7", "legalName":
+    {"type": "Property", "value": "Beispielname GmbH"}, "location": {"type": "GeoProperty",
+    "value": {"coordinates": [49.4, 8.68], "type": "Point"}}, "name": {"type": "Property",
+    "value": "Example Organization"}, "taxID": {"type": "Property", "value": "12345678900"},
+    "type": "Organization", "url": {"type": "Property", "value": "https://www.example-organization-homepage.com"}}'
+classes:
+  Organization:
+    class_uri: https://smartdatamodels.org/dataModel.Organization/Organization
+    description: An organization such as a school, NGO, corporation, club, etc, mapped
+      from schema.org
+    is_a: Entity
+    slots:
+    - address
+    - aggregateRating
+    - alternateName
+    - areaServed
+    - author
+    - bestRating
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - legalName
+    - name
+    - owner
+    - reviewAspect
+    - seeAlso
+    - source
+    - taxID
+    - url
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+  AggregateRating:
+    description: Property. The average rating based on multiple ratings or reviews.
+      Privacy:'low'
+    attributes:
+      itemReviewed:
+        description: 'Relationship. The item that is being reviewed/rated. '
+        annotations:
+          ngsi_ld_kind: Relationship
+          upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+      ratingCount:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+      reviewCount:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    slot_uri: https://smartdatamodels.org/areaServed
+  aggregateRating:
+    description: Property. The average rating based on multiple ratings or reviews.
+      Privacy:'low'
+    range: AggregateRating
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    slot_uri: https://smartdatamodels.org/dataModel.Organization/aggregateRating
+  author:
+    description: Relationship. Model:'https://schema.org/URL'. The author of this
+      content or rating. Please note that author is special in that HTML 5 provides
+      a special mechanism for indicating authorship via the rel tag. That is equivalent
+      to this and may be used interchangeably
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    slot_uri: https://smartdatamodels.org/dataModel.Organization/author
+  bestRating:
+    description: 'Property. Model:''https://schema.org/Number''. The highest value
+      allowed in this rating system. If bestRating is omitted, 5 is assumed. '
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    slot_uri: https://smartdatamodels.org/dataModel.Organization/bestRating
+  reviewAspect:
+    description: Property. Model:'https://schema.org/Text'. This Review or Rating
+      is relevant to this part or facet of the itemReviewed
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    slot_uri: https://smartdatamodels.org/dataModel.Organization/reviewAspect
+  url:
+    description: Property. URL which provides a description or further information
+      about this item
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    slot_uri: https://smartdatamodels.org/url
+  legalName:
+    description: Property. Model:'https://schema.org/legalName'. The official name
+      of the organization, e.g. the registered company name
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    slot_uri: https://smartdatamodels.org/dataModel.Organization/legalName
+  taxID:
+    description: Property. Model:'https://schema.org/taxID'. The Tax / Fiscal ID of
+      the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Organization@77a4911e7cbc72bf87bf202ade282c1bc41a36a4
+    slot_uri: https://smartdatamodels.org/dataModel.Organization/taxID

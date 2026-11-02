@@ -1,0 +1,326 @@
+id: https://github.com/smart-data-models/dataModel.OCF/ContinuousGlucoseMeterStatus
+name: ContinuousGlucoseMeterStatus
+title: Smart Data models - ContinuousGlucoseMeterStatus schema derived from the open
+  connectivity foundation repository https://github.com/openconnectivityfoundation/IoTDataModels
+description: This Resource describes the Properties associated with Status for Continuous
+  Glucose Meter (CGM).
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: ContinuousGlucoseMeterStatus/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "If wonder rate want
+    inside send rich.", "addressLocality": "Not treatment push will beat value. Seek
+    across suddenly example sister almost security. Cause guess listen individual
+    mother build wife.", "addressRegion": "Threat", "district": "Next quality teacher
+    require data so. Old quality shake growth mention. Many project forget address
+    artist sim", "postOfficeBoxNumber": "Condition imagine follow check. Conference
+    budget true claim deep. Whether soon husband as investment nearly.", "postalCode":
+    "Heart Republican series ever thousand morning.", "streetAddress": "Idea sort
+    gun another white. Current concern exist structure. Sign role fund cost meeting
+    have travel so.", "streetNr": "End avoid safe ground traditional rise course.
+    Receive news save low."}}, "alternateName": {"type": "Property", "value": "Decide
+    student like boa"}, "areaServed": {"type": "Property", "value": "Next audience
+    general whole clearly also star. This important rate land. Oil course from sing."},
+    "cgmstatus": {"type": "Property", "value": "Reach task action anything benefit
+    grow th"}, "cgmtype": {"type": "Property", "value": "Capillary Plasma"}, "dataProvider":
+    {"type": "Property", "value": "Mrs late would. Have there air until. Really everybody
+    necessary increase specific"}, "dateCreated": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "1984-10-26T16:58:05Z"}}, "dateModified": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2007-09-13T05:46:42Z"}}, "description":
+    {"type": "Property", "value": "Voice TV almost scene."}, "gtrend": {"type": "Property",
+    "value": 907.8}, "id": "urn:ngsi-ld:ContinuousGlucoseMeterStatus:id:KHCJ:93310505",
+    "if": {"type": "Property", "value": ["oic.if.s"]}, "location": {"type": "GeoProperty",
+    "value": {"coordinates": [43.241175, -134.642422], "type": "Point"}}, "malfunction":
+    {"type": "Property", "value": true}, "n": {"type": "Property", "value": "Lead
+    new trade special "}, "name": {"type": "Property", "value": "Modern ago sure statement
+    sense pressure this. Those family interesting how environment."}, "owner": {"type":
+    "Property", "value": ["urn:ngsi-ld:ContinuousGlucoseMeterStatus:items:TROU:92706769",
+    "urn:ngsi-ld:ContinuousGlucoseMeterStatus:items:JEKY:64511844"]}, "precision":
+    {"type": "Property", "value": 662.2}, "range": {"type": "Property", "value": [995.2,
+    139.8]}, "rt": {"type": "Property", "value": ["oic.r.cgm.status"]}, "seeAlso":
+    {"type": "Property", "value": ["urn:ngsi-ld:ContinuousGlucoseMeterStatus:items:PKWO:52183801"]},
+    "source": {"type": "Property", "value": "Notice reflect edge against. My woman
+    during response economic these. Civil we green enough allow pass."}, "step": {"type":
+    "Property", "value": 772.1}, "type": "ContinuousGlucoseMeterStatus"}'
+classes:
+  ContinuousGlucoseMeterStatus:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/ContinuousGlucoseMeterStatus
+    description: This Resource describes the Properties associated with Status for
+      Continuous Glucose Meter (CGM).
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - cgmstatus
+    - cgmtype
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - gtrend
+    - if
+    - malfunction
+    - n
+    - name
+    - owner
+    - precision
+    - range
+    - rt
+    - seeAlso
+    - source
+    - step
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  cgmtype:
+    description: Property. This Property describes the CGM measurement type
+    range: cgmtype_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/cgmtype
+  cgmstatus:
+    description: Property. This Property describes the specific notifications given
+      by the CGM device including, but not limited to, warnings, errors, and handling
+      events
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/cgmstatus
+  gtrend:
+    description: Property. This Property describes the rate of change in glucose measurements
+      at a time instant
+    range: float
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/gtrend
+  malfunction:
+    description: Property. This Property describes the sensor malfunction detection
+      check
+    range: boolean
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/malfunction
+  rt:
+    description: Property. The Resource Type
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  if:
+    description: Property. The OCF Interface set supported by this Resource
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+  range:
+    description: Property. The valid range for the Property in the Resource as a number.
+      The first value in the array is the minimum value, the second value in the array
+      is the maximum value
+    range: float
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/range
+  step:
+    description: Property. Step value across the defined range an integer when the
+      range is a number.  This is the increment for valid values across the range;
+      so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/step
+  precision:
+    description: Property. When exposed the value in 'precision' provides a +/- tolerance
+      against the Properties in the Resource. Thus if a Property is UPDATED to a value
+      and that Property then RETRIEVED, the RETRIEVED value is valid if in the range
+      of the set value +/- precision
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/precision
+enums:
+  cgmtype_options:
+    name: cgmtype_options
+    permissible_values:
+      Capillary Whole blood:
+        text: Capillary Whole blood
+      Capillary Plasma:
+        text: Capillary Plasma
+      Venous Plasma:
+        text: Venous Plasma
+      Arterial Whole blood:
+        text: Arterial Whole blood
+      Arterial Plasma:
+        text: Arterial Plasma
+      Undetermined Whole blood:
+        text: Undetermined Whole blood
+      Undetermined Plasma:
+        text: Undetermined Plasma
+      Interstitial Fluid:
+        text: Interstitial Fluid
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.cgm.status:
+        text: oic.r.cgm.status
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.s:
+        text: oic.if.s
+      oic.if.baseline:
+        text: oic.if.baseline

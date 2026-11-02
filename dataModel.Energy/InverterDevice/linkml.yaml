@@ -1,0 +1,1107 @@
+id: https://github.com/smart-data-models/dataModel.Energy/InverterDevice
+name: InverterDevice
+title: InverterDevice schema
+description: 'The data model is intended to describe the mechanical, electrical characteristics
+  of an Inverter according to *DC - Direct Current Information* supplied as input
+  and *AC - Alternating Current Information*  returned as output. *Remark*: This Data
+  Model can be used directly as a main entity to describe the device [Inverter] or
+  as a sub-entity of the Data Model {DEVICE] using a reference by the [refDevice]
+  attribute.'
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Energy
+  spec.source.path: InverterDevice/schema.json
+  spec.source.commit: 08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Energy/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "FR", "addressLocality":
+    "Nice", "streetAddress": "Airport - Terminal 1 - Ground 0 - Local  27"}}, "alternateName":
+    {"type": "Property", "value": "AirPort \u2013 global Observation"}, "application":
+    {"type": "Property", "value": ["robotics"]}, "areaServed": {"type": "Property",
+    "value": "Nice Aeroport"}, "brandName": {"type": "Property", "value": "KOSTAL
+    ELEC"}, "coolingSystem": {"type": "Property", "value": "OptiCool"}, "dateLastReported":
+    {"type": "Property", "value": {"type": "DateTime", "value": "2020-03-17T08:45:00Z"}},
+    "description": {"type": "Property", "value": "Description of the Inverter linked
+    to Battery and PhotoVoltaic Devices"}, "dimension": {"type": "Property", "value":
+    {"depth": 23.5, "height": 45.25, "length": 52.75}}, "documentation": {"type":
+    "Property", "value": "https://www.myInverter.fr"}, "id": "urn:ngsi-ld:InverterDevice:InverterDevice:MNCA-INVDEV-T1-G0-027",
+    "installationCondition": {"type": "Property", "value": ["extremeClimate"]}, "installationMode":
+    {"type": "Property", "value": "wall"}, "inverterStatus": {"type": "Property",
+    "value": ["00-OnSector", "06-OverVoltage"]}, "location": {"type": "GeoProperty",
+    "value": {"coordinates": [[43.66481, 7.196545]], "type": "Point"}}, "mPPTPVVoltageDC":
+    {"type": "Property", "value": {"max": 440, "min": 188}}, "manufacturerName": {"type":
+    "Property", "value": "SOLAR ELECTRIC CPY"}, "maxInputCurrentParallelAssembly":
+    {"type": "Property", "value": 25}, "maxOutputPowerAC": {"type": "Property", "value":
+    4000}, "modelName": {"type": "Property", "value": "SB 4000TL-20"}, "moduleYieldRate":
+    {"type": "Property", "value": {"eta": 96.4, "euro": 97.1}}, "name": {"type": "Property",
+    "value": "INVDEV-T1-G0-027"}, "nbInputParallelDC": {"type": "Property", "value":
+    "A:2,B:2"}, "nbMPPTrackersDC": {"type": "Property", "value": 3}, "noiseLevel":
+    {"type": "Property", "value": 29}, "nominalAmpereAC ": {"type": "Property", "value":
+    16}, "nominalAmpereDC ": {"type": "Property", "value": 17}, "nominalFrequencyAC":
+    {"type": "Property", "value": 50}, "nominalFrequencyDC": {"type": "Property",
+    "value": 50}, "nominalPowerAC": {"type": "Property", "value": 3680}, "nominalPowerDC":
+    {"type": "Property", "value": 4200}, "nominalVoltageAC": {"type": "Property",
+    "value": 230}, "nominalVoltageDC": {"type": "Property", "value": 400}, "operatingAirHumidity":
+    {"type": "Property", "value": {"max": 0.95, "min": 0}}, "operatingAmpereAC": {"type":
+    "Property", "value": {"max": 22, "min": 16}}, "operatingAmpereDC": {"type": "Property",
+    "value": {"max": 17, "min": 17}}, "operatingFrequencyAC": {"type": "Property",
+    "value": {"max": 60, "min": 50}}, "operatingFrequencyDC": {"type": "Property",
+    "value": {"max": 50, "min": 50}}, "operatingTemperature": {"type": "Property",
+    "value": {"max": 60, "min": -25}}, "operatingVoltageAC": {"type": "Property",
+    "value": {"max": 280, "min": 180}}, "operatingVoltageDC": {"type": "Property",
+    "value": {"max": 550, "min": 125}}, "overVoltageCategory": {"type": "Property",
+    "value": "III"}, "owners": {"type": "Property", "value": ["Airport-Division Maintenance"]},
+    "phaseType": {"type": "Property", "value": "threePhase"}, "possibilityOfUse":
+    {"type": "Property", "value": "stationary"}, "powerFactorAC": {"type": "Property",
+    "value": 1}, "protectionClassSLK": {"type": "Property", "value": "1"}, "protectionIK":
+    {"type": "Property", "value": 10}, "protectionIP": {"type": "Property", "value":
+    "55"}, "self-consumption": {"type": "Property", "value": 0.5}, "serialNumber":
+    {"type": "Property", "value": "SEKOPI10327458712"}, "startingVoltageDC": {"type":
+    "Property", "value": 150}, "supplyPhaseNb": {"type": "Property", "value": 3},
+    "topology": {"type": "Property", "value": "without transformer"}, "type": "InverterDevice",
+    "typeOfUse": {"type": "Property", "value": "indoor"}, "weight": {"type": "Property",
+    "value": 34}}'
+classes:
+  InverterDevice:
+    class_uri: https://smartdatamodels.org/dataModel.Energy/InverterDevice
+    description: 'The data model is intended to describe the mechanical, electrical
+      characteristics of an Inverter according to *DC - Direct Current Information*
+      supplied as input and *AC - Alternating Current Information*  returned as output.
+      *Remark*: This Data Model can be used directly as a main entity to describe
+      the device [Inverter] or as a sub-entity of the Data Model {DEVICE] using a
+      reference by the [refDevice] attribute.'
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - application
+    - areaServed
+    - brandName
+    - coolingSystem
+    - dataProvider
+    - dateCreated
+    - dateLastReported
+    - dateModified
+    - description
+    - dimension
+    - documentation
+    - installationCondition
+    - installationMode
+    - inverterStatus
+    - mPPTPVVoltageDC
+    - manufacturerName
+    - maxInputCurrentParallelAssembly
+    - maxOutputPowerAC
+    - modelName
+    - moduleYieldRate
+    - name
+    - nbInputParallelDC
+    - nbMPPTrackersDC
+    - noiseLevel
+    - nominalAmpereAC
+    - nominalAmpereDC
+    - nominalFrequencyAC
+    - nominalFrequencyDC
+    - nominalPowerAC
+    - nominalPowerDC
+    - nominalVoltageAC
+    - nominalVoltageDC
+    - operatingAirHumidity
+    - operatingAmpereAC
+    - operatingAmpereDC
+    - operatingFrequencyAC
+    - operatingFrequencyDC
+    - operatingTemperature
+    - operatingVoltageAC
+    - operatingVoltageDC
+    - overVoltageCategory
+    - owner
+    - phaseType
+    - possibilityOfUse
+    - powerFactorAC
+    - protectionClassSLK
+    - protectionIK
+    - protectionIP
+    - refDevice
+    - refPointOfInterest
+    - seeAlso
+    - self-consumption
+    - serialNumber
+    - source
+    - startingVoltageDC
+    - supplyPhaseNb
+    - topology
+    - typeOfUse
+    - weight
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  Dimension:
+    description: Property. External dimension of a Panel. The format is structured
+      by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **CMT** represents Centimeter. Units:'Centimeters'
+    attributes:
+      length:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      height:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      depth:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  OperatingTemperature:
+    description: Property. Ambient operating temperature range. This is the minimum
+      and maximum resistance to cold and heat. The format is structured by a sub-property
+      of 2 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **CEL** represents Degree Celsius
+    attributes:
+      min:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      max:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  OperatingAirHumidity:
+    description: Property. Ambient operating Air Humidity range. The format is structured
+      by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **P1** represents Percent
+    attributes:
+      min:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      max:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  OperatingVoltageDC:
+    description: Property. Minimum and Maximum voltage allowed. The format is structured
+      by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **VLT** represents Volt.. Model:'https://schema.org/Number'. Units:'Volt'
+    attributes:
+      min:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      max:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  OperatingAmpereDC:
+    description: Property. Minimum and Maximum Ampere allowed.. The format is structured
+      by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **AMP** represents Ampere. Model:'https://schema.org/Number'.
+      Units:'Ampere'
+    attributes:
+      min:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      max:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  OperatingFrequencyDC:
+    description: Property. Minimum and Maximum Frequency allowed. The format is structured
+      by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **HTZ** represents Hertz. Model:'https://schema.org/Number'. Units:'Hertz'
+    attributes:
+      min:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      max:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  MPPTPVVoltageDC:
+    description: Property. Minimum and Maximum Photo-voltaic voltage range, MPPT allowed.
+      The format is structured by a sub-property of 2 items. The unit code (text)
+      is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **VLT** represents Volt. Model:'https://schema.org/Number'. Units:'Volt'
+    attributes:
+      min:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      max:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  OperatingVoltageAC:
+    description: Property. Minimum and Maximum voltage allowed. The format is structured
+      by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **VLT** represents Volt. Units:'Volt'. Model:'http://schema.org/StructuredValue'
+    attributes:
+      min:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      max:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  OperatingAmpereAC:
+    description: Property. Minimum and Maximum Ampere allowed.. The format is structured
+      by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **AMP** represents Ampere. Model:'http://schema.org/Number'. Units:'Ampere'
+    attributes:
+      min:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      max:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  OperatingFrequencyAC:
+    description: Property. Minimum and Maximum Frequency allowed. The format is structured
+      by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **HTZ** represents Hertz. Units:'Volt'. Model:'http://schema.org/StructuredValue'.
+      Units:'Hertz'
+    attributes:
+      min:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      max:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+  ModuleYieldRate:
+    description: Property. Yield Rate of the Device. The format is structured by a
+      sub-property of 2 items (European Standard - Manufacturer Standard). The unit
+      code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **P1** represents Percent. Model:'http://schema.org/StructuredValue'
+    attributes:
+      euro:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+      eta:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/areaServed
+  refDevice:
+    description: Relationship. Reference to the Main Entity [Device](https://github.com/smart-data-models/dataModel.Device/blob/master/Device/doc/spec.md)
+      if used as second link
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/refDevice
+  refPointOfInterest:
+    description: Relationship. Reference to a [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)
+      linked with the observation
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/refPointOfInterest
+  dateLastReported:
+    description: Property. A timestamps which denotes the last time when the device
+      successfully reported data. Date and time in an ISO8601 UTCformat. Model:'https://schema.org/DateTime'
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/dateLastReported
+  brandName:
+    description: Property. Brand Name of the item. Model:'https://schema.org/brand'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/brandName
+  modelName:
+    description: Property. Model name of the item. Model:'https://schema.org/model'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/modelName
+  manufacturerName:
+    description: Property. Manufacturer Name of the item. Model:'https://schema.org/manufacturer'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/manufacturerName
+  serialNumber:
+    description: Property. Serial numbers of the item. Model:'https://schema.org/brand'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/serialNumber
+  application:
+    description: Property. Target application of the Device regarding the environment.
+      A unique value. Enum:'electricMobility, energyStorage, emergencyStorage, lighting,
+      industrialStorage, houseHoldStorage, robotics, production, other'
+    range: application_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/application
+  typeOfUse:
+    description: Property. Accepted use regarding its positioning in an indoor / outdoor
+      environment.. Enum:'indoor, outdoor, mixed, other'
+    range: typeOfUse_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/typeOfUse
+  installationMode:
+    description: Property. Positioning of the device in relation to a ground reference
+      system. A unique value. Enum:'aerial, ground, pole, roofing, underGround, wall,
+      other'
+    range: installationMode_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/installationMode
+  installationCondition:
+    description: Property. Condition and possibility of use in the following environments.
+      Enum:'extremeHeat, extremeCold, extremeHumidity, extremeClimate, desert, sand,
+      marine, saline, dust, seismic, other'
+    range: installationCondition_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/installationCondition
+  possibilityOfUse:
+    description: Property. Possibility of use. Enum:'mixed, mobile, stationary, other'
+    range: possibilityOfUse_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/possibilityOfUse
+  documentation:
+    description: Property. Technical Documentation (Installation / maintenance / used).
+      Model:'https://schema.org/URL'
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/documentation
+  phaseType:
+    description: Property. Type of Phase. A unique value. Enum:'singlePhase,threePhase'
+    range: phaseType_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/phaseType
+  supplyPhaseNb:
+    description: Property. Number of power supply phases. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/supplyPhaseNb
+  dimension:
+    description: Property. External dimension of a Panel. The format is structured
+      by a sub-property of 3 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **CMT** represents Centimeter. Units:'Centimeters'
+    range: Dimension
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/dimension
+  weight:
+    description: Property. Weight. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **KGM** represents Kilogram. Units:'Kilograms'. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/weight
+    unit:
+      ucum_code: kg
+      exact_mappings:
+      - ucefact:KGM
+      - qudt-unit:KiloGM
+      has_quantity_kind: qudt-quantkind:CO2Equivalent
+  protectionIP:
+    description: 'Property. IP ''*Ingress Protection*'' for the Junction Box. This
+      is the level classifies and rates the degree of protection provided by mechanical
+      casings and electrical enclosures against intrusion, dust, accidental contact,
+      and water according to International Electrotechnical Commission standard (EN
+      60-529). - First digit: Solid particle protection (Single numeral: 0–6 or ''X'').
+      - Second digit: Liquid ingress protection (Single numeral: 0–9 or ''X'' ).-
+      Third digit: Personal Protection  against access to dangerous parts (optional
+      additional letter).- Fourth digit: Other protections (optional additional letter)'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/protectionIP
+  protectionIK:
+    description: Property. IK '*Mecanic Protection*' level relating to numeric classification
+      for the degrees of protection provided by enclosures for electrical equipment
+      against external mechanical impacts, according to International Electro technical
+      Commission standard (EN 62-262). - IK varies from 0 (minimum resistance) to
+      10 (maximum resistance) which represents an Impact Energy (Unit Joule). Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/protectionIK
+  protectionClassSLK:
+    description: 'Property. Protection class (SKL). - 0 : main insulation without
+      earth connection. - 1 : main insulation and additional insulation (earth terminal).
+      - 2 : double or reinforced insulation (equivalent to twice the main insulation)
+      without accessible metal part. - 3 : operating in very low safety voltage (SELV)
+      (50V maximum)'
+    range: protectionClassSLK_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/protectionClassSLK
+  overVoltageCategory:
+    description: 'Property. Over voltage category. - I : connection to circuits with
+      transient over voltages at an appropriate low level. - II : main insulation
+      and additional insulation (earth terminal). - III : fixed installations with
+      reliability and availability making subject to specific specifications. - IV
+      : materials at the origin of the electrical installation such as electric meters
+      and main materials over current protection'
+    range: overVoltageCategory_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/overVoltageCategory
+  operatingTemperature:
+    description: Property. Ambient operating temperature range. This is the minimum
+      and maximum resistance to cold and heat. The format is structured by a sub-property
+      of 2 items. The unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **CEL** represents Degree Celsius
+    range: OperatingTemperature
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/operatingTemperature
+  operatingAirHumidity:
+    description: Property. Ambient operating Air Humidity range. The format is structured
+      by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **P1** represents Percent
+    range: OperatingAirHumidity
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/operatingAirHumidity
+  nominalPowerDC:
+    description: Property. Nominal Power or Maximum Power factor for cos phi=1. The
+      unit code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **WTT** represents Watt. Model:'https://schema.org/Number'. Units:'Watt'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/nominalPowerDC
+    unit:
+      ucum_code: W
+      exact_mappings:
+      - ucefact:WTT
+      - qudt-unit:W
+      has_quantity_kind: qudt-quantkind:Power
+  nominalVoltageDC:
+    description: Property. Nominal voltage. The unit code (text) is given using the
+      [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **VLT** represents Volt. Model:'https://schema.org/Number'. Units:'Volt'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/nominalVoltageDC
+  nominalAmpereDC:
+    description: Property. Nominal Amperage. The unit code (text) is given using the
+      [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **AMP** represents Ampere. Model:'https://schema.org/Number'.
+      Units:'Ampere'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/nominalAmpereDC
+  nominalFrequencyDC:
+    description: Property.  Nominal Frequency. The unit code (text) is given using
+      the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **HTZ** represents Hertz. Model:'https://schema.org/Number'. Units:'Hertz'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/nominalFrequencyDC
+  operatingVoltageDC:
+    description: Property. Minimum and Maximum voltage allowed. The format is structured
+      by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **VLT** represents Volt.. Model:'https://schema.org/Number'. Units:'Volt'
+    range: OperatingVoltageDC
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/operatingVoltageDC
+  operatingAmpereDC:
+    description: Property. Minimum and Maximum Ampere allowed.. The format is structured
+      by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **AMP** represents Ampere. Model:'https://schema.org/Number'.
+      Units:'Ampere'
+    range: OperatingAmpereDC
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/operatingAmpereDC
+  operatingFrequencyDC:
+    description: Property. Minimum and Maximum Frequency allowed. The format is structured
+      by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **HTZ** represents Hertz. Model:'https://schema.org/Number'. Units:'Hertz'
+    range: OperatingFrequencyDC
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/operatingFrequencyDC
+  mPPTPVVoltageDC:
+    description: Property. Minimum and Maximum Photo-voltaic voltage range, MPPT allowed.
+      The format is structured by a sub-property of 2 items. The unit code (text)
+      is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **VLT** represents Volt. Model:'https://schema.org/Number'. Units:'Volt'
+    range: MPPTPVVoltageDC
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/mPPTPVVoltageDC
+  startingVoltageDC:
+    description: Property. Starting voltage. The unit code (text) is given using the
+      [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **VLT** represents Volt. Model:'https://schema.org/Number'. Units:'Volt'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/startingVoltageDC
+  nbMPPTrackersDC:
+    description: Property. Number of MPP trackers. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/nbMPPTrackersDC
+  nbInputParallelDC:
+    description: Property. Maximum Number of inputs (in parallel). Model:'https://schema.org/Number'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/nbInputParallelDC
+  maxInputCurrentParallelAssembly:
+    description: Property. Max. Current Input with an Parallel Assembly. The unit
+      code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **AMP** represents Ampere. Model:'https://schema.org/Number'.
+      Units:'Ampere'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/maxInputCurrentParallelAssembly
+  nominalPowerAC:
+    description: Property. Nominal Power . The unit code (text) is given using the
+      [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **WTT** represents Watt. Model:'https://schema.org/Number'. Units:'Watt'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/nominalPowerAC
+    unit:
+      ucum_code: W
+      exact_mappings:
+      - ucefact:WTT
+      - qudt-unit:W
+      has_quantity_kind: qudt-quantkind:Power
+  maxOutputPowerAC:
+    description: Property. Maximum Power or Apparent Power. The unit code (text) is
+      given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **D46** represents Volt Ampere. Model:'https://schema.org/Number'.
+      Units:'Volt Ampere'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/maxOutputPowerAC
+  nominalVoltageAC:
+    description: Property. Nominal battery voltage *(Code U)*. The unit code (text)
+      is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **VLT** represents Volt. Model:'https://schema.org/Number'. Units:'Volt'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/nominalVoltageAC
+  nominalAmpereAC:
+    description: Property. Nominal Amperage *(Code I)*. The unit code (text) is given
+      using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **AMP** represents Ampere. Model:'https://schema.org/Number'.
+      Units:'Ampere'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/nominalAmpereAC
+  nominalFrequencyAC:
+    description: Property. Nominal Frequency. The unit code (text) is given using
+      the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **HTZ** represents Hertz. Model:'https://schema.org/Number'. Units:'Hertz'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/nominalFrequencyAC
+  operatingVoltageAC:
+    description: Property. Minimum and Maximum voltage allowed. The format is structured
+      by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **VLT** represents Volt. Units:'Volt'. Model:'http://schema.org/StructuredValue'
+    range: OperatingVoltageAC
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/operatingVoltageAC
+  operatingAmpereAC:
+    description: Property. Minimum and Maximum Ampere allowed.. The format is structured
+      by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **AMP** represents Ampere. Model:'http://schema.org/Number'. Units:'Ampere'
+    range: OperatingAmpereAC
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/operatingAmpereAC
+  operatingFrequencyAC:
+    description: Property. Minimum and Maximum Frequency allowed. The format is structured
+      by a sub-property of 2 items. The unit code (text) is given using the [UN/CEFACT
+      Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **HTZ** represents Hertz. Units:'Volt'. Model:'http://schema.org/StructuredValue'.
+      Units:'Hertz'
+    range: OperatingFrequencyAC
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/operatingFrequencyAC
+  powerFactorAC:
+    description: Property. Power factor for cos phi. A value between [0,1] Units:'Volt'.
+      Model:'http://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/powerFactorAC
+  moduleYieldRate:
+    description: Property. Yield Rate of the Device. The format is structured by a
+      sub-property of 2 items (European Standard - Manufacturer Standard). The unit
+      code (text) is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **P1** represents Percent. Model:'http://schema.org/StructuredValue'
+    range: ModuleYieldRate
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/moduleYieldRate
+  noiseLevel:
+    description: Property. Sound Power level of the Device. The unit code (text) is
+      given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).
+      For instance, **2N** represents Decibel. Units:'dB'. Model:'http://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/noiseLevel
+    unit:
+      ucum_code: dB
+      exact_mappings:
+      - ucefact:2N
+      - qudt-unit:DeciB
+      has_quantity_kind: qudt-quantkind:Log10Ratio
+  self-consumption:
+    description: Property. Self-consumption during nigth. The unit code (text) is
+      given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes).  For
+      instance, **WTT** represents Watt. Units:'Watt'. Model:'http://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/self-consumption
+    unit:
+      ucum_code: W
+      exact_mappings:
+      - ucefact:WTT
+      - qudt-unit:W
+      has_quantity_kind: qudt-quantkind:Power
+  topology:
+    description: Property. Description of the topology of the installation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/topology
+  coolingSystem:
+    description: Property.  Cooling System of the Device. Enum:'Convection, OptiCool,
+      Regulated-fan, Other'
+    range: coolingSystem_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/coolingSystem
+  inverterStatus:
+    description: Property. Status of the inverter. A combination of values
+    range: inverterStatus_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Energy@08c7f4c9c881acd7e20fa61a9a9f38f51f058561
+    slot_uri: https://smartdatamodels.org/dataModel.Energy/inverterStatus
+enums:
+  application_options:
+    name: application_options
+    permissible_values:
+      electricMobility:
+        text: electricMobility
+      energyStorage:
+        text: energyStorage
+      emergencyStorage:
+        text: emergencyStorage
+      lighting:
+        text: lighting
+      industrialStorage:
+        text: industrialStorage
+      houseHoldStorage:
+        text: houseHoldStorage
+      robotics:
+        text: robotics
+      production:
+        text: production
+      other:
+        text: other
+  typeOfUse_options:
+    name: typeOfUse_options
+    permissible_values:
+      indoor:
+        text: indoor
+      outdoor:
+        text: outdoor
+      mixed:
+        text: mixed
+      other:
+        text: other
+  installationMode_options:
+    name: installationMode_options
+    permissible_values:
+      aerial:
+        text: aerial
+      ground:
+        text: ground
+      pole:
+        text: pole
+      roofing:
+        text: roofing
+      underGround:
+        text: underGround
+      wall:
+        text: wall
+      other:
+        text: other
+  installationCondition_options:
+    name: installationCondition_options
+    permissible_values:
+      extremeHeat:
+        text: extremeHeat
+      extremeCold:
+        text: extremeCold
+      extremeHumidity:
+        text: extremeHumidity
+      extremeClimate:
+        text: extremeClimate
+      desert:
+        text: desert
+      sand:
+        text: sand
+      marine:
+        text: marine
+      saline:
+        text: saline
+      dust:
+        text: dust
+      seismic:
+        text: seismic
+      other:
+        text: other
+  possibilityOfUse_options:
+    name: possibilityOfUse_options
+    permissible_values:
+      mixed:
+        text: mixed
+      mobile:
+        text: mobile
+      stationary:
+        text: stationary
+      other:
+        text: other
+  phaseType_options:
+    name: phaseType_options
+    permissible_values:
+      singlePhase:
+        text: singlePhase
+      threePhase:
+        text: threePhase
+  protectionClassSLK_options:
+    name: protectionClassSLK_options
+    permissible_values:
+      '0':
+        text: '0'
+      '1':
+        text: '1'
+      '2':
+        text: '2'
+      '3':
+        text: '3'
+  overVoltageCategory_options:
+    name: overVoltageCategory_options
+    permissible_values:
+      I:
+        text: I
+      II:
+        text: II
+      III:
+        text: III
+      IV:
+        text: IV
+  coolingSystem_options:
+    name: coolingSystem_options
+    permissible_values:
+      Convection:
+        text: Convection
+      OptiCool:
+        text: OptiCool
+      Regulated-fan:
+        text: Regulated-fan
+      Other:
+        text: Other
+  inverterStatus_options:
+    name: inverterStatus_options
+    permissible_values:
+      00-OnSector:
+        text: 00-OnSector
+      01-PowerFailure/OnBattery:
+        text: 01-PowerFailure/OnBattery
+      02-LossCommunication:
+        text: 02-LossCommunication
+      03-BatteryFault:
+        text: 03-BatteryFault
+      04-SystemShutDown:
+        text: 04-SystemShutDown
+      05-TensionDip:
+        text: 05-TensionDip
+      06-OverVoltage:
+        text: 06-OverVoltage
+      07-VoltageDrop:
+        text: 07-VoltageDrop
+      08-VoltageIncrease:
+        text: 08-VoltageIncrease
+      09-LineNoise:
+        text: 09-LineNoise
+      10-FrequencyVariation:
+        text: 10-FrequencyVariation
+      11-TransientDistortion:
+        text: 11-TransientDistortion
+      12-HarmonicDistortion:
+        text: 12-HarmonicDistortion

@@ -1,0 +1,76 @@
+id: https://github.com/smart-data-models/dataModel.ACRIS/TerminalAreaLocation
+name: TerminalAreaLocation
+title: Smart Data Models - Mapping of ACRIS data model TerminalAreaLocation
+description: Property. The geospatial or geopolitical location of an Airport Terminal
+  building.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ACRIS
+  spec.source.path: TerminalAreaLocation/schema.json
+  spec.source.commit: 82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.ACRIS/master/context.jsonld"],
+    "AirportLocation": {"type": "Property", "value": {"Latitude": 40.42, "Longitude":
+    3.708, "Name": "", "Srid": 4326}}, "Name": {"type": "Property", "value": "East
+    Terminal"}, "id": "urn:ngsi-ld:TerminalAreaLocation:id:BMIE:65800944", "type":
+    "TerminalAreaLocation"}'
+classes:
+  TerminalAreaLocation:
+    class_uri: https://smartdatamodels.org/dataModel.ACRIS/TerminalAreaLocation
+    description: Property. The geospatial or geopolitical location of an Airport Terminal
+      building.
+    is_a: Entity
+    slots:
+    - AirportLocation
+    - Name
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  AirportLocation:
+    description: Property. The geospatial or geopolitical location of an Airport.
+    attributes:
+      Latitude:
+        description: Property. Coordinate for latitude of the Airport.
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Longitude:
+        description: Property. Coordinate for longitude of the Airport.
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Name:
+        description: Property. Unique name for the Airport Location.
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+      Srid:
+        description: Property. A Spatial Reference System Identifier (SRID), to identify
+          the spatial coordinate system definitions.
+        range: integer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+slots:
+  Name:
+    description: Property. Unique name for the Terminal Area Location.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/Name
+  AirportLocation:
+    description: Property. The geospatial or geopolitical location of an Airport.
+    range: AirportLocation
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/AirportLocation

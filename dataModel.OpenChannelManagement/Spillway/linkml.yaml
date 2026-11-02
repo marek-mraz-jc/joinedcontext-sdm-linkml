@@ -1,0 +1,402 @@
+id: https://github.com/smart-data-models/dataModel.OpenChannelManagement/Spillway
+name: Spillway
+title: Open Channel Management - Spillway
+description: This entity contains a harmonised description for a generic Spillway
+  made for Raw-Water (Open Channels) System Management domain. Spillway represents
+  a junction-type object, controlling the release of water from a dam or regulation
+  structure downstream.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OpenChannelManagement
+  spec.source.path: Spillway/schema.json
+  spec.source.commit: 4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.OpenChannelManagement/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "", "addressLocality":
+    "", "addressRegion": "", "areaServed": "", "postOfficeBoxNumber": "", "postalCode":
+    "", "streetAddress": ""}}, "alternateName": {"type": "Property", "value": "SP01
+    - Thivae"}, "apronElevation": {"type": "Property", "value": 22}, "apronLength":
+    {"type": "Property", "value": 5}, "areaServed": {"type": "Property", "value":
+    ""}, "controlCrossSection": {"object": "urn:ngsi-ld:Spillway:controlCrossSection:JXFD:60487647",
+    "type": "Relationship"}, "crestElevation": {"type": "Property", "value": 26.4},
+    "crestLength": {"type": "Property", "value": 5}, "curveDesignDischargeCoefficient":
+    {"object": "urn:ngsi-ld:Spillway:curveDesignDischargeCoefficient:GIWE:80160975",
+    "type": "Relationship"}, "curveDischargeCoefficient": {"object": "urn:ngsi-ld:Spillway:curveDischargeCoefficient:MWGU:81565938",
+    "type": "Relationship"}, "curveElevationDischarge": {"object": "urn:ngsi-ld:Spillway:curveElevationDischarge:CBWI:21948924",
+    "type": "Relationship"}, "dataProvider": {"type": "Property", "value": "EYDAP"},
+    "dateCreated": {"type": "Property", "value": {"@type": "DateTime", "@value": "2020-10-12T04:27:47Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2021-09-26T16:22:05Z"}}, "description": {"type": "Property", "value": "Spillway
+    01 - Thivae"}, "designDischarge": {"type": "Property", "value": 20}, "designDischargeCoefficient":
+    {"type": "Property", "value": 0.4}, "designHead": {"type": "Property", "value":
+    30.4}, "dischargeCoefficient": {"type": "Property", "value": 5}, "id": "urn:ngsi-ld:Spillway:id:FFPG:06271993",
+    "location": {"type": "Geoproperty", "value": {"coordinates": [60.3603485, -129.682253],
+    "type": "Point"}}, "maxFloodElevation": {"type": "Property", "value": 4}, "name":
+    {"type": "Property", "value": "SP01"}, "numberAbutments": {"type": "Property",
+    "value": 2}, "owner": {"type": "Property", "value": ["urn:ngsi-ld:Spillway:items:OFPV:04640010",
+    "urn:ngsi-ld:Spillway:items:BFAT:33357858"]}, "seeAlso": {"type": "Property",
+    "value": ["urn:ngsi-ld:Spillway:items:VLIF:47226224", "urn:ngsi-ld:Spillway:items:BDSZ:68275691"]},
+    "source": {"type": "Property", "value": ""}, "spillwayType": {"type": "Property",
+    "value": "Ogee"}, "spillwayWidth": {"type": "Property", "value": 5}, "tag": {"type":
+    "Property", "value": ""}, "type": "Spillway", "waterDischarge": {"type": "Property",
+    "value": 9}}'
+classes:
+  Spillway:
+    class_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/Spillway
+    description: This entity contains a harmonised description for a generic Spillway
+      made for Raw-Water (Open Channels) System Management domain. Spillway represents
+      a junction-type object, controlling the release of water from a dam or regulation
+      structure downstream.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - apronElevation
+    - apronLength
+    - areaServed
+    - controlCrossSection
+    - crestElevation
+    - crestLength
+    - curveDesignDischargeCoefficient
+    - curveDischargeCoefficient
+    - curveElevationDischarge
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - designDischarge
+    - designDischargeCoefficient
+    - designHead
+    - dischargeCoefficient
+    - maxFloodElevation
+    - name
+    - numberAbutments
+    - owner
+    - seeAlso
+    - source
+    - spillwayType
+    - spillwayWidth
+    - tag
+    - waterDischarge
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+slots:
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/areaServed
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/seeAlso
+  tag:
+    description: Property. Model:'https://schema.org/Text'. An optional text string
+      used to qualify an item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/tag
+  spillwayType:
+    description: Property. The type of the spillway. In the case of “Specified Spillway”,
+      only “Elevation – discharge” curve is required. Enum:'Broad-Crested, Ogee, Sharp-Crested,
+      Specified Spillway'
+    range: spillwayType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/spillwayType
+  crestElevation:
+    description: Property. The crest elevation of the Spillway. Required only for
+      'Broad-Crested', 'Ogee' and 'Sharp-Crested'. Units:'meters'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/crestElevation
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  crestLength:
+    description: Property. The length of the Spillway equals to the total length through
+      which water passes. Required only for 'Broad-Crested', 'Ogee' and 'Sharp-Crested'.
+      Units:'meters'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/crestLength
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  spillwayWidth:
+    description: Property. The width of the spillway (m). Only for 'Broad-Crested'
+      type. Units:'meters'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/spillwayWidth
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  numberAbutments:
+    description: Property. The number of abutments of an ogee spillway. Only for 'Ogee'
+      type
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/numberAbutments
+  apronElevation:
+    description: Property. The elevation at the bottom of the ogee spillway structure
+      (P), just upstream of the spillway
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/apronElevation
+  apronLength:
+    description: Property. The total length of the spillway bottom. Units:'meters'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/apronLength
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  dischargeCoefficient:
+    description: Property. The discharge coefficient for energy losses as water enters,
+      flows and exits the spillway. Units:'m^0.5/s'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/dischargeCoefficient
+  designHead:
+    description: Property. The total upstream energy head for which the spillway is
+      designed (Ho) for 'Ogee Spillway'. Units:'meters'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/designHead
+    unit:
+      ucum_code: m
+      exact_mappings:
+      - ucefact:MTR
+      - qudt-unit:M
+      has_quantity_kind: qudt-quantkind:ElevationRelativeToNAP
+  designDischarge:
+    description: 'Property. The design discharge (Qo) of the Spillway. Units: ''m^3/s'''
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/designDischarge
+  designDischargeCoefficient:
+    description: Property. The discharge coefficient (Co) for energy losses for the
+      design discharge (Ho)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/designDischargeCoefficient
+  maxFloodElevation:
+    description: Property. The maximum elevation of water that can pass the spillway
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/maxFloodElevation
+  waterDischarge:
+    description: 'Property. The discharge over the spillway (Q). Units: ''m^3/s'''
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/waterDischarge
+  controlCrossSection:
+    description: Relationship. A relationship indicating the ID of an entity of type
+      Cross Section, indicating the cross section that controls the flow over the
+      Spillway
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/controlCrossSection
+  curveElevationDischarge:
+    description: Relationship. The URI of an OpenChannelCurve entity that represents
+      discharge (Q) as a function of water elevation (H)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/curveElevationDischarge
+  curveDischargeCoefficient:
+    description: Relationship. The URI of an OpenChannelCurve entity that represents
+      the discharge coefficient (C) as a function of upstream head (H) and spillway
+      geometry. For instance, discharge coefficient as a function of upstream head
+      over spillway width (C-H/L), or C/Co-H/Ho
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/curveDischargeCoefficient
+  curveDesignDischargeCoefficient:
+    description: Relationship. The URI of an OpenChannelCurve entity that represents
+      the design discharge coefficient (Co) as a function of apron Elevation over
+      design upstream head (Co-P/Ho)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.OpenChannelManagement@4d2b8f26c6b55a8971bccfa8dcb25b7f0b53716b
+    slot_uri: https://smartdatamodels.org/dataModel.OpenChannelManagement/curveDesignDischargeCoefficient
+enums:
+  spillwayType_options:
+    name: spillwayType_options
+    permissible_values:
+      Broad-Crested:
+        text: Broad-Crested
+      Ogee:
+        text: Ogee
+      Sharp-Crested:
+        text: Sharp-Crested
+      Specified Spillway:
+        text: Specified Spillway

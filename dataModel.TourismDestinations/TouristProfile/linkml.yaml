@@ -1,0 +1,620 @@
+id: https://github.com/smart-data-models/dataModel.TourismDestinations/TouristProfile
+name: TouristProfile
+title: General profile of a Tourist
+description: Description of a tourist profile based on the characteristics of a person,
+  trip, choice of stay and spending while in destination.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.TourismDestinations
+  spec.source.path: TouristProfile/schema.json
+  spec.source.commit: 6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"],
+    "ageRange": {"type": "Property", "value": "30-34"}, "avgDailyAccommodationAndBoardExpenditure":
+    {"type": "Property", "value": "200 to 249 \u20ac"}, "avgDailyExtraExpenditure":
+    {"type": "Property", "value": "0 to 24 \u20ac"}, "board": {"type": "Property",
+    "value": "HB"}, "bookingChannel": {"type": "Property", "value": "Tour Operator"},
+    "country": {"type": "Property", "value": "NL"}, "gender": {"type": "Property",
+    "value": "Male"}, "id": "urn:hosp:tourpro:0001", "lodgingCategory": {"type": "Property",
+    "value": "4"}, "lodgingSize": {"type": "Property", "value": "101 - 300 Medium"},
+    "lodgingType": {"type": "Property", "value": "Resort"}, "reservationLeadTime":
+    {"type": "Property", "value": "91 to 120 days"}, "roomOfStayType": {"type": "Property",
+    "value": "Double"}, "stayLength": {"type": "Property", "value": "5 to 7 days"},
+    "totalAccommodationAndBoardExpenditure": {"type": "Property", "value": "1000 to
+    1249 \u20ac"}, "totalExpenditure": {"type": "Property", "value": "1250 to 1499
+    \u20ac"}, "totalExtraExpenditure": {"type": "Property", "value": "0 to 249 \u20ac"},
+    "travelPartyComposition": {"type": "Property", "value": "Couple"}, "type": "TouristProfile"}'
+classes:
+  TouristProfile:
+    class_uri: https://smartdatamodels.org/dataModel.TourismDestinations/TouristProfile
+    description: Description of a tourist profile based on the characteristics of
+      a person, trip, choice of stay and spending while in destination.
+    is_a: Entity
+    slots:
+    - address
+    - ageRange
+    - alternateName
+    - areaServed
+    - avgDailyAccommodationAndBoardExpenditure
+    - avgDailyExpenditure
+    - avgDailyExtraExpenditure
+    - board
+    - bookingChannel
+    - country
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - gender
+    - lodgingCategory
+    - lodgingSize
+    - lodgingType
+    - name
+    - owner
+    - reservationLeadTime
+    - roomOfStayType
+    - seeAlso
+    - source
+    - stayLength
+    - totalAccommodationAndBoardExpenditure
+    - totalExpenditure
+    - totalExtraExpenditure
+    - travelPartyComposition
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+  AgeRange:
+    description: Property. Age range of the person profiled
+    attributes:
+      range:
+        description: Property. Value of ageRange. It uses the ranges defined by sortingOrder
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      sortingOrder:
+        description: 'Property. Ordered set of different age groups for ageRange.
+          OrderedSet: ''0-1, 2-5, 6-11, 12-17, 18-24, 25-29, 30-34, 35-39, 40-44,
+          45-49, 50-54, 55-59, 60-64, 65+'''
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+  LodgingSize:
+    description: Property. Range size in number of rooms of the lodging
+    attributes:
+      range:
+        description: Property. Value of lodgingSize. It uses the ranges defined by
+          sortingOrder
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      sortingOrder:
+        description: 'Property. Ordered set of intervals of the quantity of rooms
+          for lodgingSize. OrderedSet: ''0 - 24 very small, 25 - 100 small, 101 -
+          300 medium, 301 - 700 large, 701 - 1200 very large, 1201+ massive'''
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+  ReservationLeadTime:
+    description: Property. Range of days between booking and check-in
+    attributes:
+      range:
+        description: Property. Value of reservationLeadTime. It uses the ranges defined
+          by sortingOrder
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      sortingOrder:
+        description: 'Property. Ordered set of range of days for reservationLeadTime.
+          OrderedSet: ''1 to 7 days, 8 to 14 days, 15 to 30 days, 31 to 60 days, 61
+          to 90 days, 91 to 120 days, 121 to 240 days, 241 to 365 days, 366+ days'''
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+  StayLength:
+    description: Property. Range of number of staying nights
+    attributes:
+      range:
+        description: Property. Value of stayLength. It uses the ranges defined by
+          sortingOrder
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      sortingOrder:
+        description: 'Property. Ordered set of range of nights for stayLength. OrderedSet:
+          ''1 night, 2 to 4 nights, 5 to 7 nights, 8 to 14 nights, 15 to 21 nights,
+          22+ nights'''
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+  TotalExpenditure:
+    description: Property. Range of total amount of money invoiced by the lodging
+      establishment
+    attributes:
+      range:
+        description: Property. Value of totalExpenditure. It uses the ranges defined
+          by sortingOrder
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      sortingOrder:
+        description: 'Property. Ordered set of range of money amounts for totalExpenditure.
+          OrderedSet: ''0 to 249 €, 250 to 499 €, 500 to 749 €, 750 to 999 €, 1000
+          to 1499 €, 1500 to 1999 €, 2000 to 2999 €, 3000 to 3999 €, 4000 to 4999
+          €, 5000+ €'''
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+  TotalAccommodationAndBoardExpenditure:
+    description: Property. Range of total amount of money invoiced by the lodging
+      establishment in accommodation and board concepts
+    attributes:
+      range:
+        description: Property. Value of totalAccommodationAndBoardExpenditure. It
+          uses the ranges defined by sortingOrder
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      sortingOrder:
+        description: 'Property. Ordered set of range of money amounts for totalAccommodationAndBoardExpenditure.
+          OrderedSet: ''0 to 249 €, 250 to 499 €, 500 to 749 €, 750 to 999 €, 1000
+          to 1499 €, 1500 to 1999 €, 2000 to 2999 €, 3000 to 3999 €, 4000 to 4999
+          €, 5000+ €'''
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+  TotalExtraExpenditure:
+    description: Property. Range of total amount of money invoiced by the lodging
+      establishment in extra concepts
+    attributes:
+      range:
+        description: Property. Value of totalExtraExpenditure. It uses the ranges
+          defined by sortingOrder
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      sortingOrder:
+        description: 'Property. Ordered set of range of money amounts for totalExtraExpenditure.
+          OrderedSet: ''0 to 249 €, 250 to 499 €, 500 to 749 €, 750 to 999 €, 1000
+          to 1499 €, 1500 to 1999 €, 2000 to 2999 €, 3000 to 3999 €, 4000 to 4999
+          €, 5000+ €'''
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+  AvgDailyExpenditure:
+    description: Property. Range of avg daily amount of money invoiced by the lodging
+      establishment
+    attributes:
+      range:
+        description: Property. Value of avgDailyExpenditure. It uses the ranges defined
+          by sortingOrder
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      sortingOrder:
+        description: 'Property. Ordered set of range of money amounts for avgDailyExpenditure.
+          OrderedSet: ''0 to 24 €, 25 to 49 €, 50 to 74 €, 75 to 99 €, 100 to 149
+          €, 150 to 199 €, 200 to 249 €, 250 to 299 €, 300 to 399 €, 400 to 499 €,
+          500 to 599 €, 600+ €'''
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+  AvgDailyAccommodationAndBoardExpenditure:
+    description: Property. Range of avg daily amount of money invoiced by the lodging
+      establishment in accommodation and board concepts
+    attributes:
+      range:
+        description: Property. Value of avgDailyAccommodationAndBoardExpenditure.
+          It uses the ranges defined by sortingOrder
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      sortingOrder:
+        description: 'Property. Ordered set of range of money amounts for avgDailyAccommodationAndBoardExpenditure.
+          OrderedSet: ''0 to 24 €, 25 to 49 €, 50 to 74 €, 75 to 99 €, 100 to 149
+          €, 150 to 199 €, 200 to 249 €, 250 to 299 €, 300 to 399 €, 400 to 499 €,
+          500 to 599 €, 600+ €'''
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+  AvgDailyExtraExpenditure:
+    description: Property. Range of avg daily amount of money invoiced by the lodging
+      establishment in extra concepts
+    attributes:
+      range:
+        description: Property. Value of avgDailyExtraExpenditure. It uses the ranges
+          defined by sortingOrder
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+      sortingOrder:
+        description: 'Property. Ordered set of range of money amounts for avgDailyExtraExpenditure.
+          OrderedSet: ''0 to 24 €, 25 to 49 €, 50 to 74 €, 75 to 99 €, 100 to 149
+          €, 150 to 199 €, 200 to 249 €, 250 to 299 €, 300 to 399 €, 400 to 499 €,
+          500 to 599 €, 600+ €'''
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/areaServed
+  country:
+    description: Property. Country of nationality - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/country
+  ageRange:
+    description: Property. Age range of the person profiled
+    range: AgeRange
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/ageRange
+  gender:
+    description: Property. Gender of the person profiled. Enum:'Female, Male'
+    range: gender_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/gender
+  travelPartyComposition:
+    description: Property. Composition of the travelling party based on the number
+      of adults and children. Enum:'Single, Single parent, Family, Couple, Friends/Relatives'
+    range: travelPartyComposition_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/travelPartyComposition
+  lodgingType:
+    description: Property. Usual type of lodging for the stay. Could reference UNE178506
+      in the future. Enum:'Hotel, Resort, Hostel, Motel, B&B, Aparthotel, Lodge'
+    range: lodgingType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/lodgingType
+  lodgingCategory:
+    description: Property. Usual category of the lodging. Enum:'1, 1 Superior, 2,
+      2 Superior, 3, 3 Superior, 4, 4 Superior, 5, 5 Superior'
+    range: lodgingCategory_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/lodgingCategory
+  lodgingSize:
+    description: Property. Range size in number of rooms of the lodging
+    range: LodgingSize
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/lodgingSize
+  roomOfStayType:
+    description: Property. Usual type of the accommodation room reserved. Enum:'Apartment,
+      Bungalow, Studio, Single, Double, Family, Junior Suite, Senior/Executive Suite,
+      Royal/Presidential Suite'
+    range: roomOfStayType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/roomOfStayType
+  board:
+    description: Property. Usual type of board type reserved. Enum:'RO, BB, HB, FB,
+      AI'
+    range: board_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/board
+  bookingChannel:
+    description: Property. Channel used by the tourist for the reservation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/bookingChannel
+  reservationLeadTime:
+    description: Property. Range of days between booking and check-in
+    range: ReservationLeadTime
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/reservationLeadTime
+  stayLength:
+    description: Property. Range of number of staying nights
+    range: StayLength
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/stayLength
+  totalExpenditure:
+    description: Property. Range of total amount of money invoiced by the lodging
+      establishment
+    range: TotalExpenditure
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/totalExpenditure
+  totalAccommodationAndBoardExpenditure:
+    description: Property. Range of total amount of money invoiced by the lodging
+      establishment in accommodation and board concepts
+    range: TotalAccommodationAndBoardExpenditure
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/totalAccommodationAndBoardExpenditure
+  totalExtraExpenditure:
+    description: Property. Range of total amount of money invoiced by the lodging
+      establishment in extra concepts
+    range: TotalExtraExpenditure
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/totalExtraExpenditure
+  avgDailyExpenditure:
+    description: Property. Range of avg daily amount of money invoiced by the lodging
+      establishment
+    range: AvgDailyExpenditure
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/avgDailyExpenditure
+  avgDailyAccommodationAndBoardExpenditure:
+    description: Property. Range of avg daily amount of money invoiced by the lodging
+      establishment in accommodation and board concepts
+    range: AvgDailyAccommodationAndBoardExpenditure
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/avgDailyAccommodationAndBoardExpenditure
+  avgDailyExtraExpenditure:
+    description: Property. Range of avg daily amount of money invoiced by the lodging
+      establishment in extra concepts
+    range: AvgDailyExtraExpenditure
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.TourismDestinations@6d78cb4ff0c1a7d16dc0c1bab7266e40d4b3a00c
+    slot_uri: https://smartdatamodels.org/dataModel.TourismDestinations/avgDailyExtraExpenditure
+enums:
+  gender_options:
+    name: gender_options
+    permissible_values:
+      Female:
+        text: Female
+      Male:
+        text: Male
+  travelPartyComposition_options:
+    name: travelPartyComposition_options
+    permissible_values:
+      Single:
+        text: Single
+      Single parent:
+        text: Single parent
+      Family:
+        text: Family
+      Couple:
+        text: Couple
+      Friends/Relatives:
+        text: Friends/Relatives
+  lodgingType_options:
+    name: lodgingType_options
+    permissible_values:
+      Hotel:
+        text: Hotel
+      Resort:
+        text: Resort
+      Hostel:
+        text: Hostel
+      Motel:
+        text: Motel
+      B&B:
+        text: B&B
+      Aparthotel:
+        text: Aparthotel
+      Lodge:
+        text: Lodge
+  lodgingCategory_options:
+    name: lodgingCategory_options
+    permissible_values:
+      '1':
+        text: '1'
+      1 Superior:
+        text: 1 Superior
+      '2':
+        text: '2'
+      2 Superior:
+        text: 2 Superior
+      '3':
+        text: '3'
+      3 Superior:
+        text: 3 Superior
+      '4':
+        text: '4'
+      4 Superior:
+        text: 4 Superior
+      '5':
+        text: '5'
+      5 Superior:
+        text: 5 Superior
+  roomOfStayType_options:
+    name: roomOfStayType_options
+    permissible_values:
+      Apartment:
+        text: Apartment
+      Bungalow:
+        text: Bungalow
+      Studio:
+        text: Studio
+      Single:
+        text: Single
+      Double:
+        text: Double
+      Family:
+        text: Family
+      Junior Suite:
+        text: Junior Suite
+      Senior/Executive Suite:
+        text: Senior/Executive Suite
+      Royal/Presidential Suite:
+        text: Royal/Presidential Suite
+  board_options:
+    name: board_options
+    permissible_values:
+      RO:
+        text: RO
+      BB:
+        text: BB
+      HB:
+        text: HB
+      FB:
+        text: FB
+      AI:
+        text: AI

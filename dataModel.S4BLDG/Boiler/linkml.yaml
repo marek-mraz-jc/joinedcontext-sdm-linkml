@@ -1,0 +1,346 @@
+id: https://github.com/smart-data-models/dataModel.S4BLDG/Boiler
+name: Boiler
+title: Smart data models - Boiler schema
+description: A boiler is a closed, pressure-rated vessel in which water or other fluid
+  is heated using an energy source such as natural gas, heating oil, or electricity.
+  The fluid in the vessel is then circulated out of the boiler for use in various
+  processes or heating applications.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.S4BLDG
+  spec.source.path: Boiler/schema.json
+  spec.source.commit: 06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.S4BLDG/master/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"], "alternateName":
+    {"type": "Property", "value": "Boiler type 2"}, "dataProvider": {"type": "Property",
+    "value": "IFC file"}, "dateCreated": {"type": "Property", "value": "2023-01-25T17:50:43Z"},
+    "dateModified": {"type": "Property", "value": "2023-01-25T23:43:57Z"}, "description":
+    {"type": "Property", "value": "Boiler of limited Boiler types"}, "energySource":
+    {"type": "Property", "value": "Sri Lanka"}, "hasManufacturer": {"type": "Property",
+    "value": "Boiler Company Inc."}, "hasModel": {"type": "Property", "value": "Boiler
+    0.1.2"}, "heatTransferSurfaceArea": {"observedAt": "2023-01-25T19:16:12Z", "type":
+    "Property", "unitCode": "m2", "value": 0.4182368568397056}, "id": "urn:ngsi-ld:Boiler:4f7a4533-13d0-4de0-b5e9-72dee067176a",
+    "isContainedInBuildingSpace": {"object": "urn:ngsi-ld:BuildingSpace:cfc926aa-ae2a-411e-b3d4-c315d7d19d9b",
+    "type": "Relationship"}, "isContainedInPhysicalObject": {"object": "urn:ngsi-ld:PhysicalObject:5e682b37-bcc1-441a-ad19-80615c70a84f",
+    "type": "Relationship"}, "isSubSystemOf": [{"object": "urn:ngsi-ld:System:ba691c15-807f-48fb-b963-99961fd81a95",
+    "type": "Relationship"}, {"object": "urn:ngsi-ld:System:227bcf8f-170f-41ff-a88d-1e1cb67da411",
+    "type": "Relationship"}, {"object": "urn:ngsi-ld:System:7868b4ac-6685-4b3e-85ef-6494c909409c",
+    "type": "Relationship"}], "isWaterStorageHeater": {"type": "Property", "value":
+    false}, "name": {"type": "Property", "value": "Boiler"}, "nominalEnergyConsumption":
+    {"observedAt": "2023-01-25T23:06:57Z", "type": "Property", "unitCode": "J/s",
+    "value": 0.5252685918504294}, "nominalPartLoadRatio": {"observedAt": "2023-01-25T22:37:37Z",
+    "type": "Property", "unitCode": "NA", "value": 0.481958764350527}, "operatingMode":
+    {"type": "Property", "value": "Auto Loan Account"}, "outletTemperatureMax": {"observedAt":
+    "2023-01-25T17:03:10Z", "type": "Property", "unitCode": "K", "value": 0.2786304815176084},
+    "outletTemperatureMin": {"observedAt": "2023-01-26T02:55:50Z", "type": "Property",
+    "unitCode": "K", "value": 0.4041488945350036}, "pressureRating": {"observedAt":
+    "2023-01-25T18:00:19Z", "type": "Property", "unitCode": "N/m2", "value": 0.5561857737231611},
+    "source": {"type": "Property", "value": "Import"}, "type": "Boiler", "waterInletTemperatureMax":
+    {"observedAt": "2023-01-26T03:34:53Z", "type": "Property", "unitCode": "K", "value":
+    0.242404197934733}, "waterInletTemperatureMin": {"observedAt": "2023-01-26T04:06:01Z",
+    "type": "Property", "unitCode": "K", "value": 0.46028861347866734}, "waterStorageCapacity":
+    {"observedAt": "2023-01-26T10:18:01Z", "type": "Property", "unitCode": "m3", "value":
+    0.22263600675421202}}'
+classes:
+  Boiler:
+    class_uri: https://smartdatamodels.org/dataModel.S4BLDG/Boiler
+    description: A boiler is a closed, pressure-rated vessel in which water or other
+      fluid is heated using an energy source such as natural gas, heating oil, or
+      electricity. The fluid in the vessel is then circulated out of the boiler for
+      use in various processes or heating applications.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - energySource
+    - hasManufacturer
+    - hasModel
+    - heatTransferSurfaceArea
+    - isContainedInBuildingSpace
+    - isContainedInPhysicalObject
+    - isSubSystemOf
+    - isWaterStorageHeater
+    - name
+    - nominalEnergyConsumption
+    - nominalPartLoadRatio
+    - operatingMode
+    - outletTemperatureMax
+    - outletTemperatureMin
+    - owner
+    - pressureRating
+    - seeAlso
+    - source
+    - waterInletTemperatureMax
+    - waterInletTemperatureMin
+    - waterStorageCapacity
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/areaServed
+  energySource:
+    description: Property. The source of energy. Enumeration defining the energy source
+      or fuel combusted to generate heat
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/energySource
+  heatTransferSurfaceArea:
+    description: Property. Total heat transfer area of the vessel. Usually measured
+      in square metre (m2). Units:'m2'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/heatTransferSurfaceArea
+  isWaterStorageHeater:
+    description: Property. This is used to identify if the boiler has storage capacity
+      (TRUE). If FALSE, then there is no storage capacity built into the boiler, such
+      as an instantaneous hot water heater
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isWaterStorageHeater
+  nominalEnergyConsumption:
+    description: Property. Nominal fuel consumption rate required to produce the total
+      boiler heat output. Usually measured in Watts (W, J/s). Units:'W'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/nominalEnergyConsumption
+    unit:
+      ucum_code: W
+      exact_mappings:
+      - ucefact:WTT
+      - qudt-unit:W
+      has_quantity_kind: qudt-quantkind:Power
+  nominalPartLoadRatio:
+    description: Property. Allowable part load ratio range
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/nominalPartLoadRatio
+  operatingMode:
+    description: Property. Identifies the operating mode of the boiler
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/operatingMode
+  outletTemperatureMax:
+    description: Property. Allowable outlet temperature of either the water or the
+      steam. Usually measured in degrees Kelvin (K). Units:'ºK'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/outletTemperatureMax
+  outletTemperatureMin:
+    description: Property. Allowable outlet temperature of either the water or the
+      steam. Usually measured in degrees Kelvin (K). Units:'ºK'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/outletTemperatureMin
+  pressureRating:
+    description: Property. Nominal pressure rating of the boiler as rated by the agency
+      having jurisdiction. Usually measured in Pascals (Pa, N/m2). Units:'Pa'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/pressureRating
+  waterInletTemperatureMax:
+    description: Property. Allowable water inlet temperature range. Usually measured
+      in degrees Kelvin (K). Units:'ºK'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/waterInletTemperatureMax
+  waterInletTemperatureMin:
+    description: Property. Allowable water inlet temperature range. Usually measured
+      in degrees Kelvin (K). Units:'ºK'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/waterInletTemperatureMin
+  waterStorageCapacity:
+    description: Property. Water storage capacity. Usually measured in cubic metre
+      (m3). Units:'ºm3'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/waterStorageCapacity
+  isContainedInBuildingSpace:
+    description: Relationship. An entity used to define the physical spaces of the
+      building. A building space contains devices or building objects. (BuildingSpace)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isContainedInBuildingSpace
+  isContainedInPhysicalObject:
+    description: Relationship. Any Object that has a proper space region.  (Definition
+      extracted from DUL ontology) (PhysicalObject)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isContainedInPhysicalObject
+  isSubSystemOf:
+    description: Relationship. A reference to a system(s) that this Physical Object
+      is part of
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isSubSystemOf
+  hasManufacturer:
+    description: Property. A relationship identifying the manufacturer of an entity
+      (e.g., device). The value is expected to be a string or a string with language
+      tag
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/hasManufacturer
+  hasModel:
+    description: Property. A relationship identifying the model of an entity (e.g.,
+      device). The value is expected to be a string or a string with language tag
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/hasModel

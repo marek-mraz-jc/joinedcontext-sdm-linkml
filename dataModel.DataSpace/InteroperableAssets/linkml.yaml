@@ -1,0 +1,343 @@
+id: https://github.com/smart-data-models/dataModel.DataSpace/InteroperableAssets
+name: InteroperableAssets
+title: Smart Data Models - SUBJECT / DATAMODEL
+description: List of the interoperable assets that a data space disclose to other
+  data space to enable the federation or interconnection
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.DataSpace
+  spec.source.path: InteroperableAssets/schema.json
+  spec.source.commit: 6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smart-data-models.github.io/dataModel.DataSpace/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Spain", "addressLocality":
+    "Madrid", "addressRegion": "Madrid", "district": "", "postOfficeBoxNumber": "",
+    "postalCode": "28050", "streetAddress": "", "streetNr": ""}}, "alternateName":
+    {"type": "Property", "value": ""}, "areaServed": {"type": "Property", "value":
+    ""}, "dataExchangeProtocols": {"type": "Property", "value": [{"description": "A
+    Linked Data Event Stream (LDES) is a technical standard that applies linked data
+    principles to data streams, allowing for the exchange of data between silos in
+    a sustainable and cost-effective manner. It is defined as a collection of immutable
+    objects, called LDES members, described using the Resource Description Framework
+    (RDF). LDES enables data publishers to publish their datasets as append-only collections,
+    allowing consumers to replicate the full dataset and keep it synchronized, while
+    also facilitating real-time updates and improving data usability and findability",
+    "documentation": ["https://semiceu.github.io/LinkedDataEventStreams/"], "identifier":
+    "LDES", "name": "Link Data event stream", "version": "1.0"}, {"description": "NGSI-LD
+    is an information model and API for publishing, querying, and subscribing to context
+    information, standardized by ETSI to facilitate open exchange and sharing of structured
+    data across various domains. It represents context information as entities with
+    properties and relationships, using a property graph model with semantics based
+    on RDF and the semantic web framework. NGSI-LD builds upon previous context management
+    frameworks and can be serialized using JSON-LD, making it compatible with linked
+    data principles and allowing for unique IRI identifiers for entities and relationships",
+    "documentation": ["https://www.etsi.org/deliver/etsi_gs/CIM/001_099/009/01.06.01_60/gs_CIM009v010601p.pdf"],
+    "identifier": "NGSI-LD.1.6", "name": "NGSI LD", "version": "1.6"}]}, "dataModelSources":
+    {"type": "Property", "value": [{"description": "The Smart Data Models initiative
+    is a collaborative effort led by FIWARE Foundation, TM Forum, IUDX, and OASC to
+    create and promote standardized, interoperable data models across multiple sectors.
+    It aims to support a digital marketplace of smart solutions by developing common,
+    royalty-free data models that are publicly available. The initiative focuses on
+    using JSON Schema as a core component, enabling exports in various formats to
+    enhance compatibility with semantic and linked data approaches. By providing these
+    open-licensed, standardized data models, the initiative seeks to combat data silos,
+    improve data sharing, and facilitate application portability across different
+    platforms and sectors, ultimately fostering innovation and interoperability in
+    smart solutions.", "documentation": ["https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherObserved/doc/spec.md"],
+    "identifier": "Smart-Data-Models", "internalIdentifier": "WeatherObserved", "name":
+    "Smart Data Models", "version": "0.3"}]}, "dataProvider": {"type": "Property",
+    "value": ""}, "dataSpaceIdentifier": {"type": "Property", "value": "SM4RTENANCE"},
+    "dateCreated": {"type": "Property", "value": {"@type": "DateTime", "@value": "2024-04-22T01:37:25Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2024-04-24T17:29:14Z"}}, "description": {"type": "Property", "value": ""}, "id":
+    "urn:ngsi-ld:InteroperableAssets:id:WGEQ:22085426", "location": {"type": "GeoProperty",
+    "value": {"coordinates": [40.41, 3.7033], "type": "Point"}}, "name": {"type":
+    "Property", "value": ""}, "source": {"type": "Property", "value": "Sm4rtenance
+    Project"}, "type": "InteroperableAssets"}'
+classes:
+  InteroperableAssets:
+    class_uri: https://smartdatamodels.org/dataModel.DataSpace/InteroperableAssets
+    description: List of the interoperable assets that a data space disclose to other
+      data space to enable the federation or interconnection
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataExchangeProtocols
+    - dataModelSources
+    - dataProvider
+    - dataSpaceIdentifier
+    - dateCreated
+    - dateModified
+    - description
+    - name
+    - owner
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/areaServed
+  dataSpaceIdentifier:
+    description: Property. Data space unique identifier. Enum:'AD4GD, AgDataValue,
+      AgriDataSpace, AI4EOSC, AI4Europeana, AquaINFRA, B-Cubed, Blue-Cloud2026, CrackSense,
+      CRAFT-OA, DataCellar, DataSpace4.0, DATES, DE-BIAS, deployEMDS, Divine, DS4SSCC,
+      DS4SSCC-DEP, EDDIE, EOSC4Cancer, EOSC-ENTRUST, EOSCBeyond, EOSCFocus, EuroScienceGateway,
+      Eureka3D, EVERSE, FAIR-EASE, FAIR-IMPACT, FAIRCORE4EOSC, FAIRiCUBE, GDI, GraspOS,
+      GREAT, IntNET, OMEGA-X, OSCARS, OSTrails, PrepDSpace4Mobility, RAISE, RDATIGER,
+      ScaleAgData, SciLake, Skills4EOSC, SM4RTENANCE, SIESTA, Synergies, TITAN, UNDERPIN,
+      USAGE'
+    range: dataSpaceIdentifier_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataModel.DataSpace/dataSpaceIdentifier
+  dataExchangeProtocols:
+    description: Property. List of the data exchange protocols enabled by the data
+      space to be used in the connection with other participants
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataModel.DataSpace/dataExchangeProtocols
+  dataModelSources:
+    description: Property. List of the semantic data sources potentially used by the
+      data assets in the data space
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DataSpace@6b697c43d625441ebd057ef5f88e27fb2d01c2fd
+    slot_uri: https://smartdatamodels.org/dataModel.DataSpace/dataModelSources
+enums:
+  dataSpaceIdentifier_options:
+    name: dataSpaceIdentifier_options
+    permissible_values:
+      AD4GD:
+        text: AD4GD
+      AgDataValue:
+        text: AgDataValue
+      AgriDataSpace:
+        text: AgriDataSpace
+      AI4EOSC:
+        text: AI4EOSC
+      AI4Europeana:
+        text: AI4Europeana
+      AquaINFRA:
+        text: AquaINFRA
+      B-Cubed:
+        text: B-Cubed
+      Blue-Cloud2026:
+        text: Blue-Cloud2026
+      CrackSense:
+        text: CrackSense
+      CRAFT-OA:
+        text: CRAFT-OA
+      DataCellar:
+        text: DataCellar
+      DataSpace4.0:
+        text: DataSpace4.0
+      DATES:
+        text: DATES
+      DE-BIAS:
+        text: DE-BIAS
+      deployEMDS:
+        text: deployEMDS
+      Divine:
+        text: Divine
+      DS4SSCC:
+        text: DS4SSCC
+      DS4SSCC-DEP:
+        text: DS4SSCC-DEP
+      EDDI:
+        text: EDDI
+      EOSC4Cancer:
+        text: EOSC4Cancer
+      EOSC-ENTRUST:
+        text: EOSC-ENTRUST
+      EOSCBeyond:
+        text: EOSCBeyond
+      EOSCFocus:
+        text: EOSCFocus
+      EuroScienceGateway:
+        text: EuroScienceGateway
+      Eureka3D:
+        text: Eureka3D
+      EVERSE:
+        text: EVERSE
+      FAIR-EASE:
+        text: FAIR-EASE
+      FAIR-IMPACT:
+        text: FAIR-IMPACT
+      FAIRCORE4EOSC:
+        text: FAIRCORE4EOSC
+      FAIRiCUBE:
+        text: FAIRiCUBE
+      GDI:
+        text: GDI
+      GraspOS:
+        text: GraspOS
+      GREAT:
+        text: GREAT
+      IntNET:
+        text: IntNET
+      OMEGA-X:
+        text: OMEGA-X
+      OSCARS:
+        text: OSCARS
+      OSTrails:
+        text: OSTrails
+      PrepDSpace4Mobility:
+        text: PrepDSpace4Mobility
+      RAISE:
+        text: RAISE
+      RDATIGER:
+        text: RDATIGER
+      ScaleAgData:
+        text: ScaleAgData
+      SciLake:
+        text: SciLake
+      Skills4EOSC:
+        text: Skills4EOSC
+      SM4RTENANCE:
+        text: SM4RTENANCE
+      SIESTA:
+        text: SIESTA
+      Synergies:
+        text: Synergies
+      TITAN:
+        text: TITAN
+      UNDERPIN:
+        text: UNDERPIN
+      USAGE:
+        text: USAGE

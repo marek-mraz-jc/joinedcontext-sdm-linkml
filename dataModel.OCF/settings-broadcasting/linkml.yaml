@@ -1,0 +1,266 @@
+id: https://github.com/smart-data-models/dataModel.OCF/settings-broadcasting
+name: settings-broadcasting
+title: Device Settings Broadcasting Resource Type
+description: Smart Data Models Program adaptation of the original IoTData data Models.
+  Gets current device broadcasting settings.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: settings-broadcasting/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Main glass day expect
+    move western. Win machine suddenly professor expect. Affect present cold president
+    how. Responsibility nat", "addressLocality": "Miss home respond family start environmental
+    population. Scientist mention compare north when personal. Defense successful",
+    "addressRegion": "Focus themselves outside provide card chair report. Machine
+    art data guess summer se", "district": "Year mean TV huge whose. Consid", "postOfficeBoxNumber":
+    "State partner door market wide yourself. Line development money buy check include
+    likely serious. Know security stop field tend police.", "postalCode": "Tend political
+    card visit. Up behavior federal fall million history not market.", "streetAddress":
+    "Tree set environm", "streetNr": "Dream some now eye recognize democratic production.
+    Plan need think relationship. Rather culture continue family everyone society
+    writer nothing. Those rather role bad."}}, "alternateName": {"type": "Property",
+    "value": "Yes create vo"}, "antenna": {"type": "Property", "value": "The billion"},
+    "areaServed": {"type": "Property", "value": "Gun good deep them. Here you police
+    tough public economic friend."}, "auto-program": {"type": "Property", "value":
+    true}, "carrier-info": {"type": "Property", "value": "Art when prove discuss medical
+    blood"}, "dataProvider": {"type": "Property", "value": "What challenge myself
+    business something outside. Half hear any all relationship "}, "dateCreated":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "1981-06-24T23:59:36Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "1978-03-16T10:29:14Z"}}, "description": {"type": "Property", "value": "Structure
+    smile nice goal. Pretty first here say sometimes."}, "id": "urn:ngsi-ld:settings-broadcasting:id:YWMD:14174205",
+    "if": {"type": "Property", "value": ["oic.if.baseline", "oic.if.rw"]}, "location":
+    {"type": "GeoProperty", "value": {"coordinates": [20.587973, 69.82222], "type":
+    "Point"}}, "location-info": {"type": "Property", "value": "Poor kid dream be street
+    ed"}, "name": {"type": "Property", "value": "Charge commercial development tough
+    technology make often bit. Pick th"}, "owner": {"type": "Property", "value": ["urn:ngsi-ld:settings-broadcasting:items:IYDV:67275654",
+    "urn:ngsi-ld:settings-broadcasting:items:NZOU:92414940"]}, "rt": {"type": "Property",
+    "value": ["oic.r.settings.broadcasting"]}, "seeAlso": {"type": "Property", "value":
+    ["urn:ngsi-ld:settings-broadcasting:items:QQFK:04713049"]}, "source": {"type":
+    "Property", "value": "Probably turn reach not north answer. Course occur easy
+    give concern. Research someone lawyer situation pro"}, "supported-antennas": {"type":
+    "Property", "value": ["Scene money move that south beyond. Up candidate up test.
+    Around imagine quite commercial minute."]}, "type": "settings-broadcasting"}'
+classes:
+  settings-broadcasting:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/settings-broadcasting
+    description: Smart Data Models Program adaptation of the original IoTData data
+      Models. Gets current device broadcasting settings.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - antenna
+    - areaServed
+    - auto-program
+    - carrier-info
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - if
+    - location-info
+    - name
+    - owner
+    - rt
+    - seeAlso
+    - source
+    - supported-antennas
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. The Resource Type of Device Settings for broadcasting
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  if:
+    description: Property. No description is available in the original
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+  antenna:
+    description: Property. Type of antenna
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/antenna
+  supported-antennas:
+    description: Property. The array of possible antennas the device supports. This
+      property should be added if antenna is supported.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/supported-antennas
+  location-info:
+    description: Property. Location information of the broadcast system.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/location-info
+  carrier-info:
+    description: Property. Carrier information of the broadcast system.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/carrier-info
+  auto-program:
+    description: Property. Scan for channels using Auto Program.
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/auto-program
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.settings.broadcasting:
+        text: oic.r.settings.broadcasting
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.rw:
+        text: oic.if.rw
+      oic.if.baseline:
+        text: oic.if.baseline

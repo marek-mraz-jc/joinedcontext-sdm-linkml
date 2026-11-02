@@ -1,0 +1,323 @@
+id: https://github.com/smart-data-models/dataModel.ManufacturingMachine/ManufacturingMachineOperation
+name: ManufacturingMachineOperation
+title: Smart Data models - Machine-Operation schema
+description: This entity contains a harmonised description of a generic machine operation.
+  This entity is primarily associated with the industry segment and related IoT applications.
+  Each MachineOperation instance will be related to a specific Machine instance.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ManufacturingMachine
+  spec.source.path: ManufacturingMachineOperation/schema.json
+  spec.source.commit: bacbb53da309886b27f71db70115100caf61a1b8
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.ManufacturingMachine/master/context.jsonld"],
+    "commandSequence": {"type": "Property", "value": ["Select inks", "Prepare print
+    masks", "Print shirts", "Clean print heads and rollers"]}, "dataProvider": {"type":
+    "Property", "value": "https://provider.example.com"}, "description": {"type":
+    "Property", "value": "Printing of 1000 T-shirts"}, "endedAt": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2016-08-28T10:18:16Z"}}, "id": "urn:ngsi-ld:MachineOperation:27577638-bd8a-4732-b418-fc8b949a0b0f",
+    "machine": {"object": "urn:ngsi-ld:Machine:2033a7c7-d31b-48e7-91c2-014dc426c29e",
+    "type": "Relationship"}, "operationOutput": {"type": "Property", "value": {"Faults":
+    0, "Units Printed": 1000}}, "operationType": {"type": "Property", "value": ["process"]},
+    "operator": {"object": "urn:ngsi-ld:Person:fd6f0070-47d7-11e8-a26c-0784612b9393",
+    "type": "Relationship"}, "plannedEndAt": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "2016-08-28T10:18:16Z"}}, "plannedStartAt": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2016-08-22T10:18:16Z"}}, "result": {"type":
+    "Property", "value": "ok"}, "source": {"type": "Property", "value": "https://source.example.com"},
+    "startedAt": {"type": "Property", "value": {"@type": "DateTime", "@value": "2016-08-22T10:18:16Z"}},
+    "status": {"type": "Property", "value": "finished"}, "type": "ManufacturingMachineOperation"}'
+classes:
+  ManufacturingMachineOperation:
+    class_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/ManufacturingMachineOperation
+    description: This entity contains a harmonised description of a generic machine
+      operation. This entity is primarily associated with the industry segment and
+      related IoT applications. Each MachineOperation instance will be related to
+      a specific Machine instance.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - commandSequence
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - endedAt
+    - machine
+    - name
+    - operationOutput
+    - operationType
+    - operator
+    - owner
+    - plannedEndAt
+    - plannedStartAt
+    - result
+    - seeAlso
+    - source
+    - startedAt
+    - status
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+  OperationOutput:
+    description: Property. A custom property describing the output data of the operation.
+      The properties of the schema of the output highly depends the machine model
+    attributes:
+      unitsPrinted:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      faults:
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/areaServed
+  machine:
+    description: Relationship. A reference to the associated Machine for this machine
+      operation
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/machine
+  operationType:
+    description: Property. Defines the type of operation conducted/ requested. This
+      will be one of a defined list of operation types specific to the machine/ machineModel.Including
+      these. Enum:'process, setup，maintenance, repair，breakdown'. The list of operation
+      types highly depends on the machine model
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/operationType
+  result:
+    description: Property. The result of the operation. One of these. Enum:'ok, success,
+      suspended, aborted, failed'
+    range: result_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/result
+  plannedStartAt:
+    description: Property. The planned start date/timestamp for the operation. Note
+      that this is advisory and the actual time the operation starts may be before
+      or after the planned start
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/plannedStartAt
+  plannedEndAt:
+    description: Property. The planned end date/timestamp for the operation. Note
+      that this is advisory and the actual time the operation finishes may be before
+      or after the planned end
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/plannedEndAt
+  status:
+    description: Property. A choice from an enumerated list describing the status.
+      One of these. Enum:'planned, ongoing, finished, scheduled, cancelled'
+    range: status_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://uri.etsi.org/ngsi-ld/status
+  operator:
+    description: Relationship. Reference to the operator conducting the operation
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/operator
+  startedAt:
+    description: Property. Timestamp when the operation actually started to be performed
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/startedAt
+  endedAt:
+    description: Property. Timestamp when the operation actually finished
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/endedAt
+  commandSequence:
+    description: Property. The command sequence executed/ requested for the machine
+      in a representation format relevant to the machine
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/commandSequence
+  operationOutput:
+    description: Property. A custom property describing the output data of the operation.
+      The properties of the schema of the output highly depends the machine model
+    range: OperationOutput
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/operationOutput
+enums:
+  result_options:
+    name: result_options
+    permissible_values:
+      aborted:
+        text: aborted
+      failed:
+        text: failed
+      ok:
+        text: ok
+      success:
+        text: success
+      suspended:
+        text: suspended
+  status_options:
+    name: status_options
+    permissible_values:
+      cancelled:
+        text: cancelled
+      finished:
+        text: finished
+      ongoing:
+        text: ongoing
+      planned:
+        text: planned
+      scheduled:
+        text: scheduled

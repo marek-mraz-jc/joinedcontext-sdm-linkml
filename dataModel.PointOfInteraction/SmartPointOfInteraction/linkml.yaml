@@ -1,0 +1,244 @@
+id: https://github.com/smart-data-models/dataModel.PointOfInteraction/SmartPointOfInteraction
+name: SmartPointOfInteraction
+title: Smart Data Models - Smart Point of Interaction
+description: Smart Data Models Smart Point of Interaction entity schema intended for
+  validation tools
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.PointOfInteraction
+  spec.source.path: SmartPointOfInteraction/schema.json
+  spec.source.commit: c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/context.jsonld"],
+    "applicationUrl": {"type": "Property", "value": "http://www.example.org"}, "areaCovered":
+    {"type": "Property", "value": {"coordinates": [[[25.774, -80.19], [18.466, -66.118],
+    [32.321, -64.757], [25.774, -80.19]]], "type": "Polygon"}}, "availability": {"type":
+    "Property", "value": "Tu,Th 16:00-20:00"}, "category": {"type": "Property", "value":
+    ["co-creation"]}, "id": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326", "refRelatedEntity":
+    {"object": ["urn:ngsi-ld:RelatedEntity:POI-PlazaCazorla-3123"], "type": "Relationship"},
+    "refSmartSpot": {"object": ["urn:ngsi-ld:SmartSpot:SSPOT-F94C58E29DD5", "urn:ngsi-ld:SmartSpot:SSPOT-F94C53E21DD2",
+    "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9"], "type": "Relationship"}, "type":
+    "SmartPointOfInteraction"}'
+classes:
+  SmartPointOfInteraction:
+    class_uri: https://smartdatamodels.org/dataModel.PointOfInteraction/SmartPointOfInteraction
+    description: Smart Data Models Smart Point of Interaction entity schema intended
+      for validation tools
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - applicationUrl
+    - areaCovered
+    - areaServed
+    - availability
+    - category
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - name
+    - owner
+    - refRelatedEntity
+    - refSmartSpot
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+    slot_uri: https://smartdatamodels.org/areaServed
+  category:
+    description: Property. Defines the type of interaction. Enum:'co-creation, entertainment,
+      information, infotainment'. Model:'http://schema.org/Text'
+    range: category_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+    slot_uri: https://smartdatamodels.org/dataModel.PointOfInteraction/category
+  areaCovered:
+    description: GeoProperty. Geojson reference to the item. It can be Point, LineString,
+      Polygon, MultiPoint, MultiLineString or MultiPolygon
+    annotations:
+      ngsi_ld_kind: GeoProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+    slot_uri: https://smartdatamodels.org/dataModel.PointOfInteraction/areaCovered
+  applicationUrl:
+    description: Property. This field specifies the real URL containing the solution
+      or application (information, co-creation, etc) while the SmartSpot 'announcedUrl'
+      field specifies the broadcast URL which could be this same URL or a shortened
+      one. Model:'https://schema.org/URL'
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+    slot_uri: https://smartdatamodels.org/dataModel.PointOfInteraction/applicationUrl
+  availability:
+    description: 'Property. Specifies the time intervals in which this interactive
+      service is generally available. It is noteworthy that Smart Spots have their
+      own real availability in order to allow advanced configurations. The syntax
+      must be conformant with schema.org. Model:''https://schema.org/openingHours''.
+      For instance, a service which is only active on weekdays will be encoded as
+      ''availability'': ''Mo,Tu,We,Th,Fr,Sa 09:00-20:00'''
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+    slot_uri: https://smartdatamodels.org/dataModel.PointOfInteraction/availability
+  refRelatedEntity:
+    description: Relationship. List of entities improved with this Smart Point of
+      Interaction. The entity type could be any such as a Parking, Point of Interest,
+      etc.Model:'http://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+    slot_uri: https://smartdatamodels.org/dataModel.PointOfInteraction/refRelatedEntity
+  refSmartSpot:
+    description: Property.  References to the Smart Spot devices which are part of
+      the Smart Point of Interaction. Model:'https://schema.org/URL'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInteraction@c1389d28e92c5b67a398fd710c5ada970a2e3fcb
+    slot_uri: https://smartdatamodels.org/dataModel.PointOfInteraction/refSmartSpot
+enums:
+  category_options:
+    name: category_options
+    permissible_values:
+      co-creation:
+        text: co-creation
+      entertainment:
+        text: entertainment
+      information:
+        text: information
+      infotainment:
+        text: infotainment

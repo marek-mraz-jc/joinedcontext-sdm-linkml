@@ -1,0 +1,347 @@
+id: https://github.com/smart-data-models/dataModel.S4BLDG/Filter
+name: Filter
+title: Smart data models - Filter schema
+description: A filter is an apparatus used to remove particulate or gaseous matter
+  from fluids and gases.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.S4BLDG
+  spec.source.path: Filter/schema.json
+  spec.source.commit: 06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.S4BLDG/master/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"], "alternateName":
+    {"type": "Property", "value": "Filter type 2"}, "dataProvider": {"type": "Property",
+    "value": "IFC file"}, "dateCreated": {"type": "Property", "value": "2023-01-25T21:32:07Z"},
+    "dateModified": {"type": "Property", "value": "2023-01-25T21:47:48Z"}, "description":
+    {"type": "Property", "value": "Filter of limited Filter types"}, "finalResistance":
+    {"observedAt": "2023-01-26T01:00:57Z", "type": "Property", "unitCode": "N/m2",
+    "value": 0.5605621121413891}, "fluidFlowRateMax": {"observedAt": "2023-01-26T09:29:26Z",
+    "type": "Property", "unitCode": "m3/s", "value": 0.8457030696896928}, "fluidFlowRateMin":
+    {"observedAt": "2023-01-26T01:24:07Z", "type": "Property", "unitCode": "m3/s",
+    "value": 0.4281237576056126}, "hasManufacturer": {"type": "Property", "value":
+    "Filter Company Inc."}, "hasModel": {"type": "Property", "value": "Filter 0.1.2"},
+    "id": "urn:ngsi-ld:Filter:fbeb6c10-5a65-4f37-b472-05630b596d96", "initialResistance":
+    {"observedAt": "2023-01-26T13:16:00Z", "type": "Property", "unitCode": "N/m2",
+    "value": 0.9855925634968424}, "isContainedInBuildingSpace": {"object": "urn:ngsi-ld:BuildingSpace:3ad9289e-2153-42f6-821a-e050b0cece56",
+    "type": "Relationship"}, "isContainedInPhysicalObject": {"object": "urn:ngsi-ld:PhysicalObject:14828a20-966b-491d-8c5d-06e0e9323fe3",
+    "type": "Relationship"}, "isSubSystemOf": [{"object": "urn:ngsi-ld:System:4f4ca1e9-532c-4518-b84b-92e00d43255a",
+    "type": "Relationship"}, {"object": "urn:ngsi-ld:System:4be15aec-065d-404f-aedd-e477a5a61f23",
+    "type": "Relationship"}, {"object": "urn:ngsi-ld:System:7e718726-9abe-49e6-ae69-96d1277a5af0",
+    "type": "Relationship"}], "name": {"type": "Property", "value": "Filter"}, "nominalFilterFaceVelocity":
+    {"observedAt": "2023-01-26T03:08:23Z", "type": "Property", "unitCode": "m/s",
+    "value": 0.6912281080254741}, "nominalFlowRate": {"observedAt": "2023-01-25T15:48:08Z",
+    "type": "Property", "unitCode": "m3/s", "value": 0.022821238860702198}, "nominalMediaSurfaceVelocity":
+    {"observedAt": "2023-01-25T22:13:37Z", "type": "Property", "unitCode": "m/s",
+    "value": 0.5684154129668265}, "nominalParticleGeometricMeanDiameter": {"observedAt":
+    "2023-01-26T07:32:19Z", "type": "Property", "unitCode": "mm", "value": 0.229698552370729},
+    "nominalParticleGeometricStandardDeviation": {"observedAt": "2023-01-26T02:48:53Z",
+    "type": "Property", "unitCode": "NA", "value": 0.8264025547190669}, "nominalPressureDrop":
+    {"observedAt": "2023-01-25T19:24:30Z", "type": "Property", "unitCode": "N/m2",
+    "value": 0.6662603303962529}, "operationTemperatureMax": {"observedAt": "2023-01-26T00:52:23Z",
+    "type": "Property", "unitCode": "K", "value": 0.8600599815414807}, "operationTemperatureMin":
+    {"observedAt": "2023-01-25T18:39:35Z", "type": "Property", "unitCode": "K", "value":
+    0.11197463391152895}, "source": {"type": "Property", "value": "Import"}, "type":
+    "Filter", "weight": {"observedAt": "2023-01-26T06:38:32Z", "type": "Property",
+    "unitCode": "g", "value": 0.39067890635291025}}'
+classes:
+  Filter:
+    class_uri: https://smartdatamodels.org/dataModel.S4BLDG/Filter
+    description: A filter is an apparatus used to remove particulate or gaseous matter
+      from fluids and gases.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - finalResistance
+    - fluidFlowRateMax
+    - fluidFlowRateMin
+    - hasManufacturer
+    - hasModel
+    - initialResistance
+    - isContainedInBuildingSpace
+    - isContainedInPhysicalObject
+    - isSubSystemOf
+    - name
+    - nominalFilterFaceVelocity
+    - nominalFlowRate
+    - nominalMediaSurfaceVelocity
+    - nominalParticleGeometricMeanDiameter
+    - nominalParticleGeometricStandardDeviation
+    - nominalPressureDrop
+    - operationTemperatureMax
+    - operationTemperatureMin
+    - owner
+    - seeAlso
+    - source
+    - weight
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/areaServed
+  finalResistance:
+    description: Property. Filter fluid resistance when replacement is required (i.e.,
+      Pressure drop at the maximum air flowrate across the filter when the filter
+      needs replacement per ASHRAE Standard 52.1). Usually measured in Pascals (Pa,
+      N/m2)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/finalResistance
+  fluidFlowRateMax:
+    description: Property. Possible range of fluid flowrate that can be delivered.
+      Usually measured in m3/s
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/fluidFlowRateMax
+  fluidFlowRateMin:
+    description: Property. Possible range of fluid flowrate that can be delivered.
+      Usually measured in m3/s
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/fluidFlowRateMin
+  initialResistance:
+    description: Property. Initial new filter fluid resistance (i.e., pressure drop
+      at the maximum air flowrate across the filter when the filter is new per ASHRAE
+      Standard 52.1). Usually measured in Pascals (Pa, N/m2)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/initialResistance
+  nominalFilterFaceVelocity:
+    description: Property. Filter face velocity. Usually measured in m/s
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/nominalFilterFaceVelocity
+  nominalFlowRate:
+    description: Property. Nominal fluid flow rate through the filter. Usually measured
+      in m3/s
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/nominalFlowRate
+  nominalMediaSurfaceVelocity:
+    description: Property. Average fluid velocity at the media surface. Usually measured
+      in m/s
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/nominalMediaSurfaceVelocity
+  nominalParticleGeometricMeanDiameter:
+    description: Property. Particle geometric mean diameter associated with nominal
+      efficiency. Usually measured in millimeters (mm)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/nominalParticleGeometricMeanDiameter
+  nominalParticleGeometricStandardDeviation:
+    description: 'Property. Particle geometric standard deviation associated with
+      nominal efficiency. '
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/nominalParticleGeometricStandardDeviation
+  nominalPressureDrop:
+    description: Property. Total pressure drop across the filter. Usually measured
+      in Pascals (Pa, N/m2)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/nominalPressureDrop
+  operationTemperatureMax:
+    description: Property. Allowable operation ambient (air, fluid) temperature range.
+      Usually measured in degrees Kelvin (K)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/operationTemperatureMax
+  operationTemperatureMin:
+    description: Property. Allowable operation ambient (air, fluid) temperature range.
+      Usually measured in degrees Kelvin (K)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/operationTemperatureMin
+  weight:
+    description: Property. The weight of the device. Usually measured in kilograms
+      (kg) or grams (g)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/weight
+  isContainedInBuildingSpace:
+    description: Relationship. An entity used to define the physical spaces of the
+      building. A building space contains devices or building objects. (BuildingSpace)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isContainedInBuildingSpace
+  isContainedInPhysicalObject:
+    description: Relationship. Any Object that has a proper space region.  (Definition
+      extracted from DUL ontology) (PhysicalObject)
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isContainedInPhysicalObject
+  isSubSystemOf:
+    description: Relationship. A reference to a system(s) that this Physical Object
+      is part of
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/isSubSystemOf
+  hasManufacturer:
+    description: Property. A relationship identifying the manufacturer of an entity
+      (e.g., device). The value is expected to be a string or a string with language
+      tag
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/hasManufacturer
+  hasModel:
+    description: Property. A relationship identifying the model of an entity (e.g.,
+      device). The value is expected to be a string or a string with language tag
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.S4BLDG@06b177d32ce7f9e1e02b2fcaeeae22b8636f2987
+    slot_uri: https://smartdatamodels.org/dataModel.S4BLDG/hasModel

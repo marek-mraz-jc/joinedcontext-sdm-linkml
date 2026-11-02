@@ -1,0 +1,333 @@
+id: https://github.com/smart-data-models/dataModel.SatelliteImagery/EOProduct
+name: EOProduct
+title: Satellite Imagery - EOProduct
+description: This entity contains a harmonised description of a generic EOProduct
+  made for the Satellite Imagerry domain. This entity is primarily associated with
+  the satellite products related to Earth Observation Analysis applications.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.SatelliteImagery
+  spec.source.path: EOProduct/schema.json
+  spec.source.commit: a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.SatelliteImagery/master/context.jsonld"],
+    "cloudCoverage": {"type": "Property", "unitCode": "P1", "value": 19.125499}, "id":
+    "urn:ngsi-ld:EOProduct:123", "ingestionDate": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "2021-01-18T18:29:16.884Z"}}, "location": {"type": "GeoProperty",
+    "value": {"coordinates": [[[25.4464, 41.887688], [25.855984, 43.386223], [22.690121,
+    43.786907], [22.356091, 42.288685], [25.4464, 41.887688]]], "type": "Polygon"}},
+    "orbitDirection": {"type": "Property", "value": "Descending"}, "orbitNumber":
+    {"type": "Property", "value": 93}, "processingLevel": {"type": "Property", "value":
+    "L1"}, "productFormat": {"type": "Property", "value": "SAFE"}, "productID": {"type":
+    "Property", "value": "S1B_IW_GRDH_1SDV_20210201T042950_20210201T043015_025408_0306B8_AE29"},
+    "productType": {"type": "Property", "value": "GRD"}, "productURL": {"type": "Property",
+    "value": "https://scihub.copernicus.eu/dhus/odata/v1/Products(''561d85c3-5627-4f78-84f7-05d0a0c8db9c'')/$value"},
+    "sensingDate": {"type": "Property", "value": {"@type": "DateTime", "@value": "2021-01-18T09:23:21.024Z"}},
+    "sensingStartedAt": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2021-01-18T09:23:21.024Z"}}, "sensingStoppedAt": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "2021-01-18T09:23:21.024Z"}}, "type": "EOProduct"}'
+classes:
+  EOProduct:
+    class_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/EOProduct
+    description: This entity contains a harmonised description of a generic EOProduct
+      made for the Satellite Imagerry domain. This entity is primarily associated
+      with the satellite products related to Earth Observation Analysis applications.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - cloudCoverage
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - hostedOn
+    - ingestionDate
+    - name
+    - observedBy
+    - orbitDirection
+    - orbitNumber
+    - owner
+    - processingLevel
+    - productFormat
+    - productID
+    - productType
+    - productURL
+    - seeAlso
+    - sensingDate
+    - sensingStartedAt
+    - sensingStoppedAt
+    - source
+    - timeliness
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/areaServed
+  productID:
+    description: Property. Model:'https://schema.org/Text'. A mandatory text string
+      used to declare the unique ID of the product
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/productID
+  productURL:
+    description: Property. Model:'https://schema.org/url'. A mandatory url used to
+      declare the downlaod link of the product
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/productURL
+  productType:
+    description: Property. Model:'https://schema.org/Text'. A mandatory text string
+      used to declare the type of the product
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/productType
+  processingLevel:
+    description: Property. Model:'https://schema.org/Text'. A mandatory text string
+      used to declare the processing level of the product
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/processingLevel
+  productFormat:
+    description: Property. Model:'https://schema.org/Text'. A mandatory text string
+      used to declare the format of the product
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/productFormat
+  cloudCoverage:
+    description: Property.  Model:'https://schema.org/Number'. Units:'percent'. The
+      cloud coverage percentage. All units are accepted in [CEFACT](https://www.unece.org/cefact.html)
+      code
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/cloudCoverage
+    unit:
+      ucum_code: '%'
+      exact_mappings:
+      - ucefact:P1
+      - qudt-unit:PERCENT
+      has_quantity_kind: qudt-quantkind:DimensionlessRatio
+  timeliness:
+    description: Property. Model:'https://schema.org/Text'. The timeliness of the
+      product
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/timeliness
+  orbitDirection:
+    description: Property. Model:'https://schema.org/Text'. The orbit pass orientation
+    range: orbitDirection_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/orbitDirection
+  orbitNumber:
+    description: Property.  Model:'https://schema.org/Number'. The orbit number of
+      tha satellite pass. All units are accepted in [CEFACT](https://www.unece.org/cefact.html)
+      code
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/orbitNumber
+  ingestionDate:
+    description: Property. Model:'https://schema.org/Time'. The time at which the
+      data was made available in the online archive
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/ingestionDate
+  sensingDate:
+    description: Property. Model:'https://schema.org/Time'. The time at which the
+      image was taken by the sensor
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/sensingDate
+  sensingStartedAt:
+    description: Property. Model:'https://schema.org/Time'. The time of the satellite
+      on-board acquisition of the first line of the image in the product
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/sensingStartedAt
+  sensingStoppedAt:
+    description: Property. Model:'https://schema.org/Time'. The time of the satellite
+      on-board acquisition of the last line of the image in the product
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/sensingStoppedAt
+  hostedOn:
+    description: Relationship. The ID of the data hub that the product is hosted on
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/hostedOn
+  observedBy:
+    description: Relationship. The ID of the instrument that the product was observed
+      by
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.SatelliteImagery@a99534a5959b5d312fbf6cbebcb7459a7abe51a4
+    slot_uri: https://smartdatamodels.org/dataModel.SatelliteImagery/observedBy
+enums:
+  orbitDirection_options:
+    name: orbitDirection_options
+    permissible_values:
+      Ascending:
+        text: Ascending
+      Descending:
+        text: Descending

@@ -1,0 +1,758 @@
+id: https://github.com/smart-data-models/dataModel.ZEB/OutdoorAirConditioner
+name: OutdoorAirConditioner
+title: Smart Data Models - OutdoorAirConditioner schema
+description: Information on OutdoorAirConditioner (maker, model, specification, etc.).
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ZEB
+  spec.source.path: OutdoorAirConditioner/schema.json
+  spec.source.commit: 3a1526fd517f4fef0c40f280f3b618cac72e3d41
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smart-data-models.github.io/dataModel.ZEB/context.jsonld"],
+    "dateObjectCreated": {"type": "Property", "value": {"@type": "string", "@value":
+    "2020-07-20T17:17:00.621Z"}}, "dateObjectUpdated": {"type": "Property", "value":
+    {"@type": "string", "@value": "2020-07-20T17:17:00.621Z"}}, "flagDeleted": {"type":
+    "Property", "value": "false"}, "id": "urn:ngsi-ld:OutdoorAirConditioner:FAO0000000001",
+    "idMaker": {"type": "Property", "value": "108420"}, "idModel": {"type": "Property",
+    "value": "PUZ-ZRMP63KA8-BS"}, "mnetAddress": {"type": "Property", "value": "9"},
+    "objectName": {"type": "Property", "value": "07051_PAC:PUZ-ZRMP63KA6:680627"},
+    "refGatewayController": {"object": "urn:ngsi-ld:GatewayController:FGA0000000001",
+    "type": "Relationship"}, "refIndoorAirConditioner": {"object": "urn:ngsi-ld:IndoorAirConditioner:FAI0000000001",
+    "type": "Relationship"}, "refOutdoorAirConditioner": {"object": "urn:ngsi-ld:OutdoorAirConditioner:FAO0000000001",
+    "type": "Relationship"}, "type": "OutdoorAirConditioner"}'
+classes:
+  OutdoorAirConditioner:
+    class_uri: https://smartdatamodels.org/dataModel.ZEB/OutdoorAirConditioner
+    description: Information on OutdoorAirConditioner (maker, model, specification,
+      etc.).
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - capacityCooling
+    - capacityCoolingMax
+    - capacityCoolingMin
+    - capacityDefumidificationCooling
+    - capacityDefumidificationMax
+    - capacityDefumidificationMin
+    - capacityHeatStorageCooling
+    - capacityHeatStorageCoolingMax
+    - capacityHeatStorageHeating
+    - capacityHeatStorageHeatingNormal
+    - capacityHeating
+    - capacityHeatingMax
+    - capacityHeatingMin
+    - capacityLowHeating
+    - capacityLowHeatingCompressor
+    - capacityNonHeatStorageCooling
+    - capacityNonHeatStorageCoolingMax
+    - capacityNonHeatStorageHeatingMax
+    - capacityRefrigeration
+    - classificationCode
+    - combinationFlag
+    - compressorOutput
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - dateObjectCreated
+    - dateObjectUpdated
+    - description
+    - dryBulbTemperatureIndoorCooling
+    - dryBulbTemperatureIndoorHeating
+    - dryBulbTemperatureIndoorLowHeating
+    - dryBulbTemperatureOutdoorCooling
+    - dryBulbTemperatureOutdoorHeating
+    - dryBulbTemperatureOutdoorLowHeating
+    - exteriorShape
+    - flagDeleted
+    - heatSourceWaterTemperatureCooling
+    - heatSourceWaterTemperatureHeating
+    - idMaker
+    - idModel
+    - mnetAddress
+    - motorOutput
+    - name
+    - objectName
+    - owner
+    - powerConsumptionCooling
+    - powerConsumptionCoolingMax
+    - powerConsumptionCoolingMin
+    - powerConsumptionCoolingRegeneration
+    - powerConsumptionHeatStorage
+    - powerConsumptionHeating
+    - powerConsumptionHeatingHeatStorage
+    - powerConsumptionHeatingMax
+    - powerConsumptionHeatingMin
+    - powerConsumptionHeatingNonHeatStorage
+    - powerConsumptionLowHeating
+    - powerConsumptionRegeneration
+    - powerFrequency
+    - price
+    - refElectricPowerEquipment
+    - refGatewayController
+    - refIndoorAirConditioner
+    - refOutdoorAirConditioner
+    - refOutdoorAirConditionerMeasurement
+    - refOutdoorAirConditionerMentenanceMeasurement
+    - refOutdoorAirTreatingUnit
+    - refSensor
+    - refSpace
+    - seeAlso
+    - serialNumber
+    - source
+    - specName
+    - wetBulbTemperatureIndoorCooling
+    - wetBulbTemperatureOutdoorCooling
+    - wetBulbTemperatureOutdoorHeating
+    - wetBulbTemperatureOutdoorLowHeating
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/areaServed
+  capacityCooling:
+    description: Property. Model:'https://schema.org/Number'. Capacity cooling of
+      this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/capacityCooling
+  capacityCoolingMax:
+    description: Property. Model:'https://schema.org/Number'. Max capacity cooling
+      of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/capacityCoolingMax
+  capacityCoolingMin:
+    description: Property. Model:'https://schema.org/Number'. Min capacity cooling
+      of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/capacityCoolingMin
+  capacityDefumidificationCooling:
+    description: Property. Model:'https://schema.org/Number'. Defumidification capacity
+      when cooling of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/capacityDefumidificationCooling
+  capacityDefumidificationMax:
+    description: Property. Model:'https://schema.org/Number'. Max defumidification
+      capacity of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/capacityDefumidificationMax
+  capacityDefumidificationMin:
+    description: Property. Model:'https://schema.org/Number'. Min defumidification
+      capacity of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/capacityDefumidificationMin
+  capacityNonHeatStorageCooling:
+    description: Property. Model:'https://schema.org/Number'. Non-heat storage cooling
+      capacity of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/capacityNonHeatStorageCooling
+  capacityNonHeatStorageCoolingMax:
+    description: Property. Model:'https://schema.org/Number'. Max non-heat storage
+      cooling capacity of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/capacityNonHeatStorageCoolingMax
+  capacityHeatStorageCoolingMax:
+    description: Property. Model:'https://schema.org/Number'. Max heat storage cooling
+      capacity of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/capacityHeatStorageCoolingMax
+  capacityNonHeatStorageHeatingMax:
+    description: Property. Model:'https://schema.org/Number'. Max non-heat storage
+      heating capacity of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/capacityNonHeatStorageHeatingMax
+  capacityHeating:
+    description: Property. Model:'https://schema.org/Number'. Capacity heating of
+      this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/capacityHeating
+  capacityHeatingMax:
+    description: Property. Model:'https://schema.org/Number'. Max apacity heating
+      of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/capacityHeatingMax
+  capacityHeatingMin:
+    description: Property. Model:'https://schema.org/Number'. Min apacity heating
+      of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/capacityHeatingMin
+  capacityHeatStorageHeatingNormal:
+    description: Property. Model:'https://schema.org/Number'. Heat storage heating
+      capacity of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/capacityHeatStorageHeatingNormal
+  capacityHeatStorageCooling:
+    description: Property. Model:'https://schema.org/Number'. Heat storage cooling
+      capacity of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/capacityHeatStorageCooling
+  capacityHeatStorageHeating:
+    description: Property. Model:'https://schema.org/Number'. Heat storage heating
+      capacity of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/capacityHeatStorageHeating
+  capacityLowHeating:
+    description: Property. Model:'https://schema.org/Number'. Low heating capacity
+      of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/capacityLowHeating
+  capacityLowHeatingCompressor:
+    description: Property. Model:'https://schema.org/Number'. Low heating compressor
+      capacity of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/capacityLowHeatingCompressor
+  capacityRefrigeration:
+    description: Property. Model:'https://schema.org/Number'. Refrigeration capacity
+      of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/capacityRefrigeration
+  classificationCode:
+    description: Property. Classification code of this item.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/classificationCode
+  combinationFlag:
+    description: Property. combination flag of this item.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/combinationFlag
+  compressorOutput:
+    description: Property. Model:'https://schema.org/Number'. Cmpressor output of
+      this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/compressorOutput
+  dateObjectCreated:
+    description: Property. Model:'http://schema.org/DateTime'. The registration date
+      and time of this item as an object.
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/dateObjectCreated
+  dateObjectUpdated:
+    description: Property. Model:'http://schema.org/DateTime'. The update date and
+      time of this item as an object.
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/dateObjectUpdated
+  dryBulbTemperatureIndoorCooling:
+    description: Property. Model:'https://schema.org/Number'. Indoor dry bulb temperature
+      when cooling.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/dryBulbTemperatureIndoorCooling
+  dryBulbTemperatureIndoorHeating:
+    description: Property. Model:'https://schema.org/Number'. Indoor dry bulb temperature
+      when heating.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/dryBulbTemperatureIndoorHeating
+  dryBulbTemperatureIndoorLowHeating:
+    description: Property. Model:'https://schema.org/Number'. Indoor dry bulb temperature
+      when low heating.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/dryBulbTemperatureIndoorLowHeating
+  dryBulbTemperatureOutdoorCooling:
+    description: Property. Model:'https://schema.org/Number'. Outdoor dry bulb temperature
+      when cooling.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/dryBulbTemperatureOutdoorCooling
+  dryBulbTemperatureOutdoorHeating:
+    description: Property. Model:'https://schema.org/Number'. Outdoor dry bulb temperature
+      when heating.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/dryBulbTemperatureOutdoorHeating
+  dryBulbTemperatureOutdoorLowHeating:
+    description: Property. Model:'https://schema.org/Number'. Outdoor dry bulb temperature
+      when low heating.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/dryBulbTemperatureOutdoorLowHeating
+  exteriorShape:
+    description: GeoProperty. Exterior shape of this item.
+    annotations:
+      ngsi_ld_kind: GeoProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/exteriorShape
+  flagDeleted:
+    description: Property. Flag set when this item is deleted as an object.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/flagDeleted
+  heatSourceWaterTemperatureCooling:
+    description: Property. Model:'https://schema.org/Number'. Water temperature of
+      heat source when cooling of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/heatSourceWaterTemperatureCooling
+  heatSourceWaterTemperatureHeating:
+    description: Property. Model:'https://schema.org/Number'. Water temperature of
+      heat source when heating of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/heatSourceWaterTemperatureHeating
+  idMaker:
+    description: Property. Makerid of this item.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/idMaker
+  idModel:
+    description: Property. Model id or number of this item.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/idModel
+  mnetAddress:
+    description: Property. Mnet address of this item.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/mnetAddress
+  motorOutput:
+    description: Property. Model:'https://schema.org/Number'. fan motor output of
+      this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/motorOutput
+  objectName:
+    description: Property. Name of this item as an object.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/objectName
+  powerConsumptionCooling:
+    description: Property. Model:'https://schema.org/Number'. Power consumption when
+      cooling of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/powerConsumptionCooling
+  powerConsumptionCoolingMax:
+    description: Property. Model:'https://schema.org/Number'. Max power consumption
+      when cooling of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/powerConsumptionCoolingMax
+  powerConsumptionCoolingMin:
+    description: Property. Model:'https://schema.org/Number'. Min power consumption
+      when cooling of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/powerConsumptionCoolingMin
+  powerConsumptionCoolingRegeneration:
+    description: Property. Model:'https://schema.org/Number'. Power consumption when
+      regeneration cooling of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/powerConsumptionCoolingRegeneration
+  powerConsumptionHeating:
+    description: Property. Model:'https://schema.org/Number'. Power consumption when
+      heating of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/powerConsumptionHeating
+  powerConsumptionHeatingMax:
+    description: Property. Model:'https://schema.org/Number'. Max power consumption
+      when heating of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/powerConsumptionHeatingMax
+  powerConsumptionHeatingMin:
+    description: Property. Model:'https://schema.org/Number'. Min power consumption
+      when heating of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/powerConsumptionHeatingMin
+  powerConsumptionHeatingNonHeatStorage:
+    description: Property. Model:'https://schema.org/Number'. Power consumption when
+      non-heat storage heating of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/powerConsumptionHeatingNonHeatStorage
+  powerConsumptionHeatingHeatStorage:
+    description: Property. Model:'https://schema.org/Number'. Power consumption when
+      heat storage heating of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/powerConsumptionHeatingHeatStorage
+  powerConsumptionHeatStorage:
+    description: Property. Model:'https://schema.org/Number'. Power consumption when
+      heat storaging of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/powerConsumptionHeatStorage
+  powerConsumptionLowHeating:
+    description: Property. Model:'https://schema.org/Number'. Power consumption when
+      low heating of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/powerConsumptionLowHeating
+  powerConsumptionRegeneration:
+    description: Property. Model:'https://schema.org/Number'. Power consumption when
+      Regenerating of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/powerConsumptionRegeneration
+  powerFrequency:
+    description: Property. Model:'https://schema.org/Number'. Power frequency of this
+      item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/powerFrequency
+  price:
+    description: Property. Model:'https://schema.org/Number'. Price of this item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/price
+  refElectricPowerEquipment:
+    description: Relationship. Reference to the electric power equipment containing
+      this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refElectricPowerEquipment
+  refGatewayController:
+    description: Relationship. Reference to the gateway controller containing this
+      item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refGatewayController
+  refIndoorAirConditioner:
+    description: Relationship. Reference to the indoor air conditioner containing
+      this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refIndoorAirConditioner
+  refOutdoorAirConditioner:
+    description: Relationship. Reference to the outdoor air conditioner containing
+      this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refOutdoorAirConditioner
+  refOutdoorAirConditionerMeasurement:
+    description: Relationship. Reference to the outdoor air conditioner measurement
+      containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refOutdoorAirConditionerMeasurement
+  refOutdoorAirConditionerMentenanceMeasurement:
+    description: Relationship. Reference to the outdoor air conditioner mentenance
+      measurement containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refOutdoorAirConditionerMentenanceMeasurement
+  refOutdoorAirTreatingUnit:
+    description: Relationship. Reference to the outdoor air treating unit containing
+      this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refOutdoorAirTreatingUnit
+  refSensor:
+    description: Relationship. Reference to the sensor containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refSensor
+  refSpace:
+    description: Relationship. Reference to the space containing this item.
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/refSpace
+  serialNumber:
+    description: Property. Model:'https://schema.org/Number'.  Serial number of this
+      item.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/serialNumber
+  specName:
+    description: Property. Name of this item.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/specName
+  wetBulbTemperatureIndoorCooling:
+    description: Property. Model:'https://schema.org/Number'. Indoor wet bulb temperature
+      when cooling.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/wetBulbTemperatureIndoorCooling
+  wetBulbTemperatureOutdoorCooling:
+    description: Property. Model:'https://schema.org/Number'. Outdoor wet bulb temperature
+      when cooling.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/wetBulbTemperatureOutdoorCooling
+  wetBulbTemperatureOutdoorHeating:
+    description: Property. Model:'https://schema.org/Number'. Outdoor wet bulb temperature
+      when heating.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/wetBulbTemperatureOutdoorHeating
+  wetBulbTemperatureOutdoorLowHeating:
+    description: Property. Model:'https://schema.org/Number'. Outdoor wet bulb temperature
+      when low heating.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ZEB@3a1526fd517f4fef0c40f280f3b618cac72e3d41
+    slot_uri: https://smartdatamodels.org/dataModel.ZEB/wetBulbTemperatureOutdoorLowHeating

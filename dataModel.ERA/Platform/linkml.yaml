@@ -1,0 +1,249 @@
+id: https://github.com/smart-data-models/dataModel.ERA/Platform
+name: Platform
+title: Platform + mapped from ERA ontology by Smart Data Models
+description: Platform for the purpose of RINF is understood as a platform edge. A
+  platform concerns only the part of the structure neighbouring to the track (interfaced
+  with trains).
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ERA
+  spec.source.path: Platform/schema.json
+  spec.source.commit: 4c4f8ebffc25dd413db62527072eac74559f0b70
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@contex": ["https://raw.githubusercontent.com/smart-data-models/dataModel.ERA/master/context.jsonld"],
+    "@context": ["https://smartdatamodels.org/context.jsonld"], "address": {"type":
+    "Property", "value": {"addressCountry": "Open economy town early change family
+    future. Remember democratic meet boy total method. Av", "addressLocality": "Will
+    floor nearly baby. Writer admit race training one several quality.", "addressRegion":
+    "Probably know top realize various whole. Perhaps success a", "district": "Sure
+    certain give hospital thought buy. Room really specific seem president. Should
+    condition level especi", "postOfficeBoxNumber": "Edge particularly improve g",
+    "postalCode": "Future business hear hold especially like perform require. Direction
+    establish hospital. Ball Democrat sound executive run though.", "streetAddress":
+    "Teach analysis agent poor chair local American. These number wrong nation.",
+    "streetNr": "Likely grow million large responsibility. Film watch m"}}, "alternateName":
+    {"type": "Property", "value": "Huge address same song act power. Property man
+    sit direction wonder. Year general doctor production black after hold."}, "areaBoardingAid":
+    {"type": "Property", "value": 908}, "areaServed": {"type": "Property", "value":
+    "Rise fear color answer federal smile. Phone believe although relationship"},
+    "assistanceStartingTrain": {"type": "Property", "value": true}, "dataProvider":
+    {"type": "Property", "value": "Partner base paper. Positive form"}, "dateCreated":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2004-01-10T21:28:28Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2021-02-19T11:00:31Z"}}, "description": {"type": "Property", "value": "Break
+    official black hold. Them next create between half."}, "hasPlatformCurvature":
+    {"type": "Property", "value": false}, "id": "urn:ngsi-ld:Platform:id:IGEE:91325946",
+    "location": {"type": "Property", "value": {"coordinates": [83.360268, -144.578543],
+    "type": "Point"}}, "name": {"type": "Property", "value": "Organization human on
+    apply history enter. Response guy today fact field stand. Should statement strategy
+    tru"}, "owner": {"type": "Property", "value": ["urn:ngsi-ld:Platform:items:DWXZ:32083986",
+    "urn:ngsi-ld:Platform:items:DFRT:50172537"]}, "platformHeight": {"object": "urn:ngsi-ld:Platform:platformHeight:AJIG:62479263",
+    "type": "Relationship"}, "platformId": {"type": "Property", "value": "Final politics
+    cultural from travel respond."}, "seeAlso": {"type": "Property", "value": ["urn:ngsi-ld:Platform:items:JJZM:20586004"]},
+    "source": {"type": "Property", "value": "Professional mean like fine box. Most
+    statement military this there after also consumer."}, "tenClassification": {"object":
+    "urn:ngsi-ld:Platform:tenClassification:VRUU:42134110", "type": "Relationship"},
+    "type": "Platform"}'
+classes:
+  Platform:
+    class_uri: https://smartdatamodels.org/dataModel.ERA/Platform
+    description: Platform for the purpose of RINF is understood as a platform edge.
+      A platform concerns only the part of the structure neighbouring to the track
+      (interfaced with trains).
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaBoardingAid
+    - areaServed
+    - assistanceStartingTrain
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - hasPlatformCurvature
+    - name
+    - owner
+    - platformHeight
+    - platformId
+    - seeAlso
+    - source
+    - tenClassification
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/areaServed
+  areaBoardingAid:
+    description: Property. Information of the train access level for which the boarding
+      aid can be used.
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/areaBoardingAid
+  assistanceStartingTrain:
+    description: Property. Existence of platform assistance for starting train
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/assistanceStartingTrain
+  hasPlatformCurvature:
+    description: Property. Existence of  platform curvature
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/hasPlatformCurvature
+  platformId:
+    description: Property. Platform id
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/platformId
+  platformHeight:
+    description: Relationship. Height of platform
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/platformHeight
+  tenClassification:
+    description: Relationship. TEN classification (of track, of platform, of siding)
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ERA@4c4f8ebffc25dd413db62527072eac74559f0b70
+    slot_uri: https://smartdatamodels.org/dataModel.ERA/tenClassification

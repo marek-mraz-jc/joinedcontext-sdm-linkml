@@ -1,0 +1,295 @@
+id: https://github.com/smart-data-models/dataModel.OCF/DRLC
+name: DRLC
+title: Smart Data models - DRLC schema derived from the open connectivity foundation
+  repository https://github.com/openconnectivityfoundation/IoTDataModels
+description: This Resource describes any to be applied or currently being applied
+  DRLC signal.The Property 'DRType' is the ApplianceLoadReductionType defined in Zigbee/HA
+  Smart Energy Profile 2.0.The Property 'start' is a string containing an RFC3339
+  encoded start time.The Property 'duration' value is in minutes.The Property 'Override'
+  indicates whether the consumer has overridden the request (true) or not (false).The
+  Resource provides the current DRLC action that is being applied.A duration of 0
+  (zero) means that no DRLC is currently active.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: DRLC/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "DRType": {"type": "Property", "value": 864}, "address": {"type": "Property",
+    "value": {"addressCountry": "Real leader bad school name care several. Good explain
+    grow water plant perform resource.", "addressLocality": "Others record hospital.
+    Grow rule stuff truth college. Whom around put suddenly garden.", "addressRegion":
+    "Others kind company likely. Tonight", "district": "Best budget power them evi",
+    "postOfficeBoxNumber": "Those traditional page a al", "postalCode": "Stock ball
+    organization recognize civil development. Her then nothing increase I reduce industr",
+    "streetAddress": "Vie", "streetNr": "Wear individual about add senior woman."}},
+    "alternateName": {"type": "Property", "value": "Before year themselves your majority
+    feeling fact. Natural sport music white. Na"}, "areaServed": {"type": "Property",
+    "value": "Fire happen nothing support suffer which parent. Republican total policy
+    head Mrs debate onto."}, "dataProvider": {"type": "Property", "value": "Study
+    modern miss dog Democrat quickly. Often late produce you true soldier. Food break
+    onto friend."}, "dateCreated": {"type": "Property", "value": {"@type": "DateTime",
+    "@value": "1979-07-06T09:36:23Z"}}, "dateModified": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "2021-06-07T14:46:20Z"}}, "description": {"type":
+    "Property", "value": "Wonder employee attorney quickly candidate change although
+    bag."}, "drlevel": {"type": "Property", "value": 3}, "duration": {"type": "Property",
+    "value": 864}, "id": "urn:ngsi-ld:DRLC:id:GQEJ:48764759", "if": {"type": "Property",
+    "value": ["oic.if.baseline", "oic.if.a"]}, "location": {"type": "GeoProperty",
+    "value": {"coordinates": [-56.7421445, 77.286609], "type": "Point"}}, "mandate":
+    {"type": "Property", "value": false}, "n": {"type": "Property", "value": "Whole
+    magazine truth stop whose."}, "name": {"type": "Property", "value": "Tend employee
+    source nature add rest. Report size personal partner stock four. Region as true
+    develop sound central."}, "override": {"type": "Property", "value": false}, "owner":
+    {"type": "Property", "value": ["urn:ngsi-ld:DRLC:items:KNBD:33041352", "urn:ngsi-ld:DRLC:items:DUGT:23098910"]},
+    "rt": {"type": "Property", "value": ["oic.r.energy.drlc"]}, "seeAlso": {"type":
+    "Property", "value": ["urn:ngsi-ld:DRLC:items:AGFW:91615109"]}, "source": {"type":
+    "Property", "value": "Son would mouth relate own chair better available. Line
+    beyond its particularly tree whom."}, "start": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "1979-06-04T08:47:18Z"}}, "type": "DRLC"}'
+classes:
+  DRLC:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/DRLC
+    description: This Resource describes any to be applied or currently being applied
+      DRLC signal.The Property 'DRType' is the ApplianceLoadReductionType defined
+      in Zigbee/HA Smart Energy Profile 2.0.The Property 'start' is a string containing
+      an RFC3339 encoded start time.The Property 'duration' value is in minutes.The
+      Property 'Override' indicates whether the consumer has overridden the request
+      (true) or not (false).The Resource provides the current DRLC action that is
+      being applied.A duration of 0 (zero) means that no DRLC is currently active.
+    is_a: Entity
+    slots:
+    - DRType
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - drlevel
+    - duration
+    - if
+    - mandate
+    - n
+    - name
+    - override
+    - owner
+    - rt
+    - seeAlso
+    - source
+    - start
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. The Resource Type
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  start:
+    description: Property. The start time for the application of DR
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/start
+  duration:
+    description: Property. The duration of the to be applied DR type in minutes. A
+      value of 0 means no applied DR
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/duration
+  override:
+    description: Property. Whether the consumer has overriden the application of DR
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/override
+  DRType:
+    description: Property. The to be applied demand-response type
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/DRType
+  drlevel:
+    description: Property. Indicator of the strength of the DR response that is requested;
+      0-0%, 1-30%, 2-50%, 3-70%
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/drlevel
+  mandate:
+    description: Property. Whether overriding the DR request by the consumer is allowed
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/mandate
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  if:
+    description: Property. The OCF Interface set supported by this Resource
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.energy.drlc:
+        text: oic.r.energy.drlc
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.a:
+        text: oic.if.a
+      oic.if.baseline:
+        text: oic.if.baseline

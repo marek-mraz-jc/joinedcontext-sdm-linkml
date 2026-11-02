@@ -1,0 +1,415 @@
+id: https://github.com/smart-data-models/dataModel.CPSV-AP/PublicService
+name: PublicService
+title: Smart Data models - PublicService schema
+description: A Public Service is a mandatory or discretionary set of activities performed,
+  or able to be performed, by or on behalf of a public organisation, publicly funded
+  and arise from public policy.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.CPSV-AP
+  spec.source.path: PublicService/schema.json
+  spec.source.commit: a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"],
+    "description": {"type": "Property", "value": "A trademark is a symbol that distinguishes
+    goods and services from the similar goods and services of others. A trademark
+    is a symbol that distinguishes goods and services from the similar goods and services
+    of others. A trademark is a symbol which distinguishes the goods and services
+    of a company from the similar goods and services of other companies. A trademark
+    acts as a means of distinction in the market. A trademark is also an exclusive
+    right. It gives the holder the exclusive right to use the mark in the marketing,
+    packaging or business documents of the goods or services or in any other way,
+    including orally. There are different types of trademarks. A trademark can, for
+    example be, a word, figure, slogan or even a sound. Property Value When you register
+    your trademark, you will obtain protection for it for ten years. The protection
+    provided by registration begins on the date of application and can be renewed
+    every ten years."}, "follows": {"type": "Relationship", "value": ["urn:ngsi-ld:CPSV-AP:Rule:8566c45a-8b9e-46d5-8371-81c8ad0cced5",
+    "urn:ngsi-ld:CPSV-AP:Rule:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"]}, "hasCompetentAuthority":
+    {"type": "Relationship", "value": "urn:ngsi-ld:CPSV-AP:PublicOrganization:8566c45a-8b9e-46d5-8371-81c8ad002362"},
+    "hasContactPoint": {"type": "Relationship", "value": ["urn:ngsi-ld:CPSV-AP:ContactPoint:8566c45a-8b9e-46d5-8371-81c8ad0cced5",
+    "urn:ngsi-ld:CPSV-AP:ContactPoint:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"]}, "hasCost":
+    {"type": "Relationship", "value": ["urn:ngsi-ld:CPSV-AP:Cost:8566c45a-8b9e-46d5-8371-81c8ad0cced5",
+    "urn:ngsi-ld:CPSV-AP:Cost:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"]}, "hasCriterion":
+    {"type": "Relationship", "value": ["urn:ngsi-ld:CPSV-AP:CriterionRequirement:4157c56b-754b-4f92-b4b1-0256b9a472d2",
+    "urn:ngsi-ld:CPSV-AP:CriterionRequirement:4157c56b-754b-5d34-b4b1-0256b9a472d2"]},
+    "hasInput": {"type": "Relationship", "value": ["urn:ngsi-ld:CPSV-AP:Evidence:8566c45a-8b9e-46d5-8371-81c8ad0cced5",
+    "urn:ngsi-ld:CPSV-AP:Evidence:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"]}, "id": "urn:ngsi-ld:CPSV-AP:PublicService:4157c56b-754b-4f92-b4b1-0256b9a472d2",
+    "identifier": {"type": "Property", "value": "https://www.yrityssuomi.fi/en/palvelu/-/palvelu/electronicapplicationforatrademark?region=helsinki"},
+    "isGroupedBy": {"type": "Relationship", "value": ["http://europa.eu/youreurope/businessOntology#start-grow"]},
+    "keyword": {"type": "Property", "value": []}, "language": {"type": "Property",
+    "value": ["http://publications.europa.eu/resource/authority/language/ENG"]}, "name":
+    {"type": "Property", "value": "Electronic application for a trademark"}, "processingTime":
+    {"type": "Property", "value": {"@type": "Date-time", "@value": "P2Y9M5DT6H5M20S"}},
+    "publicServiceType": {"type": "Property", "value": ["Public Service"]}, "sector":
+    {"type": "Property", "value": ["A1.1.5", "A1.1.6", "A1.1.9"]}, "spatial": {"type":
+    "Property", "value": ["http://publications.europa.eu/resource/authority/atu/FIN"]},
+    "status": {"type": "Property", "value": "UnderDevelopment"}, "thematicArea": {"type":
+    "Property", "value": ["social", "protection", "health", "recreation", "culture
+    and religion", "family", "traveling", "economic", "affairs", "tax", "staff", "environment"]},
+    "type": "PublicService"}'
+classes:
+  PublicService:
+    class_uri: https://smartdatamodels.org/dataModel.CPSV-AP/PublicService
+    description: A Public Service is a mandatory or discretionary set of activities
+      performed, or able to be performed, by or on behalf of a public organisation,
+      publicly funded and arise from public policy.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - follows
+    - hasCompetentAuthority
+    - hasContactPoint
+    - hasCost
+    - hasCriterion
+    - hasInput
+    - identifier
+    - isGroupedBy
+    - keyword
+    - language
+    - name
+    - owner
+    - processingTime
+    - publicServiceType
+    - sector
+    - seeAlso
+    - source
+    - spatial
+    - status
+    - thematicArea
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/areaServed
+  identifier:
+    description: Property. Model:'dct:identifier'. This property represents a formally-issued
+      Identifier for the Public Service
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/identifier
+  keyword:
+    description: Property. Model:'dcat:keyword'. This property represents a keyword,
+      term or phrase to describe the Public Service
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/keyword
+  sector:
+    description: 'Property. Model:''cv:sector''. This property represents the industry
+      or sector a Public Service relates to, or is intended for. For example: environment,
+      safety, housing. Note that a single Public Service may relate to multiple sectors.
+      The possible values for this property are provided as a controlled vocabulary
+      (List of NACE codes:https://ec.europa.eu/competition/mergers/cases/index/nace_all.html)'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/sector
+  thematicArea:
+    description: Property. Model:'cv:thematicArea'. This property represents the Thematic
+      Area of a Public Service as described in a controlled vocabulary, for instance
+      social protection, health, recreation, culture and religion, family, traveling
+      economic affairs, tax, staff, environment
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/thematicArea
+  publicServiceType:
+    description: Property. Model:'dct:type'. This property represents the Type of
+      a Public Service as described in a controlled vocabulary. For the indicating
+      the Type, we are referring to the functions of government to indicate the purpose
+      of a government activity, which the public service is intended for
+    range: publicServiceType_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/publicServiceType
+  language:
+    description: Property. Model:'dct:language'. This property represents the language(s)
+      in which the Public Service is available. This could be one language or multiple
+      languages, for instance in countries with more than one official language. The
+      possible values for this property are described in a controlled vocabulary (European
+      Publications Office's Languages Named Authority List (NAL)),
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/language
+  status:
+    description: 'Property. Model:''adms:status''. Indicates whether a Public Service
+      is active, inactive, under development etc. according to a controlled vocabulary
+      (ADMS Status vocabulary: https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SW_v1-00_Taxonomies.rdf)'
+    range: status_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://uri.etsi.org/ngsi-ld/status
+  spatial:
+    description: 'Property. Model:''cv:spatial''. The possible values for this property
+      are provided as a controlled vocabulary (MDR Continents Named Authority List
+      , MDR Countries Named Authority List, MDR Places Named Authority List, Geonames:
+      http://sws.geonames.org)'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/spatial
+  processingTime:
+    description: 'Property. Model:''cv:processingTime''. The value of this property
+      is the (estimated) time needed for executing a Public Service. The actual information
+      is provided using the ISO8601 syntax for durations. Examples: [5 years -> P5Y,
+      1 month -> P1M, 3 days -> P3D, 2 days 4 hours -> P2DT4H]'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/processingTime
+  isGroupedBy:
+    description: Relationship. Model:'cv:isGroupedBy'. This property links the Public
+      Service to the Event. Several Public Services may be associated with a particular
+      Event and, likewise, the same Public Service may be associated with several
+      different Events
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/isGroupedBy
+  hasCriterion:
+    description: Relationship. Model:'cv:hasCriterion'. Links a Public Service to
+      a class that describes the criteria for needing or using the service, such as
+      residency in a given location, being over a certain age etc. The Criterion class
+      is defined in the Core Criterion and Core Evidence Vocabulary (https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-criterion-and-core-evidence-vocabulary)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/hasCriterion
+  hasCompetentAuthority:
+    description: 'Relationship. Model:''cv:hasCompetentAuthority''. This property
+      links a Public Service to a Public Organization, which is the responsible Agent
+      for the delivery of the Public Service. Whether the particular Public Organization
+      provides the public service directly or outsources it is not relevant. The Public
+      Organization that is the Competent Authority of the service is the one that
+      is ultimately responsible for managing and providing the public service. The
+      term Competent Authority is defined in the Services Directive (2006/123/EC)
+      in the following way: `Any body or authority which has a supervisory or regulatory
+      role in a Member State in relation to service activities, including, in particular,
+      administrative authorities, including courts acting as such, professional bodies,
+      and those professional associations or other professional organisations which,
+      in the exercise of their legal autonomy, regulate in a collective manner access
+      to service activities or the exercise thereof'''
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/hasCompetentAuthority
+  hasInput:
+    description: Relationship. Model:'cpsv:hasInput'. The Has Input property links
+      a Public Service to one or more instances of the Evidence class. A specific
+      Public Service may require the presence of certain pieces of Evidence in order
+      to be delivered. If the evidence required to make use of a service varies according
+      to the channel through which it is accessed, then Has Input should be at the
+      level of the Channel
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/hasInput
+  follows:
+    description: Relationship. Model:'cpsv:follows'. The follows property links a
+      Public Service to the Rule(s) under which it operates. The definition of the
+      Rule class is very broad. In a typical case, the competent authority that provides
+      the public service will also define the rules that will implement its own policies.
+      The CPSV-AP is flexible to allow for significant variation in such a scenario
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/follows
+  hasContactPoint:
+    description: Relationship. Model:'cpsv:hasContactPoint'. A contact point for the
+      service is almost always helpful. The value of this property, the contact information
+      itself, should be provided using schema:ContactPoint. Note that the contact
+      information should be relevant to the Public Service which may not be the same
+      as contact information for the Competent Authority or any Participant
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/hasContactPoint
+  hasCost:
+    description: Relationship. Model:'cv:hasCost'. The Has Cost property links a Public
+      Service to one or more instances of the Cost class. It indicates the costs related
+      to the execution of a Public Service for the citizen or business related to
+      the execution of the particular Public Service. Where the cost varies depending
+      on the channel through which the service is accessed, it can be linked to the
+      channel using the If Accessed Through relationship
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/hasCost
+enums:
+  publicServiceType_options:
+    name: publicServiceType_options
+    permissible_values:
+      Administrative formality:
+        text: Administrative formality
+      Public Service:
+        text: Public Service
+      Business Lifecycle:
+        text: Business Lifecycle
+      Business Event:
+        text: Business Event
+      Key Business Event:
+        text: Key Business Event
+      Public Service Portfolio:
+        text: Public Service Portfolio
+      Catalogue of Public Services:
+        text: Catalogue of Public Services
+      Competent Authority:
+        text: Competent Authority
+  status_options:
+    name: status_options
+    permissible_values:
+      Completed:
+        text: Completed
+      Deprecated:
+        text: Deprecated
+      UnderDevelopment:
+        text: UnderDevelopment
+      Withdrawn:
+        text: Withdrawn

@@ -1,0 +1,634 @@
+id: https://github.com/smart-data-models/dataModel.Streetlighting/StreetlightControlCabinet
+name: StreetlightControlCabinet
+title: ' - Street Lighting / Streetlight Control Cabinet'
+description: A Streetlight control cabinet
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Streetlighting
+  spec.source.path: StreetlightControlCabinet/schema.json
+  spec.source.commit: e272fafc786f9dd2ab882dd104b5a42a17c13037
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Streetlighting/master/context.jsonld"],
+    "brandName": {"type": "Property", "value": "Siemens"}, "compliantWith": {"type":
+    "Property", "value": ["IP54"]}, "cupboardMadeOf": {"type": "Property", "value":
+    "plastic"}, "dateLastProgramming": {"type": "Property", "value": {"@type": "DateTime",
+    "@value": "2016-07-08T16:04:30.201Z"}}, "dateMeteringStarted": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2013-07-07T15:05:59.408Z"}}, "energyConsumed":
+    {"type": "Property", "value": 162456}, "id": "urn:ngsi-ld:StreetlightControlCabinet:streetlightcontrolcabinet:A45HGJK",
+    "intensityR": {"type": "Property", "value": 20.1}, "intensityS": {"type": "Property",
+    "value": 14.4}, "intensityT": {"type": "Property", "value": 22}, "lastMeterReading":
+    {"type": "Property", "value": 161237}, "location": {"type": "GeoProperty", "value":
+    {"coordinates": [-3.164485591715449, 40.62785133667262], "type": "Point"}}, "maximumPowerAvailable":
+    {"type": "Property", "value": 10}, "meterReadingPeriod": {"type": "Property",
+    "value": 60}, "modelName": {"type": "Property", "value": "Simatic S7 1200"}, "reactivePowerR":
+    {"type": "Property", "value": 45}, "reactivePowerS": {"type": "Property", "value":
+    43.5}, "reactivePowerT": {"type": "Property", "value": 42}, "refStreetlightGroup":
+    {"object": ["urn:ngsi-ld:StreetlightGroup:streetlightgroup:BG678", "urn:ngsi-ld:StreetlightGroup:streetlightgroup:789"],
+    "type": "Relationship"}, "type": "StreetlightControlCabinet", "workingMode": {"type":
+    "Property", "value": "automatic"}}'
+classes:
+  StreetlightControlCabinet:
+    class_uri: https://smartdatamodels.org/dataModel.Streetlighting/StreetlightControlCabinet
+    description: A Streetlight control cabinet
+    is_a: Entity
+    slots:
+    - activePowerR
+    - activePowerS
+    - activePowerT
+    - address
+    - alternateName
+    - annotations
+    - areaServed
+    - brandName
+    - color
+    - compliantWith
+    - cosPhi
+    - cupboardMadeOf
+    - dataProvider
+    - dateCreated
+    - dateLastProgramming
+    - dateMeteringStarted
+    - dateModified
+    - dateServiceStarted
+    - description
+    - energyConsumed
+    - energyCost
+    - features
+    - frequency
+    - image
+    - intensityR
+    - intensityS
+    - intensityT
+    - lastMeterReading
+    - manufacturerName
+    - maximumPowerAvailable
+    - meterReadingPeriod
+    - modelName
+    - name
+    - nextActuationDeadline
+    - owner
+    - powerFactorR
+    - powerFactorS
+    - powerFactorT
+    - reactiveEnergyConsumed
+    - reactivePowerR
+    - reactivePowerS
+    - reactivePowerT
+    - refDevice
+    - refStreetlightGroup
+    - responsible
+    - seeAlso
+    - serialNumber
+    - source
+    - thdrIntensityR
+    - thdrIntensityS
+    - thdrIntensityT
+    - thdrVoltageR
+    - thdrVoltageS
+    - thdrVoltageT
+    - totalActivePower
+    - totalReactivePower
+    - voltageR
+    - voltageS
+    - voltageT
+    - workingMode
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/areaServed
+  color:
+    description: Property. The color of the product. Model:'https://schema.org/color'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/color
+  image:
+    description: Property. An image of the item. Model:'https://schema.org/URL'
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/image
+  annotations:
+    description: Property. Annotations about the item. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/annotations
+  serialNumber:
+    description: Property. Model:'https://schema.org/serialNumber'. Serial number
+      of the container
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/serialNumber
+  refStreetlightGroup:
+    description: Relationship. Streetlight group(s) controlled. List of references
+      to entities of type StreetlightGroup
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/refStreetlightGroup
+  brandName:
+    description: Property. Name of the cabinet's brand. Model:'https://schema.org/brand'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/brandName
+  modelName:
+    description: Property. Name of the cabinet's model. Model:'https://schema.org/model'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/modelName
+  manufacturerName:
+    description: Property. Name of the cabinet's manufacturer. Model:'https://schema.org/manufacturer'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/manufacturerName
+  cupboardMadeOf:
+    description: Property. Material the cabinet's cupboard is made of. Enum:'concrete,
+      metal, other, plastic'
+    range: cupboardMadeOf_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/cupboardMadeOf
+  features:
+    description: Property. A list of cabinet controller features.  Those technical
+      values considered meaningful by applications. `astronomicalClock`. The control
+      cabinet includes an astronomical clock to deal with switching hours. `individualControl`.
+      The control cabinet allows to control street lights individually
+    range: features_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://purl.org/geojson/vocab#features
+  compliantWith:
+    description: Property. A list of standards to which the cabinet controller is
+      compliant with (ex. IP54)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/compliantWith
+  refDevice:
+    description: Relationship. Reference to the device(s) used to monitor this control
+      cabinet
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/refDevice
+  dateServiceStarted:
+    description: Property. Date at which the cabinet controller started giving service.
+      Model:'https://schema.org/DateTime'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/dateServiceStarted
+  dateLastProgramming:
+    description: Property. Date at which there was a programming operation over the
+      cabinet. Model:'https://schema.org/DateTime'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/dateLastProgramming
+  nextActuationDeadline:
+    description: Property. Deadline for next actuation to be performed (programming,
+      testing, etc.). Model:'https://schema.org/DateTime'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/nextActuationDeadline
+  responsible:
+    description: Property. Responsible for the cabinet controller, i.e. entity in
+      charge of actuating (programming, etc.)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/responsible
+  workingMode:
+    description: 'Property. Working mode for this cabinet controller.  `automatic`
+      : The cabinet controller decides automatically when light groups are switched
+      on and off. Manual operation is not allowed. `manual` : Human intervention is
+      required for switching on and off. `semiautomatic` : The same as `automatic`
+      but in this case manual intervention is allowed'
+    range: workingMode_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/workingMode
+  maximumPowerAvailable:
+    description: Property. The maximum power available (by contract) for the circuits
+      controlled by this cabinet. Units:'Kilowatts (kW)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/maximumPowerAvailable
+  energyConsumed:
+    description: Property. Energy consumed by the circuits controlled since metering
+      started (since dateMeteringStarted). Units:'Kilowatts per hour (kWh)'. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/energyConsumed
+  energyCost:
+    description: Property. Cost of the energy consumed by the circuits controlled
+      since the metering start date. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/energyCost
+  reactiveEnergyConsumed:
+    description: Property. Energy consumed (with regards to reactive power) by circuits
+      since the metering start date. Model:'https://schema.org/Number'. Units:'KiloVolts-Ampere-Reactive
+      per hour (kVArh)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/reactiveEnergyConsumed
+  dateMeteringStarted:
+    description: Property. The starting date for metering energy consumed. Model:'https://schema.org/DateTime'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/dateMeteringStarted
+  lastMeterReading:
+    description: Property. Value of the last reading obtained from the energy consumed
+      metering system. Model:'https://schema.org/DateTime'. Units:'Kilowatts per hour
+      (kWh)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/lastMeterReading
+  meterReadingPeriod:
+    description: Property. The periodicity of energy consumed meter readings in days.
+      Model:'http://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/meterReadingPeriod
+  frequency:
+    description: Property. The working frequency of the circuit. Units:'Hertz (Hz)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/frequency
+  totalActivePower:
+    description: Property. Active power currently consumed (counting all phases).
+      Units:'KiloWatts (kW)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/totalActivePower
+  totalReactivePower:
+    description: Property. Reactive power currently consumed (counting all phases).
+      Units:'KiloVolts-Ampere-Reactive (kVArh)'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/totalReactivePower
+  activePowerR:
+    description: Property. Active power consumed in R phase. Units:'Kilowatts (kW)'.
+      Model:'http://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/activePowerR
+  activePowerS:
+    description: Property. Active power consumed in S phase. Units:'Kilowatts (kW)'.
+      Model:'http://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/activePowerS
+  activePowerT:
+    description: Property. Active power consumed in T phase. Units:'Kilowatts (kW)'.
+      Model:'http://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/activePowerT
+  reactivePowerR:
+    description: Property. Reactive power in R phase. Units:'KiloVolts-Ampere-Reactive
+      (kVArh)'. Model:'http://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/reactivePowerR
+  reactivePowerS:
+    description: Property. Reactive power in S phase. Units:'KiloVolts-Ampere-Reactive
+      (kVArh)'. Model:'http://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/reactivePowerS
+  reactivePowerT:
+    description: Property. Reactive power in T phase. Units:'KiloVolts-Ampere-Reactive
+      (kVArh)'. Model:'http://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/reactivePowerT
+  powerFactorR:
+    description: 'Property. Power factor for phase R. Allowed values: A number between
+      -1 and 1. Model:''http://schema.org/Number'''
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/powerFactorR
+  powerFactorS:
+    description: 'Property. Power factor for phase S. Allowed values: A number between
+      -1 and 1. Model:''http://schema.org/Number'''
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/powerFactorS
+  powerFactorT:
+    description: 'Property. Power factor for phase T. Allowed values: A number between
+      -1 and 1. Model:''http://schema.org/Number'''
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/powerFactorT
+  cosPhi:
+    description: Property. Cosine of phi parameter. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/cosPhi
+  intensityR:
+    description: Property. Electric intensity in R phase. Units:'Ampers (A)'. Model:'http://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/intensityR
+  intensityS:
+    description: Property. Electric intensity in S phase. Units:'Ampers (A)'. Model:'http://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/intensityS
+  intensityT:
+    description: Property.  Electric intensity in T phase. Units:'Ampers (A)'. Model:'http://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/intensityT
+  voltageR:
+    description: Property. Electric tension in phase R. Units:'Volts (V)'. Model:'http://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/voltageR
+  voltageS:
+    description: Property. Electric tension in phase S. Units:'Volts (V)'. Model:'http://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/voltageS
+  voltageT:
+    description: Property. Electric tension in phase T. Units:'Volts (V)'. Model:'http://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/voltageT
+  thdrVoltageR:
+    description: 'Property. Total harmonic distortion (R) of voltage in phase R. Allowed
+      values: A number between 0 and 1. Model:''http://schema.org/Number'''
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/thdrVoltageR
+  thdrVoltageS:
+    description: 'Property. Total harmonic distortion (S) of voltage in phase S. Allowed
+      values: A number between 0 and 1. Model:''http://schema.org/Number'''
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/thdrVoltageS
+  thdrVoltageT:
+    description: 'Property. Total harmonic distortion (T) of voltage in phase T. Allowed
+      values: A number between 0 and 1. Model:''http://schema.org/Number'''
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/thdrVoltageT
+  thdrIntensityR:
+    description: 'Property. Total harmonic distortion (R) of intensity in phase R.
+      Allowed values: A number between 0 and 1. Model:''http://schema.org/Number'''
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/thdrIntensityR
+  thdrIntensityS:
+    description: 'Property. Total harmonic distortion (S) of intensity in phase S.
+      Allowed values: A number between 0 and 1. Model:''http://schema.org/Number'''
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/thdrIntensityS
+  thdrIntensityT:
+    description: 'Property. Total harmonic distortion (T) of intensity in phase T.
+      Allowed values: A number between 0 and 1. Model:''http://schema.org/Number'''
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Streetlighting@e272fafc786f9dd2ab882dd104b5a42a17c13037
+    slot_uri: https://smartdatamodels.org/dataModel.Streetlighting/thdrIntensityT
+enums:
+  cupboardMadeOf_options:
+    name: cupboardMadeOf_options
+    permissible_values:
+      concrete:
+        text: concrete
+      metal:
+        text: metal
+      other:
+        text: other
+      plastic:
+        text: plastic
+  features_options:
+    name: features_options
+    permissible_values:
+      astronomicalClock:
+        text: astronomicalClock
+      individualControl:
+        text: individualControl
+  workingMode_options:
+    name: workingMode_options
+    permissible_values:
+      automatic:
+        text: automatic
+      manual:
+        text: manual
+      semiautomatic:
+        text: semiautomatic

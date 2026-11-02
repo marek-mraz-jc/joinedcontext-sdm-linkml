@@ -1,0 +1,321 @@
+id: https://github.com/smart-data-models/dataModel.SocialMedia/SMPost
+name: SMPost
+title: Social Media - SMPost
+description: This entity contains a harmonised description of a generic SMPost made
+  for the Social Media domain.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.SocialMedia
+  spec.source.path: SMPost/schema.json
+  spec.source.commit: b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"],
+    "belongsToCollection": [{"datasetId": "urn:ngsi-ld:Dataset:SMCollection:001",
+    "object": "urn:ngsi-ld:SMCollection:001", "type": "Relationship"}, {"datasetId":
+    "urn:ngsi-ld:Dataset:SMCollection:002", "object": "urn:ngsi-ld:SMCollection:002",
+    "type": "Relationship"}], "createdBy": {"object": "urn:ngsi-ld:SMUser:123", "type":
+    "Relationship"}, "hasAnalysis": [{"datasetId": "urn:ngsi-ld:Dataset:Analysis:X",
+    "object": "urn:ngsi-ld:Analysis:X", "type": "Relationship"}, {"datasetId": "urn:ngsi-ld:Dataset:Analysis:02",
+    "object": "urn:ngsi-ld:Analysis:02", "type": "Relationship"}], "hasHashtags":
+    [{"type": "Property", "value": ["#sample", "#tag"]}, {"type": "Property", "value":
+    ["#sample2", "#tag2"]}], "hasImages": [{"type": "Property", "value": "https://twt.com/image.png"},
+    {"type": "Property", "value": "https://twt.com/image2.png"}], "hasInteractionCount":
+    [{"type": "Property", "value": {"@count": "750", "@interactionType": "Like"}},
+    {"type": "Property", "value": {"@count": "2150", "@interactionType": "Views"}}],
+    "hasLanguage": {"type": "Property", "value": "en"}, "hasMentions": [{"datasetId":
+    "urn:ngsi-ld:Dataset:SMUser:154", "object": "urn:ngsi-ld:SMUser:154", "type":
+    "Relationship"}, {"datasetId": "urn:ngsi-ld:Dataset:SMUser:155", "object": "urn:ngsi-ld:SMUser:155",
+    "type": "Relationship"}], "hasPostURL": {"type": "Property", "value": "http://twt.com/121"},
+    "hasPrivacyLevel": {"type": "Property", "value": "public"}, "hasReferencedLocations":
+    [{"datasetId": "urn:ngsi-ld:Dataset:RefLocation:00", "object": "urn:ngsi-ld:RefLocation:00",
+    "type": "Relationship"}, {"datasetId": "urn:ngsi-ld:Dataset:RefLocation:01", "object":
+    "urn:ngsi-ld:RefLocation:01", "type": "Relationship"}], "hasText": [{"type": "Property",
+    "value": "This is a tweet."}, {"type": "Property", "value": "This is another tweet."}],
+    "hasThumbnails": [{"type": "Property", "value": "https://twt.com/thumb.png"},
+    {"type": "Property", "value": "https://twt.com/thumb2.png"}], "hasVideos": [{"type":
+    "Property", "value": "https://twt.com/video.mp4"}, {"type": "Property", "value":
+    "https://twt.com/video2.mp4"}], "id": "urn:ngsi-ld:SMPost:123", "location": {"type":
+    "GeoProperty", "value": {"coordinates": [40.3, 25.5], "type": "Point"}}, "platform":
+    {"type": "Property", "value": "Twitter"}, "postCreatedAt": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2020-12-24T12:00:00Z"}}, "postId": {"type":
+    "Property", "value": "21098319"}, "type": "SMPost"}'
+classes:
+  SMPost:
+    class_uri: https://smartdatamodels.org/dataModel.SocialMedia/SMPost
+    description: This entity contains a harmonised description of a generic SMPost
+      made for the Social Media domain.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - belongsToCollection
+    - createdBy
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - hasAnalysis
+    - hasHashtags
+    - hasImages
+    - hasInteractionCount
+    - hasLanguage
+    - hasMentions
+    - hasPostURL
+    - hasPrivacyLevel
+    - hasReferencedLocations
+    - hasText
+    - hasThumbnails
+    - hasVideos
+    - name
+    - owner
+    - platform
+    - postCreatedAt
+    - postId
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/areaServed
+  postCreatedAt:
+    description: Property. The datetime of the creation of the SMPost
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dataModel.SocialMedia/postCreatedAt
+  postId:
+    description: Property.  Model:'https://schema.org/Text'. The  post ID of the SMPost
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dataModel.SocialMedia/postId
+  hasLanguage:
+    description: Property.  Model:'https://schema.org/Text'. The language of the post
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dataModel.SocialMedia/hasLanguage
+  hasPostURL:
+    description: Property.  Model:'https://schema.org/Text'. The URL of the post
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dataModel.SocialMedia/hasPostURL
+  hasText:
+    description: Property. The content that is in textual form
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dataModel.SocialMedia/hasText
+  hasImages:
+    description: Property. The URLs of the content that is in image form
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dataModel.SocialMedia/hasImages
+  hasVideos:
+    description: Property. The URLs of the content that is in video form
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dataModel.SocialMedia/hasVideos
+  hasPrivacyLevel:
+    description: Property.  Model:'https://schema.org/Text'. The privacy setting of
+      the post
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dataModel.SocialMedia/hasPrivacyLevel
+  hasHashtags:
+    description: Property. The hashtags of the post
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dataModel.SocialMedia/hasHashtags
+  hasThumbnails:
+    description: Property. The thumbnail URLs of the post
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dataModel.SocialMedia/hasThumbnails
+  platform:
+    description: Property. Platform of post
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dataModel.SocialMedia/platform
+  createdBy:
+    description: Relationship.  Model:'https://schema.org/Text'. The ID of the SMUser
+      that created this post
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dataModel.SocialMedia/createdBy
+  hasReferencedLocations:
+    description: Relationship. The IDs of the locations referenced in this post
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dataModel.SocialMedia/hasReferencedLocations
+  hasMentions:
+    description: Relationship. The IDs of the SMUsers mentioned in this post
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dataModel.SocialMedia/hasMentions
+  hasAnalysis:
+    description: Relationship. The IDs of the SMAnalyses that analyze this post
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dataModel.SocialMedia/hasAnalysis
+  hasInteractionCount:
+    description: Property. The different interactions of this post
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dataModel.SocialMedia/hasInteractionCount
+  belongsToCollection:
+    description: Relationship. The IDs of the SMCollections, which this post is a
+      part of
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.SocialMedia@b8be3f4f2ec1cb26a36f50047a8635ee399ee165
+    slot_uri: https://smartdatamodels.org/dataModel.SocialMedia/belongsToCollection

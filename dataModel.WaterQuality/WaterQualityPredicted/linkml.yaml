@@ -1,0 +1,234 @@
+id: https://github.com/smart-data-models/dataModel.WaterQuality/WaterQualityPredicted
+name: WaterQualityPredicted
+title: Smart Data Models - Water quality predicted schema
+description: Water Quality Predicted data model is intended to represent predictions
+  of water quality at a certain water mass (river,  lake, sea, etc.) section
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.WaterQuality
+  spec.source.path: WaterQualityPredicted/schema.json
+  spec.source.commit: 30ebc231866fb0811836a1e7d49605b4bf0a425a
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.WaterQuality/master/context.jsonld"],
+    "dateCreated": {"type": "Property", "value": {"@type": "DateTime", "@value": "2022-05-27T10:00:00Z"}},
+    "datePredicted": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2022-05-20T14:00:00"}}, "expiryDate": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "2022-05-21T14:00:00"}}, "id": "1024e64a-0283-472c-9b62-dbf77291503e",
+    "location": {"type": "GeoProperty", "value": {"coordinates": [48.9159, 2.21228],
+    "type": "Point"}}, "predictionValues": {"type": "Property", "value": [{"percentile":
+    "2.5", "prediction": 0.3}, {"percentile": "50", "prediction": 0.3}, {"percentile":
+    "90", "prediction": 0.3}, {"percentile": "95", "prediction": 0.3}, {"percentile":
+    "97.5", "prediction": 0.3}]}, "type": "WaterQualityPredicted", "waterQualityPredictionValue":
+    {"type": "Property", "value": "Excellent"}}'
+classes:
+  WaterQualityPredicted:
+    class_uri: https://smartdatamodels.org/dataModel.WaterQuality/WaterQualityPredicted
+    description: Water Quality Predicted data model is intended to represent predictions
+      of water quality at a certain water mass (river,  lake, sea, etc.) section
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - datePredicted
+    - description
+    - expiryDate
+    - name
+    - owner
+    - predictions
+    - seeAlso
+    - source
+    - waterQualityPredictionValue
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+  Predictions:
+    description: Property. List of predictions for water quality
+    attributes:
+      value:
+        description: Property. Each one of the predictions for water quality
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/areaServed
+  datePredicted:
+    description: Property. Model:'https://schema.org/DateTime'. The date and time
+      from which the prediction is valid in ISO8601 UTCformat. It can be represented
+      by an specific time instant or by an ISO8601 interval
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/datePredicted
+  expiryDate:
+    description: Property. Model:'https://schema.org/DateTime'. The date and time
+      for when the prediction is not valid anymore in ISO8601 UTCformat. It can be
+      represented by an specific time instant or by an ISO8601 interval
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/expiryDate
+  predictions:
+    description: Property. List of predictions for water quality
+    range: Predictions
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/predictions
+  waterQualityPredictionValue:
+    description: Property. Model:'https://schema.org/Text'. Describes a summary of
+      the water quality prediction
+    range: waterQualityPredictionValue_options
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.WaterQuality@30ebc231866fb0811836a1e7d49605b4bf0a425a
+    slot_uri: https://smartdatamodels.org/dataModel.WaterQuality/waterQualityPredictionValue
+enums:
+  waterQualityPredictionValue_options:
+    name: waterQualityPredictionValue_options
+    permissible_values:
+      Excellent:
+        text: Excellent
+      Good:
+        text: Good
+      Sufficient:
+        text: Sufficient
+      Poor:
+        text: Poor

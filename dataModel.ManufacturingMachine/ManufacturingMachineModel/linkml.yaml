@@ -1,0 +1,308 @@
+id: https://github.com/smart-data-models/dataModel.ManufacturingMachine/ManufacturingMachineModel
+name: ManufacturingMachineModel
+title: Smart Data models - Machine-Model schema
+description: This entity contains a harmonised description of a generic machine model.
+  This entity is primarily associated with the industry segment and related IoT applications.
+  The machineModel includes a hierarchical structure that allows machine models to
+  be grouped in a flexible way.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ManufacturingMachine
+  spec.source.path: ManufacturingMachineModel/schema.json
+  spec.source.commit: bacbb53da309886b27f71db70115100caf61a1b8
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.ManufacturingMachine/master/context.jsonld"],
+    "brandName": {"type": "Property", "value": "QuickT"}, "dataProvider": {"type":
+    "Property", "value": "https://provider.example.com"}, "description": {"type":
+    "Property", "value": "Machine to screen print t-shirts"}, "documentation": {"type":
+    "Property", "value": "https://example.com"}, "id": "urn:ngsi-ld:MachineModel:e01f13d1-fea4-4cc4-92c9-0d9fadb2c509",
+    "machineModelChildren": {"object": ["urn:ngsi-ld:MachineModel:a74fcf24-58fa-11e8-ae3e-df1abd78f83f",
+    "urn:ngsi-ld:MachineModel:b29330f6-58fa-11e8-93b5-1379ded6eef6"], "type": "Relationship"},
+    "machineModelParent": {"object": "urn:ngsi-ld:MachineModel:4146335f-839f-4ff9-a575-6b4e6232b734",
+    "type": "Relationship"}, "manufacturerName": {"type": "Property", "value": "ScreenOPrint,
+    Inc."}, "manufacturingMachineType": {"type": "Property", "value": ["2dPrinter"]},
+    "name": {"type": "Property", "value": "CA1256b"}, "processDescription": {"type":
+    "Property", "value": "Industrial printer used to mass print t-shirts"}, "root":
+    {"type": "Property", "value": false}, "source": {"type": "Property", "value":
+    "https://source.example.com"}, "standardOperations": {"type": "Property", "value":
+    ["print"]}, "type": "ManufacturingMachineModel", "version": {"type": "Property",
+    "value": "v1"}}'
+classes:
+  ManufacturingMachineModel:
+    class_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/ManufacturingMachineModel
+    description: This entity contains a harmonised description of a generic machine
+      model. This entity is primarily associated with the industry segment and related
+      IoT applications. The machineModel includes a hierarchical structure that allows
+      machine models to be grouped in a flexible way.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - brandName
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - documentation
+    - machineModelChildren
+    - machineModelParent
+    - manufacturerName
+    - manufacturingMachineType
+    - name
+    - owner
+    - processDescription
+    - root
+    - seeAlso
+    - source
+    - standardOperations
+    - version
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/areaServed
+  documentation:
+    description: Property. Reference to data sheet or other manufacturer’s documentation
+      about this MachineModel
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/documentation
+  manufacturerName:
+    description: Property. The name of manufacturer of this MachineModel
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/manufacturerName
+  brandName:
+    description: Property. The brand name of this MachineModel
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/brandName
+  manufacturingMachineType:
+    description: Property. A List of functional categories which this machineModel
+      supports. Enum:'robot, cnc, 2dPrinter, 3dPrinter, 3dScanner, lathe, injectionMolding,
+      laserCutter, millingMachine, grindingMachine, stampingMachine, oven, kiln, packaging,
+      mixer, dryer, fan, saw'
+    range: manufacturingMachineType_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/manufacturingMachineType
+  version:
+    description: Property. The manufacturer defined version number for the machine
+      model
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/version
+  machineModelParent:
+    description: Relationship. References any higher level MachineModel that this
+      machine model is based on
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/machineModelParent
+  machineModelChildren:
+    description: Relationship. References any lower level MachineModel entities that
+      are based on this machine model
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/machineModelChildren
+  processDescription:
+    description: Property. A description of the industrial process carried out by
+      this machine
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/processDescription
+  standardOperations:
+    description: Property. Lists the standard set of operations supported by this
+      machineModel
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/standardOperations
+  root:
+    description: Property. A logical indicator that this Manufacturing Machine Model
+      is the root of a Machine Model hierarchy.True indicates it is the root, false
+      indicates that it is not the root
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ManufacturingMachine@bacbb53da309886b27f71db70115100caf61a1b8
+    slot_uri: https://smartdatamodels.org/dataModel.ManufacturingMachine/root
+enums:
+  manufacturingMachineType_options:
+    name: manufacturingMachineType_options
+    permissible_values:
+      2dPrinter:
+        text: 2dPrinter
+      3dPrinter:
+        text: 3dPrinter
+      3dScanner:
+        text: 3dScanner
+      cnc:
+        text: cnc
+      dryer:
+        text: dryer
+      fan:
+        text: fan
+      grindingMachine:
+        text: grindingMachine
+      injectionMolding:
+        text: injectionMolding
+      kiln:
+        text: kiln
+      laserCutter:
+        text: laserCutter
+      lathe:
+        text: lathe
+      millingMachine:
+        text: millingMachine
+      mixer:
+        text: mixer
+      oven:
+        text: oven
+      packaging:
+        text: packaging
+      robot:
+        text: robot
+      saw:
+        text: saw
+      stampingMachine:
+        text: stampingMachine

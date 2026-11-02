@@ -1,0 +1,350 @@
+id: https://github.com/smart-data-models/dataModel.Agrifood/AgriParcelRecord
+name: AgriParcelRecord
+title: Smart Data Models - Agri Parcel Record
+description: This entity contains a harmonised description of the conditions recorded
+  on a parcel of land. This entity is primarily associated with the agricultural vertical
+  and related IoT applications.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Agrifood
+  spec.source.path: AgriParcelRecord/schema.json
+  spec.source.commit: e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Agrifood/master/context.jsonld"],
+    "atmosphericPressure": {"observedAt": "2017-05-04T12:30:00Z", "type": "Property",
+    "unitCode": "A97", "value": 1013.25}, "description": {"type": "Property", "value":
+    "Monthly fertiliser application"}, "hasAgriParcel": {"object": "urn:ngsi-ld:AgriParcel:d3676010-d815-468c-9e01-25739c5a25ed",
+    "type": "Relationship"}, "hasDevice": {"object": ["urn:ngsi-ld:Device:4a40aeba-4474-11e8-86bf-03d82e958ce6",
+    "urn:ngsi-ld:Device:63217d24-4474-11e8-9da2-c3dd3c36891b", "urn:ngsi-ld:Device:68e091dc-4474-11e8-a398-df010c53b416",
+    "urn:ngsi-ld:6f44b54e-4474-11e8-8577-d7ff6a8ef551"], "type": "Relationship"},
+    "id": "urn:ngsi-ld:AgriParcelRecord:8f5445e6-f49b-496e-833b-e65fc97fcab7", "leafRelativeHumidity":
+    {"observedAt": "2017-05-04T12:30:00Z", "type": "Property", "unitCode": "P1", "value":
+    0.25}, "leafTemperature": {"observedAt": "2017-05-04T12:30:00Z", "type": "Property",
+    "unitCode": "CEL", "value": 25.1}, "leafWetness": {"observedAt": "2017-05-04T12:30:00Z",
+    "type": "Property", "unitCode": "P1", "value": 1.0}, "location": {"type": "GeoProperty",
+    "value": {"coordinates": [[[100, 0], [101, 0], [101, 1], [100, 1], [100, 0]]],
+    "type": "Polygon"}}, "photosyntheticallyActiveRadiation": {"observedAt": "2017-05-04T12:30:00Z",
+    "type": "Property", "value": 1250}, "relatedSource": {"type": "Property", "value":
+    [{"application": "urn:ngsi-ld:AgriApp:72d9fb43-53f8-4ec8-a33c-fa931360259a", "applicationEntityId":
+    "app:parcelrec1"}]}, "relativeHumidity": {"observedAt": "2017-05-04T12:30:00Z",
+    "type": "Property", "unitCode": "C62", "value": 0.15}, "seeAlso": {"type": "Property",
+    "value": ["https://example.org/concept/agriparcelrec", "https://datamodel.org/example/agriparcelrec"]},
+    "soilMoistureEc": {"observedAt": "2017-05-04T12:30:00Z", "type": "Property", "unitCode":
+    "D10", "value": 17}, "soilMoistureVwc": {"depth": {"type": "Property", "unitCode":
+    "CMT", "value": 20}, "observedAt": "2017-05-04T12:30:00Z", "type": "Property",
+    "unitCode": "C62", "value": 0.08}, "soilPh": {"type": "Property", "value": 6.8},
+    "soilSalinity": {"observedAt": "2017-05-04T12:30:00Z", "type": "Property", "unitCode":
+    "D10", "value": 1198.11}, "soilTemperature": {"observedAt": "2017-05-04T12:30:00Z",
+    "type": "Property", "unitCode": "CEL", "value": 27}, "solarRadiation": {"observedAt":
+    "2017-05-04T12:30:00Z", "type": "Property", "unitCode": "N78", "value": 15}, "stemDiameter":
+    {"observedAt": "2017-05-04T12:30:00Z", "type": "Property", "unitCode": "MMT",
+    "value": 184.2}, "stemDiameterVariation": {"observedAt": "2017-05-04T12:30:00Z",
+    "type": "Property", "unitCode": "MMT", "value": 0.18}, "type": "AgriParcelRecord"}'
+classes:
+  AgriParcelRecord:
+    class_uri: https://smartdatamodels.org/dataModel.Agrifood/AgriParcelRecord
+    description: This entity contains a harmonised description of the conditions recorded
+      on a parcel of land. This entity is primarily associated with the agricultural
+      vertical and related IoT applications.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - atmosphericPressure
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - depth
+    - description
+    - hasAgriParcel
+    - hasDevice
+    - leafRelativeHumidity
+    - leafTemperature
+    - leafWetness
+    - name
+    - owner
+    - photosyntheticallyActiveRadiation
+    - relativeHumidity
+    - seeAlso
+    - soilMoistureEc
+    - soilMoistureVwc
+    - soilPh
+    - soilSalinity
+    - soilTemperature
+    - solarRadiation
+    - source
+    - stemDiameter
+    - stemDiameterVariation
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/areaServed
+  hasAgriParcel:
+    description: Relationship. Reference to the AgriParcel
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/hasAgriParcel
+  soilTemperature:
+    description: Property. Model:'http://schema.org/Number'. The observed soil temperature
+      nominally in degrees centigrade. Units:'degrees centigrade'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/soilTemperature
+  soilMoistureVwc:
+    description: 'Property. Model:''http://schema.org/Number''. Measured as Volumetric
+      Water Content, VWC as a percentage. 0 <= soilMoistureVwc <= 1 '
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/soilMoistureVwc
+  soilMoistureEc:
+    description: Property. Model:'http://schema.org/Number'. Measured as Electrical
+      Conductivity, EC nominally in units of Siemens per meter. Units:'siemens / m'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/soilMoistureEc
+  solarRadiation:
+    description: Property. Model:'http://schema.org/Number'. Instantaneous solar radiation
+      measured in kW/m2. Units:'kW/m2'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/solarRadiation
+  stemDiameter:
+    description: Property. Model:'http://schema.org/Number'. Absolute stem/trunk diameter.
+      Units:'millimetres'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/stemDiameter
+  stemDiameterVariation:
+    description: Property. Model:'http://schema.org/Number'. Change in stem/trunk
+      diameter over the reference period (typically the sampling interval). Units:'millimetres'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/stemDiameterVariation
+  photosyntheticallyActiveRadiation:
+    description: Property. Model:'http://schema.org/Number'. Photosynthetically Active
+      Radiation (400-700 nm photon flux density). Units:'umol/m2/s'. No UN/CEFACT
+      code exists for this compound unit, so no unitCode is used
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/photosyntheticallyActiveRadiation
+  soilSalinity:
+    description: Property. Model:'http://schema.org/Number'. It is the salt content
+      in the soil
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/soilSalinity
+  relativeHumidity:
+    description: Property. Model:'http://schema.org/Number'. Relative Humidity a number
+      between 0 and 1 representing the range of 0% to 100%
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/relativeHumidity
+  leafWetness:
+    description: Property. Model:'http://schema.org/Number'. It is a meteorological
+      parameter that describes the amount of dew and precipitation left on surfaces
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/leafWetness
+  leafRelativeHumidity:
+    description: Property. Model:'http://schema.org/Number'. Relative humidity on
+      the surface of the leaves
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/leafRelativeHumidity
+  leafTemperature:
+    description: Property. Model:'http://schema.org/Number'. The observed leaf temperature
+      nominally in degrees centigrade. Units:'degrees centigrade'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/leafTemperature
+  atmosphericPressure:
+    description: Property. Model:'http://schema.org/Number'. Atmospheric Pressure
+      nominally in units of hecto Pascals. Units:'hecto Pascals'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/atmosphericPressure
+  hasDevice:
+    description: Relationship. Model:'http://schema.org/URL'. Reference to the IoT
+      devices associated with this item i.e. sensors, controls
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/hasDevice
+  depth:
+    description: Property. Model:'http://schema.org/Number'. Metadata to indicate
+      the associated depth where soil measurements are taken
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/depth
+  soilPh:
+    description: Property. Model:'http://schema.org/Number'. Measured soil pH value,
+      recommended scale 0-14.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Agrifood@e5eabb59258192e2a01d89fb5b56a7aa9dfdb1b1
+    slot_uri: https://smartdatamodels.org/dataModel.Agrifood/soilPh

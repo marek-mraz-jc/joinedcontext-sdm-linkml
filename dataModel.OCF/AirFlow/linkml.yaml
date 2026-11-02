@@ -1,0 +1,315 @@
+id: https://github.com/smart-data-models/dataModel.OCF/AirFlow
+name: AirFlow
+title: Smart Data models - AirFlow schema derived from the open connectivity foundation
+  repository https://github.com/openconnectivityfoundation/IoTDataModels
+description: This Resource describes Properties associated with air flow.The Property
+  'supporteddirections' is the set of valid values for the direction property for
+  a particular instance of this Resource Type.The Property 'direction' is the directionality
+  of the air flow if applicable, if Property 'supporteddirections' is also present
+  it must be a value from that set. The values of Property 'direction' are dependent
+  on the capabilities of the unit.The Property 'speed' is an integer representing
+  the current speed level for the unit.The Property 'range' is an array of the min,max
+  values for the speed level. If not present the 'range' defaults to [0,100]. Property
+  'automode' is the status of the automode feature; Off means automode is not enabled,
+  On means automode is active and the speed is automatically controlled by the Device.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: AirFlow/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Manage field d",
+    "addressLocality": "Section think part easy argue about com", "addressRegion":
+    "Free face your government field. Herself camera career alone. Any yard next spring
+    everybody hope figure.", "district": "Event big toward age nature million. Newspaper
+    plan truth seat. Three left natural continue.", "postOfficeBoxNumber": "Play into
+    understand population. Area huge oil should.", "postalCode": "Far fill experience
+    maybe. Democratic power free colle", "streetAddress": "Teacher after shoulder
+    president state center. Hand happy unit catch charge team. Financial certain exactly
+    current sou", "streetNr": "Try their real man term side interesting. Eat according
+    reason similar summer production force."}}, "alternateName": {"type": "Property",
+    "value": "Itself key approach space defense development attack quite. Write offer
+    tough. Every must particularly page would professor many."}, "areaServed": {"type":
+    "Property", "value": "Around claim western write window produce sit. Debate century
+    e"}, "automode": {"type": "Property", "value": "On"}, "dataProvider": {"type":
+    "Property", "value": "Difference perform describe forward participant great. Less
+    certain moment everyone college."}, "dateCreated": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "2001-07-15T01:59:58Z"}}, "dateModified": {"type":
+    "Property", "value": {"@type": "DateTime", "@value": "1999-01-10T11:13:04Z"}},
+    "description": {"type": "Property", "value": "Challenge good live even sense black.
+    Play site stand economy herself happen."}, "direction": {"type": "Property", "value":
+    "American whole magazine truth stop whose. On traditional measure example sense
+    peace. Would mouth relate own chair."}, "id": "urn:ngsi-ld:AirFlow:id:QBYQ:46486922",
+    "if": {"type": "Property", "value": ["oic.if.baseline", "oic.if.a"]}, "location":
+    {"type": "GeoProperty", "value": {"coordinates": [65.785205, -176.72728], "type":
+    "Point"}}, "n": {"type": "Property", "value": "Partner stock four. Region as true
+    develop sound centr"}, "name": {"type": "Property", "value": "Particular investment
+    once team. Back finish water participant shake."}, "owner": {"type": "Property",
+    "value": ["urn:ngsi-ld:AirFlow:items:SRPE:15875448", "urn:ngsi-ld:AirFlow:items:JHQL:37977670"]},
+    "range": {"type": "Property", "value": [864, 864]}, "rt": {"type": "Property",
+    "value": ["oic.r.airflow"]}, "seeAlso": {"type": "Property", "value": ["urn:ngsi-ld:AirFlow:items:XFSX:59784474"]},
+    "source": {"type": "Property", "value": "Later body goal nor. Ci"}, "speed": {"type":
+    "Property", "value": 864}, "step": {"type": "Property", "value": 864}, "supporteddirections":
+    {"type": "Property", "value": ["Line beyond its particularly tree whom. Kind miss
+    artist truth trouble behavior style."]}, "type": "AirFlow"}'
+classes:
+  AirFlow:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/AirFlow
+    description: This Resource describes Properties associated with air flow.The Property
+      'supporteddirections' is the set of valid values for the direction property
+      for a particular instance of this Resource Type.The Property 'direction' is
+      the directionality of the air flow if applicable, if Property 'supporteddirections'
+      is also present it must be a value from that set. The values of Property 'direction'
+      are dependent on the capabilities of the unit.The Property 'speed' is an integer
+      representing the current speed level for the unit.The Property 'range' is an
+      array of the min,max values for the speed level. If not present the 'range'
+      defaults to [0,100]. Property 'automode' is the status of the automode feature;
+      Off means automode is not enabled, On means automode is active and the speed
+      is automatically controlled by the Device.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - automode
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - direction
+    - if
+    - n
+    - name
+    - owner
+    - range
+    - rt
+    - seeAlso
+    - source
+    - speed
+    - step
+    - supporteddirections
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. The Resource Type
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  speed:
+    description: Property. The current speed level
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/speed
+  direction:
+    description: Property. The directionality of the air flow, a value indicated by
+      'supporteddirections'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/direction
+  automode:
+    description: Property. The status of the automode feature, if on speed is set
+      by the Device
+    range: automode_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/automode
+  supporteddirections:
+    description: Property. The array of possible direction settings for this instance
+      of the Resource Type
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/supporteddirections
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  range:
+    description: Property. The valid range for the Property in the Resource as an
+      integer. The first value in the array is the minimum value, the second value
+      in the array is the maximum value
+    range: integer
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/range
+  step:
+    description: Property. Step value across the defined range when the range is an
+      integer.  This is the increment for valid values across the range; so if range
+      is 0..10 and step is 2 then valid values are 0,2,4,6,8,10
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/step
+  if:
+    description: Property. The OCF Interface set supported by this Resource
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.airflow:
+        text: oic.r.airflow
+  automode_options:
+    name: automode_options
+    permissible_values:
+      'On':
+        text: 'On'
+      'Off':
+        text: 'Off'
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.a:
+        text: oic.if.a
+      oic.if.baseline:
+        text: oic.if.baseline

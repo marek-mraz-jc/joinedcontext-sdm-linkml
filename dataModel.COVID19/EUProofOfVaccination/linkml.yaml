@@ -1,0 +1,111 @@
+id: https://github.com/smart-data-models/dataModel.COVID19/EUProofOfVaccination
+name: EUProofOfVaccination
+title: EU DCC
+description: EU Digital Covid Certificate version 1.3.0 adapted to work with NGSI
+  standard by Smart Data Models Program
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.COVID19
+  spec.source.path: EUProofOfVaccination/schema.json
+  spec.source.commit: eda978bfd0eb9ba376760cb9af81d49703b41240
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smart-data-models.github.io/dataModel.COVID19/context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.COVID19/master/context.jsonld"],
+    "dob": {"type": "Property", "value": {"@type": "date-time", "@value": "1964-01-01"}},
+    "id": "urn:ngsi-ld:1234:ABCD", "nam": {"type": "Property", "value": {"fn": "Smith-Jones",
+    "fnt": "SMITH<JONES", "gn": "Charles Edward", "gnt": "CHARLES<EDWARD"}}, "t":
+    {"type": "Property", "value": [{"ci": "URN:UVCI:01:NL:DADFCC47C7334E45A906DB12FD859FB7#1",
+    "co": "NL", "is": "Ministry of Health Welfare and Sport", "nm": "ELITechGroup,
+    SARS-CoV-2 ELITe MGB\u00ae Kit", "sc": "2021-06-11T17:30:00Z", "tc": "Example
+    Test Corp, Big City", "tg": "840539006", "tr": "260415000", "tt": "LP6464-4"}]},
+    "type": "EUProofOfVaccination", "ver": {"type": "Property", "value": "1.3.0"}}'
+classes:
+  EUProofOfVaccination:
+    class_uri: https://smartdatamodels.org/dataModel.COVID19/EUProofOfVaccination
+    description: EU Digital Covid Certificate version 1.3.0 adapted to work with NGSI
+      standard by Smart Data Models Program
+    is_a: Entity
+    slots:
+    - dob
+    - nam
+    - r
+    - t
+    - v
+    - ver
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.COVID19@eda978bfd0eb9ba376760cb9af81d49703b41240
+  Nam:
+    description: Property. Surname(s), forename(s) - in that order
+    attributes:
+      fn:
+        description: Property. Surname. The surname or primary name(s) of the person
+          addressed in the certificate
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.COVID19@eda978bfd0eb9ba376760cb9af81d49703b41240
+      fnt:
+        description: Property. Standardised surname. The surname(s) of the person,
+          transliterated ICAO 9303
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.COVID19@eda978bfd0eb9ba376760cb9af81d49703b41240
+      gn:
+        description: Property. Forename. The forename(s) of the person addressed in
+          the certificate
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.COVID19@eda978bfd0eb9ba376760cb9af81d49703b41240
+      gnt:
+        description: Property. Standardised forename. The forename(s) of the person,
+          transliterated ICAO 9303
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.COVID19@eda978bfd0eb9ba376760cb9af81d49703b41240
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.COVID19@eda978bfd0eb9ba376760cb9af81d49703b41240
+slots:
+  ver:
+    description: Property. Schema version. Version of the schema, according to Semantic
+      versioning (ISO, https://semver.org/ version 2.0.0 or newer)
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.COVID19@eda978bfd0eb9ba376760cb9af81d49703b41240
+    slot_uri: https://smartdatamodels.org/dataModel.COVID19/ver
+  nam:
+    description: Property. Surname(s), forename(s) - in that order
+    range: Nam
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.COVID19@eda978bfd0eb9ba376760cb9af81d49703b41240
+    slot_uri: https://smartdatamodels.org/dataModel.COVID19/nam
+  dob:
+    description: Property. Date of birth. Date of Birth of the person addressed in
+      the DCC. ISO 8601 date format restricted to range 1900-2099 or empty
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.COVID19@eda978bfd0eb9ba376760cb9af81d49703b41240
+    slot_uri: https://smartdatamodels.org/dataModel.COVID19/dob
+  v:
+    description: Vaccination Group
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.COVID19@eda978bfd0eb9ba376760cb9af81d49703b41240
+    slot_uri: https://smartdatamodels.org/dataModel.COVID19/v
+  t:
+    description: Property. Test Group
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.COVID19@eda978bfd0eb9ba376760cb9af81d49703b41240
+    slot_uri: https://smartdatamodels.org/dataModel.COVID19/t
+  r:
+    description: Recovery Group
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.COVID19@eda978bfd0eb9ba376760cb9af81d49703b41240
+    slot_uri: https://smartdatamodels.org/dataModel.COVID19/r

@@ -1,0 +1,377 @@
+id: https://github.com/smart-data-models/dataModel.DistributedLedgerTech/DLTtxReceipt
+name: DLTtxReceipt
+title: ' Smart Data Models - Distributed Ledger Technology/ Blockchain Receipts'
+description: Description of a DLT receipt storing some of the attributes (keys) of
+  a transaction.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.DistributedLedgerTech
+  spec.source.path: DLTtxReceipt/schema.json
+  spec.source.commit: 5141af8b9483403befa95e875ebbb1132bab4b47
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.DistributedLedgerTech/master/context.jsonld"],
+    "TxReceipts": {"type": "Property", "value": {"blockHash": "0xce0a88fa83d6b928f65f5eca653e98e81ed67702be1d4253c43b1ccb30d51f56",
+    "blockNumber": 345522, "contractAddress": "0x9a3DBCa554e9f6b9257aAa24010DA8377C57c17e",
+    "cumulativeGasUsed": 112188, "dltType": "eth", "from": "0x4c962a968ff8cc5c99688602969ada5caa3a92cb",
+    "gasUsed": 112188, "keys": ["id", "type", "species", "legalId", "birthdate", "@context"],
+    "logs": {"blockHash": "0xce0a88fa83d6b928f65f5eca653e98e81ed67702be1d4253c43b1ccb30d51f56",
+    "blockNumber": 345522, "data": "0x0000000000000000000000004c962a968ff8cc5c99688602969ada5caa3a92cb75726e3a6e6773692d6c643a416e696d616c3a310000000000000000000000000000000000000000000000000000000000000000000000000000000060802b30000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000317a6470754171367250624133745a6b694441396d425355337a3872355a37544739716970754a4c45413570384145714c58000000000000000000000000000000",
+    "id": "log_e04a3da4", "logAddress": "0x9a3DBCa554e9f6b9257aAa24010DA8377C57c17e",
+    "logIndex": 0, "removed": false, "topics": ["0x117ef0a3887baaa508b007da020a6dc877e9f3e78883d885d11e272070e45175"],
+    "transactionHash": "0x935dc16fa0b2000e609d6cc366c4fe2cb9557ec47ee94455e135af4259105517",
+    "transactionIndex": 0}, "logsBloom": "0x00000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000002000000000000000000000000000000000000000000000000000000000",
+    "objectType": "asset", "status": false, "storageType": "merkletree", "to": "0x9a3dbca554e9f6b9257aaa24010da8377c57c17e",
+    "transactionHash": "0x935dc16fa0b2000e609d6cc366c4fe2cb9557ec47ee94455e135af4259105517",
+    "transactionIndex": 0}}, "dateCreated": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "1970-03-25T22:57:25Z"}}, "dateModified": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2019-03-15T08:10:09Z"}}, "id": "urn:ngsi-ld:dataModel:id:VINF:36225393",
+    "refEntity": {"object": "urn:ngsi-ld:Animal:1", "type": "Relationship"}, "type":
+    "DLTtxReceipt"}'
+classes:
+  DLTtxReceipt:
+    class_uri: https://smartdatamodels.org/dataModel.DistributedLedgerTech/DLTtxReceipt
+    description: Description of a DLT receipt storing some of the attributes (keys)
+      of a transaction.
+    is_a: Entity
+    slots:
+    - TxReceipts
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - name
+    - owner
+    - refEntity
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+  Logs:
+    description: Property. A log record can be used to describe an event within a
+      smart contract (Ethereum)
+    attributes:
+      id:
+        description: Property. Model:'https://schema.org/Text'. Log id
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      data:
+        description: Property. Model:'https://schema.org/Text'. Contains one or more
+          32 Bytes non-indexed arguments of the log
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      topics:
+        description: 'Property. Array of 0 to 4 32 Bytes DATA of indexed log arguments.
+          (In solidity: The first topic is the hash of the signature of the event
+          (e.g. Deposit(address,bytes32,uint256)), except you declared the event with
+          the anonymous specifier.)'
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      logAddress:
+        description: Property. Model:'https://schema.org/Text'. Address from which
+          this log originated
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      removed:
+        description: Property. Model:'https://schema.org/Boolean'. True when the log
+          was removed, due to a chain reorganization. False if its a valid log
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      logIndex:
+        description: Property. Model:'https://schema.org/Number'.  Integer of the
+          log index position in the block. null when its pending log
+        range: integer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      blockHash:
+        description: Property. Model:'https://schema.org/Text'. Hash of the block
+          where this log was in
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      blockNumber:
+        description: Property. Model:'https://schema.org/Number'. The block number
+          where this log was in. null when its pending. null when its pending log
+        range: integer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      transactionHash:
+        description: Property. Model:'https://schema.org/Text'. Hash of the transactions
+          this log was created from. null when its pending log
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      transactionIndex:
+        description: Property. Model:'https://schema.org/Number'.  Integer of the
+          transactions index position log was created from. null when its pending
+          log
+        range: integer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+  TxReceipts:
+    description: Property. Transaction Receipt
+    attributes:
+      to:
+        description: Property. Model:'https://schema.org/Text'. Account or Contract
+          Address to transaction has been submitted
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      from:
+        description: Property. Model:'https://schema.org/Text'. Account Address of
+          the user/service responsible to submit the transaction (address of the msg.sender)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      keys:
+        description: Property. Payload keys used in transaction payload
+        annotations:
+          ngsi_ld_kind: ListProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      logs:
+        description: Property. A log record can be used to describe an event within
+          a smart contract (Ethereum)
+        range: Logs
+        annotations:
+          ngsi_ld_kind: JsonProperty
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      status:
+        description: Property. Model:'https://schema.org/Boolean'. True or False —
+          which informs us if the txn was reverted or not — in this case it was true
+          (0x1)
+        range: boolean
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      dltType:
+        description: Property. Model:'https://schema.org/Text'. Enum:'eth, iota'.
+          type of DLT used by the transaction
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      gasUsed:
+        description: Property. Model:'https://schema.org/Number'. The amount of gas
+          used by this specific transaction
+        range: integer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      blockHash:
+        description: Property. Model:'https://schema.org/Text'. Hash of the block
+          of the transaction
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      logsBloom:
+        description: Property. Model:'https://schema.org/Text'. 256 Bytes-bloom filter
+          for light clients to quickly retrieve related logs
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      objectType:
+        description: Property. Model:'https://schema.org/Text'. Type of object has
+          been persisted
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      blockNumber:
+        description: Property. Model:'https://schema.org/Number'. Block number of
+          the transaction
+        range: integer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      storageType:
+        description: Property. Model:'https://schema.org/Text'. Enum:'iota, ipfs,
+          merkletree'. Type of storage used to persist payload
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      transactionHash:
+        description: Property. Model:'https://schema.org/Text'. Hash of the transaction
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      contractAddress:
+        description: Property. Model:'https://schema.org/Text'. Contract address created,
+          if the transaction was a contract creation, otherwise null
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      transactionIndex:
+        description: Property. Model:'https://schema.org/Number'. Integer of the transactions
+          index position in the block
+        range: integer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+      cumulativeGasUsed:
+        description: Property. Model:'https://schema.org/Number'. Total amount of
+          gas used when this transaction was executed in the block
+        range: integer
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+    slot_uri: https://smartdatamodels.org/areaServed
+  refEntity:
+    description: Relationship. Model:'http://schema.org/URL'. Entity persisted in
+      the DLT
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+    slot_uri: https://smartdatamodels.org/dataModel.DistributedLedgerTech/refEntity
+  TxReceipts:
+    description: Property. Transaction Receipt
+    range: TxReceipts
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.DistributedLedgerTech@5141af8b9483403befa95e875ebbb1132bab4b47
+    slot_uri: https://smartdatamodels.org/dataModel.DistributedLedgerTech/TxReceipts

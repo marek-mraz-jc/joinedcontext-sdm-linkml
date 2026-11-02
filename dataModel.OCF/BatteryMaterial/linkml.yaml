@@ -1,0 +1,400 @@
+id: https://github.com/smart-data-models/dataModel.OCF/BatteryMaterial
+name: BatteryMaterial
+title: Battery Material
+description: Smart Data Models Program adaptation of the original IoTData data Models.
+  This Resource describes the battery material represented as an enumerated set of
+  strings.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: BatteryMaterial/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Power daughter suffer
+    store else. Offer real leg side.", "addressLocality": "Your dark result just.
+    Small run true.", "addressRegion": "Agency training need. Certainly work open
+    in.", "district": "", "postOfficeBoxNumber": "Daughter father media Democrat city
+    relationship ball. Cultural across space top lot. Understand team necessary PM
+    explain enough near.", "postalCode": "Store world standard middle town how ten.
+    By so tough sometimes most agent. Smile agency sometimes west.", "streetAddress":
+    "Information raise various American I structure. Indeed public oil student rather
+    discuss.", "streetNr": "Bit today already. Table major pull garden seat. Together
+    artist great include. Such consider partner onto treatment."}}, "alternateName":
+    {"type": "Property", "value": "Start performance approach Republican. Tough board
+    leave baby security item. Law way inside."}, "areaServed": {"type": "Property",
+    "value": "Community career science. Play reason skill matter sometimes seem direction
+    produce. Wide idea else true military explain."}, "dataProvider": {"type": "Property",
+    "value": "Indeed white could account benefit produce. Cultural anyone southern
+    you letter board watch."}, "dateCreated": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "1981-05-13T21:09:19Z"}}, "dateModified": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "1980-07-16T20:07:15Z"}}, "description":
+    {"type": "Property", "value": "Much wish look bed gun store. Boy present wide
+    old."}, "id": "urn:ngsi-ld:BatteryMaterial:id:YHLJ:63936175", "if": {"type": "Property",
+    "value": ["oic.if.s", "oic.if.baseline"]}, "location": {"type": "GeoProperty",
+    "value": {"coordinates": [10.1892095, -5.495683], "type": "Point"}}, "material":
+    {"type": "Property", "value": "Zinc Carbon"}, "n": {"type": "Property", "value":
+    "Fast to this identify summer. Signifi"}, "name": {"type": "Property", "value":
+    "Particular garden free effort for film."}, "owner": {"type": "Property", "value":
+    ["urn:ngsi-ld:BatteryMaterial:items:WJNR:66047443", "urn:ngsi-ld:BatteryMaterial:items:HPXL:60042311"]},
+    "rt": {"type": "Property", "value": ["oic.r.batterymaterial"]}, "seeAlso": {"type":
+    "Property", "value": ["urn:ngsi-ld:BatteryMaterial:items:KLOB:32503034"]}, "source":
+    {"type": "Property", "value": "I"}, "type": "BatteryMaterial"}'
+classes:
+  BatteryMaterial:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/BatteryMaterial
+    description: Smart Data Models Program adaptation of the original IoTData data
+      Models. This Resource describes the battery material represented as an enumerated
+      set of strings.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - if
+    - material
+    - n
+    - name
+    - owner
+    - rt
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. The Resource Type.
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  material:
+    description: Property. The battery construction material (type).
+    range: material_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/material
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  if:
+    description: Property. The OCF Interface set supported by this Resource.
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.batterymaterial:
+        text: oic.r.batterymaterial
+  material_options:
+    name: material_options
+    permissible_values:
+      Alkaline:
+        text: Alkaline
+      Aluminium Air:
+        text: Aluminium Air
+      Aluminium Ion:
+        text: Aluminium Ion
+      Atomic Betavoltaics:
+        text: Atomic Betavoltaics
+      Atomic Optoelectric Nuclear:
+        text: Atomic Optoelectric Nuclear
+      Atomic Nuclear:
+        text: Atomic Nuclear
+      Bunsen Cell:
+        text: Bunsen Cell
+      Chromic Acid Cell:
+        text: Chromic Acid Cell
+      Poggendorff Cell:
+        text: Poggendorff Cell
+      Clark Cell:
+        text: Clark Cell
+      Daniell Cell:
+        text: Daniell Cell
+      Dry Cell:
+        text: Dry Cell
+      Earth:
+        text: Earth
+      Flow:
+        text: Flow
+      Flow Vanadium Redox:
+        text: Flow Vanadium Redox
+      Flow Zinc Bromine:
+        text: Flow Zinc Bromine
+      Flow Zinc Cerium:
+        text: Flow Zinc Cerium
+      Frog:
+        text: Frog
+      Fuel:
+        text: Fuel
+      Galvanic Cell:
+        text: Galvanic Cell
+      Glass:
+        text: Glass
+      Grove Cell:
+        text: Grove Cell
+      Lead Acid:
+        text: Lead Acid
+      Lead Acid Deep Cycle:
+        text: Lead Acid Deep Cycle
+      Lead Acid VRLA:
+        text: Lead Acid VRLA
+      Lead Acid AGM:
+        text: Lead Acid AGM
+      Lead Acid Gel:
+        text: Lead Acid Gel
+      Leclanche Cell:
+        text: Leclanche Cell
+      Lemon Potato:
+        text: Lemon Potato
+      Lithium:
+        text: Lithium
+      Lithium Air:
+        text: Lithium Air
+      Lithium Ion:
+        text: Lithium Ion
+      Lithium Ion Cobalt Oxide (ICR):
+        text: Lithium Ion Cobalt Oxide (ICR)
+      Lithium Ion Manganese Oxide (IMR):
+        text: Lithium Ion Manganese Oxide (IMR)
+      Lithium Ion Polymer:
+        text: Lithium Ion Polymer
+      Lithium Iron Phosphate:
+        text: Lithium Iron Phosphate
+      Lithium Sulfur:
+        text: Lithium Sulfur
+      Lithium Titanate:
+        text: Lithium Titanate
+      Lithium Ion Thin Film:
+        text: Lithium Ion Thin Film
+      Magnesium:
+        text: Magnesium
+      Magnesium Ion:
+        text: Magnesium Ion
+      Mercury:
+        text: Mercury
+      Molten Salt:
+        text: Molten Salt
+      Nickel Cadmium:
+        text: Nickel Cadmium
+      Nickel Cadmium Vented Cell:
+        text: Nickel Cadmium Vented Cell
+      Nickel Hydrogen:
+        text: Nickel Hydrogen
+      'Nickel Iron ':
+        text: 'Nickel Iron '
+      Nickel Metal Hydride:
+        text: Nickel Metal Hydride
+      Nickel Metal Hydride Low Self-Discharge:
+        text: Nickel Metal Hydride Low Self-Discharge
+      Nickel Oxyhydroxide:
+        text: Nickel Oxyhydroxide
+      Nickel Oxyride:
+        text: Nickel Oxyride
+      Nickel Zinc:
+        text: Nickel Zinc
+      Organic Radical:
+        text: Organic Radical
+      Paper:
+        text: Paper
+      Polymer Based:
+        text: Polymer Based
+      Polysulfide Bromide:
+        text: Polysulfide Bromide
+      Potassium Ion:
+        text: Potassium Ion
+      Pulvermachers Chain:
+        text: Pulvermachers Chain
+      Silicon Air:
+        text: Silicon Air
+      Silver Calcium:
+        text: Silver Calcium
+      Silver Oxide:
+        text: Silver Oxide
+      Silver Zinc:
+        text: Silver Zinc
+      Sodium Ion:
+        text: Sodium Ion
+      Sodium Sulfur:
+        text: Sodium Sulfur
+      Solid State:
+        text: Solid State
+      Sugar:
+        text: Sugar
+      Super Iron:
+        text: Super Iron
+      UltraBattery:
+        text: UltraBattery
+      Voltaic Pile:
+        text: Voltaic Pile
+      Voltaic Pile Penny:
+        text: Voltaic Pile Penny
+      Voltaic Pile Trough:
+        text: Voltaic Pile Trough
+      Water Activated:
+        text: Water Activated
+      Weston Cell:
+        text: Weston Cell
+      Zinc Air:
+        text: Zinc Air
+      Zinc Carbon:
+        text: Zinc Carbon
+      Zinc Chloride:
+        text: Zinc Chloride
+      Zinc Ion:
+        text: Zinc Ion
+      Unknown:
+        text: Unknown
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.s:
+        text: oic.if.s
+      oic.if.baseline:
+        text: oic.if.baseline

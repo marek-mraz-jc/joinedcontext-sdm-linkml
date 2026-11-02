@@ -1,0 +1,550 @@
+id: https://github.com/smart-data-models/dataModel.Aeronautics/Flight
+name: Flight
+title: Smart Data models - Flight schema
+description: A description of a generic flight
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Aeronautics
+  spec.source.path: Flight/schema.json
+  spec.source.commit: 58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Aeronautics/master/context.jsonld"],
+    "arrivesToAirport": {"object": "urn:ngsi-ld:Airline:airport-MAD", "type": "Relationship"},
+    "belongsToAirline": {"object": "urn:ngsi-ld:Airline:airline-SN", "type": "Relationship"},
+    "dateArrival": {"type": "Property", "value": {"@type": "DateTime", "@value": "2018-12-01T12:40:01.00Z"}},
+    "dateDeparture": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2018-12-01T10:40:01.00Z"}}, "dateSIBT": {"type": "Property", "value": {"@type":
+    "DateTime", "@value": "2018-12-01T12:40:01.00Z"}}, "dateSLDT": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2018-12-01T12:35:01.00Z"}}, "dateSOBT":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2018-12-01T10:40:01.00Z"}},
+    "dateSTOT": {"type": "Property", "value": {"@type": "DateTime", "@value": "2018-12-01T10:45:01.00Z"}},
+    "departsFromAirport": {"object": "urn:ngsi-ld:Airline:airport-BMA", "type": "Relationship"},
+    "flightNumber": {"type": "Property", "value": "3732"}, "flightNumberIATA": {"type":
+    "Property", "value": "SN3732"}, "flightNumberICAO": {"type": "Property", "value":
+    "BEL3732"}, "flightType": {"type": "Property", "value": "G"}, "hasAircraft": {"object":
+    "urn:ngsi-ld:Aircraft:aircraft-ABCDE", "type": "Relationship"}, "hasAircraftModel":
+    {"object": "urn:ngsi-ld:AircraftModel:aircraftModel-AirbusA310-200", "type": "Relationship"},
+    "id": "urn:ngsi-ld:Flight:flight-3732", "passengerCount": {"type": "Property",
+    "value": 25}, "state": {"type": "Property", "value": "active"}, "type": "Flight"}'
+classes:
+  Flight:
+    class_uri: https://smartdatamodels.org/dataModel.Aeronautics/Flight
+    description: A description of a generic flight
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - arrivesToAirport
+    - belongsToAirline
+    - dataProvider
+    - dateAIBT
+    - dateALDT
+    - dateAOBT
+    - dateATO
+    - dateATOT
+    - dateAXIT
+    - dateAXOT
+    - dateArrival
+    - dateCIBT
+    - dateCLDT
+    - dateCOBT
+    - dateCTO
+    - dateCTOT
+    - dateCreated
+    - dateDeparture
+    - dateEIBT
+    - dateELDT
+    - dateEOBT
+    - dateETO
+    - dateETOT
+    - dateEXIT
+    - dateEXOT
+    - dateModified
+    - dateSIBT
+    - dateSLDT
+    - dateSOBT
+    - dateSTOT
+    - dateTIBT
+    - dateTLDT
+    - dateTOBT
+    - dateTSAT
+    - dateTTOT
+    - departsFromAirport
+    - description
+    - flightNumber
+    - flightNumberIATA
+    - flightNumberICAO
+    - flightType
+    - hasAircraft
+    - hasAircraftModel
+    - name
+    - owner
+    - passengerCount
+    - seeAlso
+    - source
+    - state
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/areaServed
+  flightNumber:
+    description: Property. Model:'http://schema.org/Text'. Flight identifier without
+      information of airline
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/flightNumber
+  flightNumberIATA:
+    description: Property. Model:'http://schema.org/Text'. IATA flight identifier
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/flightNumberIATA
+  flightNumberICAO:
+    description: Property. Model:'http://schema.org/Text'. ICAO flight identifier
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/flightNumberICAO
+  flightType:
+    description: Property. Model:'http://schema.org/Text'. Flight type described as
+      ICAO doc 4444 Appendix 2. Enum:'S, N, G, M, X'
+    range: flightType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/flightType
+  state:
+    description: Property. Model:'http://schema.org/Text'. Current state of the flight.
+      Enum:'scheduled, active, unknown, redirected, landed, diverted, cancelled'
+    range: state_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/state
+  passengerCount:
+    description: Property. Model:'http://schema.org/Integer'. Number of flight passengers
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/passengerCount
+  dateDeparture:
+    description: Property. Model:'http://schema.org/DateTime'. Departure date of the
+      flight
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateDeparture
+  dateArrival:
+    description: Property. Model:'http://schema.org/DateTime'. Arrival date of the
+      flight
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateArrival
+  dateSOBT:
+    description: Property. Model:'http://schema.org/DateTime'. Scheduled Off-Block
+      Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateSOBT
+  dateEOBT:
+    description: Property. Model:'http://schema.org/DateTime'. Estimated Off-Block
+      Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateEOBT
+  dateTOBT:
+    description: Property. Model:'http://schema.org/DateTime'. Target Off-Block Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateTOBT
+  dateTSAT:
+    description: Property. Model:'http://schema.org/DateTime'. Target Start Up Approval
+      Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateTSAT
+  dateCOBT:
+    description: Property. Model:'http://schema.org/DateTime'. Calculated Off-Block
+      Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateCOBT
+  dateAOBT:
+    description: Property. Model:'http://schema.org/DateTime'. Actual Off-Block Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateAOBT
+  dateEXOT:
+    description: Property. Model:'http://schema.org/DateTime'. Estimated Taxi-Out
+      Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateEXOT
+  dateAXOT:
+    description: Property. Model:'http://schema.org/DateTime'. Actual Taxi-Out Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateAXOT
+  dateSTOT:
+    description: Property. Model:'http://schema.org/DateTime'. Scheduled Take-Off
+      Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateSTOT
+  dateETOT:
+    description: Property. Model:'http://schema.org/DateTime'. Estimated Take-Off
+      Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateETOT
+  dateTTOT:
+    description: Property. Model:'http://schema.org/DateTime'. Target Take-Off Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateTTOT
+  dateCTOT:
+    description: Property. Model:'http://schema.org/DateTime'. Calculated Take-Off
+      Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateCTOT
+  dateATOT:
+    description: Property. Model:'http://schema.org/DateTime'. Actual Take-Off Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateATOT
+  dateETO:
+    description: Property. Model:'http://schema.org/DateTime'. Estimated Time Over
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateETO
+  dateCTO:
+    description: Property. Model:'http://schema.org/DateTime'. Calculated Time Over
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateCTO
+  dateATO:
+    description: Property. Model:'http://schema.org/DateTime'. Actual Time Over
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateATO
+  dateSLDT:
+    description: Property. Model:'http://schema.org/DateTime'. Scheduled Landing Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateSLDT
+  dateELDT:
+    description: Property. Model:'http://schema.org/DateTime'. Estimated Landing Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateELDT
+  dateTLDT:
+    description: Property. Model:'http://schema.org/DateTime'. Target Landing Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateTLDT
+  dateCLDT:
+    description: Property. Model:'http://schema.org/DateTime'. Calculated Landing
+      Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateCLDT
+  dateALDT:
+    description: Property. Model:'http://schema.org/DateTime'. Actual Landing Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateALDT
+  dateEXIT:
+    description: Property. Model:'http://schema.org/DateTime'. Estimated Taxi-In Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateEXIT
+  dateAXIT:
+    description: Property. Model:'http://schema.org/DateTime'. Actual Taxi-In Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateAXIT
+  dateSIBT:
+    description: Property. Model:'http://schema.org/DateTime'. Scheduled In-Block
+      Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateSIBT
+  dateEIBT:
+    description: Property. Model:'http://schema.org/DateTime'. Estimated In-Block
+      Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateEIBT
+  dateTIBT:
+    description: Property. Model:'http://schema.org/DateTime'. Target In-Block Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateTIBT
+  dateCIBT:
+    description: Property. Model:'http://schema.org/DateTime'. Calculated In-Block
+      Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateCIBT
+  dateAIBT:
+    description: Property. Model:'http://schema.org/DateTime'. Actual In-Block Time
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/dateAIBT
+  hasAircraft:
+    description: Relationship. Reference to the aircraft entity
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/hasAircraft
+  hasAircraftModel:
+    description: Relationship. Reference to the aircraft model entity
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/hasAircraftModel
+  departsFromAirport:
+    description: Relationship. Reference to the departure airport entity
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/departsFromAirport
+  arrivesToAirport:
+    description: Relationship. Reference to the arrival airport entity
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/arrivesToAirport
+  belongsToAirline:
+    description: Relationship. Reference to the airline entity
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Aeronautics@58682c9d9d53ee76140b0b2563ece65c9b0a3cfa
+    slot_uri: https://smartdatamodels.org/dataModel.Aeronautics/belongsToAirline
+enums:
+  flightType_options:
+    name: flightType_options
+    permissible_values:
+      S:
+        text: S
+      N:
+        text: N
+      G:
+        text: G
+      M:
+        text: M
+      X:
+        text: X
+  state_options:
+    name: state_options
+    permissible_values:
+      scheduled:
+        text: scheduled
+      active:
+        text: active
+      unknown:
+        text: unknown
+      redirected:
+        text: redirected
+      landed:
+        text: landed
+      diverted:
+        text: diverted
+      cancelled:
+        text: cancelled

@@ -1,0 +1,262 @@
+id: https://github.com/smart-data-models/dataModel.OCF/RenderingIndex
+name: RenderingIndex
+title: Colour Rendering Index
+description: 'Smart Data Models Program adaptation of the original IoTData data Models.
+  This Resource describes a Colour Rendering Index (CRI). The Property ''cri'' is
+  an number. A colour rendering index (CRI) is a quantitative measure of the ability
+  of a light source to reveal the colours of various objects faithfully in comparison
+  with an ideal or natural light source. Light sources with a high CRI are desirable
+  in colour-critical applications such as neonatal care and art restoration. It is
+  defined by the International Commission on Illumination (CIE) as follows:[1]  Colour
+  rendering: Effect of an illuminant on the colour appearance of objects by conscious
+  or subconscious comparison with their colour appearance under a reference illuminant.
+  The value often quoted as ''CRI'' on commercially available lighting products is
+  properly called the CIE Ra value, ''CRI'' being a general term and CIE Ra being
+  the international standard colour rendering index'
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: RenderingIndex/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Arm theory security
+    book. Writer painting treatment mother west successful ready.", "addressLocality":
+    "Drug exactly result including gun animal air wide. Little strong hope can. Item
+    field time hair yourself style prove teach.", "addressRegion": "Beat middle least
+    continue improve tax. Ever hair decision likely.", "district": "Property group
+    hear. They often purpose statement lawyer.", "postOfficeBoxNumber": "Trouble camera
+    type movement begin write me. Number camera she resource.", "postalCode": "Spend
+    compare big study positive need. Feel treat phone sea big.", "streetAddress":
+    "As none base night. Suggest act improve. Can parti", "streetNr": "Quality treat
+    husband response guess. East amount success sister experience total"}}, "alternateName":
+    {"type": "Property", "value": "Paper control character quality face specific thank
+    message. Describe hand pass laugh piece."}, "areaServed": {"type": "Property",
+    "value": "Through throughout say a build close perform American. Exactly these
+    article economy sit may."}, "cri": {"type": "Property", "value": 50.1}, "dataProvider":
+    {"type": "Property", "value": "We town tend trip another performance be. Coach
+    condition beat season budget fear."}, "dateCreated": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "1985-08-30T15:14:24Z"}}, "dateModified": {"type":
+    "Property", "value": {"@type": "DateTime", "@value": "2003-03-29T21:00:59Z"}},
+    "description": {"type": "Property", "value": "Woman peace occur table article
+    sister arrive. Himself look TV entire mean. Success change enter tonight four
+    country property."}, "id": "urn:ngsi-ld:RenderingIndex:id:DLVI:05255002", "if":
+    {"type": "Property", "value": ["oic.if.s", "oic.if.baseline"]}, "location": {"type":
+    "GeoProperty", "value": {"coordinates": [59.731011, 78.093251], "type": "Point"}},
+    "n": {"type": "Property", "value": "Allow those morning player. Material something
+    quit"}, "name": {"type": "Property", "value": "Low western letter fire under.
+    Employee natural beautiful west standard reality thus. Game itself lot new trial
+    so past."}, "owner": {"type": "Property", "value": ["urn:ngsi-ld:RenderingIndex:items:GFCT:39077714",
+    "urn:ngsi-ld:RenderingIndex:items:EPJC:12754313"]}, "rt": {"type": "Property",
+    "value": ["oic.r.colour.renderingindex"]}, "seeAlso": {"type": "Property", "value":
+    ["urn:ngsi-ld:RenderingIndex:items:YDQA:96706898"]}, "source": {"type": "Property",
+    "value": "Record somebody u"}, "type": "RenderingIndex"}'
+classes:
+  RenderingIndex:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/RenderingIndex
+    description: 'Smart Data Models Program adaptation of the original IoTData data
+      Models. This Resource describes a Colour Rendering Index (CRI). The Property
+      ''cri'' is an number. A colour rendering index (CRI) is a quantitative measure
+      of the ability of a light source to reveal the colours of various objects faithfully
+      in comparison with an ideal or natural light source. Light sources with a high
+      CRI are desirable in colour-critical applications such as neonatal care and
+      art restoration. It is defined by the International Commission on Illumination
+      (CIE) as follows:[1]  Colour rendering: Effect of an illuminant on the colour
+      appearance of objects by conscious or subconscious comparison with their colour
+      appearance under a reference illuminant. The value often quoted as ''CRI'' on
+      commercially available lighting products is properly called the CIE Ra value,
+      ''CRI'' being a general term and CIE Ra being the international standard colour
+      rendering index'
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - cri
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - if
+    - n
+    - name
+    - owner
+    - rt
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. The Resource Type.
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  cri:
+    description: Property. The colour rendering index.
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/cri
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  if:
+    description: Property. The OCF Interface set supported by this Resource.
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.colour.renderingindex:
+        text: oic.r.colour.renderingindex
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.s:
+        text: oic.if.s
+      oic.if.baseline:
+        text: oic.if.baseline

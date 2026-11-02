@@ -1,0 +1,1242 @@
+id: https://github.com/smart-data-models/dataModel.Transportation/CityWork
+name: CityWork
+title: Smart Data Models - Transportation /  CityWork schema
+description: The Data Model is a contextual description of urban works carried out
+  on a road axis and which can impact individual (Cars, motorcycle, bicycles, .…)
+  or common transport (Tram, Bus, subway). It contains a geographic representation
+  making it possible to locate its work from a specific JSON Object and at a more
+  global level (Road segment, Road, District, ...) in order to assess the potential
+  impacts on the circulation. A GeoJSON object may represent a region of space (a
+  Geometry), a spatially-bounded entity (a Feature), or a list of features (a Feature
+  Collection). refer to the document [geojson](https://tools.ietf.org/pdf/draft-ietf-geojson-03.pdf)
+  for more information about the modeling and the possible value.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Transportation
+  spec.source.path: CityWork/schema.json
+  spec.source.commit: 48e0e7ebaaee430f04a47efb27fc38825f79b725
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"],
+    "alternateName": {"type": "Property", "value": "AirPort global Observation"},
+    "areaServed": {"type": "Property", "value": "Nice Aeroport"}, "contactPoint":
+    {"type": "Property", "value": "Service des AO"}, "contractingAuthority": {"type":
+    "Property", "value": "MNCA - subwaypole Nice Cote d''Azur"}, "dateLastReported":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2020-04-02T10:30:00Z"}},
+    "decrees": {"type": "Property", "value": ["https://MNCA/CityWork/Decree/CW-2020Q2-006",
+    "CW-2020Q2-006", "CW-2020Q2-006-Av-001", "CW-2020Q2-006-Av-002"]}, "description":
+    {"type": "Property", "value": "Widening work on access roads and installation
+    of a new electrical and digital network for the connection of T1 & T2 terminals"},
+    "encroachment": {"type": "Property", "value": ["private", "public"]}, "endDate":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2020-04-22T18:45:00Z"}},
+    "id": "urn:ngsi-ld:CityWork:CityWork:MNCA-CW-2020Q2-006", "infrastructureFunction":
+    {"type": "Property", "value": ["collection", "distribution"]}, "location": {"type":
+    "GeoProperty", "value": {"coordinates": [[[43.20315, 7.20186], [43.20384, 7.20372],
+    [43.20388, 7.20493], [43.19938, 7.20312], [43.20045, 7.20152], [43.20315, 7.20186]]],
+    "type": "Polygon"}}, "mainContractingCompany": {"type": "Property", "value": "XRP
+    - NICOLSPA"}, "name": {"type": "Property", "value": "Nce-Airport-CW2020Q2-006"},
+    "openingHoursSpecification": {"type": "Property", "value": [{"Opens": "07.00",
+    "closes": "20.00", "dayOfWeek": "Monday"}, {"Opens": "07.00", "closes": "20.00",
+    "dayOfWeek": "Tuesday"}, {"Opens": "07.00", "closes": "20.00", "dayOfWeek": "Wednesday"},
+    {"Opens": "07.00", "closes": "20.00", "dayOfWeek": "Thursday"}, {"Opens": "07.00",
+    "closes": "20.00", "dayOfWeek": "Friday"}, {"Opens": "08.30", "closes": "17.00",
+    "dayOfWeek": "Saturday"}]}, "othersContractingCompany": {"type": "Property", "value":
+    ["VRD - Terrassement Nicois", "ELEC - Electricite de Nice", "NUM - Consortium
+    operateur"]}, "startDate": {"type": "Property", "value": {"@type": "DateTime",
+    "@value": "2020-03-17T08:45:00Z"}}, "territorialArea": {"type": "Property", "value":
+    "subwaypole Nice"}, "type": "CityWork", "typeOfInterventionRequest": {"type":
+    "Property", "value": "authorizationRequest"}, "workDate": {"type": "Property",
+    "value": {"@type": "DateTime", "@value": "2020-03-17T08:45:00Z"}}, "workDisposition":
+    {"allowedVehicle": {"type": "Property", "value": ["companiesTrucks", "emergencyVehicle",
+    "firefighters", "police"]}, "busImpacted": {"type": "Property", "value": [{"lineImpacted":
+    "urn:ngsi-ld:BusLine:L205"}]}, "countOfBusLineImpacted": {"type": "Property",
+    "value": 1}, "countOfDerogation": {"type": "Property", "value": 2}, "countOfEventImpacted":
+    {"type": "Property", "value": 2}, "countOfRailwayLineImpacted": {"type": "Property",
+    "value": 1}, "countOfRoadImpacted": {"type": "Property", "value": 3}, "countOfSchoolImpacted":
+    {"type": "Property", "value": 2}, "countOfStationImpacted": {"type": "Property",
+    "value": 4}, "countOfTramwayLineImpacted": {"type": "Property", "value": 2}, "derogation":
+    {"type": "Property", "value": [{"dayOfWeek": ["Monday", "Tuesday", "Wednesday",
+    "Thursday", "Friday", "Saturday", "Sunday"], "derogationType": "Work Nigth during
+    Workday", "endDate": "2020-05-15T23:30:00", "startDate": "2020-05-11T20:30:00Z"},
+    {"dayOfWeek": "Wednesday", "derogationType": "BRH", "endDate": "2020-05-13T23:30:00Z",
+    "startDate": "2020-05-13T20:30:00Z "}]}, "eventsImpact": {"type": "Property",
+    "value": ["urn:ngsi-ld:events:MNCA-EV-JazzCimiez", "NiceMarathon"]}, "isMainRoadImpactedHTR":
+    {"type": "Property", "value": true}, "isMobile": {"type": "Property", "value":
+    false}, "maxAuthorizedTonnage": {"type": "Property", "value": [{"maxTonnage":
+    30, "roadImpacted": "urn:ngsi-ld:Road:N202"}, {"maxTonnage": 20, "roadImpacted":
+    "Road:D021"}, {"maxTonnage": 15.2, "roadImpacted": "urn:ngsi-ld:Road:D032"}]},
+    "railwayImpacted": {"type": "Property ", "value": [{"lineImpacted": "Nice-Grasse",
+    "segmentImpact": ["Nice Saint Augustin section"]}]}, "roadImpacted": {"type":
+    "Property", "value": [{"roadId": "urn:ngsi-ld:Road:N202", "segmentId": ["urn:ngsi-ld:RoadSegment:N202-12",
+    "urn:ngsi-ld:RoadSegment:N202-13"]}, {"roadId": "Road:D021", "segmentName": ["N\u00ba
+    12", "N\u00ba 13", "N\u00ba 14"]}, {"roadId": "urn:ngsi-ld:Road:D032", "segmentLocation":
+    [{"coordinates": [[102.0, 0.0], [103.0, 1.0], [104.0, 0.0], [105.0, 1.0]], "type":
+    "LineString"}, {"coordinates": [43.655675, 7.161232], "type": "Point"}]}, {"roadLocation":
+    {"coordinates": [43.67428, 7.161589], "type": "Point"}}]}, "schoolImpacted": {"type":
+    "Property", "value": ["Lyc\u00e9e Massena", "Universit\u00e9 Campus Saint Jean"]},
+    "stationImpacted": {"type": "Property ", "value": [{"stationId": ["urn:ngsi-ld:station:L205-S13",
+    "urn:ngsi-ld:station:L205-S14"], "stationType": "bus"}, {"stationId": ["L01-S12",
+    "L01-S19"], "stationType": "tram"}]}, "tramwayImpacted": {"type": "Property ",
+    "value": [{"lineImpacted": "TramWayLine:L01", "segmentImpacted": ["urn:ngsi-ld:TramWaySegment:L01-12",
+    "urn:ngsi-ld:TramWaySegment:L01-19"]}, {"lineImpacted": "TramWayLine:L03", "segmentImpacted":
+    ["urn:ngsi-ld:TramWaySegment:L03-19"]}]}, "type": "Property", "value": [{"comment":
+    "Switching from 2 lanes to 1 lane - BusCorridor not available", "dayOfWeek": ["Monday",
+    "Tuesday", "Wednesday", "Thursday", "Friday"], "disposition": "laneReduction",
+    "endDate": "2020-05-15T18:30:00Z", "startDate": "2020-05-11T08:00:00Z"}, {"dayOfWeek":
+    ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "disposition": "sidewalkReduction", "endDate": "2020-05-14T24:00:00Z", "startDate":
+    "2020-05-12T00:00:00Z"}, {"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday",
+    "Friday"], "disposition": "alternatingLights", "endDate": "2020-05-15T18:30:00Z",
+    "startDate": "2020-05-11T08:00:00Z"}, {"comment": "Speed Switching from 2 lanes
+    to 1 lane", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+    "Saturday", "Sunday"], "disposition": "speedReduction", "startDate": "2020-05-12T00:00:00Z"}],
+    "workOtherImpact": {"type": "Property", "value": ["layingCablesOnGround", "shopsTerrace"]}},
+    "workLastDateUpdate": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "2020-03-17T08:45:00Z"}}, "workLevel": {"type": "Property", "value": ["ground",
+    "underGround"]}, "workNature": {"type": "Property", "value": ["landFill", "repair",
+    "securingPerimeter", "tarring", "tonnageExemption", "trenchOpening"]}, "workNumber":
+    {"type": "Property", "value": "CW2020Q2-006"}, "workReason": {"type": "Property",
+    "value": ["powerCut", "sagging"]}, "workState": {"type": "Property", "value":
+    "open"}, "workTarget": {"type": "Property", "value": ["electricityNetworks", "opticalFibers",
+    "pavement", "roads", "videoNetworks", "vrd"]}, "workZone": {"type": "Property",
+    "value": ["busCorridor", "road", "sideWalk", "tramwayLine"]}}'
+classes:
+  CityWork:
+    class_uri: https://smartdatamodels.org/dataModel.Transportation/CityWork
+    description: The Data Model is a contextual description of urban works carried
+      out on a road axis and which can impact individual (Cars, motorcycle, bicycles,
+      .…) or common transport (Tram, Bus, subway). It contains a geographic representation
+      making it possible to locate its work from a specific JSON Object and at a more
+      global level (Road segment, Road, District, ...) in order to assess the potential
+      impacts on the circulation. A GeoJSON object may represent a region of space
+      (a Geometry), a spatially-bounded entity (a Feature), or a list of features
+      (a Feature Collection). refer to the document [geojson](https://tools.ietf.org/pdf/draft-ietf-geojson-03.pdf)
+      for more information about the modeling and the possible value.
+    is_a: Entity
+    slots:
+    - address
+    - allowedVehicle
+    - alternateName
+    - areaServed
+    - busImpacted
+    - contactPoint
+    - contractingAuthority
+    - countOfBusLineImpacted
+    - countOfDerogation
+    - countOfEventImpacted
+    - countOfRailwayLineImpacted
+    - countOfRoadImpacted
+    - countOfSchoolBusLineImpacted
+    - countOfSchoolImpacted
+    - countOfStationImpacted
+    - countOfSubwayLineImpacted
+    - countOfTramwayLineImpacted
+    - dataProvider
+    - dateCreated
+    - dateLastReported
+    - dateModified
+    - decrees
+    - derogation
+    - description
+    - encroachment
+    - endDate
+    - eventsImpacted
+    - infrastructureFunction
+    - isMainRoadImpactedHTR
+    - isMobile
+    - mainContractingCompany
+    - maxAuthorizedTonnage
+    - name
+    - openingHoursSpecification
+    - othersContractingCompany
+    - owner
+    - railwayImpacted
+    - roadImpacted
+    - roadImpactedMT
+    - roadImpactedSA
+    - schoolBusImpacted
+    - schoolImpacted
+    - seeAlso
+    - source
+    - startDate
+    - stationImpacted
+    - subwayImpacted
+    - territorialArea
+    - tramwayImpacted
+    - typeOfInterventionRequest
+    - workDate
+    - workDisposition
+    - workLastDateUpdate
+    - workLevel
+    - workNature
+    - workNumber
+    - workOtherImpact
+    - workReason
+    - workState
+    - workTarget
+    - workZone
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  ContactPoint:
+    description: Property. Model:'https://schema.org/ContactPoint'. The details to
+      contact with the item
+    attributes:
+      contactType:
+        description: Property. Contact type of this item
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      email:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      telephone:
+        description: Property. Telephone of this contact
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      name:
+        description: Property. The name of this item
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      url:
+        description: Property. URL which provides a description or further information
+          about this item
+        range: uriorcurie
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      areaServed:
+        description: Property. The geographic area where a service or offered item
+          is provided. Supersedes serviceArea
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      availableLanguage:
+        description: Property. Model:'http://schema.org/availableLanguage'. A language
+          someone may use with or at the item, service or place. Please use one of
+          the language codes from the IETF BCP 47 standard. It is implemented the
+          Text option but it could be also Language
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      contactOption:
+        description: Property. Model:'http://schema.org/contactOption'. An option
+          available on this contact point (e.g. a toll-free number or support for
+          hearing-impaired callers)
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      faxNumber:
+        description: Property. Model:'https://schema.org/Text'. The fax number of
+          the item
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      productSupported:
+        description: Property. Model:'https://schema.org/Text'. The product or service
+          this support contact point is related to (such as product support for a
+          particular product line). This can be a specific product or product line
+          (e.g. 'iPhone') or a general category of products or services (e.g. 'smartphones')
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      availabilityRestriction:
+        description: Relationship. Model:'https://schema.org/hoursAvailable'. This
+          property links a contact point to information about when the contact point
+          is not available. The details are provided using the Opening Hours Specification
+          class
+        annotations:
+          ngsi_ld_kind: Relationship
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/areaServed
+  territorialArea:
+    description: Property. Territorial area. Level higher to the attribute 'areaServed'.
+      A list of Free Text. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/territorialArea
+  dateLastReported:
+    description: Property. A timestamp which denotes the last time when the device
+      successfully reported data. The date and time of this observation in ISO8601
+      UTCformat. Model:'https://schema.org/DateTime'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/dateLastReported
+  workNumber:
+    description: Property. Number assigned to the work. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/workNumber
+  workState:
+    description: Property. Number assigned to the work. Enum:'all, approved, authorized,
+      canceled, completed, decreeToBeSigned, draft, editedDecrees, instructionInProgress,
+      investigated, nonCompliantOccupation, open, pendingAuthorization, pendingCancellation,
+      planningCompleted, pendingDocument, pendingExtension, pendingPlanning, planned,
+      received, reject, supported, validatedInPlanning'. Model:'https://schema.org/Text'
+    range: workState_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/workState
+  workDate:
+    description: Property. Date and time (Day or period) of the works. It can be represented
+      by an specific time string. Model:'https://schema.org/DateTime'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/workDate
+  startDate:
+    description: Property. Start date and time of the works in an ISO8601 UTC format.
+      The attribute can be used in addition to the `workDate` attribute when it corresponds
+      to a time interval to be highlighted. Model:'https://schema.org/DateTime'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/startDate
+  endDate:
+    description: Property. End date and time of the works in an ISO8601 UTC format.
+      The attribute can be used in addition to the `workDate` attribute when it corresponds
+      to a time interval to be highlighted. Model:'https://schema.org/DateTime'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/endDate
+  openingHoursSpecification:
+    description: Property. A structured value providing information about the opening
+      hours of a place or a certain service inside a place. Model:'https://schema.org/openingHoursSpecification'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/openingHoursSpecification
+  contractingAuthority:
+    description: Property. Name of the contracting authority. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/contractingAuthority
+  contactPoint:
+    description: Property. Model:'https://schema.org/ContactPoint'. The details to
+      contact with the item
+    range: ContactPoint
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/contactPoint
+  decrees:
+    description: Property. A List of text where each element is a string with the
+      URL to download or the name of the decree
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/decrees
+  workLastDateUpdate:
+    description: Property. Last date for updating a contractual element of the work.
+      Model:'https://schema.org/DateTime'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/workLastDateUpdate
+  mainContractingCompany:
+    description: Property. The Main Contracting Company responsible of the works.
+      Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/mainContractingCompany
+  othersContractingCompany:
+    description: Property. A List of Text where each element is a string with the
+      name of the contracting Companies under the responsibility of the main Contracting
+      Company
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/othersContractingCompany
+  workLevel:
+    description: Property. Positioning of the works in relation to a ground reference
+      system. A combination of these elements. Enum:'aerial, ground, mixed, other,
+      roofing, surface, underground, wall'
+    range: workLevel_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/workLevel
+  workTarget:
+    description: Property. Categories of works regarding the different profession.
+      A combination of these elements. Enum:'bicyclePath, busCorridor, catainers,
+      cityMotorBike, cityBike, cityCar, cityScooter, coldAndAirCon, coldGroup, copperCable,
+      CoringPenetrometry, drinkingWater, electricityNetworks, exploratoryWork, fireHydrants,
+      frameRoof, gasNetworks, generator, historicalMonuments, infrastructure, landscapedArea,
+      movingHoistNacelleTruck, networks, offStreetParking, opticalFibers, other, overheadLine,
+      papersCollection, pavement, publicDecorativeLighting, publicDomain, publicTransport,
+      railway, rainyWaters, riprap, rMTNetworks, roads, roadsAndPublicDomain, sanitation,
+      scaffolding, sideWalk, speedReductionDevices, streetParking, surfaceOccupation,
+      supportStructures, tagsAndPosters, telecomNetworks, telecom-RMT-VideoNetworks,
+      trafficSignalingRegulation, tramway, urbanFurniture, urbanHeating, variousWorks,
+      videoNetworks, vrd'
+    range: workTarget_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/workTarget
+  workNature:
+    description: Property. Nature of the works. A combination of these values.Enum:'additionalInvestigations,
+      brushCutting, cleaning, collection, connection, consolidation, construction,
+      control, counting, craneLifting, creation, demolition, drivingSwitch, experimentation,
+      extension, filmShooting, Installation-OR-layout, investigation, landFill, maintenance,
+      manholeOpening, ManholeOpeningToRestoreService, miscellaneousInstallation, miscellaneousWorks,
+      mowingDeburring, other, overheadLinesWorksIntervention, pruning, pulling, refurbishment,
+      rehabilitation, reinforcement, renewal, renovation, repair, replacement, riprap,
+      roadSign, safetyAndComplianceWork, safetyRailsInstallation, securingPerimeter,
+      siteInstallation, staking, supportImplantation, surfaceOccupationAuthorization,
+      survey, tarring, tonnageExemption, treeCutting, trenchOpening, upgrading'
+    range: workNature_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/workNature
+  infrastructureFunction:
+    description: Property.  Function of the infrastructure impacted by the works.
+      Model:'https://schema.org/Text'. Enum:'collection, distribution, other, transportation'
+    range: infrastructureFunction_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/infrastructureFunction
+  encroachment:
+    description: Property. Impact of the works on public, private area. A combination
+      of these values. Model:'https://schema.org/Text'. Enum:'other, private, public'
+    range: encroachment_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/encroachment
+  typeOfInterventionRequest:
+    description: Property. Initial type of request to do the works. Model:'https://schema.org/Text'.
+      Enum:'authorizationRequest,  interventionNotice,  other,  urgentWorks'. Model:'https://schema.org/Text'
+    range: typeOfInterventionRequest_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/typeOfInterventionRequest
+  workReason:
+    description: Property. Reasons of the works in case of urgent intervention. A
+      combination of these values. Enum:'collapse, derailment, fire, flood, gasLeak,
+      landslide, other, powerCut, rockfall, sagging, waterLeak'
+    range: workReason_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/workReason
+  workZone:
+    description: Property. Zone of Works. A combination of these values. Enum:' airport,
+      beach, bicyclePath, bridge, busCorridor, dock, floodArea, harbor, heliport,
+      mountainousArea, offRoad, other, parking, parksGardens, path, protectArea, railwayLine,
+      riskArea, river, road, rockyArea, sevesoArea, sideWalk, subwayLine, tramwayLine,
+      tunnel'
+    range: workZone_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/workZone
+  workDisposition:
+    description: 'Property. Specific rules taken for the works. A structured value
+      from 0 to N occurrences where each items has the following format : `Disposition`:
+      with sub properties  `startDate`, `endDate`,  `dayOfWeek`, `comment`. Enum:''alternatingLights
+      , bicyclePathClosure, bicyclePathDeviation, bicyclePathReduction, circulationManualControl,
+      laneClosure, laneDeviation, laneReduction, noRestriction, parkingForbidden,
+      parkingModification, sidewalkClosure, sidewalkClosureOrReduction, sidewalkReduction,
+      speedReduction'''
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/workDisposition
+  workOtherImpact:
+    description: Property. Other impact. A list of free values. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/workOtherImpact
+  isMobile:
+    description: 'Property. Characteristic on the mobility of the works : false for
+      Fixed (default) and true for Mobile. Model:''https://schema.org/Boolean'''
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/isMobile
+  countOfDerogation:
+    description: Property. Count of derogations granted to the work Number. Model:'https://schema.org/number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/countOfDerogation
+  derogation:
+    description: 'Property. Derogation granted for carrying out work on days and times.
+      A structured value from 0 to N occurrences where each items has the following
+      format `derogationType` :  with sub properties ''startDate, endDate, dayOfWeek,
+      comment'''
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/derogation
+  isMainRoadImpactedHTR:
+    description: Property. Value to indicate whether the main traffic road is impacted.
+      Default false. https://schema.org/Boolean
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/isMainRoadImpactedHTR
+  countOfRoadImpacted:
+    description: Property. Count of roads impacted by the works. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/countOfRoadImpacted
+  roadImpacted:
+    description: 'Property. Roads impacted by the works and the details of the roads
+      concerned by the work. A structured value from 0 to N occurrences where each
+      items is a string in the format : ''roadImpact'':[List of Segment Impacted or
+      Free Text or geo-property, separated by a comma]. If `isMainRoadImpactedHTR`
+      = true, The first item is this one'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/roadImpacted
+  roadImpactedMT:
+    description: Property. A list of roads defined as Major Traffic, impacted by the
+      works. Values are also included in the roadImpacted attribute
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/roadImpactedMT
+  roadImpactedSA:
+    description: Property. A list of roads defined as sensitive areas, impacted by
+      the works. Values are also included in the roadImpacted attribute
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/roadImpactedSA
+  allowedVehicle:
+    description: Property. Type of vehicle authorized to circulate. A combination
+      of these values. Enum:'all Vehicle, bicycle, bus, car, companiesTrucks,  emergencyVehicle,
+      firefighters, lorry, motorcycle, police, subway, sweepingMachine, trailer, tramway,
+      trucks, van'
+    range: allowedVehicle_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/allowedVehicle
+  maxAuthorizedTonnage:
+    description: Property. Roads impacted by the works with Maximum tonnage authorized.
+      A structured value from 0 to N occurrences with 2 subproperties per item. First
+      subproperties, one of 'roadId / roadName / roadLocation'. Second subproperties,
+      'maxTonnage'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/maxAuthorizedTonnage
+  countOfBusLineImpacted:
+    description: Property. Count of Bus Lines impacted by the works. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/countOfBusLineImpacted
+  busImpacted:
+    description: Property. Bus lines impacted by the works. A structured value from
+      0 to N occurrences with 2 subproperties per item. First subproperties, one of
+      'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId
+      / segmentName / segmentLocation'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/busImpacted
+  countOfSchoolBusLineImpacted:
+    description: Property. Count of School Bus Lines impacted by the works. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/countOfSchoolBusLineImpacted
+  schoolBusImpacted:
+    description: Property. Scholl Bus lines impacted by the works. A structured value
+      from 0 to N occurrences with 2 subproperties per item. First subproperties,
+      one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId
+      / segmentName / segmentLocation'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/schoolBusImpacted
+  countOfTramwayLineImpacted:
+    description: Property. Count of tramway lines impacted by the works. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/countOfTramwayLineImpacted
+  tramwayImpacted:
+    description: Property. Tramway Line impacted by the works. A structured value
+      from 0 to N occurrences with 2 subproperties per item. First subproperties,
+      one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId
+      / segmentName / segmentLocation'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/tramwayImpacted
+  countOfSubwayLineImpacted:
+    description: Property. Count of Subway Lines impacted by the works. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/countOfSubwayLineImpacted
+  subwayImpacted:
+    description: Property. Subway lines impacted by the works. A structured value
+      from 0 to N occurrences with 2 subproperties per item. First subproperties,
+      one of 'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId
+      / segmentName / segmentLocation'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/subwayImpacted
+  countOfRailwayLineImpacted:
+    description: Property. Count of Railway Lines impacted by the works. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/countOfRailwayLineImpacted
+  railwayImpacted:
+    description: Property. Rail lines impacted by the works. A structured value from
+      0 to N occurrences with 2 subproperties per item. First subproperties, one of
+      'lineId / lineName / lineLocation'. Second subproperties, one of 'segmentId
+      / segmentName / segmentLocation'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/railwayImpacted
+  countOfSchoolImpacted:
+    description: Property. Count of University, School, or other educational resource
+      impacted by the works. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/countOfSchoolImpacted
+  schoolImpacted:
+    description: 'Property. List of free text or a Reference to an entity [SCHOOL]
+      if exist. '
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/schoolImpacted
+  countOfStationImpacted:
+    description: Property. Count of Railway stations impacted by the works. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/countOfStationImpacted
+  stationImpacted:
+    description: Property. Station Impacted by the works. A structured value from
+      0 to N occurrences with 2 subproperties per item. First subproperties, 'stationType'.
+      Second subproperties, one of 'stationId / stationName / stationLocation'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/stationImpacted
+  countOfEventImpacted:
+    description: Property. Count of Events impacted by the works. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/countOfEventImpacted
+  eventsImpacted:
+    description: Property. List of free text or to the entity [Events](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/doc/spec.md)
+      if exist
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/eventsImpacted
+enums:
+  workState_options:
+    name: workState_options
+    permissible_values:
+      all:
+        text: all
+      approved:
+        text: approved
+      authorized:
+        text: authorized
+      canceled:
+        text: canceled
+      completed:
+        text: completed
+      decreeToBeSigned:
+        text: decreeToBeSigned
+      draft:
+        text: draft
+      editedDecrees:
+        text: editedDecrees
+      instructionInProgress:
+        text: instructionInProgress
+      investigated:
+        text: investigated
+      nonCompliantOccupation:
+        text: nonCompliantOccupation
+      open:
+        text: open
+      other:
+        text: other
+      pendingAuthorization:
+        text: pendingAuthorization
+      pendingCancellation:
+        text: pendingCancellation
+      planningCompleted:
+        text: planningCompleted
+      pendingDocument:
+        text: pendingDocument
+      pendingExtension:
+        text: pendingExtension
+      pendingPlanning:
+        text: pendingPlanning
+      planned:
+        text: planned
+      received:
+        text: received
+      reject:
+        text: reject
+      supported:
+        text: supported
+      validatedInPlanning:
+        text: validatedInPlanning
+  workLevel_options:
+    name: workLevel_options
+    permissible_values:
+      aerial:
+        text: aerial
+      ground:
+        text: ground
+      mixed:
+        text: mixed
+      other:
+        text: other
+      roofing:
+        text: roofing
+      surface:
+        text: surface
+      underground:
+        text: underground
+      wall:
+        text: wall
+  workTarget_options:
+    name: workTarget_options
+    permissible_values:
+      bicyclePath:
+        text: bicyclePath
+      busCorridor:
+        text: busCorridor
+      catainers:
+        text: catainers
+      cityMotorBike:
+        text: cityMotorBike
+      cityBike:
+        text: cityBike
+      cityCar:
+        text: cityCar
+      cityScooter:
+        text: cityScooter
+      coldAndAirCon:
+        text: coldAndAirCon
+      coldGroup:
+        text: coldGroup
+      copperCable:
+        text: copperCable
+      CoringPenetrometry:
+        text: CoringPenetrometry
+      drinkingWater:
+        text: drinkingWater
+      electricityNetworks:
+        text: electricityNetworks
+      exploratoryWork:
+        text: exploratoryWork
+      fireHydrants:
+        text: fireHydrants
+      frameRoof:
+        text: frameRoof
+      gasNetworks:
+        text: gasNetworks
+      generator:
+        text: generator
+      historicalMonuments:
+        text: historicalMonuments
+      infrastructure:
+        text: infrastructure
+      landscapedArea:
+        text: landscapedArea
+      movingHoistNacelleTruck:
+        text: movingHoistNacelleTruck
+      networks:
+        text: networks
+      offStreetParking:
+        text: offStreetParking
+      opticalFibers:
+        text: opticalFibers
+      other:
+        text: other
+      overheadLine:
+        text: overheadLine
+      papersCollection:
+        text: papersCollection
+      pavement:
+        text: pavement
+      publicDecorativeLighting:
+        text: publicDecorativeLighting
+      publicDomain:
+        text: publicDomain
+      publicTransport:
+        text: publicTransport
+      railway:
+        text: railway
+      rainyWaters:
+        text: rainyWaters
+      riprap:
+        text: riprap
+      rMTNetworks:
+        text: rMTNetworks
+      roads:
+        text: roads
+      roadsAndPublicDomain:
+        text: roadsAndPublicDomain
+      sanitation:
+        text: sanitation
+      scaffolding:
+        text: scaffolding
+      sideWalk:
+        text: sideWalk
+      speedReductionDevices:
+        text: speedReductionDevices
+      streetParking:
+        text: streetParking
+      surfaceOccupation:
+        text: surfaceOccupation
+      supportStructures:
+        text: supportStructures
+      tagsAndPosters:
+        text: tagsAndPosters
+      telecomNetworks:
+        text: telecomNetworks
+      telecom-RMT-VideoNetworks:
+        text: telecom-RMT-VideoNetworks
+      trafficSignalingRegulation:
+        text: trafficSignalingRegulation
+      tramway:
+        text: tramway
+      urbanFurniture:
+        text: urbanFurniture
+      urbanHeating:
+        text: urbanHeating
+      variousWorks:
+        text: variousWorks
+      videoNetworks:
+        text: videoNetworks
+      vrd:
+        text: vrd
+  workNature_options:
+    name: workNature_options
+    permissible_values:
+      additionalInvestigations:
+        text: additionalInvestigations
+      brushCutting:
+        text: brushCutting
+      cleaning:
+        text: cleaning
+      collection:
+        text: collection
+      connection:
+        text: connection
+      consolidation:
+        text: consolidation
+      construction:
+        text: construction
+      control:
+        text: control
+      counting:
+        text: counting
+      craneLifting:
+        text: craneLifting
+      creation:
+        text: creation
+      demolition:
+        text: demolition
+      drivingSwitch:
+        text: drivingSwitch
+      experimentation:
+        text: experimentation
+      extension:
+        text: extension
+      filmShooting:
+        text: filmShooting
+      Installation-OR-layout:
+        text: Installation-OR-layout
+      investigation:
+        text: investigation
+      landFill:
+        text: landFill
+      maintenance:
+        text: maintenance
+      manholeOpening:
+        text: manholeOpening
+      ManholeOpeningToRestoreService:
+        text: ManholeOpeningToRestoreService
+      miscellaneousInstallation:
+        text: miscellaneousInstallation
+      miscellaneousWorks:
+        text: miscellaneousWorks
+      mowingDeburring:
+        text: mowingDeburring
+      other:
+        text: other
+      overheadLinesWorksIntervention:
+        text: overheadLinesWorksIntervention
+      pruning:
+        text: pruning
+      pulling:
+        text: pulling
+      refurbishment:
+        text: refurbishment
+      rehabilitation:
+        text: rehabilitation
+      reinforcement:
+        text: reinforcement
+      renewal:
+        text: renewal
+      renovation:
+        text: renovation
+      repair:
+        text: repair
+      replacement:
+        text: replacement
+      riprap:
+        text: riprap
+      roadSign:
+        text: roadSign
+      safetyAndComplianceWork:
+        text: safetyAndComplianceWork
+      safetyRailsInstallation:
+        text: safetyRailsInstallation
+      securingPerimeter:
+        text: securingPerimeter
+      siteInstallation:
+        text: siteInstallation
+      staking:
+        text: staking
+      supportImplantation:
+        text: supportImplantation
+      surfaceOccupationAuthorization:
+        text: surfaceOccupationAuthorization
+      survey:
+        text: survey
+      tarring:
+        text: tarring
+      tonnageExemption:
+        text: tonnageExemption
+      treeCutting:
+        text: treeCutting
+      trenchOpening:
+        text: trenchOpening
+      upgrading:
+        text: upgrading
+  infrastructureFunction_options:
+    name: infrastructureFunction_options
+    permissible_values:
+      collection:
+        text: collection
+      distribution:
+        text: distribution
+      other:
+        text: other
+      transportation:
+        text: transportation
+  encroachment_options:
+    name: encroachment_options
+    permissible_values:
+      other:
+        text: other
+      private:
+        text: private
+      public:
+        text: public
+  typeOfInterventionRequest_options:
+    name: typeOfInterventionRequest_options
+    permissible_values:
+      authorizationRequest:
+        text: authorizationRequest
+      interventionNotice:
+        text: interventionNotice
+      other:
+        text: other
+      urgentWorks:
+        text: urgentWorks
+  workReason_options:
+    name: workReason_options
+    permissible_values:
+      collapse:
+        text: collapse
+      derailment:
+        text: derailment
+      fire:
+        text: fire
+      flood:
+        text: flood
+      gasLeak:
+        text: gasLeak
+      landslide:
+        text: landslide
+      other:
+        text: other
+      powerCut:
+        text: powerCut
+      rockfall:
+        text: rockfall
+      sagging:
+        text: sagging
+      waterLeak:
+        text: waterLeak
+  workZone_options:
+    name: workZone_options
+    permissible_values:
+      airport:
+        text: airport
+      beach:
+        text: beach
+      bicyclePath:
+        text: bicyclePath
+      bridge:
+        text: bridge
+      busCorridor:
+        text: busCorridor
+      dock:
+        text: dock
+      floodArea:
+        text: floodArea
+      harbor:
+        text: harbor
+      heliport:
+        text: heliport
+      mountainousArea:
+        text: mountainousArea
+      offRoad:
+        text: offRoad
+      other:
+        text: other
+      parking:
+        text: parking
+      parksGardens:
+        text: parksGardens
+      path:
+        text: path
+      protectArea:
+        text: protectArea
+      railwayLine:
+        text: railwayLine
+      riskArea:
+        text: riskArea
+      river:
+        text: river
+      road:
+        text: road
+      rockyArea:
+        text: rockyArea
+      sevesoArea:
+        text: sevesoArea
+      sideWalk:
+        text: sideWalk
+      subwayLine:
+        text: subwayLine
+      tramwayLine:
+        text: tramwayLine
+      tunnel:
+        text: tunnel
+  allowedVehicle_options:
+    name: allowedVehicle_options
+    permissible_values:
+      allVehicle:
+        text: allVehicle
+      bicycle:
+        text: bicycle
+      bus:
+        text: bus
+      car:
+        text: car
+      companiesTrucks:
+        text: companiesTrucks
+      emergencyVehicle:
+        text: emergencyVehicle
+      firefighters:
+        text: firefighters
+      lorry:
+        text: lorry
+      motorcycle:
+        text: motorcycle
+      police:
+        text: police
+      subway:
+        text: subway
+      sweepingMachine:
+        text: sweepingMachine
+      trailer:
+        text: trailer
+      tramway:
+        text: tramway
+      trucks:
+        text: trucks
+      van:
+        text: van

@@ -1,0 +1,226 @@
+id: https://github.com/smart-data-models/dataModel.CallComplaints/Complaint
+name: Complaint
+title: Call Complaints - Complaint
+description: This entity contains a harmonised description of a generic Complaint
+  made for the Call Complaints domain.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.CallComplaints
+  spec.source.path: Complaint/schema.json
+  spec.source.commit: 8d0b0d98bedf37c438aa3abffcc21b33d2337883
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/context.jsonld"],
+    "category": {"type": "Property", "value": "Low pressure"}, "description": {"type":
+    "Property", "value": "Pressure of the water that reaches my house is really low
+    to non-existent."}, "id": "urn:ngsi-ld:Complaint:01", "isFiledTo": {"object":
+    "urn:ngsi-ld:Organization:01", "type": "Relationship"}, "isMadeBy": {"object":
+    "urn:ngsi-ld:User:01", "type": "Relationship"}, "isPartOf": {"object": ["urn:ngsi-ld:ComplaintsCollection:01",
+    "urn:ngsi-ld:ComplaintsCollection:02"], "type": "Relationship"}, "location": {"type":
+    "GeoProperty", "value": {"coordinates": [40.3, 25.5], "type": "Point"}}, "status":
+    {"type": "Property", "value": "Pending"}, "timestamp": {"type": "Property", "value":
+    {"@type": "DateTime", "value": "2021-04-19T10:00:00.000"}}, "type": "Complaint"}'
+classes:
+  Complaint:
+    class_uri: https://smartdatamodels.org/dataModel.CallComplaints/Complaint
+    description: This entity contains a harmonised description of a generic Complaint
+      made for the Call Complaints domain.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - category
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - isFiledTo
+    - isMadeBy
+    - isPartOf
+    - name
+    - owner
+    - seeAlso
+    - source
+    - status
+    - timestamp
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+slots:
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+    slot_uri: https://smartdatamodels.org/areaServed
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+    slot_uri: https://smartdatamodels.org/seeAlso
+  status:
+    description: 'Property. Status of the Complaint. Examples: Pending, In progress'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+    slot_uri: https://uri.etsi.org/ngsi-ld/status
+  timestamp:
+    description: Property. Model:'https://schema.org/DateTime'. The timestamp of the
+      Complaint
+    range: datetime
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+    slot_uri: https://smartdatamodels.org/dataModel.CallComplaints/timestamp
+  category:
+    description: Property. Model:'https://schema.org/Text'. The category of the Complaint.
+      Examples:Brown water, Particles, Odor / Taste, Illness, Meter leak, Network
+      leak, No water, Low pressure, High pressure, Broken switch, Water quality, Waste
+      of water, Broken meter, Meter repositioning, Sidewalk repair, Pavement repair
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+    slot_uri: https://smartdatamodels.org/dataModel.CallComplaints/category
+  isMadeBy:
+    description: Relationship. The Id of the User that made this Complaint
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+    slot_uri: https://smartdatamodels.org/dataModel.CallComplaints/isMadeBy
+  isPartOf:
+    description: Property. Array of Strings (Relationships between Entities). The
+      IDs of the Collections, that this Complaint is part of
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+    slot_uri: https://smartdatamodels.org/dataModel.CallComplaints/isPartOf
+  isFiledTo:
+    description: Relationship. The ID of the Organization (e.g., Complaints Department),
+      that this Complaint is filed to
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.CallComplaints@8d0b0d98bedf37c438aa3abffcc21b33d2337883
+    slot_uri: https://smartdatamodels.org/dataModel.CallComplaints/isFiledTo

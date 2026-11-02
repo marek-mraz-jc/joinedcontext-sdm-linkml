@@ -1,0 +1,349 @@
+id: https://github.com/smart-data-models/dataModel.Transportation/FleetVehicleStatus
+name: FleetVehicleStatus
+title: Smart Data models - Fleet Vehicle Status schema
+description: This entity contains a harmonised description of the status of a generic
+  fleet vehicle. This entity is primarily associated with the vertical segment of
+  the transport and logistics but may also be used many other related IoT applications.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+  ucefact: https://vocabulary.uncefact.org/UnitMeasureCode#
+  qudt-unit: http://qudt.org/vocab/unit/
+  qudt-quantkind: http://qudt.org/vocab/quantitykind/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Transportation
+  spec.source.path: FleetVehicleStatus/schema.json
+  spec.source.commit: 48e0e7ebaaee430f04a47efb27fc38825f79b725
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"],
+    "battery": {"observedAt": "2016-08-22T10:18:16Z", "type": "Property", "value":
+    0.81}, "bearing": {"observedAt": "2016-08-22T10:18:16Z", "type": "Property", "unitCode":
+    "DD", "value": 80}, "currentOperative": {"type": "Property", "value": {"givenName":
+    "John Smith", "jobTitle": "Ambulance Operator"}}, "currentStatus": {"type": "Property",
+    "value": "finished"}, "dataProvider": {"type": "Property", "value": "https://provider.example.com"},
+    "fleetVehicle": {"object": "urn:ngsi-ld:FleetVehicle:84c6a3a8-5aa6-11e8-bedc-27e105edd16f",
+    "type": "Relationship"}, "fleetVehicleOperation": {"object": "urn:ngsi-ld:FleetVehicleOperation:a4f0a07a-5aa6-11e8-b70f-4b9d36e53d7b",
+    "type": "Relationship"}, "id": "urn:ngsi-ld:FleetVehicleStatus:16ea1c5c-5aa6-11e8-8144-4b82063ca31c",
+    "inRestrictedArea": {"type": "Property", "value": true}, "lastFuellingAmount":
+    {"observedAt": "2016-08-22T10:18:16Z", "type": "Property", "unitCode": "LTR",
+    "value": 95}, "lastKnownPosition": {"type": "GeoProperty", "value": {"coordinates":
+    [-104.99404, 39.75621], "type": "Point"}}, "lastKnownPositionUpdatedAt": {"type":
+    "Property", "value": {"@type": "DateTime", "@value": "2016-08-28T10:18:16Z"}},
+    "mileageFromOdometer": {"observedAt": "2016-08-22T10:18:16Z", "type": "Property",
+    "unitCode": "SMI", "value": 18756}, "restFuelAmount": {"observedAt": "2016-08-22T10:18:16Z",
+    "type": "Property", "unitCode": "LTR", "value": 28}, "source": {"type": "Property",
+    "value": "https://source.example.com"}, "speed": {"observedAt": "2016-08-22T10:18:16Z",
+    "type": "Property", "unitCode": "KMH", "value": 60}, "type": "FleetVehicleStatus"}'
+classes:
+  FleetVehicleStatus:
+    class_uri: https://smartdatamodels.org/dataModel.Transportation/FleetVehicleStatus
+    description: This entity contains a harmonised description of the status of a
+      generic fleet vehicle. This entity is primarily associated with the vertical
+      segment of the transport and logistics but may also be used many other related
+      IoT applications.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - battery
+    - bearing
+    - currentOperative
+    - currentStatus
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - fleetVehicle
+    - fleetVehicleOperation
+    - inRestrictedArea
+    - lastFuellingAmount
+    - lastKnownPosition
+    - lastKnownPositionUpdatedAt
+    - mileageFromOdometer
+    - name
+    - owner
+    - restFuelAmount
+    - seeAlso
+    - source
+    - speed
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+  CurrentOperative:
+    description: Property. The current operative (e.g. driver) of the vehicle described
+      as a Schema.org  person. Model:'https://schema.org/Person'
+    attributes:
+      givenName:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+      jobTitle:
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/areaServed
+  fleetVehicle:
+    description: Relationship. Reference to the FleetVehicle entity to which this
+      status entity relates
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/fleetVehicle
+  fleetVehicleOperation:
+    description: Relationship. Reference to the FleetVehicleOperation entity to which
+      this status entity relates
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/fleetVehicleOperation
+  restFuelAmount:
+    description: Property. The level of fuel recorded when the vehicle was last at
+      rest (i.e. stopped). The timestamp element of the attribute should indicate
+      when the vehicle was last at rest. Data to be recorded in Litres
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/restFuelAmount
+  lastFuellingAmount:
+    description: Property. The level of fuel added to the vehicle at the last fuelling.
+      The timestamp element of the attribute should indicate when the vehicle was
+      fuelled. Data to be recorded in Litres. Units:'litres'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/lastFuellingAmount
+    unit:
+      ucum_code: L
+      exact_mappings:
+      - ucefact:LTR
+      - qudt-unit:L
+      has_quantity_kind: qudt-quantkind:Volume
+  currentStatus:
+    description: Property. A description of the current status of the vehicle e.g.
+      Enum:'deployed, finished, terminated, servicing, starting'
+    range: currentStatus_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/currentStatus
+  currentOperative:
+    description: Property. The current operative (e.g. driver) of the vehicle described
+      as a Schema.org  person. Model:'https://schema.org/Person'
+    range: CurrentOperative
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/currentOperative
+  speed:
+    description: Property. The current speed of the fleet vehicle (km/h). The timestamp
+      element of the attribute should indicate when the reading was obtained. Units:'km/h'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/speed
+    unit:
+      ucum_code: km.h-1
+      exact_mappings:
+      - ucefact:KMH
+      - qudt-unit:KiloM-PER-HR
+      has_quantity_kind: qudt-quantkind:LinearVelocity
+  battery:
+    description: Property. The current percentage of battery left in case of an electric
+      vehicle, or a device connected to the vehicle
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/battery
+  bearing:
+    description: Property. The current bearing of the fleet vehicle in degrees relative
+      to North. The timestamp element of the attribute should indicate when the reading
+      was obtained
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/bearing
+  lastKnownPosition:
+    description: GeoProperty. Geojson reference to the item. It can be Point, LineString,
+      Polygon, MultiPoint, MultiLineString or MultiPolygon
+    annotations:
+      ngsi_ld_kind: GeoProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/lastKnownPosition
+  lastKnownPositionUpdatedAt:
+    description: Property. The timestamp of the last known position update for the
+      fleet vehicle
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/lastKnownPositionUpdatedAt
+  inRestrictedArea:
+    description: Property. Indicates if the vehicle is known to be in a restricted
+      area at the time of the status update
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/inRestrictedArea
+  mileageFromOdometer:
+    description: Property. The total distance the fleet vehicle has travelled according
+      to the on-board odometer in kilometres (unitCode KMT) or miles (unitCode SMI).
+      See also Schema.org Vehicle/ mileageFromOdometer. The timestamp element records
+      when the odometer reading was taken
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Transportation@48e0e7ebaaee430f04a47efb27fc38825f79b725
+    slot_uri: https://smartdatamodels.org/dataModel.Transportation/mileageFromOdometer
+enums:
+  currentStatus_options:
+    name: currentStatus_options
+    permissible_values:
+      deployed:
+        text: deployed
+      finished:
+        text: finished
+      servicing:
+        text: servicing
+      starting:
+        text: starting
+      terminated:
+        text: terminated

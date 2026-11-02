@@ -1,0 +1,293 @@
+id: https://github.com/smart-data-models/dataModel.ParksAndGardens/Garden
+name: Garden
+title: Smart Data Models - Parks and Gardens / Garden
+description: A garden is a distinguishable planned space, usually outdoors, set aside
+  for the display, cultivation, and enjoyment of plants and other forms of nature.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ParksAndGardens
+  spec.source.path: Garden/schema.json
+  spec.source.commit: 88223ee8984363765e7a480d0b74ddd6756470fe
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.ParksAndGardens/master/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressLocality": "Santander", "postalCode":
+    "39005", "streetAddress": "Avenida Casta\u00f1eda", "type": "PostalAddress"}},
+    "areaServed": {"type": "Property", "value": "El Sardinero"}, "category": {"type":
+    "Property", "value": ["public"]}, "dateLastWatering": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "2017-03-31T08:00:00Z"}}, "description": {"type":
+    "Property", "value": "Jardines de Piquio. Zona El Sardinero"}, "id": "urn:ngsi-ld:Garden:Santander-Garden-Piquio",
+    "location": {"type": "GeoProperty", "value": {"coordinates": [-3.7836974, 43.4741091],
+    "type": "Point"}}, "name": {"type": "Property", "value": "Jardines de Piquio"},
+    "openingHours": {"type": "Property", "value": "Mo-Su"}, "refRecord": {"object":
+    ["urn:ngsi-ld:Record:Santander-Garden-Piquio-Record-1"], "type": "Relationship"},
+    "style": {"type": "Property", "value": "french"}, "type": "Garden"}'
+classes:
+  Garden:
+    class_uri: https://smartdatamodels.org/dataModel.ParksAndGardens/Garden
+    description: A garden is a distinguishable planned space, usually outdoors, set
+      aside for the display, cultivation, and enjoyment of plants and other forms
+      of nature.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - annotations
+    - areaServed
+    - category
+    - color
+    - dataProvider
+    - dateCreated
+    - dateLastWatering
+    - dateModified
+    - description
+    - image
+    - name
+    - nextWateringDeadline
+    - openingHours
+    - owner
+    - refRecord
+    - seeAlso
+    - source
+    - style
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: https://smartdatamodels.org/seeAlso
+  color:
+    description: Property. The color of the product. Model:'https://schema.org/color'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: https://smartdatamodels.org/color
+  image:
+    description: Property. An image of the item. Model:'https://schema.org/URL'
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: https://smartdatamodels.org/image
+  annotations:
+    description: Property. Annotations about the item. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: https://smartdatamodels.org/annotations
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: https://smartdatamodels.org/address
+  category:
+    description: Property. Model:'https://schema.org/Text'. Garden's category. Enum:'public,
+      private, botanical, castle, community, monastery, residential, fencedOff'. Or
+      any other value needed by an application
+    range: category_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: https://smartdatamodels.org/dataModel.ParksAndGardens/category
+  style:
+    description: Property. Model:'https://schema.org/Text'. Enum:'public, english,
+      french, chinese, japanese, zen, rosarium, herb_garden, kitchen'. Garden's style
+    range: style_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: https://smartdatamodels.org/dataModel.ParksAndGardens/style
+  openingHours:
+    description: Property. Opening hours of this garden. Model:'https://schema.org/openingHours'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: https://smartdatamodels.org/openingHours
+  areaServed:
+    description: Property. Higher level area to which the garden belongs to. It can
+      be used to group gardens per responsible, district, neighbourhood, etc. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: https://smartdatamodels.org/areaServed
+  dateLastWatering:
+    description: Property. Timestamp which corresponds to the last watering of this
+      garden. Model:'https://schema.org/DateTime'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: https://smartdatamodels.org/dataModel.ParksAndGardens/dateLastWatering
+  nextWateringDeadline:
+    description: Property. Deadline for next watering operation to be done on this
+      garden. Model:'https://schema.org/DateTime'
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: https://smartdatamodels.org/dataModel.ParksAndGardens/nextWateringDeadline
+  refRecord:
+    description: Relationship. List of records which contain measurements related
+      to this garden. Model:'https://schema.org/URL'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.ParksAndGardens@88223ee8984363765e7a480d0b74ddd6756470fe
+    slot_uri: https://smartdatamodels.org/dataModel.ParksAndGardens/refRecord
+enums:
+  category_options:
+    name: category_options
+    permissible_values:
+      botanical:
+        text: botanical
+      castle:
+        text: castle
+      community:
+        text: community
+      fencedOff:
+        text: fencedOff
+      monastery:
+        text: monastery
+      private:
+        text: private
+      public:
+        text: public
+      residential:
+        text: residential
+  style_options:
+    name: style_options
+    permissible_values:
+      chinese:
+        text: chinese
+      english:
+        text: english
+      french:
+        text: french
+      herb_garden:
+        text: herb_garden
+      japanese:
+        text: japanese
+      kitchen:
+        text: kitchen
+      public:
+        text: public
+      rosarium:
+        text: rosarium
+      zen:
+        text: zen

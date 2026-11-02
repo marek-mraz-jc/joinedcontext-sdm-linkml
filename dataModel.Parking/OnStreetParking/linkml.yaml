@@ -1,0 +1,824 @@
+id: https://github.com/smart-data-models/dataModel.Parking/OnStreetParking
+name: OnStreetParking
+title: Smart Data Models/ On Street Parking
+description: A site, open space zone, on street, (metered or not) with direct access
+  from a road, intended to park vehicles.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.Parking
+  spec.source.path: OnStreetParking/schema.json
+  spec.source.commit: 5601a5ac5583522dcf376aedb76b193fb0304662
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Parking/master/context.jsonld"],
+    "allowedVehicleType": {"type": "Property", "value": ["car"]}, "areaServed": {"type":
+    "Property", "value": "Zona Centro"}, "availableSpotNumber": {"observedAt": "2018-09-12T12:00:00Z",
+    "type": "Property", "value": 3}, "category": {"type": "Property", "value": ["blueZone",
+    "shortTerm", "forDisabled"]}, "chargeType": {"type": "Property", "value": ["temporaryFee"]},
+    "extraSpotNumber": {"type": "Property", "value": 2}, "id": "urn:ngsi-ld:OnStreetParking:santander:daoiz_velarde_1_5",
+    "location": {"type": "GeoProperty", "value": {"coordinates": [[[-3.80356167695194,
+    43.46296641666926], [-3.803161973253841, 43.46301091092682], [-3.803147082548618,
+    43.462879859445884], [-3.803536474744068, 43.462838666196674], [-3.80356167695194,
+    43.46296641666926]]], "type": "Polygon"}}, "occupiedSpotNumber": {"observedAt":
+    "2018-09-12T12:00:00Z", "type": "Property", "value": 3}, "permitActiveHours":
+    {"type": "Property", "value": {"blueZonePermit": "Mo, Tu, We, Th, Fr, Sa 09:00-20:00"}},
+    "refParkingGroup": {"object": ["urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-main",
+    "urn:ngsi-ld:ParkingGroup:daoiz-velarde-1-5-disabled"], "type": "Relationship"},
+    "requiredPermit": {"type": "Property", "value": ["blueZonePermit", "disabledPermit"]},
+    "totalSpotNumber": {"type": "Property", "value": 6}, "type": "OnStreetParking"}'
+classes:
+  OnStreetParking:
+    class_uri: https://smartdatamodels.org/dataModel.Parking/OnStreetParking
+    description: A site, open space zone, on street, (metered or not) with direct
+      access from a road, intended to park vehicles.
+    is_a: Entity
+    slots:
+    - acceptedPaymentMethod
+    - address
+    - allowedVehicleType
+    - alternateName
+    - areBordersMarked
+    - areaServed
+    - availableSpotNumber
+    - averageSpotLength
+    - averageSpotWidth
+    - category
+    - chargeType
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - extraSpotNumber
+    - fourWheelerSlots
+    - layout
+    - maximumParkingDuration
+    - municipalityInfo
+    - name
+    - observationDateTime
+    - occupancyDetectionType
+    - occupancyModified
+    - occupiedSpotNumber
+    - outOfServiceSlotNumber
+    - owner
+    - parkingMode
+    - parkingSiteId
+    - permitActiveHours
+    - refParkingGroup
+    - refParkingSpot
+    - requiredPermit
+    - seeAlso
+    - source
+    - totalSpotNumber
+    - twoWheelerSlots
+    - unclassifiedSlots
+    - usageScenario
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+  PermitActiveHours:
+    description: Property. This attribute allows to capture situations when a permit
+      is only needed at specific hours or days of week. It is a structured value which
+      must contain a subproperty per each required permit, indicating when the permit
+      is active. If nothing specified for a permit it will mean that a permit is always
+      required. An empty JSON Object means always active. The syntax must be conformant
+      with schema.org
+    attributes:
+      blueZonePermit:
+        description: Property. Permission to park in a city's regulated area
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+  FourWheelerSlots:
+    description: Property. Model:'https://schema.org/Text. Four wheeler parking spot
+      availability status in parking site corresponding to this observation
+    attributes:
+      availableSlotNumber:
+        description: Property. Model:'https://schema.org/Number'. Number of parking
+          spots available for use in the smart parking site corresponding to this
+          observation. This must a positve number lower than or equal to the totalSpotNumber
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      totalSlotNumber:
+        description: Property. Model:'https://schema.org/Number'. The total number
+          of spots offered by the parking site corresponding to this observation
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      occupiedSlotNumber:
+        description: Property. Model:'https://schema.org/Number'. Number of parking
+          spots occupied in the smart parking site corresponding to this observation.
+          This must a positve number lower than or equal to the totalSpotNumber
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+  UnclassifiedSlots:
+    description: Property. Model:'https://schema.org/Text. Unclassified vehicles or
+      other vehicles parking spot availability status in parking site corresponding
+      to this observation
+    attributes:
+      availableSpotNumber:
+        description: Property. Model:'https://schema.org/Number'. Number of parking
+          spots available for use in the smart parking site corresponding to this
+          observation. This must a positve number lower than or equal to the totalSpotNumber
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      totalSpotNumber:
+        description: Property. Model:'https://schema.org/Number'. The total number
+          of spots offered by the parking site corresponding to this observation
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      occupiedSpotNumber:
+        description: Property. Model:'https://schema.org/Number'. Number of parking
+          spots occupied in the smart parking site corresponding to this observation.
+          This must a positve number lower than or equal to the totalSpotNumber
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+  TwoWheelerSlots:
+    description: Property. Model:'https://schema.org/Text. Two wheeler parking spot
+      availability status in parking site corresponding to this observation
+    attributes:
+      availableSpotNumber:
+        description: Property. Model:'https://schema.org/Number'. Number of parking
+          spots available for use in the smart parking site corresponding to this
+          observation. This must a positve number lower than or equal to the totalSpotNumber
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      totalSpotNumber:
+        description: Property. Model:'https://schema.org/Number'. The total number
+          of spots offered by the parking site corresponding to this observation
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      occupiedSpotNumber:
+        description: Property. Model:'https://schema.org/Number'. Number of parking
+          spots occupied in the smart parking site corresponding to this observation.
+          This must a positve number lower than or equal to the totalSpotNumber
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+  MunicipalityInfo:
+    description: Property. Model:'https://schema.org/Text. Municipality information
+      corresponding to this observation
+    attributes:
+      district:
+        description: Property. Model:'https://schema.org/Text'. District name corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      ulbName:
+        description: Property. Model:'https://schema.org/Text'. Name of the Urban
+          Local Body corresponding to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      cityId:
+        description: Property. Model:'https://schema.org/Text'. City ID corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      wardId:
+        description: Property. Model:'https://schema.org/Text'. Ward ID corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      stateName:
+        description: Property. Model:'https://schema.org/Text'. Name of the state
+          corresponding to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      cityName:
+        description: Property. Model:'https://schema.org/Text'. City name corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      zoneName:
+        description: Property. Model:'https://schema.org/Text'. Zone name corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      zoneId:
+        description: Property. Model:'https://schema.org/Text'. Zone ID corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      wardName:
+        description: Property. Model:'https://schema.org/Text'. Ward name corresponding
+          to this observation
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+      wardNum:
+        description: Property. Model:'https://schema.org/Number'. Ward number corresponding
+          to this observation
+        range: float
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/areaServed
+  category:
+    description: Property. Street parking category. Enum:'blueZone, feeCharged, forDisabled,
+      forElectricalCharging, forLoadUnload, forResidents, free, greenZone, mediumTerm,
+      onlyWithPermit, shortTerm, taxiStop'
+    range: category_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/category
+  allowedVehicleType:
+    description: Property. Vehicle type(s) allowed. The first element of this array
+      _MUST_ be the principal vehicle type allowed. The following values defined by
+      _VehicleTypeEnum_, [DATEX 2 version 2.3](http://d2docs.ndwcloud.nu/downloads/modelv23.html)..
+      Enum:'agriculturalVehicle, anyVehicle, articulatedVehicle, bicycle, bus, car,
+      caravan, carOrLightVehicle, carWithCaravan, carWithTrailer, constructionOrMaintenanceVehicle,
+      fourWheelDrive, highSidedVehicle, lorry, moped, motorcycle, motorcycleWithSideCar,
+      motorscooter, tanker, threeWheeledVehicle, trailer, tram, twoWheeledVehicle,
+      van, vehicleWithCatalyticConverter, vehicleWithoutCatalyticConverter, vehicleWithCaravan,
+      vehicleWithTrailer, withEvenNumberedRegistrationPlates, withOddNumberedRegistrationPlates,
+      other'
+    range: allowedVehicleType_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/allowedVehicleType
+  requiredPermit:
+    description: Property. This attribute captures what permit(s) might be needed
+      to park at this site. Semantics is that at least _one of_ these permits is needed
+      to park. When a permit is composed by more than one item (and) they can be combined
+      with a ','. For instance 'residentPermit,disabledPermit' stays that both, at
+      the same time, a resident and a disabled permit are needed to park. If list
+      is empty, no permit is needed
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/requiredPermit
+  permitActiveHours:
+    description: Property. This attribute allows to capture situations when a permit
+      is only needed at specific hours or days of week. It is a structured value which
+      must contain a subproperty per each required permit, indicating when the permit
+      is active. If nothing specified for a permit it will mean that a permit is always
+      required. An empty JSON Object means always active. The syntax must be conformant
+      with schema.org
+    range: PermitActiveHours
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/permitActiveHours
+  maximumParkingDuration:
+    description: Property. Maximum allowed stay at site encoded as a ISO8601 duration.
+      An empty value indicates an indefinite duration
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/maximumParkingDuration
+  occupiedSpotNumber:
+    description: Property. Model:'https://schema.org/Number'. Number of total parking
+      spots occupied in the smart parking site corresponding to this observation.
+      This must a positive number lower than or equal to the totalSpotNumber
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/occupiedSpotNumber
+  occupancyModified:
+    description: Property. Model:'https://schema.org/DateTime'. Date last time the
+      occupancy of the parking has being modified
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/occupancyModified
+  layout:
+    description: Property. Generic classification of the layout of the parking
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/layout
+  chargeType:
+    description: Property. Type of charge(s) performed by the parking site. Enum:'additionalIntervalPrice,
+      annualPayment, firstIntervalPrice, flat, free, minimum, maximum, monthlyPayment,
+      seasonTicket, temporaryFee, temporaryPrice, unknown, other'
+    range: chargeType_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/chargeType
+  acceptedPaymentMethod:
+    description: Property. Type of charge(s) performed by the parking site. Enum:'ByBankTransferInAdvance,
+      ByInvoice, Cash, CheckInAdvance, COD, DirectDebit, GoogleCheckout, PayPal, PaySwarm'
+    range: acceptedPaymentMethod_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/acceptedPaymentMethod
+  usageScenario:
+    description: Property. Type of charge(s) performed by the parking site. Enum:'carSharing,
+      dropOff, kissAndRide, liftShare, loadingBay, overnightParking, parkAndRide,
+      parkAndCycle, parkAndWalk, vehicleLift,'
+    range: usageScenario_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/usageScenario
+  totalSpotNumber:
+    description: 'Property. The total number of spots offered by this parking site.
+      This number can be difficult to be obtained for those parking locations on which
+      spots are not clearly marked by lines. Model:''http://schema.org/Number''. Normative
+      references: DATEX 2 version 2.3 attribute _parkingNumberOfSpaces_ of the _ParkingRecord_
+      class'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/totalSpotNumber
+  availableSpotNumber:
+    description: Property. The number of spots available globally, including reserved
+      spaces, such as those for disabled people, long term parkers and so on. This
+      might be harder to estimate at those parking locations on which spots borders
+      are not clearly marked by lines. Model:'http://schema.org/Number'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/availableSpotNumber
+  extraSpotNumber:
+    description: 'Property. The number of extra spots available, i.e. free. Extra    spots
+      are those reserved for special purposes and usually require a permit. Permit
+      details will be found at parking group level (entity of type `ParkingGroup`).
+      This value must aggregate free spots from all groups devoted to special parking
+      conditions. Model:''http://schema.org/Number''. Allowed values: A positive integer
+      number, including 0. `extraSpotNumber` plus `availableSpotNumber` must be lower
+      than or equal to `totalSpotNumber'
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/extraSpotNumber
+  occupancyDetectionType:
+    description: Property. Occupancy detection method(s). Enum:'balancing, manual,
+      modelBased, none, singleSpaceDetection'. The following from DATEX II version
+      2.3 _OccupancyDetectionTypeEnum_
+    range: occupancyDetectionType_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/occupancyDetectionType
+  parkingMode:
+    description: Property. Parking mode(s). Enum:'echelonParking, parallelParking,
+      perpendicularParking'
+    range: parkingMode_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/parkingMode
+  areBordersMarked:
+    description: Property. Denotes whether parking spots are delimited (with blank
+      lines or similar) or not. Model:'https://schema.org/Boolean'
+    range: boolean
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/areBordersMarked
+  averageSpotWidth:
+    description: Property. The average width of parking spots. Model:'https://schema.org/width'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/averageSpotWidth
+  averageSpotLength:
+    description: Property. The average length of parking spots. Model:'https://schema.org/length'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/averageSpotLength
+  refParkingSpot:
+    description: Relationship. Individual parking spots belonging to this on street
+      parking site
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/refParkingSpot
+  refParkingGroup:
+    description: Relationship. Reference to the parking group(s) (if any) belonging
+      to this onstreet parking zone
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/refParkingGroup
+  outOfServiceSlotNumber:
+    description: Property. Model:'https://schema.org/Number'. The number of bike racks/bike-docking
+      slots or parking slots that are out of order and cannot be used to hire or park
+      a bike in the bike docking station or parking site corresponding to this observation
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/outOfServiceSlotNumber
+  parkingSiteId:
+    description: Property. Model:'https://schema.org/Text'. The unique ID of the parking
+      site or parking lot corresponding to this observation
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/parkingSiteId
+  observationDateTime:
+    description: Property. Model:'https://schema.org/Text'. Last reported time of
+      observation
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/observationDateTime
+  fourWheelerSlots:
+    description: Property. Model:'https://schema.org/Text. Four wheeler parking spot
+      availability status in parking site corresponding to this observation
+    range: FourWheelerSlots
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/fourWheelerSlots
+  unclassifiedSlots:
+    description: Property. Model:'https://schema.org/Text. Unclassified vehicles or
+      other vehicles parking spot availability status in parking site corresponding
+      to this observation
+    range: UnclassifiedSlots
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/unclassifiedSlots
+  twoWheelerSlots:
+    description: Property. Model:'https://schema.org/Text. Two wheeler parking spot
+      availability status in parking site corresponding to this observation
+    range: TwoWheelerSlots
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/twoWheelerSlots
+  municipalityInfo:
+    description: Property. Model:'https://schema.org/Text. Municipality information
+      corresponding to this observation
+    range: MunicipalityInfo
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.Parking@5601a5ac5583522dcf376aedb76b193fb0304662
+    slot_uri: https://smartdatamodels.org/dataModel.Parking/municipalityInfo
+enums:
+  category_options:
+    name: category_options
+    permissible_values:
+      barrierAccess:
+        text: barrierAccess
+      blueZone:
+        text: blueZone
+      feeCharged:
+        text: feeCharged
+      forDisabled:
+        text: forDisabled
+      forElectricalCharging:
+        text: forElectricalCharging
+      forLoadUnload:
+        text: forLoadUnload
+      forResidents:
+        text: forResidents
+      free:
+        text: free
+      greenZone:
+        text: greenZone
+      mediumTerm:
+        text: mediumTerm
+      onlyWithPermit:
+        text: onlyWithPermit
+      public:
+        text: public
+      shortTerm:
+        text: shortTerm
+      taxiStop:
+        text: taxiStop
+      underground:
+        text: underground
+  allowedVehicleType_options:
+    name: allowedVehicleType_options
+    permissible_values:
+      agriculturalVehicle:
+        text: agriculturalVehicle
+      anyVehicle:
+        text: anyVehicle
+      articulatedVehicle:
+        text: articulatedVehicle
+      bicycle:
+        text: bicycle
+      bus:
+        text: bus
+      car:
+        text: car
+      caravan:
+        text: caravan
+      carOrLightVehicle:
+        text: carOrLightVehicle
+      carWithCaravan:
+        text: carWithCaravan
+      carWithTrailer:
+        text: carWithTrailer
+      constructionOrMaintenanceVehicle:
+        text: constructionOrMaintenanceVehicle
+      fourWheelDrive:
+        text: fourWheelDrive
+      highSidedVehicle:
+        text: highSidedVehicle
+      lorry:
+        text: lorry
+      moped:
+        text: moped
+      motorcycle:
+        text: motorcycle
+      motorcycleWithSideCar:
+        text: motorcycleWithSideCar
+      motorscooter:
+        text: motorscooter
+      tanker:
+        text: tanker
+      threeWheeledVehicle:
+        text: threeWheeledVehicle
+      trailer:
+        text: trailer
+      tram:
+        text: tram
+      twoWheeledVehicle:
+        text: twoWheeledVehicle
+      van:
+        text: van
+      vehicleWithCatalyticConverter:
+        text: vehicleWithCatalyticConverter
+      vehicleWithoutCatalyticConverter:
+        text: vehicleWithoutCatalyticConverter
+      vehicleWithCaravan:
+        text: vehicleWithCaravan
+      vehicleWithTrailer:
+        text: vehicleWithTrailer
+      withEvenNumberedRegistrationPlates:
+        text: withEvenNumberedRegistrationPlates
+      withOddNumberedRegistrationPlates:
+        text: withOddNumberedRegistrationPlates
+      other:
+        text: other
+  chargeType_options:
+    name: chargeType_options
+    permissible_values:
+      additionalIntervalPrice:
+        text: additionalIntervalPrice
+      annualPayment:
+        text: annualPayment
+      firstIntervalPrice:
+        text: firstIntervalPrice
+      flat:
+        text: flat
+      free:
+        text: free
+      minimum:
+        text: minimum
+      maximum:
+        text: maximum
+      monthlyPayment:
+        text: monthlyPayment
+      seasonTicket:
+        text: seasonTicket
+      temporaryFee:
+        text: temporaryFee
+      temporaryPrice:
+        text: temporaryPrice
+      unknown:
+        text: unknown
+      other:
+        text: other
+  acceptedPaymentMethod_options:
+    name: acceptedPaymentMethod_options
+    permissible_values:
+      ByBankTransferInAdvance:
+        text: ByBankTransferInAdvance
+      ByInvoice:
+        text: ByInvoice
+      Cash:
+        text: Cash
+      CheckInAdvance:
+        text: CheckInAdvance
+      COD:
+        text: COD
+      DirectDebit:
+        text: DirectDebit
+      GoogleCheckout:
+        text: GoogleCheckout
+      PayPal:
+        text: PayPal
+      PaySwarm:
+        text: PaySwarm
+  usageScenario_options:
+    name: usageScenario_options
+    permissible_values:
+      carSharing:
+        text: carSharing
+      dropOff:
+        text: dropOff
+      kissAndRide:
+        text: kissAndRide
+      liftShare:
+        text: liftShare
+      loadingBay:
+        text: loadingBay
+      overnightParking:
+        text: overnightParking
+      parkAndRide:
+        text: parkAndRide
+      parkAndCycle:
+        text: parkAndCycle
+      parkAndWalk:
+        text: parkAndWalk
+      vehicleLift:
+        text: vehicleLift
+      other:
+        text: other
+  occupancyDetectionType_options:
+    name: occupancyDetectionType_options
+    permissible_values:
+      balancing:
+        text: balancing
+      manual:
+        text: manual
+      modelBased:
+        text: modelBased
+      none:
+        text: none
+      singleSpaceDetection:
+        text: singleSpaceDetection
+  parkingMode_options:
+    name: parkingMode_options
+    permissible_values:
+      echelonParking:
+        text: echelonParking
+      parallelParking:
+        text: parallelParking
+      perpendicularParking:
+        text: perpendicularParking

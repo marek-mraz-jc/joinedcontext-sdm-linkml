@@ -1,0 +1,44 @@
+id: https://github.com/smart-data-models/dataModel.ACRIS/QueueType
+name: QueueType
+title: Smart Data Models - Mapping of ACRIS data model QueueType
+description: 'Property. Information about the type of a Passenger Queue. Values can
+  be: Pre-Check, Private, Economy, Priority, KnownCrewMember.'
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.ACRIS
+  spec.source.path: QueueType/schema.json
+  spec.source.commit: 82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.ACRIS/master/context.jsonld"],
+    "Code": {"type": "Property", "value": "type1"}, "Description": {"type": "Property",
+    "value": ""}, "id": "urn:ngsi-ld:QueueType:id:BCWB:56620437", "type": "QueueType"}'
+classes:
+  QueueType:
+    class_uri: https://smartdatamodels.org/dataModel.ACRIS/QueueType
+    description: 'Property. Information about the type of a Passenger Queue. Values
+      can be: Pre-Check, Private, Economy, Priority, KnownCrewMember.'
+    is_a: Entity
+    slots:
+    - Code
+    - Description
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+slots:
+  Code:
+    description: Property. Unique code for the type of Passenger Queue.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/Code
+  Description:
+    description: Property. Description of the type of Passenger Queue.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.ACRIS@82f07e2785d4f2e053f6dd9dbe6c6602f1376bb3
+    slot_uri: https://smartdatamodels.org/dataModel.ACRIS/Description

@@ -1,0 +1,721 @@
+id: https://github.com/smart-data-models/dataModel.PointOfInterest/Store
+name: Store
+title: Smart Data Models - Point of Interest Store schema
+description: This entity Type models stores/shops in the city.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.PointOfInterest
+  spec.source.path: Store/schema.json
+  spec.source.commit: 7e5e24963a142b9bf6fd15b144a0e24588217608
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"],
+    "category": {"type": "Property", "value": "GroceryStore"}, "currenciesAccepted":
+    {"type": "Property", "value": ["EUR"]}, "dataProvider": {"type": "Property", "value":
+    "http://www.smartsantander.eu/"}, "description": {"type": "Property", "value":
+    "Cosmetica natural fabricada en Santander."}, "email": {"type": "Property", "value":
+    "email@example.com"}, "id": "urn:ngsi-ld:Store:santander:COM4111", "location":
+    {"type": "GeoProperty", "value": {"coordinates": [-3.8077562, 43.4628255], "type":
+    "Point"}}, "logo": {"type": "Property", "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100"},
+    "name": {"type": "Property", "value": "MARTA KAUFMANN"}, "openingHoursSpecification":
+    {"type": "Property", "value": [{"closes": "23:59:00", "dayOfWeek": "Monday", "opens":
+    "00:02:00"}, {"closes": "23:59:00", "dayOfWeek": "Tuesday", "opens": "00:01:00"},
+    {"closes": "23:59:00", "dayOfWeek": "Wednesday", "opens": "00:01:00"}, {"closes":
+    "23:59:00", "dayOfWeek": "Thursday", "opens": "00:01:00"}, {"closes": "23:59:00",
+    "dayOfWeek": "Friday", "opens": "00:01:00"}]}, "paymentAccepted": {"type": "Property",
+    "value": ["cash", "paypal"]}, "source": {"type": "Property", "value": "https://api.smartsantander.eu/"},
+    "telephone": {"type": "Property", "value": "(+34) 942 123 123"}, "type": "Store",
+    "url": {"type": "Property", "value": "https://exampleStoreUrl.com"}}'
+classes:
+  Store:
+    class_uri: https://smartdatamodels.org/dataModel.PointOfInterest/Store
+    description: This entity Type models stores/shops in the city.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - category
+    - currenciesAccepted
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - email
+    - endDate
+    - logo
+    - name
+    - openingHours
+    - openingHoursSpecification
+    - owner
+    - paymentAccepted
+    - seeAlso
+    - source
+    - startDate
+    - telephone
+    - url
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/areaServed
+  openingHoursSpecification:
+    description: Property. A structured value providing information about the opening
+      hours of a place or a certain service inside a place. Model:'https://schema.org/openingHoursSpecification'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/openingHoursSpecification
+  startDate:
+    description: Property. Model:'https://schema.org/startDate'. The start date and
+      time of the item (in ISO 8601 date format).
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/startDate
+  endDate:
+    description: Property. Model:'https://schema.org/endDate'. The end date and time
+      of the item (in ISO 8601 date format).
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/endDate
+  openingHours:
+    description: 'Property. Model:''https://schema.org/openingHours''. The general
+      opening hours for a business. Opening hours can be specified as a weekly time
+      range, starting with days, then times per day. Multiple days can be listed with
+      commas '','' separating each day. Day or time ranges are specified using a hyphen
+      ''-''. Days are specified using the following two-letter combinations: Mo, Tu,
+      We, Th, Fr, Sa, Su. Times are specified using 24:00 format. For example, 3pm
+      is specified as 15:00, 10am as 10:00. Here is an example: <time itemprop=''openingHours''
+      datetime=''Tu,Th 16:00-20:00''>Tuesdays and Thursdays 4-8pm</time>. If a business
+      is open 7 days a week, then it can be specified as <time itemprop=''openingHours''
+      datetime=''Mo-Su''>Monday through Sunday, all day</time>'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/openingHours
+  currenciesAccepted:
+    description: Property. Model:'https://es.wikipedia.org/wiki/ISO_4217'. Enum:'AED,
+      AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BHD, BIF, BMD,
+      BND, BOB, BOV, BRL, BSD, BTN, BWP, BYN, BZD, CAD, CDF, CHE, CHF, CHW, CLF, CLP,
+      CNY, COP, COU, CRC, CUC, CUP, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ERN, ETB, EUR,
+      FJD, FKP, GBP, GEL, GHS, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR,
+      ILS, INR, IQD, IRR, ISK, JMD, JOD, JPY, KES, KGS, KHR, KMF, KPW, KRW, KWD, KYD,
+      KZT, LAK, LBP, LKR, LRD, LSL, LYD, MAD, MDL, MGA, MKD, MMK, MNT, MOP, MRU, MUR,
+      MVR, MWK, MXN, MXV, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, OMR, PAB, PEN, PGK,
+      PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SDG, SEK, SGD, SHP,
+      SLL, SOS, SRD, SSP, STN, SVC, SYP, SZL, THB, TJS, TMT, TND, TOP, TRY, TTD, TWD,
+      TZS, UAH, UGX, USD, USN, UYI, UYU, UYW, UZS, VES, VND, VUV, WST, XAF, XAG, XAU,
+      XBA, XBB, XBC, XBD, XCD, XDR, XOF, XPD, XPF, XPT, XSU, XTS, XUA, XXX, YER, ZAR,
+      ZMW, ZWL. Currencies accepted in this store. It uses ISO 4217 currency format
+      (e.g. USD, EUR)
+    range: currenciesAccepted_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/dataModel.PointOfInterest/currenciesAccepted
+  paymentAccepted:
+    description: Property. Model:'https://schema.org/Text'. Payment method accepted
+      in this store
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/dataModel.PointOfInterest/paymentAccepted
+  logo:
+    description: 'Property. Model:''https://schema.org/URL''. An associated logo for
+      this store. '
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/dataModel.PointOfInterest/logo
+  telephone:
+    description: Property. Model:'https://schema.org/Text'. The telephone number of
+      this store
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/telephone
+  email:
+    description: Property. Model:'https://schema.org/Text'. The email address of this
+      store
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/email
+  url:
+    description: Property. Model:'https://schema.org/URL'. Website with information
+      about the store
+    range: uriorcurie
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/url
+  category:
+    description: Property. Model:'https://schema.org/Text'. Category of the store.
+      Enum:'AutoPartsStore,BikeStore,BookStore,ClothingStore,ComputerStore,ConvenienceStore,DepartmentStore,ElectronicsStore,Florist,FurnitureStore,GardenStore,GroceryStore,HardwareStore,HobbyShop,HomeGoodsStore,JewelryStore,LiquorStore,MensClothingStore,MobilePhoneStore,MovieRentalStore,MusicStore,OfficeEquipmentStore,OutletStore,PawnShop,PetStore,ShoeStore,SportingGoodsStore,TireShop,ToyStore,WholesaleStore'
+    range: category_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PointOfInterest@7e5e24963a142b9bf6fd15b144a0e24588217608
+    slot_uri: https://smartdatamodels.org/dataModel.PointOfInterest/category
+enums:
+  currenciesAccepted_options:
+    name: currenciesAccepted_options
+    permissible_values:
+      AED:
+        text: AED
+      AFN:
+        text: AFN
+      ALL:
+        text: ALL
+      AMD:
+        text: AMD
+      ANG:
+        text: ANG
+      AOA:
+        text: AOA
+      ARS:
+        text: ARS
+      AUD:
+        text: AUD
+      AWG:
+        text: AWG
+      AZN:
+        text: AZN
+      BAM:
+        text: BAM
+      BBD:
+        text: BBD
+      BDT:
+        text: BDT
+      BGN:
+        text: BGN
+      BHD:
+        text: BHD
+      BIF:
+        text: BIF
+      BMD:
+        text: BMD
+      BND:
+        text: BND
+      BOB:
+        text: BOB
+      BOV:
+        text: BOV
+      BRL:
+        text: BRL
+      BSD:
+        text: BSD
+      BTN:
+        text: BTN
+      BWP:
+        text: BWP
+      BYN:
+        text: BYN
+      BZD:
+        text: BZD
+      CAD:
+        text: CAD
+      CDF:
+        text: CDF
+      CHE:
+        text: CHE
+      CHF:
+        text: CHF
+      CHW:
+        text: CHW
+      CLF:
+        text: CLF
+      CLP:
+        text: CLP
+      CNY:
+        text: CNY
+      COP:
+        text: COP
+      COU:
+        text: COU
+      CRC:
+        text: CRC
+      CUC:
+        text: CUC
+      CUP:
+        text: CUP
+      CVE:
+        text: CVE
+      CZK:
+        text: CZK
+      DJF:
+        text: DJF
+      DKK:
+        text: DKK
+      DOP:
+        text: DOP
+      DZD:
+        text: DZD
+      EGP:
+        text: EGP
+      ERN:
+        text: ERN
+      ETB:
+        text: ETB
+      EUR:
+        text: EUR
+      FJD:
+        text: FJD
+      FKP:
+        text: FKP
+      GBP:
+        text: GBP
+      GEL:
+        text: GEL
+      GHS:
+        text: GHS
+      GIP:
+        text: GIP
+      GMD:
+        text: GMD
+      GNF:
+        text: GNF
+      GTQ:
+        text: GTQ
+      GYD:
+        text: GYD
+      HKD:
+        text: HKD
+      HNL:
+        text: HNL
+      HRK:
+        text: HRK
+      HTG:
+        text: HTG
+      HUF:
+        text: HUF
+      IDR:
+        text: IDR
+      ILS:
+        text: ILS
+      INR:
+        text: INR
+      IQD:
+        text: IQD
+      IRR:
+        text: IRR
+      ISK:
+        text: ISK
+      JMD:
+        text: JMD
+      JOD:
+        text: JOD
+      JPY:
+        text: JPY
+      KES:
+        text: KES
+      KGS:
+        text: KGS
+      KHR:
+        text: KHR
+      KMF:
+        text: KMF
+      KPW:
+        text: KPW
+      KRW:
+        text: KRW
+      KWD:
+        text: KWD
+      KYD:
+        text: KYD
+      KZT:
+        text: KZT
+      LAK:
+        text: LAK
+      LBP:
+        text: LBP
+      LKR:
+        text: LKR
+      LRD:
+        text: LRD
+      LSL:
+        text: LSL
+      LYD:
+        text: LYD
+      MAD:
+        text: MAD
+      MDL:
+        text: MDL
+      MGA:
+        text: MGA
+      MKD:
+        text: MKD
+      MMK:
+        text: MMK
+      MNT:
+        text: MNT
+      MOP:
+        text: MOP
+      MRU:
+        text: MRU
+      MUR:
+        text: MUR
+      MVR:
+        text: MVR
+      MWK:
+        text: MWK
+      MXN:
+        text: MXN
+      MXV:
+        text: MXV
+      MYR:
+        text: MYR
+      MZN:
+        text: MZN
+      NAD:
+        text: NAD
+      NGN:
+        text: NGN
+      NIO:
+        text: NIO
+      NOK:
+        text: NOK
+      NPR:
+        text: NPR
+      NZD:
+        text: NZD
+      OMR:
+        text: OMR
+      PAB:
+        text: PAB
+      PEN:
+        text: PEN
+      PGK:
+        text: PGK
+      PHP:
+        text: PHP
+      PKR:
+        text: PKR
+      PLN:
+        text: PLN
+      PYG:
+        text: PYG
+      QAR:
+        text: QAR
+      RON:
+        text: RON
+      RSD:
+        text: RSD
+      RUB:
+        text: RUB
+      RWF:
+        text: RWF
+      SAR:
+        text: SAR
+      SBD:
+        text: SBD
+      SCR:
+        text: SCR
+      SDG:
+        text: SDG
+      SEK:
+        text: SEK
+      SGD:
+        text: SGD
+      SHP:
+        text: SHP
+      SLL:
+        text: SLL
+      SOS:
+        text: SOS
+      SRD:
+        text: SRD
+      SSP:
+        text: SSP
+      STN:
+        text: STN
+      SVC:
+        text: SVC
+      SYP:
+        text: SYP
+      SZL:
+        text: SZL
+      THB:
+        text: THB
+      TJS:
+        text: TJS
+      TMT:
+        text: TMT
+      TND:
+        text: TND
+      TOP:
+        text: TOP
+      TRY:
+        text: TRY
+      TTD:
+        text: TTD
+      TWD:
+        text: TWD
+      TZS:
+        text: TZS
+      UAH:
+        text: UAH
+      UGX:
+        text: UGX
+      USD:
+        text: USD
+      USN:
+        text: USN
+      UYI:
+        text: UYI
+      UYU:
+        text: UYU
+      UYW:
+        text: UYW
+      UZS:
+        text: UZS
+      VES:
+        text: VES
+      VND:
+        text: VND
+      VUV:
+        text: VUV
+      WST:
+        text: WST
+      XAF:
+        text: XAF
+      XAG:
+        text: XAG
+      XAU:
+        text: XAU
+      XBA:
+        text: XBA
+      XBB:
+        text: XBB
+      XBC:
+        text: XBC
+      XBD:
+        text: XBD
+      XCD:
+        text: XCD
+      XDR:
+        text: XDR
+      XOF:
+        text: XOF
+      XPD:
+        text: XPD
+      XPF:
+        text: XPF
+      XPT:
+        text: XPT
+      XSU:
+        text: XSU
+      XTS:
+        text: XTS
+      XUA:
+        text: XUA
+      XXX:
+        text: XXX
+      YER:
+        text: YER
+      ZAR:
+        text: ZAR
+      ZMW:
+        text: ZMW
+      ZWL:
+        text: ZWL
+  category_options:
+    name: category_options
+    permissible_values:
+      AutoPartsStore:
+        text: AutoPartsStore
+      BikeStore:
+        text: BikeStore
+      BookStore:
+        text: BookStore
+      ClothingStore:
+        text: ClothingStore
+      ComputerStore:
+        text: ComputerStore
+      ConvenienceStore:
+        text: ConvenienceStore
+      DepartmentStore:
+        text: DepartmentStore
+      ElectronicsStore:
+        text: ElectronicsStore
+      Florist:
+        text: Florist
+      FurnitureStore:
+        text: FurnitureStore
+      GardenStore:
+        text: GardenStore
+      GroceryStore:
+        text: GroceryStore
+      HardwareStore:
+        text: HardwareStore
+      HobbyShop:
+        text: HobbyShop
+      HomeGoodsStore:
+        text: HomeGoodsStore
+      JewelryStore:
+        text: JewelryStore
+      LiquorStore:
+        text: LiquorStore
+      MensClothingStore:
+        text: MensClothingStore
+      MobilePhoneStore:
+        text: MobilePhoneStore
+      MovieRentalStore:
+        text: MovieRentalStore
+      MusicStore:
+        text: MusicStore
+      OfficeEquipmentStore:
+        text: OfficeEquipmentStore
+      OutletStore:
+        text: OutletStore
+      PawnShop:
+        text: PawnShop
+      PetStore:
+        text: PetStore
+      ShoeStore:
+        text: ShoeStore
+      SportingGoodsStore:
+        text: SportingGoodsStore
+      TireShop:
+        text: TireShop
+      ToyStore:
+        text: ToyStore
+      WholesaleStore:
+        text: WholesaleStore

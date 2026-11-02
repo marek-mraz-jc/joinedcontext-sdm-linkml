@@ -1,0 +1,218 @@
+id: https://github.com/smart-data-models/dataModel.UrbanMobility/GtfsStopTime
+name: GtfsStopTime
+title: Smat Data Models GTFS Schema - StopTime
+description: GTFS Stop Time
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.UrbanMobility
+  spec.source.path: GtfsStopTime/schema.json
+  spec.source.commit: 81a052c84d275a71489910c4f93eb3b6c80c4830
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.UrbanMobility/master/context.jsonld"],
+    "arrivalTime": {"type": "Property", "value": "07:04:24"}, "departureTime": {"type":
+    "Property", "value": "07:04:24"}, "distanceTravelled": {"type": "Property", "value":
+    759}, "hasStop": {"object": "urn:ngsi-ld:GtfsStop:Madrid:EMT:737", "type": "Relationship"},
+    "hasTrip": {"object": "urn:ngsi-ld:GtfsTrip:Madrid:EMT:FE0010011", "type": "Relationship"},
+    "id": "urn:ngsi-ld:GtfsStopTime:Spain:Madrid:EMT:FE0010011_737", "stopSequence":
+    {"type": "Property", "value": 4}, "type": "GtfsStopTime"}'
+classes:
+  GtfsStopTime:
+    class_uri: https://smartdatamodels.org/dataModel.UrbanMobility/GtfsStopTime
+    description: GTFS Stop Time
+    is_a: Entity
+    slots:
+    - alternateName
+    - arrivalTime
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - departureTime
+    - description
+    - distanceTravelled
+    - dropOffType
+    - hasStop
+    - hasTrip
+    - name
+    - owner
+    - pickupType
+    - seeAlso
+    - source
+    - stopHeadsign
+    - stopSequence
+    - timepoint
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/seeAlso
+  hasStop:
+    description: Relationship. Same as GTFS `stop_id`. It shall point to an Entity
+      of type GtfsStop. Model:'http://schema.org/URL'
+    required: true
+    annotations:
+      ngsi_ld_kind: Relationship
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/hasStop
+  hasTrip:
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/hasTrip
+  arrivalTime:
+    description: Property. Same as GTFS `arrival_time`. Model:'https://schema.org/Text'
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/arrivalTime
+  departureTime:
+    description: Property. Same as GTFS `departure_time`. Model:'https://schema.org/Text'
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/departureTime
+  stopSequence:
+    description: Property. Same as GTFS `stop_sequence`. Model:'https://schema.org/Integer'.
+      Starting with `1`
+    range: integer
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/stopSequence
+  distanceTravelled:
+    description: Property. Same as GTFS `shape_dist_traveled`. Model:'https://schema.org/Number'
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/distanceTravelled
+  pickupType:
+    description: 'Property. Same as GTFS `pickup_type`. Model:''https://schema.org/Text''.
+      Enum:''0, 1, 2, 3'' '
+    range: pickupType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/pickupType
+  stopHeadsign:
+    description: Property. Same as GTFS `stop_headsign`. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/stopHeadsign
+  dropOffType:
+    description: Property. Same as GTFS `drop_off_type`. Model:'https://schema.org/Text'.
+      Enum:'0, 1, 2, 3'
+    range: dropOffType_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/dropOffType
+  timepoint:
+    description: Property. Same as GTFS `timepoint`. Model:'https://schema.org/Text'.
+      Enum:'0, 1'
+    range: timepoint_options
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.UrbanMobility@81a052c84d275a71489910c4f93eb3b6c80c4830
+    slot_uri: https://smartdatamodels.org/dataModel.UrbanMobility/timepoint
+enums:
+  pickupType_options:
+    name: pickupType_options
+    permissible_values:
+      '0':
+        text: '0'
+      '1':
+        text: '1'
+      '2':
+        text: '2'
+      '3':
+        text: '3'
+  dropOffType_options:
+    name: dropOffType_options
+    permissible_values:
+      '0':
+        text: '0'
+      '1':
+        text: '1'
+      '2':
+        text: '2'
+      '3':
+        text: '3'
+  timepoint_options:
+    name: timepoint_options
+    permissible_values:
+      '0':
+        text: '0'
+      '1':
+        text: '1'

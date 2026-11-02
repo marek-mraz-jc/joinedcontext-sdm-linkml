@@ -1,0 +1,207 @@
+id: https://github.com/smart-data-models/dataModel.OPCUA/MachineTool
+name: MachineTool
+title: Sample information model for MachineTool following OPC UA Companion Specification
+description: MachineTool is a mechanical device which is fixed (i.e. not mobile) and
+  powered (typically by electricity and compressed air), typically used to process
+  workpieces by selective removal/addition of material or mechanical deformation
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OPCUA
+  spec.source.path: MachineTool/schema.json
+  spec.source.commit: e5ac6ae62787f0093aedd30f064662dce406a6fd
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://raw.githubusercontent.com/smart-data-models/dataModel.OPCUA/master/context.jsonld"],
+    "id": "urn:ngsi-ld:MachineTool:MachineTool", "myMachine": {"type": "Property",
+    "value": {"equipment": {"type": "Property", "value": {"tools": [{"type": "Property",
+    "value": {"toolN": {"nodeVersion": "NodeVersion", "type": "Property", "value":
+    {"identifier": "Identifier", "location": {"type": "Property", "value": {"name":
+    "Name", "placeNumber": 0}}, "name": "Name"}}}}]}}, "identification": {"type":
+    "Property", "value": {"softwareIdentification": {"type": "Property", "value":
+    {"hmi": {"type": "Property", "value": {"identifier": "HMI-DesktopX", "manufacturer":
+    "BManufacturer", "softwareRevision": "1.5"}}, "machineSoftware": {"type": "Property",
+    "value": {"identifier": "MachineSoftware", "manufacturer": "AManufacturer", "softwareRevision":
+    "0.5-Beta"}}}}}}, "monitoring": {"type": "Property", "value": {"machineTool":
+    {"type": "Property", "value": {"feedOverride": 0, "isWarmUp": false, "operationMode":
+    2, "powerOnDuration": 1}}, "monitoredElementN": {"type": "Property", "value":
+    {"name": "MonitoredElement_0"}}, "stacklight": {"type": "Property", "value": [{"signalColor":
+    0, "signalMode": 0, "signalOn": true}]}}}, "notification": {"type": "Property",
+    "value": {"messages": [{"alertType": {"type": "Property", "value": {"errorCode":
+    "334"}}, "notificationEventType": {"type": "Property", "value": {"identifier":
+    "1"}}, "type": "Property"}], "prognoses": [{"type": "Property", "value": {"nodeVersion":
+    "2", "prognosisN": {"type": "Property", "value": {"predictedTime": "09:59:01Z"}}}}]}},
+    "production": {"type": "Property", "value": {"activeProgram": {"type": "Property",
+    "value": {"jobIdentifier": "JobIdentifier", "jobNodeId": 1, "state": 1}}, "productionPlan":
+    [{"type": "Property", "value": {"customerOrderIdentifier": "CustomerOrderIdentifier",
+    "identifier": "Identifier", "orderIdentifier": "OrderIdentifier", "partSets":
+    [{"type": "Property", "value": {"partSetN": {"type": "Property", "value": {"containsMixedParts":
+    true, "name": "Name", "partsCompletedPerRun": 0, "partsPerRun": [{"type": "Property",
+    "value": {"customerOrderIdentifier": "CustomerOrderIdentifier", "identifier":
+    "Identifier", "name": "Name", "partQuality": 0, "processIrregularity": 0, "state":
+    0}}], "partsPlannedPerRun": 0}}}}], "partsCompleted": 1, "partsGood": 1, "productionPrograms":
+    {"type": "Property", "value": {"name": "Name", "numberInList": 0, "state": 0}},
+    "runsCompleted": 2, "runsPlanned": 3, "state": 0}}], "statistics": {"type": "Property",
+    "value": [{"partsProducedInLifetime": 1}]}}}}}, "type": "MachineTool"}'
+classes:
+  MachineTool:
+    class_uri: https://smartdatamodels.org/dataModel.OPCUA/MachineTool
+    description: MachineTool is a mechanical device which is fixed (i.e. not mobile)
+      and powered (typically by electricity and compressed air), typically used to
+      process workpieces by selective removal/addition of material or mechanical deformation
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - myMachine
+    - name
+    - owner
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/areaServed
+  myMachine:
+    description: Property. It represents the list of entire machine tool interface
+      of the information model
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/dataModel.OPCUA/myMachine

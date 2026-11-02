@@ -1,0 +1,310 @@
+id: https://github.com/smart-data-models/dataModel.OCF/Geolocation
+name: Geolocation
+title: Smart Data models - Geolocation schema derived from the open connectivity foundation
+  repository https://github.com/openconnectivityfoundation/IoTDataModels
+description: This Resource describes the properties associated with the current geolocation
+  coordinate.Geolocation is a geolocation coordinate data.The Property 'latitude'
+  is a device's current Latitude coordinate (degrees).The Property 'longitude' is
+  a device's current Longitude coordinate (degrees).The Property 'alt' is a device's
+  current distance (metres) above or below 'local' sea-level.The Property 'accuracy'
+  is the accuracy level of the latitude and longitude coordinates (metres).The Property
+  'altitudeAccuracy' is the accuracy level of the altitude coordinates (metres).The
+  Property 'heading' is a direction of travel of device (degree).The Property 'speed'
+  is a device's current velocity (metres per second).
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: Geolocation/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "accuracy": {"type": "Property", "value": 706.2}, "address": {"type": "Property",
+    "value": {"addressCountry": "Real leader bad school name care several. Good explain
+    grow water plant perform resource.", "addressLocality": "Others record hospital.
+    Grow rule stuff truth college. Whom around put suddenly garden.", "addressRegion":
+    "Others kind company likely. Tonight themselves true power home price.", "district":
+    "Best budget power them evidence without beyond take. Phy", "postOfficeBoxNumber":
+    "Those traditional page a although for study. Speak themselves speech. Nature
+    white without study candidate.", "postalCode": "Stock ball organization recognize
+    civil development. Her ", "streetAddress": "View age international big. Attorney
+    author feeling job article.", "streetNr": "Wear ind"}}, "alt": {"type": "Property",
+    "value": 32.9}, "alternateName": {"type": "Property", "value": "Before year themselves
+    your majority f"}, "altitudeAccuracy": {"type": "Property", "value": 332.1}, "areaServed":
+    {"type": "Property", "value": "Fire happen nothing support suffer which parent.
+    Republican total policy head Mrs debate onto."}, "dataProvider": {"type": "Property",
+    "value": "Study modern miss dog Democrat quickly. Often late produce you true
+    soldier. Food break onto friend."}, "dateCreated": {"type": "Property", "value":
+    {"@type": "DateTime", "@value": "1979-07-06T09:36:23Z"}}, "dateModified": {"type":
+    "Property", "value": {"@type": "DateTime", "@value": "2021-06-07T14:46:20Z"}},
+    "description": {"type": "Property", "value": "Wonder employee attorney quickly
+    candidate change although bag."}, "heading": {"type": "Property", "value": 81.9},
+    "id": "urn:ngsi-ld:Geolocation:id:GQEJ:48764759", "if": {"type": "Property", "value":
+    ["oic.if.s", "oic.if.baseline"]}, "latitude": {"type": "Property", "value": 16.7},
+    "location": {"type": "GeoProperty", "value": {"coordinates": [-56.7421445, 77.286609],
+    "type": "Point"}}, "longitude": {"type": "Property", "value": 876.2}, "n": {"type":
+    "Property", "value": "Despite society mission. Expect hundred le"}, "name": {"type":
+    "Property", "value": "Tend employee source nature add rest. Report size personal
+    partner stock four. Region as true develop sound central."}, "owner": {"type":
+    "Property", "value": ["urn:ngsi-ld:Geolocation:items:KNBD:33041352", "urn:ngsi-ld:Geolocation:items:DUGT:23098910"]},
+    "rt": {"type": "Property", "value": ["oic.r.sensor.geolocation"]}, "seeAlso":
+    {"type": "Property", "value": ["urn:ngsi-ld:Geolocation:items:AGFW:91615109"]},
+    "source": {"type": "Property", "value": "Son would mouth relate own chair better
+    available. Line beyond its particularly tree whom."}, "speed": {"type": "Property",
+    "value": 823.4}, "type": "Geolocation"}'
+classes:
+  Geolocation:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/Geolocation
+    description: This Resource describes the properties associated with the current
+      geolocation coordinate.Geolocation is a geolocation coordinate data.The Property
+      'latitude' is a device's current Latitude coordinate (degrees).The Property
+      'longitude' is a device's current Longitude coordinate (degrees).The Property
+      'alt' is a device's current distance (metres) above or below 'local' sea-level.The
+      Property 'accuracy' is the accuracy level of the latitude and longitude coordinates
+      (metres).The Property 'altitudeAccuracy' is the accuracy level of the altitude
+      coordinates (metres).The Property 'heading' is a direction of travel of device
+      (degree).The Property 'speed' is a device's current velocity (metres per second).
+    is_a: Entity
+    slots:
+    - accuracy
+    - address
+    - alt
+    - alternateName
+    - altitudeAccuracy
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - heading
+    - if
+    - latitude
+    - longitude
+    - n
+    - name
+    - owner
+    - rt
+    - seeAlso
+    - source
+    - speed
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. The Resource Type
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  longitude:
+    description: Property. The Device's Current Longitude coordinate (degrees)
+    range: float
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/longitude
+  heading:
+    description: Property. The direction of travel of the Device (degree)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/heading
+  latitude:
+    description: Property. The Device's Current Latitude coordinate (degrees)
+    range: float
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/latitude
+  altitudeAccuracy:
+    description: Property. The accuracy level of the altitude coordinates (metres)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/altitudeAccuracy
+  alt:
+    description: Property. The current distance (metres) above or below 'local' sea-level
+    range: float
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/alt
+  accuracy:
+    description: Property. The accuracy level of the latitude and longitude coordinates
+      (metres)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/accuracy
+  speed:
+    description: Property. The Device's current velocity (metres per second)
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/speed
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  if:
+    description: Property. The OCF Interface set supported by this Resource
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.sensor.geolocation:
+        text: oic.r.sensor.geolocation
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.s:
+        text: oic.if.s
+      oic.if.baseline:
+        text: oic.if.baseline

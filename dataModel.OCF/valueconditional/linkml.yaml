@@ -1,0 +1,287 @@
+id: https://github.com/smart-data-models/dataModel.OCF/valueconditional
+name: valueconditional
+title: Smart Data models - valueconditional schema derived from the open connectivity
+  foundation repository https://github.com/openconnectivityfoundation/IoTDataModels
+description: This Resource specifies conditions that can be applied to an observed
+  value in any Resource.These conditions are applied by the OCF Server exposing the
+  Resource to any generated notifications because of subscriptions to the Resource.A
+  unicast RETRIEVE to the Resource will receive the most recent value; which may not
+  be the most recent notified value.An OCF Server exposes this Resource in association
+  with the Resource conveying the observed value.This is done by means of a new Resource
+  instance with an RT of ['oic.r.<thing being observed>', 'oic.r.value.conditional'],
+  e.g ['oic.r.temperature', 'oic.r.value.conditional'].The Property 'threshold' is
+  the amount by which the thing being observed must change before a notification is
+  sent.The Property 'minnotifyperiod' is the minimum time in ms (milliseconds) that
+  must elapse before a notification is sent.If the maxnotifyperiod (time in ms (milliseconds))
+  elapses then a notification must be sent.The Property 'maxnotifyperiod' is a timer
+  that resets each time a notification is sent.A value of '0' for any of 'threshold','
+  minnotifyperiod' or 'maxnotifyperiod' means that the capability is supported but
+  not active.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OCF
+  spec.source.path: valueconditional/schema.json
+  spec.source.commit: 645c2120dd789c25ce409fac086559a22a2abcc3
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "address": {"type": "Property", "value": {"addressCountry": "Region prev", "addressLocality":
+    "Difficult space issue federal. Daughter understand color", "addressRegion": "Child
+    protect cut everybody important answer total those. Bank point deep nation about
+    move herself modern.", "district": "Piec", "postOfficeBoxNumber": "Performance
+    meeting drop anything yourself black military. Whether from book professional
+    walk if. Federal various wife lawyer choose data.", "postalCode": "Whom step actually
+    for dark toward. Situation per likely teacher like appear ability agent. Family
+    propert", "streetAddress": "Dark manage camera according upon easy sur", "streetNr":
+    "Project thus artist radio management remember. Push will recent become along.
+    Under act half about know yeah."}}, "alternateName": {"type": "Property", "value":
+    "Sea get special senior. New administration its former indeed image."}, "areaServed":
+    {"type": "Property", "value": "Bit bank picture six. Fall strong tough material.
+    Few pressure many guy he world deep. Into claim try."}, "dataProvider": {"type":
+    "Property", "value": "Deep weight small who day worker lawyer child. Painting
+    again seek whole level you. Space nor identify head exactly."}, "dateCreated":
+    {"type": "Property", "value": {"@type": "DateTime", "@value": "2019-01-19T07:29:26Z"}},
+    "dateModified": {"type": "Property", "value": {"@type": "DateTime", "@value":
+    "1972-12-15T08:21:08Z"}}, "description": {"type": "Property", "value": "Admit
+    between century. Effect shoulder send rest society recently suggest. Go outside
+    article reach."}, "id": "urn:ngsi-ld:valueconditional:id:SDEW:33209754", "if":
+    {"type": "Property", "value": ["oic.if.rw", "oic.if.baseline"]}, "location": {"type":
+    "GeoProperty", "value": {"coordinates": [-75.679866, -97.238743], "type": "Point"}},
+    "maxnotifyperiod": {"type": "Property", "value": 864}, "minnotifyperiod": {"type":
+    "Property", "value": 864}, "n": {"type": "Property", "value": "Couple child candidate.
+    Un"}, "name": {"type": "Property", "value": "Know thousand food true challenge."},
+    "owner": {"type": "Property", "value": ["urn:ngsi-ld:valueconditional:items:RVGE:20842271",
+    "urn:ngsi-ld:valueconditional:items:GWWR:44594825"]}, "rt": {"type": "Property",
+    "value": ["oic.r.value.conditional"]}, "seeAlso": {"type": "Property", "value":
+    ["urn:ngsi-ld:valueconditional:items:ICEL:92972708"]}, "source": {"type": "Property",
+    "value": "Continue short person operation serve happy small."}, "threshold": {"type":
+    "Property", "value": 984.9}, "type": "valueconditional"}'
+classes:
+  valueconditional:
+    class_uri: https://smartdatamodels.org/dataModel.OCF/valueconditional
+    description: This Resource specifies conditions that can be applied to an observed
+      value in any Resource.These conditions are applied by the OCF Server exposing
+      the Resource to any generated notifications because of subscriptions to the
+      Resource.A unicast RETRIEVE to the Resource will receive the most recent value;
+      which may not be the most recent notified value.An OCF Server exposes this Resource
+      in association with the Resource conveying the observed value.This is done by
+      means of a new Resource instance with an RT of ['oic.r.<thing being observed>',
+      'oic.r.value.conditional'], e.g ['oic.r.temperature', 'oic.r.value.conditional'].The
+      Property 'threshold' is the amount by which the thing being observed must change
+      before a notification is sent.The Property 'minnotifyperiod' is the minimum
+      time in ms (milliseconds) that must elapse before a notification is sent.If
+      the maxnotifyperiod (time in ms (milliseconds)) elapses then a notification
+      must be sent.The Property 'maxnotifyperiod' is a timer that resets each time
+      a notification is sent.A value of '0' for any of 'threshold',' minnotifyperiod'
+      or 'maxnotifyperiod' means that the capability is supported but not active.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - if
+    - maxnotifyperiod
+    - minnotifyperiod
+    - n
+    - name
+    - owner
+    - rt
+    - seeAlso
+    - source
+    - threshold
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/areaServed
+  rt:
+    description: Property. The Resource Type
+    range: rt_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/rt
+  maxnotifyperiod:
+    description: Property. The maximum elapsed time in ms before a notification must
+      be sent
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/maxnotifyperiod
+  minnotifyperiod:
+    description: Property. The minimum elapsed time in ms before a notification is
+      sent
+    range: integer
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/minnotifyperiod
+  threshold:
+    description: Property. The amount by which the measured value must change before
+      a notification is sent
+    range: float
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/threshold
+  n:
+    description: Property. Friendly name of the Resource
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/n
+  if:
+    description: Property. The OCF Interface set supported by this Resource
+    range: if_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OCF@645c2120dd789c25ce409fac086559a22a2abcc3
+    slot_uri: https://smartdatamodels.org/dataModel.OCF/if
+enums:
+  rt_options:
+    name: rt_options
+    permissible_values:
+      oic.r.value.conditional:
+        text: oic.r.value.conditional
+  if_options:
+    name: if_options
+    permissible_values:
+      oic.if.rw:
+        text: oic.if.rw
+      oic.if.baseline:
+        text: oic.if.baseline

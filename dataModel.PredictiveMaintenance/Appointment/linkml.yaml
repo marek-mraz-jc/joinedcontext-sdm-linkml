@@ -1,0 +1,249 @@
+id: https://github.com/smart-data-models/dataModel.PredictiveMaintenance/Appointment
+name: Appointment
+title: Appointment schema
+description: Represent an scheduled appointment for the operator
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.PredictiveMaintenance
+  spec.source.path: Appointment/schema.json
+  spec.source.commit: 0823f12add109397d1257a5dc528e2f157e8710e
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smartdatamodels.org/context.jsonld"],
+    "appointmentDescription": {"type": "Property", "value": "EX_Ferie  NO PRESIDIO
+    U-FORM"}, "category": {"type": "Property", "value": "808080"}, "externalKey":
+    {"type": "Property", "value": ["F105024", "0000000000 970"]}, "from": {"type":
+    "Property", "value": "2024-08-12"}, "id": "https://smart-data-models.github.io/dataModel.PredictiveMaintenance/Appointment/appointment01",
+    "recurring": {"type": "Property", "value": false}, "to": {"type": "Property",
+    "value": "2024-08-14"}, "type": "Appointment", "wholeDay": {"type": "Property",
+    "value": true}}'
+classes:
+  Appointment:
+    class_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/Appointment
+    description: Represent an scheduled appointment for the operator
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - appointmentDescription
+    - areaServed
+    - category
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - externalKey
+    - flag
+    - from
+    - name
+    - note
+    - owner
+    - recurring
+    - recurringException
+    - recurringRule
+    - seeAlso
+    - source
+    - to
+    - wholeDay
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+slots:
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+  externalKey:
+    description: ListProperty. The external keys for this element.
+    required: true
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/externalKey
+  from:
+    description: Property. The start date and time of the appointment.
+    range: date
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/from
+  to:
+    description: Property. The end date and time of the appointment.
+    range: date
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/to
+  wholeDay:
+    description: Property. Indicates if the appointment is a whole day event.
+    range: boolean
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/wholeDay
+  recurring:
+    description: Property. Indicates if the appointment is recurring.
+    range: boolean
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/recurring
+  recurringRule:
+    description: Property. The recurring rule for the appointment.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/recurringRule
+  recurringException:
+    description: Property. The recurring exception for the appointment.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/recurringException
+  note:
+    description: Property. Additional notes for the appointment.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/note
+  category:
+    description: Property. The category of the appointment.
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/category
+  flag:
+    description: Property. The flag for the appointment.
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/flag
+  appointmentDescription:
+    description: Property. The description of the appointment.
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.PredictiveMaintenance@0823f12add109397d1257a5dc528e2f157e8710e
+    slot_uri: https://smartdatamodels.org/dataModel.PredictiveMaintenance/appointmentDescription

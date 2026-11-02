@@ -1,0 +1,244 @@
+id: https://github.com/smart-data-models/dataModel.OPCUA/MotionDeviceSystem
+name: MotionDeviceSystem
+title: Smart Data Models - MotionDeviceSystem schema
+description: MotionDeviceSystem provides a representation of a motion device system
+  as an entry point to the OPC UA device set. This instance organises the information
+  model of a complete robotics system using instances of the described ObjectTypes.
+  A motion device system may consist of multiple motion devices, controllers and safety
+  systems.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.OPCUA
+  spec.source.path: MotionDeviceSystem/schema.json
+  spec.source.commit: e5ac6ae62787f0093aedd30f064662dce406a6fd
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smart-data-models.github.io/data-models/context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.OPCUA/master/context.jsonld"],
+    "controllers": [{"browseName": {"type": "Property", "value": "uri:ngsi-ld:Controller"},
+    "components": [{"browseName": {"type": "Property", "value": "uri:ngsi-ld:Component"}}],
+    "manufacturer": {"type": "Property", "value": "Engineering Ingegneria Informatica"},
+    "model": {"type": "Property", "value": "Model"}, "parameterSet": {"type": "Property",
+    "value": {"cabinetFanSpeed": 2000.5, "cpuFanSpeed": 1600.0, "inputVoltage": 2500.0,
+    "startUpTime": "2020-10-19T07:36:06.713Z", "temperature": 50.0, "totalEnergyConsumption":
+    170.1, "totalPowerOnTime": "", "upsState": "alive"}}, "productCode": {"type":
+    "Property", "value": "MP695ENG004"}, "serialNumber": {"type": "Property", "value":
+    "ENG-004"}, "software": [{"browseName": {"type": "Property", "value": "uri:ngsi-ld:Software"}}],
+    "taskControls": [{"browseName": {"type": "Property", "value": "uri:ngsi-ld:TaskControl"},
+    "componentName": {"type": "Property", "value": "TaskControl"}, "parameterSet":
+    {"type": "Property", "value": {"executionMode": 0, "taskProgramLoaded": true,
+    "taskProgramName": "TaskProg"}}}]}], "id": "urn:ngsi-ld:MotionDeviceSystem", "motionDevices":
+    [{"additionalComponents": [{"browseName": {"type": "Property", "value": "uri:ngsi-ld:AdditionalComponent"}}],
+    "axes": [{"browseName": {"type": "Property", "value": "uri:ngsi-ld:AxisX"}, "motionProfile":
+    {"type": "Property", "value": "OTHER"}, "parameterSet": {"type": "Property", "value":
+    {"actualAcceleration": 3.0, "actualPosition": 1.0, "actualSpeed": 2.5}}}, {"browseName":
+    {"type": "Property", "value": "uri:ngsi-ld:AxisY"}, "motionProfile": {"type":
+    "Property", "value": "LINEAR"}, "parameterSet": {"type": "Property", "value":
+    {"actualAcceleration": 3.0, "actualPosition": 1.5, "actualSpeed": 2.0}}}], "browseName":
+    {"type": "Property", "value": "uri:ngsi-ld:MotionDevice"}, "manufacturer": {"type":
+    "Property", "value": "Engineering Ingegneria Informatica"}, "model": {"type":
+    "Property", "value": "Model"}, "motionDeviceCategory": {"type": "Property", "value":
+    "OTHER"}, "powerTrains": [{"browseName": {"type": "Property", "value": "uri:ngsi-ld:PowerTrain"},
+    "gears": [{"browseName": {"type": "Property", "value": "uri:ngsi-ld:Gear"}, "gearRatio":
+    {"type": "Property", "value": 0.5}, "manufacturer": {"type": "Property", "value":
+    "Engineering Ingegneria Informatica"}, "model": {"type": "Property", "value":
+    "Model"}, "pitch": {"type": "Property", "value": 1.0}, "productCode": {"type":
+    "Property", "value": "MP695ENG003"}, "serialNumber": {"type": "Property", "value":
+    "ENG-003"}}], "motors": [{"browseName": {"type": "Property", "value": "uri:ngsi-ld:Motor"},
+    "manufacturer": {"type": "Property", "value": "Engineering Ingegneria Informatica"},
+    "model": {"type": "Property", "value": "Model"}, "parameterSet": {"type": "Property",
+    "value": {"brakeReleased": true, "effectiveLoadRate": 0, "motorTemperature": 75}},
+    "productCode": {"type": "Property", "value": "MP695ENG002"}, "serialNumber": {"type":
+    "Property", "value": "ENG-002"}}]}]}], "safetyStates": [{"browseName": {"type":
+    "Property", "value": "uri:ngsi-ld:SafetyState"}, "emergencyStopFunctions": [{"active":
+    {"type": "Property", "value": true}, "browseName": {"type": "Property", "value":
+    "uri:ngsi-ld:EmergencyStopFunction"}, "name": {"type": "Property", "value": "emergencyStop"}}],
+    "parameterSet": {"type": "Property", "value": {"emergencyStop": true, "operationalMode":
+    "AUTOMATIC", "protectiveStop": true}}, "protectiveStopFunctions": [{"active":
+    {"type": "Property", "value": true}, "browseName": {"type": "Property", "value":
+    "uri:ngsi-ld:ProtectiveStopFunction"}, "enabled": {"type": "Property", "value":
+    true}, "name": {"type": "Property", "value": "protectiveStop"}}]}], "type": "MotionDeviceSystem"}'
+classes:
+  MotionDeviceSystem:
+    class_uri: https://smartdatamodels.org/dataModel.OPCUA/MotionDeviceSystem
+    description: MotionDeviceSystem provides a representation of a motion device system
+      as an entry point to the OPC UA device set. This instance organises the information
+      model of a complete robotics system using instances of the described ObjectTypes.
+      A motion device system may consist of multiple motion devices, controllers and
+      safety systems.
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - controllers
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - motionDevices
+    - name
+    - owner
+    - safetyStates
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/areaServed
+  controllers:
+    description: Property.  Controllers is a container for one or more instances of
+      the ControllerType. Controller represents a controlling unit of one or more
+      motion devices. A controller can be e.g. a specific control cabinet or a PLC
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/dataModel.OPCUA/controllers
+  motionDevices:
+    description: Property. MotionDevices is a container for one or more instances
+      of the MotionDeviceType. A motion device has as least one axis and is a multifunctional
+      manipulator designed to move material, parts, tools or specialized devices through
+      variable programmed motions for the performance of a variety of tasks. Examples
+      are an industrial robot, positioner or mobile platform
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/dataModel.OPCUA/motionDevices
+  safetyStates:
+    description: Property. SafetyStates is a container for one or more instances of
+      the SafetyStatesType
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.OPCUA@e5ac6ae62787f0093aedd30f064662dce406a6fd
+    slot_uri: https://smartdatamodels.org/dataModel.OPCUA/safetyStates

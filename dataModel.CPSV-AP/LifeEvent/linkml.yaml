@@ -1,0 +1,250 @@
+id: https://github.com/smart-data-models/dataModel.CPSV-AP/LifeEvent
+name: LifeEvent
+title: Smart Data models - LifeEvent schema
+description: 'The Life Event class represents an important event or situations in
+  a citizen''s life where public services may be required. Note the scope: an individual
+  will encounter any number of ''events'' in the general sense of the word. In the
+  context of the CPSV-AP, the Life Event class only represents an event for which
+  a Public Service is related. For example, a couple becoming engaged is not a CPSV-AP
+  Life Event, getting married is, since only the latter has any relevance to public
+  services.'
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sdm: https://smartdatamodels.org/
+default_range: string
+imports:
+- linkml:types
+- ngsi-ld-core
+annotations:
+  spec.source.repository: https://github.com/smart-data-models/dataModel.CPSV-AP
+  spec.source.path: LifeEvent/schema.json
+  spec.source.commit: a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+  spec.source.commons: https://github.com/smart-data-models/data-models@325ea7069e4c3bd73d1000339ff0ecdf0310365b
+  spec.source.example: '{"@context": ["https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"],
+    "description": {"type": "Property", "value": "This life event groups any public
+    service related to education, for example pre-school education, elementary school,
+    higher education and university\u2026"}, "eventType": {"type": "Property", "value":
+    ["Starting education"]}, "id": "urn:ngsi-ld:CPSV-AP:LifeEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",
+    "identifier": {"type": "Property", "value": "http://cefat4cities.crosslang.com/content/LifeEvent0e1037aafacc4fc39ee14d3c4391cc78"},
+    "name": {"type": "Property", "value": "Life Event in the city"}, "relatedService":
+    {"type": "Property", "value": ["urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0ddad5",
+    "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-5a3e-2d9a-8371-81c6ad0ddad5"]}, "type":
+    "LifeEvent"}'
+classes:
+  LifeEvent:
+    class_uri: https://smartdatamodels.org/dataModel.CPSV-AP/LifeEvent
+    description: 'The Life Event class represents an important event or situations
+      in a citizen''s life where public services may be required. Note the scope:
+      an individual will encounter any number of ''events'' in the general sense of
+      the word. In the context of the CPSV-AP, the Life Event class only represents
+      an event for which a Public Service is related. For example, a couple becoming
+      engaged is not a CPSV-AP Life Event, getting married is, since only the latter
+      has any relevance to public services.'
+    is_a: Entity
+    slots:
+    - address
+    - alternateName
+    - areaServed
+    - dataProvider
+    - dateCreated
+    - dateModified
+    - description
+    - eventType
+    - identifier
+    - name
+    - owner
+    - relatedService
+    - seeAlso
+    - source
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+  Address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    attributes:
+      streetAddress:
+        description: Property. The street address. Model:'https://schema.org/streetAddress'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      addressLocality:
+        description: Property. The locality in which the street address is, and which
+          is in the region. Model:'https://schema.org/addressLocality'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      addressRegion:
+        description: Property. The region in which the locality is, and which is in
+          the country. Model:'https://schema.org/addressRegion'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      addressCountry:
+        description: Property. The country. For example, Spain. Model:'https://schema.org/addressCountry'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      postalCode:
+        description: Property. The postal code. For example, 24004. Model:'https://schema.org/https://schema.org/postalCode'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      postOfficeBoxNumber:
+        description: Property. The post office box number for PO box addresses. For
+          example, 03578. Model:'https://schema.org/postOfficeBoxNumber'
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      streetNr:
+        description: Property. Number identifying a specific property on a public
+          street
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+      district:
+        description: Property. A district is a type of administrative division that,
+          in some countries, is managed by the local government
+        annotations:
+          ngsi_ld_kind: Property
+          upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    annotations:
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+slots:
+  dateCreated:
+    description: Property. Entity creation timestamp. This will usually be allocated
+      by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dateCreated
+  dateModified:
+    description: Property. Timestamp of the last modification of the entity. This
+      will usually be allocated by the storage platform
+    range: datetime
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dateModified
+  source:
+    description: Property. A sequence of characters giving the original source of
+      the entity data as a URL. Recommended to be the fully qualified domain name
+      of the source provider, or the URL to the source object
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/source
+  name:
+    description: Property. The name of this item
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/name
+  alternateName:
+    description: Property. An alternative name for this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/alternateName
+  description:
+    description: Property. A description of this item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: http://purl.org/dc/terms/description
+  dataProvider:
+    description: Property. A sequence of characters identifying the provider of the
+      harmonised data entity
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataProvider
+  owner:
+    description: Property. A List containing a JSON encoded sequence of characters
+      referencing the unique Ids of the owner(s)
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/owner
+  seeAlso:
+    description: Property. list of uri pointing to additional resources about the
+      item
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/seeAlso
+  address:
+    description: Property. The mailing address. Model:'https://schema.org/address'
+    range: Address
+    annotations:
+      ngsi_ld_kind: JsonProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/address
+  areaServed:
+    description: Property. The geographic area where a service or offered item is
+      provided. Model:'https://schema.org/Text'
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/areaServed
+  identifier:
+    description: Property. Model:'dct:identifier'. This property represents an Identifier
+      for the Event
+    required: true
+    annotations:
+      ngsi_ld_kind: Property
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/identifier
+  eventType:
+    description: Property. Model:'dct:type'. The type property links an Event to a
+      controlled vocabulary of event types and it is the nature of those controlled
+      vocabularies that is the major difference between a business event, such as
+      creating the business in the first place and a life event, such as the birth
+      of a child. The suggested controlled vocabulary was based on an analysis done
+    range: eventType_options
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/eventType
+  relatedService:
+    description: 'Relationship. Model:''dct:relation''. Range: PublicService. This
+      property links an event directly to a public service that is related to it'
+    annotations:
+      ngsi_ld_kind: ListProperty
+      upstream_source: https://github.com/smart-data-models/dataModel.CPSV-AP@a05d1663475fc0f79361bc9bc2550c3f24df1ba0
+    slot_uri: https://smartdatamodels.org/dataModel.CPSV-AP/relatedService
+enums:
+  eventType_options:
+    name: eventType_options
+    permissible_values:
+      Having a child:
+        text: Having a child
+      Becoming a (social) caretaker:
+        text: Becoming a (social) caretaker
+      Starting education:
+        text: Starting education
+      Looking for a new job:
+        text: Looking for a new job
+      Losing/quitting a job:
+        text: Losing/quitting a job
+      Looking for a place to live:
+        text: Looking for a place to live
+      Changing relationship status:
+        text: Changing relationship status
+      Driving a vehicle:
+        text: Driving a vehicle
+      Travelling abroad:
+        text: Travelling abroad
+      Moving to/from the country:
+        text: Moving to/from the country
+      Going into military service:
+        text: Going into military service
+      Facing an emergency / health problem:
+        text: Facing an emergency / health problem
+      Facing a crime:
+        text: Facing a crime
+      Retirement:
+        text: Retirement
+      Death of a relative:
+        text: Death of a relative
